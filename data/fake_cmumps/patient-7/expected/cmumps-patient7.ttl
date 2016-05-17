@@ -1,0 +1,75 @@
+# generated on  now
+
+@prefix Bundle: <http://hl7.org/fhir/Bundle> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xhtml: <http://www.w3.org/1999/xhtml> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@base <http://this-fhir-server/fhir/> .
+
+[] a fhir:Bundle;
+   fhir:Bundle.type [ fhir:value "document" ];
+   fhir:Bundle.entry [ 
+      a fhir:Bundle.entry;
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+      fhir:Bundle.entry.resource [ 
+         a fhir:Resource;
+       ];
+    ];
+ .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY,BUGS" ] .
+<6-111111> fhir:Reference.display [ fhir:value "DUCK,DONALD" ] .
+<101-227995> fhir:Reference.display [ fhir:value "941103-00522" ] .
+<59_2-1> fhir:Reference.display [ fhir:value "MAIN PHARMACY" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY,BUGS" ] .
+<6-11111> fhir:Reference.display [ fhir:value "DUCK,DONALD" ] .
+<101-16145150> fhir:Reference.display [ fhir:value "090420-03671" ] .
+<59_2-12> fhir:Reference.display [ fhir:value "ANY PHARMACY (SOME MED)" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY, BUGS" ] .
+<6-11111> fhir:Reference.display [ fhir:value "DUCK,DONALD" ] .
+<101-16145151> fhir:Reference.display [ fhir:value "090420-03672" ] .
+<59_2-12> fhir:Reference.display [ fhir:value "ANY PHARMACY (SOME MED)" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY,BUGS" ] .
+<6-111111> fhir:Reference.display [ fhir:value "DUCK,DONALD" ] .
+<101-227995> fhir:Reference.display [ fhir:value "941103-00522" ] .
+<59_2-1> fhir:Reference.display [ fhir:value "MAIN PHARMACY" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY,BUGS" ] .
+<6-11111> fhir:Reference.display [ fhir:value "DUCK,DONALD" ] .
+<101-16145150> fhir:Reference.display [ fhir:value "090420-03671" ] .
+<59_2-12> fhir:Reference.display [ fhir:value "ANY PHARMACY (SOME MED)" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY, BUGS" ] .
+<6-11111> fhir:Reference.display [ fhir:value "DUCK,DONALD" ] .
+<101-16145151> fhir:Reference.display [ fhir:value "090420-03672" ] .
+<59_2-12> fhir:Reference.display [ fhir:value "ANY PHARMACY (SOME MED)" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY,BUGS" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY,BUGS" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY,BUGS" ] .
+<Patient/2-000007> fhir:Reference.display [ fhir:value "BUNNY, BUGS" ] .
