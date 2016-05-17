@@ -2,14 +2,8 @@
 
 This directory contains scrubbed data for a prototypical patient `patient-7`.
 
+* aalta-patient7-procedures.jsonld
 * cmumps-patient7.jsonld -- a complete example
-* cmumps-patient7-labs.jsonld.gz -- an eventual labs example
-* cmumps-patient7-labs-notes.txt
-* cmumps-patient7-medications1.jsonld -- a cmumps-patient7 with a single medication 
-* cmumps-patient7-medications2.jsonld -- a cmumps-patient7 with a single different medication
-* cmumps-patient7-medications3.jsonld -- a cmumps-patient7 with a single different medication
-* cmumps-patient7-penicillan-allergy.jsonld.gz -- tbs
-* cmumps-patient7-topicals.jsonld.gz -- tbs
 * context.jsonld -- jsonld context for cmumps-patient7.jsonld
 
 
@@ -19,19 +13,13 @@ Aside from the data input files above, these directories are important:
 
 ```.
 ├── cmumps-patient7.jsonld  # enumerated above
-├── cmumps-patient7-labs.jsonld.gz
-├── cmumps-patient7-labs-notes.txt
-├── cmumps-patient7-medications1.jsonld
-├── cmumps-patient7-medications2.jsonld
-├── cmumps-patient7-medications3.jsonld
-├── cmumps-patient7-penicillan-allergy.jsonld.gz
-├── cmumps-patient7-topicals.jsonld.gz
+├── aalta-patient7-procedures.jsonld
 ├── context.jsonld
-├── expected
+├── expected/  # expected results of translations
 │   ├── *.json
 │   ├── *.xml
 │   ├── *.ttl  # turtle files
-├── output
+├── output/  # actual results
 │   ├── *.json
 │   ├── *.ttl
 │   ├── *.xml
