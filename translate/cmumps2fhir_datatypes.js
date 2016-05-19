@@ -125,20 +125,27 @@ function clean(o) {
     if (_.isArray(o)) {
         // clean all array elements that are truthy.
         var result = o.filter(function(i) {if (i != undefined) return i; }).map(clean);
-        if (o.length) {
+        if (o.length > 0) {
             // the list contains something return it.
             return result;
         } else {
             // the list got cleaned to nothing, return undefined
             return undefined;
         }
+        return result;
     } else if (_.isObject(o)) {
         // remove all key/value pairs where the value is undefined or [].
         // return_o is true iff some key/value pair remains. Otherwise all key value pairs removed. So remove this one too.
         var return_o = false;
         for (var k in o) {
             var value = clean(o[k]);
+
+            // The key in this object survives iff it's value is truthy.
             if (value === undefined) {
+                // delete the key if its value is undefined
+                delete o[k];
+            } else if (_.isArray(value) && value.length == 0) {
+                // delete the key if its value is an empty array
                 delete o[k];
             } else {
                 // return this object and update its value to a cleaned one.
@@ -278,6 +285,26 @@ function fhirHumanName(cmumpsName) {
     return result;
 }
 
+/**
+ * Generate a FHIR ContactPoint.
+ * @param cmumpsContactPoint
+ * @returns {*}
+ * @see {link: 'http://hl7-fhir.github.io/datatypes.html#ContactPoint'}
+ */
+function fhirContactPoint(cmumpsContactPoint) {
+    if (cmumpsContactPoint === undefined) return undefined;
+    if (! JSONPath({path: '$.value', wrap: false}, cmumpsContactPoint)) return undefined;
+    return clean({
+        resourceType: "ContactPoint",
+        // from Element: extension
+        system: JSONPath({path: '$.system', wrap: false}, cmumpsContactPoint), // C? phone | fax | email | pager | other
+        value: JSONPath({path: '$.value', wrap: false},  cmumpsContactPoint), // The actual contact point details
+        use: JSONPath({path: '$.use', wrap: false}, cmumpsContactPoint), // home | work | temp | old | mobile - purpose of this contact point
+        // "rank" : "<positiveInt>", // Specify preferred order of use (1 = highest)
+        // "period" : { Period } // Time period when the contact point was/is in use
+    });
+}
+
 
 /**
  * Turn a US social security number into a fhir identifier.
@@ -403,18 +430,20 @@ function fhirAddress(address) {
     var participatingProperties = [];
     var fetch1 = makeJsonFetcher1(address, participatingProperties);
 
-    var result = {
-        resourceType: 'Address',
-        type: 'postal',
+    var result = clean({
         line: [ fetch1('$.street1'), fetch1('$.street2'), fetch1('$.street3') ],
         city: fetch1('$.city'),
         district: fetch1('$.county'),
         state: fetch1('$.state'),
         postalCode: fetch1('$.zip'),
         country: fetch1('$.country')
-    };
+    });
 
-    clean(result); // side-effects result
+    if (result) {
+        result.resourceType = 'Address';
+        result.type = 'postal';
+    }
+
     return result;
 }
 
@@ -540,12 +569,12 @@ function fhirDiagnosticReportCategory(cmumpsCode) {
  */
 function fhirReferencePractioner(cmumpsProvider) {
     if (cmumpsProvider === undefined) return undefined;
-    return {
+    return clean({
         // TODO carif: make sure this is correct
         // reference: 'urn:local:fhir:MedicationDispense:' + cmumpsProvider.id,
         reference: cmumpsProvider.id,
         display: cmumpsProvider.label
-    };
+    });
 }
 
 
@@ -603,6 +632,40 @@ function fhirReferenceLocation(cmumpsLocation) {
         display: cmumpsLocation.label
     };
 }
+
+
+/**
+ * Create a FHIR Reference(Organization) based on the cmumpsOrganization.
+ * @param {object} cmumpsOrganization
+ * @returns {{reference: *, display: *} || undefined}
+ */
+function fhirReferenceOrganization(cmumpsOrganization) {
+    if (cmumpsOrganization === undefined) return undefined;
+    var result = clean({
+        name: JSONPath({path: '$.name', wrap: false}, cmumpsOrganization), // C? Name used for the organization
+        telecom: [ fhirContactPoint(JSONPath({path: '$.telecom', wrap: false}, cmumpsOrganization)) ], // C? A contact detail for the organization
+        address : [ fhirAddress(JSONPath({path: '$.address', wrap: false}, cmumpsOrganization)) ], // C? An address for the organization
+        // partOf: { }, // The organization of which this organization forms a part, TODO: VA?
+        // contact: [{ // Contact for the organization for a certain purpose
+        //     purpose: { fhirCodeableConcept }, // The type of contact
+        //     "name" : { HumanName }, // A name associated with the contact
+        //     "telecom" : [{ ContactPoint }], // Contact details (telephone, email, etc.)  for a contact
+        //     "address" : { Address } // Visiting or postal addresses for the contact
+    });
+    if (result) {
+        result.type = fhirCodeableConcept('medical'), // Kind of organization
+        result.resourceType = "Organization";
+            // from Resource: id, meta, implicitRules, and language
+            // from DomainResource: text, contained, extension, and modifierExtension
+            // identifier: [{ Identifier }], // C? Identifies this organization  across multiple systems
+        result.active = true; // Whether the organization's record is still in active use
+    }
+    return result;
+}
+
+
+
+
 
 
 /**
@@ -737,12 +800,12 @@ function fhirId(fhirType, id) {
 
 
 // Export the actual functions here. Make sure the names are always consistent.
-[makeJsonFetcher1, makeGetter, peek, eat, clean, required, fhirDate, fhirHumanName,
+[makeJsonFetcher1, makeGetter, peek, eat, clean, required, fhirDate, fhirHumanName, fhirContactPoint,
     fhirIdentifier, fhirIdentifierList, fhirMaritalStatus, fhirAddress, tbs,
     fhirReferenceLocation, fhirReferencePatient, fhirReferencePractioner,
     fhirDiagnosticReportCategory, fhirCodeableConcept, fhirCodeableConceptList,
     fhirReferenceMedication, fhirReferenceMedicationOrder, fhirQuantity, fhirReferencePatient,
-    fhirTiming, fhirReferenceLocation, fhirExternalIdentifier, fhirPractioner,
+    fhirTiming, fhirReferenceLocation, fhirReferenceOrganization, fhirExternalIdentifier, fhirPractioner,
     fhirPatientGender, fhirPatientBirthDate, fhirPatientState, fhirPatientCountry, fhirId,
     htmlEncode
 ].forEach(function(f) { module.exports[f.name] = f; });
