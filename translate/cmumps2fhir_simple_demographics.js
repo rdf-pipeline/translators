@@ -31,6 +31,7 @@ function translate(cmumpsPatientObject, get) {
 
     // function findAny(key) { return db['2'].find({key: {$exists: true}}, {key:true}); }
     // findAny('phone-2')  // for example
+    // Or brute force: db['2'].find({'phone-2': {$exists: true}})
 
 
     var resourceType = 'Patient';
@@ -45,9 +46,9 @@ function translate(cmumpsPatientObject, get) {
             fdt.fhirContactPoint({system: 'phone', use: 'home', value: get('$.phone-2') }),
             fdt.fhirContactPoint({system: 'phone', use: 'office', value: get('$.office_phone-2')}),
             fdt.fhirContactPoint({system: 'phone', use: 'mobile', value: get('$.cell_phone-2')}),
-            fdt.fhirContactPoint({system: 'phone', use: 'temp', value: get('$.temporary_phone-2')}),
-            fdt.fhirContactPoint({system: 'fax', value: get('$.fax_number-2')}),
-            fdt.fhirContactPoint({system: 'email', value: get('$.email_address-2')})
+            fdt.fhirContactPoint({system: 'phone', use: 'temp', value: get('$.temporary_phone-2')}), // no data in cmumps database
+            fdt.fhirContactPoint({system: 'fax', value: get('$.fax_number-2')}), // no data in cmumps database
+            fdt.fhirContactPoint({system: 'email', value: get('$.email_address-2')}) // no data in cmumps
         ],
         gender: fdt.fhirPatientGender(get('$.sex-2')),
         birthDate: fdt.fhirPatientBirthDate(get('$.dob-2')),
