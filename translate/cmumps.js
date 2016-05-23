@@ -18,8 +18,11 @@ var JSONPath = require('jsonpath-plus');
  * Note: this function is private. All the other predicates eventually call it.
  */
 
+
+var cmumpsPrefixPattern = 'c(hc|mump)ss';
+
 function isCmumpsType(candidate, cmumpsTypeName, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return typeof candidate == 'object'
         && candidate['type']
         && candidate['type'].match(format(token + '\s*:\s*{}\s*', cmumpsTypeName));
@@ -35,7 +38,7 @@ function isCmumpsType(candidate, cmumpsTypeName, token) {
  * @returns {boolean} - true iff candidate is a cmumps Patient
  */
 function isCmumpsPatient(candidate, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Patient, token);
 }
 
@@ -45,7 +48,7 @@ function isCmumpsPatient(candidate, token) {
  * @returns {boolean} - true iff candidate is a cmumps Prescription
  */
 function isCmumpsPrescription(candidate, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Prescription);
 }
 
@@ -56,7 +59,7 @@ function isCmumpsPrescription(candidate, token) {
  * @returns {boolean} - true iff candidate is a cmumps Lab_Result
  */
 function isCmumpsLabResult(candidate, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Lab_Result);
 }
 
@@ -67,7 +70,7 @@ function isCmumpsLabResult(candidate, token) {
  * @returns {boolean} - true iff candidate is a cmumps Procedure
  */
 function isCmumpsDiagnosis(candidate, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Kg_Patient_Diagnosis);
 }
 
@@ -78,7 +81,7 @@ function isCmumpsDiagnosis(candidate, token) {
  * @returns {boolean} - true iff candidate is a cmumps Procedure
  */
 function isCmumpsProcedure(candidate, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Procedure);
 }
 
@@ -94,8 +97,8 @@ function isCmumpsProcedure(candidate, token) {
  * @return {string} - a JSONPath selector
  */
 function cmumpssJsonPattern(i, token) {
-    var token = token || 'cmumpss';
-    return format("$['@graph'][?((@.type).match(/^\s*{}\s*:\s*{}\s*/))]", token, i);
+    var token = token || cmumpsPrefixPattern;
+    return format("$['@graph'][?((@.type).match(/^\\s*{}:{}\\s*/))]", token, i);
     //return format("$['@graph'][?((@.type).match(/^\\s*cmumpss\\s*:\\s*{}\\s*/))]", i);
 }
 
@@ -108,11 +111,11 @@ function cmumpssJsonPattern(i, token) {
  * @param {string} i  - use cmumps.module.exports.chccs.* values
  * @return {string} - a JSONPath selector
  */
-function cmumpssSimpleJsonPattern(i, token) {
-    var token = token || 'cmumpss';
-    // return format("$['@graph'][?((@.type).match(/^\s*cmumpss\s*:\s*{}\s*/))]", i);
-    return format("$['@graph'][?(@.type=='{}:{}')]", token, i);
-}
+// function cmumpssSimpleJsonPattern(i, token) {
+//     var token = token || cmumpsPrefixPattern;
+//     // return format("$['@graph'][?((@.type).match(/^\s*cmumpss\s*:\s*{}\s*/))]", i);
+//     return format("$['@graph'][?(@.type=='{}:{}')]", token, i);
+// }
 
 
 /**
@@ -211,13 +214,12 @@ function cmumpsPatientName(acmumpsPersonName) {
  */
 
 function extractPatient(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
-    // return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Patient)});
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssSimpleJsonPattern(module.exports.cmumpss.Patient, token)});
+    var token = token || cmumpsPrefixPattern ;
+    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Patient, token)});
 }
 
 function extractDemographics(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return extractPatient(cmumpsJsonldObject, token);
 }
 
@@ -229,10 +231,10 @@ function extractDemographics(cmumpsJsonldObject, token) {
  * @return {Array[object]} -- the items removed
   */
 function removePatient(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     var result = [];
     var paths = JSONPath({json: cmumpsJsonldObject,
-        path: cmumpssSimpleJsonPattern(module.exports.cmumpss.Patient, token),
+        path: cmumpssJsonPattern(module.exports.cmumpss.Patient, token),
         resultType: 'path'});
     paths.forEach(function(path) {
         var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
@@ -246,7 +248,7 @@ function removePatient(cmumpsJsonldObject, token) {
 }
 
 function removeDemographics(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     removePatient(cmumpsJsonldObject, token);
 }
 
@@ -259,14 +261,12 @@ function removeDemographics(cmumpsJsonldObject, token) {
  */
 
 function extractPrescriptions(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
-    // TODO mike@carif.io: probe return values in webstorm debugger?
-    // return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Prescription)});
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssSimpleJsonPattern(module.exports.cmumpss.Prescription, token)});
+    var token = token || cmumpsPrefixPattern;
+    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Prescription, token)});
 }
 
 function extractMedications(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return extractPrescriptions(cmumpsJsonldObject);
 }
 
@@ -279,10 +279,10 @@ function extractMedications(cmumpsJsonldObject, token) {
  */
 
 function removePrescriptions(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     var result = [];
     var paths = JSONPath({json: cmumpsJsonldObject,
-        path: cmumpssSimpleJsonPattern(module.exports.cmumpss.Prescription, token),
+        path: cmumpssJsonPattern(module.exports.cmumpss.Prescription, token),
         resultType: 'path'});
     paths.forEach(function(path) {
         var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
@@ -297,7 +297,7 @@ function removePrescriptions(cmumpsJsonldObject, token) {
 
 
 function removeMedications(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
+    var token = token || cmumpsPrefixPattern;
     return removePrescriptions(cmumpsJsonldObject);
 }
 
@@ -308,8 +308,8 @@ function removeMedications(cmumpsJsonldObject, token) {
  */
 function extractLabs(cmumpsJsonldObject, token) {
     // return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result)});
-    var token = token || 'cmumpss';
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssSimpleJsonPattern(module.exports.cmumpss.Lab_Result, token)});
+    var token = token || cmumpsPrefixPattern;
+    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result, token)});
 }
 
 /**
@@ -318,10 +318,8 @@ function extractLabs(cmumpsJsonldObject, token) {
  * @returns {Array[object]} -- the diagnoses
  */
 function extractDiagnoses(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
-
-    // return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Kg_Patient_Diagnosis)});
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssSimpleJsonPattern(module.exports.cmumpss.Kg_Patient_Diagnosis, token)});
+    var token = token || cmumpsPrefixPattern;
+    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Kg_Patient_Diagnosis, token)});
 }
 
 /**
@@ -332,11 +330,11 @@ function extractDiagnoses(cmumpsJsonldObject, token) {
  * @return {Array[object]} -- the items removed
  */
 
-function removeDiagnoses(cmumpsJsonldObject, token) {
-    var token = token || 'cmumpss';
+function removeDiagnoses(cmumpsJsonldObject) {
+    var token = token || cmumpsPrefixPattern;
     var result = [];
     var paths = JSONPath({json: cmumpsJsonldObject,
-        path: cmumpssSimpleJsonPattern(module.exports.cmumpss.Kg_Patient_Diagnosis, token),
+        path: cmumpssJsonPattern(module.exports.cmumpss.Kg_Patient_Diagnosis, token),
         resultType: 'path'});
     paths.forEach(function(path) {
         var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
@@ -381,7 +379,7 @@ function removeProcedures(cmumpsJsonldObject) {
             result.push(cmumpsJsonldObject['@graph'][index]);
             cmumpsJsonldObject['@graph'].splice(index, 1);
         }
-    });;
+    });
     return result;
 }
 
@@ -389,7 +387,7 @@ function removeProcedures(cmumpsJsonldObject) {
 // Export the actual functions here.
 [isCmumpsPatient,
     cmumpssJsonPattern,
-    cmumpssSimpleJsonPattern,
+    // cmumpssSimpleJsonPattern,
     jsonPattern,
     cmumpsDate,
     cmumpsPatientName,

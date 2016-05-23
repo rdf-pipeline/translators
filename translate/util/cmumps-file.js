@@ -43,7 +43,7 @@ function process_file(filename) {
         try {
             cmumpsInput = fs.readFileSync(filename, "utf8");
         } catch (err) {
-            console.error(util.format("Can't read '%s'", filename));
+            console.error(utils.format("Can't read '%s'", filename));
             process.exit(1);
         }
 
