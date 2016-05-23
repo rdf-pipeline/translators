@@ -32,7 +32,8 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "bin": {
-    "cmumps-file": "./translate/util/cmumps-file.js"
+    "cmumps-file": "./translate/util/cmumps-file.js",
+    "cmumps-parts": "./translate/util/cmumps-parts.js"
   },
   "scripts": {
     "build": "echo build ## tbs",
