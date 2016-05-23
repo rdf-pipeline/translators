@@ -10,6 +10,7 @@ var fdt = require('./cmumps2fhir_datatypes');
  * @param cmumpsPrescriptionObject -- a cmumps Patient object
  * @returns {Object} -- a FHIR translation
  */
+
 function translate(cmumpsPrescriptionObject) {
     // The get function knows how to get values from cmumpsPatientObject using JSONPath.
     var get = fdt.makeGetter(cmumpsPrescriptionObject);
@@ -31,7 +32,7 @@ function translate(cmumpsPrescriptionObject) {
     return fdt.clean({
         resourceType: resourceType,
         id: fdt.fhirId(resourceType, get('$._id')),
-        //"active" : true, // Whether this patient's record is in active use
+        active: true, // Whether this patient's record is in active use
         // from Resource: id, meta, implicitRules, and language
         // from DomainResource: text, contained, extension, and modifierExtension
         identifier: fdt.fhirExternalIdentifier(get('$._id'), 'Prescription'),
@@ -42,7 +43,7 @@ function translate(cmumpsPrescriptionObject) {
         patient: fdt.fhirReferencePatient(get('$.patient-52')),
         dispenser: fdt.fhirReferencePractioner(get('$.provider-52')), // Reference(Practitioner), Practitioner responsible for dispensing medication
         authorizingPrescription: [ fdt.fhirReferenceMedicationOrder(get('order_pointer-52')) ], // Medication order that authorizes the dispense, TODO: cross ref?
-        // type: fetch1("$.type", fhirCodeableConcept), // Trial fill, partial fill, emergency fill, etc., NOT FOUND
+        type: fdt.fhirCodeableConcept(get('$.status-52')), // Trial fill, partial fill, emergency fill, etc., NOT FOUND
         quantity: fdt.fhirQuantity(get('$.qty-52')), // { Quantity(SimpleQuantity) }, // Amount dispensed
         daysSupply: fdt.fhirQuantity(get('$.days_supply-52')), // { Quantity(SimpleQuantity) }, // Amount of medication expressed as a timing amount
         whenPrepared: whenPrepared, // Dispense processing time
@@ -56,7 +57,6 @@ function translate(cmumpsPrescriptionObject) {
                 additionalInstructions: fdt.fhirCodeableConcept(fdt.htmlEncode(get('$.expanded_sig-52'))), // E.g. "Take with food"
                 timing: fdt.fhirTiming(fdt.htmlEncode(get('$.sig-52')), whenPrepared), // When medication should be administered
                 //    // asNeeded[x]: Take "as needed" f(or x). One of these 2:
-                // asNeededBoolean: fetch1('$.expanded_sig-52', function(s) { return s.match(/as needed/i); }), //    "asNeededBoolean" : <boolean>,
                 asNeededBoolean: asNeeded, //    "asNeededBoolean" : <boolean>,
                 //    "asNeededCodeableConcept" : { CodeableConcept },
                 //    site[x]: Body site to administer to. One of these 2:

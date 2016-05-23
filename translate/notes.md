@@ -628,3 +628,219 @@ db[mr.result].distinct("_id") // not quite sure how this works
     "zip_code-2"
 ]
 ```
+
+
+For prescriptions, medications:
+
+```javascript
+// get('$.rx_number-52') // Rx #, This is a unique number that the system assigns to new
+// prescriptions.  The number is based on the prescription number
+// prefix and number range defined for the drug class to which the
+// prescription belongs.  The prescription number range is defined in
+// the Prescription Number Maintenance option.  When you create a new
+//     order, the system selects the next available number within the
+// appropriate prescription number range. In addition, the user can
+// assign a prescription number to a prescription via Manual RX Entry
+// option.
+// get('$.patient-52') // Patient, This field contains the patient name associated with the
+//     prescription.  Enter the name of the patient:  LAST,FIRST MIDDLE
+// or in one of the other formats which you can see by entering two
+// question marks at the SELECT PATIENT NAME prompt.
+// get('$.provider-52') // Provider, This field represents the patient's provider who entered or
+//     prescribed a prescription for a patient.
+// get('$.drug-52') // Drug, This field represents a drug associated with the prescription.
+//     Either the generic or brand name may be used.  The name includes
+// the drug name, route of administration, strength, and form; e.g.,
+//     CIMETIDINE--PO 300MG TAB.
+// get('$.qty-52') // Qty, This field contains the number of units of the drug that the
+//     patient should receive in one prescription fill; e.g., 30 tablets,
+//     1 tube.  The quantity appears on the prescription label and
+// patient profile.
+// get('$.days_supply-52') // Days Supply, This is the number of days this medication will last assuming patient
+//     compliance.  It is calculated by dividing the QTY by the daily dosage.
+//     For Example:   SIG  T1 TAB TID        QTY 90
+// The daily dosage = 3
+// 90/3 = 30 days supply
+//
+// For PRN drugs, calculate by the maximum amount the patient could
+// take in one day.
+//     For Example:   SIG  TAKE 1-2 TABLETS QID PRN PAIN     QTY  24
+// The maximum daily dosage = 8
+// 24/8 = 3 days supply
+// get('$.refills-52') // Refills, Enter a number of refills allowed for this prescription.  The limit is 12.
+// get('$.logged_by-52') // Logged By, This is the name of the user who entered the prescription.
+// get('$.login_date-52') // Login Date, This is the date that the prescription was entered.
+// get('$.mtf_division-52') // Mtf Division, This is the division where the prescription was written.
+// get('$.status-52') // Status, This field contains the status of the prescription.  The status' are:
+// 0 - Active
+// 1 - Fill
+// 2 - Refill
+// 3 - Hold
+// 4 - Warning
+// 5 - Partial
+// 10 - Forwarded
+// 11 - Expired
+// 12 - Canceled
+// 13 - Discontinued
+// 14 - Renewed
+// 15- Transfer
+// get('$.refills_remaining-52') // Refills Remaining, This is the number of refills to which the patient is entitled,
+// based on the total number of refills minus the number of refills
+// which the patient has already picked up.
+// get('$.child_resistant_cont-52') // Child Resistant Cont, This field shows whether or not you want a child-proof
+//     prescription container.  It sets to '1' for YES or '0' for NO.
+// get('$.last_fill_date-52') // Last Fill Date, This is the last date/time on which the medication was dispensed
+//                                                                    on this prescription.  The last fill date can be the date/time
+// that the original prescription, or a refill, was dispensed.  This
+// is also the date/time that a label was printed.
+// get('$.fill_expiration-52') // Fill Expiration, This is the date and time after which patients can no longer pick
+//     up a prescription.
+// get('$.order_date_time-52') // Order Date/Time, This is the date and time that a user begins entering and filing
+//     the prescription into the system (NOW).
+// get('$.order_entry_number-52') // Order Entry Number, This is the number generated in ORE, when the RX was written.
+// get('$.order_pointer-52') // Order Pointer, This is the order internal entry number that points to the order
+// file (101).
+// get('$.date_time_received_from_oe-52') // Date/Time Received From Oe, This is the date and time that the Pharmacy software receives the
+//     order from Clinical users entering the order via Order Entry.  It
+// is based on the order's activation.  For example, the Pharmacy
+// system will not receive a future order until the order is
+// activated (and moves from the Order file to the Pharmacy Patient
+// file).
+// get('$.pharmacy_originated-52') // Pharmacy Originated, This indicates whether a Pharmacy user enters an order via RX
+// option or a Clinical user enters an order via Order Entry Option.
+// get('$.outpatient_site-52') // Outpatient Site, This field represents an outpatient pharmacy for which the
+//     prescription is entered.
+// get('$.expiration_date-52') // Expiration Date, This is the date and time on which the prescription is due to
+//     expire.  It is based on the start date/time of the order and the
+// days supply.  The user can modify this to make it a different date
+// and time.
+// get('$.meprs_code-52') // Meprs Code, This is the Medical Expense Performance Reporting System (MEPRS)
+//     code associated with the patient's HCP who is prescribing the
+// order.  It is based on the provider's service.
+// get('$.edited-52') // Edited, This indicates a user has edited a prescription via the Edit a
+// Prescription (EAP) option.
+// get('$.oerxbatch-52') // Oe-Rx-Batch, This field is sent from order entry.  It is set in PSOSOR when
+//     ORFIEN is defined.  It is the IEN of the first order that came across
+// in a batch after a HCP user Quits and Activates.
+// get('$.notification_type-52') // Notification Type, An entry in this field indicates that this prescription qualified for
+//     a notification label to be printed.
+// get('$.parent_prescription-52') // Parent Prescription, An entry in this field indicates that this prescription was the result of
+//     some action taken on a "previous" or "parent" prescription (such as a
+// modify).  The entry in this field in the IEN of the previous Rx.
+// get('$.last_label_print_date-52') // Last Label Print Date, This field indicates the last date any Rx label, for dispensing, was
+// printed.  (Reprints do not update this field)
+// get('$.last_dispensing_pharmacy-52') // Last Dispensing Pharmacy, This field is populated with the pharmacy which last dispensed this
+// prescription.
+// get('$.patient_batch_name-52') // Patient Batch Name, This identifies the Patient Batch this prescription is associated with.
+// get('$.comments-52') // Comments, This is a free-text comment that you enter during Prescription
+//     Entry.  It appears on the label and on the prescription profile
+// which you can view via Prescription Inquiry (PRI).
+// get('$.activity_log_comments-52') // Activity Log Comments, This field contains comments of a user who takes actions (e.g.,
+//     modified, cancelled, edited, etc...) on a prescription.  Enter a
+// comment explaining why you are editing or modifying the
+// prescription.  The comment becomes part of the Activity Log of
+// that prescription.
+// get('$.baker_cell-52') // Baker Cell, This field is used to store the baker and cell information on a specific
+//     drug.  It is used in the re printing of lables. the procedure is psolb.
+// get('$.baker_drug_edit-52') // Baker Drug Edit, This field is set in the EAP (edit a prescription) functionality in
+//     the routine ^PSOEDIT if drug unchanged.  It is then checked in another
+// functionality, BPL (batch print labels), and if present, prescription
+//     not sent to Baker Cell.
+// get('$.baker_quantity_edit-52') // Baker Quantity Edit, This field is set in the EAP (edit a prescription) functionality in the
+//     routine ^PSOEDIT if the quantity is unchanged.  It is then checked in
+// another functionality, BPL (batch print labels), and if present, the
+//     prescription will not be sent to the Baker Cell.
+// get('$.refill_control-52') // Refill Control, This value is used to calculate the Refills Remaining value in 0;12.
+// get('$.pdts_prescription_number-52') // Pdts Prescription Number, This is the prescription number used by the PDTS. It is a number between 0
+//     and 1 Trillion.
+// get('$.pdts_metric_quantity-52') // Pdts Metric Quantity, Numeric value computed based on prescription quantity and package size.
+//     This field stores this computed value in the event it is needed to send
+// reversal information on this prescription back to the PDTS.
+// get('$.sig-52') // Sig, This is a standard quick code of medication instructions, such as the amount
+//     and frequency of a prescription, unit dose, or IV  order.  For example,
+//     T1 TAB QID PRN means TAKE 1 TABLET FOUR TIMES A DAY AS NEEDED.  Enter it in
+// the SIG field when ordering a prescription.  It appears on the prescription
+// label in expanded form.
+//
+//     It is recommended to place spaces between the components of the SIG, for
+//     example, T 1 TAB QID PRN. Components include the amount (such as 1), unit of
+// measure (such as TAB, MG or ML), and timing (such as QID).  You can enter
+// standard units of measurement, such as CAP, CC, GM, GTTS, MCG, MG, ML, OZ,
+//     TAB, TSP, and TBSP.  MG and ML may be used with pediatric doses.  When you
+// enter a unit of measure (such as ML) it must be compatible with the content
+// unit as contained in the system.  The content unit displays with the drug name
+// at the top of the Rx enter/edit screen.
+// get('$.label_width-52') // Label Width, This defines the width of the prescription labels.
+// get('$.expanded_sig-52') // Expanded Sig, This is a translation of a SIG into words.  For example, TAKE
+// 650MG FOUR TIMES A DAY AS NEEDED is the expanded SIG of 650MG QID
+// PRN.  The expanded SIG appears on the prescription labels.
+// get('$.sig_overflow-52') // Sig Overflow, This field indicates the portion of the SIG code that prints on a second label
+//     because it does not fit on the first label.
+// get('$.fill_dates-52') // Fill Dates, This is the NAME field of the FILL DATES multiple.
+// get('$.activity_log-52') // Activity Log, This is an audit trail of each prescription.  It includes
+//     information on the activity date/time, fill number, type of
+// action, site where the action occurred, user initials, and user
+// remarks explaining the action.  Users may view it via the options
+// Prescription Inquiry (on the Prescriptions Menu).
+// get('$.archive_edited-52') // Archive Edited, This word processing field will be populated at time of archive with
+// any edit history from the audit trail.  Routine PSORXAD will call EDIT^PSOARC tomake an entry into this field.  The display will be similar to a RX profile with
+//     editing activity.
+// get('$.error-52') // Error, This multiple will store information that may have kept data from being
+//         stored in PSRX, or the data was stored, but there were potential locking
+// problems.  The data will be stored at ^PSRX(D0,"ERR",D1,0).
+//     D0 is the prescription ien.
+//     D1 is the error ien.
+//     The information consists of an error code (piece 1), and a free text
+// string describing the error code (piece 2) for each multiple entry.
+// get('$.archived_flag-52') // Archived Flag, The archive flag will be set to 1 when the RX is archived.  Otherwise,
+//     it wont exist.
+
+
+// get('$._id')
+// get('$.activity_log-52')
+// get('$.activity_log_comments-52')
+// get('$.baker_cell-52')
+// get('$.baker_drug_edit-52')
+// get('$.baker_quantity_edit-52')
+// get('$.child_resistant_cont-52')
+// get('$.comments-52')
+// get('$.date_time_received_from_oe-52')
+// get('$.days_supply-52')
+// get('$.drug-52')
+// get('$.edited-52')
+// get('$.error-52')
+// get('$.expanded_sig-52')
+// get('$.expiration_date-52')
+// get('$.fill_dates-52')
+// get('$.fill_expiration-52')
+// get('$.label')
+// get('$.label_width-52')
+// get('$.last_dispensing_pharmacy-52')
+// get('$.last_fill_date-52')
+// get('$.last_label_print_date-52')
+// get('$.logged_by-52')
+// get('$.login_date-52')
+// get('$.meprs_code-52')
+// get('$.mtf_division-52')
+// get('$.notification_type-52')
+// get('$.oerxbatch-52')
+// get('$.order_date_time-52')
+// get('$.order_entry_number-52')
+// get('$.order_pointer-52')
+// get('$.outpatient_site-52')
+// get('$.parent_prescription-52')
+// get('$.patient-52')
+// get('$.pdts_prescription_number-52')
+// get('$.pharmacy_originated-52')
+// get('$.provider-52')
+// get('$.qty-52')
+// get('$.refill_control-52')
+// get('$.refills-52')
+// get('$.refills_remaining-52')
+// get('$.rx_-52')
+// get('$.sig-52')
+// get('$.sig_overflow-52')
+// get('$.status-52')
+// get('$.type')
+
+```
