@@ -5,7 +5,7 @@
 var prefix = '../translate/';
 var cmumps = require(prefix + 'cmumps');
 // Abbreviations to shorten functions
-var pattern = cmumps.cmumpssSimpleJsonPattern;
+var pattern = cmumps.cmumpssJsonPattern;
 var cmumpss = cmumps.cmumpss;
 var fhir = require(prefix + 'fhir');
 var _ = require('underscore');
@@ -175,11 +175,12 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     // cmumps Kg_Patient_Diagnosis-100417
     var theDiagnoses;
     try {
-        var thePattern = pattern(cmumpss.Kg_Patient_Diagnosis); //pattern(cmumpss.Kg_Patient_Diagnosis)
+        // var thePattern = pattern(cmumpss.Kg_Patient_Diagnosis); //pattern(cmumpss.Kg_Patient_Diagnosis)
         theDiagnoses = JSONPath({
             resultType: 'all',
-            path: thePattern,
-            json: cmumpsJsonldObjectModified
+            // path: pattern(cmumpss.Kg_Patient_Diagnosis),
+            path: "$[?(@.type.match(/^\s*c.{2,4}ss:Kg_Patient_Diagnosis-100417\s*/))]",
+            json: cmumpsJsonldObjectModified['@graph'].filter(function(i) { return 'type' in i; })
         });
     } catch (err) {
         throw new Error(here + ": Can't match the diagnoses, " + err);
@@ -209,7 +210,8 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
         theProcedures = JSONPath({
             resultType: 'all',
             path: thePattern,
-            json: cmumpsJsonldObjectModified}
+            json: cmumpsJsonldObjectModified,
+        }
         );
     } catch (err) {
         throw new Error(here + ": Can't match the procedures, " + err);
