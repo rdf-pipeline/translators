@@ -15,7 +15,7 @@ var fdt = require('./cmumps2fhir_datatypes');
 // https://www.npmjs.com/package/node-html-encoder
 var Encoder = require('node-html-encoder').Encoder;
 var encoder = new Encoder('entity');
-var cmumps2fhir_simple_prescriptions = require('cmumps2fhir_simple_prescriptions');
+var cmumps2fhir_simple_prescriptions = require('./cmumps2fhir_simple_prescriptions');
 
 
 

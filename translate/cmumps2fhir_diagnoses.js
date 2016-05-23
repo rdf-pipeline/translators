@@ -12,7 +12,7 @@ var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
 var fdt = require('./cmumps2fhir_datatypes');
-var cmumps_simple_diagnoses = require('./cmumps_simple_diagnoses');
+var cmumps2fhir_simple_diagnoses = require('./cmumps2fhir_simple_diagnoses');
 
 
 /**
@@ -43,7 +43,7 @@ function translateDiagnosesFhir(cmumpsPatientDiagnosisObject, options) {
     // a list of fhir Observations?
 
     
-    var fhirDiagnoses = cmumps_simple_diagnoses.translate(cmumpsPatientDiagnosisObject);
+    var fhirDiagnoses = cmumps2fhir_simple_diagnoses.translate(cmumpsPatientDiagnosisObject);
     
     if (options.participants) fhir.addParticipants(fhirDiagnoses, participatingProperties);
     if (options.warnings) fhir.addWarnings(fhirDiagnoses, warnings);
