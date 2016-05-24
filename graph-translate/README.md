@@ -11,9 +11,9 @@ Note that unlike `../translate/cmumps2fhir_*.js`, these translation functions re
 input data. It also side effects the input, if desired, leaving remaining items that were untranslated. Usage:
 
 ```javascript
-var cmumps = require('rdftransforms/translate/cmumps.js');
-var cmumps_utils = require('rdftransforms/translate/util/cmumps_utils.js');
-var graph_cmumps2fhir_prescriptions = require('rdftransforms/graph_translate/graph_cmumps2fhir_prescriptions');
+var cmumps = require('rdf-pipeline/translate/cmumps.js');
+var cmumps_utils = require('rdf-pipeline/translate/util/cmumps_utils.js');
+var graph_cmumps2fhir_prescriptions = require('rdf-pipeline/graph_translate/graph_cmumps2fhir_prescriptions');
 var cmumpsInputJsonld = {...}; // input from somewhere
 var cmumpsInputJsonldSideEffected = cmumps_utils.clone(cmumpsInputJsonld);
 

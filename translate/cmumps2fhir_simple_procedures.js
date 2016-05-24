@@ -27,6 +27,11 @@ function translate(cmumpsProcedureObject) {
     var theProcedure = get('$._id');
     if (theProcedure) theProcedure = theProcedure.substring('Procedure-'.length);
     var theLabel = get('$.patient.label');
+    var provider = get('$.provider'); var thePreformer = undefined;
+    if (provider) thePreformer = [{
+        actor: fdt.fhirReferencePractioner(provider), // { Reference(Practitioner|Organization|Patient|RelatedPerson) }, // The reference to the practitioner
+        role:fdt.fhirCodeableConcept('provider') // { CodeableConcept } // The role the actor was in
+    }];
 
     return fdt.clean({
         resourceType: resourceType,
@@ -45,12 +50,7 @@ function translate(cmumpsProcedureObject) {
         // reasonCodeableConcept: fetch1('', fdt.fhirCodeableConcept), // { CodeableConcept },
         // reasonReference: { Reference(Condition) },
         // dbooth
-        // performer: fetch1('$.provider', function (p) {
-        //        return [{ // The people who performed the procedure
-        //            actor: fdt.fhirReferencePractioner(p), // { Reference(Practitioner|Organization|Patient|RelatedPerson) }, // The reference to the practitioner
-        //            role: fdt.fhirCodeableConcept(p) // { CodeableConcept } // The role the actor was in
-        //        }];
-        //    }),
+        performer: thePreformer,
         // performed[x]: Date/Period the procedure was performed. One of these 2:
 
         performedDateTime: get('$.dateReported.value'), // "<dateTime>",

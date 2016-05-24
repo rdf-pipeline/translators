@@ -99,27 +99,13 @@ diff: all
 CURLIT = curl -s 'http://10.255.241.50:8080/patient_graph?dataset=$(1)&patientid=$(2)&datatype=all'| $(CMUMPSFILE) /dev/stdin
 CURLPARTS = curl -s 'http://10.255.241.50:8080/patient_graph?dataset=$(1)&patientid=$(2)&datatype=all'| $(CMUMPSPARTS) /dev/stdin
 
-.PHONY: ldr Patient-12042 922419 craytonxxx 1000099 600357 839429
+PATIENTS := 922419 1000099 600357 839429 754427 100210 Patient-12042
+.PHONY: ldr $(PATIENTS)
+ldr: $(PATIENTS)
 
-754427:
-ldr: Patient-12042 922419 1000099
-
-Patient-12042:
-	@echo expecting a procedure
-	$(call CURLIT,ahlta20,$@)
-922419 1000099:
-	$(call CURLIT,$(DATASET),$@)
-#922419:
-#	$(call CURLIT,$(DATASET),$@)
-craytonxxx:
-	$(call CURLIT,$(DATASET),1006387)
-600357:
-	$(call CURLIT,$(DATASET),$@)
-839429:
-	$(call CURLIT,$(DATASET),$@)
-754427:
-	$(call CURLIT,$(DATASET),$@)
-100210:
+# Patient-12052 come from the "aahta" dataset
+$(PATIENTS):
 	$(call CURLIT,$(DATASET),$@)
 	$(call CURLPARTS,$(DATASET),$@)
+
 
