@@ -57,7 +57,7 @@
     "commander": "^2.9.0",
     "concat-stream": "^1.5.1",
     "decomment": "^0.7.5",
-    "fhir-json-to-xml": "git+https://github.com/rdf-pipeline/FHIR-JSON-to-XML-Converter/fhir-json-to-xml-converter",
+    "fhir-json-to-xml": "git+https://github.com/rdf-pipeline/fhir-json-to-xml-converter",
     "handlebars": "^4.0.5",
     "jsonld": "^0.4.2",
     "jsonld-cli": "^0.1.0",
