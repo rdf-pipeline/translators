@@ -1,0 +1,3 @@
+FacilityID	FacilityName	FacilityLocation
+1	Sun West	San Francisco
+2	Arroyo Canyon	Chicago

@@ -1,0 +1,61 @@
+EncounterID	DiagnosisID	DiagnosisCode	DiagnosisDescription
+1	1	M86.5	Other chronic hematogenous osteomyelitis	1
+1	2	K08.402	Partial loss of teeth, unspecified cause, class II	2
+1	3	O03.36	Cardiac arrest following incomplete spontaneous abortion	3
+2	4	C93.90	Monocytic leukemia, unspecified, not having achieved remission	1
+2	5	X08.0	Exposure to bed fire	2
+2	6	S85.492	Other specified injury of lesser saphenous vein at lower leg level, left leg	3
+3	7	M60.269	Foreign body granuloma of soft tissue, not elsewhere classified, unspecified lower leg	1
+3	8	N70.93	Salpingitis and oophoritis, unspecified	2
+3	9	R25.0	Abnormal head movements	3
+4	10	S24.119	Complete lesion at unspecified level of thoracic spinal cord	1
+4	11	S72.452	Displaced supracondylar fracture without intracondylar extension of lower end of left femur	2
+4	12	H60.552	Acute reactive otitis externa, left ear	3
+5	13	H35.411	Lattice degeneration of retina, right eye	1
+5	14	S83.8X1	Sprain of other specified parts of right knee	2
+5	15	B67	Echinococcosis	3
+6	16	A23.9	Brucellosis, unspecified	1
+6	17	C82.59	Diffuse follicle center lymphoma, extranodal and solid organ sites	2
+6	18	M46.82	Other specified inflammatory spondylopathies, cervical region	3
+8	22	I06.9	Rheumatic aortic valve disease, unspecified	1
+8	23	M40.209	Unspecified kyphosis, site unspecified	2
+8	24	H59.221	Accidental puncture and laceration of right eye and adnexa during other procedure	3
+7	19	M46.54	Other infective spondylopathies, thoracic region	1
+7	20	M08.049	Unspecified juvenile rheumatoid arthritis, unspecified hand	2
+7	21	D04.72	Carcinoma in situ of skin of left lower limb, including hip	3
+9	25	V49.1	Passenger injured in collision with other and unspecified motor vehicles in nontraffic accident	1
+9	26	M25.642	Stiffness of left hand, not elsewhere classified	2
+9	27	O09.511	Supervision of elderly primigravida, first trimester	3
+10	28	D25.0	Submucous leiomyoma of uterus	1
+10	29	L41.0	Pityriasis lichenoides et varioliformis acuta	2
+10	30	W16.821	Jumping or diving into other water striking bottom causing drowning and submersion	3
+11	31	Y35.213	Legal intervention involving injury by tear gas, suspect injured	1
+11	32	S22.031	Stable burst fracture of third thoracic vertebra	2
+11	33	S61.539	Puncture wound without foreign body of unspecified wrist	3
+12	34	M47.812	Spondylosis without myelopathy or radiculopathy, cervical region	1
+12	35	S42.452	Displaced fracture of lateral condyle of left humerus	2
+12	36	T25.73	Corrosion of third degree of toe(s) (nail)	3
+13	37	I68	Cerebrovascular disorders in diseases classified elsewhere	1
+13	38	S14.157	Other incomplete lesion at C7 level of cervical spinal cord	2
+13	39	M88.86	Osteitis deformans of lower leg	3
+15	43	S25.499	Other specified injury of unspecified pulmonary blood vessels	1
+15	44	T53.7X4	Toxic effect of other halogen derivatives of aromatic hydrocarbons, undetermined	2
+15	45	H33.051	Total retinal detachment, right eye	3
+14	40	S46.311	Strain of muscle, fascia and tendon of triceps, right arm	1
+14	41	T25.132	Burn of first degree of left toe(s) (nail)	2
+14	42	V82	Occupant of powered streetcar injured in transport accident	3
+17	49	H40.211	Acute angle-closure glaucoma, right eye	1
+17	50	N15.0	Balkan nephropathy	2
+17	51	R87.7	Abnormal histological findings in specimens from female genital organs	3
+16	46	M70.821	Other soft tissue disorders related to use, overuse and pressure, right upper arm	1
+16	47	S56.202	Unspecified injury of other flexor muscle, fascia and tendon at forearm level, left arm	2
+16	48	M46.91	Unspecified inflammatory spondylopathy, occipito-atlanto-axial region	3
+18	52	M05.319	Rheumatoid heart disease with rheumatoid arthritis of unspecified shoulder	1
+18	53	O9A.119	Malignant neoplasm complicating pregnancy, unspecified trimester	2
+18	54	L40.1	Generalized pustular psoriasis	3
+19	55	T84.092	Other mechanical complication of internal right knee prosthesis	1
+19	56	S61.328	Laceration with foreign body of other finger with damage to nail	2
+19	57	O99.355	Diseases of the nervous system complicating the puerperium	3
+20	58	T82.221	Breakdown (mechanical) of biological heart valve graft	1
+20	59	M84.639	Pathological fracture in other disease, unspecified ulna and radius	2
+20	60	M05.131	Rheumatoid lung disease with rheumatoid arthritis of right wrist	3

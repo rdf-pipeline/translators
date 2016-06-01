@@ -1,0 +1,87 @@
+EncounterID	ProcedureOrderID	ProcedureName	ProcedureDate
+17	67	Cryosurgery	07/26/2003 04:19 PM
+12	72	Ultrasonography	07/08/2002 02:26 AM
+11	74	Computed tomography	05/18/2002 08:54 AM
+17	66	Lithotriptor	07/27/2003 05:36 AM
+9	3	Radiosurgery	11/25/2001 09:13 AM
+5	72	Intravascular ultrasound	10/18/2002 02:44 PM
+6	1	Angiography	05/20/2000 06:51 PM
+6	81	Sigmoidoscopy	05/13/2000 01:30 AM
+9	3	Magnetoencephalography	12/05/2001 10:21 AM
+17	68	Electroretinography	08/03/2003 06:54 AM
+2	84	Electrocardiography	11/25/2002 12:23 PM
+3	39	Cardiac stress test	08/28/2007 11:04 PM
+16	47	SPECT	12/25/2007 01:30 PM
+15	1	Facial rejuvenation	04/22/2014 07:56 AM
+13	84	Colposcopy	05/12/2003 03:41 PM
+16	62	Coronary angiography	12/26/2007 10:45 AM
+15	30	Electroencephalography	04/22/2014 04:28 PM
+18	1	Electrocardiography	03/28/2015 03:07 PM
+8	3	Virtual colonoscopy	09/26/2010 09:55 AM
+19	1	Computed tomography	08/02/2002 01:45 AM
+4	28	Colposcopy	11/11/2009 02:04 AM
+1	58	Ablation	08/30/2013 04:56 AM
+5	64	Hand surgery	10/18/2002 04:13 PM
+20	26	Lobotomy	07/16/2014 11:05 AM
+11	25	Obstetric ultrasonography	05/14/2002 07:30 AM
+16	73	Virtual colonoscopy	12/25/2007 02:22 AM
+15	50	Scintillography	04/23/2014 01:50 AM
+10	13	Lymphangiography	02/15/2003 07:01 AM
+13	63	Fluoroscopy	05/12/2003 01:30 PM
+6	62	Gynecologic ultrasonography	05/13/2000 07:20 PM
+7	43	Lithotriptor	10/30/2011 06:55 AM
+10	77	Virtual colonoscopy	02/15/2003 11:40 AM
+16	45	Image-guided surgery	12/26/2007 05:39 AM
+11	53	Diffusion-weighted imaging	05/14/2002 06:11 PM
+1	30	Aortography	08/22/2013 06:43 AM
+7	75	Cryosurgery	10/31/2011 06:48 PM
+18	69	Neovaginoplasty	04/01/2015 07:12 AM
+13	43	Positron emission tomography	05/12/2003 08:41 AM
+9	53	Electrooculography	12/10/2001 10:56 PM
+1	22	General surgery	08/26/2013 09:55 PM
+7	42	Cystoscopy	11/01/2011 12:28 AM
+10	57	Obstetric ultrasonography	02/15/2003 11:28 PM
+3	5	Radiography	08/30/2007 09:44 AM
+9	2	Lithotomy	12/05/2001 01:51 PM
+5	20	Vaginoplasty	10/18/2002 08:03 PM
+6	20	﻿Biopsy test	05/24/2000 02:08 PM
+16	8	Computed tomography	12/25/2007 06:27 PM
+5	76	Ablation	10/18/2002 10:05 AM
+3	70	Sigmoidoscopy	08/29/2007 03:13 PM
+2	59	Radiosurgery	11/25/2002 01:11 AM
+8	37	Contrast-enhanced ultrasound	09/27/2010 05:35 PM
+5	11	Chest photofluorography	10/18/2002 08:59 PM
+9	87	Electroretinography	12/02/2001 06:58 PM
+18	70	Electrocardiography	03/28/2015 12:39 AM
+20	54	Electroneuronography	07/10/2014 07:23 AM
+19	40	Vaginoplasty	08/06/2002 05:26 PM
+17	1	Cerebral angiography	08/02/2003 02:54 AM
+17	25	Radiosurgery	07/29/2003 10:41 AM
+19	50	Evoked potential	07/24/2002 06:15 PM
+20	43	Coronary angiography	07/15/2014 03:19 AM
+5	9	Neuroimaging	10/19/2002 06:15 AM
+13	34	Ophthalmoscopy	05/12/2003 06:18 PM
+1	49	Lobotomy	08/24/2013 11:33 PM
+15	7	Diffusion tensor imaging	04/21/2014 10:52 AM
+19	68	SPECT	07/26/2002 03:26 PM
+16	62	Coronary angiography	12/25/2007 12:37 AM
+4	36	Amputation	11/11/2009 01:40 AM
+7	87	﻿Biopsy test	10/29/2011 10:59 PM
+17	77	Hand surgery	07/29/2003 09:34 AM
+7	38	Angiography	10/29/2011 11:24 AM
+12	20	Ophthalmoscopy	07/10/2002 11:44 PM
+9	70	Cystoscopy	11/28/2001 12:14 PM
+5	49	Functional magnetic resonance imaging	10/19/2002 12:40 AM
+15	4	Gynecologic ultrasonography	04/22/2014 01:42 AM
+11	70	Fluoroscopy	05/13/2002 10:27 AM
+8	43	Virtual colonoscopy	10/01/2010 07:26 AM
+18	42	Contrast-enhanced ultrasound	03/29/2015 06:35 PM
+11	80	Electrocardiography	05/12/2002 08:48 PM
+2	65	Angiography	11/24/2002 07:50 PM
+7	14	Fluoroscopy	10/29/2011 09:20 AM
+5	56	Hand surgery	10/18/2002 03:44 PM
+10	48	Electrical impedance tomography	02/15/2003 09:11 AM
+15	59	Laryngoscopy	04/23/2014 05:30 AM
+9	85	Magnetoencephalography	12/08/2001 11:34 AM
+12	52	Hand surgery	07/02/2002 06:23 PM
+3	24	Gastroscopy	08/31/2007 02:01 PM
