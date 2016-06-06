@@ -238,8 +238,17 @@ function merge(passed, defaults) {
     return result;
 }
 
+/**
+ * The mongo collection is embedded in the cmumps type identifier, e.g. '
+ * @param cmumpsType
+ * @returns {undefined}
+ */
+function cmumps2mongo(cmumpsType) {
+    var collection = cmumpsType.match(/^[^-]+-(\d+)/);
+    return collection ? collection[1] : undefined;
+}
 
 // Export the actual functions here.
 // Export the actual functions here. Make sure the names are always consistent.
 [ isJsonld, pp, clone, slurp, load, getAllPatientGraph, frontier, merge,
-    values, keys, diffObjects, overlapObjects, devivify, partition ].forEach(function(f) { module.exports[f.name] = f; });
+    values, keys, diffObjects, overlapObjects, devivify, partition, cmumps2mongo].forEach(function(f) { module.exports[f.name] = f; });
