@@ -7,8 +7,27 @@ var JSONPath = require('jsonpath-plus');
 var cmumps_utils = require('./util/cmumps_utils');
 var fdt = require('./cmumps2fhir_datatypes');
 
-function promise() {
-    return {};
+/**
+ *
+ * @param {Function} translatorFunction -- the translator inserting this promise (marker).
+ * @param {string} sourceNode -- ?
+ * @param {string matching /urn:local:fhir:Patient:2-\d+/} patientId
+ * @param patientName
+ * @returns {{t:translator: string, t:sourceNode: string, t:patientId: string, t:patientName: *}}
+ */
+function promise(translatorFunction, sourceNode, patientId, patientName) {
+    // Key for this value will be 't:translatedBy'
+    var expectedPatientFormat = /urn:local:fhir:Patient:2-\d+/;
+    if (! patientId.match(expectedPatientFormat)) {
+        throw new Error('patientId not in expected format ' + expectedPatientFormat);
+    }
+    return {
+        // Are these values all required?
+        't:translator': 't:translators:' + translatorFunction.name,
+        't:sourceNode': 'urn:local:' + sourceNode,
+        't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
+        't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
+    }
 }
 
 
