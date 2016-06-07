@@ -55,3 +55,10 @@ npm test # run the regression tests with
 # References
 
 The translator implementation relies on [JSONPath](http://goessner.net/articles/JsonPath/).
+
+# Notes
+
+On the github branch `synthetic`, there is the start of a demonstration to support "synthetic data". The data is itself encoded as tab separated values
+(TSV). There is an example translator `cmumps2sd[_simple]?_diagnosis` and its inverse `sd2cmumps_diagnosis`. This investigation isn't yet complete and the example is untested. 
+It is meant to demonstrate how to use the library for a non-FHIR output format and how to do
+a "reverse" translation to the cmumps format, for example for generating test data or for loading a persistent data store. We hope to return it, time permitting.
