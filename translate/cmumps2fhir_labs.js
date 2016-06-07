@@ -12,6 +12,7 @@ var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
 var fdt = require('./cmumps2fhir_datatypes');
+var cmumps_utils = require('./util/cmumps_utils');
 
 
 
@@ -54,7 +55,7 @@ var fdt = require('./cmumps2fhir_datatypes');
  */
 
 function translateLabsFhir(cmumpsLabResultObject, options) {
-    var options = options || {participants: false, warnings: false};
+    var options = cmumps_utils.merge(options, {participants: false, warnings: false});
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 

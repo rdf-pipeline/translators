@@ -100,12 +100,12 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         }
     });
 
-    // cmumps Lab_Results-63 CURRENTLY HANDLED BY SHEX
-    // var theLabs = JSONPath(pattern(cmumpss.Lab_Result), cmumpsJsonldObject);
-    // var fhirLabResultTranslations = theLabs.map(function(i) {
-    //     tries {
+    // cmumps Lab_Results-63 will be handled elsewhere, we don't "know" how to do them.
+    //var theLabs = JSONPath(pattern(cmumpss.Lab_Result), cmumpsJsonldObject);
+    //var fhirLabResultTranslations = theLabs.map(function(i) {
+    //    try {
     //         return labs.translateLabsFhir(i, options);
-    //     } catch (err) {
+    //    } catch (err) {
     //         throw new Error("Can't translate lab " + err);
     //     }
     // });
