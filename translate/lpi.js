@@ -9,25 +9,35 @@ var fdt = require('./cmumps2fhir_datatypes');
 
 /**
  *
- * @param {Function} translatorFunction -- the translator inserting this promise (marker).
+ * @param {string} fhirTargetResource -- the kind of FHIR resource to eventually translate, e.g. 'DiagnosticReport' or 'MedicationDispense'
+ * @param {Function || string} translatorFunction -- the source translator inserting this defer (marker).
  * @param {string} sourceNode -- ?
+ * @param {string} id of the source object to that it can be obtained again
  * @param {string matching /urn:local:fhir:Patient:2-\d+/} patientId
- * @param patientName
- * @returns {{t:translator: string, t:sourceNode: string, t:patientId: string, t:patientName: *}}
+ * @param {string} patientName, cmumps format 'LAST, FIRST MIDDLE?'
+ * @returns {Object} deferred translation marker
  */
-function promise(translatorFunction, sourceNode, patientId, patientName) {
+function defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName) {
     // Key for this value will be 't:translatedBy'
     var expectedPatientFormat = /urn:local:fhir:Patient:2-\d+/;
     if (! patientId.match(expectedPatientFormat)) {
         throw new Error('patientId not in expected format ' + expectedPatientFormat);
     }
+
+
     return {
-        // Are these values all required?
-        't:translator': 't:translators:' + translatorFunction.name,
-        't:sourceNode': 'urn:local:' + sourceNode,
-        't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
-        't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
-    }
+        '@id': 'urn:local:' + fhirTargetResource + '/' + id,
+        'resourceType': fhirTargetResource,
+        'id': id,
+        'fhir:patientName': patientName,
+        't:translatedBy': {
+            // Are these values all required?
+            't:translator': 't:translators:' + translatorFunction.name,
+            't:sourceNode': 'urn:local:' + sourceNode,
+            't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
+            't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
+        }
+    };
 }
 
 
@@ -70,6 +80,6 @@ function makeTranslator(translator) {
 
 // parts, the parts of cmumps knows how to extract
 module.exports = {};
-[promise, makeTranslator].forEach(function(f) {
+[defer, makeTranslator].forEach(function(f) {
     module.exports[f.name] = f;
 });
