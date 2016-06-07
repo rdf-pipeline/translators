@@ -6,6 +6,7 @@ var format = require('string-format');
 var JSONPath = require('jsonpath-plus');
 var cmumps_utils = require('./util/cmumps_utils');
 var fdt = require('./cmumps2fhir_datatypes');
+var _ = require('underscore');
 
 /**
  *
@@ -18,6 +19,7 @@ var fdt = require('./cmumps2fhir_datatypes');
  * @returns {Object} deferred translation marker
  */
 function defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName) {
+
     // Key for this value will be 't:translatedBy'
     var expectedPatientFormat = /urn:local:fhir:Patient:2-\d+/;
     if (! patientId.match(expectedPatientFormat)) {
@@ -32,7 +34,7 @@ function defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId
         'fhir:patientName': patientName,
         't:translatedBy': {
             // Are these values all required?
-            't:translator': 't:translators:' + translatorFunction.name,
+            't:translator': 't:translators:' + _.isFunction(translatorFunction) ? translatorFunction.name : translatorFunction,
             't:sourceNode': 'urn:local:' + sourceNode,
             't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
             't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
