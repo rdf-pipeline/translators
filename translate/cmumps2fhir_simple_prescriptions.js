@@ -78,6 +78,7 @@ function translate(cmumpsPrescriptionObject) {
     });
 }
 
+translate.resourceType = 'MedicationDispense';
 
 
 // Export the actual functions here. Make sure the names are always consistent.

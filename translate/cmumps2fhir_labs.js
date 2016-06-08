@@ -82,7 +82,7 @@ function translateLabsFhir(cmumpsLabResultObject, options) {
     function clinical_chemistry(cc) {
         return fdt.clean({
 
-            resourceType: "DiagnosticReport",
+            resourceType: 'DiagnosticReport',
             // from Resource: id, meta, implicitRules, and language
             identifier: identifier,
             // from DomainResource: text, contained, extension, and modifierExtension
@@ -691,6 +691,8 @@ function translateLabsFhir(cmumpsLabResultObject, options) {
     return fhirDiagnosticReports;
 }
 
+// Each translator "knows" what FHIR resource it will generate. This is useful to the caller and for lpi.Defer().
+translateLabsFhir.resourceType = 'DiagnosticReport';
 var translate = translateLabsFhir;
 
 // Export the actual functions here. Make sure the names are always consistent.
