@@ -124,10 +124,8 @@ describe('for lpi ...', function() {
             var id = '63-0000007'; // cmumpss:Lab_Result-63
             var patientId = 'urn:local:fhir:Patient:2-' + id.split('-')[1];
             var patientName = 'BUNNY, BUGS DOC';
-            var result = new lpi.Defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
-            //           ^^^ create a Defer object which has a prototype and eventually has methods
-
-            chai.expect(result).to.be.an.instanceOf(lpi.Defer);
+            var result = lpi.fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
+            // chai.expect(result).to.be.an.instanceOf(lpi.Defer);
             chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', 'fhir:patientName', 't:translatedBy']);
             chai.expect(result['t:translatedBy']).to.have.keys(['t:translator', 't:sourceNode', 't:patientId', 't:patientName']);
             chai.expect(result.id).equals(id);
@@ -143,7 +141,7 @@ describe('for lpi ...', function() {
             var id = '63-0000007'; // cmumpss:Lab_Result-63
             var patientId = 'urn:local:fhir:Patient:2-' + id.split('-')[1];
             var patientName = 'BUGS, BUNNY DOC';
-            var result = /* new */ lpi.Defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
+            var result = lpi.fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
             chai.expect(result).to.be.an.instanceOf(Object);
             chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', 'fhir:patientName', 't:translatedBy']);
             chai.expect(result['t:translatedBy']).to.have.keys(['t:translator', 't:sourceNode', 't:patientId', 't:patientName']);

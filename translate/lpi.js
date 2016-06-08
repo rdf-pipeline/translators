@@ -12,20 +12,22 @@ var _ = require('underscore');
  * Defer creates a marker to be inserted in a translation. This marker indicates that a translator knows a translation
  * must be inserted here, but can't do it. It marks metadata about what the translation should be, e.g. its FHIR resourceType
  * 'Patient' or 'DiagnosticReport' and what the source object should be.
- * @param {string} fhirTargetResource -- the kind of FHIR resource to eventually translate, e.g. 'DiagnosticReport' or 'MedicationDispense'
- * @param {Function || string} translatorFunction -- the source translator inserting this Defer (marker).
- * @param {Object} sourceNode -- input for translation.
- * @param {string} id of the source object so that it can be obtained again (in theory)
- * @param {string matching /urn:local:fhir:Patient:2-\d+/} patientId
- * @param {string} patientName, cmumps format 'LAST, FIRST MIDDLE?'
- * @returns {Object || Defer} deferred translation marker
+ * @param {required string} fhirTargetResource -- the kind of FHIR resource to eventually translate, e.g. 'DiagnosticReport' or 'MedicationDispense'
+ * @param {required Function || string} translatorFunction -- the source translator inserting this Defer (marker).
+ * @param {required Object || string} sourceNode -- input for translation.
+ * @param {required string} id of the source object so that it can be obtained again (in theory)
+ * @param {required string, matching /urn:local:fhir:Patient:2-\d+/} patientId
+ * @param {required string} patientName, cmumps format 'LAST, FIRST MIDDLE?'
+ * @returns {Object} deferred translation marker
  *
  * usage as a function:  var d = Defer(); // d instanceOf Object
- * usage as a constructor: var d = new Defer(); // d instanceOf Defer
+ * // usage as a constructor: var d = new Defer(); // d instanceOf Defer, commented out
  *                                 ^^^
  */
 
-function Defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName) {
+
+
+function fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName) {
 
     var expectedPatientFormat = /urn:local:fhir:Patient:2-\d+/;
     if (! patientId.match(expectedPatientFormat)) {
@@ -40,7 +42,8 @@ function Defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId
         't:translatedBy': {
             // Are these values all required?
             't:translator': 't:translators:' + _.isFunction(translatorFunction) ? translatorFunction.name : translatorFunction,
-            't:sourceNode': 'urn:local:' + sourceNode,
+            // if the sourceNode comes in serialized as a string, attach a prefix. Otherwise its an object and preserve the object
+            't:sourceNode': (typeof sourceNode == 'string') ? 'urn:local:' + sourceNode : sourceNode,
             't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
             't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
         }
@@ -48,10 +51,12 @@ function Defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId
 
     // http://www.2ality.com/2012/08/underscore-extend.html
     // Apparently _.extend can be fooled in certain cases.
-    return (this instanceof Defer) ? _.extend(this, d) : d;
+    // TODO carif: retain this expression,
+    // return (this instanceof fhirDefer) ? _.extend(this, d) : d;
+    return d;
 }
 
-// Defer.prototype.method here...
+// fhirDefer.prototype.method here...
 
 
 
@@ -95,6 +100,6 @@ function makeTranslator(translator) {
 
 // parts, the parts of cmumps knows how to extract
 module.exports = {};
-[Defer, makeTranslator].forEach(function(f) {
+[fhirDefer, makeTranslator].forEach(function(f) {
     module.exports[f.name] = f;
 });
