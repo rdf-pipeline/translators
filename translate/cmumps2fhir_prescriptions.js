@@ -65,6 +65,8 @@ function translatePrescriptionsFhir(cmumpsPrescriptionObject, options) {
 }
 
 // short form
+
+translatePrescriptionsFhir.resourceType = cmumps2fhir_simple_prescriptions.translate.resourceType;
 var translate = translatePrescriptionsFhir;
 
 [translatePrescriptionsFhir, translate].forEach(function(f) { module.exports[f.name] = f; });

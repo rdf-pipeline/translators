@@ -50,6 +50,7 @@ function translateProceduresFhir(cmumpsProcedureObject, options) {
 }
 
 // short form
+translateProceduresFhir.resourceType = cmumps2fhir_simple_procedures.translate.resourceType;
 var translate = translateProceduresFhir;
 
 [translateProceduresFhir, translate].forEach(function(f) { module.exports[f.name] = f; });

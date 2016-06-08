@@ -71,7 +71,7 @@ function translate(cmumpsProcedureObject) {
     });
 }
 
-
+translate.resourceType = 'Procedure';
 
 // Export the actual functions here. Make sure the names are always consistent.
 [translate].forEach(function(f) { module.exports[f.name] = f; });

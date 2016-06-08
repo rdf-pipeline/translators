@@ -51,6 +51,7 @@ function translateDemographicsFhir(cmumpsPatientObject, options) {
 
 
 // short form
+translateDemographicsFhir.resourceType = cmumps2fhir_simple_demographics.translate.resourceType;
 var translate = translateDemographicsFhir;
 
 // Export the actual functions here. Make sure the names are always consistent.

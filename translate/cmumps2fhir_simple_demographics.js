@@ -101,6 +101,7 @@ function translate(cmumpsPatientObject, get) {
     return result;
 }
 
+translate.resourceType = 'Patient';
 
 
 // Export the actual functions here. Make sure the names are always consistent.

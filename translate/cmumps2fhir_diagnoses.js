@@ -53,6 +53,8 @@ function translateDiagnosesFhir(cmumpsPatientDiagnosisObject, options) {
 }
 
 // short form
+
+translateDiagnosesFhir.resourceType = cmumps2fhir_simple_diagnoses.translate.resourceType;
 var translate = translateDiagnosesFhir;
 
 [translateDiagnosesFhir, translate].forEach(function(f) { module.exports[f.name] = f; });
