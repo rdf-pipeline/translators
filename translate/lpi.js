@@ -36,8 +36,9 @@ function fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patie
 
     var d = {
         '@id': 'urn:local:' + fhirTargetResource + '/' + id,
-        'resourceType': fhirTargetResource,
-        'id': id,
+        resourceType: fhirTargetResource,
+        _deferred: true, 
+        id: id,
         'fhir:patientName': patientName,
         't:translatedBy': {
             // Are these values all required?

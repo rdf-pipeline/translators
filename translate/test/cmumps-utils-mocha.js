@@ -126,7 +126,7 @@ describe('for lpi ...', function() {
             var patientName = 'BUNNY, BUGS DOC';
             var result = lpi.fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
             // chai.expect(result).to.be.an.instanceOf(lpi.Defer);
-            chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', 'fhir:patientName', 't:translatedBy']);
+            chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', '_deferred', 'fhir:patientName', 't:translatedBy']);
             chai.expect(result['t:translatedBy']).to.have.keys(['t:translator', 't:sourceNode', 't:patientId', 't:patientName']);
             chai.expect(result.id).equals(id);
             chai.expect(result['t:translatedBy']['t:patientId']).equals(patientId);
@@ -143,7 +143,7 @@ describe('for lpi ...', function() {
             var patientName = 'BUGS, BUNNY DOC';
             var result = lpi.fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
             chai.expect(result).to.be.an.instanceOf(Object);
-            chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', 'fhir:patientName', 't:translatedBy']);
+            chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', '_deferred', 'fhir:patientName', 't:translatedBy']);
             chai.expect(result['t:translatedBy']).to.have.keys(['t:translator', 't:sourceNode', 't:patientId', 't:patientName']);
             chai.expect(result.id).equals(id);
             chai.expect(result['t:translatedBy']['t:patientId']).equals(patientId);
