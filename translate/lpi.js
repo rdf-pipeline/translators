@@ -9,13 +9,16 @@ var fdt = require('./cmumps2fhir_datatypes');
 var _ = require('underscore');
 
 /**
+ * Defer creates a marker to be inserted in a translation. This marker indicates that a translator knows a translation
+ * must be inserted here, but can't do it. It marks metadata about what the translation should be, e.g. its FHIR resourceType
+ * 'Patient' or 'DiagnosticReport' and what the source object should be.
  * @param {string} fhirTargetResource -- the kind of FHIR resource to eventually translate, e.g. 'DiagnosticReport' or 'MedicationDispense'
  * @param {Function || string} translatorFunction -- the source translator inserting this Defer (marker).
- * @param {string} sourceNode -- ?
- * @param {string} id of the source object to that it can be obtained again
+ * @param {Object} sourceNode -- input for translation.
+ * @param {string} id of the source object so that it can be obtained again (in theory)
  * @param {string matching /urn:local:fhir:Patient:2-\d+/} patientId
  * @param {string} patientName, cmumps format 'LAST, FIRST MIDDLE?'
- * @returns {Object} deferred translation marker
+ * @returns {Object || Defer} deferred translation marker
  *
  * usage as a function:  var d = Defer(); // d instanceOf Object
  * usage as a constructor: var d = new Defer(); // d instanceOf Defer
@@ -24,7 +27,6 @@ var _ = require('underscore');
 
 function Defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName) {
 
-    // Key for this value will be 't:translatedBy'
     var expectedPatientFormat = /urn:local:fhir:Patient:2-\d+/;
     if (! patientId.match(expectedPatientFormat)) {
         throw new Error('patientId not in expected format ' + expectedPatientFormat);
@@ -49,7 +51,7 @@ function Defer(fhirTargetResource, translatorFunction, sourceNode, id, patientId
     return (this instanceof Defer) ? _.extend(this, d) : d;
 }
 
-// Defer.prototype.... here
+// Defer.prototype.method here...
 
 
 
