@@ -126,7 +126,7 @@ function addWarnings(fhirResult, warnings) {
 // Export the actual functions here.
 [now, extractPatient, extractDemographics,
     extractMedications, extractLabs, extractDiagnoses,
-    extractProcedures,
+    extractProcedures, extractLabs,
     addParticipants, addWarnings].forEach(function(f) { module.exports[f.name] = f; });
 
 // Given a resourceType, e.g. 'MedicationDispense', return the function that will extract out that resource type.
@@ -137,7 +137,9 @@ module.exports.resourceTypes = {
     MedicationDispense: extractMedications,
     DiagnosticObservation: extractLabs,
     DiagnosticReport: extractDiagnoses,
-    Procedure: extractProcedures
+    Procedure: extractProcedures,
+    DiagnosticObservation: extractLabs
+
 };
 
 module.exports.returns = {};
