@@ -2,6 +2,8 @@
  * Translate cmumps Lab object to fhir Observation.
  */
 
+'use strict';
+
 var cmumps = require('./cmumps');
 // Abbreviations to shorten functions
 var pattern = cmumps.cmumpssJsonPattern;
@@ -38,18 +40,31 @@ var lpi = require('./lpi');
 
 
 function translateLabsFhir(cmumpsLabResultObject) {
+
     // The get function knows how to get values from cmumpsPatientObject using JSONPath.
     var get = fdt.makeGetter(cmumpsLabResultObject);
-    return lpi.fhirDefer(
-        /* fhirTargetResource */ translateLabsFhir.resourceType,
-        /* translatorFunction */ translateLabsFhir,
-        /* sourceNode */ cmumpsLabResultObject,
-        /* id */ get('$._id').split('-')[1], // .split() throws if no _id
-        // TODO carif: should I prefix the urn here or will the translation driver know to do when it dispatches to
-        // another translator?
-        /* patientId */ 'urn:local:fhir:Patient:' + get('$.patient-63.id'),
-        /* patientName */ get('$.patient-63.label')
-    );
+
+    // These values are useful multiple times. Compute them once.
+    var id = get('$._id').split('-')[1];
+    // arguments.callee unavailable when 'use strict'. Var 'this', as usual, is bound to a global outside a method.
+    // Neither works. Pick your battles.
+    var resourceType = translateLabsFhir.resourceType;
+    var patientName = get('$.patient-63.label');
+
+    return fdt.clean({
+        '@id': 'urn:local:' + resourceType + '/' + id,
+        resourceType: resourceType,
+        _deferred: true,
+        id: id,
+        'fhir:patientName': patientName,
+        't:translatedBy': {
+            // Are these values all required?
+            't:translator': 't:translators:' + module.name + '.' + translateLabsFhir.name,
+                't:sourceNode': cmumpsLabResultObject,
+            't:patientId': 'urn:local:fhir:Patient:' + get('$.patient-63.id'), // urn:local:fhir:Patient:2-\d+
+            't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
+        }
+    });
 }
 
 
