@@ -139,7 +139,6 @@ module.exports.resourceTypes = {
     DiagnosticReport: extractDiagnoses,
     Procedure: extractProcedures,
     DiagnosticObservation: extractLabs
-
 };
 
 module.exports.returns = {};
