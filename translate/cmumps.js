@@ -312,6 +312,32 @@ function extractLabs(cmumpsJsonldObject, token) {
     return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result, token)});
 }
 
+
+/**
+ * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove all lab records from @graph of that object.
+ * MODIFIES cmumpsJsonldObject.
+ *
+ * @param cmumpsJsonldObject
+ * @return {Array[object]} -- the items removed
+ */
+
+function removeLabs(cmumpsJsonldObject) {
+    var token = token || cmumpsPrefixPattern;
+    var result = [];
+    var paths = JSONPath({json: cmumpsJsonldObject,
+        path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result, token),
+        resultType: 'path'});
+    paths.forEach(function(path) {
+        var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
+        if (theMatch) {
+            var index = theMatch[1] - result.length;
+            result.push(cmumpsJsonldObject['@graph'][index]);
+            cmumpsJsonldObject['@graph'].splice(index, 1);
+        }
+    });
+    return result;
+}
+
 /**
  * Extract the diagnoses from a cmumpsJsonldObject
  * @param cmumpsJsonldObject
