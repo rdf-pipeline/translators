@@ -121,7 +121,19 @@ function addWarnings(fhirResult, warnings) {
 }
 
 
+/**
+ * Given an arbitrary javascript Object, encoded it as a list of fhirExtensions using
+ * the directions at https://hl7-fhir.github.io/extensibility.html
+ * @param jsObject
+ * @returns {null}
+ */
+function js2fhirExtension(jsObject) {
+    return jsObject.map(_.pairs(jsObject), js2fhir)
+}
 
+function js2fhir(key, value) {
+
+}
 
 // Export the actual functions here.
 [now, extractPatient, extractDemographics,
