@@ -2,7 +2,12 @@
   "name": "translators",
   "url": "https://github.com/rdf-pipeline/translators",
   "description": "cmumps jsonld -> FHIR translators in various guises",
-  "keywords": ["lpi", "LPI", "translator", "FHIR"],
+  "keywords": [
+    "lpi",
+    "LPI",
+    "translator",
+    "FHIR"
+  ],
   "version": "0.0.1",
   "author": {
     "name": "Legacy Pipeline Project",
@@ -59,6 +64,7 @@
     "decomment": "^0.7.5",
     "fhir-json-to-xml": "git+https://github.com/rdf-pipeline/fhir-json-to-xml",
     "handlebars": "^4.0.5",
+    "istanbul": "^0.4.4",
     "jsonld": "^0.4.2",
     "jsonld-cli": "^0.1.0",
     "jsonpath-plus": "^0.14.0",
