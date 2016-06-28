@@ -42,7 +42,7 @@
   },
   "scripts": {
     "build": "echo build ## tbs",
-    "test": "./node_modules/.bin/mocha --reporter spec --recursive translate/test graph-translate/test",
+    "test": "./node_modules/.bin/istanbul cover --verbose ./node_modules/.bin/mocha -- --reporter spec --recursive translate/test graph-translate/test",
     "_comment": "TODO: want a report that prints out the pathname of the test run"
   },
   "devDependencies": {
