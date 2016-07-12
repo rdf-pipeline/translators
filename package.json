@@ -75,6 +75,6 @@
     "underscore": "~1.8.3"
   },
   "@see": {
-    "package.json": "https://docs.npmjs.com/files/package.json",
+    "package.json": "https://docs.npmjs.com/files/package.json"
   }
 }
