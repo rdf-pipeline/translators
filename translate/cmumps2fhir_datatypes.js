@@ -794,7 +794,8 @@ function fhirPatientCountry(s) {
 
 function fhirId(fhirType, id) {
     if (fhirType === undefined || id === undefined) return undefined;
-    return 'urn:local:fhir:' + fhirType + ':' + id;
+    // return 'urn:local:fhir:' + fhirType + ':' + id;
+    return id;
 }
 
 
