@@ -76,6 +76,8 @@ function process_file(filename) {
         var counts = {};
         var count = 0;
         for (var p in cmumps.parts) {
+            if (p == 'patient') continue; // nickname for demographics
+            if (p == 'labs') continue; // fhir translation skips labs by design
             count += counts[p] = cmumps.parts[p](cmumpsInput).length;
         }
         var untranslated = cmumpsInput['@graph'].length - count;
@@ -85,6 +87,8 @@ function process_file(filename) {
         var translatedCounts = {};
         count = 0;
         for (var p in fhir.parts) {
+            if (p == 'patient') continue; // nickname for demographics
+            if (p == 'labs') continue; // fhir translation skips labs by design
             translatedCounts[p] = fhir.parts[p](fhirTranslation).length;
         }
 
@@ -106,12 +110,19 @@ function process_file(filename) {
             // single fhir 'DiagnosticReport' and so forth. Therefore you can compare the counts to see
             // if something is wrong.
             console.log('parts\t\t\t\tcmumps\tfhir\tok?')
+            // all_same records if any translation part is dropped. --xref exits 0 or 1 iff no translations are dropped.
+            var all_same = true;
             for (var p in counts) {
-                console.log(util.format('%s\t\t%d\t\t%d\t\t%s',
-                    ("            " + p).slice(-12), ("    " + counts[p]).slice(-4), ("          " + translatedCounts[p]).slice(-10), counts[p] == translatedCounts[p] ? 'ok' : '!OK'));
+                if (p == 'patient') continue; // nickname for demographics
+                if (p == 'labs') continue; // fhir translation skips labs by design
+                var same = counts[p] == translatedCounts[p];
+                all_same = all_same && same;
+                var line = util.format('%s\t\t%d\t\t%d\t\t%s',
+                    ("            " + p).slice(-12), ("    " + counts[p]).slice(-4), ("          " + translatedCounts[p]).slice(-10), same ? 'ok' : '!OK');
+                console.log(line);
             }
             console.log("\n");
-            process.exit(0);
+            process.exit(!all_same);
         }
 
 
