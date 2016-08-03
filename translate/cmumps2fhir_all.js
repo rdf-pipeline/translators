@@ -116,7 +116,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             return diagnoses.translateDiagnosesFhir(i, options);
         } catch (err) {
-            throw new Error("Can't translate a diagnoses, " + err);
+            throw new Error("Can't translate diagnosis " + i._id + ' ' + err);
         }
     });
 
