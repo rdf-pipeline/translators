@@ -62,7 +62,7 @@ function translate(cmumpsPatientObject, get) {
             state: fdt.fhirPatientState(get('$.state-2')),
             country: fdt.fhirPatientCountry(get('$.state-2')),
             county: get('$.county-2'),
-            zip: get('$.zip-code-2')
+            zip: get('$.zip_code-2')
         }) ],
         maritalStatus: fdt.fhirMaritalStatus(get('$.marital_status-2')),
         // fhir multipleBirthBoolean|Integer NO MAP?// twins

@@ -9,11 +9,18 @@ var cmumps_utils = require('../util/cmumps_utils');
 var fdt = require('../cmumps2fhir_datatypes');
 var lpi = require('../lpi');
 var cmumps2fhir_labs = require('../cmumps2fhir_labs');
+var semver = require('semver');
 
 
 // always-true-mocha.js provides a template for other tests and can be used to debug the mocha test runner.
 
 describe('for cmumps-utils', function() {
+
+    //
+    describe('expecting node version', function() {
+        expect(semver.parse(process.versions.node).major).is.greaterThan(4);
+    });
+
     describe('isJsonld', function () {
 
         it('returns true for a jsonld object', function () {

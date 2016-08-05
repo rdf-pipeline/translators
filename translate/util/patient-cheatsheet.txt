@@ -1,0 +1,10 @@
+patient 1 -- blue johnson, male, 1 med ibuprophen, dispenser Rte Pmt
+patient 2 -- blue jones, male, demographics only
+patient 3 -- blue brown, male, 2 meds: calcium, something else
+patient 4 -- blue davis, male, married; 29 meds: naproxen, dispenser rose mosier (only did first)
+patient 5 -- blue miller, male, 1 med depo-provera, dispenser via gray
+patient 6 -- 
+patient 7 -- 
+patient 8 -- 
+patient 9 -- 
+patient 10 -- demographics only

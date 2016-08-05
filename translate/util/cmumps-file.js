@@ -23,6 +23,8 @@ var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var util = require('util');
 var fs = require('fs');  // node file system
+var assert = require('assert');
+var fdt = require('./../cmumps2fhir_datatypes');
 
 
 
@@ -76,6 +78,8 @@ function process_file(filename) {
         var counts = {};
         var count = 0;
         for (var p in cmumps.parts) {
+            if (p == 'patient') continue; // nickname for demographics
+            if (p == 'labs') continue; // fhir translation skips labs by design
             count += counts[p] = cmumps.parts[p](cmumpsInput).length;
         }
         var untranslated = cmumpsInput['@graph'].length - count;
@@ -85,6 +89,8 @@ function process_file(filename) {
         var translatedCounts = {};
         count = 0;
         for (var p in fhir.parts) {
+            if (p == 'patient') continue; // nickname for demographics
+            if (p == 'labs') continue; // fhir translation skips labs by design
             translatedCounts[p] = fhir.parts[p](fhirTranslation).length;
         }
 
@@ -106,12 +112,19 @@ function process_file(filename) {
             // single fhir 'DiagnosticReport' and so forth. Therefore you can compare the counts to see
             // if something is wrong.
             console.log('parts\t\t\t\tcmumps\tfhir\tok?')
+            // all_same records if any translation part is dropped. --xref exits 0 or 1 iff no translations are dropped.
+            var all_same = true;
             for (var p in counts) {
-                console.log(util.format('%s\t\t%d\t\t%d\t\t%s',
-                    ("            " + p).slice(-12), ("    " + counts[p]).slice(-4), ("          " + translatedCounts[p]).slice(-10), counts[p] == translatedCounts[p] ? 'ok' : '!OK'));
+                if (p == 'patient') continue; // nickname for demographics
+                if (p == 'labs') continue; // fhir translation skips labs by design
+                var same = counts[p] == translatedCounts[p];
+                all_same = all_same && same;
+                var line = util.format('%s\t\t%d\t\t%d\t\t%s',
+                    ("            " + p).slice(-12), ("    " + counts[p]).slice(-4), ("          " + translatedCounts[p]).slice(-10), same ? 'ok' : '!OK');
+                console.log(line);
             }
             console.log("\n");
-            process.exit(0);
+            process.exit(!all_same);
         }
 
 
@@ -162,6 +175,35 @@ function process_file(filename) {
                 if (fhirTranslation) console.log(cmumps_utils.pp(fhirTranslation));
             }
         }
+
+        // Does some simple checks to confirm the translation isn't insane.
+        if (program.check) {
+
+            if (program.part != 'all') {
+                console.error("Can't check partial translations like " + program.part);
+                process.exit(1);
+            }
+
+            // check the checker
+            assert(true, 'always succeeds');
+
+            // Extract the patient input
+            var patient = cmumps.extractPatient(cmumpsInput);
+            // You should have at most one patient
+            if (patient) {
+                assert (patient.length <= 1, "More than one patient");
+                patient = patient[0];
+
+                // If you have an input patient, you should have a translation.
+                var translatedPatient = fhir.extractPatient(fhirTranslation);
+                assert(translatedPatient, "Can't extract the translated patient");
+                assert (patient['sex-2'].toLowerCase() === translatedPatient.gender, "Gender not translated");
+            }
+
+            console.error('All checks succeeded.');
+        }
+
+
         return fhirTranslation;
 
     } catch (err) {
@@ -183,6 +225,7 @@ program
     //.option('-e, --extensions', 'preserve extensions', false)
     .option('--max [max]', 'max elements of array output')
     .option('--xref', 'quick cross reference')
+    .option('--check', 'spot check the translation')
     .option('--policy', 'enforce cmumps policies: @graph must have at least one entry, must have a patient')
     .parse(process.argv);
 

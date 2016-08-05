@@ -702,7 +702,7 @@ function fhirPractioner(cmumpsProvider, options) {
 
     // Create a fetcher for cmumpsLabResultObject. The fetcher will get data values from
     // input cmumpsLabResultObject, remembering those that actually have values in list participating_properties.
-    var fetch1 = makeJsonFetcher1(cmumpsPatientDiagnosisObject, participatingProperties);
+    var fetch1 = makeJsonFetcher1(cmumpsProvider, participatingProperties);
 
     var fhirPractioner = {
         resourceType: 'Practitioner',
@@ -794,7 +794,8 @@ function fhirPatientCountry(s) {
 
 function fhirId(fhirType, id) {
     if (fhirType === undefined || id === undefined) return undefined;
-    return 'urn:local:fhir:' + fhirType + ':' + id;
+    // return 'urn:local:fhir:' + fhirType + ':' + id;
+    return id;
 }
 
 

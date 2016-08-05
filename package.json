@@ -2,7 +2,12 @@
   "name": "translators",
   "url": "https://github.com/rdf-pipeline/translators",
   "description": "cmumps jsonld -> FHIR translators in various guises",
-  "keywords": ["lpi", "LPI", "translator", "FHIR"],
+  "keywords": [
+    "lpi",
+    "LPI",
+    "translator",
+    "FHIR"
+  ],
   "version": "0.0.1",
   "author": {
     "name": "Legacy Pipeline Project",
@@ -37,8 +42,8 @@
   },
   "scripts": {
     "build": "echo build ## tbs",
-    "test": "./node_modules/.bin/mocha --reporter spec --recursive translate/test graph-translate/test",
-    "_comment": "TODO: want a report that prints out the pathname of the test run"
+    "test": "./node_modules/.bin/istanbul --verbose cover ./node_modules/.bin/mocha -- --reporter spec --recursive translate/test",
+    "_comment": "TODO: want a report that prints out the pathname of the test run, when the translate module is installed, the paths are wrong"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -59,16 +64,17 @@
     "decomment": "^0.7.5",
     "fhir-json-to-xml": "git+https://github.com/rdf-pipeline/fhir-json-to-xml",
     "handlebars": "^4.0.5",
+    "istanbul": "^0.4.4",
     "jsonld": "^0.4.2",
     "jsonld-cli": "^0.1.0",
     "jsonpath-plus": "^0.14.0",
     "log4js": "^0.6.29",
     "node-html-encoder": "0.0.2",
+    "semver": "^5.2.0",
     "string-format": "^0.5.0",
     "underscore": "~1.8.3"
   },
   "@see": {
-    "package.json": "https://docs.npmjs.com/files/package.json",
-    "gulp": "http://gulpjs.com/"
+    "package.json": "https://docs.npmjs.com/files/package.json"
   }
 }
