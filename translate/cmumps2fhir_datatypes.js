@@ -49,33 +49,6 @@ function makeJsonFetcher1(o, patterns) {
 // Abstraction for a JSONPath fetcher. Allows us to access objects with expressions rather than literals.
 function makeGetter(o) { return makeJsonFetcher1(o, []); }
 
-
-/**
- * Returns a closure over an object and list of presented patterns.
- * The closure takes two argument, a JSONPath input object, including a path which will be applied to the object, and an
- * optional transformer to apply to the value iff the transformer is passed. The transformer is
- * applied iff a value matches a pattern.
- * @param {object} o -- the object searched with the JSON path expression.
- * @param {String} patterns -- the patterns used to search for objects, a free variable (an array).
- * @returns {Function f(pattern, transformer)}
- */
-function peek0(o, patterns) {
-    if (_.isObject(o)) {
-        return function (pattern, transformer) {
-            // {resultType: 'all', json: obj, path: path}
-            var field = JSONPath({resultType: 'all', path: pattern, json: o});
-            if (_.isArray(field) && field.length > 0) {
-                var result = transformer ? transformer(field[0].value) : field[0].value;
-                if (result) patterns.push(field[0].path); // remember the pattern used
-                return result;
-            } else
-                return undefined;
-        }
-    } else {
-        throw new Error("Can only make json fetchers on objects.");
-    }
-}
-
 /**
  * Returns a closure over an object and list of presented patterns.
  * The closure takes two argument, a JSONPath input object, including a path which will be applied to the object, and an
@@ -172,6 +145,7 @@ function clean(o) {
  * @param {String} k -- a key
  * @returns {boolean}
  */
+// istanbul ignore next
 function required(v, k) {
     if (v) {
         return v;

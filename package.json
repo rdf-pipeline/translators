@@ -42,8 +42,8 @@
   },
   "scripts": {
     "build": "echo build ## tbs",
-    "test": "./node_modules/.bin/istanbul --verbose cover ./node_modules/.bin/mocha -- --reporter spec --recursive translate/test",
-    "_comment": "TODO: want a report that prints out the pathname of the test run, when the translate module is installed, the paths are wrong"
+    "test": "./node_modules/.bin/istanbul --verbose cover ./node_modules/.bin/_mocha -- --reporter spec --recursive translate/test --recursive graph-translate/test",
+    "_comment": "istanbul isn't ready for prime time yet"
   },
   "devDependencies": {
     "chai": "^3.5.0",

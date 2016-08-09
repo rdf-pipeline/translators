@@ -38,7 +38,7 @@ function translatecmumpsFhir(cmumpsJsonldObject, options, date) {
     // This way the caller doesn't have to keep track.
     if (_.isArray(cmumpsJsonldObject)) {
         // return translateHelper(cmumpsJsonldObject[0]);
-        cmumpsJsonldObject.map(function(i) {return translatecmumpsFhirHelper(i, options, date); })
+        return cmumpsJsonldObject.map(function(i) {return translatecmumpsFhirHelper(i, options, date); })
     } else {
         // A single object, translate it.
         return translatecmumpsFhirHelper(cmumpsJsonldObject, options, date);
@@ -80,12 +80,20 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
     }
     // Here: only one patient
 
+
+    // In this next sequence of code, we try to translate each part.
+    // We immediately throw an error if we can't translate a part, to simplify debugging.
+    // But we will miss input with multiple errors. Also, since the input can potentially be
+    // miss formed in many ways and almost all input fields are optional, the test cases
+    // can spiral out of control, so we turn off coverage there.
+
     // cmumps Patient-2
     var fhirDemographicsTranslation;
     if (theDemographics.length) {
         try {
             fhirDemographicsTranslation = demographics.translateDemographicsFhir(theDemographics[0], options);
         } catch (err) {
+            // istanbul ignore next
             throw new Error("Can't translate demographics, " + err);
         }
     }
@@ -96,6 +104,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             return prescriptions.translatePrescriptionsFhir(i, options);
         } catch (err) {
+            // istanbul ignore next
             throw new Error("Can't translate a prescription, " + err);
         }
     });
@@ -106,6 +115,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
              return labs.translateLabsFhir(i, options);
         } catch (err) {
+            // istanbul ignore next
              throw new Error("Can't translate lab " + err);
          }
     });
@@ -116,6 +126,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             return diagnoses.translateDiagnosesFhir(i, options);
         } catch (err) {
+            // istanbul ignore next
             throw new Error("Can't translate diagnosis " + i._id + ' ' + err);
         }
     });
@@ -127,6 +138,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             return procedures.translateProceduresFhir(i, options);
         } catch (err) {
+            // istanbul ignore next
             throw new Error("Can't translate a procedure, " + err);
         }
     });
@@ -168,13 +180,8 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
     return bundle;
 }
 
-// TODO mike@carif.io: this got folded into translatecmumpsFhir above.
-function translatecmumpsFhirArray(cmumpsJsonldObjectArray, options) {
-    return cmumpsJsonldObjectArray.map(function(i) { return translatecmumpsFhir(i, options); });
-}
-
 // short form
 var translate = translatecmumpsFhir;
 
 // Export the actual functions here. Make sure the names are always consistent.
-[translatecmumpsFhir, translatecmumpsFhirArray, translate].forEach(function(f) { module.exports[f.name] = f; });
+[translatecmumpsFhir, translate].forEach(function(f) { module.exports[f.name] = f; });

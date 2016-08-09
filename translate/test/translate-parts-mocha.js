@@ -296,6 +296,156 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirTranslation.district).to.equal(cmumpsJsonldPart.county);
         });
 
+
+        it('fhirTiming(undefined) => undefined', function () {
+            var sig = undefined;
+            var fhirTiming;
+            chai.expect(function () {
+                fhirTiming = fdt.fhirTiming(undefined);
+            }).to.not.throw(Error);
+            chai.expect(fhirTiming).to.equal(undefined);
+        });
+
+        it('fhirTiming twice daily', function () {
+            var sig = 'BID';
+            var when = 'sometime';
+            var fhirTiming;
+            var result = {
+                resourceType: 'Timing',
+                event: [ when ],
+                repeat: {
+                    frequency: 2,
+                    period: 1,
+                    periodUnit: 'd'
+                },
+                code: fdt.fhirCodeableConcept(sig)
+            };
+            chai.expect(function () {
+                fhirTiming = fdt.fhirTiming(sig, when);
+            }).to.not.throw(Error);
+            chai.expect(fhirTiming).to.eqls(result);
+        });
+
+        it('fhirTiming thrice daily', function () {
+            var sig = 'TID';
+            var when = 'sometime';
+            var fhirTiming;
+            var result = {
+                resourceType: 'Timing',
+                event: [ when ],
+                repeat: {
+                    frequency: 3,
+                    period: 1,
+                    periodUnit: 'd'
+                },
+                code: fdt.fhirCodeableConcept(sig)
+            };
+            chai.expect(function () {
+                fhirTiming = fdt.fhirTiming(sig, when);
+            }).to.not.throw(Error);
+            chai.expect(fhirTiming).to.eqls(result);
+        });
+
+        it('fhirTiming four times daily', function () {
+            var sig = 'QID';
+            var when = 'sometime';
+            var fhirTiming;
+            var result = {
+                resourceType: 'Timing',
+                event: [ when ],
+                repeat: {
+                    frequency: 4,
+                    period: 1,
+                    periodUnit: 'd'
+                },
+                code: fdt.fhirCodeableConcept(sig)
+            };
+            chai.expect(function () {
+                fhirTiming = fdt.fhirTiming(sig, when);
+            }).to.not.throw(Error);
+            chai.expect(fhirTiming).to.eqls(result);
+        });
+
+        it('fhirTiming four times a day', function () {
+            var sig = 'Q6H';
+            var when = 'sometime';
+            var fhirTiming;
+            var result = {
+                resourceType: 'Timing',
+                event: [ when ],
+                repeat: {
+                    frequency: 1,
+                    period: 6,
+                    periodUnit: 'h'
+                },
+                code: fdt.fhirCodeableConcept(sig)
+            };
+            chai.expect(function () {
+                fhirTiming = fdt.fhirTiming(sig, when);
+            }).to.not.throw(Error);
+            chai.expect(fhirTiming).to.eqls(result);
+        });
+
+        it('fhirTiming daily', function () {
+            var sig = 'Q1D';
+            var when = 'sometime';
+            var fhirTiming;
+            var result = {
+                resourceType: 'Timing',
+                event: [ when ],
+                repeat: {
+                    frequency: 1,
+                    period: 1,
+                    periodUnit: 'd'
+                },
+                code: fdt.fhirCodeableConcept(sig)
+            };
+            chai.expect(function () {
+                fhirTiming = fdt.fhirTiming(sig, when);
+            }).to.not.throw(Error);
+            chai.expect(fhirTiming).to.eqls(result);
+        });
+
+
+        it('fdt.makeJsonFetcher1 only works on objects', function () {
+            chai.expect(function () {
+                fdt.makeJsonFetcher1(1, []);
+            }).to.throw(Error, /Can only make json fetchers on objects./); // encoding the actual message is brittle
+        });
+
+        it('fdt.peek only works on objects', function () {
+            chai.expect(function () {
+                fdt.peek(1, []);
+            }).to.throw(Error, /Can only make json fetchers on objects./); // encoding the actual message is brittle
+        });
+
+        it('fdt.eat only works on objects', function () {
+            chai.expect(function () {
+                fdt.eat(1, []);
+            }).to.throw(Error, /Can only make json fetchers on objects./); // encoding the actual message is brittle
+        });
+
+        it('cleaning an empty array returns undefined', function () {
+            var cleaned;
+            chai.expect(function() {
+                cleaned = fdt.clean([])
+            }).to.not.throw(Error);
+            chai.expect(cleaned).is.equals(undefined);
+        });
+
+        it('clean([o]) is the same as [clean(o)]', function () {
+            var start = {x: 1, gone: undefined}; // gone removed
+            var cleaned0 = cmumps_utils.clone(start);
+            var cleaned1 = cmumps_utils.clone(start); // cleaned0, cleaned1 modified
+            chai.expect(function() {
+                cleaned0 = fdt.clean(start);
+                cleaned1 = fdt.clean([start]);
+            }).to.not.throw(Error);
+            chai.expect(cleaned1.length).to.equal(1);
+            chai.expect(cleaned0).is.equals(cleaned1[0]);
+        });
+
+
     });
 });
 // In these next tests, cmumps2fhir_all entire cmumps jsonld objects taking their contents from
@@ -324,13 +474,14 @@ describe('for an entire cmumps jsonld objects', function () {
 
         // First approach: cmumps2fhir_all everything, then extract the medications.
         var medicationsTranslateAll; // List[Object]
-        var allFhir, simpleAllFhir;
+        var allFhir, allFhirArray, simpleAllFhir;
         chai.expect(function () {
             // example calls
             // cmumps2fhir_all an entire jsonld cmumps object
             allFhir = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld, {}, 'now');
+            // If the input is wrapped in an array, the translator digs each one out and translates that.
+            allFhirArray = cmumps2fhir_all.translatecmumpsFhir([cmumpsJsonld, cmumpsJsonld, cmumpsJsonld], {}, 'now');
             simpleAllFhir = cmumps2fhir_simple_all.translate(cmumpsJsonld, 'now');
-
             //                      ^^^^^^^^^^^^^^^^^ cmumps2fhir_all entire cmumps jsonld input
             // ... then extract out the fhir medication tranlation
             medicationsTranslateAll = fhir.extractMedications(allFhir);
@@ -352,6 +503,10 @@ describe('for an entire cmumps jsonld objects', function () {
         }).to.not.throw(Error);
 
         chai.expect(allFhir).is.eql(simpleAllFhir);
+
+        chai.expect(allFhirArray.length).to.equal(3);
+        chai.expect(allFhirArray[0]).eqls(allFhirArray[1]);
+        chai.expect(allFhirArray[2]).eqls(allFhir);
 
 
         chai.expect(medicationsTranslateAll.length).to.equal(6); // should have 3 medications
@@ -381,6 +536,52 @@ describe('for an entire cmumps jsonld objects', function () {
 
             });
         }).to.not.throw(Error);
+
+
+        // Checking the policy doesn't matter
+        chai.expect(function () {
+            allFhir = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld, {policy: true}, 'now');
+        }).to.not.throw(Error);
+
+
+
+        // check various errors
+        // Checking the policy with two patient records is an error and should throw
+        var twoPatientsCmumpsJsonld = cmumps_utils.clone(cmumpsJsonld);
+
+        // Create some bad input with a cmumps input that has two patients.
+        twoPatientsCmumpsJsonld['@graph'].push(cmumps.extractDemographics(cmumpsJsonld)[0]);
+        chai.expect(function () {
+            allFhir = cmumps2fhir_all.translatecmumpsFhir(twoPatientsCmumpsJsonld, {policy: true}, 'now');
+        }).to.throw(Error);
+
+        // check various errors
+        // Checking the policy with two patient records is an error and should throw
+        var noPatientsCmumpsJsonld = cmumps_utils.clone(cmumpsJsonld);
+        // No patient present should produce an error.
+        cmumps.removePatient(noPatientsCmumpsJsonld);
+        chai.expect(function () {
+            allFhir = cmumps2fhir_all.translatecmumpsFhir(noPatientsCmumpsJsonld, {policy: true}, 'now');
+        }).to.throw(Error);
+
+        // No graph should throw an error
+        var noGraphCmumpsJsonld = cmumps_utils.clone(cmumpsJsonld);
+        delete noGraphCmumpsJsonld['@graph'];
+        chai.expect(function () {
+            allFhir = cmumps2fhir_all.translatecmumpsFhir(noGraphCmumpsJsonld, {policy: true}, 'now');
+        }).to.throw(Error);
+
+        // An @graph that's not an array should throw an error.
+        noGraphCmumpsJsonld['@graph'] = 1;
+        chai.expect(function () {
+            allFhir = cmumps2fhir_all.translatecmumpsFhir(noGraphCmumpsJsonld, {policy: true}, 'now');
+        }).to.throw(Error);
+
+        // An empty @graph should throw an error.
+        noGraphCmumpsJsonld['@graph'] = [];
+        chai.expect(function () {
+            allFhir = cmumps2fhir_all.translatecmumpsFhir(noGraphCmumpsJsonld, {policy: true}, 'now');
+        }).to.throw(Error);
 
     });
 
