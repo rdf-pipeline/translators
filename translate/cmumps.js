@@ -243,9 +243,11 @@ function removePatient(cmumpsJsonldObject, token) {
     var paths = JSONPath({json: cmumpsJsonldObject,
         path: cmumpssJsonPattern(module.exports.cmumpss.Patient, token),
         resultType: 'path'});
+    // istanbul ignore else
     if (_.isArray(paths)) {
         paths.forEach(function (path) {
             var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
+            // istanbul ignore else
             if (theMatch) {
                 var index = theMatch[1] - result.length;
                 result.push(cmumpsJsonldObject['@graph'][index]);
@@ -256,6 +258,7 @@ function removePatient(cmumpsJsonldObject, token) {
     return result;
 }
 
+// istanbul ignore next
 function removeDemographics(cmumpsJsonldObject, token) {
     var token = token || cmumpsPrefixPattern;
     removePatient(cmumpsJsonldObject, token);
@@ -295,6 +298,7 @@ function removePrescriptions(cmumpsJsonldObject, token) {
         resultType: 'path'});
     paths.forEach(function(path) {
         var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
+        // istanbul ignore else
         if (theMatch) {
             var index = theMatch[1] - result.length;
             result.push(cmumpsJsonldObject['@graph'][index]);
@@ -305,6 +309,7 @@ function removePrescriptions(cmumpsJsonldObject, token) {
 }
 
 
+// istanbul ignore next
 function removeMedications(cmumpsJsonldObject, token) {
     var token = token || cmumpsPrefixPattern;
     return removePrescriptions(cmumpsJsonldObject);
@@ -329,6 +334,7 @@ function extractLabs(cmumpsJsonldObject, token) {
  * @param cmumpsJsonldObject
  * @return {Array[object]} -- the items removed
  */
+// istanbul ignore next
 function removeLabs(cmumpsJsonldObject) {
     var token = token || cmumpsPrefixPattern;
     var result = [];
@@ -337,6 +343,7 @@ function removeLabs(cmumpsJsonldObject) {
         resultType: 'path'});
     paths.forEach(function(path) {
         var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
+        // istanbul ignore else
         if (theMatch) {
             var index = theMatch[1] - result.length;
             result.push(cmumpsJsonldObject['@graph'][index]);
@@ -389,6 +396,7 @@ function removeDiagnoses(cmumpsJsonldObject) {
  * @returns {Array[object]} -- the procedures
  */
 
+// istanbul ignore next
 function extractProcedures(cmumpsJsonldObject) {
     return JSONPath({json: cmumpsJsonldObject, path: "$['@graph'][?(@.type=='Procedure')]"});
 }

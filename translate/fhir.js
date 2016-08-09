@@ -86,6 +86,7 @@ function extractProcedures(fhirObject) {
  * @param {List[String]} participatingProperties
  * @param {String} [prefix=undefined] -- the prefix of the JSON Path expression
  */
+// istanbul ignore next
 function addParticipants(fhirResult, participatingProperties, prefix) {
     // Don't create an extension unless there are participating properties to actually report.
     if (participatingProperties.length > 0) {
@@ -103,6 +104,7 @@ function addParticipants(fhirResult, participatingProperties, prefix) {
  * @param {object} fhirResult, SIDE EFFECTS fhirResult
  * @param {Array[String]} warnings
  */
+// istanbul ignore next
 function addWarnings(fhirResult, warnings) {
     // Don't create or augment an extension unless there are warnings to actually report.
     if (warnings.length > 0) {
@@ -127,13 +129,16 @@ function addWarnings(fhirResult, warnings) {
  * @param jsObject
  * @returns {null}
  */
-function js2fhirExtension(jsObject) {
-    return jsObject.map(_.pairs(jsObject), js2fhir)
-}
 
-function js2fhir(key, value) {
+// Leave this as a placeholder.
 
-}
+// function js2fhirExtension(jsObject) {
+//     return jsObject.map(_.pairs(jsObject), js2fhir)
+// }
+//
+// function js2fhir(key, value) {
+//
+// }
 
 // Export the actual functions here.
 [now, extractPatient, extractDemographics,

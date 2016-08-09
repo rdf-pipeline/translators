@@ -266,7 +266,9 @@ function fhirHumanName(cmumpsName) {
  * @see {link: 'http://hl7-fhir.github.io/datatypes.html#ContactPoint'}
  */
 function fhirContactPoint(cmumpsContactPoint) {
+    // istanbul ignore else
     if (cmumpsContactPoint === undefined) return undefined;
+    // istanbul ignore else
     if (! JSONPath({path: '$.value', wrap: false}, cmumpsContactPoint)) return undefined;
     return clean({
         resourceType: "ContactPoint",
@@ -295,6 +297,7 @@ function fhirIdentifier(cmumpsSsn, cmumpsDodId) {
     // filter function, id -> fhir_id
     // TODO mike@carif.io: use fhirCodeableConcept instead?
     function f(id) {
+        // istanbul ignore else
         if (id) {
             return {
                 use: 'usual',
@@ -708,8 +711,11 @@ function fhirPractioner(cmumpsProvider, options) {
     };
 
 
-    if (options.participants) addParticipants(fhirPractioner, participatingProperties);
-    if (options.warnings) addWarnings(fhirPractioner, warnings);
+    // TODO: need to convey which fields actually participate in a translation in a fhir acceptable encoding.
+    // You have the fields in participatingProperties but you need to generate a syntactically valid
+    // FHIR extension. Not done yet.
+    // if (options.participants) addParticipants(fhirPractioner, participatingProperties);
+    // if (options.warnings) addWarnings(fhirPractioner, warnings);
     clean(fhirPractioner);
     // Additional semantic processing here
     return fhirPractioner;

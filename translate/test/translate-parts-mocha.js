@@ -453,6 +453,26 @@ describe('cmumps2fhir_all fhirParts', function () {
 
 describe('for an entire cmumps jsonld objects', function () {
 
+    it('translate with label only', function() {
+        var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
+        var thePatient = cmumps.extractPatient(cmumpsJsonld);
+        delete thePatient['name-2'];
+        var minimal = {
+            '@content': cmumpsJsonld['@content'],
+            '@graph': [ thePatient ]
+    };
+
+        var translatedPatient;
+        chai.expect(function() {
+            translatedPatient = cmumps2fhir_simple_demographics.translate(cmumps.extractPatient(cmumpsJsonld)[0]);
+        }).to.not.throw(Error);
+
+        lastFirst = thePatient[0]['label'].split(',');
+        chai.expect(lastFirst[0]).to.equal(translatedPatient.name.family[0]);
+        chai.expect(translatedPatient.name.given[0]).to.equals('BUGS DOC'); // label can be different from name
+
+    });
+
 
     it('medications part (example)', function () {
 
@@ -507,6 +527,12 @@ describe('for an entire cmumps jsonld objects', function () {
         chai.expect(allFhirArray.length).to.equal(3);
         chai.expect(allFhirArray[0]).eqls(allFhirArray[1]);
         chai.expect(allFhirArray[2]).eqls(allFhir);
+
+        // Because of terminology, a patient is a single object and a demographic is a list of patients.
+        var thePatient = fhir.extractPatient(simpleAllFhir);
+        var thePatients = fhir.extractDemographics(simpleAllFhir);
+        chai.expect(thePatients.length).to.equals(1);
+        chai.expect(thePatients[0]).eqls(thePatient);
 
 
         chai.expect(medicationsTranslateAll.length).to.equal(6); // should have 3 medications
@@ -583,6 +609,7 @@ describe('for an entire cmumps jsonld objects', function () {
             allFhir = cmumps2fhir_all.translatecmumpsFhir(noGraphCmumpsJsonld, {policy: true}, 'now');
         }).to.throw(Error);
 
+
     });
 
     it('simple medications part (example)', function () {
@@ -648,6 +675,7 @@ describe('for an entire cmumps jsonld objects', function () {
         }).to.not.throw(Error);
 
     });
+
 
     it('medications part, same data but reordered', function () {
 
