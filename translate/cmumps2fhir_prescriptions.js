@@ -53,11 +53,15 @@ function translatePrescriptionsFhir(cmumpsPrescriptionObject, options) {
 
     var fhirMedication = cmumps2fhir_simple_prescriptions.translate(cmumpsPrescriptionObject);
 
+    // istanbul ignore if
+    // addParticipants doesn't create a FHIR extension yet.
     if (options.participants) fhir.addParticipants(fhirMedication, participatingProperties);
+    // istanbul ignore if
     if (options.warnings) fhir.addWarnings(fhirMedication, warnings);
 
     // The FHIR spec indicates that well-formed MedicationDispenses are required to have one of these two values.
     // Generally the medicationReference will be the key that's populated.
+    // istanbul ignore if
     if (!_.has(fhirMedication, 'medicationReference') && !_.has(fhirMedication, 'medicationCodeableConcept')) {
         throw new Error(format("FHIR medication '{id}' contains neither a medicationReference nor a medicationCodeableConcept.", {id: fhirMedication.value}));
     }

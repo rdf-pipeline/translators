@@ -105,7 +105,6 @@ function clean(o) {
             // the list got cleaned to nothing, return undefined
             return undefined;
         }
-        return result;
     } else if (_.isObject(o)) {
         // remove all key/value pairs where the value is undefined or [].
         // return_o is true iff some key/value pair remains. Otherwise all key value pairs removed. So remove this one too.
@@ -416,6 +415,7 @@ function fhirAddress(address) {
         country: fetch1('$.country')
     });
 
+    // istanbul ignore else
     if (result) {
         result.resourceType = 'Address';
         result.type = 'postal';
@@ -430,6 +430,7 @@ function fhirAddress(address) {
  * @param cmumpsTypeCode
  * @returns {CodeableConcept}
  */
+
 function fhirCodeableConcept(cmumpsTypeCode) {
     if (cmumpsTypeCode === undefined) return undefined;
     return {
@@ -456,19 +457,12 @@ function fhirCodeableConceptList(cmumpsTypeCode) {
     return [ fhirCodeableConcept(cmumpsTypeCode) ];
 }
 
-/**
- * Use as a placeholder to stand something up and replace later.
- *
- * @param dummy
- * @returns {string}
- */
-function tbs(dummy) { return arguments.callee.caller() + ' tbs'; }
-
 
 /**
  * http://hl7-fhir.github.io/valueset-diagnostic-service-sections.html
  * @param cmumps "service category"
  */
+// istanbul ignore next
 function fhirDiagnosticReportCategory(cmumpsCode) {
     if (cmumpsCode === undefined) return undefined;
     // table taken from http://hl7.org/fhir/v2/0074/index.html
@@ -561,7 +555,9 @@ function fhirReferencePractioner(cmumpsProvider) {
  * @param {object} cmumpsDrug
  * @returns {{reference: id, display: label}}
  */
+// If its mentioned in the FHIR spec, I create a function naming it.
 function fhirReferenceMedication(cmumpsDrug) {
+    // istanbul ignore if
     if (cmumpsDrug === undefined) return undefined;
     return {
         reference: cmumpsDrug.id,
@@ -576,6 +572,7 @@ function fhirReferenceMedication(cmumpsDrug) {
  * @returns {{reference: string, display: string} || undefined}
  */
 function fhirReferenceMedicationOrder(cmumpsOrder) {
+    // istanbul ignore if
     if (cmumpsOrder === undefined) return undefined;
     return {
         reference: cmumpsOrder.id,
@@ -603,6 +600,7 @@ function fhirReferencePatient(cmumpsPatient) {
  * @returns {{reference: *, display: *} || undefined}
  */
 function fhirReferenceLocation(cmumpsLocation) {
+    // istanbul ignore if
     if (cmumpsLocation === undefined) return undefined;
     return {
         reference: cmumpsLocation.id,
@@ -617,11 +615,12 @@ function fhirReferenceLocation(cmumpsLocation) {
  * @returns {{reference: *, display: *} || undefined}
  */
 function fhirReferenceOrganization(cmumpsOrganization) {
+    // istanbul ignore if
     if (cmumpsOrganization === undefined) return undefined;
     var result = clean({
         name: JSONPath({path: '$.name', wrap: false}, cmumpsOrganization), // C? Name used for the organization
-        telecom: [ fhirContactPoint(JSONPath({path: '$.telecom', wrap: false}, cmumpsOrganization)) ], // C? A contact detail for the organization
-        address : [ fhirAddress(JSONPath({path: '$.address', wrap: false}, cmumpsOrganization)) ], // C? An address for the organization
+        telecom: [fhirContactPoint(JSONPath({path: '$.telecom', wrap: false}, cmumpsOrganization))], // C? A contact detail for the organization
+        address: [fhirAddress(JSONPath({path: '$.address', wrap: false}, cmumpsOrganization))], // C? An address for the organization
         // partOf: { }, // The organization of which this organization forms a part, TODO: VA?
         // contact: [{ // Contact for the organization for a certain purpose
         //     purpose: { fhirCodeableConcept }, // The type of contact
@@ -629,12 +628,13 @@ function fhirReferenceOrganization(cmumpsOrganization) {
         //     "telecom" : [{ ContactPoint }], // Contact details (telephone, email, etc.)  for a contact
         //     "address" : { Address } // Visiting or postal addresses for the contact
     });
+    // istanbul ignore else
     if (result) {
         result.type = fhirCodeableConcept('medical'), // Kind of organization
-        result.resourceType = "Organization";
-            // from Resource: id, meta, implicitRules, and language
-            // from DomainResource: text, contained, extension, and modifierExtension
-            // identifier: [{ Identifier }], // C? Identifies this organization  across multiple systems
+            result.resourceType = "Organization";
+        // from Resource: id, meta, implicitRules, and language
+        // from DomainResource: text, contained, extension, and modifierExtension
+        // identifier: [{ Identifier }], // C? Identifies this organization  across multiple systems
         result.active = true; // Whether the organization's record is still in active use
     }
     return result;
@@ -653,6 +653,7 @@ function fhirReferenceOrganization(cmumpsOrganization) {
  * @see {http://hl7-fhir.github.io/datatypes.html#Quantity}
  */
 function fhirQuantity(value, units) {
+    // istanbul ignore if
     if (value === undefined) return undefined;
     units = units || 'unsupplied';
     return {
@@ -671,6 +672,7 @@ function fhirQuantity(value, units) {
  * @returns {Practioner || undefined}
  * @see{https://hl7-fhir.github.io/practitioner.html}
  */
+// istanbul ignore next
 function fhirPractioner(cmumpsProvider, options) {
     if (cmumpsProvider === undefined) return undefined;
     var options = options || {participants: false, warnings: false};
@@ -728,6 +730,7 @@ function fhirPractioner(cmumpsProvider, options) {
  * @param i
  * @returns {*}
  */
+// istanbul ignore next
 function fhirPatientGender(i) {
     if (i === undefined) return undefined;
     // return i.label.toLowerCase()
@@ -745,6 +748,7 @@ function fhirPatientGender(i) {
  * @param bd
  * @returns {string}
  */
+// istanbul ignore next
 function fhirPatientBirthDate(bd) {
     if (bd === undefined) return undefined;
     if (_.has(bd, 'value')) return fhirDate(bd.value);
@@ -755,6 +759,7 @@ function fhirPatientBirthDate(bd) {
  * @param s
  * @returns {*}
  */
+// istanbul ignore next
 function fhirPatientState(s) {
     if (s === undefined) return undefined;
     if (_.has(s, 'label') && typeof(s.label) == 'string') return s.label.split('/')[0];
@@ -765,6 +770,7 @@ function fhirPatientState(s) {
  * @param s
  * @returns {*}
  */
+// istanbul ignore next
 function fhirPatientCountry(s) {
     if (_.has(s, 'label') && typeof(s.label) == 'string') {
         var a = s.label.split('/'); // TODO: let?
@@ -782,7 +788,7 @@ function fhirId(fhirType, id) {
 
 // Export the actual functions here. Make sure the names are always consistent.
 [makeJsonFetcher1, makeGetter, peek, eat, clean, required, fhirDate, fhirHumanName, fhirContactPoint,
-    fhirIdentifier, fhirIdentifierList, fhirMaritalStatus, fhirAddress, tbs,
+    fhirIdentifier, fhirIdentifierList, fhirMaritalStatus, fhirAddress,
     fhirReferenceLocation, fhirReferencePatient, fhirReferencePractioner,
     fhirDiagnosticReportCategory, fhirCodeableConcept, fhirCodeableConceptList,
     fhirReferenceMedication, fhirReferenceMedicationOrder, fhirQuantity, fhirReferencePatient,

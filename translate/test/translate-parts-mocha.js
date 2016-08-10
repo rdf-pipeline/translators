@@ -82,6 +82,15 @@ describe('cmumps2fhir_all fhirParts', function () {
         });
 
         // fhirHumanName
+        it('fhirHumanName of undefined is undefined', function () {
+            var fhirHumanName;
+            chai.expect(function () {
+                fhirHumanName = fdt.fhirHumanName(undefined);
+            }).to.not.throw(Error);
+            chai.expect(fhirHumanName).to.equal(undefined);
+
+        });
+
         it('fhirHumanName should parse a simple name', function () {
             var last = "bunny";
             var first = "bugs";
@@ -145,6 +154,22 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(function () {
                 fdt.fhirHumanName(badName);
             }).to.throw(Error, /Bad cmumps name/);
+        });
+
+        it('fhirIdentfierList(undefined) => undefined', function () {
+            var fhirIdentifier;
+            chai.expect(function () {
+                fhirIdentifer = fdt.fhirIdentifierList(undefined);
+            }).to.not.throw(Error);
+            chai.expect(fhirIdentifier).to.be.undefined;
+        });
+
+        it('fhirIdentfier(undefined) => undefined', function () {
+            var fhirIdentifier;
+            chai.expect(function () {
+                fhirIdentifer = fdt.fhirIdentifier(undefined);
+            }).to.not.throw(Error);
+            chai.expect(fhirIdentifier).to.be.undefined;
         });
 
         it('fhirIdentfier should create an array of identifiers if passed in', function () {
@@ -220,6 +245,30 @@ describe('cmumps2fhir_all fhirParts', function () {
                 fhirIds = fdt.fhirIdentifier(ssn, dod);
             }).to.not.throw(Error);
             chai.expect(fhirIds).to.be.undefined;
+        });
+
+        it('fhirExternalIdentfier(undefined) => undefined', function () {
+            var fhirExternalIdentifier;
+            chai.expect(function () {
+                fhirExternalIdentifer = fdt.fhirExternalIdentifier(undefined);
+            }).to.not.throw(Error);
+            chai.expect(fhirExternalIdentifier).to.be.undefined;
+        });
+
+        it('fhirCodeableConceptList(undefined) => undefined', function () {
+            var fhirTranslation;
+            chai.expect(function () {
+                fhirTranslation = fdt.fhirCodeableConcept(undefined);
+            }).to.not.throw(Error);
+            chai.expect(fhirTranslation).to.be.undefined;
+        });
+
+        it('fhirMaritalStatus(undefined) => undefined', function () {
+            var fhirTranslation;
+            chai.expect(function () {
+                fhirTranslation = fdt.fhirMaritalStatus(undefined);
+            }).to.not.throw(Error);
+            chai.expect(fhirTranslation).to.be.undefined;
         });
 
         it('fhirMaritalStatus should map to fhir marital status', function () {
@@ -494,7 +543,7 @@ describe('for an entire cmumps jsonld objects', function () {
 
         // First approach: cmumps2fhir_all everything, then extract the medications.
         var medicationsTranslateAll; // List[Object]
-        var allFhir, allFhirArray, simpleAllFhir;
+        var allFhir, allFhirArray, simpleAllFhir, simpleAllFhirArray;
         chai.expect(function () {
             // example calls
             // cmumps2fhir_all an entire jsonld cmumps object
@@ -502,6 +551,7 @@ describe('for an entire cmumps jsonld objects', function () {
             // If the input is wrapped in an array, the translator digs each one out and translates that.
             allFhirArray = cmumps2fhir_all.translatecmumpsFhir([cmumpsJsonld, cmumpsJsonld, cmumpsJsonld], {}, 'now');
             simpleAllFhir = cmumps2fhir_simple_all.translate(cmumpsJsonld, 'now');
+            simpleAllFhirArray = cmumps2fhir_simple_all.translate([cmumpsJsonld, cmumpsJsonld], 'now');
             //                      ^^^^^^^^^^^^^^^^^ cmumps2fhir_all entire cmumps jsonld input
             // ... then extract out the fhir medication tranlation
             medicationsTranslateAll = fhir.extractMedications(allFhir);
@@ -523,10 +573,11 @@ describe('for an entire cmumps jsonld objects', function () {
         }).to.not.throw(Error);
 
         chai.expect(allFhir).is.eql(simpleAllFhir);
-
         chai.expect(allFhirArray.length).to.equal(3);
         chai.expect(allFhirArray[0]).eqls(allFhirArray[1]);
         chai.expect(allFhirArray[2]).eqls(allFhir);
+        chai.expect(simpleAllFhirArray.length).to.equal(2);
+        chai.expect(simpleAllFhirArray[1]).eqls(simpleAllFhir);
 
         // Because of terminology, a patient is a single object and a demographic is a list of patients.
         var thePatient = fhir.extractPatient(simpleAllFhir);

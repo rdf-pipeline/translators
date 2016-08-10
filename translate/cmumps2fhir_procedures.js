@@ -42,7 +42,9 @@ function translateProceduresFhir(cmumpsProcedureObject, options) {
 
     var fhirProcedure = cmumps2fhir_simple_procedures.translate(cmumpsProcedureObject);
 
+    // istanbul ignore if
     if (options.participants) fhir.addParticipants(fhirProcedure, participatingProperties);
+    // istanbul ignore if
     if (options.warnings) fhir.addWarnings(fhirProcedure, warnings);
     fdt.clean(fhirProcedure);
     // Additional semantic processing here
