@@ -42,7 +42,7 @@
   },
   "scripts": {
     "build": "echo build ## tbs",
-    "test": "./node_modules/.bin/istanbul --verbose cover ./node_modules/.bin/_mocha -- --reporter spec --recursive translate/test --recursive graph-translate/test",
+    "test": "./node_modules/.bin/istanbul --verbose cover -x graph_cmumps2fhir_labs.js ./node_modules/.bin/_mocha -- --reporter spec --recursive translate/test --recursive graph-translate/test",
     "_comment": "istanbul isn't ready for prime time yet"
   },
   "devDependencies": {

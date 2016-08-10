@@ -42,6 +42,7 @@ function translatePrescriptionsFhir(cmumpsPrescriptionObjectModified, _options, 
         eat: true
     };
     for (k in _options) {
+        // istanbul ignore else
         if (_options.hasOwnProperty(k)) { options[k] = _options[k]; }
     }
 
@@ -117,14 +118,16 @@ function translatePrescriptionsFhir(cmumpsPrescriptionObjectModified, _options, 
     };
 
 
-
+    // istanbul ignore if
     if (options.participants) fhir.addParticipants(fhirMedication, participatingProperties, prefix);
+    // istanbul ignore if
     if (options.warnings) fhir.addWarnings(fhirMedication, warnings);
     // Remove keys that have undefined/null/[] values.
     fdt.clean(fhirMedication);
 
     // The FHIR spec indicates that well-formed MedicationDispenses are required to have one of these two values.
     // Generally the medicationReference will be the key that's populated.
+    // istanbul ignore if
     if (options.policy && !_.has(fhirMedication, 'medicationReference') && !_.has(fhirMedication, 'medicationCodeableConcept')) {
         throw new Error(format("FHIR medication '{id}' contains neither a medicationReference nor a medicationCodeableConcept.", {id: fhirMedication.value}));
     }
