@@ -311,9 +311,8 @@ function fhirIdentifier(cmumpsSsn, cmumpsDodId) {
                 },
                 value: id,
             };
-        }
-
-        return null;
+        } else
+            return null;
     }
 
     var result = [cmumpsSsn, cmumpsDodId].filter(function (i) { return i; }).map(f);
