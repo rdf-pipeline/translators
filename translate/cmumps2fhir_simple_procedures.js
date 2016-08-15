@@ -23,11 +23,14 @@ function translate(cmumpsProcedureObject) {
 
     var resourceType = 'Procedure';
     var thePatient = get('$.patient.id');
+    // istanbul ignore else
     if (thePatient) thePatient = '2-' + thePatient.substring('Patient-'.length);
     var theProcedure = get('$._id');
+    // istanbul ignore else
     if (theProcedure) theProcedure = theProcedure.substring('Procedure-'.length);
     var theLabel = get('$.patient.label');
     var provider = get('$.provider'); var thePreformer = undefined;
+    // istanbul ignore else
     if (provider) thePreformer = [{
         actor: fdt.fhirReferencePractioner(provider), // { Reference(Practitioner|Organization|Patient|RelatedPerson) }, // The reference to the practitioner
         role:fdt.fhirCodeableConcept('provider') // { CodeableConcept } // The role the actor was in
@@ -71,7 +74,7 @@ function translate(cmumpsProcedureObject) {
     });
 }
 
-
+translate.resourceType = 'Procedure';
 
 // Export the actual functions here. Make sure the names are always consistent.
 [translate].forEach(function(f) { module.exports[f.name] = f; });

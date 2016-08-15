@@ -40,7 +40,7 @@ function translate(cmumpsPatientObject, get) {
         id: fdt.fhirId(resourceType, get('$._id')),
         active: true, // if the patient's cmumps record is available, it's active
         identifier: fdt.fhirIdentifier(get('$.ssn-2'), get('$.dod_id-2')),
-        name: fdt.fhirHumanName(get('$.name-2') || get('$.label')),  // first value wins
+        name: fdt.fhirHumanName(get('$.name-2') || get('$.label')),  // first value wins, expression confuses istanbul
         // fhir telecom
         telecom: [
             fdt.fhirContactPoint({system: 'phone', use: 'home', value: get('$.phone-2') }),
@@ -101,6 +101,7 @@ function translate(cmumpsPatientObject, get) {
     return result;
 }
 
+translate.resourceType = 'Patient';
 
 
 // Export the actual functions here. Make sure the names are always consistent.

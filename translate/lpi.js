@@ -6,32 +6,65 @@ var format = require('string-format');
 var JSONPath = require('jsonpath-plus');
 var cmumps_utils = require('./util/cmumps_utils');
 var fdt = require('./cmumps2fhir_datatypes');
+var _ = require('underscore');
 
 /**
+ * Defer creates a marker to be inserted in a translation. This marker indicates that a translator knows a translation
+ * must be inserted here, but can't do it. It marks metadata about what the translation should be, e.g. its FHIR resourceType
+ * 'Patient' or 'DiagnosticReport' and what the source object should be.
+ * @param {required string} fhirTargetResource -- the kind of FHIR resource to eventually translate, e.g. 'DiagnosticReport' or 'MedicationDispense'
+ * @param {required Function || string} translatorFunction -- the source translator inserting this Defer (marker).
+ * @param {required Object || string} sourceNode -- input for translation.
+ * @param {required string} id of the source object so that it can be obtained again (in theory)
+ * @param {required string, matching /urn:local:fhir:Patient:2-\d+/} patientId
+ * @param {required string} patientName, cmumps format 'LAST, FIRST MIDDLE?'
+ * @returns {Object} deferred translation marker
  *
- * @param {Function} translatorFunction -- the translator inserting this promise (marker).
- * @param {string} sourceNode -- ?
- * @param {string matching /urn:local:fhir:Patient:2-\d+/} patientId
- * @param patientName
- * @returns {{t:translator: string, t:sourceNode: string, t:patientId: string, t:patientName: *}}
+ * usage as a function:  var d = Defer(); // d instanceOf Object
+ * // usage as a constructor: var d = new Defer(); // d instanceOf Defer, commented out
+ *                                 ^^^
  */
-function promise(translatorFunction, sourceNode, patientId, patientName) {
-    // Key for this value will be 't:translatedBy'
+
+
+
+function fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName) {
+
     var expectedPatientFormat = /urn:local:fhir:Patient:2-\d+/;
     if (! patientId.match(expectedPatientFormat)) {
+        // istanbul ignore next
         throw new Error('patientId not in expected format ' + expectedPatientFormat);
     }
-    return {
-        // Are these values all required?
-        't:translator': 't:translators:' + translatorFunction.name,
-        't:sourceNode': 'urn:local:' + sourceNode,
-        't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
-        't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
-    }
+
+    var d = {
+        '@id': 'urn:local:' + fhirTargetResource + '/' + id,
+        resourceType: fhirTargetResource,
+        _deferred: true, 
+        id: id,
+        'fhir:patientName': patientName,
+        't:translatedBy': {
+            // Are these values all required?
+            't:translator': 't:translators:' + _.isFunction(translatorFunction) ? translatorFunction.name : translatorFunction,
+            // if the sourceNode comes in serialized as a string, attach a prefix. Otherwise its an object and preserve the object
+            't:sourceNode': (typeof sourceNode == 'string') ? 'urn:local:' + sourceNode : sourceNode,
+            't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
+            't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
+        }
+    };
+
+    // http://www.2ality.com/2012/08/underscore-extend.html
+    // Apparently _.extend can be fooled in certain cases.
+    // TODO carif: retain this expression,
+    // return (this instanceof fhirDefer) ? _.extend(this, d) : d;
+    return d;
 }
 
+// fhirDefer.prototype.method here...
 
-// place in cmumps_utils
+
+// makeTranslator was an alternative proposal to simple*translate. If it could be hidden by features of es2017,
+// I believe its a better approach. So I've left the implementation to guide the next initiative.
+
+// istanbul ignore next
 function makeTranslator(translator) {
 
     
@@ -70,6 +103,6 @@ function makeTranslator(translator) {
 
 // parts, the parts of cmumps knows how to extract
 module.exports = {};
-[promise, makeTranslator].forEach(function(f) {
+[fhirDefer, makeTranslator].forEach(function(f) {
     module.exports[f.name] = f;
 });

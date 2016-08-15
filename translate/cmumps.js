@@ -4,6 +4,7 @@
 
 var format = require('string-format');
 var JSONPath = require('jsonpath-plus');
+var _ = require('underscore');
 
 /**
  * A set of predicates to recognize types of cmumps objects
@@ -21,6 +22,7 @@ var JSONPath = require('jsonpath-plus');
 
 var cmumpsPrefixPattern = 'c(hc|mump)ss';
 
+/* istanbul ignore next */
 function isCmumpsType(candidate, cmumpsTypeName, token) {
     var token = token || cmumpsPrefixPattern;
     return typeof candidate == 'object'
@@ -37,6 +39,7 @@ function isCmumpsType(candidate, cmumpsTypeName, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Patient
  */
+/* istanbul ignore next */
 function isCmumpsPatient(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Patient, token);
@@ -47,6 +50,7 @@ function isCmumpsPatient(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Prescription
  */
+/* istanbul ignore next */
 function isCmumpsPrescription(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Prescription);
@@ -58,6 +62,7 @@ function isCmumpsPrescription(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Lab_Result
  */
+/* istanbul ignore next */
 function isCmumpsLabResult(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Lab_Result);
@@ -69,6 +74,7 @@ function isCmumpsLabResult(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Procedure
  */
+/* istanbul ignore next */
 function isCmumpsDiagnosis(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Kg_Patient_Diagnosis);
@@ -80,6 +86,7 @@ function isCmumpsDiagnosis(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Procedure
  */
+/* istanbul ignore next */
 function isCmumpsProcedure(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Procedure);
@@ -236,17 +243,22 @@ function removePatient(cmumpsJsonldObject, token) {
     var paths = JSONPath({json: cmumpsJsonldObject,
         path: cmumpssJsonPattern(module.exports.cmumpss.Patient, token),
         resultType: 'path'});
-    paths.forEach(function(path) {
-        var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
-        if (theMatch) {
-            var index = theMatch[1] - result.length;
-            result.push(cmumpsJsonldObject['@graph'][index]);
-            cmumpsJsonldObject['@graph'].splice(index, 1);
-        }
-    });
+    // istanbul ignore else
+    if (_.isArray(paths)) {
+        paths.forEach(function (path) {
+            var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
+            // istanbul ignore else
+            if (theMatch) {
+                var index = theMatch[1] - result.length;
+                result.push(cmumpsJsonldObject['@graph'][index]);
+                cmumpsJsonldObject['@graph'].splice(index, 1);
+            }
+        });
+    }
     return result;
 }
 
+// istanbul ignore next
 function removeDemographics(cmumpsJsonldObject, token) {
     var token = token || cmumpsPrefixPattern;
     removePatient(cmumpsJsonldObject, token);
@@ -286,6 +298,7 @@ function removePrescriptions(cmumpsJsonldObject, token) {
         resultType: 'path'});
     paths.forEach(function(path) {
         var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
+        // istanbul ignore else
         if (theMatch) {
             var index = theMatch[1] - result.length;
             result.push(cmumpsJsonldObject['@graph'][index]);
@@ -296,6 +309,7 @@ function removePrescriptions(cmumpsJsonldObject, token) {
 }
 
 
+// istanbul ignore next
 function removeMedications(cmumpsJsonldObject, token) {
     var token = token || cmumpsPrefixPattern;
     return removePrescriptions(cmumpsJsonldObject);
@@ -310,6 +324,33 @@ function extractLabs(cmumpsJsonldObject, token) {
     // return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result)});
     var token = token || cmumpsPrefixPattern;
     return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result, token)});
+}
+
+
+/**
+ * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove all lab records from @graph of that object.
+ * MODIFIES cmumpsJsonldObject.
+ *
+ * @param cmumpsJsonldObject
+ * @return {Array[object]} -- the items removed
+ */
+// istanbul ignore next
+function removeLabs(cmumpsJsonldObject) {
+    var token = token || cmumpsPrefixPattern;
+    var result = [];
+    var paths = JSONPath({json: cmumpsJsonldObject,
+        path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result, token),
+        resultType: 'path'});
+    paths.forEach(function(path) {
+        var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
+        // istanbul ignore else
+        if (theMatch) {
+            var index = theMatch[1] - result.length;
+            result.push(cmumpsJsonldObject['@graph'][index]);
+            cmumpsJsonldObject['@graph'].splice(index, 1);
+        }
+    });
+    return result;
 }
 
 /**
@@ -355,6 +396,7 @@ function removeDiagnoses(cmumpsJsonldObject) {
  * @returns {Array[object]} -- the procedures
  */
 
+// istanbul ignore next
 function extractProcedures(cmumpsJsonldObject) {
     return JSONPath({json: cmumpsJsonldObject, path: "$['@graph'][?(@.type=='Procedure')]"});
 }

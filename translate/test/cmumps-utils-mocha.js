@@ -7,6 +7,8 @@ var should = chai.should;
 var _ = require('underscore');
 var cmumps_utils = require('../util/cmumps_utils');
 var fdt = require('../cmumps2fhir_datatypes');
+var lpi = require('../lpi');
+var cmumps2fhir_labs = require('../cmumps2fhir_labs');
 var semver = require('semver');
 
 
@@ -110,6 +112,50 @@ describe('for cmumps-utils', function() {
             var theOverlap = cmumps_utils.overlapObjects(theObject, theObject);
             chai.expect(theOverlap).to.have.length(3);
             chai.expect(theOverlap).to.eql(cmumps_utils.values(theObject));
+        });
+
+
+
+
+    });
+});
+
+
+// generate variants of the Defer object and make sure they make sense
+describe('for lpi ...', function() {
+    describe('lpi.Defer() ...', function() {
+        it('can Defer a lab result translation as a Defer object', function () {
+            var fhirTargetResource = cmumps2fhir_labs.translateLabsFhir.resourceType; // each translator "knows" its FHIR result
+            var translatorFunction = cmumps2fhir_labs.translateLabsFhir;
+            var sourceNode = 'tbs';
+            var id = '63-0000007'; // cmumpss:Lab_Result-63
+            var patientId = 'urn:local:fhir:Patient:2-' + id.split('-')[1];
+            var patientName = 'BUNNY, BUGS DOC';
+            var result = lpi.fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
+            // chai.expect(result).to.be.an.instanceOf(lpi.Defer);
+            chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', '_deferred', 'fhir:patientName', 't:translatedBy']);
+            chai.expect(result['t:translatedBy']).to.have.keys(['t:translator', 't:sourceNode', 't:patientId', 't:patientName']);
+            chai.expect(result.id).equals(id);
+            chai.expect(result['t:translatedBy']['t:patientId']).equals(patientId);
+            chai.expect(result['fhir:patientName']).equals(patientName);
+            chai.expect(result['t:translatedBy']['t:patientName']).equals(patientName);
+        });
+
+        it('can Defer a lab result translation as an Object', function () {
+            var fhirTargetResource = cmumps2fhir_labs.translateLabsFhir.resourceType; // each translator "knows" its FHIR result
+            var translatorFunction = cmumps2fhir_labs.translateLabsFhir;
+            var sourceNode = 'tbs';
+            var id = '63-0000007'; // cmumpss:Lab_Result-63
+            var patientId = 'urn:local:fhir:Patient:2-' + id.split('-')[1];
+            var patientName = 'BUGS, BUNNY DOC';
+            var result = lpi.fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patientId, patientName);
+            chai.expect(result).to.be.an.instanceOf(Object);
+            chai.expect(result).to.have.keys(['@id', 'id', 'resourceType', '_deferred', 'fhir:patientName', 't:translatedBy']);
+            chai.expect(result['t:translatedBy']).to.have.keys(['t:translator', 't:sourceNode', 't:patientId', 't:patientName']);
+            chai.expect(result.id).equals(id);
+            chai.expect(result['t:translatedBy']['t:patientId']).equals(patientId);
+            chai.expect(result['fhir:patientName']).equals(patientName);
+            chai.expect(result['t:translatedBy']['t:patientName']).equals(patientName);
         });
 
 
