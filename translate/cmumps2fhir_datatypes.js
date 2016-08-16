@@ -377,7 +377,7 @@ function fhirMaritalStatus(cmumpssMaritalStatus) {
     // mapping from http://hl7-fhir.github.io/v3/MaritalStatus/index.html
     // return a "CodableConcept"
     var ms = cmumpssMaritalStatus.label.toUpperCase();
-    if (_.contains(["DIVORCED", "SINGLE,NEVER MARRIED", "MARRIED", "LEGALLY SEPARATED", "UNKNOWN"], ms)) {
+    if (_.contains(["DIVORCED", "SINGLE,NEVER MARRIED", "MARRIED", "LEGALLY SEPARATED", "UNKNOWN", "WIDOWED"], ms)) {
         return {
             coding: [
                 {
