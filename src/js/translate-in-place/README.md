@@ -7,13 +7,16 @@ This directory consists of the following modules:
   cmumps analog input (e.g. Prescription-52). See the `cmumps.extract*` utility functions below, which facilitate picking out the right
   input.
 
-Note that unlike `../translate/cmumps2fhir_*.js`, these translation functions return both a translation and the used
-input data. It also side effects the input, if desired, leaving remaining items that were untranslated. Usage:
+The key difference between translate-in-place and translate, is that while translate simply returns a translation 
+without modifying the original graph,  translate-in-place modifies the input graph by directly replacing the
+original version of the data with the translated pieces.  It leaves untranslated items in the original graph
+as they were, still untranslated.  The result is a graph with a mix of original input with translated pieces 
+replaced.   Translate-in-place functions return both a translation and the updated graph. 
 
 ```javascript
-var cmumps = require('rdf-pipeline/translate/cmumps.js');
-var cmumps_utils = require('rdf-pipeline/translate/util/cmumps_utils.js');
-var graph_cmumps2fhir_prescriptions = require('rdf-pipeline/graph_translate/graph_cmumps2fhir_prescriptions');
+var cmumps = require('rdf-pipeline/translators/src/js/translate/src/js/translate/cmumps.js');
+var cmumps_utils = require('rdf-pipeline/translators/src/js/translate/util/cmumps_utils.js');
+var graph_cmumps2fhir_prescriptions = require('rdf-pipeline/translators/src/js/translate-in-place/graph_cmumps2fhir_prescriptions');
 var cmumpsInputJsonld = {...}; // input from somewhere
 var cmumpsInputJsonldSideEffected = cmumps_utils.clone(cmumpsInputJsonld);
 

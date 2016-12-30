@@ -30,7 +30,12 @@ data/
 │   │   ├── output/
 │   │   │   └── Makefile # run translations in ../*.jsonld, generating output here
 │   │   ├── README.md # more details
-└── {*-}translate{-*} # translates cmumps data to various formats, fhir to start
+src/
+├── js/
+│   ├── translate/           # translates cmumps data to fhir with an immutable graph 
+│   ├── translate-in-place/  # translates cmumps to fhir in place within a mutable graph 
+└── shex/ # ShEx cmumps to FHIR translations - see https://www.w3.org/2001/sw/wiki/ShEx and 
+          # https://github.com/shexSpec
 </pre>
 
 

@@ -30,7 +30,9 @@ var test_utils = require('./../../translate/test/test_utils');
 
 
 // Different names for the same input file, allows for easier on-the-fly modications.
-var patient7Jsonld = cmumps_utils.load('data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+var patient7Jsonld = 
+    cmumps_utils.load(__dirname + '/../../../../data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+
 // var bugsBunnyJsonld = patient7Jsonld;
 // var bugsBunnyDiagnosisJsonld = patient7Jsonld;
 // var bugsBunnyProceduresJsonld = patient7Jsonld;
