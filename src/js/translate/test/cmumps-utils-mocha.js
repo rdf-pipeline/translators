@@ -18,7 +18,7 @@ describe('for cmumps-utils', function() {
 
     //
     describe('expecting node version', function() {
-        expect(semver.parse(process.versions.node).major).is.greaterThan(4);
+        expect(semver.parse(process.versions.node).major).to.be.at.least(4);
     });
 
     describe('isJsonld', function () {
@@ -157,7 +157,6 @@ describe('for lpi ...', function() {
             chai.expect(result['fhir:patientName']).equals(patientName);
             chai.expect(result['t:translatedBy']['t:patientName']).equals(patientName);
         });
-
 
     });
 });

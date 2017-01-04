@@ -35,7 +35,8 @@ var test_utils = require('./test_utils');
 
 // Different names for the same input file, allows for easier on-the-fly modications.
 // var testDataPath = 'translate/test/data/';
-var patient7Jsonld = cmumps_utils.load('data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+var patient7Jsonld = 
+    cmumps_utils.load(__dirname+'/../../../../data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
 
 
 describe('cmumps2fhir_all fhirParts', function () {
