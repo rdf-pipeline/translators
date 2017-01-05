@@ -38,7 +38,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "bin": {
     "cmumps-file": "./src/js/translate/util/cmumps-file.js",
-    "cmumps-parts": "./src/js/translate/util/cmumps-parts.js"
+    "cmumps-parts": "./src/js/translate/util/cmumps-parts.js",
+    "ttl-to-json": "bin/ttl-to-json"
   },
   "scripts": {
     "build": "echo build ## tbs",
@@ -59,18 +60,22 @@
     "autovivify": "1.0.4",
     "bluebird": "^3.3.1",
     "chalk": "^1.1.1",
+    "command-line-args": "^2.1.6",
     "commander": "^2.9.0",
     "concat-stream": "^1.5.1",
     "decomment": "^0.7.5",
     "fhir-json-to-xml": "git+https://github.com/rdf-pipeline/fhir-json-to-xml",
     "handlebars": "^4.0.5",
     "istanbul": "^0.4.4",
-    "jsonld": "^0.4.2",
+    "jsonld": "^0.4.11",
     "jsonld-cli": "^0.1.0",
     "jsonpath-plus": "^0.14.0",
     "log4js": "^0.6.29",
+    "n3": "^0.8.4",
     "node-html-encoder": "0.0.2",
+    "rdfstore": "^0.9.17",
     "semver": "^5.2.0",
+    "shex": "~0.8.5",
     "string-format": "^0.5.0",
     "underscore": "~1.8.3"
   },
