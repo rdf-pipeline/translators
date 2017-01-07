@@ -18,10 +18,12 @@ var jsonld = require('jsonld').promises;
  *
  * @param input RDF JS Interface Graph object
  * @param frame JSON-LD Frame object
+ * @param filterBNodeAttrs an array with the attribute names that should be filtered if they
+ *        hold a blank node name that is referenced only once.
  *
  * @see http://json-ld.org/spec/latest/json-ld-framing/
  */
-function rdfToJsonLd(input, frame) {
+function rdfToJsonLd(input, frame, filterBNodeAttrs) {
 
     return buildJSON(input).then(function(json) {
 
@@ -31,7 +33,7 @@ function rdfToJsonLd(input, frame) {
                 resolve(framedJson); 
             }).then(framedJson => { 
 
-                return filterBNodes(framedJson); 
+                return filterBNodes(framedJson, filterBNodeAttrs); 
 
             }).catch(function(e) {
                 console.error("Unable to process JSONLD frame!");
@@ -41,7 +43,7 @@ function rdfToJsonLd(input, frame) {
 
        } else {
 
-            json = filterBNodes(json);
+            json = filterBNodes(json, filterBNodeAttrs);
             if (json.length == 1) 
                json[0];
 
@@ -51,52 +53,66 @@ function rdfToJsonLd(input, frame) {
 }
 
 /**
+ * Generate a list of blank nodes, with a count of the number of times referenced
+ * and an array that has the keys to a path to the first blank node reference.
+ *
+ * @param graph a JSON-LD graph
+ * @param filterAttrs Array with the attribute names to examine
+ * @param bNodes a hash of the blank nodes found so far.  Initially undefined.
+ * @param jspath an array with the keys to the path currently being processed.
+ */
+function bNodeHash(graph, filterAttrs, bNodes, jspath) { 
+    bNodes = bNodes || {};
+    jspath = jspath || [];
+
+    _.mapObject(graph, function(val, key) { 
+     
+        if (_.isObject(val)) {
+            bNodeHash(val, filterAttrs, bNodes, jspath.concat([key]));
+
+        } else { 
+      
+             // Is the current key one where to filter single blank nodes and does it have a blank node? 
+             if (_.contains(filterAttrs, key) && val.startsWith('_:')) { 
+
+                 if (_.isUndefined(bNodes[val]))   {
+                     // First time we've seen this key with its blank node.  Record it
+                     bNodes[val] = { count: 1,
+                                     jspath: jspath.concat([key]).slice() };
+                 } else 
+                     // We've seen this one before.  Increment the count - we won't be filtering it
+                     bNodes[val].count++;
+
+                 jspath = [];
+             }
+        }
+    });
+   
+    return bNodes;
+}
+
+/**
  * Walks the graph looking for blank node IDs that were added by the jsonld library.  Blank
  * node IDs that are referenced only once are removed.  This is done to ensure we return
  * to the original JSON-LD input without any RDF remnants
  * 
  * @param graph - a JSON or JSON-LD graph
+ * @param filterAttrs Array with the attribute names to examine
  *
  * @return the graph will be updated to remove RDF ID blank nodes 
  */
-function filterBNodes(graph) { 
+function filterBNodes(graph, filterAttrs) { 
 
-    // Generate a list of blank nodes, with a count of the number of times referenced
-    // and an array that has the path to the first blank node reference.
-    function bNodeHash(graph, bNodes, jspath) { 
-        bNodes = bNodes || {};
-        jspath = jspath || [];
-
-        _.mapObject(graph, function(val, key) { 
-      
-            if (_.isObject(val)) {
-                bNodeHash(val, bNodes, jspath.concat([key]));
- 
-            } else { 
-       
-                 // Is the key either id or @id?  Is the value a blank node e.g., _:12345? 
-                 if (/^\s*[@]*id\s*$/.test(key) && val.startsWith('_:')) {
-
-                     if (_.isUndefined(bNodes[val]))   {
-                         bNodes[val] = { count: 1,
-                                         jspath: jspath.concat([key]).slice() };
-                     } else 
-                         bNodes[val].count++;
-                     jspath = [];
-
-                 }
-            }
-        });
-    
-        return bNodes;
-    }
-
-    // Now remove any blank nodes that are only referenced only once.
-    _.mapObject(bNodeHash(graph), function(val, key) { 
+    // Walk a hash of all graph blank nodes with their refererence count and path
+    _.mapObject(bNodeHash(graph, filterAttrs), function(val, key) { 
 
         if (val.count == 1) {  
+            // Referenced this one only once - so delete it
+
             var element = graph;
             var last = val.jspath.length-1;
+
+            // Apply each key to get to the element to delete; once there, delete it.
             _.each(val.jspath, function(key, index) {
                if (index == last) 
                    delete element[key];
@@ -346,6 +362,7 @@ var readFiles = filenames.map(function(filename) {
   return readFile(filename, 'utf8');
 });
 
+
 Promise.all(readFiles).then(fileContent => { 
   var rdfText = fileContent[0];
   var frameText = undefined;
@@ -366,8 +383,14 @@ Promise.all(readFiles).then(fileContent => {
      resolve(graph);
 
   }).then(function(graph) { 
-    rdfToJsonLd(graph, frameText).then(json => { 
-      console.log(JSON.stringify(json, null, 2)); 
-    });
+
+     // Set the ids where we want to filter out blank nodes that are referenced only once. 
+     // CMUMPS uses this to filter out ids that are added by the jsonld library that would  differ 
+     // from the original json input on a round trip translation. 
+     var filterBnodeAttrs = [ 'id', '_id', '@id' ];
+
+     rdfToJsonLd(graph, frameText, filterBnodeAttrs).then(json => { 
+        console.log(JSON.stringify(json, null, 2)); 
+     });
   });
 });
