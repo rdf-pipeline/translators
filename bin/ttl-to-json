@@ -1,0 +1,396 @@
+#!/usr/bin/env node
+
+// Converts a TTL RDF file to JSON or JSON-LD. 
+
+var _ = require('underscore');
+var cmdlineArgs = require('command-line-args')
+var fs = require('fs');
+var path = require('path');
+var util = require('util');
+
+var Promise = require('promise');
+var rdfstore = require('rdfstore');
+var jsonld = require('jsonld').promises;
+
+/**
+ * Converts the given graph object into a JSON LD Graph object using an optional
+ * frame on the corresponding Component.
+ *
+ * @param input RDF JS Interface Graph object
+ * @param frame JSON-LD Frame object
+ * @param filterBNodeAttrs an array with the attribute names that should be filtered if they
+ *        hold a blank node name that is referenced only once.
+ *
+ * @see http://json-ld.org/spec/latest/json-ld-framing/
+ */
+function rdfToJsonLd(input, frame, filterBNodeAttrs) {
+
+    return buildJSON(input).then(function(json) {
+
+        if (frame) {
+            return new Promise(function(resolve) { 
+                var framedJson = jsonld.frame(json, frame);
+                resolve(framedJson); 
+            }).then(framedJson => { 
+
+                return filterBNodes(framedJson, filterBNodeAttrs); 
+
+            }).catch(function(e) {
+                console.error("Unable to process JSONLD frame!");
+                console.error(e);
+                process.exit(1);
+            });
+
+       } else {
+
+            json = filterBNodes(json, filterBNodeAttrs);
+            if (json.length == 1) 
+               json[0];
+
+           return json;
+       }
+    });
+}
+
+/**
+ * Generate a list of blank nodes, with a count of the number of times referenced
+ * and an array that has the keys to a path to the first blank node reference.
+ *
+ * @param graph a JSON-LD graph
+ * @param filterAttrs Array with the attribute names to examine
+ * @param bNodes a hash of the blank nodes found so far.  Initially undefined.
+ * @param jspath an array with the keys to the path currently being processed.
+ */
+function bNodeHash(graph, filterAttrs, bNodes, jspath) { 
+    bNodes = bNodes || {};
+    jspath = jspath || [];
+
+    _.mapObject(graph, function(val, key) { 
+     
+        if (_.isObject(val)) {
+            bNodeHash(val, filterAttrs, bNodes, jspath.concat([key]));
+
+        } else { 
+      
+             // Is the current key one where to filter single blank nodes and does it have a blank node? 
+             if (_.contains(filterAttrs, key) && val.startsWith('_:')) { 
+
+                 if (_.isUndefined(bNodes[val]))   {
+                     // First time we've seen this key with its blank node.  Record it
+                     bNodes[val] = { count: 1,
+                                     jspath: jspath.concat([key]).slice() };
+                 } else 
+                     // We've seen this one before.  Increment the count - we won't be filtering it
+                     bNodes[val].count++;
+
+                 jspath = [];
+             }
+        }
+    });
+   
+    return bNodes;
+}
+
+/**
+ * Walks the graph looking for blank node IDs that were added by the jsonld library.  Blank
+ * node IDs that are referenced only once are removed.  This is done to ensure we return
+ * to the original JSON-LD input without any RDF remnants
+ * 
+ * @param graph - a JSON or JSON-LD graph
+ * @param filterAttrs Array with the attribute names to examine
+ *
+ * @return the graph will be updated to remove RDF ID blank nodes 
+ */
+function filterBNodes(graph, filterAttrs) { 
+
+    // Walk a hash of all graph blank nodes with their refererence count and path
+    _.mapObject(bNodeHash(graph, filterAttrs), function(val, key) { 
+
+        if (val.count == 1) {  
+            // Referenced this one only once - so delete it
+
+            var element = graph;
+            var last = val.jspath.length-1;
+
+            // Apply each key to get to the element to delete; once there, delete it.
+            _.each(val.jspath, function(key, index) {
+               if (index == last) 
+                   delete element[key];
+               else 
+                  element = element[key]; 
+            });
+        }
+    }); 
+
+   return graph;
+}
+
+/**
+ * Promise of JSON-LD array of objects for the given graph.
+ *
+ * @param graph RDF JS Interface Graph object
+ */
+function buildJSON(graph) {
+
+    return new Promise(function(resolve) {
+        var jsonGraph = [];
+        var subject = indexedSubject.bind(this, {}, jsonGraph);
+        var subj, pred, obj;
+        graph.forEach(function(triple) {
+            subj = subject(triple.subject);
+            pred = triple.predicate.nominalValue;
+            obj = objectValue(triple.object);
+            pushTriple(subj, pred, obj);
+        });
+        resolve(jsonGraph);
+    });
+}
+
+/**
+ * Returns a JSON-LD object for the given subject using existing subjects where
+ * possible.
+ *
+ * @param subjects hash of existing subjects by their nominal value to their position in jsonGraph
+ * @param jsonGraph array of existing subject objects
+ * @param subject an RDF term implementing RDF JS Interface
+ */
+function indexedSubject(subjects, jsonGraph, subject) {
+
+    var value = subject.nominalValue;
+    if (typeof subjects[value] === 'undefined') {
+        if (subject.interfaceName === 'BlankNode') {
+            jsonGraph.push({
+                '@id': subject.toString()
+            });
+        } else {
+            jsonGraph.push({
+                '@id': value
+            });
+        }
+
+        subjects[value] = jsonGraph.length - 1;
+    }
+
+    return jsonGraph[subjects[value]];
+}
+
+/**
+ * Converts the RDF term into a JSON-LD object
+ *
+ * @param object an RDF term implementing RDF JS Interface
+ */
+function objectValue(object) {
+
+    var value = object.nominalValue;
+    if (object.interfaceName === 'NamedNode') {
+        return {
+            '@id': value
+        };
+    } else if (object.interfaceName === 'BlankNode') {
+        return {
+            '@id': object.toString()
+        };
+    } else if (object.language) {
+        return {
+            '@language': object.language,
+            '@value': value
+        };
+    } else if (object.datatype && object.datatype.toString() != 'http://www.w3.org/2001/XMLSchema#string') {
+        return {
+            '@type': object.datatype.toString(),
+            '@value': value
+        };
+    } else {
+        return value;
+    }
+}
+
+/**
+ * Adds the key value to the given JSON-LD object.
+ *
+ * @param object JSON-LD object
+ * @param key the nominal value of the predicate
+ * @param value the object value of the property as a JSON-LD object
+ */
+function pushTriple(object, key, value) {
+
+    if (key === 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type') {
+        if (typeof object['@type'] === 'undefined') {
+            object['@type'] = [];
+        }
+        object['@type'].push(value['@id']);
+    } else {
+        if (typeof object[key] === 'undefined') {
+            object[key] = value;
+        } else {
+            if (!Array.isArray(object[key])) {
+                object[key] = [object[key]];
+            }
+            object[key].push(value);
+        }
+    }
+}
+
+/**
+ * Loads data into a RDF JS Interface Graph object
+ *
+ * @param type Media type (application/json, text/n3...) of the data to be parsed or the value 'remote' if a URI for the data is passed instead
+ * @param input RDF data to be parsed and loaded or an URI where the data will be retrieved after performing content negotiation
+ *
+ * @see https://www.w3.org/TR/rdf-interfaces/#graphs
+ */
+function rdfLoad(type, input) {
+
+    return denodeify(rdfstore, 'create', {}).then(function(store){
+        return Promise.resolve().then(function(){
+            if (type) {
+                return denodeify(store, 'load', type, input, {});
+            }
+        }).then(function(){
+                return denodeify(store, 'graph');
+        }).then(function(graph){
+            graph.rdfstore = store;
+            return graph;
+        });
+    }).catch(function(e) {
+      console.error("Error processing RDF!");
+      console.error(e);
+      process.exit(1);
+    });
+}
+
+/**
+ * Converts cb style async functions to promise style functions
+ * Could be rewritten to avoid using non-standard Promisejs using callbacks 
+ */
+function denodeify(object, functionName /* arguments */) {
+    var args = _.toArray(arguments).slice(2);
+    return Promise.denodeify(object[functionName]).apply(object, args);
+}
+
+function help() {
+    console.log(
+        cli.getUsage({
+            title:"ttl-to-json",
+            description:"convert an Turtle RDF file to JSON, or to JSONLD if a frame is given.",
+            synopsis: [
+              "ttl-to-json -t <TTL RDF File> [-f <Frame File>]"
+            ],
+            examples: [
+              "   ttl-to-json -t file.ttl",
+              "   ttl-to-json -t file.ttl -f myFrame.frame",
+            ],
+            footer: "Project home: [underline]{https://github.com/rdf-pipeline/translators}"
+          }));
+}
+
+/**
+ * Read a file 
+ *
+ * @param filename File name 
+ * @param encoding Character encoding
+ */
+function readFile(filename, encoding) {
+
+    return new Promise(function(resolve, reject){
+        return fs.readFile(filename, encoding || 'utf-8', function(err, content){
+            if (err) {
+              console.error(err.message);
+              reject(err);
+            }
+            else resolve(content);
+        });
+    });
+}
+
+/**
+ * Verify file exists
+ *
+ * @param filename File name 
+ */
+function fileExists(filename) {
+    if (! fs.existsSync(filename)) {
+        console.error("File "+filename+" does not exist!");
+        help();
+        process.exit(1);
+    }
+}
+
+// Define the command line args and parse to see what we got
+var cli = cmdlineArgs([
+  { name: "help", alias: "h", type: Boolean },
+  { name: "frame", alias: "f", type: String, description: "JSON-LD frame file" },
+  { name: "ttlfile", alias: "t", type: String, description: "TTL RDF file to be processed" }
+]);
+
+try { 
+   var cmds = cli.parse() || {};
+} catch(e) { 
+   console.error(e.message);
+   help();
+   process.exit(1);
+}
+
+if (cmds.help) {
+  help();
+  process.exit(0);
+}
+
+// Verify we got the required RDF file - can't do anything without it
+if ((_.isUndefined(cmds.ttlfile) || _.isNull(cmds.ttlfile))) {
+    console.error("A TTL RDF file argument is required!");
+    help();
+    process.exit(1);
+}
+fileExists(cmds.ttlfile); 
+
+// If a frame was specified, make sure we got a file name and it exists
+if (!_.isUndefined(cmds.frame)) {
+   if (_.isNull(cmds.frame)) {
+       console.error("Frame argument requires a frame file!");
+       help();
+       process.exit(1);
+   } else {
+       fileExists(cmds.frame);
+   }
+}
+
+
+// Prepare to read the RDF & frame files in parallel
+var filenames = _.isUndefined(cmds.frame) ? [cmds.ttlfile] : [cmds.ttlfile, cmds.frame];
+var readFiles = filenames.map(function(filename) {
+  return readFile(filename, 'utf8');
+});
+
+
+Promise.all(readFiles).then(fileContent => { 
+  var rdfText = fileContent[0];
+  var frameText = undefined;
+  if (fileContent.length > 1) {
+      try {
+          frameText = JSON.parse(fileContent[1]);
+      } catch(e) { 
+          console.error("Unable to parse frame JSON!");
+          console.error(e);
+          process.exit(1);
+      }
+  }
+
+  // Load the RDF text into an RDF graph
+  return new Promise(function(resolve) {
+
+     var graph = rdfLoad("text/turtle", rdfText);
+     resolve(graph);
+
+  }).then(function(graph) { 
+
+     // Set the ids where we want to filter out blank nodes that are referenced only once. 
+     // CMUMPS uses this to filter out ids that are added by the jsonld library that would  differ 
+     // from the original json input on a round trip translation. 
+     var filterBnodeAttrs = [ 'id', '_id', '@id' ];
+
+     rdfToJsonLd(graph, frameText, filterBnodeAttrs).then(json => { 
+        console.log(JSON.stringify(json, null, 2)); 
+     });
+  });
+});
