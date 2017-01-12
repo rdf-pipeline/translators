@@ -1,0 +1,12 @@
+{
+  "urn:local:Demographics:constAddrPostal": "postal",
+  "urn:local:Demographics:constCmumpsDefLang": "English",
+  "urn:local:Demographics:constCmumpsEphone": "phone",
+  "urn:local:Demographics:constCmumpsPhone": "phone",
+  "urn:local:Demographics:constCmumpsCodingSys": "cmumps",
+  "urn:local:Demographics:constCmumpsVersion": "0.0.1",
+  "urn:local:Demographics:constIdentifierSysCmumps": "http://hokukahu.com/cmumps/patient/",
+  "urn:local:Demographics:constIdentifierSysSSN": "http://hl7.org/fhir/sid/us-ssn",
+  "urn:local:Demographics:constNameUse": "usual",
+  "urn:local:Demographics:constCmumpsFmp2": "http://hokukahu.com/cmumps/patient/fmp-2"
+}

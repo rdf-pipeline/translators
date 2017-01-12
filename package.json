@@ -39,12 +39,12 @@
   "bin": {
     "cmumps-file": "./src/js/translate/util/cmumps-file.js",
     "cmumps-parts": "./src/js/translate/util/cmumps-parts.js",
+    "roundtrip-translation": "bin/roundtrip-translation.sh",
     "ttl-to-json": "bin/ttl-to-json"
   },
   "scripts": {
     "build": "echo build ## tbs",
-    "test": "./node_modules/.bin/istanbul --verbose cover -x src/js/translate-in-place/graph_cmumps2fhir_labs.js ./node_modules/.bin/_mocha -- --reporter spec --recursive src/js/translate/test --recursive src/js/translate-in-place/test",
-    "_comment": "istanbul isn't ready for prime time yet"
+    "test": "./node_modules/.bin/mocha test src/js/translate/test src/js/translate-in-place/test"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -67,6 +67,7 @@
     "fhir-json-to-xml": "git+https://github.com/rdf-pipeline/fhir-json-to-xml",
     "handlebars": "^4.0.5",
     "istanbul": "^0.4.4",
+    "json-diff": "^0.3.1",
     "jsonld": "^0.4.11",
     "jsonld-cli": "^0.1.0",
     "jsonpath-plus": "^0.14.0",
