@@ -4,7 +4,6 @@
    "@graph": [
      {
        "identifier": "2-000007",
-       "name-2": "O'BUNNY-RABBIT, BUGS DOC",
        "dob-2": {
          "type": "xsd:date",
          "value": "1990-01-01"

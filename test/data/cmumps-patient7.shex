@@ -9,7 +9,6 @@ start=@<http://hokukahu.com/patient-1>
 
 <http://hokukahu.com/patient-1> {
     cmumpss:identifier                      xsd:string    %Map:{ dem:id %};
-    cmumpss:name-2                          xsd:string    %Map:{ regex(/"(?<dem:family>[a-zA-Z'\\-]+), (?<dem:given>[a-zA-Z'\\-\\s]+)"/) %};
     cmumpss:phone-2                         xsd:string?   %Map:{ dem:phone %};
     cmumpss:dob-2                           xsd:date      %Map:{ dem:dob %};
     cmumpss:street_address-2                xsd:string?   %Map:{ dem:street_address %};

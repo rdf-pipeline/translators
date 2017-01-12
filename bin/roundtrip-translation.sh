@@ -17,6 +17,8 @@ CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SHEX_BIN_PATH=${CWD}/../node_modules/shex/bin
 EXT_BIN_PATH=${CWD}/../node_modules/shex/extensions/shex-map/bin
 
+DEFAULT_RDF_ROOT="urn:local:patient-1"
+
 function help() {
     echo ""
     echo "NAME"
@@ -46,7 +48,7 @@ function help() {
     echo "  If no output directory is specified, ./output will be used."
     echo "  Warning: the output directory will be deleted if it exists, & recreated for clean results."
     echo "" 
-    echo "  If no RDF root is specified, http://hokukahu.com/patient-1 will be used as the default root."
+    echo "  If no RDF root is specified, ${DEFAULT_RDF_ROOT} will be used as the default root."
     echo ""
     echo "  If no source data schema file is specified, this script will look for the json data file name with a \".shex\""
     echo "  extension on it."
@@ -208,9 +210,9 @@ WORK_DIR=${WORK_DIR:-./work}
 
 # Get the RDF Root.  If we are using hokukahu as our root, set SED files to true.
 # This will do editing on the sed files to ensure a smooth round trip with the current ShEx requirements
-warnDefault "${RDF_ROOT}" "No RDF root specified; defaulting to http://hokukahu.com/patient-1."
-RDF_ROOT=${RDF_ROOT:-http://hokukahu.com/patient-1}
-if [ "${RDF_ROOT}" = "http://hokukahu.com/patient-1" ]; then 
+warnDefault "${RDF_ROOT}" "No RDF root specified; defaulting to ${DEFAULT_RDF_ROOT}."
+RDF_ROOT="${RDF_ROOT:-${DEFAULT_RDF_ROOT}}"
+if [ "${RDF_ROOT}" = "${DEFAULT_RDF_ROOT}" ]; then 
   SED_FILES=true
 else 
   SED_FILES=false

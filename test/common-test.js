@@ -15,42 +15,76 @@ var os = require('os');
 
 module.exports = {
 
-    cmdFileNonexistent: function(cmd, file, done) {
-        exec(cmd, function (error, stdout, stderr) {
+    /**
+     * Test that a command line tool has  graceful error handling for a non-existent file
+     *
+     * @param cmdline command line that will access the file
+     * @param filepath filepath that should not exist; this filepath should be referenced
+     *        by the command line
+     * @param done callback to use when test completes 
+     */
+    fileNotExistHandling: function(cmdline, filepath, done) {
+        exec(cmdline, function (error, stdout, stderr) {
              error.code.should.equal(1);
-             stderr.should.contain("File " + file + " does not exist!");
+             stderr.should.contain("File " + filepath + " does not exist!");
              done();
         });
     },
 
-    cmdFileUnreadable: function(cmd, file, done) {
-        fs.writeFileSync(file, '{}', {mode: 0});
-        exec(cmd, function (error, stdout, stderr) {
+    /**
+     * Test that a command line tool has  graceful error handling for an inaccessible file
+     *
+     * @param cmdline command line that will access the file
+     * @param filepath filepath that should not exist; this filepath should be referenced
+     *        by the command line
+     * @param done callback to use when test completes 
+     */
+    fileInAccessHandling: function(cmdline, filepath, done) {
+        fs.writeFileSync(filepath, '{}', {mode: 0}); // create file with no access permissions
+        exec(cmdline, function (error, stdout, stderr) {
             error.code.should.equal(1);
-            stderr.should.contain("File " + file + " is not readable!");
-            fs.unlinkSync(file);
+            stderr.should.contain("File " + filepath + " is not readable!");
+            fs.unlinkSync(filepath);  // unlink the file to clean up
             done();
         });
     },
 
-    unlinkDir: function(path) { 
-        if (fs.existsSync(path)) {
-            fs.readdirSync(path).forEach(function(file, index) {
-                var filePath = path + "/" + file;
-                if (fs.lstatSync(filePath).isDirectory()) {
-                    module.exports.unlinkDir(filePath);
-                } else {
-                    fs.unlinkSync(filePath);
-                }
-            });
-
-            fs.rmdirSync(path);
+    /**
+     * Unlink the specified directory, first removing any child files or subdirectories 
+     * if the path is for a directory.
+     * 
+     * @param dirpath path to the directory to be deleted.
+     */
+    unlinkDir: function(dirpath) { 
+        if (fs.existsSync(dirpath)) {
+            if (fs.lstatSync(dirpath).isDirectory()) {
+                fs.readdirSync(dirpath).forEach(function(file, index) {
+                    var filepath = dirpath + "/" + file;
+                    if (fs.lstatSync(filepath).isDirectory()) {
+                        // file is really a subdir - unlink it and its children before proceeding
+                        module.exports.unlinkDir(filepath);
+                    } else {
+                        fs.unlinkSync(filepath);
+                    }
+                });
+               
+                fs.rmdirSync(dirpath);
+            } else { 
+                throw Error(dirpath + " is not a directory."); 
+            }
         }
     },
 
-    verifyExecutable: function(path) { 
+    /**
+     * Verify that the specified file is executable
+     * 
+     * @param filepath filepath to test for execute access
+     */
+    verifyExecutable: function(filepath) { 
 
-        var mode = fs.statSync(path).mode;
+        filepath.should.exist;
+
+        var mode = fs.statSync(filepath).mode;
 
         var owner = mode >> 6;
         var group = (mode << 3) >> 6;

@@ -106,20 +106,24 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if given non-existent file", function(done) {
-          var file = 'aloha' + Math.random();
-          var cmd = roundtripPath + " -d " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath = 'aloha' + Math.random();
+          var cmdline = roundtripPath + " -d " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should return an error if file is not readable", function(done) {
-          var file = tmpDir + 'aloha' + Math.random() + ".jsonld"
-          var cmd = roundtripPath + " --data " + file;
-          commonTest.cmdFileUnreadable(cmd, file, done);
+          var filepath = tmpDir + 'aloha' + Math.random() + ".jsonld"
+          var cmdline = roundtripPath + " --data " + filepath;
+
+          // test graceful error handling when filepath is not accessible.
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should return an error if given a file without a jsonld extension", function(done) {
-          var cmd = roundtripPath + " -d " + simpleShExPath;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + simpleShExPath;
+          exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
               stderr.should.contain("simple-cmumps.shex does not have the expected filename extension - expected jsonld!");
               done();
@@ -127,8 +131,8 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if data file is specified, but no target translation given", function(done) {
-          var cmd = roundtripPath + " --data " + simpleJsonldPath;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath;
+          exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
               stderr.should.contain("ERROR: expected a ShEx translation file!");
               verifyUsage(error, stdout);
@@ -156,20 +160,24 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if given a non-existent file", function(done) {
-          var file = 'aloha' + Math.random();
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " -t " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath = 'aloha' + Math.random();
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + " -t " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should return an error if file is not readable", function(done) {
-          var file = tmpDir + 'aloha' + Math.random() + ".shex"
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + file;
-          commonTest.cmdFileUnreadable(cmd, file, done);
+          var filepath = tmpDir + 'aloha' + Math.random() + ".shex"
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + filepath;
+
+          // test graceful error handling when filepath is not accessible.
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should return an error if given a file without a shex extension", function(done) {
-          var cmd = roundtripPath + " -t " + simpleJsonldPath + " -d " + simpleJsonldPath;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -t " + simpleJsonldPath + " -d " + simpleJsonldPath;
+          exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
               stderr.should.contain("simple-cmumps.jsonld does not have the expected filename extension - expected shex!");
               done();
@@ -182,9 +190,9 @@ describe("roundtrip-translation", function() {
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
            // in the user's current working directory.  This ensures we write to test/work instead.
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
-                    + " -o " + testWorkDir;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath +
+                        " --target " + simpleCmumps2FhirPath + " -o " + testWorkDir;
+          exec(cmdline, function (error, stdout, stderr) {
 
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
@@ -218,8 +226,9 @@ describe("roundtrip-translation", function() {
   describe("--backtarget option", function() {
   
       it("should return an error if given no argument", function(done) {
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath + " --backtarget ";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " --backtarget ";
+          exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
               stderr.should.contain("--backtarget specified with no back target translation file!");
               verifyUsage(error, stdout);
@@ -228,21 +237,27 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if given a non-existent file", function(done) {
-          var file = 'aloha' + Math.random();
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath + " -b " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath = 'aloha' + Math.random();
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " -b " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should return an error if file is not readable", function(done) {
-          var file = tmpDir + Math.random() + ".shex"
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath + " --backtarget " + file;
-          commonTest.cmdFileUnreadable(cmd, file, done);
+          var filepath = tmpDir + Math.random() + ".shex"
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " --backtarget " + filepath;
+
+          // test graceful error handling when filepath is not accessible.
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should return an error if given a file without a shex extension", function(done) {
-          var cmd = roundtripPath + " --backtarget " + simpleJsonldPath +
-                    " -d " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath;  
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --backtarget " + simpleJsonldPath +
+                        " -d " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath;  
+          exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
               stderr.should.contain("simple-cmumps.jsonld does not have the expected filename extension - expected shex!");
               done();
@@ -255,9 +270,9 @@ describe("roundtrip-translation", function() {
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
            // in the user's current working directory.  This ensures we write to test/work instead.
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + 
-                    " -b " +  simpleFhir2CmumpsPath + " -o " + testWorkDir;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + 
+                        " -b " +  simpleFhir2CmumpsPath + " -o " + testWorkDir;
+          exec(cmdline, function (error, stdout, stderr) {
 
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
@@ -289,8 +304,9 @@ describe("roundtrip-translation", function() {
 
   describe("--frame option", function() {
       it("should return an error if given no argument", function(done) {
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + " --frame ";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
+                        " -t " + simpleCmumps2FhirPath + " --frame ";
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: --frame specified with no frame file!");
               verifyUsage(error, stdout);
               done();
@@ -298,15 +314,21 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if given a non-existent file", function(done) {
-          var file = 'aloha' + Math.random();
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath + " -f " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath = 'aloha' + Math.random();
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " -f " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should return an error if file is not readable", function(done) {
-          var file = tmpDir + "aloha" +  Math.random() + ".frame"
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath + " --frame " + file;
-          commonTest.cmdFileUnreadable(cmd, file, done);
+          var filepath = tmpDir + "aloha" +  Math.random() + ".frame"
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " --frame " + filepath;
+
+          // test graceful error handling when filepath is not accessible.
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should execute a round trip translation using the frame file to generate reverse jsonld", function(done) {
@@ -315,9 +337,9 @@ describe("roundtrip-translation", function() {
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
            // in the user's current working directory.  This ensures we write to test/work instead.
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + 
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + 
                     " -f " + frameFile + " -b " +  simpleFhir2CmumpsPath + " -o " + testWorkDir;
-          exec(cmd, function (error, stdout, stderr) {
+          exec(cmdline, function (error, stdout, stderr) {
 
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
@@ -349,8 +371,9 @@ describe("roundtrip-translation", function() {
   describe("--jsonvars option", function() {
 
       it("should return an error if given no argument", function(done) {
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + " --jsonvars ";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
+                        " -t " + simpleCmumps2FhirPath + " --jsonvars ";
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: --jsonvars specified with no JSON variables file!");
               verifyUsage(error, stdout);
               done();
@@ -358,22 +381,28 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if given a non-existent file", function(done) {
-          var file = 'aloha' + Math.random();
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath + 
-                    " --frame " + frameFile + " -j " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath = 'aloha' + Math.random();
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " --frame " + frameFile + 
+                        " -j " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should return an error if file is not readable", function(done) {
-          var file = tmpDir + "aloha" +  Math.random() + ".json"
-          var cmd = roundtripPath + " -d " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath + " --jsonvars " + file;
-          commonTest.cmdFileUnreadable(cmd, file, done);
+          var filepath = tmpDir + "aloha" +  Math.random() + ".json"
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " --jsonvars " + filepath;
+
+          // test graceful error handling when filepath is not accessible.
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should return an error if given a file without a json extension", function(done) {
-          var cmd = roundtripPath + " -d " + jsonldPath + " --target " + cmumps2FhirPath + 
-                    " --jsonvars " + simpleJsonldPath +  " -b " + fhir2CmumpsPath; 
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + jsonldPath + " --target " + cmumps2FhirPath + 
+                        " --jsonvars " + simpleJsonldPath +  " -b " + fhir2CmumpsPath; 
+          exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
               stderr.should.contain("simple-cmumps.jsonld does not have the expected filename extension - expected json!");
               done();
@@ -383,9 +412,10 @@ describe("roundtrip-translation", function() {
       it("should execute a round trip translation using the json variables in translation", function(done) {
           this.timeout(5000);
           commonTest.unlinkDir(testWorkDir);
-          var cmd = roundtripPath + " -d " + jsonldPath + " --target " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
-                    " -f " + frameFile + " --jsonvars " + varsPath + " -o " + testWorkDir;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + jsonldPath + 
+                        " --target " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
+                        " -f " + frameFile + " --jsonvars " + varsPath + " -o " + testWorkDir;
+          exec(cmdline, function (error, stdout, stderr) {
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
               stdout.should.contain("cmumps-patient7.jsonld completed successfully.");
@@ -415,9 +445,10 @@ describe("roundtrip-translation", function() {
 
   describe("--output option", function() {
       it("should return an error if given no argument", function(done) {
-          var cmd = roundtripPath + " -d " + jsonldPath + " --target " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
-                    " --jsonvars " + varsPath + " -o ";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + jsonldPath +    
+                        " --target " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
+                        " --jsonvars " + varsPath + " -o ";
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: -o specified with no output directory!");
               verifyUsage(error, stdout);
               done();
@@ -427,9 +458,10 @@ describe("roundtrip-translation", function() {
       it("should give an error if path is to an existing file", function(done) {
           var testFile = __dirname + '/aloha' + Math.random();
           fs.writeFileSync(testFile, '{}');
-          var cmd = roundtripPath + " -o " + testFile + " -d " + jsonldPath + " --target " + cmumps2FhirPath + 
-                    " -b " + fhir2CmumpsPath + " --jsonvars " + varsPath;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -o " + testFile + " -d " + jsonldPath + 
+                        " --target " + cmumps2FhirPath + 
+                        " -b " + fhir2CmumpsPath + " --jsonvars " + varsPath;
+          exec(cmdline, function (error, stdout, stderr) {
                   error.code.should.equal(1);
                   stderr.should.contain("Output directory " + testFile + " already exists as a file!");
                   fs.unlinkSync(testFile);
@@ -444,9 +476,9 @@ describe("roundtrip-translation", function() {
           var testDir = testWorkDir+'/subdir';
           fs.existsSync(testDir).should.be.false;
 
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath +
-                    " --output " + testDir;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
+                        " --target " + simpleCmumps2FhirPath + " --output " + testDir;
+          exec(cmdline, function (error, stdout, stderr) {
               fs.existsSync(testDir).should.be.true;
               commonTest.unlinkDir(testWorkDir);
               done();
@@ -461,19 +493,22 @@ describe("roundtrip-translation", function() {
           commonTest.unlinkDir(testWorkDir);
 
           // Turn on -v so we can see the default warning
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath +  
+                        " --target " + simpleCmumps2FhirPath 
                     + " -o " + testWorkDir + " -v";
-          exec(cmd, function (error, stdout, stderr) {
-              stderr.should.contain("WARN: No RDF root specified; defaulting to http://hokukahu.com/patient-1.");
+
+          exec(cmdline, function (error, stdout, stderr) {
+              stderr.should.contain("WARN: No RDF root specified; defaulting to urn:local:patient-1.");
               commonTest.unlinkDir(testWorkDir);
               done();
           });
       });
 
       it("should return an error if root argument specified with no value", function(done) {
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
-                    + " -o " + testWorkDir + " --root";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
+                        + " -o " + testWorkDir + " --root";
+
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: --root specified with no RDF root!");
               verifyUsage(error, stdout);
               done();
@@ -484,10 +519,11 @@ describe("roundtrip-translation", function() {
           this.timeout(5000);
           commonTest.unlinkDir(testWorkDir);
 
-          var rdfRoot = "http://hokukahu.com/Patient-3";
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
-                    + " -o " + testWorkDir + " --root " + rdfRoot;
-          exec(cmd, function (error, stdout, stderr) {
+          var rdfRoot = "http://hokukahu.com/patient-3";
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
+                        + " -o " + testWorkDir + " --root " + rdfRoot;
+
+          exec(cmdline, function (error, stdout, stderr) {
               var ttlFile = testWorkDir + '/simple-cmumps2fhir.ttl';
               var string = fs.readFileSync(ttlFile,'UTF-8');
               string.should.contain(rdfRoot);
@@ -504,9 +540,10 @@ describe("roundtrip-translation", function() {
           commonTest.unlinkDir(testWorkDir);
 
           // Turn on -v so we can see the default warning
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
-                    + " -o " + testWorkDir + " -v";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
+                        + " -o " + testWorkDir + " -v";
+
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("WARN: No source ShEx schema file specified.  Defaulting to ");
               commonTest.unlinkDir(testWorkDir);
               done();
@@ -514,9 +551,10 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if source argument specified with no value", function(done) {
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
-                    + " -o " + testWorkDir + " --source";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
+                        + " -o " + testWorkDir + " --source";
+
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: --source specified with no source ShEx schema file!");
               verifyUsage(error, stdout);
               done();
@@ -524,19 +562,23 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if given non-existent file", function(done) {
-          var file = 'aloha' + Math.random();
-          var cmd = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
-                    + " --source " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath = 'aloha' + Math.random();
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
+                        + " --source " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should execute a round trip translation using the specified source in translation", function(done) {
           this.timeout(5000);
           commonTest.unlinkDir(testWorkDir);
 
-          var cmd = roundtripPath + " -d " + jsonldPath + " -t " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
-                    " -j " + varsPath + " -s " + otherShExPath +  " -o " + testWorkDir;
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + jsonldPath + " -t " + cmumps2FhirPath + 
+                        " -b " + fhir2CmumpsPath + " -j " + varsPath + " -s " + otherShExPath +  
+                        " -o " + testWorkDir;
+
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.not.contain("WARN: No source ShEx schema file specified.");
 
               // Verify that each step executed successfully with some output.  The output here looks a little funny
@@ -576,11 +618,13 @@ describe("roundtrip-translation", function() {
           var testDir = os.tmpdir()+"/test"+Math.random();
           fs.mkdirSync(testDir);
 
-          var cmd = roundtripPath + " -j " + varsPath + " -s " + otherShExPath +  " -o " + testDir;
-                    " -f " + frameFile + " -d " + jsonldPath + " -t " + cmumps2FhirPath + " -b " + fhir2CmumpsPath; 
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -j " + varsPath + " -s " + otherShExPath +  " -o " + testDir;
+                    " -f " + frameFile + " -d " + jsonldPath + " -t " + cmumps2FhirPath + 
+                    " -b " + fhir2CmumpsPath; 
+
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.not.contain("removing it and creating a fresh");
-              stderr.should.not.contain("WARN: No RDF root specified; defaulting to http://hokukahu.com/patient-1.");
+              stderr.should.not.contain("WARN: No RDF root specified; defaulting to urn:local:patient-1.");
               stderr.should.not.contain("does not exist - generating it from");
               commonTest.unlinkDir(testDir);
               done();
@@ -594,11 +638,13 @@ describe("roundtrip-translation", function() {
           var testDir = os.tmpdir()+"/test"+Math.random();
           fs.mkdirSync(testDir);
 
-          var cmd = roundtripPath + " -d " + jsonldPath + " -t " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
-                    " -j " + varsPath + " -s " + otherShExPath + " -f " + frameFile +  " -o " + testDir + " --verbose";
-          exec(cmd, function (error, stdout, stderr) {
+          var cmdline = roundtripPath + " -d " + jsonldPath + " -t " + cmumps2FhirPath + 
+                        " -b " + fhir2CmumpsPath + " -j " + varsPath + " -s " + otherShExPath + 
+                        " -f " + frameFile +  " -o " + testDir + " --verbose";
+
+          exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("removing it and creating a fresh");
-              stderr.should.contain("WARN: No RDF root specified; defaulting to http://hokukahu.com/patient-1.");
+              stderr.should.contain("WARN: No RDF root specified; defaulting to urn:local:patient-1.");
               stderr.should.contain("does not exist - generating it from");
               commonTest.unlinkDir(testDir);
               done();
@@ -612,14 +658,16 @@ describe("roundtrip-translation", function() {
 function verifyJsonFile(filePath) {
   fs.existsSync(filePath).should.be.true;
   fs.statSync(filePath).size.should.not.equal(0);
+
   var string = fs.readFileSync(filePath,'UTF-8');
-  string.should.contain('"@id": "http://hokukahu.com/patient-1');
+  string.should.contain('"@id": "urn:local:patient-1');
   string.should.contain("BUNNY,BUGS");
 }
 
 function verifyJsonldFile(filePath) {
   fs.existsSync(filePath).should.be.true;
   fs.statSync(filePath).size.should.not.equal(0);
+
   var string = fs.readFileSync(filePath,'UTF-8');
   string.should.contain('"@context"');
   string.should.contain('"@graph"');
@@ -629,8 +677,9 @@ function verifyJsonldFile(filePath) {
 function verifyTtlFile(filePath) {
   fs.existsSync(filePath).should.be.true;
   fs.statSync(filePath).size.should.not.equal(0);
+
   var string = fs.readFileSync(filePath,'UTF-8');
-  string.should.contain("http://hokukahu.com/patient-1");
+  string.should.contain("urn:local:patient-1");
   string.should.contain("BUNNY,BUGS");
 }
 

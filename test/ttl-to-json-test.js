@@ -60,15 +60,19 @@ describe("ttl-to-json", function() {
       });
 
       it("should return an error if given non-existent ttl file", function(done) {
-          var file =  os.tmpdir() + "/wikiwiki" + Math.random() + ".ttl"
-          var cmd = ttlToJsonPath + " --ttlfile " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath =  os.tmpdir() + "/wikiwiki" + Math.random() + ".ttl"
+          var cmdline = ttlToJsonPath + " --ttlfile " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should return an error if ttlfile file is not readable", function(done) {
-          var file = os.tmpdir() + '/wikiwiki' + Math.random() + ".ttl"
-          var cmd = ttlToJsonPath + " --ttlfile " + file;
-          commonTest.cmdFileUnreadable(cmd, file, done);
+          var filepath = os.tmpdir() + '/wikiwiki' + Math.random() + ".ttl"
+          var cmdline = ttlToJsonPath + " --ttlfile " + filepath;
+
+          // test graceful error handling when filepath is not accessible. 
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should convert simple RDF file specified by -t to json successfully", function(done) {
@@ -81,7 +85,7 @@ describe("ttl-to-json", function() {
               expect(json).to.have.length(1);
               json = json[0];
               expect(Object.keys(json)).to.have.length(13);
-              json['@id'].should.equal("http://hokukahu.com/patient-1");
+              json['@id'].should.equal("urn:local:patient-1");
               json['http://hokukahu.com/schema/cmumpss#identifier'].should.equal("2-000007");
               json['http://hokukahu.com/schema/cmumpss#phone-2'].should.equal("555 555 5555");
               json['http://hokukahu.com/schema/cmumpss#street_address-2'].should.equal("100 MAIN ST");
@@ -110,15 +114,19 @@ describe("ttl-to-json", function() {
       });
 
       it("should return an error if given non-existent frame file", function(done) {
-          var file =  os.tmpdir() + "/wikiwiki" + Math.random() + ".frame"
-          var cmd = ttlToJsonPath + " --ttlfile " + simpleTtlFile + " --frame " + file;
-          commonTest.cmdFileNonexistent(cmd, file, done);
+          var filepath =  os.tmpdir() + "/wikiwiki" + Math.random() + ".frame"
+          var cmdline = ttlToJsonPath + " --ttlfile " + simpleTtlFile + " --frame " + filepath;
+ 
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
       });
 
       it("should return an error if frame file is not readable", function(done) {
-          var file = os.tmpdir() + '/wikiwiki' + Math.random() + ".frame"
-          var cmd = ttlToJsonPath + " --ttlfile " + simpleTtlFile + " --frame " + file;
-          commonTest.cmdFileUnreadable(cmd, file, done);
+          var filepath = os.tmpdir() + '/wikiwiki' + Math.random() + ".frame"
+          var cmdline = ttlToJsonPath + " --ttlfile " + simpleTtlFile + " --frame " + filepath;
+
+          // test graceful error handling when filepath is not accessible. 
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should convert simple RDF file with a frame to should convert to JSON-LD successfully", function(done) {
@@ -187,7 +195,7 @@ describe("ttl-to-json", function() {
 
               // Check the JSON data
               expect(Object.keys(json)).to.have.length(16);
-              json['@id'].should.equal("http://hokukahu.com/patient-1");
+              json['@id'].should.equal("urn:local:patient-1");
               json['http://hokukahu.com/schema/cmumpss#identifier'].should.equal("2-000007");
               json['http://hokukahu.com/schema/cmumpss#phone-2'].should.equal("555 555 5555");
               json['http://hokukahu.com/schema/cmumpss#dob-2'].should.deep.equal(
