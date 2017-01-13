@@ -1,4 +1,4 @@
-<http://hokukahu.com/patient-1> <http://hokukahu.com/schema/cmumpss#identifier> "2-000007";
+<urn:local:patient-1> <http://hokukahu.com/schema/cmumpss#identifier> "2-000007";
     <http://hokukahu.com/schema/cmumpss#phone-2> "555 555 5555";
     <http://hokukahu.com/schema/cmumpss#street_address-2> "100 MAIN ST";
     <http://hokukahu.com/schema/cmumpss#city-2> "ANYTOWN";

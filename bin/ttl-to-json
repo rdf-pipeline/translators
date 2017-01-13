@@ -304,6 +304,20 @@ function readFile(filename, encoding) {
 }
 
 /**
+ * Verify file is readable 
+ *
+ * @param filename File name 
+ */
+function fileAccessible(filename) {
+    try { 
+       fs.accessSync(filename, fs.R_OK);
+    } catch (e) { 
+       console.error("File "+filename+" is not readable!");
+       process.exit(1);
+    }
+} 
+
+/**
  * Verify file exists
  *
  * @param filename File name 
@@ -343,6 +357,7 @@ if ((_.isUndefined(cmds.ttlfile) || _.isNull(cmds.ttlfile))) {
     process.exit(1);
 }
 fileExists(cmds.ttlfile); 
+fileAccessible(cmds.ttlfile);
 
 // If a frame was specified, make sure we got a file name and it exists
 if (!_.isUndefined(cmds.frame)) {
@@ -352,6 +367,7 @@ if (!_.isUndefined(cmds.frame)) {
        process.exit(1);
    } else {
        fileExists(cmds.frame);
+       fileAccessible(cmds.frame);
    }
 }
 

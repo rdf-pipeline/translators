@@ -1,6 +1,6 @@
 /**
- * File: ttl-to-json-mocha.js
- * Unit tests for bin/ttl-to-json-mocha.js 
+ * File: ttl-to-json-test.js
+ * Unit tests for bin/ttl-to-json-test.js 
  */
 
 var _ = require('underscore');
@@ -12,6 +12,8 @@ var expect = chai.expect;
 var exec = require('child_process').exec;
 var fs = require('fs');
 var os = require('os');
+
+var commonTest = require('./common-test.js');
 
 var outputDir = os.tmpdir()+"/test";
 var frameFile = __dirname + "/data/cmumps.frame";
@@ -27,33 +29,7 @@ describe("ttl-to-json", function() {
     });
 
     it("should be executable", function() {
-
-        var mode = fs.statSync(ttlToJsonPath).mode;
-
-        var owner = mode >> 6;
-        var group = (mode << 3) >> 6;
-        var others = (mode << 6) >> 6;
-
-        var permissions = {
-            read: {
-                owner: !!(owner & 4),
-                group: !!(group & 4),
-                others: !!(others & 4)
-            },
-            execute: {
-                owner: !!(owner & 1),
-                group: !!(group & 1),
-                others: !!(others & 1)
-            }
-        };
-
-        permissions.read.owner.should.be.true;
-        permissions.read.group.should.be.true;
-        permissions.read.others.should.be.true;
-
-        permissions.execute.owner.should.be.true;
-        permissions.execute.group.should.be.true;
-        permissions.execute.others.should.be.true;
+        commonTest.verifyExecutable(ttlToJsonPath);
     });
 
     it("should print usage if given no command line arguments", function(done) {
@@ -83,14 +59,20 @@ describe("ttl-to-json", function() {
           });
       });
 
-      it("should return an error if --ttlfile given non-existent file", function(done) {
-          var file =  os.tmpdir() + "/foobar" + Math.random() + ".ttl"
-          var cmd = ttlToJsonPath + " --ttlfile " + file;
-          exec(cmd, function (error, stdout, stderr) {
-              error.code.should.equal(1);
-              stderr.should.contain("File " + file + " does not exist!");
-              done();
-          });
+      it("should return an error if given non-existent ttl file", function(done) {
+          var filepath =  os.tmpdir() + "/wikiwiki" + Math.random() + ".ttl"
+          var cmdline = ttlToJsonPath + " --ttlfile " + filepath;
+
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
+      });
+
+      it("should return an error if ttlfile file is not readable", function(done) {
+          var filepath = os.tmpdir() + '/wikiwiki' + Math.random() + ".ttl"
+          var cmdline = ttlToJsonPath + " --ttlfile " + filepath;
+
+          // test graceful error handling when filepath is not accessible. 
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should convert simple RDF file specified by -t to json successfully", function(done) {
@@ -103,7 +85,7 @@ describe("ttl-to-json", function() {
               expect(json).to.have.length(1);
               json = json[0];
               expect(Object.keys(json)).to.have.length(13);
-              json['@id'].should.equal("http://hokukahu.com/patient-1");
+              json['@id'].should.equal("urn:local:patient-1");
               json['http://hokukahu.com/schema/cmumpss#identifier'].should.equal("2-000007");
               json['http://hokukahu.com/schema/cmumpss#phone-2'].should.equal("555 555 5555");
               json['http://hokukahu.com/schema/cmumpss#street_address-2'].should.equal("100 MAIN ST");
@@ -131,13 +113,20 @@ describe("ttl-to-json", function() {
           });
       });
 
-      it("should return an error if -f given non-existent file", function(done) {
-          var file =  os.tmpdir() + "/foobar" + Math.random() + ".frame"
-          exec(ttlToJsonPath + " --ttlfile " + simpleTtlFile + " --frame " + file, function (error, stdout, stderr) {
-              error.code.should.equal(1);
-              stderr.should.contain("frame does not exist!");
-              done();
-          });
+      it("should return an error if given non-existent frame file", function(done) {
+          var filepath =  os.tmpdir() + "/wikiwiki" + Math.random() + ".frame"
+          var cmdline = ttlToJsonPath + " --ttlfile " + simpleTtlFile + " --frame " + filepath;
+ 
+          // test graceful error handling when filepath does not exist
+          commonTest.fileNotExistHandling(cmdline, filepath, done);
+      });
+
+      it("should return an error if frame file is not readable", function(done) {
+          var filepath = os.tmpdir() + '/wikiwiki' + Math.random() + ".frame"
+          var cmdline = ttlToJsonPath + " --ttlfile " + simpleTtlFile + " --frame " + filepath;
+
+          // test graceful error handling when filepath is not accessible. 
+          commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should convert simple RDF file with a frame to should convert to JSON-LD successfully", function(done) {
@@ -206,7 +195,7 @@ describe("ttl-to-json", function() {
 
               // Check the JSON data
               expect(Object.keys(json)).to.have.length(16);
-              json['@id'].should.equal("http://hokukahu.com/patient-1");
+              json['@id'].should.equal("urn:local:patient-1");
               json['http://hokukahu.com/schema/cmumpss#identifier'].should.equal("2-000007");
               json['http://hokukahu.com/schema/cmumpss#phone-2'].should.equal("555 555 5555");
               json['http://hokukahu.com/schema/cmumpss#dob-2'].should.deep.equal(
