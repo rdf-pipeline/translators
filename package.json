@@ -76,7 +76,7 @@
     "node-html-encoder": "0.0.2",
     "rdfstore": "^0.9.17",
     "semver": "^5.2.0",
-    "shex": "~0.8.5",
+    "shex": "~0.8.6",
     "string-format": "^0.5.0",
     "underscore": "~1.8.3"
   },
