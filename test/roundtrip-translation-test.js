@@ -185,7 +185,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should execute a round trip translation using the jsonld data file and the ShEx target file", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
@@ -265,7 +265,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should execute a round trip translation using the back target file on return translation", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
@@ -332,7 +332,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should execute a round trip translation using the frame file to generate reverse jsonld", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
@@ -410,7 +410,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should execute a round trip translation using the json variables in translation", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
           var cmdline = roundtripPath + " -d " + jsonldPath + 
                         " --target " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
@@ -470,7 +470,7 @@ describe("roundtrip-translation", function() {
       });
  
       it("should create output directory path if it does not exist and write all files to it", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           var testDir = testWorkDir+'/subdir';
@@ -489,7 +489,7 @@ describe("roundtrip-translation", function() {
   describe("--root option", function() {
 
       it("should use default root if given no argument", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           // Turn on -v so we can see the default warning
@@ -516,7 +516,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should set the specified root", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           var rdfRoot = "http://hokukahu.com/patient-3";
@@ -536,7 +536,7 @@ describe("roundtrip-translation", function() {
   describe("--source  option", function() {
 
       it("should use default source ShEx schema file if given no argument", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           // Turn on -v so we can see the default warning
@@ -571,7 +571,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should execute a round trip translation using the specified source in translation", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
           var cmdline = roundtripPath + " -d " + jsonldPath + " -t " + cmumps2FhirPath + 
@@ -612,7 +612,7 @@ describe("roundtrip-translation", function() {
   describe("--verbose  option", function() {
 
       it("should not output hidden warning messages without verbose flag", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
    
           // Create a test directory ahead of time so we get the verbose warning on recreating it
           var testDir = os.tmpdir()+"/test"+Math.random();
@@ -632,7 +632,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should output hidden warning messages with verbose flag", function(done) {
-          this.timeout(5000);
+          this.timeout(6000);
    
           // Create a test directory ahead of time so we get the verbose warning on recreating it
           var testDir = os.tmpdir()+"/test"+Math.random();
