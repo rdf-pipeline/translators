@@ -74,6 +74,7 @@
     "log4js": "^0.6.29",
     "n3": "^0.8.4",
     "node-html-encoder": "0.0.2",
+    "promise": "^7.0.4",
     "rdfstore": "^0.9.17",
     "semver": "^5.2.0",
     "shex": "~0.8.6",

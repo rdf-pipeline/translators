@@ -1,6 +1,6 @@
 /**
  * File: ttl-to-json-test.js
- * Unit tests for bin/ttl-to-json-test.js 
+ * Unit tests for bin/ttl-to-json.js 
  */
 
 var _ = require('underscore');
