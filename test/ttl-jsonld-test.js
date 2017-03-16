@@ -98,11 +98,12 @@ describe("ttl-jsonld", function() {
         });
 
         it("should convert simple ttl to JSON-LD", function(done) {
+
            var ttl = fs.readFileSync(simpleTtlFile, 'utf-8');
            ttlJsonLd.ttlLoad(ttl).then(function(graph) {
                graph.should.be.an('object');
                ttlJsonLd.rdfToJsonLd(graph).then(function(json) { 
-                   json.should.deep.equal([ 
+                   json[0].should.deep.equal(
                        { '@id': 'urn:local:patient-1',
                          'http://hokukahu.com/schema/cmumpss#identifier': '2-000007',
                          'http://hokukahu.com/schema/cmumpss#phone-2': '555 555 5555',
@@ -116,7 +117,7 @@ describe("ttl-jsonld", function() {
                          'http://hokukahu.com/schema/cmumpss#estreet_address-2': '7000 InternalTest Boulevard',
                          'http://hokukahu.com/schema/cmumpss#ecity-2': 'ALBUQUERQUE',
                          'http://hokukahu.com/schema/cmumpss#ezip-2': '55555' } 
-                   ]);
+                   );
                    done();
                });
            });
@@ -170,13 +171,12 @@ describe("ttl-jsonld", function() {
                 // from the original json input on a round trip translation.
                 var filterBnodeAttrs = [ 'id', '_id', '@id' ];
 
-                ttlJsonLd.rdfToJsonLd(graph, frame, filterBnodeAttrs).then(function(jsonld) { 
-
-                    jsonld.should.be.an('object');
-                    jsonld.should.deep.equal({ 
-                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld',
-                        '@graph': [
-                             { id: 'urn:local:patient-1',
+                ttlJsonLd.rdfToJsonLd(graph, frame, filterBnodeAttrs).then(function(json) { 
+                    json.should.be.an('object');
+                    json.should.have.all.keys(['@context', '@graph']);
+                    json['@graph'].should.have.length(1);
+                    json['@graph'][0].should.deep.equal({ 
+                               'id': 'urn:local:patient-1',
                                'city-2': 'ANYTOWN',
                                'dob-2': { type: 'xsd:date', value: '1990-01-01' },
                                'ecity-2': 'ALBUQUERQUE',
@@ -191,9 +191,7 @@ describe("ttl-jsonld", function() {
                                'state-2': 'NEW YORK',
                                'street_address-2': '100 MAIN ST',
                                'zip_code-2': '60040',
-                               label: 'BUNNY,BUGS' 
-                             } 
-                        ] 
+                               'label': 'BUNNY,BUGS' 
                     });
                     done();
                 }); 
