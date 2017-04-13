@@ -7,7 +7,7 @@
 
 var cmumps = require('./cmumps');
 var _ = require('underscore');
-var JSONPath = require('jsonpath-plus');
+var jsonpath = require('jsonpath');
 var format = require('string-format');
 var assert = require('assert');
 // use eventually
@@ -33,7 +33,12 @@ function htmlEncode(text) {
 function makeJsonFetcher1(o, patterns) {
     if (_.isObject(o)) {
         return function (pattern, transformer) {
-            var field = JSONPath(pattern, o);
+
+            var field = jsonpath.query(o, pattern);
+            /* if (_.isEmpty(field)) { 
+                console.log('\nfield=',field);
+                console.log('pattern=',pattern,' o=',o);
+            } */
             if (_.isArray(field) && field.length > 0) {
                 var result = transformer ? transformer(field[0]) : field[0];
                 if (result) patterns.push(pattern); // remember the pattern used
@@ -42,7 +47,7 @@ function makeJsonFetcher1(o, patterns) {
                 return undefined;
         }
     } else {
-        throw new Error("Can only make json fetchers on objects.");
+        throw new Error("Can only make json fetchers on objects: '"+ o + "'");
     }
 }
 
@@ -63,7 +68,7 @@ function accessor(o, patterns, /*post processor */ post /*: function(string) */)
     if (_.isObject(o)) {
         return function (pattern, transformer) {
             // {resultType: 'all', json: obj, path: path}
-            var field = JSONPath({resultType: 'all', path: pattern, json: o});
+            var field = jsonpath.query(o, pattern);
             if (_.isArray(field) && field.length > 0) {
                 var result = transformer ? transformer(field[0].value) : field[0].value;
                 if (result) {
@@ -249,11 +254,11 @@ function fhirHumanName(cmumpsName) {
 
     // fhir given is first (+ mi)?
     var given = n.first;
-    var mi = JSONPath('$.mi', n)[0];
+    var mi = jsonpath.query(n, '$.mi')[0];
     if (mi) given += ' ' + mi;
     result.given = [given];
 
-    var title = JSONPath('$.title', n)[0];
+    var title = jsonpath.query(n, '$.title')[0];
     if (title) result.prefix = [title];
     return result;
 }
@@ -268,13 +273,13 @@ function fhirContactPoint(cmumpsContactPoint) {
     // istanbul ignore else
     if (cmumpsContactPoint === undefined) return undefined;
     // istanbul ignore else
-    if (! JSONPath({path: '$.value', wrap: false}, cmumpsContactPoint)) return undefined;
+    if (! jsonpath.query(cmumpsContactPoint, '$.value')) return undefined;
     return clean({
         resourceType: "ContactPoint",
         // from Element: extension
-        system: JSONPath({path: '$.system', wrap: false}, cmumpsContactPoint), // C? phone | fax | email | pager | other
-        value: JSONPath({path: '$.value', wrap: false},  cmumpsContactPoint), // The actual contact point details
-        use: JSONPath({path: '$.use', wrap: false}, cmumpsContactPoint), // home | work | temp | old | mobile - purpose of this contact point
+        system: jsonpath.query(cmumpsContactPoint, '$.system'), // C? phone | fax | email | pager | other
+        value: jsonpath.query(cmumpsContactPoint, '$.value'), // The actual contact point details
+        use: jsonpath.query(cmumpsContactPoint, '$.use'), // home | work | temp | old | mobile - purpose of this contact point
         // "rank" : "<positiveInt>", // Specify preferred order of use (1 = highest)
         // "period" : { Period } // Time period when the contact point was/is in use
     });
@@ -617,9 +622,9 @@ function fhirReferenceOrganization(cmumpsOrganization) {
     // istanbul ignore if
     if (cmumpsOrganization === undefined) return undefined;
     var result = clean({
-        name: JSONPath({path: '$.name', wrap: false}, cmumpsOrganization), // C? Name used for the organization
-        telecom: [fhirContactPoint(JSONPath({path: '$.telecom', wrap: false}, cmumpsOrganization))], // C? A contact detail for the organization
-        address: [fhirAddress(JSONPath({path: '$.address', wrap: false}, cmumpsOrganization))], // C? An address for the organization
+        name: jsonpath.query(cmumpsOrganization, '$.name'), // C? Name used for the organization
+        telecom: [fhirContactPoint(jsonpath.query(cmumpsOrganization, '$.telecom'))], // C? A contact detail for the organization
+        address: [fhirAddress(jsonpath.query(cmumpsOrganization, '$.address'))], // C? An address for the organization
         // partOf: { }, // The organization of which this organization forms a part, TODO: VA?
         // contact: [{ // Contact for the organization for a certain purpose
         //     purpose: { fhirCodeableConcept }, // The type of contact

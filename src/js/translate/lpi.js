@@ -3,7 +3,6 @@
  */
 
 var format = require('string-format');
-var JSONPath = require('jsonpath-plus');
 var cmumps_utils = require('./util/cmumps_utils');
 var fdt = require('./cmumps2fhir_datatypes');
 var _ = require('underscore');

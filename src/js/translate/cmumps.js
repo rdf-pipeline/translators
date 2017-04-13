@@ -3,8 +3,14 @@
  */
 
 var format = require('string-format');
-var JSONPath = require('jsonpath-plus');
+var jsonpath = require('jsonpath');
 var _ = require('underscore');
+
+var Demographics = require('./cmumps2fhir_demographics');
+var Diagnoses = require('./cmumps2fhir_diagnoses');
+var Labs = require('./cmumps2fhir_labs');
+var Prescriptions = require('./cmumps2fhir_prescriptions');
+var Procedures = require('./cmumps2fhir_procedures');
 
 /**
  * A set of predicates to recognize types of cmumps objects
@@ -56,7 +62,6 @@ function isCmumpsPrescription(candidate, token) {
     return isCmumpsType(candidate, module.exports.cmumpss.Prescription);
 }
 
-
 /**
  * Exported type predicate, returns true iff candidate is a cmumps Lab_Result.
  * @param {object} candidate - input
@@ -67,7 +72,6 @@ function isCmumpsLabResult(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Lab_Result);
 }
-
 
 /**
  * Exported type predicate, returns true iff candidate is a cmumps Patient_Diagnosis.
@@ -80,7 +84,6 @@ function isCmumpsDiagnosis(candidate, token) {
     return isCmumpsType(candidate, module.exports.cmumpss.Kg_Patient_Diagnosis);
 }
 
-
 /**
  * Exported type predicate, returns true iff candidate is a cmumps Procedure.
  * @param {object} candidate - input
@@ -91,8 +94,6 @@ function isCmumpsProcedure(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Procedure);
 }
-
-
 
 /**
  * Convert a cmumpss type into a JSONPath selector. Used to select the right object out of @graph
@@ -138,9 +139,6 @@ function jsonPattern(i) {
     return format("$['@graph'][?((@.type).match(/^\s*{}\s*/))]", i);
 }
 
-
-
-
 // cmumps microparsers. A microparser takes a cmumps data value, usually as a string, and reformulates into an
 // analog value while preserving the semantics. For example, the cmumps date format is a little different from
 // the fhir one. Sometimes the translation is direct. Other times, I "lift" the value into a small, self-contained
@@ -167,7 +165,6 @@ function cmumpsDate(acmumpsDate) {
     }
     throw new Error("Bad cmumps date: '" + acmumpsDate + "'"); // assume stacktrace
 }
-
 
 /**
  * Translate a cmumps name format 'LAST, FIRST MI TITLE' to fhir HumanName
@@ -208,223 +205,6 @@ function cmumpsPatientName(acmumpsPersonName) {
 }
 
 
-// An "extractor" takes an entire cmumps input object and extracts out the relevant types of
-// (sub) object from the @graph array using JSONPath. Abstracts away some of the details of
-// the type names, etc. They take the entire cmumps object as input and return an array of objects
-// of that type, *including* extractPatient. It is assumed the LDR endpoint returns an 'all' document
-// for a *single* patient. I don't enforce that constraint.
-
-/**
- * Extract the single patient from the cmumpsJsonldObject using JSONPath.
- * @param cmumpsJsonldObject
- * @returns {*}
- */
-
-function extractPatient(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern ;
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Patient, token)});
-}
-
-function extractDemographics(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    return extractPatient(cmumpsJsonldObject, token);
-}
-
-/**
- * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the patient record from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
- * 
- * @param cmumpsJsonldObject
- * @return {Array[object]} -- the items removed
-  */
-function removePatient(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    var result = [];
-    var paths = JSONPath({json: cmumpsJsonldObject,
-        path: cmumpssJsonPattern(module.exports.cmumpss.Patient, token),
-        resultType: 'path'});
-    // istanbul ignore else
-    if (_.isArray(paths)) {
-        paths.forEach(function (path) {
-            var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
-            // istanbul ignore else
-            if (theMatch) {
-                var index = theMatch[1] - result.length;
-                result.push(cmumpsJsonldObject['@graph'][index]);
-                cmumpsJsonldObject['@graph'].splice(index, 1);
-            }
-        });
-    }
-    return result;
-}
-
-// istanbul ignore next
-function removeDemographics(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    removePatient(cmumpsJsonldObject, token);
-}
-
-
-
-/**
- * Extract the Prescriptions from the cmumpsJsonldObject.
- * @param cmumpsJsonldObject
- * @returns {Array[object]} -- the medications
- */
-
-function extractPrescriptions(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Prescription, token)});
-}
-
-function extractMedications(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    return extractPrescriptions(cmumpsJsonldObject);
-}
-
-/**
- * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the patient record from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
- *
- * @param cmumpsJsonldObject
- * @return {Array[object]} -- the items removed
- */
-
-function removePrescriptions(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    var result = [];
-    var paths = JSONPath({json: cmumpsJsonldObject,
-        path: cmumpssJsonPattern(module.exports.cmumpss.Prescription, token),
-        resultType: 'path'});
-    paths.forEach(function(path) {
-        var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
-        // istanbul ignore else
-        if (theMatch) {
-            var index = theMatch[1] - result.length;
-            result.push(cmumpsJsonldObject['@graph'][index]);
-            cmumpsJsonldObject['@graph'].splice(index, 1);
-        }
-    });
-    return result;
-}
-
-
-// istanbul ignore next
-function removeMedications(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    return removePrescriptions(cmumpsJsonldObject);
-}
-
-/**
- * Extract the labs from a cmumpsJsonldObject.
- * @param cmumpsJsonldObject
- * @returns {Array[object]} -- the labs
- */
-function extractLabs(cmumpsJsonldObject, token) {
-    // return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result)});
-    var token = token || cmumpsPrefixPattern;
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result, token)});
-}
-
-
-/**
- * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove all lab records from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
- *
- * @param cmumpsJsonldObject
- * @return {Array[object]} -- the items removed
- */
-// istanbul ignore next
-function removeLabs(cmumpsJsonldObject) {
-    var token = token || cmumpsPrefixPattern;
-    var result = [];
-    var paths = JSONPath({json: cmumpsJsonldObject,
-        path: cmumpssJsonPattern(module.exports.cmumpss.Lab_Result, token),
-        resultType: 'path'});
-    paths.forEach(function(path) {
-        var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
-        // istanbul ignore else
-        if (theMatch) {
-            var index = theMatch[1] - result.length;
-            result.push(cmumpsJsonldObject['@graph'][index]);
-            cmumpsJsonldObject['@graph'].splice(index, 1);
-        }
-    });
-    return result;
-}
-
-/**
- * Extract the diagnoses from a cmumpsJsonldObject
- * @param cmumpsJsonldObject
- * @returns {Array[object]} -- the diagnoses
- */
-function extractDiagnoses(cmumpsJsonldObject, token) {
-    var token = token || cmumpsPrefixPattern;
-    return JSONPath({json: cmumpsJsonldObject, path: cmumpssJsonPattern(module.exports.cmumpss.Kg_Patient_Diagnosis, token)});
-}
-
-/**
- * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the patient record from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
- *
- * @param cmumpsJsonldObject
- * @return {Array[object]} -- the items removed
- */
-
-function removeDiagnoses(cmumpsJsonldObject) {
-    var token = token || cmumpsPrefixPattern;
-    var result = [];
-    var paths = JSONPath({json: cmumpsJsonldObject,
-        path: cmumpssJsonPattern(module.exports.cmumpss.Kg_Patient_Diagnosis, token),
-        resultType: 'path'});
-    paths.forEach(function(path) {
-        var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
-        if (theMatch) {
-            var index = theMatch[1] - result.length;
-            result.push(cmumpsJsonldObject['@graph'][index]);
-            cmumpsJsonldObject['@graph'].splice(index, 1);
-        }
-    });
-    return result;
-}
-
-
-
-/**
- * Extract the procedures from a cmumpsJsonldObject
- * @param cmumpsJsonldObject
- * @returns {Array[object]} -- the procedures
- */
-
-// istanbul ignore next
-function extractProcedures(cmumpsJsonldObject) {
-    return JSONPath({json: cmumpsJsonldObject, path: "$['@graph'][?(@.type=='Procedure')]"});
-}
-
-
-/**
- * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the patient record from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
- *
- * @param cmumpsJsonldObject
- * @return {Array[object]} -- the items removed
- */
-function removeProcedures(cmumpsJsonldObject) {
-    var result = [];
-    var paths = JSONPath({json: cmumpsJsonldObject,
-        path: "$['@graph'][?(@.type=='Procedure')]",
-        resultType: 'path'});
-    paths.forEach(function(path) {
-        var theMatch = path.match(/^\$\['@graph'\]\[(\d+)\]/);
-        if (theMatch) {
-            var index = theMatch[1] - result.length;
-            result.push(cmumpsJsonldObject['@graph'][index]);
-            cmumpsJsonldObject['@graph'].splice(index, 1);
-        }
-    });
-    return result;
-}
-
 
 // Export the actual functions here.
 [isCmumpsPatient,
@@ -432,16 +212,8 @@ function removeProcedures(cmumpsJsonldObject) {
     // cmumpssSimpleJsonPattern,
     jsonPattern,
     cmumpsDate,
-    cmumpsPatientName,
-    extractPatient,
-    removePatient,
-    extractPrescriptions,
-    removePrescriptions,
-    extractLabs,
-    extractDiagnoses,
-    removeDiagnoses,
-    extractProcedures,
-    removeProcedures].forEach(function(f) { module.exports[f.name] = f; });
+    cmumpsPatientName
+].forEach(function(f) { module.exports[f.name] = f; });
 
 module.exports.cmumpss = {};
 // Their whole names in LDR. Drop the integer suffixes.
@@ -450,9 +222,3 @@ module.exports.cmumpss = {};
     module.exports.cmumpss[name] = cmumpss;
 });
 
-// parts, the parts of cmumps knows how to extract
-module.exports.parts = {};
-[extractDemographics, extractPatient, extractMedications, extractLabs, extractDiagnoses, extractProcedures].forEach(function(f) {
-    module.exports.parts[f.name.substring('extract'.length).toLowerCase()] = f;
-    module.exports[f.name] = f;
-});

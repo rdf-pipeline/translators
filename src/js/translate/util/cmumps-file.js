@@ -9,17 +9,18 @@
 
 'use strict';
 
+var _ = require('underscore');
+
 //var log4js = require('log4js'); // https://github.com/nomiddlename/log4js-node
 //var logger = log4js.getLogger(); // TODO mike@carif.io: scope?
 // logger.setLevel(log4js.levels.OFF);
 var program = require('commander'); // https://www.npmjs.com/package/commander
-var _ = require('underscore');
 var cmumps_utils = require('./cmumps_utils');
 var translate = require('./../cmumps2fhir_all');
 var fhir2xml = require('fhir-json-to-xml');
 var fhir = require('./../fhir');
 var cmumps = require('./../cmumps');
-var JSONPath = require('jsonpath-plus');
+var demographics = require('./../cmumps2fhir_demographics');
 var format = require('string-format');
 var util = require('util');
 var fs = require('fs');  // node file system
@@ -67,9 +68,9 @@ function process_file(filename) {
         // Translate cmumpsInput
         var fhirTranslation = undefined;
         try {
-            fhirTranslation = translate.translatecmumpsFhir(cmumpsInput, undefined, 'now');
+            fhirTranslation = translate.translateCmumpsFhir(cmumpsInput, undefined, 'now');
         } catch (e) {
-            console.error('translatecmumpsFhir failed: ' + e.message);
+            console.error('translateCumpsFhir failed: ' + e.message);
             process.exit(1);
         }
 
@@ -188,7 +189,7 @@ function process_file(filename) {
             assert(true, 'always succeeds');
 
             // Extract the patient input
-            var patient = cmumps.extractPatient(cmumpsInput);
+            var patient = demographics.extractPatient(cmumpsInput);
             // You should have at most one patient
             if (patient) {
                 assert (patient.length <= 1, "More than one patient");

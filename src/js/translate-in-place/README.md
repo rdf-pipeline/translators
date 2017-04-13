@@ -1,5 +1,7 @@
 # cmumps Graph Translate Module (and Friends)
 
+THIS CODE IS OBSOLETE.  DO NOT USE IT.  IT IS CURRENTLY RETAINED FOR REFERENCE PURPOSES ONLY.
+
 This directory consists of the following modules:
 
 * `graph_cmumps2fhir_*`: a set of translation functions in translation modules that take cmumps object types like 
