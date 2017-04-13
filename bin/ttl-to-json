@@ -18,7 +18,7 @@ const CmdlineDefs = [
     { name: "ttlfile", alias: "t", type: String, description: "TTL RDF file to be processed" }
 ];
 
-function help(status) {
+function helpAndExit(status) {
     console.log(
         Usage([
            { header:"ttl-to-json",
@@ -77,7 +77,7 @@ function fileAccessible(filename) {
 function fileExists(filename) {
     if (! Fs.existsSync(filename)) {
         console.error("File "+filename+" does not exist!");
-        help(1);
+        helpAndExit(1);
     }
 }
 
@@ -86,17 +86,17 @@ try {
    cmds = CmdlineArgs(CmdlineDefs); 
 } catch(e) { 
    console.error(e.message);
-   help(1);
+   helpAndExit(1);
 }
 
 if (cmds.help) {
-  help(0);
+  helpAndExit(0);
 }
 
 // Verify we got the required RDF file - can't do anything without it
 if ((_.isUndefined(cmds.ttlfile) || _.isNull(cmds.ttlfile))) {
     console.error("A TTL RDF file argument is required!");
-    help(1);
+    helpAndExit(1);
 }
 fileExists(cmds.ttlfile); 
 fileAccessible(cmds.ttlfile);
@@ -105,7 +105,7 @@ fileAccessible(cmds.ttlfile);
 if (!_.isUndefined(cmds.frame)) {
    if (_.isNull(cmds.frame)) {
        console.error("Frame argument requires a frame file!");
-       help(1);
+       helpAndExit(1);
    } else {
        fileExists(cmds.frame);
        fileAccessible(cmds.frame);
