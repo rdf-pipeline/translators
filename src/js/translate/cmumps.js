@@ -28,7 +28,6 @@ var Procedures = require('./cmumps2fhir_procedures');
 
 var cmumpsPrefixPattern = 'c(hc|mump)ss';
 
-/* istanbul ignore next */
 function isCmumpsType(candidate, cmumpsTypeName, token) {
     var token = token || cmumpsPrefixPattern;
     return typeof candidate == 'object'
@@ -45,7 +44,6 @@ function isCmumpsType(candidate, cmumpsTypeName, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Patient
  */
-/* istanbul ignore next */
 function isCmumpsPatient(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Patient, token);
@@ -56,7 +54,6 @@ function isCmumpsPatient(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Prescription
  */
-/* istanbul ignore next */
 function isCmumpsPrescription(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Prescription);
@@ -67,7 +64,6 @@ function isCmumpsPrescription(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Lab_Result
  */
-/* istanbul ignore next */
 function isCmumpsLabResult(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Lab_Result);
@@ -78,7 +74,6 @@ function isCmumpsLabResult(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Procedure
  */
-/* istanbul ignore next */
 function isCmumpsDiagnosis(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Kg_Patient_Diagnosis);
@@ -89,7 +84,6 @@ function isCmumpsDiagnosis(candidate, token) {
  * @param {object} candidate - input
  * @returns {boolean} - true iff candidate is a cmumps Procedure
  */
-/* istanbul ignore next */
 function isCmumpsProcedure(candidate, token) {
     var token = token || cmumpsPrefixPattern;
     return isCmumpsType(candidate, module.exports.cmumpss.Procedure);

@@ -59,14 +59,11 @@ function simpleTranslate(cmumpsProcedureObject) {
 
     var resourceType = 'Procedure';
     var thePatient = get('$.patient.id');
-    // istanbul ignore else
     if (thePatient) thePatient = '2-' + thePatient.substring('Patient-'.length);
     var theProcedure = get('$._id');
-    // istanbul ignore else
     if (theProcedure) theProcedure = theProcedure.substring('Procedure-'.length);
     var theLabel = get('$.patient.label');
     var provider = get('$.provider'); var thePreformer = undefined;
-    // istanbul ignore else
     if (provider) thePreformer = [{
         actor: Fdt.fhirReferencePractioner(provider), // { Reference(Practitioner|Organization|Patient|RelatedPerson) }, // The reference to the practitioner
         role:Fdt.fhirCodeableConcept('provider') // { CodeableConcept } // The role the actor was in
@@ -135,9 +132,7 @@ function translateProceduresFhir(cmumpsProcedureObject, options) {
 
     var fhirProcedure = simpleTranslate(cmumpsProcedureObject);
 
-    // istanbul ignore if
     if (options.participants) Fhir.addParticipants(fhirProcedure, participatingProperties);
-    // istanbul ignore if
     if (options.warnings) Fhir.addWarnings(fhirProcedure, warnings);
     Fdt.clean(fhirProcedure);
     // Additional semantic processing here

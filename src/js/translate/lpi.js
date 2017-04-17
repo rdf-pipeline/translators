@@ -30,7 +30,6 @@ function fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patie
 
     var expectedPatientFormat = /urn:local:fhir:Patient:2-\d+/;
     if (! patientId.match(expectedPatientFormat)) {
-        // istanbul ignore next
         throw new Error('patientId not in expected format ' + expectedPatientFormat);
     }
 
@@ -62,8 +61,6 @@ function fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patie
 
 // makeTranslator was an alternative proposal to simple*translate. If it could be hidden by features of es2017,
 // I believe its a better approach. So I've left the implementation to guide the next initiative.
-
-// istanbul ignore next
 function makeTranslator(translator) {
 
     

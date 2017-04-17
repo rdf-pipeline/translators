@@ -84,7 +84,6 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             fhirDemographicsTranslation = Demographics.translateDemographicsFhir(theDemographics[0], options);
         } catch (err) {
-            // istanbul ignore next
             throw new Error("Can't translate demographics, " + err);
         }
     }
@@ -95,7 +94,6 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             return Prescriptions.translatePrescriptionsFhir(i, options);
         } catch (err) {
-            // istanbul ignore next
             throw new Error("Can't translate a prescription, " + err);
         }
     });
@@ -106,7 +104,6 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
              return Labs.translateLabsFhir(i, options);
         } catch (err) {
-            // istanbul ignore next
              throw new Error("Can't translate lab " + err);
          }
     });
@@ -117,7 +114,6 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             return Diagnoses.translateDiagnosesFhir(diagnosis, options);
         } catch (err) {
-            // istanbul ignore next
             throw new Error("Can't translate diagnosis " + diagnosis._id + ' ' + err);
         }
     });
@@ -129,7 +125,6 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         try {
             return Procedures.translateProceduresFhir(procedure, options);
         } catch (err) {
-            // istanbul ignore next
             throw new Error("Can't translate a procedure, " + err);
         }
     });

@@ -84,7 +84,7 @@ function simpleTranslate(cmumpsPatientObject, get) {
         id: Fdt.fhirId(RESOURCE_TYPE, get('$._id')),
         active: true, // if the patient's cmumps record is available, it's active
         identifier: Fdt.fhirIdentifier(get("$['ssn-2']"), get("$['dod_id_-2']")),
-        name: Fdt.fhirHumanName(get("$['name-2']") || get('$.label')),  // first value wins, expression confuses istanbul
+        name: Fdt.fhirHumanName(get("$['name-2']") || get('$.label')),  
         // fhir telecom
         telecom: [
             Fdt.fhirContactPoint({system: 'phone', use: 'home', value: get("$['phone-2']") }),
