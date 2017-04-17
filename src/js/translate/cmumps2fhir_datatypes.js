@@ -7,7 +7,7 @@
 
 var cmumps = require('./cmumps');
 var _ = require('underscore');
-var JSONPath = require('jsonpath-plus');
+var jsonpath = require('jsonpath');
 var format = require('string-format');
 var assert = require('assert');
 // use eventually
@@ -33,7 +33,12 @@ function htmlEncode(text) {
 function makeJsonFetcher1(o, patterns) {
     if (_.isObject(o)) {
         return function (pattern, transformer) {
-            var field = JSONPath(pattern, o);
+
+            var field = jsonpath.query(o, pattern);
+            /* if (_.isEmpty(field)) { 
+                console.log('\nfield=',field);
+                console.log('pattern=',pattern,' o=',o);
+            } */
             if (_.isArray(field) && field.length > 0) {
                 var result = transformer ? transformer(field[0]) : field[0];
                 if (result) patterns.push(pattern); // remember the pattern used
@@ -42,7 +47,7 @@ function makeJsonFetcher1(o, patterns) {
                 return undefined;
         }
     } else {
-        throw new Error("Can only make json fetchers on objects.");
+        throw new Error("Can only make json fetchers on objects: '"+ o + "'");
     }
 }
 
@@ -63,7 +68,7 @@ function accessor(o, patterns, /*post processor */ post /*: function(string) */)
     if (_.isObject(o)) {
         return function (pattern, transformer) {
             // {resultType: 'all', json: obj, path: path}
-            var field = JSONPath({resultType: 'all', path: pattern, json: o});
+            var field = jsonpath.query(o, pattern);
             if (_.isArray(field) && field.length > 0) {
                 var result = transformer ? transformer(field[0].value) : field[0].value;
                 if (result) {
@@ -144,7 +149,6 @@ function clean(o) {
  * @param {String} k -- a key
  * @returns {boolean}
  */
-// istanbul ignore next
 function required(v, k) {
     if (v) {
         return v;
@@ -249,11 +253,11 @@ function fhirHumanName(cmumpsName) {
 
     // fhir given is first (+ mi)?
     var given = n.first;
-    var mi = JSONPath('$.mi', n)[0];
+    var mi = jsonpath.query(n, '$.mi')[0];
     if (mi) given += ' ' + mi;
     result.given = [given];
 
-    var title = JSONPath('$.title', n)[0];
+    var title = jsonpath.query(n, '$.title')[0];
     if (title) result.prefix = [title];
     return result;
 }
@@ -265,16 +269,14 @@ function fhirHumanName(cmumpsName) {
  * @see {link: 'http://hl7-fhir.github.io/datatypes.html#ContactPoint'}
  */
 function fhirContactPoint(cmumpsContactPoint) {
-    // istanbul ignore else
     if (cmumpsContactPoint === undefined) return undefined;
-    // istanbul ignore else
-    if (! JSONPath({path: '$.value', wrap: false}, cmumpsContactPoint)) return undefined;
+    if (! jsonpath.query(cmumpsContactPoint, '$.value')) return undefined;
     return clean({
         resourceType: "ContactPoint",
         // from Element: extension
-        system: JSONPath({path: '$.system', wrap: false}, cmumpsContactPoint), // C? phone | fax | email | pager | other
-        value: JSONPath({path: '$.value', wrap: false},  cmumpsContactPoint), // The actual contact point details
-        use: JSONPath({path: '$.use', wrap: false}, cmumpsContactPoint), // home | work | temp | old | mobile - purpose of this contact point
+        system: jsonpath.query(cmumpsContactPoint, '$.system'), // C? phone | fax | email | pager | other
+        value: jsonpath.query(cmumpsContactPoint, '$.value'), // The actual contact point details
+        use: jsonpath.query(cmumpsContactPoint, '$.use'), // home | work | temp | old | mobile - purpose of this contact point
         // "rank" : "<positiveInt>", // Specify preferred order of use (1 = highest)
         // "period" : { Period } // Time period when the contact point was/is in use
     });
@@ -296,7 +298,6 @@ function fhirIdentifier(cmumpsSsn, cmumpsDodId) {
     // filter function, id -> fhir_id
     // TODO mike@carif.io: use fhirCodeableConcept instead?
     function f(id) {
-        // istanbul ignore else
         if (id) {
             return {
                 use: 'usual',
@@ -414,7 +415,6 @@ function fhirAddress(address) {
         country: fetch1('$.country')
     });
 
-    // istanbul ignore else
     if (result) {
         result.resourceType = 'Address';
         result.type = 'postal';
@@ -461,7 +461,6 @@ function fhirCodeableConceptList(cmumpsTypeCode) {
  * http://hl7-fhir.github.io/valueset-diagnostic-service-sections.html
  * @param cmumps "service category"
  */
-// istanbul ignore next
 function fhirDiagnosticReportCategory(cmumpsCode) {
     if (cmumpsCode === undefined) return undefined;
     // table taken from http://hl7.org/fhir/v2/0074/index.html
@@ -556,7 +555,6 @@ function fhirReferencePractioner(cmumpsProvider) {
  */
 // If its mentioned in the FHIR spec, I create a function naming it.
 function fhirReferenceMedication(cmumpsDrug) {
-    // istanbul ignore if
     if (cmumpsDrug === undefined) return undefined;
     return {
         reference: cmumpsDrug.id,
@@ -571,7 +569,6 @@ function fhirReferenceMedication(cmumpsDrug) {
  * @returns {{reference: string, display: string} || undefined}
  */
 function fhirReferenceMedicationOrder(cmumpsOrder) {
-    // istanbul ignore if
     if (cmumpsOrder === undefined) return undefined;
     return {
         reference: cmumpsOrder.id,
@@ -599,7 +596,6 @@ function fhirReferencePatient(cmumpsPatient) {
  * @returns {{reference: *, display: *} || undefined}
  */
 function fhirReferenceLocation(cmumpsLocation) {
-    // istanbul ignore if
     if (cmumpsLocation === undefined) return undefined;
     return {
         reference: cmumpsLocation.id,
@@ -614,12 +610,11 @@ function fhirReferenceLocation(cmumpsLocation) {
  * @returns {{reference: *, display: *} || undefined}
  */
 function fhirReferenceOrganization(cmumpsOrganization) {
-    // istanbul ignore if
     if (cmumpsOrganization === undefined) return undefined;
     var result = clean({
-        name: JSONPath({path: '$.name', wrap: false}, cmumpsOrganization), // C? Name used for the organization
-        telecom: [fhirContactPoint(JSONPath({path: '$.telecom', wrap: false}, cmumpsOrganization))], // C? A contact detail for the organization
-        address: [fhirAddress(JSONPath({path: '$.address', wrap: false}, cmumpsOrganization))], // C? An address for the organization
+        name: jsonpath.query(cmumpsOrganization, '$.name'), // C? Name used for the organization
+        telecom: [fhirContactPoint(jsonpath.query(cmumpsOrganization, '$.telecom'))], // C? A contact detail for the organization
+        address: [fhirAddress(jsonpath.query(cmumpsOrganization, '$.address'))], // C? An address for the organization
         // partOf: { }, // The organization of which this organization forms a part, TODO: VA?
         // contact: [{ // Contact for the organization for a certain purpose
         //     purpose: { fhirCodeableConcept }, // The type of contact
@@ -627,7 +622,6 @@ function fhirReferenceOrganization(cmumpsOrganization) {
         //     "telecom" : [{ ContactPoint }], // Contact details (telephone, email, etc.)  for a contact
         //     "address" : { Address } // Visiting or postal addresses for the contact
     });
-    // istanbul ignore else
     if (result) {
         result.type = fhirCodeableConcept('medical'), // Kind of organization
             result.resourceType = "Organization";
@@ -652,7 +646,6 @@ function fhirReferenceOrganization(cmumpsOrganization) {
  * @see {http://hl7-fhir.github.io/datatypes.html#Quantity}
  */
 function fhirQuantity(value, units) {
-    // istanbul ignore if
     if (value === undefined) return undefined;
     units = units || 'unsupplied';
     return {
@@ -671,7 +664,6 @@ function fhirQuantity(value, units) {
  * @returns {Practioner || undefined}
  * @see{https://hl7-fhir.github.io/practitioner.html}
  */
-// istanbul ignore next
 function fhirPractioner(cmumpsProvider, options) {
     if (cmumpsProvider === undefined) return undefined;
     var options = options || {participants: false, warnings: false};
@@ -729,7 +721,6 @@ function fhirPractioner(cmumpsProvider, options) {
  * @param i
  * @returns {*}
  */
-// istanbul ignore next
 function fhirPatientGender(i) {
     if (i === undefined) return undefined;
     // return i.label.toLowerCase()
@@ -747,7 +738,6 @@ function fhirPatientGender(i) {
  * @param bd
  * @returns {string}
  */
-// istanbul ignore next
 function fhirPatientBirthDate(bd) {
     if (bd === undefined) return undefined;
     if (_.has(bd, 'value')) return fhirDate(bd.value);
@@ -758,7 +748,6 @@ function fhirPatientBirthDate(bd) {
  * @param s
  * @returns {*}
  */
-// istanbul ignore next
 function fhirPatientState(s) {
     if (s === undefined) return undefined;
     if (_.has(s, 'label') && typeof(s.label) == 'string') return s.label.split('/')[0];
@@ -769,7 +758,6 @@ function fhirPatientState(s) {
  * @param s
  * @returns {*}
  */
-// istanbul ignore next
 function fhirPatientCountry(s) {
     if (_.has(s, 'label') && typeof(s.label) == 'string') {
         var a = s.label.split('/'); // TODO: let?

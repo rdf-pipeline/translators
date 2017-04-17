@@ -19,7 +19,6 @@ var translate = require('./../cmumps2fhir_all');
 var fhir2xml = require('fhir-json-to-xml');
 var fhir = require('./../fhir');
 var cmumps = require('./../cmumps');
-var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var util = require('util');
 var fs = require('fs');  // node file system

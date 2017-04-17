@@ -81,9 +81,6 @@ describe("ttl-to-json", function() {
               expect(error).to.be.null;
               stderr.trim().length.should.equal(0);
               var json = JSON.parse(stdout);
-              json.should.be.an('array');
-              expect(json).to.have.length(1);
-              json = json[0];
               expect(Object.keys(json)).to.have.length(13);
               json['@id'].should.equal("urn:local:patient-1");
               json['http://hokukahu.com/schema/cmumpss#identifier'].should.equal("2-000007");
@@ -262,12 +259,13 @@ describe("ttl-to-json", function() {
 
 function verifyHelp(error, stdout) {
     error.code.should.equal(1);
+    stdout.should.contain("ttl-to-json");
+    stdout.should.contain("convert a Turtle RDF file to JSON, or to JSONLD if a frame is given");
     stdout.should.contain("Synopsis");
-    stdout.should.contain("Options");
     stdout.should.contain("--help");
     stdout.should.contain("--frame");
     stdout.should.contain("--ttlfile");
     stdout.should.contain("Examples");
-    stdout.should.contain("     ttl-to-json -t file.ttl");
+    stdout.should.contain("ttl-to-json -t file.ttl");
     stdout.should.contain("Project home: ");
 };

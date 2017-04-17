@@ -3,9 +3,8 @@
  * TODO mike@carif.io: can this module be generated from the fhir artifacts in some way?
  */
 
-var format = require('string-format');
-var JSONPath = require('jsonpath-plus');
-var _ = require('underscore');
+const _ = require('underscore');
+const Jsonpath = require('jsonpath');
 
 /**
  * Generate "now" as a timestamp parsable by fhir. There are several acceptible formats.
@@ -23,13 +22,13 @@ function now() {
  */
 
 /**
- * Extract the *single* patient from the fhirObject using JSONPath.
+ * Extract the *single* patient from the fhirObject using Jsonpath.
  * @param {object} fhirObject
  * @returns {Patient}
  */
 
 function extractPatient(fhirObject) {
-    return JSONPath({json: fhirObject, path: '$.entry[0].resource[?(@.resourceType=="Patient")]'})[0];
+    return Jsonpath.query(fhirObject, '$.entry[0].resource[?(@.resourceType=="Patient")]')[0];
 }
 
 
@@ -43,41 +42,40 @@ function extractDemographics(fhirObject) {
 }
 
 /**
- * Extract all medications from the fhirObject using JSONPath.
+ * Extract all medications from the fhirObject using Jsonpath.
  * @param {object} fhirObject
  * @returns {Array[MedicationDispense]}
  */
 function extractMedications(fhirObject) {
-    return JSONPath({json: fhirObject, path: '$.entry[0].resource[?(@.resourceType=="MedicationDispense")]'});
+    return Jsonpath.query(fhirObject, '$.entry[0].resource[?(@.resourceType=="MedicationDispense")]');
 }
 
 /**
- * Extract all labs from the fhirObject using JSONPath.
+ * Extract all labs from the fhirObject using Jsonpath.
  * @param fhirObject
  * @returns {Array[Observation]}
  */
 function extractLabs(fhirObject) {
-    return JSONPath({json: fhirObject, path: '$.entry[0].resource[?(@.resourceType=="DiagnosticObservation")]'});
+    return Jsonpath.query( fhirObject, '$.entry[0].resource[?(@.resourceType=="DiagnosticObservation")]');
 }
 
 /**
- * Extract all Diagnoses from the fhirObject using JSONPath.
+ * Extract all Diagnoses from the fhirObject using Jsonpath.
  * @param fhirObject
  * @returns {Array[DiagosticReport]}
  */
 function extractDiagnoses(fhirObject) {
-    return JSONPath({json: fhirObject, path: '$.entry[0].resource[?(@.resourceType=="DiagnosticReport")]'});
+    return Jsonpath.query( fhirObject, '$.entry[0].resource[?(@.resourceType=="DiagnosticReport")]');
 }
 
 /**
- * Extract all Procedures from the fhirObject using JSONPath.
+ * Extract all Procedures from the fhirObject using Jsonpath.
  * @param {object} fhirObject
  * @returns {Array[Procedure]}
  */
 function extractProcedures(fhirObject) {
-    return JSONPath({json: fhirObject, path: '$.entry[0].resource[?(@.resourceType=="Procedure")]'});
+    return Jsonpath.query(fhirObject, '$.entry[0].resource[?(@.resourceType=="Procedure")]');
 }
-
 
 
 /**
@@ -86,7 +84,6 @@ function extractProcedures(fhirObject) {
  * @param {List[String]} participatingProperties
  * @param {String} [prefix=undefined] -- the prefix of the JSON Path expression
  */
-// istanbul ignore next
 function addParticipants(fhirResult, participatingProperties, prefix) {
     // Don't create an extension unless there are participating properties to actually report.
     if (participatingProperties.length > 0) {
@@ -104,7 +101,6 @@ function addParticipants(fhirResult, participatingProperties, prefix) {
  * @param {object} fhirResult, SIDE EFFECTS fhirResult
  * @param {Array[String]} warnings
  */
-// istanbul ignore next
 function addWarnings(fhirResult, warnings) {
     // Don't create or augment an extension unless there are warnings to actually report.
     if (warnings.length > 0) {

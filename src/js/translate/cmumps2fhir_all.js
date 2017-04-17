@@ -2,26 +2,19 @@
  * Translate an entire cmumps object to a fhir bundle.
  */
 
-var cmumps = require('./cmumps');
-// Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
-var fhir = require('./fhir');
-var _ = require('underscore');
-var JSONPath = require('jsonpath-plus');
-var format = require('string-format');
-var assert = require('assert');
-var fdt = require('./cmumps2fhir_datatypes');
+const _ = require('underscore');
+const Format = require('string-format');
+
+const Fhir = require('./fhir');
+const Fdt = require('./cmumps2fhir_datatypes');
 
 // for each piece
-var demographics = require('./cmumps2fhir_demographics');
-var prescriptions = require('./cmumps2fhir_prescriptions');
-var labs = require('./cmumps2fhir_labs');
-var diagnoses = require('./cmumps2fhir_diagnoses');
-var procedures = require('./cmumps2fhir_procedures');
-var cmumps_utils = require('./util/cmumps_utils');
-
-
+const Demographics = require('./cmumps2fhir_demographics');
+const Prescriptions = require('./cmumps2fhir_prescriptions');
+const Labs = require('./cmumps2fhir_labs');
+const Diagnoses = require('./cmumps2fhir_diagnoses');
+const Procedures = require('./cmumps2fhir_procedures');
+const Cmumps_utils = require('./util/cmumps_utils');
 
 
 /**
@@ -31,17 +24,15 @@ var cmumps_utils = require('./util/cmumps_utils');
  * @param {object} cmumpsJsonldObject -- input jsonld object containing an "@graph" key.
  * @returns {object} - the fhir translation and a bundle containing a "composition".
  */
-
-
-function translatecmumpsFhir(cmumpsJsonldObject, options, date) {
+function translateCmumpsFhir(cmumpsJsonldObject, options, date) {
     // If the caller is confused an passes an array of cmumpsJsonldObjects, return the array of translations.
     // This way the caller doesn't have to keep track.
     if (_.isArray(cmumpsJsonldObject)) {
         // return translateHelper(cmumpsJsonldObject[0]);
-        return cmumpsJsonldObject.map(function(i) {return translatecmumpsFhirHelper(i, options, date); })
+        return cmumpsJsonldObject.map(function(i) {return translateCmumpsFhirHelper(i, options, date); })
     } else {
         // A single object, translate it.
-        return translatecmumpsFhirHelper(cmumpsJsonldObject, options, date);
+        return translateCmumpsFhirHelper(cmumpsJsonldObject, options, date);
     }
 }
 
@@ -54,9 +45,9 @@ function translatecmumpsFhir(cmumpsJsonldObject, options, date) {
  * @param {string} date -- use this date instead of now(). Useful to diff output.
  * @returns {{resourceType: string, type: string, entry: *[]}}
  */
-function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
+function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
 
-    var options = cmumps_utils.merge(options, {participants: false, warnings: false, policy: false});
+    var options = Cmumps_utils.merge(options, {participants: false, warnings: false, policy: false});
 
     // Check policy?
     if (options.policy) {
@@ -65,18 +56,18 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         if (!_.isArray(cmumpsJsonldObject['@graph'])) throw new Error("Expecting an array value for '@graph'");
         if (cmumpsJsonldObject['@graph'].length == 0) throw new Error("Field '@graph' contains no value.");
     }
-    var date = date || fhir.now();
+    var date = date || Fhir.now();
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
     // Check the input.
-    // Using JSONPath, select the demographics fhirParts of @graph.
-    var theDemographics = JSONPath(pattern(cmumpss.Patient), cmumpsJsonldObject);
+    // Using jsonpath, select the demographics fhirParts of @graph.
+    var theDemographics = Demographics.extractDemographics(cmumpsJsonldObject);
     if (options.policy && theDemographics.length < 1) {
         throw new Error("Expecting a patient, none found.");
     }
     if (options.policy && theDemographics.length > 1) {
-        throw new Error(format("Expecting only one patient, {l} found.", {l: theDemographics}));
+        throw new Error(Format("Expecting only one patient, {l} found.", {l: theDemographics}));
     }
     // Here: only one patient
 
@@ -91,59 +82,52 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
     var fhirDemographicsTranslation;
     if (theDemographics.length) {
         try {
-            fhirDemographicsTranslation = demographics.translateDemographicsFhir(theDemographics[0], options);
+            fhirDemographicsTranslation = Demographics.translateDemographicsFhir(theDemographics[0], options);
         } catch (err) {
-            // istanbul ignore next
             throw new Error("Can't translate demographics, " + err);
         }
     }
 
     // cmumps Prescription-52
-    var thePrescriptions = JSONPath(pattern(cmumpss.Prescription), cmumpsJsonldObject);
+    var thePrescriptions = Prescriptions.extractPrescriptions(cmumpsJsonldObject);
     var fhirPrescriptionTranslations = thePrescriptions.map(function(i) {
         try {
-            return prescriptions.translatePrescriptionsFhir(i, options);
+            return Prescriptions.translatePrescriptionsFhir(i, options);
         } catch (err) {
-            // istanbul ignore next
             throw new Error("Can't translate a prescription, " + err);
         }
     });
 
     // cmumps Lab_Results-63 will be handled elsewhere, we don't "know" how to do them.
-    var theLabs = JSONPath(pattern(cmumpss.Lab_Result), cmumpsJsonldObject);
+    var theLabs = Labs.extractLabs(cmumpsJsonldObject);
     var fhirLabResultTranslations = theLabs.map(function(i) {
         try {
-             return labs.translateLabsFhir(i, options);
+             return Labs.translateLabsFhir(i, options);
         } catch (err) {
-            // istanbul ignore next
              throw new Error("Can't translate lab " + err);
          }
     });
 
     // cmumps Kg_Patient_Diagnosis-100417
-    var theDiagnoses = JSONPath(pattern(cmumpss.Kg_Patient_Diagnosis), cmumpsJsonldObject);
-    var fhirDiagnosticReportTranslations = theDiagnoses.map(function (i) {
+    var theDiagnoses = Diagnoses.extractDiagnoses(cmumpsJsonldObject);
+    var fhirDiagnosticReportTranslations = theDiagnoses.map(function (diagnosis) {
         try {
-            return diagnoses.translateDiagnosesFhir(i, options);
+            return Diagnoses.translateDiagnosesFhir(diagnosis, options);
         } catch (err) {
-            // istanbul ignore next
-            throw new Error("Can't translate diagnosis " + i._id + ' ' + err);
+            throw new Error("Can't translate diagnosis " + diagnosis._id + ' ' + err);
         }
     });
 
     // cmumps Procedures
     // TODO mike@carif.io: Procedures will come from alhta20, a different database. Details tbs.
-    var theProcedures = JSONPath(cmumps.jsonPattern(cmumpss.Procedure), cmumpsJsonldObject);
-    var fhirProcedureTranslations = theProcedures.map(function (i) {
+    var theProcedures = Procedures.extractProcedures(cmumpsJsonldObject);
+    var fhirProcedureTranslations = theProcedures.map(function (procedure) {
         try {
-            return procedures.translateProceduresFhir(i, options);
+            return Procedures.translateProceduresFhir(procedure, options);
         } catch (err) {
-            // istanbul ignore next
             throw new Error("Can't translate a procedure, " + err);
         }
     });
-
-
 
     // Build up a list of translated resources. This will populate the 'resource'
     // attributed of a fhir 'Composition' resource.
@@ -157,7 +141,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
     fhirProcedureTranslations.forEach(function(i) {resources.push(i); });
 
     // Add any warnings about this bundle.
-    if (options.warnings) fhir.addWarnings(resources, warnings);
+    if (options.warnings) Fhir.addWarnings(resources, warnings);
 
     // A fhir bundle is a top-level resource. It can be signed (aka sha1 or md5).
     // XML translation expects a "top level" object to cmumps2fhir_all.
@@ -170,18 +154,17 @@ function translatecmumpsFhirHelper(cmumpsJsonldObject, options, date) {
             title: module.name, // ... entited the name of this module ...
             status: 'final',
             subject: arguments.callee,
-            type: fdt.fhirCodeableConcept('cmumps'), // ... originating with cmumps ...
+            type: Fdt.fhirCodeableConcept('cmumps'), // ... originating with cmumps ...
             resource: resources // ... with these translated elements
         }]
     };
 
-
-    fdt.clean(bundle); // remove keys that have no useful values
+    Fdt.clean(bundle); // remove keys that have no useful values
     return bundle;
 }
 
-// short form
-var translate = translatecmumpsFhir;
 
-// Export the actual functions here. Make sure the names are always consistent.
-[translatecmumpsFhir, translate].forEach(function(f) { module.exports[f.name] = f; });
+module.exports = {
+    translate: translateCmumpsFhir,
+    translateCmumpsFhir: translateCmumpsFhir 
+};

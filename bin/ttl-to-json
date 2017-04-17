@@ -2,26 +2,38 @@
 
 // Converts a TTL RDF file to JSON or JSON-LD. 
 
-var _ = require('underscore');
-var cmdlineArgs = require('command-line-args')
-var fs = require('fs');
+const _ = require('underscore');
 
-var ttlJsonLd = require('../lib/ttl-jsonld');
+const CmdlineArgs = require('command-line-args')
+const Usage = require('command-line-usage')
 
-function help() {
+const Fs = require('fs');
+
+const TtlJsonLd = require('../lib/ttl-jsonld');
+
+// Define the command line args and parse to see what we got
+const CmdlineDefs = [
+    { name: "help", alias: "h", type: Boolean },
+    { name: "frame", alias: "f", type: String, description: "JSON-LD frame file" },
+    { name: "ttlfile", alias: "t", type: String, description: "TTL RDF file to be processed" }
+];
+
+function helpAndExit(status) {
     console.log(
-        cli.getUsage({
-            title:"ttl-to-json",
-            description:"convert an Turtle RDF file to JSON, or to JSONLD if a frame is given.",
-            synopsis: [
-              "ttl-to-json -t <TTL RDF File> [-f <Frame File>]"
-            ],
-            examples: [
+        Usage([
+           { header:"ttl-to-json",
+             content:"convert a Turtle RDF file to JSON, or to JSONLD if a frame is given." },
+           { header: "Synopsis",
+             content: [ "ttl-to-json -h | -t <TTL RDF File> [-f <Frame File>]" ,
+                        "ttl-to-json --help | --ttlfile <TTL RDF File> [--frame <Frame File>]"] },
+           { header: "Examples",
+             content: [
+              "   ttl-to-json -help",
               "   ttl-to-json -t file.ttl",
-              "   ttl-to-json -t file.ttl -f myFrame.frame",
-            ],
-            footer: "Project home: [underline]{https://github.com/rdf-pipeline/translators}"
-          }));
+              "   ttl-to-json --ttlfile file.ttl --frame myFrame.frame" ]},
+            { content: "Project home: [underline]{https://github.com/rdf-pipeline/translators}" }
+          ]));
+    process.exit(status);
 }
 
 /**
@@ -33,7 +45,7 @@ function help() {
 function readFile(filename, encoding) {
 
     return new Promise(function(resolve, reject){
-        return fs.readFile(filename, encoding || 'utf-8', function(err, content){
+        return Fs.readFile(filename, encoding || 'utf-8', function(err, content){
             if (err) {
               console.error(err.message);
               reject(err);
@@ -50,7 +62,7 @@ function readFile(filename, encoding) {
  */
 function fileAccessible(filename) {
     try { 
-       fs.accessSync(filename, fs.R_OK);
+       Fs.accessSync(filename, Fs.R_OK);
     } catch (e) { 
        console.error("File "+filename+" is not readable!");
        process.exit(1);
@@ -63,38 +75,28 @@ function fileAccessible(filename) {
  * @param filename File name 
  */
 function fileExists(filename) {
-    if (! fs.existsSync(filename)) {
+    if (! Fs.existsSync(filename)) {
         console.error("File "+filename+" does not exist!");
-        help();
-        process.exit(1);
+        helpAndExit(1);
     }
 }
 
-// Define the command line args and parse to see what we got
-var cli = cmdlineArgs([
-  { name: "help", alias: "h", type: Boolean },
-  { name: "frame", alias: "f", type: String, description: "JSON-LD frame file" },
-  { name: "ttlfile", alias: "t", type: String, description: "TTL RDF file to be processed" }
-]);
-
+var cmds;
 try { 
-   var cmds = cli.parse() || {};
+   cmds = CmdlineArgs(CmdlineDefs); 
 } catch(e) { 
    console.error(e.message);
-   help();
-   process.exit(1);
+   helpAndExit(1);
 }
 
 if (cmds.help) {
-  help();
-  process.exit(0);
+  helpAndExit(0);
 }
 
 // Verify we got the required RDF file - can't do anything without it
 if ((_.isUndefined(cmds.ttlfile) || _.isNull(cmds.ttlfile))) {
     console.error("A TTL RDF file argument is required!");
-    help();
-    process.exit(1);
+    helpAndExit(1);
 }
 fileExists(cmds.ttlfile); 
 fileAccessible(cmds.ttlfile);
@@ -103,8 +105,7 @@ fileAccessible(cmds.ttlfile);
 if (!_.isUndefined(cmds.frame)) {
    if (_.isNull(cmds.frame)) {
        console.error("Frame argument requires a frame file!");
-       help();
-       process.exit(1);
+       helpAndExit(1);
    } else {
        fileExists(cmds.frame);
        fileAccessible(cmds.frame);
@@ -135,7 +136,7 @@ Promise.all(readFiles).then(fileContent => {
   // Load the RDF text into an RDF graph
   return new Promise(function(resolve) {
 
-     var graph = ttlJsonLd.ttlLoad(rdfText);
+     var graph = TtlJsonLd.ttlLoad(rdfText);
      resolve(graph);
 
   }).then(function(graph) { 
@@ -145,7 +146,7 @@ Promise.all(readFiles).then(fileContent => {
      // from the original json input on a round trip translation. 
      var filterBnodeAttrs = [ 'id', '_id', '@id' ];
 
-     ttlJsonLd.rdfToJsonLd(graph, frameText, filterBnodeAttrs).then(json => { 
+     TtlJsonLd.rdfToJsonLd(graph, frameText, filterBnodeAttrs).then(json => { 
         console.log(JSON.stringify(json, null, 2)); 
      });
   });

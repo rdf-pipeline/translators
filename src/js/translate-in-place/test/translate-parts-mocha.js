@@ -39,11 +39,17 @@ var patient7Jsonld =
 
 
 describe('cmumps2fhir_all fhirParts', function () {
-    describe('across all report categories', function () {
+
+    it('is obsolete!', function () {
+        console.error("\nTHE TRANSLATE-IN-PLACE TRANSLATORS ARE OBSOLETE.  DO NOT USE!\n");
+        console.error("\nTHESE TRANSLATORS WERE RETAINED FOR REFERENCE PURPOSES ONLY.\n");
+    });
+
+    describe.skip('across all report categories', function () {
 
         // fhirDate(cmumpsDate)
         // @see microparsers-mocha.js for misformed input
-        it('fhirDate should convert yyyy-mm-dd to mm-dd-yyyy', function () {
+        it.skip('fhirDate should convert yyyy-mm-dd to mm-dd-yyyy', function () {
             var year = '1809';
             var month = '02';
             var day = '12'; // abe
@@ -57,7 +63,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(result).equals(fhirDate);
         });
 
-        it('fhirDate should convert yy-mm-dd to mm-dd-19yy', function () {
+        it.skip('fhirDate should convert yy-mm-dd to mm-dd-19yy', function () {
             var year = '09';
             var month = '02';
             var day = '12'; // abe + 100y
@@ -71,7 +77,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(result).equals(fhirDate);
         });
 
-        it('fhirDate should throw an Error with bad cmumps date', function () {
+        it.skip('fhirDate should throw an Error with bad cmumps date', function () {
             var year = '9';
             var month = '02';
             day = '12'; // year is bogus
@@ -82,7 +88,7 @@ describe('cmumps2fhir_all fhirParts', function () {
         });
 
         // fhirHumanName
-        it('fhirHumanName should parse a simple name', function () {
+        it.skip('fhirHumanName should parse a simple name', function () {
             var last = "bunny";
             var first = "bugs";
             var aName = last + ',' + first;
@@ -100,7 +106,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirHumanName).not.has.property('title');
         });
 
-        it('fhirHumanName should parse a last, first mi', function () {
+        it.skip('fhirHumanName should parse a last, first mi', function () {
             var last = "bunny";
             var first = "bugs";
             var mi = 'doc';
@@ -119,7 +125,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirHumanName).not.has.property('title');
         });
 
-        it('fhirHumanName should parse last, first mi title', function () {
+        it.skip('fhirHumanName should parse last, first mi title', function () {
             var last = "bunny";
             var first = "bugs";
             var mi = 'doc';
@@ -139,7 +145,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirHumanName.prefix[0]).to.equal(title);
         });
 
-        it('fhirHumanName should throw an Error on bad cmumps name', function () {
+        it.skip('fhirHumanName should throw an Error on bad cmumps name', function () {
             var first = "bugs";
             var badName = ',' + first; // misformed, no last name
             chai.expect(function () {
@@ -147,7 +153,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             }).to.throw(Error, /Bad cmumps name/);
         });
 
-        it('fhirIdentfier should create an array of identifiers if passed in', function () {
+        it.skip('fhirIdentfier should create an array of identifiers if passed in', function () {
             var ssn = 'xxx-xx-xxxx';
             var dod = 'dod-id-number';
             var fhirIds = null;
@@ -172,7 +178,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             });
         });
 
-        it('fhirIdentfier should skip ssn if undefined', function () {
+        it.skip('fhirIdentfier should skip ssn if undefined', function () {
             var ssn = undefined;
             var dod = 'dod-id-number';
             var fhirIds = null;
@@ -192,7 +198,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             });
         });
 
-        it('fhirIdentfier should skip dod if undefined', function () {
+        it.skip('fhirIdentfier should skip dod if undefined', function () {
             var ssn = 'xxx-xx-xxxx';
             var dod = undefined;
             var fhirIds = null;
@@ -212,7 +218,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             // chai.expect(fhir_ids[0]).to.eqls({use: 'usual', assigner: 'US', type: {coding: 'cmumpss', text: dod}, value: dod});
         });
 
-        it('fhirIdentfier should skip ssn and dod if undefined', function () {
+        it.skip('fhirIdentfier should skip ssn and dod if undefined', function () {
             var ssn = undefined;
             var dod = undefined;
             var fhirIds = null;
@@ -222,7 +228,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirIds).to.be.undefined;
         });
 
-        it('fhirMaritalStatus should map to fhir marital status', function () {
+        it.skip('fhirMaritalStatus should map to fhir marital status', function () {
             // TODO: generate this enumeration from mongodb or schema/model provided by nodeVISTA?
             ["DIVORCED", "SINGLE,NEVER MARRIED", "MARRIED", "LEGALLY SEPARATED"].map(function (ms) {
                 return {label: ms};
@@ -236,7 +242,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             });
         });
 
-        it('fhirMaritalStatus should throw error if cmumps status unknown', function () {
+        it.skip('fhirMaritalStatus should throw error if cmumps status unknown', function () {
             // TODO: generate this enumeration from mongodb or schema/model provided by nodeVISTA?
             ["askdjfsldaf"].map(function (ms) {
                 return {label: ms};
@@ -250,7 +256,7 @@ describe('cmumps2fhir_all fhirParts', function () {
 
         // fhirAddress
         // addresses are messy, everything can be optional
-        it('fhirAddress should create a fhir address', function () {
+        it.skip('fhirAddress should create a fhir address', function () {
             var cmumpsJsonldPart = {
                 // http://smallville.wikia.com/wiki/Daily_Planet
                 street1: "1000 Broadway",
@@ -272,7 +278,7 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirTranslation.country).to.equal(cmumpsJsonldPart.country);
         });
 
-        it('fhirAddress should create a fhir address with county', function () {
+        it.skip('fhirAddress should create a fhir address with county', function () {
             var cmumpsJsonldPart = {
                 // http://smallville.wikia.com/wiki/Daily_Planet
                 street1: '1000 Broadway',
@@ -301,9 +307,9 @@ describe('cmumps2fhir_all fhirParts', function () {
 // In these next tests, cmumps2fhir_all entire cmumps jsonld objects taking their contents from
 // specific files. Then investigate the various fhirParts.
 
-describe('for an entire cmumps jsonld objects', function () {
+describe.skip('for an entire cmumps jsonld objects', function () {
 
-    it('medications part (example)', function () {
+    it.skip('medications part (example)', function () {
 
         // Get the entire cmumps jsonld object in a file
         // ... loaded into cmumps. This has @context and @graph.
@@ -381,7 +387,7 @@ describe('for an entire cmumps jsonld objects', function () {
     });
 
 
-    it('medications part, same data but reordered', function () {
+    it.skip('medications part, same data but reordered', function () {
 
         // Get the entire cmumps jsonld object in a file
         // ... loaded into cmumps. This has @context and @graph.
@@ -460,7 +466,7 @@ describe('for an entire cmumps jsonld objects', function () {
     });
 
 
-    it('demographic part (example)', function () {
+    it.skip('demographic part (example)', function () {
 
         // ... loaded into cmumps. This has @context and @graph.
         var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
@@ -501,7 +507,7 @@ describe('for an entire cmumps jsonld objects', function () {
     });
 
 
-    it('diagnoses part (example)', function () {
+    it.skip('diagnoses part (example)', function () {
 
         // Get the entire cmumps jsonld object in a file
         // ... loaded into cmumps. This has @context and @graph.
@@ -590,7 +596,7 @@ describe('for an entire cmumps jsonld objects', function () {
     });
 
 
-    it('labs part (example)', function () {
+    it.skip('labs part (example)', function () {
         // the entire cmumps jsonld object in a file
         var pathnameForTestCase = 'data/fake_cmumps/bugs-bunny.jsonld';
         // ... loaded into cmumps. This has @context and @graph.
@@ -616,7 +622,7 @@ describe('for an entire cmumps jsonld objects', function () {
             chai.expect(i.resourceType).to.equal("DiagnosticObservation");
         });
 
-        it('procedures part (example)', function () {
+        it.skip('procedures part (example)', function () {
 
             // Get the entire cmumps jsonld object in a file
             // ... loaded into cmumps. This has @context and @graph.
@@ -693,7 +699,7 @@ describe('for an entire cmumps jsonld objects', function () {
 
 
     //
-    it('procedures part (example)', function () {
+    it.skip('procedures part (example)', function () {
 
         // Get the entire cmumps jsonld object in a file
         // ... loaded into cmumps. This has @context and @graph.
@@ -785,8 +791,8 @@ describe('for an entire cmumps jsonld objects', function () {
     //
 
 
-    describe('In various scenarios', function () {
-        it('bugs bunny should parse', function () {
+    describe.skip('In various scenarios', function () {
+        it.skip('bugs bunny should parse', function () {
             // TODO mike@carif.io: load relative to this file, not pwd?
             // so path would be '../../data/fake_cmumps/bugs-bunny.cmumps.json'
             // and npm test would work correctly?
@@ -831,17 +837,17 @@ describe('for an entire cmumps jsonld objects', function () {
         });
     });
 
-    describe('for coverage', function () {
-        describe('missing fields', function () {
+    describe.skip('for coverage', function () {
+        describe.skip('missing fields', function () {
             chai.expect(true).to.equal(true);
         });
 
 
-        describe('missing fields', function () {
+        describe.skip('missing fields', function () {
             chai.expect(true).to.equal(true);
         });
 
-        describe('missing fields', function () {
+        describe.skip('missing fields', function () {
             chai.expect(true).to.equal(true);
         });
     });

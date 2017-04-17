@@ -14,7 +14,6 @@ var Av = require('autovivify');
  * @returns {string} - indented object suitable for logging or printing
  */
 
-// istanbul ignore next
 function pp(json) {
     return JSON.stringify(json, null, 2);
 }
@@ -79,7 +78,6 @@ function isJsonld(object) {
 // it to data you from a webservice. It is specific to a particular document format, nonetheless it offers a
 // prototype for use elsewhere. Makes it worth saving.
 
-// istanbul ignore next
 function getAllPatientGraph(url, db, patientId) {
     function find(db, patientId, collections) {
 
@@ -177,7 +175,6 @@ function overlapObjects(left, right) {
 // devivify and partition are used for graph-translate which is a "destructive" or "input modifying" approach to
 // translation.
 
-// istanbul ignore next
 function devivify(av) {
     var result;
     if (_.isArray(av)) return av.map(devivify);
@@ -189,7 +186,6 @@ function devivify(av) {
             result = {};
             for (k in av) {
                 // Only devivify direct properties. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-                // istanbul ignore else
                 if (av.hasOwnProperty(k)) {
                     result[k] = devivify(av[k]);
                 }
@@ -227,7 +223,6 @@ function partition(o, usedExpressions) {
         } catch (err) {
             // TODO: swallowing all errors other than a type error is probably too inclusive,
             // but it will take a lot of investigation to deduce just the correct set.
-            // istanbul ignore next
             if (!(err instanceof TypeError)) throw e;
         }
     });
@@ -239,7 +234,6 @@ function partition(o, usedExpressions) {
 function merge(passed, defaults) {
     var result = clone(defaults);
     for (var k in passed) {
-        // istanbul ignore else
         if (passed.hasOwnProperty(k)) {
             result[k] = passed[k];
         }

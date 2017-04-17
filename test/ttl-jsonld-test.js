@@ -44,7 +44,7 @@ describe("ttl-jsonld", function() {
 
         it("should write an error to the console and return undefined if input is not a valid turtle RDF string", function(done) {
             var errMsg;
-            sinon.stub(console, 'error', function(message) { errMsg = message; });
+            sinon.stub(console, 'error').callsFake(function(message) { errMsg = message; });
             ttlJsonLd.ttlLoad("A hot pile of garbage").then(function(result) {
                 console.error.restore();
                 expect(result).to.be.undefined;
@@ -88,7 +88,7 @@ describe("ttl-jsonld", function() {
 
         it("should write an error to the console and return undefined if input data is not valid RDF", function(done) {
             var errMsg;
-            sinon.stub(console, 'error', function(message) { errMsg = message; });
+            sinon.stub(console, 'error').callsFake(function(message) { errMsg = message; });
             ttlJsonLd.rdfToJsonLd("A cold pile of garbage").then(function(result) {
                 console.error.restore();
                 expect(result).to.be.undefined;
@@ -102,7 +102,7 @@ describe("ttl-jsonld", function() {
            ttlJsonLd.ttlLoad(ttl).then(function(graph) {
                graph.should.be.an('object');
                ttlJsonLd.rdfToJsonLd(graph).then(function(json) { 
-                   json.should.deep.equal([ 
+                   json.should.deep.equal(
                        { '@id': 'urn:local:patient-1',
                          'http://hokukahu.com/schema/cmumpss#identifier': '2-000007',
                          'http://hokukahu.com/schema/cmumpss#phone-2': '555 555 5555',
@@ -116,7 +116,7 @@ describe("ttl-jsonld", function() {
                          'http://hokukahu.com/schema/cmumpss#estreet_address-2': '7000 InternalTest Boulevard',
                          'http://hokukahu.com/schema/cmumpss#ecity-2': 'ALBUQUERQUE',
                          'http://hokukahu.com/schema/cmumpss#ezip-2': '55555' } 
-                   ]);
+                   );
                    done();
                });
            });

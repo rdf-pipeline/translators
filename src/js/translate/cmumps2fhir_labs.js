@@ -4,23 +4,44 @@
 
 'use strict';
 
-var cmumps = require('./cmumps');
-// Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
-var fhir = require('./fhir');
-var _ = require('underscore');
-var JSONPath = require('jsonpath-plus');
-var format = require('string-format');
-var assert = require('assert');
-var fdt = require('./cmumps2fhir_datatypes');
-var cmumps_utils = require('./util/cmumps_utils');
-var lpi = require('./lpi');
+const _ = require('underscore');
+var Path=require('path');
+const Fdt = require('./cmumps2fhir_datatypes');
 
+const RESOURCE_TYPE = "DiagnosticOrder";   // David, Eric - is this right? 
 
+/**
+ * Extracts CMUMPS Patient Lab results from a CMUMPS JSON-LD object
+ *
+ * @param cmumpsJsonldObject a CMUMPS JSON-LD object
+ *
+ * @return an array of CMUMPS patient labs if any exist
+ * @exception if input JSON-LD object is undefined
+ */
+function extractLabs(cmumpsJsonldObject) {
+    if (_.isUndefined(cmumpsJsonldObject)) {
+        throw Error("Cannot extract CMUMPS labs because patient data object is undefined!");
+    }
 
+    return _.filter(cmumpsJsonldObject['@graph'],
+        function(json) {
+            return /c(hc|mump)ss:Lab_Result-63/.test(json.type);
+    });
+}
 
-
+/**
+ * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove all lab records from @graph of that object.
+ * MODIFIES cmumpsJsonldObject.
+ *
+ * @param cmumpsJsonldObject
+ * @return {Array[object]} -- the items removed
+ */
+function removeLabs(cmumpsJsonldObject) {
+    cmumpsJsonldObject['@graph'] =  _.filter(cmumpsJsonldObject['@graph'], function(json) {
+            return !/c(hc|mump)ss:Lab_Result-63/.test(json.type);
+    });
+    return cmumpsJsonldObject;
+}
 
 /**
  * Deferred translation of a cmumps lab.
@@ -37,41 +58,39 @@ var lpi = require('./lpi');
  *
  *  - mongodb query db['63'].find({}) will find instances of 'Lab_Result-63'.
  */
-
-
 function translateLabsFhir(cmumpsLabResultObject) {
 
     // The get function knows how to get values from cmumpsPatientObject using JSONPath.
-    var get = fdt.makeGetter(cmumpsLabResultObject);
+    var get = Fdt.makeGetter(cmumpsLabResultObject);
 
     // These values are useful multiple times. Compute them once.
-    var id = get('$._id').split('-')[1];
+    var id = get('$._id'); 
     // arguments.callee unavailable when 'use strict'. Var 'this', as usual, is bound to a global outside a method.
     // Neither works. Pick your battles.
     var resourceType = translateLabsFhir.resourceType;
-    var patientName = get('$.patient-63.label');
+    var patientName = get("$['patient-63'].label");
 
-    return fdt.clean({
-        '@id': 'urn:local:' + resourceType + '/' + id,
-        resourceType: resourceType,
+    return Fdt.clean({
+        '@id': 'urn:local:' + this.resourceType + ':' + id,
+        resourceType: RESOURCE_TYPE,
         _deferred: true,
         id: id,
         'fhir:patientName': patientName,
         't:translatedBy': {
             // Are these values all required?
-            't:translator': 't:translators:' + module.name + '.' + translateLabsFhir.name,
+            't:translator': 't:translators:' + this.name + '.' + translateLabsFhir.name,
                 't:sourceNode': cmumpsLabResultObject,
-            't:patientId': 'urn:local:fhir:Patient:' + get('$.patient-63.id'), // urn:local:fhir:Patient:2-\d+
+            't:patientId': 'urn:local:fhir:Patient:' + get("$['patient-63'].id"), // urn:local:fhir:Patient:2-\d+
             't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
         }
     });
 }
 
-
-// Each translator "knows" what FHIR resource it will generate. This is useful to the caller and for lpi.Defer().
-translateLabsFhir.resourceType = 'DiagnosticReport';
-translateLabsFhir.deferred = true;
-var translate = translateLabsFhir;
-
-// Export the actual functions here. Make sure the names are always consistent.
-[translateLabsFhir, translate].forEach(function(f) { module.exports[f.name] = f; });
+module.exports = {
+    deferred: true,
+    extractLabs: extractLabs,
+    name: Path.basename(__filename, '.js'),
+    removeLabs: removeLabs,
+    resourceType: RESOURCE_TYPE,
+    translateLabsFhir: translateLabsFhir
+};
