@@ -1,0 +1,177 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@graph": [
+        {
+            "_id": "8254_01-1000",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "PENICILLINS",
+            "bn_gnn-8254_01": "PENICILLINS",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-4849",
+                "label": "PENICILLINS; CEPHALOSPORINS; CARBAPENEM"
+            },
+            "alltype-8254_01": "Class",
+            "duplicate_brand_name-8254_01": "Duplicate",
+            "expanded_gnn-8254_01": "PENICILLINS"
+        },
+        {
+            "_id": "8254_01-1001",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "CEPHALOSPORINS",
+            "bn_gnn-8254_01": "CEPHALOSPORINS",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-4849",
+                "label": "PENICILLINS; CEPHALOSPORINS; CARBAPENEM"
+            },
+            "alltype-8254_01": "Class",
+            "duplicate_brand_name-8254_01": "Duplicate",
+            "expanded_gnn-8254_01": "CEPHALOSPORINS"
+        },
+        {
+            "_id": "8254_01-1002",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "CARBAPENEM",
+            "bn_gnn-8254_01": "CARBAPENEM",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-4849",
+                "label": "PENICILLINS; CEPHALOSPORINS; CARBAPENEM"
+            },
+            "alltype-8254_01": "Class",
+            "duplicate_brand_name-8254_01": "Duplicate",
+            "expanded_gnn-8254_01": "CARBAPENEM"
+        },
+        {
+            "_id": "8254_01-1003",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "PENICILLAMINE",
+            "bn_gnn-8254_01": "PENICILLAMINE",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-11103",
+                "label": "PENICILLAMINE"
+            },
+            "hicl_source-8254_01": {
+                "id": "8250-1103",
+                "label": "PENICILLAMINE",
+                "sameAs": "nddf:ins001103",
+                "sameAsLabel": "PENICILLAMINE"
+            },
+            "gnn-8254_01": "PENICILLAMINE",
+            "comment-8254_01": "RULE: This a Generic name4849",
+            "expanded_gnn-8254_01": "PENICILLAMINE"
+        },
+        {
+            "_id": "8254_01-1004",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "CUPRIMINE",
+            "bn_gnn-8254_01": "CUPRIMINE",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-11103",
+                "label": "PENICILLAMINE"
+            },
+            "hicl_source-8254_01": {
+                "id": "8250-1103",
+                "label": "PENICILLAMINE",
+                "sameAs": "nddf:ins001103",
+                "sameAsLabel": "PENICILLAMINE"
+            },
+            "gnn-8254_01": "PENICILLAMINE",
+            "comment-8254_01": "This AS AD pointer has changed to 11103 from 4849",
+            "expanded_gnn-8254_01": "PENICILLAMINE"
+        },
+        {
+            "_id": "8254_01-1005",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "DEPEN",
+            "bn_gnn-8254_01": "DEPEN",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-11103",
+                "label": "PENICILLAMINE"
+            },
+            "hicl_source-8254_01": {
+                "id": "8250-1103",
+                "label": "PENICILLAMINE",
+                "sameAs": "nddf:ins001103",
+                "sameAsLabel": "PENICILLAMINE"
+            },
+            "gnn-8254_01": "PENICILLAMINE",
+            "comment-8254_01": "This AS AD pointer has changed to 11103 from 4849",
+            "expanded_gnn-8254_01": "PENICILLAMINE"
+        },
+        {
+            "_id": "8254_01-1006",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "PENICILLIN G SODIUM",
+            "bn_gnn-8254_01": "PENICILLIN G SODIUM",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-13936",
+                "label": "PENICILLIN G SODIUM"
+            },
+            "hicl_source-8254_01": {
+                "id": "8250-3936",
+                "label": "PENICILLIN G SODIUM",
+                "sameAs": "nddf:ins003936",
+                "sameAsLabel": "PENICILLIN G SODIUM"
+            },
+            "gnn-8254_01": "PENICILLIN G SODIUM",
+            "comment-8254_01": "RULE: This a Generic name4849",
+            "expanded_gnn-8254_01": "PENICILLIN G SODIUM"
+        },
+        {
+            "_id": "8254_01-1007",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "PENICILLIN G POTASSIUM",
+            "bn_gnn-8254_01": "PENICILLIN G POTASSIUM",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-13937",
+                "label": "PENICILLIN G POTASSIUM"
+            },
+            "hicl_source-8254_01": {
+                "id": "8250-3937",
+                "label": "PENICILLIN G POTASSIUM",
+                "sameAs": "nddf:ins003937",
+                "sameAsLabel": "PENICILLIN G POTASSIUM"
+            },
+            "gnn-8254_01": "PENICILLIN G POTASSIUM",
+            "comment-8254_01": "RULE: This a Generic name4849",
+            "expanded_gnn-8254_01": "PENICILLIN G POTASSIUM"
+        },
+        {
+            "_id": "8254_01-1008",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "PFIZERPEN",
+            "bn_gnn-8254_01": "PFIZERPEN",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-13937",
+                "label": "PENICILLIN G POTASSIUM"
+            },
+            "hicl_source-8254_01": {
+                "id": "8250-3937",
+                "label": "PENICILLIN G POTASSIUM",
+                "sameAs": "nddf:ins003937",
+                "sameAsLabel": "PENICILLIN G POTASSIUM"
+            },
+            "gnn-8254_01": "PENICILLIN G POTASSIUM",
+            "comment-8254_01": "This AS AD pointer has changed to 13937 from 4849",
+            "expanded_gnn-8254_01": "PENICILLIN G POTASSIUM"
+        },
+        {
+            "_id": "8254_01-1009",
+            "type": "cmumpss:Allergies_Selections-8254_01",
+            "label": "PENTIDS 200",
+            "bn_gnn-8254_01": "PENTIDS 200",
+            "allergy_definitions-8254_01": {
+                "id": "8254_011-13937",
+                "label": "PENICILLIN G POTASSIUM"
+            },
+            "hicl_source-8254_01": {
+                "id": "8250-3937",
+                "label": "PENICILLIN G POTASSIUM",
+                "sameAs": "nddf:ins003937",
+                "sameAsLabel": "PENICILLIN G POTASSIUM"
+            },
+            "gnn-8254_01": "PENICILLIN G POTASSIUM",
+            "comment-8254_01": "This AS AD pointer has changed to 13937 from 4849",
+            "expanded_gnn-8254_01": "PENICILLIN G POTASSIUM"
+        }
+    ]
+}

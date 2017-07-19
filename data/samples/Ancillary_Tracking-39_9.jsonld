@@ -1,0 +1,82 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@graph": [
+        {
+            "_id": "39_9-1",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "PAD",
+            "name-39_9": "PAD",
+            "description-39_9": "Patient Administration"
+        },
+        {
+            "_id": "39_9-2",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "PAS",
+            "name-39_9": "PAS",
+            "description-39_9": "Patient Appointment and Scheduling"
+        },
+        {
+            "_id": "39_9-3",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "CLN",
+            "name-39_9": "CLN",
+            "description-39_9": "Clinical"
+        },
+        {
+            "_id": "39_9-4",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "NRS",
+            "name-39_9": "NRS",
+            "description-39_9": "Nursing"
+        },
+        {
+            "_id": "39_9-5",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "DSK",
+            "name-39_9": "DSK",
+            "description-39_9": "Desktop"
+        },
+        {
+            "_id": "39_9-6",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "RAD",
+            "name-39_9": "RAD",
+            "description-39_9": "Radiology"
+        },
+        {
+            "_id": "39_9-7",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "LAB",
+            "name-39_9": "LAB",
+            "description-39_9": "Laboratory"
+        },
+        {
+            "_id": "39_9-8",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "PHR",
+            "name-39_9": "PHR",
+            "description-39_9": "Pharmacy"
+        },
+        {
+            "_id": "39_9-9",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "ORE",
+            "name-39_9": "ORE",
+            "description-39_9": "Order Entry"
+        },
+        {
+            "_id": "39_9-10",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "MSA",
+            "name-39_9": "MSA",
+            "description-39_9": "Medical Service Accounting"
+        },
+        {
+            "_id": "39_9-11",
+            "type": "cmumpss:Ancillary_Tracking-39_9",
+            "label": "DTS",
+            "name-39_9": "DTS",
+            "description-39_9": "Dietetics"
+        }
+    ]
+}

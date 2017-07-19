@@ -1,0 +1,165 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@graph": [
+        {
+            "_id": "8728-1",
+            "type": "cmumpss:Antibiotic_Panel_File-8728",
+            "label": "GRAM NEG",
+            "antibiotic_panel-8728": "GRAM NEG",
+            "default_antibiotics-8728": [
+                {
+                    "id": "62_12-4",
+                    "label": "AMIKACIN"
+                },
+                {
+                    "id": "62_12-6",
+                    "label": "AMPICILLIN"
+                },
+                {
+                    "id": "62_12-8",
+                    "label": "CEFTAZIDIME"
+                },
+                {
+                    "id": "62_12-12",
+                    "label": "CEFAZOLIN"
+                },
+                {
+                    "id": "62_12-32",
+                    "label": "GENTAMICIN"
+                },
+                {
+                    "id": "62_12-42",
+                    "label": "NITROFURANTOIN"
+                },
+                {
+                    "id": "62_12-56",
+                    "label": "PIPERACILLIN_TAZOBACTAM"
+                },
+                {
+                    "id": "62_12-68",
+                    "label": "TOBRAMYCIN"
+                },
+                {
+                    "id": "62_12-74",
+                    "label": "TRIMETH_SULFA"
+                },
+                {
+                    "id": "62_12-84",
+                    "label": "CIPROFLOXACIN"
+                },
+                {
+                    "id": "62_12-86",
+                    "label": "TICARCILLIN_CA"
+                },
+                {
+                    "id": "62_12-92",
+                    "label": "CEFTRIAXONE"
+                },
+                {
+                    "id": "62_12-96",
+                    "label": "IMIPENEM"
+                },
+                {
+                    "id": "62_12-125",
+                    "label": "AMPICILLIN_SULBACTAM"
+                },
+                {
+                    "id": "62_12-138",
+                    "label": "LEVOFLOXACIN"
+                },
+                {
+                    "id": "62_12-145",
+                    "label": "ESBL"
+                }
+            ],
+            "site_specimen-8728": [
+                {
+                    "id": "8728_01-70_1",
+                    "type": "cmumpss:Site_Specimen-8728_01",
+                    "site_specimen-8728_01": {
+                        "id": "61-70",
+                        "label": "BLOOD"
+                    }
+                },
+                {
+                    "id": "8728_01-71_1",
+                    "type": "cmumpss:Site_Specimen-8728_01",
+                    "site_specimen-8728_01": {
+                        "id": "61-71",
+                        "label": "VOIDED URINE"
+                    },
+                    "antibiotics-8728_01": [
+                        {
+                            "id": "62_12-4",
+                            "label": "AMIKACIN"
+                        },
+                        {
+                            "id": "62_12-6",
+                            "label": "AMPICILLIN"
+                        },
+                        {
+                            "id": "62_12-8",
+                            "label": "CEFTAZIDIME"
+                        },
+                        {
+                            "id": "62_12-12",
+                            "label": "CEFAZOLIN"
+                        },
+                        {
+                            "id": "62_12-32",
+                            "label": "GENTAMICIN"
+                        },
+                        {
+                            "id": "62_12-42",
+                            "label": "NITROFURANTOIN"
+                        },
+                        {
+                            "id": "62_12-56",
+                            "label": "PIPERACILLIN_TAZOBACTAM"
+                        },
+                        {
+                            "id": "62_12-68",
+                            "label": "TOBRAMYCIN"
+                        },
+                        {
+                            "id": "62_12-74",
+                            "label": "TRIMETH_SULFA"
+                        },
+                        {
+                            "id": "62_12-84",
+                            "label": "CIPROFLOXACIN"
+                        },
+                        {
+                            "id": "62_12-86",
+                            "label": "TICARCILLIN_CA"
+                        },
+                        {
+                            "id": "62_12-92",
+                            "label": "CEFTRIAXONE"
+                        },
+                        {
+                            "id": "62_12-96",
+                            "label": "IMIPENEM"
+                        },
+                        {
+                            "id": "62_12-125",
+                            "label": "AMPICILLIN_SULBACTAM"
+                        },
+                        {
+                            "id": "62_12-127",
+                            "label": "AZTREONAM"
+                        },
+                        {
+                            "id": "62_12-138",
+                            "label": "LEVOFLOXACIN"
+                        },
+                        {
+                            "id": "62_12-145",
+                            "label": "ESBL"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

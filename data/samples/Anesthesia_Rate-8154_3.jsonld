@@ -1,0 +1,165 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@graph": [
+        {
+            "_id": "8154_3-2",
+            "type": "cmumpss:Anesthesia_Rate-8154_3",
+            "label": "00102",
+            "cpt_code-8154_3": {
+                "id": "8151-7202",
+                "label": "00102"
+            },
+            "anesthesia_rate_effective_date-8154_3": [
+                {
+                    "id": "8154_31-6869669_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "247.27"
+                },
+                {
+                    "id": "8154_31-6909299_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "1162"
+                },
+                {
+                    "id": "8154_31-6919097_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "1006"
+                },
+                {
+                    "id": "8154_31-6929370_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01/01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "886"
+                },
+                {
+                    "id": "8154_31-6939384_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "795"
+                },
+                {
+                    "id": "8154_31-6949079_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "749"
+                },
+                {
+                    "id": "8154_31-6958986_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "731"
+                },
+                {
+                    "id": "8154_31-6969484_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "174"
+                },
+                {
+                    "id": "8154_31-6978998_2",
+                    "type": "cmumpss:Anesthesia_Rate_Effective_Date-8154_31",
+                    "anesth_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "anesth_end_rate_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "source_effective_date-8154_31": {
+                        "value": "1990-01-01",
+                        "type": "xsd:date"
+                    },
+                    "rate-8154_31": "150"
+                }
+            ]
+        }
+    ]
+}
