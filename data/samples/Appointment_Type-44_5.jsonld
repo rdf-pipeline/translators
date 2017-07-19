@@ -1,0 +1,137 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@graph": [
+        {
+            "_id": "44_5-1",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "RAD*",
+            "name-44_5": "RAD*",
+            "description-44_5": "RAD APPOINTMENT",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "FOLLOW-UP",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-2",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "NEW",
+            "name-44_5": "NEW",
+            "description-44_5": "NEW APPTS",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "INITIAL",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-3",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "NWA",
+            "name-44_5": "NWA",
+            "description-44_5": "NEW ACTIVE DUTY APPTS",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "INITIAL",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-4",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "RET",
+            "name-44_5": "RET",
+            "description-44_5": "RETURN APPTS",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "FOLLOW-UP",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-5",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "PHY",
+            "name-44_5": "PHY",
+            "description-44_5": "PRE SCHOOL PHYSICALS",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "INITIAL",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-5",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "PHY",
+            "name-44_5": "PHY",
+            "description-44_5": "PRE SCHOOL PHYSICALS",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "INITIAL",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-6",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "WCC",
+            "name-44_5": "WCC",
+            "description-44_5": "WELL CHILD CLINIC",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "INITIAL",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-7",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "WBC",
+            "name-44_5": "WBC",
+            "description-44_5": "WELL BABY CHECK",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "FOLLOW-UP",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-8",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "ACUTE",
+            "name-44_5": "ACUTE",
+            "description-44_5": "ACUTE CARE",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "INITIAL",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-9",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "AFTER",
+            "name-44_5": "AFTER",
+            "description-44_5": "AFTER HOURS CLINIC",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "INITIAL",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        },
+        {
+            "_id": "44_5-10",
+            "type": "cmumpss:Appointment_Type-44_5",
+            "label": "F_U",
+            "name-44_5": "F/U",
+            "description-44_5": "FOLLOW-UP APPT",
+            "are_appt_slots_searchable-44_5": true,
+            "status-44_5": "INACTIVE",
+            "category-44_5": "FOLLOW-UP",
+            "medical_appointment_type-44_5": true,
+            "nonmedical_appointment_type-44_5": true
+        }
+    ]
+}
