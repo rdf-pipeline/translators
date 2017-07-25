@@ -1,0 +1,173 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "102_1-1",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "DRUG-DRUG INTERACTION",
+      "name-102_1": "DRUG-DRUG INTERACTION",
+      "message_text-102_1": "W !!,\"This order represents a potential drug-drug interaction.\""
+    },
+    {
+      "_id": "102_1-2",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "DRUG-ALLERGY INTERACTION",
+      "name-102_1": "DRUG-ALLERGY INTERACTION",
+      "message_text-102_1": "W !!,\"This order represents a potential drug-allergy interaction.\""
+    },
+    {
+      "_id": "102_1-3",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "LAB DUPLICATE",
+      "name-102_1": "LAB DUPLICATE",
+      "message_text-102_1": "W !!,\"There has already been an order made for the same lab test.\""
+    },
+    {
+      "_id": "102_1-8",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "RAD BARIUM USED",
+      "name-102_1": "RAD BARIUM USED",
+      "message_text-102_1": "D WARN^RAOR9(\"B\",.RAORW,RAMSG,RABDAYS)"
+    },
+    {
+      "_id": "102_1-9",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "RAD CONTRAST USED",
+      "name-102_1": "RAD CONTRAST USED",
+      "message_text-102_1": "D WARN^RAOR9(\"C\",.RAORW,RAMSG,RACDAYS)"
+    },
+    {
+      "_id": "102_1-11",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "ADT ACTIVE ADM",
+      "name-102_1": "ADT ACTIVE ADM",
+      "message_text-102_1": "W !!,?5,\"**** EXISTING ACTIVE ADMISSION ORDER ****\""
+    },
+    {
+      "_id": "102_1-12",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "ADT ACTIVE DIS",
+      "name-102_1": "ADT ACTIVE DIS",
+      "message_text-102_1": "W !!,?5,\"**** EXISTING ACTIVE DISPOSITION ORDER ****\""
+    },
+    {
+      "_id": "102_1-13",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "ADT ACTIVE TRN",
+      "name-102_1": "ADT ACTIVE TRN",
+      "message_text-102_1": "W !!,?5,\"**** EXISTING ACTIVE TRANSFER ORDER ****\""
+    },
+    {
+      "_id": "102_1-14",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "ADT PATIENT ADM",
+      "name-102_1": "ADT PATIENT ADM",
+      "message_text-102_1": "W !!?5,\"**** ATTEMPT TO ADMIT AN INPATIENT ****\""
+    },
+    {
+      "_id": "102_1-15",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "ADT PATIENT TRN",
+      "name-102_1": "ADT PATIENT TRN",
+      "message_text-102_1": " W !!?5,\"**** ATTEMPT TO TRANSFER AN OUTPATIENT ****\",!?5,\"This patient must be admitted before transfer is possible.\""
+    },
+    {
+      "_id": "102_1-16",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "ADT PATIENT DIS",
+      "name-102_1": "ADT PATIENT DIS",
+      "message_text-102_1": "W !!?5,\"**** ATTEMPT TO DISCHARGE AN OUTPATIENT ****\",!?5,\"This patient must be admitted before discharge is possible.\""
+    },
+    {
+      "_id": "102_1-17",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "NURSE SIGNATURE OVERDUE",
+      "name-102_1": "NURSE SIGNATURE OVERDUE"
+    },
+    {
+      "_id": "102_1-18",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "HCP SIGNATURE OVERDUE",
+      "name-102_1": "HCP SIGNATURE OVERDUE"
+    },
+    {
+      "_id": "102_1-19",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "COUNTERSIGNATURE OVERDUE",
+      "name-102_1": "COUNTERSIGNATURE OVERDUE"
+    },
+    {
+      "_id": "102_1-20",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "STAT ORDER NOT ACKNOWLEDGED",
+      "name-102_1": "STAT ORDER NOT ACKNOWLEDGED"
+    },
+    {
+      "_id": "102_1-21",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "STAT ORDER NOT RESULTED",
+      "name-102_1": "STAT ORDER NOT RESULTED"
+    },
+    {
+      "_id": "102_1-22",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "DRUG DUPLICATION",
+      "name-102_1": "DRUG DUPLICATION",
+      "message_text-102_1": "W !!,\"This order represents a drug duplication.\""
+    },
+    {
+      "_id": "102_1-23",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "DRUG OVERLAP",
+      "name-102_1": "DRUG OVERLAP",
+      "message_text-102_1": "W !!,\"This order represents a drug overlap.\""
+    },
+    {
+      "_id": "102_1-24",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "DRUG-WARNING",
+      "name-102_1": "DRUG-WARNING",
+      "message_text-102_1": "D DRUG^ORWARN"
+    },
+    {
+      "_id": "102_1-25",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "ADT ABSENCE",
+      "name-102_1": "ADT ABSENCE",
+      "message_text-102_1": "W !!?5,\"**** ATTEMPT TO TRANSFER A PATIENT ON ABSENT STATUS ****\",!?5,\"This patient must be returned from Absence before transfer is possible.\""
+    },
+    {
+      "_id": "102_1-26",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "DUPLICATE ORDER",
+      "name-102_1": "DUPLICATE ORDER"
+    },
+    {
+      "_id": "102_1-27",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "RAD CONTRAST ALLERGY",
+      "name-102_1": "RAD CONTRAST ALLERGY",
+      "message_text-102_1": "W !!,\"Patient allergic to X-RAY CONTRAST MATERIAL\",!"
+    },
+    {
+      "_id": "102_1-28",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "RAD BARIUM ALLERGY",
+      "name-102_1": "RAD BARIUM ALLERGY",
+      "message_text-102_1": "W !!,\"Patient allergic to BARIUM.\",!"
+    },
+    {
+      "_id": "102_1-29",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "REGIONAL SCHEDULER",
+      "name-102_1": "REGIONAL SCHEDULER",
+      "message_text-102_1": "W !,\"This order is being processed on a regional database\",!"
+    },
+     {
+      "_id": "102_1-30",
+      "type": "cmumpss:Order_Warnings-102_1",
+      "label": "PDTS-STATUS",
+      "name-102_1": "PDTS-STATUS"
+    }
+  ]
+}
