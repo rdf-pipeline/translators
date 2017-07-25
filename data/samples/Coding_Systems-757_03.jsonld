@@ -1,0 +1,173 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "757_03-1",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "ICD89",
+      "source_abbreviation-757_03": "ICD89",
+      "nomenclature-757_03": "ICD-9",
+      "source_title-757_03": "Intl' Class of Diseases, 9th Rev, 1989"
+    },
+    {
+      "_id": "757_03-3",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "CPT89",
+      "source_abbreviation-757_03": "CPT89",
+      "nomenclature-757_03": "CPT-4",
+      "source_title-757_03": "Current Procedural Terminology, 1989"
+    },
+    {
+      "_id": "757_03-4",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "DSM3R",
+      "source_abbreviation-757_03": "DSM3R",
+      "nomenclature-757_03": "DSM-IIIR",
+      "source_title-757_03": "Diag & Stat Manual of Mental Dis, 3rd Ed, Rev, 1987"
+    },
+    {
+      "_id": "757_03-5",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2T",
+      "source_abbreviation-757_03": "SNM2T",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Topographic, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-6",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2M",
+      "source_abbreviation-757_03": "SNM2M",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Morphologic, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-7",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2F",
+      "source_abbreviation-757_03": "SNM2F",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Functions, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-8",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2E",
+      "source_abbreviation-757_03": "SNM2E",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Etiologic, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-9",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2D",
+      "source_abbreviation-757_03": "SNM2D",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Diagnostic, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-10",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "NAN90",
+      "source_abbreviation-757_03": "NAN90",
+      "nomenclature-757_03": "NANDA",
+      "source_title-757_03": "N Amer Nursing Diag Assoc, 9th Ed, Mar 1990"
+    },
+    {
+      "_id": "757_03-12",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "ICD91",
+      "source_abbreviation-757_03": "ICD91",
+      "nomenclature-757_03": "ICD-9",
+      "source_title-757_03": "Intl' Class of Diseases, 9th Rev, Clin Mod, 1991"
+    },
+    {
+      "_id": "757_03-14",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "LCH90",
+      "source_abbreviation-757_03": "LCH90",
+      "nomenclature-757_03": "LIB OF CONG",
+      "source_title-757_03": "Lib of Congress Subj Headings, 11th Ed, 1990"
+    },
+    {
+      "_id": "757_03-15",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "MTH",
+      "source_abbreviation-757_03": "MTH",
+      "nomenclature-757_03": "METATHESAURUS",
+      "source_title-757_03": "UMLS Methathesaurus"
+    },
+    {
+      "_id": "757_03-17",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "UNDEF",
+      "source_abbreviation-757_03": "UNDEF",
+      "nomenclature-757_03": "UNDEFINED",
+      "source_title-757_03": "Undefined Code/Coding System (Code = \"None\")"
+    },
+    {
+      "_id": "757_03-18",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2P",
+      "source_abbreviation-757_03": "SNM2P",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Procedures, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-19",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2J",
+      "source_abbreviation-757_03": "SNM2J",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Occupation, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-20",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2L",
+      "source_abbreviation-757_03": "SNM2L",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Living Organisms, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-21",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2C",
+      "source_abbreviation-757_03": "SNM2C",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Chemicals, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-22",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2G",
+      "source_abbreviation-757_03": "SNM2G",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Modifiers, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-23",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2A",
+      "source_abbreviation-757_03": "SNM2A",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, Physical Agents, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-24",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "SNM2N",
+      "source_abbreviation-757_03": "SNM2N",
+      "nomenclature-757_03": "SNOMED 2",
+      "source_title-757_03": "Sys Nomen of Med, General, 2nd Ed, 1982"
+    },
+    {
+      "_id": "757_03-25",
+      "type": "cmumpss:Coding_Systems-757_03",
+      "label": "NIC92",
+      "source_abbreviation-757_03": "NIC92",
+      "nomenclature-757_03": "NIC",
+      "source_title-757_03": "Nursing Intervention Classifications, 1992"
+    }
+  ]
+}

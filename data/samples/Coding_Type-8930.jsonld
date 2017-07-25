@@ -1,0 +1,36 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8930-1",
+      "type": "cmumpss:Coding_Type-8930",
+      "label": "SNOMED",
+      "name-8930": "SNOMED",
+      "functional_area-8930": "LABORATORY",
+      "source_files-8930": [
+        {
+          "id": "8930_01-61.1_1",
+          "type": "cmumpss:Source_Files-8930_01",
+          "source_file-8930_01": {
+            "id": "1-61.1",
+            "label": "MORPHOLOGY FIELD"
+          },
+          "code_field_in_source-8930_01": "2",
+          "interpretation_field_in_source-8930_01": ".01",
+          "code_transformation-8930_01": "S X=\"M-\"_X"
+        },
+        {
+          "id": "8930_01-61.2_1",
+          "type": "cmumpss:Source_Files-8930_01",
+          "source_file-8930_01": {
+            "id": "1-61.2",
+            "label": "ETIOLOGY FIELD"
+          },
+          "code_field_in_source-8930_01": "2",
+          "interpretation_field_in_source-8930_01": ".01",
+          "code_transformation-8930_01": "S X=\"E-\"_X"
+        }
+      ]
+    }
+  ]
+}
