@@ -1,0 +1,310 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "23-1",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "ARMY",
+      "name-23": "ARMY",
+      "code-23": "A",
+      "abbreviation-23": "ARMY",
+      "sidr_svc_flag-23": "A",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "A",
+      "deers_pit_code-23": "A"
+    },
+    {
+      "_id": "23-2",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "AIR FORCE",
+      "name-23": "AIR FORCE",
+      "code-23": "F",
+      "abbreviation-23": "USAF",
+      "sidr_svc_flag-23": "F",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "F",
+      "deers_pit_code-23": "F"
+    },
+    {
+      "_id": "23-3",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "MARINE CORPS",
+      "name-23": "MARINE CORPS",
+      "code-23": "M",
+      "abbreviation-23": "USMC",
+      "sidr_svc_flag-23": "N",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "M",
+      "deers_pit_code-23": "M"
+    },
+    {
+      "_id": "23-4",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "NAVY",
+      "name-23": "NAVY",
+      "code-23": "N",
+      "abbreviation-23": "USN",
+      "sidr_svc_flag-23": "N",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "N",
+      "deers_pit_code-23": "N"
+    },
+    {
+      "_id": "23-5",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "NATIONAL OCEANIC & ATMOSPHERIC ADMIN",
+      "name-23": "NATIONAL OCEANIC & ATMOSPHERIC ADMIN",
+      "code-23": "B",
+      "abbreviation-23": "NOAA",
+      "sidr_svc_flag-23": "B",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "I",
+      "deers_pit_code-23": "O"
+    },
+    {
+      "_id": "23-6",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "COAST GUARD",
+      "name-23": "COAST GUARD",
+      "code-23": "C",
+      "abbreviation-23": "USCG",
+      "sidr_svc_flag-23": "B",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "P",
+      "deers_pit_code-23": "C"
+    },
+    {
+      "_id": "23-7",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "BRANCH OF SVC UNKNOWN",
+      "name-23": "BRANCH OF SVC UNKNOWN",
+      "code-23": "U",
+      "abbreviation-23": "UNK",
+      "sidr_svc_flag-23": "B",
+      "single_svc_flag-23": true
+    },
+    {
+      "_id": "23-8",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "U.S. PUBLIC HEALTH SERVICE",
+      "name-23": "U.S. PUBLIC HEALTH SERVICE",
+      "code-23": "P",
+      "abbreviation-23": "PHS",
+      "sidr_svc_flag-23": "P",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "E",
+      "deers_pit_code-23": "H"
+    },
+    {
+      "_id": "23-9",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "CIVILIAN NON-SERVICE AFFILIATED",
+      "name-23": "CIVILIAN NON-SERVICE AFFILIATED",
+      "code-23": "X",
+      "abbreviation-23": "CIV",
+      "sidr_svc_flag-23": "C",
+      "single_svc_flag-23": true
+    },
+    {
+      "_id": "23-10",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "ARMY_AIR FORCE",
+      "name-23": "ARMY/AIR FORCE",
+      "code-23": "AF",
+      "abbreviation-23": "COM"
+    },
+    {
+      "_id": "23-11",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "ARMY_AIR FORCE_NAVY",
+      "name-23": "ARMY/AIR FORCE/NAVY",
+      "code-23": "AFN",
+      "abbreviation-23": "COM"
+    },
+    {
+      "_id": "23-12",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "ARMY_NAVY",
+      "name-23": "ARMY/NAVY",
+      "code-23": "AN",
+      "abbreviation-23": "COM"
+    },
+    {
+      "_id": "23-13",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "AIR FORCE_NAVY",
+      "name-23": "AIR FORCE/NAVY",
+      "code-23": "FN",
+      "abbreviation-23": "COM"
+    },
+    {
+      "_id": "23-14",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "VETERANS ADMINISTRATION",
+      "name-23": "VETERANS ADMINISTRATION",
+      "code-23": "V",
+      "abbreviation-23": "VET",
+      "sidr_svc_flag-23": "V",
+      "single_svc_flag-23": true
+    },
+    {
+      "_id": "23-15",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "OTHER_NOT APPLICABLE",
+      "name-23": "OTHER/NOT APPLICABLE",
+      "code-23": "O",
+      "abbreviation-23": "OTH",
+      "sidr_svc_flag-23": "B",
+      "single_svc_flag-23": true,
+      "deers_elig_code-23": "X",
+      "deers_pit_code-23": "X"
+    },
+    {
+      "_id": "23-16",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "FOREIGN MILITARY",
+      "name-23": "FOREIGN MILITARY",
+      "code-23": "FM",
+      "abbreviation-23": "FMIL",
+      "sidr_svc_flag-23": "M",
+      "single_svc_flag-23": true
+    },
+    {
+      "_id": "23-17",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "ORDNANCE CORPS",
+      "name-23": "ORDNANCE CORPS",
+      "code-23": "OD",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-18",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "PROFESSOR USMA",
+      "name-23": "PROFESSOR USMA",
+      "code-23": "PR",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-19",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "QUARTERMASTER CORPS",
+      "name-23": "QUARTERMASTER CORPS",
+      "code-23": "QM",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-20",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "SIGNAL CORPS",
+      "name-23": "SIGNAL CORPS",
+      "code-23": "SC",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-21",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "SPECIAL FORCES",
+      "name-23": "SPECIAL FORCES",
+      "code-23": "SF",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-22",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "TRANSPORTATION CORPS",
+      "name-23": "TRANSPORTATION CORPS",
+      "code-23": "TC",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-23",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "UNKNOWN",
+      "name-23": "UNKNOWN",
+      "code-23": "FN",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-24",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "VETERINARY CORPS",
+      "name-23": "VETERINARY CORPS",
+      "code-23": "VC",
+      "dba_inactive_flag-23": "INACTIVE",
+      "deactivation_date-23": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "23-25",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "OFFICE OF THE SECRETARY OF DEFENSE",
+      "name-23": "OFFICE OF THE SECRETARY OF DEFENSE",
+      "code-23": "D",
+      "abbreviation-23": "OSD",
+      "deers_pit_code-23": "D"
+    },
+    {
+      "_id": "23-26",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "FOREIGN ARMY",
+      "name-23": "FOREIGN ARMY",
+      "abbreviation-23": "FM1",
+      "deers_pit_code-23": "1"
+    },
+    {
+      "_id": "23-27",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "FOREIGN AIR FORCE",
+      "name-23": "FOREIGN AIR FORCE",
+      "abbreviation-23": "FM4",
+      "deers_pit_code-23": "4"
+    },
+    {
+      "_id": "23-28",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "FOREIGN MARINE CORPS",
+      "name-23": "FOREIGN MARINE CORPS",
+      "abbreviation-23": "FM3",
+      "deers_pit_code-23": "3"
+    },
+    {
+      "_id": "23-29",
+      "type": "cmumpss:Branch_Of_Service-23",
+      "label": "FOREIGN NAVY",
+      "name-23": "FOREIGN NAVY",
+      "abbreviation-23": "FM2",
+      "deers_pit_code-23": "2"
+    }
+  ]
+}

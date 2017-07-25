@@ -1,0 +1,173 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8106-2",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "CONDITION IMPROVED",
+      "name-8106": "CONDITION IMPROVED",
+      "code-8106": "CI"
+    },
+    {
+      "_id": "8106-3",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "CONDITION UNCHANGED",
+      "name-8106": "CONDITION UNCHANGED",
+      "code-8106": "CU"
+    },
+    {
+      "_id": "8106-4",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "CONDITION WORSE",
+      "name-8106": "CONDITION WORSE",
+      "code-8106": "CW"
+    },
+    {
+      "_id": "8106-5",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "EXPIRED",
+      "name-8106": "EXPIRED",
+      "code-8106": "DE",
+      "dba_inactive_flag-8106": "INACTIVE",
+      "deactivation_date-8106": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8106-6",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "EXPECTED",
+      "name-8106": "EXPECTED",
+      "code-8106": "EX"
+    },
+    {
+      "_id": "8106-8",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "NOT EXPECTED",
+      "name-8106": "NOT EXPECTED",
+      "code-8106": "NE"
+    },
+    {
+      "_id": "8106-9",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "REMOVED FROM ROSTER",
+      "name-8106": "REMOVED FROM ROSTER",
+      "code-8106": "RE"
+    },
+     {
+      "_id": "8106-11",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "EXCELLENT",
+      "name-8106": "EXCELLENT",
+      "code-8106": "E",
+      "dba_inactive_flag-8106": "INACTIVE",
+      "deactivation_date-8106": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8106-12",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "FAIR",
+      "name-8106": "FAIR",
+      "code-8106": "FA"
+    },
+    {
+      "_id": "8106-13",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "GOOD",
+      "name-8106": "GOOD",
+      "code-8106": "GO"
+    },
+    {
+      "_id": "8106-14",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "GUARDED",
+      "name-8106": "GUARDED",
+      "code-8106": "GU"
+    },
+    {
+      "_id": "8106-15",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "MORIBUND",
+      "name-8106": "MORIBUND",
+      "code-8106": "MO"
+    },
+    {
+      "_id": "8106-16",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "POOR",
+      "name-8106": "POOR",
+      "code-8106": "PO"
+    },
+    {
+      "_id": "8106-17",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "QUESTIONABLE",
+      "name-8106": "QUESTIONABLE",
+      "code-8106": "QU"
+    },
+    {
+      "_id": "8106-18",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "UNKNOWN",
+      "name-8106": "UNKNOWN",
+      "code-8106": "U",
+      "dba_inactive_flag-8106": "INACTIVE",
+      "deactivation_date-8106": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8106-19",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "FATAL",
+      "name-8106": "FATAL",
+      "code-8106": "F",
+      "dba_inactive_flag-8106": "INACTIVE",
+      "deactivation_date-8106": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8106-20",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "NOT ASSURED, FURTHER OBSERVATION NECESSARY",
+      "name-8106": "NOT ASSURED, FURTHER OBSERVATION NECESSARY",
+      "code-8106": "NA",
+      "dba_inactive_flag-8106": "INACTIVE",
+      "deactivation_date-8106": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8106-21",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "RECOVERY POSSIBILITY NOT ENTERED",
+      "name-8106": "RECOVERY POSSIBILITY NOT ENTERED",
+      "code-8106": "RP",
+      "dba_inactive_flag-8106": "INACTIVE",
+      "deactivation_date-8106": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8106-22",
+      "type": "cmumpss:Casualty_Prognosis-8106",
+      "label": "REMOVED FROM SI_VSI STATUS",
+      "name-8106": "REMOVED FROM SI/VSI STATUS",
+      "code-8106": "RE",
+      "dba_inactive_flag-8106": "INACTIVE",
+      "deactivation_date-8106": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    }
+  ]
+}

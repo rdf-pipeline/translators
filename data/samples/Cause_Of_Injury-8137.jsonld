@@ -1,0 +1,257 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8137-2",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "001",
+      "code-8137": "001",
+      "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Take-off from or landing on aircraft carrier (includes taxiing)."
+    },
+    {
+      "_id": "8137-3",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "000",
+      "code-8137": "000",
+      "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, BOARDING OR ALIGHTING",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved:Boarding or alighting."
+    },
+    {
+      "_id": "8137-4",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "002",
+      "code-8137": "002",
+      "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, TAKEOFF,OTHER (INC CRASH ON TAKEOFF)",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Taxiing (includes collision while taxiing, etc.) other or unspecified."
+    },
+    {
+      "_id": "8137-6",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "004",
+      "code-8137": "004",
+      "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, LANDING (INC CRASH ON LANDING)",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved:Landing (includes crash on landing, etc.) other or unspecified."
+    },
+    {
+      "_id": "8137-7",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "005",
+      "code-8137": "005",
+      "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, TERM OF FLIGHT NOT AT AIRFIELD",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: "
+    },
+     {
+      "_id": "8137-8",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "006",
+      "code-8137": "006",
+      "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, RADIATION INJURY & OTHER NUC",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029) Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved:Radiation injury or other nuclear accident classifiable here(transport accident, radiation from nuclear powered aircraft)."
+    },
+    {
+      "_id": "8137-9",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "009",
+      "code-8137": "009",
+      "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, OTHER INJURY",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Other injury classifiable here (includes carbon monoxidepoisoning, fall due to hazards of flight, etc.; excludeshypoxia and barotrauma in flight (820) and airsickness (870)."
+    },
+    {
+      "_id": "8137-10",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "010",
+      "code-8137": "010",
+      "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, BOARDING OR ALIGHTING",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) rotary-wing militaryaircraft and the accident involved: Boarding or alighting."
+    },
+    {
+      "_id": "8137-11",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "011",
+      "code-8137": "011",
+      "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) rotary-wing militaryaircraft and the accident involved:Take-off from or landing on aircraft carrier (includes taxiing,hovering, etc.)"
+    },
+    {
+      "_id": "8137-12",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "012",
+      "code-8137": "012",
+      "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TAXIING (INC COLLISION) & HOVERING",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) rotary-wing militaryaircraft and the accident involved: Taxiing (includes collision while taxiing), hovering, etc. otheror unspecified."
+    },
+    {
+      "_id": "8137-13",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "013",
+      "code-8137": "013",
+      "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TAKEOFF",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) rotary-wing militaryaircraft and the accident involved: Take-off."
+    },
+    {
+      "_id": "8137-14",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "014",
+      "code-8137": "014",
+      "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, LANDING",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) rotary-wing militaryaircraft and the accident involved:Landing."
+    },
+    {
+      "_id": "8137-15",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "015",
+      "code-8137": "015",
+      "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TERMINATION OF FLIGHT",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) rotary-wing militaryaircraft and the accident involved: Termination of flight."
+    },
+    {
+      "_id": "8137-16",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "016",
+      "code-8137": "016",
+      "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, OTHER",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) rotary-wing militaryaircraft and the accident involved:Other. "
+    },
+    {
+      "_id": "8137-17",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "017",
+      "code-8137": "017",
+      "name-8137": "AIR ACCIDENT, OTHER MILITARY AIRCRAFT, GLIDER",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) the following militaryaircraft:Glider. "
+    },
+    {
+      "_id": "8137-18",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "018",
+      "code-8137": "018",
+      "name-8137": "AIR ACCIDENT, OTHER MILITARY AIRCRAFT, LIGHTER-THAN-AIR CRAFT",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) the following militaryaircraft:Lighter-than-air craft."
+    },
+    {
+      "_id": "8137-19",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "019",
+      "code-8137": "019",
+      "name-8137": "AIR ACCIDENT, OTHER MILITARY AIRCRAFT, PLATFORM OR LIKE AIRCRAFT",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding, etc.) the following militaryaircraft:Platform (or like aircraft).  "
+    },
+    {
+      "_id": "8137-20",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "020",
+      "code-8137": "020",
+      "name-8137": "AIR ACCIDENT, PARACHUTING FROM DAMAGED OR FAILED MILITARY AIRCRAFT",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was parachuting from military aircraft not becauseof aircraft damage or failure, and was injured by:Any cause (see also 050 to 059)."
+    },
+    {
+      "_id": "8137-49",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "052",
+      "code-8137": "052",
+      "name-8137": "ESCAPE INJURY, AIR OR SPACECRAFT CREW, FROM IMPACT WITH PARTS OF CRAFT",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ESCAPE SYSTEM INJURIES - AIRCREW OR SPACECRAFT CREW (050-059)Injuries arising from:Impact with parts of aircraft or spacecraft. "
+    },
+    {
+      "_id": "8137-50",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "053",
+      "code-8137": "053",
+      "name-8137": "ESCAPE INJURY, AIR OR SPACECRAFT CREW, FROM WINDBLAST",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ESCAPE SYSTEM INJURIES - AIRCREW OR SPACECRAFT CREW (050-059)Injuries arising from:Windlblast. "
+    },
+    {
+      "_id": "8137-51",
+      "type": "cmumpss:Cause_Of_Injury-8137",
+      "label": "054",
+      "code-8137": "054",
+      "name-8137": "ESCAPE INJURY, AIR OR SPACECRAFT CREW, FROM FALL",
+      "category-8137": {
+        "id": "8145-1",
+        "label": "I"
+      },
+      "description-8137": "ESCAPE SYSTEM INJURIES - AIRCREW OR SPACECRAFT CREW (050-059)Injuries arising from:Incidents during fall (when free from aircraft or spacecraft). "
+    }
+  ]
+}
