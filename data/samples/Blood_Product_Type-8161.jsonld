@@ -1,0 +1,149 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8161-1",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3AX",
+      "code-8161": "3AX",
+      "description-8161": "WHOLE BLOOD",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-1",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3AX",
+      "code-8161": "3AX",
+      "description-8161": "WHOLE BLOOD",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-3",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3CX",
+      "code-8161": "3CX",
+      "description-8161": "WHOLE BLOOD, DIRECTED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-4",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3DX",
+      "code-8161": "3DX",
+      "description-8161": "WHOLE BLOOD, CRYOPRECIPITATE REMOVED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-5",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3GX",
+      "code-8161": "3GX",
+      "description-8161": "WHOLE BLOOD, PLATELETS REMOVED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-6",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3JX",
+      "code-8161": "3JX",
+      "description-8161": "WHOLE BLOOD, THERAPEUTIC",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-7",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3KX",
+      "code-8161": "3KX",
+      "description-8161": "WHOLE BLOOD, LEUKOCYTES REMOVED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-8",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3LX",
+      "code-8161": "3LX",
+      "description-8161": "WHOLE BLOOD, IRRADIATED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-9",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3MX",
+      "code-8161": "3MX",
+      "description-8161": "WHOLE BLOOD, DIRECTED, IRRADIATED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-10",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3NX",
+      "code-8161": "3NX",
+      "description-8161": "WHOLE BLOOD, CRYO REMOVED, IRRADIATED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-11",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3PX",
+      "code-8161": "3PX",
+      "description-8161": "WHOLE BLOOD, PLATELETS REMOVED, IRRADIATED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    },
+    {
+      "_id": "8161-12",
+      "type": "cmumpss:Blood_Product_Type-8161",
+      "label": "3RX",
+      "code-8161": "3RX",
+      "description-8161": "WHOLE BLOOD, LEUKOCYTES REMOVED, IRRADIATED",
+      "dba_inactive_flag-8161": "INACTIVE",
+      "deactivation_date-8161": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      }
+    }
+  ]
+}
