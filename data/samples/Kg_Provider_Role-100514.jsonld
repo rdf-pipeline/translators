@@ -1,0 +1,86 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "100514-1",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "1",
+      "role_code-100514": "1",
+      "role_description-100514": "ATTENDING",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-2",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "2",
+      "role_code-100514": "2",
+      "role_description-100514": "ASSISTING",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-3",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "3",
+      "role_code-100514": "3",
+      "role_description-100514": "SUPERVISING",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-4",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "4",
+      "role_code-100514": "4",
+      "role_description-100514": "NURSE",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-5",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "5",
+      "role_code-100514": "5",
+      "role_description-100514": "PARA-PROFESSIONAL",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-6",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "6",
+      "role_code-100514": "6",
+      "role_description-100514": "OPERATING PROVIDER",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-7",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "7",
+      "role_code-100514": "7",
+      "role_description-100514": "SURGEON",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-8",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "8",
+      "role_code-100514": "8",
+      "role_description-100514": "ANESTHESIA",
+      "standard-100514": true,
+      "apv-100514": true
+    },
+    {
+      "_id": "100514-9",
+      "type": "cmumpss:Kg_Provider_Role-100514",
+      "label": "9",
+      "role_code-100514": "9",
+      "role_description-100514": "GME",
+      "standard-100514": true,
+      "apv-100514": true
+    }
+  ]
+}

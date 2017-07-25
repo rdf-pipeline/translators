@@ -1,0 +1,796 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8410-1",
+      "type": "cmumpss:Diet-8410",
+      "label": "REGULAR",
+      "name-8410": "REGULAR",
+      "abbrev-8410": "REG",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is designed to attain and maintain optimal nutritional status inpersons who do not require a therapeutic diet.  Based on 1990 DietaryGuidelines For Americans, it is used to promote optimal health, and reducerisks for development of major, chronic nutrition-related diseases.  Aselective menu is provided.  All foods are allowed.  Nutritional adequacyis dependent on individual food choices and adherence to recommendeddietary guidelines.  This diet is appropriate for pregnancy, lactation, andostomy. ",
+      "alternate_name-8410": [
+        "GENERAL",
+        "HOUSE",
+        "REG",
+        "PREGNANCY",
+        "LACTATION"
+      ]
+    },
+    {
+      "_id": "8410-2",
+      "type": "cmumpss:Diet-8410",
+      "label": "VEGETARIAN",
+      "name-8410": "VEGETARIAN",
+      "abbrev-8410": "VEG",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is composed mainly of plant foods, and may or may not includeeggs, dairy products, fish and other seafood, and poultry.  When carefullyplanned, the vegetarian diet supplies adequate amounts of all nutrientsrequired for tissue growth, maintenance, and repair.  Vegetarian diets arehighly individualized and must be tailored to patient's needs and desires. If not carefully planned, vegan or vegan-like diets that exclude all animalproducts may be deficient in the following nutrients:  calories, protein,calcium, vitamin D, iron, vitamin B12, and zinc.  The vegetarian diet isintended for patients who omit animal products from their diet forreligious preferences, health concerns, environmental considerations,humanitarian issues, ethical concerns, or economic or political reasons. ",
+      "alternate_name-8410": [
+        "LACTO-OVO VEGETARIAN",
+        "LACTO VEGETARIAN",
+        "OVO VEGETARIAN",
+        "VEGAN"
+      ]
+    },
+    {
+      "_id": "8410-3",
+      "type": "cmumpss:Diet-8410",
+      "label": "KOSHER",
+      "name-8410": "KOSHER",
+      "abbrev-8410": "KOSHER",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is designed to provide adequate nutrients and calories necessaryfor tissue growth, maintenance, and repair, while complying with Jewishdietary laws.  Generally, Kosher meals are procured from an outside sourceand are served using disposable dishes and utensils.  This diet is used forJewish patients who follow the practice of \"Kashrut\" (which refers toJewish dietary laws) and is individualized according to the patient's levelof observance of these laws, the community in which they live, custom, andpersonal preference.  Nutritional adequacy of a Kosher diet depends onindividual food choices. ",
+      "alternate_name-8410": [
+        "JEWISH",
+        "PAREVE",
+        "PARVE",
+        "KASHRUT"
+      ]
+    },
+    {
+      "_id": "8410-4",
+      "type": "cmumpss:Diet-8410",
+      "label": "HIGH CALORIE HIGH PROTEIN",
+      "name-8410": "HIGH CALORIE HIGH PROTEIN",
+      "abbrev-8410": "HICAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is a modification of a regular diet and is designed for thepatient with increased caloric and protein needs due to illness (acute orchronic), injury (i.e. burns, trauma), surgery, or malnutrition.  All foodsare included in this diet with emphasis on nutritionally dense foods. Modifications to a regular diet may include altering recipes, increasingportion sizes, and adding protein and/or calorie modules (i.e. ProMod andPolycose) to foods served.  Commercially-prepared supplements, as well ashome-made food supplements (i.e. shakes) are added to the diet to increasecalorie and protein content.  This diet is adequate in all nutrients, butis dependent on individual food choices. ",
+      "alternate_name-8410": [
+        "HI CAL HI PRO",
+        "HI PRO HI CAL",
+        "HIGH CAL HIGH PRO",
+        "HIGH PROTEIN HIGH CALORIE"
+      ]
+    },
+    {
+      "_id": "8410-5",
+      "type": "cmumpss:Diet-8410",
+      "label": "NO CONCENTRATED SWEETS",
+      "name-8410": "NO CONCENTRATED SWEETS",
+      "abbrev-8410": "NSWEET",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Modification of the regular menu eliminating concentrated sweets.  Typecalorie level and/or additional restrictions in the Dietary Comment field(i.e. 6 small meals).  This diet is adequate in all nutrients, but isdependent on individual food choices. ",
+      "alternate_name-8410": [
+        "NO SIMPLE SUGARS",
+        "LIBERAL DIABETIC",
+        "LIBERAL ADA"
+      ]
+    },
+    {
+      "_id": "8410-6",
+      "type": "cmumpss:Diet-8410",
+      "label": "CLEAR LIQUID",
+      "name-8410": "CLEAR LIQUID",
+      "abbrev-8410": "CL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is intended to supply fluids and energy in a form that requiresminimal digestion and stimulation of the GI tract.  It is used inpreparation for surgery, resuming feeding following surgery or oralalimentation, during acute GI disturbances, and in preparation for certaintests/examinations.  It is a minimal residue diet consisting of clearfluids or foods that are liquid at body temperature.  The clear liquid dietis usually inadequate in calories and most other nutrients with theexception of vitamin C.  If the diet is required for >3 days and/or thepatient is nutritionally debilitated, commercially prepared low-residueproducts should be included to supplement the diet. ",
+      "alternate_name-8410": [
+        "CL LIQ"
+      ]
+    },
+    {
+      "_id": "8410-7",
+      "type": "cmumpss:Diet-8410",
+      "label": "FULL LIQUID",
+      "name-8410": "FULL LIQUID",
+      "abbrev-8410": "FL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is designed for patients who have difficulty chewing, swallowing,or digesting solid foods due to surgery (oral surgery or plastic surgery ofthe face and neck area), esophageal or stomach disorders involvingstrictures or anatomical irregularity, chewing or swallowing dysfunctions,or acute illness, or it may be used postoperatively for patientsprogressing from clear liquids to solid foods.  The diet consists of foodsthat are liquid or semi-liquid at body temperature.  This diet may not besuitable for patients with lactose intolerance due to the diet beingcomprised largely of milk-based products.  In addition, modificationsshould be made for patients with hypercholesterolemia (due to the fatcontent) and diabetes mellitus and hypoglycemia (due to the highconcentration of simple carbohydrates).  This diet may be inadequate in allnutrients except calcium, vitamin C, and protein. ",
+      "alternate_name-8410": [
+        "FL LIQ"
+      ]
+    },
+    {
+      "_id": "8410-8",
+      "type": "cmumpss:Diet-8410",
+      "label": "COLD SEMILIQUID",
+      "name-8410": "COLD SEMILIQUID",
+      "abbrev-8410": "SEMI L",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is designed to be chemically, mechanically, and thermallynonirritating to the throat.  It is used following tonsillectomy,adenoidectomy, or other throat surgery, and as a progression to solidfoods.  This diet is characterized by soft, smooth textures, cold orlukewarm temperatures, and consistencies ranging from watery to thick. Chocolate products and foods and beverages that contain red and orange foodcoloring are excluded as they may mask hemoptysis (expectoration of blood).This diet includes milk-based products and therefore may be unsuitable forpatients who are lactose intolerant.  In addition, this diet may need to bemodified for diabetic and hypoglycemic patients due to the highconcentration of simple carbohydrates.  This diet is inadequate in vitaminC, niacin, thiamin, folacin, and iron, and is not intended for use for morethan 3 - 5 days. ",
+      "alternate_name-8410": [
+        "T & A"
+      ]
+    },
+    {
+      "_id": "8410-9",
+      "type": "cmumpss:Diet-8410",
+      "label": "DENTAL LIQUID",
+      "name-8410": "DENTAL LIQUID",
+      "abbrev-8410": "DENTAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is designed to provide foods that can be swallowed withoutchewing and with minimum muscular activity of the jaws, cheeks, and tongue.The diet is intended for patients who have had oral surgery, wired jaws,or dysphagia.  Fluids and foods are blenderized to a liquid form with theviscosity ranging in thickness from that of clear juice to cream soup. This diet should be individualized based on patient tolerance, acceptance,and mobility of jaws, cheeks, and tongue.  The diet can be adequate in allnutrients.  However, nutritional adequacy is dependent on individual foodchoices and volume consumed.  To ensure adequate volume consumption, small,frequent feedings are recommended. ",
+      "alternate_name-8410": [
+        "BLENDERIZED"
+      ]
+    },
+    {
+      "_id": "8410-10",
+      "type": "cmumpss:Diet-8410",
+      "label": "PUREED",
+      "name-8410": "PUREED",
+      "abbrev-8410": "PUREED",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is designed to provide foods that require little or no chewingand are easily swallowed.  It is intended for patients withchewing/swallowing difficulties due to inflammation, ulceration, neurologicchanges, or anatomic irregularities.  Foods and fluids are pureed orstrained, to be of a consistency appropriate for the patient's masticatingability.  The diet can be adequate in all nutrients, but depends onindividual food choices. "
+    },
+    {
+      "_id": "8410-11",
+      "type": "cmumpss:Diet-8410",
+      "label": "MECHANICAL SOFT",
+      "name-8410": "MECHANICAL SOFT",
+      "abbrev-8410": "MSOFT",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is designed to minimize the amount of chewing required to ingestfoods.  It is intended for patients with limited chewing or swallowingability, but are able to tolerate a greater variety of textures than foundin a pureed diet.  Foods are modified only in texture to promote easiermastication (i.e. meats may be chopped, ground, or pureed).  Foods that areexcluded include raw fruits and vegetables, dried fruits, and foodscontaining nuts and seeds.  The diet is adequate in all nutrients, but isdependent upon individual food choices. ",
+      "alternate_name-8410": [
+        "DENTAL SOFT"
+      ]
+    },
+    {
+      "_id": "8410-12",
+      "type": "cmumpss:Diet-8410",
+      "label": "SOFT",
+      "name-8410": "SOFT",
+      "abbrev-8410": "SOFT",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This diet is intended for patients who are physically or psychologicallyunable to tolerate a general diet (i.e. patients with poor dentition,postoperatively progressing from a full liquid diet to a general diet, ormild gastrointestinal problems).  Modifications are based on fiber,texture, and seasoning, and include foods that are lightly seasoned andmoderately low in fiber.  Foods that should be excluded include most rawfruits and vegetables, coarse breads and cereals, possible gas-producingfoods, highly seasoned foods, strong-smelling foods, and fried foods.  Thisdiet is adequate in all nutrients, but is dependent on individual foodchoices. ",
+      "alternate_name-8410": [
+        "BLAND"
+      ]
+    },
+    {
+      "_id": "8410-13",
+      "type": "cmumpss:Diet-8410",
+      "label": "SPECIAL",
+      "name-8410": "SPECIAL",
+      "abbrev-8410": "SPEC",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This category is intended for the physician to tailor a diet to a patient'sspecific dietary needs.  This category should be used only when no otherdiet, or combination of diets, will suffice. "
+    },
+    {
+      "_id": "8410-14",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST - FECAL FAT TEST",
+      "name-8410": "TEST - FECAL FAT TEST",
+      "abbrev-8410": "100FAT",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test provides a means of measuring fecal fat for the diagnosis ofsteatorrhea.  The diet includes the ingestion of 100 grams of fat per dayfor 3 days before the initiation of stool collection. ",
+      "alternate_name-8410": [
+        "100 GM FAT",
+        "12 HOUR STOOL FAT",
+        "FECAL FAT TEST"
+      ]
+    },
+    {
+      "_id": "8410-15",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST - GLUCOSE TOLERANCE",
+      "name-8410": "TEST - GLUCOSE TOLERANCE",
+      "abbrev-8410": "GTT",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test is used in the diagnosis of diabetes mellitus, gestationaldiabetes, or other impaired glucose tolerance.  Preparation for this testincludes the consumption of at least 150 grams of carbohydrate per day for3 days.  The test requires a fasting period of at least 12 hours, but notto exceed 16 hours, (usually an overnight fast) before the glucose load isadministered.  Water is permitted and encouraged during the fasting period.Alcohol and oral stimulants such as coffee and tea should be avoided.  Nofoods are to be eaten during the test period.  When the test is concluded,the patient may eat and drink normally.  Insulin or oral hypoglycemicagents may be required. ",
+      "alternate_name-8410": [
+        "150 GM CHO",
+        "150 GM CARBOHYDRATE",
+        "GTT"
+      ]
+    },
+    {
+      "_id": "8410-16",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST - MEAT FREE TEST DIET",
+      "name-8410": "TEST - MEAT FREE TEST DIET",
+      "abbrev-8410": "NOMEAT",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test diet is used in the diagnosis of gastrointestinal bleeding.  Toavoid a false positive caused by the patient consuming meat, poultry, andfish containing animal heme, the patient should consume a meat-free,high-fiber diet for 4 - 7 days prior to the test.  The patient should avoidfoods such as horseradish, beets, vitamin supplements, aspirin- containingcompounds, bananas, tomatoes, iron, and ascorbic acid supplements. ",
+      "alternate_name-8410": [
+        "MEAT FREE",
+        "NO MEAT TEST",
+        "OCCULT BLOOD TEST"
+      ]
+    },
+    {
+      "_id": "8410-17",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST - SEROTONIN TEST",
+      "name-8410": "TEST - SEROTONIN TEST",
+      "abbrev-8410": "5-HIAA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test diet is used in the diagnosis of carcinoid tumors in theintestinal tract.  Carcinoid tumors secrete serotonin, which metabolizesinto 5-HIAA.  Foods containing either of these substances give afalse-positive result.  Foods to be avoided for at least 24 hours prior tothe test include alcohol, avocado, bananas, butternuts, eggplant, hickorynuts, kiwi fruit, pecans, pineapple, plantain, plums, tomatoes, andwalnuts. ",
+      "alternate_name-8410": [
+        "5-HIAA",
+        "5-HYDROXYINDOLEACETIC ACID",
+        "SEROTONIN TEST"
+      ]
+    },
+    {
+      "_id": "8410-18",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST - VANILLYMANDELIC ACID",
+      "name-8410": "TEST - VANILLYMANDELIC ACID",
+      "abbrev-8410": "VMA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test diet is used in the diagnosis of pheochromocytoma, a tumorpresent in certain cases of severe hypertension.  Fasting may increase VMAexcretion.  Therefore, an adequate diet is recommended before the test, andthis test should not be scheduled when a patient is NPO.  However, certainfoods may also increase VMA excretion.  The following foods should beexcluded for three (3) days before the test (2 days prior to testing andthe day of the test):  tea, coffee, cocoa, vanilla, fruit (especiallybananas), fruit juice, chocolate, cheese, cider vinegar, gelatin foods,salad dressing, carbonated drinks (except ginger ale), jelly, jam, candy,mints, cough drops, chewing gum, foods containing artificial flavoring orcoloring, and foods containing licorice. ",
+      "alternate_name-8410": [
+        "VMA"
+      ]
+    },
+    {
+      "_id": "8410-19",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST - BARIUM ENEMA PREP",
+      "name-8410": "TEST - BARIUM ENEMA PREP",
+      "abbrev-8410": "BEPREP",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test is used in the examination of the large intestine to determinethe presence or absence of disease such as diverticulitis, cancer, polyps,colitis, any form of obstruction, or active bleeding.  A clear liquid dietis required before testing (usually a 12 to 18 hour pre-test period, butvaries on medical facility).  No food is to be eaten after the eveningmeal, and no liquids are to be consumed after midnight until theexamination is completed. ",
+      "inactive_date-8410": "1700-00-00",
+      "alternate_name-8410": [
+        "BE PREP"
+      ]
+    },
+    {
+      "_id": "8410-20",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST - IODINE RESTRICTED",
+      "name-8410": "TEST - IODINE RESTRICTED",
+      "abbrev-8410": "IODRES",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test is used to evaluate the function of the thyroid gland and itsability to concentrate and retain iodine.  A fasting state is preferredprior to the test.  Iodized foods should be avoided for at least one weekprior to test. ",
+      "alternate_name-8410": [
+        "RADIOACTIVE IODINE UPTAKE TEST",
+        "IODINE TEST DIET"
+      ]
+    },
+    {
+      "_id": "8410-21",
+      "type": "cmumpss:Diet-8410",
+      "label": "TEST-Z OTHER",
+      "name-8410": "TEST-Z OTHER",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "This test diet category is intended for the physician to indicate specificdietary requirements for tests that are not otherwise indicated.  Thiscategory should be used only when no other test diet category will suffice.Doctor needs to specify the name of the test diet in the Dietary Commentfield. ",
+      "alternate_name-8410": [
+        "TEST DIET"
+      ]
+    },
+    {
+      "_id": "8410-22",
+      "type": "cmumpss:Diet-8410",
+      "label": "STEP-ONE AHA DIET",
+      "name-8410": "STEP-ONE AHA DIET",
+      "abbrev-8410": "AHA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "First dietary step to reduce cholesterol and triglyceride levels in theblood.  Less than 30% of total calories from fat, <10% of total caloriesfrom saturated fat, up to 10% of total calories from polyunsaturated fat,10%-15% of total calories from monounsaturated fat, <300 mg/daycholesterol.  A calorie level may be added in the Dietary Comment field ifpatient needs weight reduction.  Patients with SEVERE triglyceridemia andchylomicronemia may require a very low fat diet (10%-20% total caloriesfrom fat) to prevent pancreatitis (Note % calories from fat desired enteredin the Dietary Comment field if desired).  Adequacy:  Diets <1600 caloriesmay be inadequate in calcium and iron.  To meet these requirements, patientsshould be encouraged to select other food sources of calcium and ironbefore using supplements. ",
+      "alternate_name-8410": [
+        "CHOLESTEROL RESTRICTED",
+        "FAT CONTROLLED",
+        "HLP",
+        "HYPERLIPOPROTEINEMIA",
+        "HEALTHY HEART DIET",
+        "PRUDENT DIET",
+        "MODERATE CHOLESTEROL RESTRICTED",
+        "LOW FAT LOW CHOLESTEROL DIET",
+        "LO CHOL",
+        "LOW FAT"
+      ]
+    },
+    {
+      "_id": "8410-23",
+      "type": "cmumpss:Diet-8410",
+      "label": "STEP-TWO AHA DIET",
+      "name-8410": "STEP-TWO AHA DIET",
+      "abbrev-8410": "AHAII",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Strict dietary regimen to reduce blood cholesterol and triglyceride levels.Less than 30% of calories from fat, <7% of calories from saturated fat, upto 10% of calories from polyunsaturated fat, and 10%-15% of calories frommonounsaturated fat, <200 mg/d cholesterol.  A calorie level may be addedin the Dietary Comment field if patient needs weight reduction.  Patientswith severe triglyceridemia and chylomicronemia may require a very low fatdiet (10%-20% total calories from fat) to prevent pancreatitis.  (Note %calories from fat desired entered under the Dietary Comment field ifdesired.)  Adequacy:  Diets <1600 calories may be inadequate in Calcium andiron. ",
+      "alternate_name-8410": [
+        "STRICT CHOLESTEROL RESTRICTED",
+        "FAT CONTROLLED",
+        "HLP",
+        "HYPERLIPOPROTEINEMIA",
+        "HEALTHY HEART DIET",
+        "VERY LOW CHOLESTEROL",
+        "VERY LOW CHOL LOW FAT"
+      ]
+    },
+    {
+      "_id": "8410-24",
+      "type": "cmumpss:Diet-8410",
+      "label": "SODIUM RESTRICTED 500 MG NA",
+      "name-8410": "SODIUM RESTRICTED 500 MG NA",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "To promote the loss of excess fluid in edema and ascites.  Limits dietarysodium to 500 mg per day.  Average daily sodium intake for Americans is 4-6grams.  Adequacy:  Diets with <1000 mg sodium per day may be inadequate incalcium. ",
+      "alternate_name-8410": [
+        "SODIUM CONTROLLED",
+        "VERY LOW SODIUM",
+        "VERY LOW SALT",
+        "SALT CONTROLLED",
+        "SEVERE SODIUM RESTRICTED",
+        "500 MG NA",
+        "500 MG SODIUM",
+        "SEVERE NA RESTRICTED",
+        "0.5 GM NA",
+        "NA/R"
+      ]
+    },
+    {
+      "_id": "8410-25",
+      "type": "cmumpss:Diet-8410",
+      "label": "SODIUM RESTRICTED 1000 MG NA",
+      "name-8410": "SODIUM RESTRICTED 1000 MG NA",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "To promote the loss of excess fluid in edema and ascites.  Limits dietarysodium to 1000 mg per day.  Average daily sodium intake for Americans is4-6 grams.  Adequacy:  Diets with <1000 mg sodium per day may be inadequatein calcium. ",
+      "alternate_name-8410": [
+        "SODIUM CONTROLLED",
+        "LOW SODIUM",
+        "LOW SALT",
+        "SALT CONTROLLED",
+        "SODIUM RESTRICTED",
+        "1000 MG NA",
+        "1000 MG SODIUM",
+        "NA RESTRICTED",
+        "1 GM NA",
+        "NA/R"
+      ]
+    },
+    {
+      "_id": "8410-26",
+      "type": "cmumpss:Diet-8410",
+      "label": "SODIUM RESTRICTED 2000 MG NA",
+      "name-8410": "SODIUM RESTRICTED 2000 MG NA",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "To promote the loss of excess fluid in edema and ascites.  Limits dietarysodium to 2000 mg per day.  Average daily sodium intake for Americans is4-6 grams.  This diet can be adequate in all nutrients, but is dependentupon individual food choices and volume consumed. ",
+      "alternate_name-8410": [
+        "SODIUM CONTROLLED",
+        "LOW SODIUM",
+        "LOW SALT",
+        "SALT CONTROLLED",
+        "SODIUM RESTRICTED",
+        "2000 MG NA",
+        "2000 MG SODIUM",
+        "NA RESTRICTED",
+        "2 GM NA",
+        "NA/R"
+      ]
+    },
+    {
+      "_id": "8410-27",
+      "type": "cmumpss:Diet-8410",
+      "label": "SODIUM RESTRICTED 3000 MG NA",
+      "name-8410": "SODIUM RESTRICTED 3000 MG NA",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "To promote the loss of excess fluid in edema and ascites.  Limits dietarysodium to 3000 mg per day.  Average daily sodium intake for Americans is4-6 grams.  This diet can be adequate in all nutrients, but is adequateupon individual food choices and volume consumed. ",
+      "alternate_name-8410": [
+        "MILD SODIUM CONTROLLED",
+        "LOW SODIUM",
+        "LOW SALT",
+        "MILD SALT CONTROLLED",
+        "MILD SODIUM RESTRICTION",
+        "3000 MG NA",
+        "3000 MG SODIUM",
+        "NO ADDED SALT",
+        "3 GM NA",
+        "NA/R"
+      ]
+    },
+    {
+      "_id": "8410-28",
+      "type": "cmumpss:Diet-8410",
+      "label": "CARDIAC DIET",
+      "name-8410": "CARDIAC DIET",
+      "abbrev-8410": "CARD",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "To prevent cardiac stimulation.  Step I (30% calories from fat, <10%calories from saturated fat, and <300 mg cholesterol per day), 2000 mg Na,no caffeine.  Local protocol may be different.  Adequacy:  Diets with <1600calories may be deficient in calcium and iron. ",
+      "alternate_name-8410": [
+        "CARDIAC-PRUDENT"
+      ]
+    },
+    {
+      "_id": "8410-29",
+      "type": "cmumpss:Diet-8410",
+      "label": "CALCIUM RESTRICTED 400-600 MG",
+      "name-8410": "CALCIUM RESTRICTED 400-600 MG",
+      "abbrev-8410": "CAREST",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Designed to minimize the supersaturation of components within the urineassociated with the formation of renal calculi.  Combine diet with agenerous fluid intake (3 L/day) for maximum efficacy.  Sodium restriction(2 gm Na/day in the presence of hypercalciuria) and protein restriction(12%-14% of calories) may also be desirable.  Adequacy:  A calciumrestricted diet providing less than 800 mg is inadequate; therefore, thebenefits of the diet must be weighted against the risks. ",
+      "alternate_name-8410": [
+        "UROLITHIASIS DIET",
+        "LOW CALCIUM",
+        "LOW CA",
+        "400-600 MG CA"
+      ]
+    },
+    {
+      "_id": "8410-30",
+      "type": "cmumpss:Diet-8410",
+      "label": "CALCIUM RESTRICTED <1000 MG",
+      "name-8410": "CALCIUM RESTRICTED <1000 MG",
+      "abbrev-8410": "CAREST",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Designed to minimize the supersaturation of components within the urineassociated with the formation of renal calculi.  Combine diet with agenerous fluid intake (3 L/day) for maximum efficacy.  Sodium restriction(2 gm Na/day in the presence of hypercalciuria) and protein restriction(12%-14% of calories) may also be desirable.  Adequacy:  A calciumrestricted diet providing less than 800 mg is inadequate; therefore, thebenefits of the diet must be weighted against the risks. ",
+      "alternate_name-8410": [
+        "UROLITHIASIS DIET",
+        "LOW CALCIUM",
+        "LOW CA",
+        "<1000 MG CA"
+      ]
+    },
+    {
+      "_id": "8410-31",
+      "type": "cmumpss:Diet-8410",
+      "label": "CALCIUM RESTRC 400-600MG_OXALATE RESTRC",
+      "name-8410": "CALCIUM RESTRC 400-600MG/OXALATE RESTRC",
+      "abbrev-8410": "CAORES",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Designed to minimize the supersaturation of components within the urineassociated with the formation of renal calculi.  Combine diet with agenerous fluid intake (3 L/day) for maximum efficacy.  Oxalate restrictionallows 50-60 mg per day.  Sodium restriction (2 gm Na/day in the presenceof hypercalciuria) and protein restriction (12%-14% of calories) may alsobe desirable.  Adequacy:  A calcium restricted diet providing less than 800mg is inadequate; therefore, the benefits of the diet must be weightedagainst the risks. ",
+      "alternate_name-8410": [
+        "400-600 MG CA/OXALATE RESTRICTED",
+        "LOW CALCIUM LOW OXALATE",
+        "LOW OXALATE",
+        "UROLITHIASIS DIET"
+      ]
+    },
+    {
+      "_id": "8410-32",
+      "type": "cmumpss:Diet-8410",
+      "label": "CALCIUM RESTRC <1000MG_OXALATE RESTRC",
+      "name-8410": "CALCIUM RESTRC <1000MG/OXALATE RESTRC",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Designed to minimize the supersaturation of components within the urineassociated with the formation of renal calculi.  Combine diet with agenerous fluid intake (3 L/day) for maximum efficacy.  Oxalate restrictionallows 50-60 mg per day.  Sodium restriction (2 gm Na/day in the presenceof hypercalciuria) and protein restriction (12%-14% of calories) may alsobe desirable.  Adequacy:  A calcium restricted diet providing less than 800mg is inadequate; therefore, the benefits of the diet must be weightedagainst the risks. ",
+      "alternate_name-8410": [
+        "<1000 MG CA/OXALATE RESTRICTED",
+        "LOW CALCIUM LOW OXALATE",
+        "LOW OXALATE",
+        "UROLITHIASIS DIET"
+      ]
+    },
+    {
+      "_id": "8410-33",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 40 GM_NA 2000 MG_K 45 MEQ",
+      "name-8410": "PROTEIN 40 GM/NA 2000 MG/K 45 MEQ",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Example:  60 gm Protein / 2000 mg Na / 60 mEq K / 1000 mg Phos/ 1500 cc Fluid Restricted Diet.  Add additional restrictions in theDietary Comment field (i.e. 2200 calorie diabetic or 1000cc fluid/R). Protein restricted diets are used to compensate for renal and/or liverdysfunction.  Protein restriction may be accompanied by restriction in Na,K, Phosphorus, and fluid to minimize uremic complications, minimize hepaticencephalopathy, and maintain acceptable blood chemistries, fluid status,and blood pressure in patients with impaired renal or hepatic function. Renal and hepatic diets are highly individualized.  Typical levels ofrestrictions may include:  protein 40, 60, or 80 gm; potassium 40, 45, 50,or 60 mEq; sodium 1000, 2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid500-750 ml/day plus daily urine output, or approximately 750-1500 mL/day. Adequacy:  Diets containing <60 gm protein may be deficient in niacin,riboflavin, thiamin, vitamin B12, zinc, and calcium due to low-proteinand/or low-phosphorus intake.  Need for vitamin and mineral supplementationshould be assessed on an individual basis. ",
+      "alternate_name-8410": [
+        "40 GM PROTEIN",
+        "LOW PROTEIN",
+        "PROTEIN RESTRICTED",
+        "RENAL",
+        "LOW PRO",
+        "RENAL DIET."
+      ]
+    },
+    {
+      "_id": "8410-34",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 60 GM_NA 2000 MG_K 60 MEQ",
+      "name-8410": "PROTEIN 60 GM/NA 2000 MG/K 60 MEQ",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field (i.e.2200 calorie diabetic or 1000cc fluid/R ).  Protein restricted diets areused to compensate for renal and/or liver dysfunction.  Protein restrictionmay be accompanied by restriction in Na, K, Phosphorus, and fluid tominimize uremic complications, minimize hepatic encephalopathy, andmaintain acceptable blood chemistries, fluid status, and blood pressure inpatients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include: protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis.",
+      "alternate_name-8410": [
+        "LOW PROTEIN",
+        "PROTEIN RESTRICTED",
+        "60 GM PROTEIN",
+        "RENAL",
+        "LOW PRO",
+        "RENAL",
+        "PROTEIN/R",
+        "PRO/R"
+      ]
+    },
+    {
+      "_id": "8410-35",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 80 GM_NA 2000 MG_K 80 MEQ",
+      "name-8410": "PROTEIN 80 GM/NA 2000 MG/K 80 MEQ",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.   Add additional restrictions in the Dietary Comment field (i.e. 2200 calorie diabetic or 1000cc Fluid/R).  Protein restricted dietsare used to compensate for renal and/or liver dysfunction.  Proteinrestriction may be accompanied by restriction in Na, K, Phosphorus, and fluid to minimize uremic complications, minimize hepatic encephalopathy, and maintain acceptable blood chemistries, fluid status, and blood pressure in patients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include: protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis. ",
+      "alternate_name-8410": [
+        "80 GM PROTEIN",
+        "LOW PROTEIN",
+        "PROTEIN RESTRICTED",
+        "RENAL",
+        "LOW PRO",
+        "PROTEIN/R",
+        "PRO/R",
+        "PRO 80 GM",
+        "RENAL"
+      ]
+    },
+    {
+      "_id": "8410-36",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 60GM_NA2000MG_K60MEQ_PHOS1000MG",
+      "name-8410": "PROTEIN 60GM/NA2000MG/K60MEQ/PHOS1000MG",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field (i.e.2200 calorie diabetic or 1000cc Fluid/R).  Protein restricted diets areused to compensate for renal and/or liver dysfunction.  Protein restrictionmay be accompanied by restriction in Na, K, Phosphorus, and fluid tominimize uremic complications, minimize hepatic encephalopathy, andmaintain acceptable blood chemistries, fluid status, and blood pressure inpatients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include: protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis.",
+      "alternate_name-8410": [
+        "60 GM PROTEIN",
+        "PROTEIN RESTRICTED",
+        "LOW PROTEIN",
+        "RENAL",
+        "LOW PRO",
+        "PROTEIN/R",
+        "RENAL"
+      ]
+    },
+    {
+      "_id": "8410-37",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 80GM_NA3000MG_K80MEQ_PHOS1200MG",
+      "name-8410": "PROTEIN 80GM/NA3000MG/K80MEQ/PHOS1200MG",
+      "abbrev-8410": "RENAL",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field(i.e. 2200 calorie diabetic or 1000cc Fluid/R).  Protein restricted dietsare used to compensate for renal and/or liver dysfunction.  Proteinrestriction may be accompanied by restriction in Na, K, Phosphorus, andfluid to minimize uremic complications, minimize hepatic encephalopathy,and maintain acceptable blood chemistries, fluid status, and blood pressurein patients with impaired renal or hepatic function.  Renal and hepaticdiets are highly individualized.  Typical levels of restrictions mayinclude:  protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium1000, 2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/dayplus daily urine output, or approximately 750-1500 mL/day.  Adequacy: Diets containing <60 gm protein may be deficient in niacin, riboflavin,thiamin, vitamin B12, zinc, and calcium due to low-protein and/orlow-phosphorus intake.  Need for vitamin and mineral supplementation shouldbe assessed on an individual basis.",
+      "alternate_name-8410": [
+        "80 GM PROTEIN",
+        "LOW PROTEIN",
+        "PROTEIN RESTRICTED",
+        "RENAL",
+        "LOW PRO",
+        "PROTEIN/R",
+        "RENAL"
+      ]
+    },
+    {
+      "_id": "8410-38",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 20 GMNA 1000 MG",
+      "name-8410": "PROTEIN 20 GMNA 1000 MG",
+      "abbrev-8410": "LIVER",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field (i.e.2200 calorie diabetic or 1000cc Fluid/R ).  Protein restricted diets areused to compensate for renal and/or liver dysfunction.  Protein restrictionmay be accompanied by restriction in Na, K, Phosphorus, and fluid tominimize uremic complications, minimize hepatic encephalopathy, andmaintain acceptable blood chemistries, fluid status, and blood pressure inpatients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include: protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis. ",
+      "alternate_name-8410": [
+        "20 GM PROTEIN",
+        "LOW PROTEIN LOW SODIUM",
+        "LOW PRO LOW NA",
+        "PROTEIN RESTRICTED",
+        "HEPATIC",
+        "PROTEIN/R",
+        "NA/R PRO/R"
+      ]
+    },
+    {
+      "_id": "8410-39",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 40 GMNA 2000 MG",
+      "name-8410": "PROTEIN 40 GMNA 2000 MG",
+      "abbrev-8410": "LIVER",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field (i.e. 2200 calorie diabetic or 1000cc Fluid/R).  Protein restricted diets are used to compensate for renal and/or liver dysfunction.  Proteinrestriction may be accompanied by restriction in Na, K, Phosphorus, and fluid to minimize uremic complications, minimize hepatic encephalopathy, and maintain acceptable blood chemistries, fluid status, and blood pressure in patients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include: protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis.",
+      "alternate_name-8410": [
+        "40 GM PROTEIN",
+        "LOW PROTEIN LOW SODIUM",
+        "LOW PRO LOW NA",
+        "PROTEIN RESTRICTED",
+        "PROTEIN/R",
+        "HEPATIC",
+        "NA/R PRO/R"
+      ]
+    },
+    {
+      "_id": "8410-40",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 60 GM_NA 2000 MG",
+      "name-8410": "PROTEIN 60 GM/NA 2000 MG",
+      "abbrev-8410": "LIVER",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field (i.e.2200 calorie diabetic or 1000cc Fluid/R).  Protein restricted diets areused to compensate for renal and/or liver dysfunction.  Protein restrictionmay be accompanied by restriction in Na, K, Phosphorus, and fluid tominimize uremic complications, minimize hepatic encephalopathy, andmaintain acceptable blood chemistries, fluid status, and blood pressure inpatients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include:  protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis.",
+      "alternate_name-8410": [
+        "60 GM PROTEIN",
+        "LOW PROTEIN LOW SODIUM",
+        "LOW PRO LOW NA",
+        "PROTEIN RESTRICTED",
+        "PROTEIN/R",
+        "HEPATIC",
+        "NA/R",
+        "60 GM PROTEIN 2GM NA",
+        "PRO/R"
+      ]
+    },
+    {
+      "_id": "8410-41",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 80 GMNA 2000 MG",
+      "name-8410": "PROTEIN 80 GMNA 2000 MG",
+      "abbrev-8410": "LIVER",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field (i.e. 2200 calorie diabetic or 1000cc fluid/R ).  Protein restricted diets are used to compensate for renal and/or liver dysfunction.  Proteinrestriction may be accompanied by restriction in Na, K, Phosphorus, and fluid to minimize uremic complications, minimize hepatic encephalopathy, and maintain acceptable blood chemistries, fluid status, and blood pressure in patients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include:  protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis. ",
+      "inactive_date-8410": "1700-00-00",
+      "alternate_name-8410": [
+        "80 GM PROTEIN",
+        "LOW PROTEIN LOW SODIUM",
+        "LOW PRO LOW NA",
+        "PROTEIN RESTRICTED",
+        "PROTEIN/R NA/R",
+        "HEPATIC",
+        "PRO/R",
+        "80G PROTEIN 2G NA"
+      ]
+    },
+    {
+      "_id": "8410-42",
+      "type": "cmumpss:Diet-8410",
+      "label": "PROTEIN 100GM NA2000MG",
+      "name-8410": "PROTEIN 100GM NA2000MG",
+      "abbrev-8410": "LIVER",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Restrictions vary significantly depending on specific renal or hepaticdiagnosis.  Add additional restrictions in the Dietary Comment field (i.e.2200 calorie diabetic or 1000cc fluid/R).  Protein restricted diets areused to compensate for renal and/or liver dysfunction.  Protein restrictionmay be accompanied by restriction in Na, K, Phosphorus, and fluid tominimize uremic complications, minimize hepatic encephalopathy, andmaintain acceptable blood chemistries, fluid status, and blood pressure inpatients with impaired renal or hepatic function.  Renal and hepatic dietsare highly individualized.  Typical levels of restrictions may include:  protein 40, 60, or 80 gm; potassium 40, 45, 50, or 60 mEq; sodium 1000,2000, or 3000 mg; phosphorus 800 or 1200 mg; fluid 500-750 ml/day plusdaily urine output, or approximately 750-1500 mL/day.  Adequacy:  Dietscontaining <60 gm protein may be deficient in niacin, riboflavin, thiamin,vitamin B12, zinc, and calcium due to low-protein and/or low-phosphorusintake.  Need for vitamin and mineral supplementation should be assessed onan individual basis.  ",
+      "alternate_name-8410": [
+        "LOW PROTEIN LOW SODIUM",
+        "LOW PRO LOW NA",
+        "PROTEIN RESTRICTED",
+        "PROTEIN/R NA/R",
+        "HEPATIC/ PRO/R",
+        "100G 2G NA"
+      ]
+    },
+    {
+      "_id": "8410-43",
+      "type": "cmumpss:Diet-8410",
+      "label": "GESTATIONAL DIABETIC 2000 KCAL",
+      "name-8410": "GESTATIONAL DIABETIC 2000 KCAL",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "The objective of nutritional management in gestational diabetes is tomaintain blood glucose concentrations as near to normal as possible andprevent large fluctuations in glucose levels.  Diet includes 3 meals and 1snack.  Carbohydrate is 40%-45% of total calories, with an emphasis oncomplex carbohydrate foods.  Adequacy:  Prenatal vitamins recommended. ",
+      "alternate_name-8410": [
+        "GDM",
+        "2000 KCAL GDM",
+        "2000 CAL GDM",
+        "2000 KCAL GEST",
+        "GEST DB",
+        "GD",
+        "GEST ADA",
+        "GEST DIABETIC"
+      ]
+    },
+    {
+      "_id": "8410-44",
+      "type": "cmumpss:Diet-8410",
+      "label": "GESTATIONAL DIABETIC 2200 KCAL",
+      "name-8410": "GESTATIONAL DIABETIC 2200 KCAL",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "The objective of nutritional management in gestational diabetes is tomaintain blood glucose concentrations as near to normal as possible andprevent large fluctuations in glucose levels.  Diet includes 3 meals and 1snack.  Carbohydrate is 40%-45% of total calories, with an emphasis oncomplex carbohydrate foods.  Adequacy:  Prenatal vitamins recommended. ",
+      "alternate_name-8410": [
+        "GDM",
+        "2200 KCAL GDM",
+        "2200 CAL GDM",
+        "2200 KCAL GEST",
+        "GEST DB",
+        "GD",
+        "GEST ADA",
+        "GEST DIABETIC"
+      ]
+    },
+    {
+      "_id": "8410-45",
+      "type": "cmumpss:Diet-8410",
+      "label": "GESTATIONAL DIABETIC 2400 KCAL",
+      "name-8410": "GESTATIONAL DIABETIC 2400 KCAL",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "The objective of nutritional management in gestational diabetes is tomaintain blood glucose concentrations as near to normal as possible andprevent large fluctuations in glucose levels.  Diet includes 3 meals and 1snack.  Carbohydrate is 40%-45% of total calories, with an emphasis oncomplex carbohydrate foods.  Adequacy:  Prenatal vitamins recommended. ",
+      "alternate_name-8410": [
+        "GDM",
+        "2400 KCAL GDM",
+        "2400 CAL GDM",
+        "2400 KCAL GEST",
+        "GEST DB",
+        "GD",
+        "GEST ADA",
+        "GEST DIABETIC"
+      ]
+    },
+    {
+      "_id": "8410-46",
+      "type": "cmumpss:Diet-8410",
+      "label": "GESTATIONAL DIABETIC 2600 KCAL",
+      "name-8410": "GESTATIONAL DIABETIC 2600 KCAL",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "The objective of nutritional management in gestational diabetes is tomaintain blood glucose concentrations as near to normal as possible andprevent large fluctuations in glucose levels.  Diet includes 3 meals and 1snack.  Carbohydrate is 40%-45% of total calories, with an emphasis oncomplex carbohydrate foods.  Adequacy:  Prenatal vitamins recommended. ",
+      "alternate_name-8410": [
+        "GDM",
+        "2600 KCAL GDM",
+        "2600 CAL GDM",
+        "2600 KCAL GEST",
+        "GEST DB",
+        "GD",
+        "GEST ADA",
+        "GEST DIABETIC"
+      ]
+    },
+    {
+      "_id": "8410-47",
+      "type": "cmumpss:Diet-8410",
+      "label": "GESTATIONAL DIABETIC ____ KCAL",
+      "name-8410": "GESTATIONAL DIABETIC ____ KCAL",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "The objective of nutritional management in gestational diabetes is tomaintain blood glucose concentrations as near to normal as possible andprevent large fluctuations in glucose levels.  Diet includes 3 meals and 1snack.  Carbohydrate is 40%-45% of total calories, with an emphasis oncomplex carbohydrate foods.  Adequacy:  Prenatal vitamins recommended. Doctor needs to specify calorie level. ",
+      "alternate_name-8410": [
+        "GEST DB",
+        "GDM",
+        "GD",
+        "GEST ADA",
+        "GEST DIABETIC"
+      ]
+    },
+    {
+      "_id": "8410-48",
+      "type": "cmumpss:Diet-8410",
+      "label": "DIABETIC 1200 KCAL-IDDM",
+      "name-8410": "DIABETIC 1200 KCAL-IDDM",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Objective of nutritional management of diabetes is to maintain bloodglucose concentration as near to normal as possible.  Diet includes 3 mealsand 0-2 snacks, depending local facility protocol.  Distribution of totalcalories is:  CHO 55%- 60%, Protein 12%-20%, and Fat <25%-30% totalcalories (<10% saturated fat).  Some patients with severehypertriglyceridemia may benefit from a lower content of CHO (45% totalcalories) and higher fat (40% total calories, 20% from monounsaturatedfat).  Specify \"45% CHO, 40% Fat\" in the Dietary Comment field if thisnonstandard distribution is desired.  Add additional modifications in theDietary Comment field (i.e. 2000 mg Na).  Adequacy:  Meal plans with 1200calories or less may be inadequate in some nutrients, thus a multivitaminwith mineral supplement is recommended. ",
+      "alternate_name-8410": [
+        "1200 KCAL ADA",
+        "IDDM",
+        "INSULIN DEPENDENT",
+        "INSULIN REQUIRING",
+        "ADA",
+        "DM"
+      ]
+    },
+    {
+      "_id": "8410-49",
+      "type": "cmumpss:Diet-8410",
+      "label": "DIABETIC 1500 KCAL-IDDM",
+      "name-8410": "DIABETIC 1500 KCAL-IDDM",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Objective of nutritional management of diabetes is to maintain bloodglucose concentration as near to normal as possible.  Diet includes 3 mealsand 0-2 snacks, depending local facility protocol.  Distribution of totalcalories is:  CHO 55%- 60%, Protein 12%-20%, and Fat <25%-30% totalcalories (<10% saturated fat).  Some patients with severehypertriglyceridemia may benefit from a lower content of CHO (45% totalcalories) and higher fat (40% total calories, 20% from monounsaturatedfat).  Specify \"45% CHO, 40% Fat\" in the Dietary Comment field if thisnonstandard distribution is desired.  Add additional modifications in theDietary Comment field (i.e. 2000 mg Na).  This diet can be adequate in allnutrients, but is dependent upon individual food choices. ",
+      "alternate_name-8410": [
+        "1500 KCAL ADA",
+        "IDDM",
+        "INSULIN DEPENDENT",
+        "INSULIN REQUIRING",
+        "ADA",
+        "DM"
+      ]
+    },
+    {
+      "_id": "8410-50",
+      "type": "cmumpss:Diet-8410",
+      "label": "DIABETIC 1800 KCAL-IDDM",
+      "name-8410": "DIABETIC 1800 KCAL-IDDM",
+      "abbrev-8410": "ADA",
+      "standard_entry-8410": "STANDARD ENTRY",
+      "description-8410": "Objective of nutritional management of diabetes is to maintain bloodglucose concentration as near to normal as possible.  Diet includes 3 mealsand 0-2 snacks, depending local facility protocol.  Distribution of totalcalories is:  CHO 55%- 60%, Protein 12%-20%, and Fat <25%-30% totalcalories (<10% saturated fat).  Some patients with severehypertriglyceridemia may benefit from a lower content of CHO (45% totalcalories) and higher fat (40% total calories, 20% from monounsaturatedfat).  Specify \"45% CHO, 40% Fat\" in the Dietary Comment field if thisnonstandard distribution is desired.  Add additional modifications in theDietary Comment field (i.e. 2000 mg Na).  This diet can be adequate in allnutrients, but is dependent upon individual food choices. ",
+      "alternate_name-8410": [
+        "1800 KCAL ADA",
+        "IDDM",
+        "INSULIN DEPENDENT",
+        "INSULIN REQUIRING",
+        "ADA",
+        "DM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@graph": [
+    {
+      "_id": "111-1",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "COPATH_AP COTS",
+      "name-111": "COPATH/AP COTS",
+      "code-111": "APCOTS",
+      "description-111": "Off-board Anatomic Pathology System."
+    },
+    {
+      "_id": "111-2",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "PWS",
+      "name-111": "PWS",
+      "code-111": "PWS",
+      "description-111": "Off-board Provider Work Station currently a Wang system."
+    },
+    {
+      "_id": "111-3",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "CRSPL\\ORE",
+      "name-111": "CRSPL\\ORE",
+      "code-111": "CRSP",
+      "description-111": "For every Pas order sent to the regional scheduler the SYSTEM OF ORIGIN (1.24)will reflect this offboard"
+    },
+    {
+      "_id": "111-4",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "VISTA ORE",
+      "name-111": "VISTA ORE",
+      "code-111": "VISTA",
+      "description-111": "Order from VA system"
+    },
+    {
+      "_id": "111-5",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "CIS",
+      "name-111": "CIS",
+      "code-111": "CIS",
+      "description-111": "Order from CIS system"
+    },
+    {
+      "_id": "111-6",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "CIW",
+      "name-111": "CIW",
+      "code-111": "CIW",
+      "description-111": "Order enter from AHLTA"
+    },
+    {
+      "_id": "111-7",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "PHARMACY BATCH",
+      "name-111": "PHARMACY BATCH",
+      "code-111": "PHR",
+      "description-111": "Order from Pharmacy Patient Batch"
+    },
+    {
+      "_id": "111-8",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "LABORATORY BATCH",
+      "name-111": "LABORATORY BATCH",
+      "code-111": "LAB",
+      "description-111": "Order originates from Lab Registration Batch"
+    },
+    {
+      "_id": "111-9",
+      "type": "cmumpss:Origin_Of_Order-111",
+      "label": "TAPS PROTOTYPE",
+      "name-111": "TAPS PROTOTYPE",
+      "code-111": "TAPS",
+      "description-111": "Order originates from TAPS prototype pseudo-system"
+    }
+  ]
+}

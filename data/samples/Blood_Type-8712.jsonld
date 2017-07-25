@@ -1,0 +1,53 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8712-1",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "A POS",
+      "blood_type-8712": "A POS"
+    },
+    {
+      "_id": "8712-2",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "A NEG",
+      "blood_type-8712": "A NEG"
+    },
+    {
+      "_id": "8712-3",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "AB POS",
+      "blood_type-8712": "AB POS"
+    },
+    {
+      "_id": "8712-4",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "AB NEG",
+      "blood_type-8712": "AB NEG"
+    },
+    {
+      "_id": "8712-5",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "B POS",
+      "blood_type-8712": "B POS"
+    },
+    {
+      "_id": "8712-6",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "B NEG",
+      "blood_type-8712": "B NEG"
+    },
+    {
+      "_id": "8712-7",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "O POS",
+      "blood_type-8712": "O POS"
+    },
+    {
+      "_id": "8712-8",
+      "type": "cmumpss:Blood_Type-8712",
+      "label": "O NEG",
+      "blood_type-8712": "O NEG"
+    }
+  ]
+}
