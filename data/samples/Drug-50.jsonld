@@ -1,0 +1,4785 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "50-1",
+      "type": "cmumpss:Drug-50",
+      "label": "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG ",
+      "name-50": "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG ",
+      "primary_ndc_number-50": {
+        "id": "8252-50580049660",
+        "label": "ACETAMINOPHEN",
+        "sameAs": "ndc:50580049660",
+        "sameAsLabel": "TYLENOL 325 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "ACETAMINOPHEN 325MG TABLET",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "325",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "HALVES",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-97574",
+        "label": "HULSEXXX,JADE"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-7565",
+        "label": "HOOPESXXX,COBALT"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_1",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".03",
+          "pdts_unit_cost-50_3": ".0034",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "**OTC HANDOUT**",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_quantity-50_3": "50",
+          "maximum_days_supply-50_3": "30",
+          "warning_label-50_3": "8",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "50",
+          "default_sig-50_3": "TAKE 1 TAB PO Q6H PRN headache/fever/pain or as directed",
+          "default_days_supply-50_3": "3",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_1",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "MJ",
+          "sig-50_15": "T 1-2 PO QID PRN FP"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-8_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "OTC6",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-9_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "RTS",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-10_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TYL325",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-11_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "T325",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-12_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ACE325",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-13_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "analgesics/antipyretic,misc"
+        },
+        {
+          "id": "50_1-14_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "par1",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-15_1",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TYLENOL"
+        }
+      ]
+    },
+    {
+      "_id": "50-2",
+      "type": "cmumpss:Drug-50",
+      "label": "ACETAZOLAMIDE 250MG TAB (DIAMOX)EQ",
+      "name-50": "ACETAZOLAMIDE 250MG TAB (DIAMOX)EQ",
+      "primary_ndc_number-50": {
+        "id": "8252-51672402301",
+        "label": "ACETAZOLAMIDE",
+        "sameAs": "ndc:51672402301",
+        "sameAsLabel": "ACETAZOLAMIDE 250 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "ACETAZOLAMIDE 250MG TAB *T53*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "250",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_2",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".081",
+          "pdts_unit_cost-50_3": ".06461111111111111111",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "12/07 NJT",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "8,11",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-10",
+          "label": "OPTOMETRY"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_2",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DIAMOX",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_2",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DMX",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_2",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DIA250",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00725-0042-01"
+          ]
+        },
+        {
+          "id": "50_1-4_2",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ACE250",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00527-1050-01"
+          ]
+        },
+        {
+          "id": "50_1-6_2",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DIAM250",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00005-4469-60"
+          ]
+        },
+        {
+          "id": "50_1-7_2",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DM250",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-8_2",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CARBONIC ANHYDRASE INH"
+        }
+      ]
+    },
+    {
+      "_id": "50-6",
+      "type": "cmumpss:Drug-50",
+      "label": "ACETYLCYSTEINE 20%--MISC 1GM_5ML INJ",
+      "name-50": "ACETYLCYSTEINE 20%--MISC 1GM/5ML INJ",
+      "primary_ndc_number-50": {
+        "id": "8252-517761003",
+        "label": "ACETYLCYSTEINE",
+        "sameAs": "ndc:00517761003",
+        "sameAsLabel": "ACETYLCYSTEINE 20% VIAL"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "ML @30/BTL",
+      "label_print_name-50": "Z-ACETYLCYSTEINE 20% 1GM/5ML SOL",
+      "injectable-50": "IV ADDITIVE",
+      "calc_unit-50": "GM",
+      "content_unit-50": "GM/5ML",
+      "dosage_strength-50": "1",
+      "drugroute_form-50": "PO SOLN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-1",
+        "label": "MISC"
+      },
+      "form-50": {
+        "id": "51_6-31",
+        "label": "INJ"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_6",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".25",
+          "pdts_unit_cost-50_3": ".1352222222222222222",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "**INPT USE ONLY**",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_quantity-50_3": "90",
+          "maximum_days_supply-50_3": "90",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "30",
+          "default_sig-50_3": "U UD BY YOUR DOCTOR",
+          "iv_print_name-50_3": "ACETYLCYSTEINE (MUCOMYST)",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-8_6",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "MUCOMYST",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-9_6",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "MUC20",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-10_6",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ACE20",
+          "intended_use-50_1": "QUICK CODE"
+        }
+      ]
+    },
+    {
+      "_id": "50-10",
+      "type": "cmumpss:Drug-50",
+      "label": "D-ALBUTEROL INHALER @$1.72 INH 90MCG--IN",
+      "name-50": "D-ALBUTEROL INHALER @$1.72 INH 90MCG--IN",
+      "primary_ndc_number-50": {
+        "id": "8252-59930156001",
+        "label": "ALBUTEROL",
+        "sameAs": "ndc:59930156001",
+        "sameAsLabel": "ALBUTEROL 90 MCG INHALER"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "GM @17GM/INH",
+      "label_print_name-50": "D-ALBUTEROL INHALER (17GM)",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "SPRAY",
+      "content_unit-50": "MCG",
+      "dosage_strength-50": "90",
+      "drugroute_form-50": "INH AERP",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-2",
+        "label": "INH"
+      },
+      "form-50": {
+        "id": "51_6-2",
+        "label": "AERP"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_10",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".088",
+          "pdts_unit_cost-50_3": ".6549019607843137255",
+          "nonformulary-50_3": "N",
+          "message-50_3": "***FOR REFILL USE ONLY*** 04/06 NJT",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "12",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "17",
+          "default_sig-50_3": "INH 1-2 PF (AT LEAST ONE MINUTE APART) Q4-6H P",
+          "default_days_supply-50_3": "17",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_10",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "MJS",
+          "sig-50_15": "2 PUFFS QID AND BEFORE EXERCISE"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        }
+      ]
+    },
+    {
+      "_id": "50-12",
+      "type": "cmumpss:Drug-50",
+      "label": "ALCOHOL ISOPROPYL--MISC 70% SOLN",
+      "name-50": "ALCOHOL ISOPROPYL--MISC 70% SOLN",
+      "primary_ndc_number-50": {
+        "id": "8252-574006716",
+        "label": "ISOPROPYL ALCOHOL",
+        "sameAs": "ndc:00574006716",
+        "sameAsLabel": "ISOPROPYL ALCOHOL 70%"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "ML @480/BT",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "ML",
+      "content_unit-50": "%",
+      "dosage_strength-50": "70",
+      "drugroute_form-50": "MISC SOLN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-1",
+        "label": "MISC"
+      },
+      "form-50": {
+        "id": "51_6-50",
+        "label": "SOLN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-733",
+        "label": "WESLEYXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-3_12",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ISOPROPYL ALCOHOL",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00022-0374-38"
+          ]
+        },
+        {
+          "id": "50_1-4_12",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "RUBBING ALCOHOL",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_12",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ALC70",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_12",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-299-8095",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_12",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ISOPROPYL70",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00022-0374-38"
+          ]
+        },
+        {
+          "id": "50_1-8_12",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SKIN/MUCOUS MENBRANE,MISC"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_12",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".01",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "22",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ]
+    },
+    {
+      "_id": "50-13",
+      "type": "cmumpss:Drug-50",
+      "label": "ALLOPURINOL 100MG TAB--PO 100MG TAB",
+      "name-50": "ALLOPURINOL 100MG TAB--PO 100MG TAB",
+      "primary_ndc_number-50": {
+        "id": "8252-591554301",
+        "label": "ALLOPURINOL",
+        "sameAs": "ndc:00591554301",
+        "sameAsLabel": "ALLOPURINOL 100 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "ALLOPURINOL 100MG TAB *PAR104*DAN5543*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "100",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "HALVES",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-3947",
+        "label": "PROBSTXXX,VIOLET"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_13",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".016",
+          "pdts_unit_cost-50_3": ".01427777777777777778",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "1,5,10",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "90",
+          "default_sig-50_3": "T1 TB QD",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-2_13",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LOPURIN",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_13",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ZYL100",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_13",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ALL100",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_13",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-998-4381",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00081-0996-55",
+            "00081-0996-75",
+            "00822-0405-10"
+          ]
+        },
+        {
+          "id": "50_1-8_13",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "THERAPEUTICS, UNCLASS"
+        },
+        {
+          "id": "50_1-9_13",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ZYLOPRIM"
+        },
+        {
+          "id": "50_1-10_13",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LOP100"
+        }
+      ]
+    },
+    {
+      "_id": "50-15",
+      "type": "cmumpss:Drug-50",
+      "label": "DOMEBORO TOPICAL PACKET (MULT OF 12)",
+      "name-50": "DOMEBORO TOPICAL PACKET (MULT OF 12)",
+      "primary_ndc_number-50": {
+        "id": "8252-16500002324",
+        "label": "CALCIUM ACETATE_ALUMINUM SULF",
+        "sameAs": "ndc:16500002324",
+        "sameAsLabel": "DOMEBORO PACKET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "PACKT @12/bx",
+      "label_print_name-50": "DOMEBORO POWDER PACKET",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "EA",
+      "drugroute_form-50": "TOP PACK",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-17",
+        "label": "TOP"
+      },
+      "form-50": {
+        "id": "51_6-47",
+        "label": "PACK"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_15",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "RA",
+          "sig-50_15": "2 TB IN 1QT H20 AND SOAK AFFECTED AREA FOR 15 MIN 2 TO 4 TIMES A DAY"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DOMEBORO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-2_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BURT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DOMT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BUROW'S TABLETS",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BTAB",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-890-1633",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00026-2411-51"
+          ]
+        },
+        {
+          "id": "50_1-7_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DOMEBORO",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "16500-0023-12"
+          ]
+        },
+        {
+          "id": "50_1-8_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BLUBORO"
+        },
+        {
+          "id": "50_1-9_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ASTRINGENTS"
+        },
+        {
+          "id": "50_1-10_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PEDIBORO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-11_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PEDI-BORO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-12_15",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BOROPAK",
+          "intended_use-50_1": "QUICK CODE"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_15",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "pdts_unit_cost-50_3": ".67125",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "1 PKT/PINT = 1:40 ; 2 = 1:20 OF MODIFIED BUROW'S SOLUTION 02/06 njt",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "13",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "12",
+          "default_sig-50_3": "DISSOLVE ONE OR TWO PACKETS IN PINT OF COOL TO WARM WATER AND SOAK UD",
+          "default_days_supply-50_3": "30",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "PRN"
+        }
+      ]
+    },
+    {
+      "_id": "50-16",
+      "type": "cmumpss:Drug-50",
+      "label": "AL HYDROX(ALTERNAGELEQ) 600MG_5ML-PO",
+      "name-50": "AL HYDROX(ALTERNAGELEQ) 600MG/5ML-PO",
+      "primary_ndc_number-50": {
+        "id": "8252-16837086012",
+        "label": "ALUMINUM HYDROXIDE",
+        "sameAs": "ndc:16837086012",
+        "sameAsLabel": "ALTERNAGEL LIQUID"
+      },
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "ML",
+      "label_print_name-50": "ALTERNAGEL (EQUIV) GEL",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "ML",
+      "content_unit-50": "MG/5ML",
+      "dosage_strength-50": "600",
+      "drugroute_form-50": "PO GEL",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-26",
+        "label": "GEL"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99133",
+        "label": "DINGUSXXX,FROST"
+      },
+      "drug_check_disable-50": "INTERACTION, OVERLAP OFF",
+      "drug_check_user-50": {
+        "id": "3-850",
+        "label": "HANNAXXX,GRAY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ALTERNAGEL",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-2_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMPHOJEL",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMPHOJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ALTGEL",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ALUJEL",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ALTL",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-8_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-074-0934",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00038-0860-55",
+            "00719-4050-83"
+          ]
+        },
+        {
+          "id": "50_1-9_16",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTACIDS/ABSORBENTS"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_16",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "nonformulary-50_3": "N",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "30",
+          "warning_label-50_3": "12",
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "2",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "50-17",
+      "type": "cmumpss:Drug-50",
+      "label": "AMANTADINE--PO 100MG CAP",
+      "name-50": "AMANTADINE--PO 100MG CAP",
+      "primary_ndc_number-50": {
+        "id": "8252-781204801",
+        "label": "AMANTADINE HCL",
+        "sameAs": "ndc:00781204801",
+        "sameAsLabel": "AMANTADINE 100 MG CAPSULE"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "CAPSULE",
+      "label_print_name-50": "AMANTADINE 100MG CAP *GG634*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "100",
+      "drugroute_form-50": "PO CAP",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-8",
+        "label": "CAP"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_17",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".17",
+          "pdts_unit_cost-50_3": ".2333333333333333333",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "05/07 NJT",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "1,2,8,11",
+          "default_expiration-50_3": "365",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_17",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SYMMETREL 100",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_17",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SYM100",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_17",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMA100",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_17",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-148-4624",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00839-7471-06"
+          ]
+        },
+        {
+          "id": "50_1-6_17",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTIVIRALS"
+        },
+        {
+          "id": "50_1-7_17",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "cns agents,misc"
+        }
+      ]
+    },
+    {
+      "_id": "50-18",
+      "type": "cmumpss:Drug-50",
+      "label": "AMCINONIDE 0.1% CREAM ($10.20_60GM)--TOP",
+      "name-50": "AMCINONIDE 0.1% CREAM ($10.20/60GM)--TOP",
+      "primary_ndc_number-50": {
+        "id": "8252-469705460",
+        "label": "AMCINONIDE",
+        "sameAs": "ndc:00469705460",
+        "sameAsLabel": "CYCLOCORT 0.1% CREAM"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "GM @60/TUBE",
+      "label_print_name-50": "AMCINONIDE 0.1% CREAM 60Gm TUBE",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "DAB",
+      "content_unit-50": "%",
+      "dosage_strength-50": ".1",
+      "drugroute_form-50": "TOP CREA",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-17",
+        "label": "TOP"
+      },
+      "form-50": {
+        "id": "51_6-10",
+        "label": "CREA"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99502",
+        "label": "CLEMENTSXXX,ORANGE"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-1347",
+        "label": "RUSHINGXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_18",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".35",
+          "pdts_unit_cost-50_3": ".7213333333333333333",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "INPUT IN GRAMS 60GM/TUBE",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "13",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "60",
+          "default_sig-50_3": "U UD #60",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_18",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CYCLOCORT",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_18",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CYCCR60",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_18",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CYC60CR",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_18",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-093-7968",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00005-9183-40"
+          ]
+        },
+        {
+          "id": "50_1-5_18",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CYCC",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "57317-0054-60"
+          ]
+        },
+        {
+          "id": "50_1-6_18",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTI-INFLAMMATORY AGENTS"
+        }
+      ]
+    },
+    {
+      "_id": "50-19",
+      "type": "cmumpss:Drug-50",
+      "label": "AMIKACIN--INJ 250MG_ML INJ",
+      "name-50": "AMIKACIN--INJ 250MG/ML INJ",
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "injectable-50": "IV ADDITIVE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG/ML",
+      "dosage_strength-50": "250",
+      "deleted_ndc-50": true,
+      "drugroute_form-50": "INJ INJ",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-3",
+        "label": "INJ"
+      },
+      "form-50": {
+        "id": "51_6-31",
+        "label": "INJ"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_19",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMIKIN",
+          "intended_use-50_1": "TRADE NAME",
+          "ndc_codes-50_1": [
+            "00015-3023-20"
+          ]
+        },
+        {
+          "id": "50_1-2_19",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMINOGLYCOSIDES"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_19",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "3.826",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "default_expiration-50_3": "365",
+          "continuable-50_3": true,
+          "iv_print_name-50_3": "AMIKACIN (AMIKIN)",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ]
+    },
+    {
+      "_id": "50-22",
+      "type": "cmumpss:Drug-50",
+      "label": "D-AMINOPHYLLINE--PO 105MG_5ML LIQ",
+      "name-50": "D-AMINOPHYLLINE--PO 105MG/5ML LIQ",
+      "primary_ndc_number-50": {
+        "id": "8252-472087308",
+        "label": "AMINOPHYLLINE",
+        "sameAs": "ndc:00472087308",
+        "sameAsLabel": "AMINOPHYLLINE 105 MG/5 ML LIQ"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "ML",
+      "label_print_name-50": "Z-AMINOPHYLLINE 105MG/5ML PO LIQ",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG/5ML",
+      "dosage_strength-50": "105",
+      "drugroute_form-50": "PO LIQ",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-34",
+        "label": "LIQ"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-1347",
+        "label": "RUSHINGXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_22",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "nonformulary-50_3": "N",
+          "message-50_3": "N/F:",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "30",
+          "dispense_complete_container-50_3": "NO",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "50-23",
+      "type": "cmumpss:Drug-50",
+      "label": "AMITRIPTYLINE--PO 10MG TAB",
+      "name-50": "AMITRIPTYLINE--PO 10MG TAB",
+      "primary_ndc_number-50": {
+        "id": "8252-603221232",
+        "label": "AMITRIPTYLINE HCL",
+        "sameAs": "ndc:00603221232",
+        "sameAsLabel": "AMITRIPTYLINE HCL 10 MG TAB"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "&-AMITRIPTYLINE 10MG TAB *GG40 2101V*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "10",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-97574",
+        "label": "HULSEXXX,JADE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_23",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".061",
+          "pdts_unit_cost-50_3": ".01444444444444444444",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "1,8,11,6",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-35",
+          "label": "PSYCHIATRIC ADV PRACTICE NURSE"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_23",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ELAVIL",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_23",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ENDEP",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_23",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMI10",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00054-4041-25",
+            "00006-0023-28"
+          ]
+        },
+        {
+          "id": "50_1-5_23",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ELA10",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00781-1486-10"
+          ]
+        },
+        {
+          "id": "50_1-6_23",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "antidepressants"
+        },
+        {
+          "id": "50_1-7_23",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "END10"
+        }
+      ]
+    },
+    {
+      "_id": "50-25",
+      "type": "cmumpss:Drug-50",
+      "label": "AMOXICILLIN 250MG @$0.03_CAPSULE",
+      "name-50": "AMOXICILLIN 250MG @$0.03/CAPSULE",
+      "primary_ndc_number-50": {
+        "id": "8252-93310705",
+        "label": "AMOXICILLIN",
+        "sameAs": "ndc:00093310705",
+        "sameAsLabel": "AMOXICILLIN 250 MG CAPSULE"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "CAPSULE",
+      "label_print_name-50": "AMOXICILLIN 250MG CAP *93/3107*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "250",
+      "drugroute_form-50": "PO CAP",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-8",
+        "label": "CAP"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-10606",
+        "label": "CHAUVINXXX,MAUVE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_25",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".015",
+          "pdts_unit_cost-50_3": ".06589285714285714286",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "2,32",
+          "default_expiration-50_3": "365",
+          "default_sig-50_3": "T1 CAP Q8H TAT",
+          "continuable-50_3": true,
+          "inpatient_order_duration-50_3": "28"
+        }
+      ],
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_25",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "MJS",
+          "sig-50_15": "T2 CAPSULES PO TID F21D"
+        },
+        {
+          "id": "50_15-2_25",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "MJ",
+          "sig-50_15": "T2 CAPS PO Q6H F10D"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        },
+        {
+          "id": "8200-10",
+          "label": "OPTOMETRY"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_25",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMOXIL",
+          "intended_use-50_1": "TRADE NAME",
+          "ndc_codes-50_1": [
+            "00332-3107-09"
+          ]
+        },
+        {
+          "id": "50_1-2_25",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMX",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_25",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMO250",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_25",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMOX250",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_25",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-010-7953",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00029-6006-32"
+          ]
+        },
+        {
+          "id": "50_1-6_25",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PENICILLINS"
+        }
+      ]
+    },
+    {
+      "_id": "50-27",
+      "type": "cmumpss:Drug-50",
+      "label": "AMPICILLIN--INJ 500MG SOLN",
+      "name-50": "AMPICILLIN--INJ 500MG SOLN",
+      "primary_ndc_number-50": {
+        "id": "8252-15740320",
+        "label": "AMPICILLIN SODIUM",
+        "sameAs": "ndc:00015740320",
+        "sameAsLabel": "AMPICILLIN 500 MG VIAL"
+      },
+      "dea_special_hdlg-50": "6",
+      "injectable-50": "IV ADDITIVE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "500",
+      "drugroute_form-50": "INJ SOLN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-3",
+        "label": "INJ"
+      },
+      "form-50": {
+        "id": "51_6-50",
+        "label": "SOLN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99133",
+        "label": "DINGUSXXX,FROST"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-1347",
+        "label": "RUSHINGXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_27",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "A500INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-2_27",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "POLYCILLIN",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_27",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AMP500INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_27",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "POL500INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_27",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-946-4700",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00015-7403-20",
+            "00015-7403-20"
+          ]
+        },
+        {
+          "id": "50_1-6_27",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PENICILLINS"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_27",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "INPATIENT",
+          "local_cost-50_3": "3.91",
+          "pdts_unit_cost-50_3": "2.87",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "default_expiration-50_3": "365",
+          "continuable-50_3": true,
+          "iv_print_name-50_3": "AMPICILLIN",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "28"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ]
+    },
+    {
+      "_id": "50-30",
+      "type": "cmumpss:Drug-50",
+      "label": "D-LIPSTICK (COLD CLIMATE)      --TOP PST",
+      "name-50": "D-LIPSTICK (COLD CLIMATE)      --TOP PST",
+      "primary_ndc_number-50": {
+        "id": "8252-11530000402",
+        "label": "PADIMATE O_PETROLATUM,WHITE",
+        "sameAs": "ndc:11530000402",
+        "sameAsLabel": "CHAP-ET LIP CONDITIONER"
+      },
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "STICK",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "EA",
+      "drugroute_form-50": "TOP PSTE",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-17",
+        "label": "TOP"
+      },
+      "form-50": {
+        "id": "51_6-45",
+        "label": "PSTE"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-1329",
+        "label": "DOHERTYXXX,BLACK"
+      },
+      "drug_check_disable-50": "INTERACTION, OVERLAP OFF",
+      "drug_check_user-50": {
+        "id": "3-850",
+        "label": "HANNAXXX,GRAY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_30",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CHAPSTICK",
+          "intended_use-50_1": "TRADE NAME",
+          "ndc_codes-50_1": [
+            "36600-8196-01"
+          ]
+        },
+        {
+          "id": "50_1-2_30",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTICHAP",
+          "intended_use-50_1": "QUICK CODE"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_30",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".00",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "UNABLE TO UPDATE PRICE PRODUCT NOT FOUND",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_quantity-50_3": "1",
+          "maximum_days_supply-50_3": "90",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "1",
+          "default_sig-50_3": "USE AS NEEDED",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "50-31",
+      "type": "cmumpss:Drug-50",
+      "label": "AURALGAN*EQ* OTIC SOLN",
+      "name-50": "AURALGAN*EQ* OTIC SOLN",
+      "primary_ndc_number-50": {
+        "id": "8252-24208056162",
+        "label": "ANTIPYRINE_BENZOCAINE_GLYCERIN",
+        "sameAs": "ndc:24208056162",
+        "sameAsLabel": "ANTIPYRINE-BENZOCAINE EAR DROP"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "ML @10/BTL",
+      "label_print_name-50": "AURALGAN*EQ* OTIC SOL",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "GTT",
+      "drugroute_form-50": "OTIC SOLN",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-13",
+        "label": "OTIC"
+      },
+      "form-50": {
+        "id": "51_6-50",
+        "label": "SOLN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AURALGAN",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-2_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AURO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AUREAR",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AURED",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-598-5830",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00046-1000-10",
+            "00046-1000-15"
+          ]
+        },
+        {
+          "id": "50_1-6_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTIPYRENE",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BENZOCAINE",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-8_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LOCAL ANESTHETICS"
+        },
+        {
+          "id": "50_1-9_31",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "AURODEX",
+          "intended_use-50_1": "QUICK CODE"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_31",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".04",
+          "pdts_unit_cost-50_3": ".621",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "11/09 NJT",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "12,16",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "10",
+          "default_sig-50_3": "U UD IN THE EAR",
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        }
+      ]
+    },
+    {
+      "_id": "50-32",
+      "type": "cmumpss:Drug-50",
+      "label": "ANTIVENIN (CROTALIDAE) POLYVAL--INJ SOLN",
+      "name-50": "ANTIVENIN (CROTALIDAE) POLYVAL--INJ SOLN",
+      "primary_ndc_number-50": {
+        "id": "8252-8033204",
+        "label": "ANTIVENIN,CROTALIDAE (EQUINE)",
+        "sameAs": "ndc:00008033204",
+        "sameAsLabel": "ANTIVENIN POLYVALENT CMB PK"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "injectable-50": "NON-IV,INJECTABLE",
+      "calc_unit-50": "ML",
+      "drugroute_form-50": "INJ SOLN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-3",
+        "label": "INJ"
+      },
+      "form-50": {
+        "id": "51_6-50",
+        "label": "SOLN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-733",
+        "label": "WESLEYXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-2_32",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTISNAKE BITE SERUM",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_32",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "VIPER",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_32",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PIT VIPER ANTIVENIN",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-5_32",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SNAKE",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_32",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-680-2787",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00008-0332-04"
+          ]
+        },
+        {
+          "id": "50_1-7_32",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SERUMS"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_32",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "108.01",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ]
+    },
+    {
+      "_id": "50-33",
+      "type": "cmumpss:Drug-50",
+      "label": "VITAMIN C 500MG TAB--PO 500MG TAB",
+      "name-50": "VITAMIN C 500MG TAB--PO 500MG TAB",
+      "primary_ndc_number-50": {
+        "id": "8252-65162036810",
+        "label": "ASCORBIC ACID",
+        "sameAs": "ndc:65162036810",
+        "sameAsLabel": "VITAMIN C 500 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "ASCORBIC ACID (VIT-C) 500MG**H**",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "500",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-3947",
+        "label": "PROBSTXXX,VIOLET"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_33",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".013",
+          "pdts_unit_cost-50_3": ".01266666666666666667",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "10",
+          "default_expiration-50_3": "365",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_33",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ASCORBIC ACID",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-2_33",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "VITC",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_33",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "VC",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_33",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-891-7555",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00003-0197-50",
+            "00054-8058-25"
+          ]
+        },
+        {
+          "id": "50_1-8_33",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "VITC500",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-9_33",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "C500",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-10_33",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "VITAMIN C"
+        }
+      ]
+    },
+    {
+      "_id": "50-34",
+      "type": "cmumpss:Drug-50",
+      "label": "D-ASPIRIN 325MG @$.01 TAB--PO 325MG TAB",
+      "name-50": "D-ASPIRIN 325MG @$.01 TAB--PO 325MG TAB",
+      "primary_ndc_number-50": {
+        "id": "8252-536330501",
+        "label": "ASPIRIN",
+        "sameAs": "ndc:00536330501",
+        "sameAsLabel": "ASPIRIN 325 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "ASPIRIN 325 MG",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "EA",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "325",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_34",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".008",
+          "pdts_unit_cost-50_3": "0.00",
+          "nonformulary-50_3": "N",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "100",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "100",
+          "default_sig-50_3": "T UD",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        },
+        {
+          "id": "8200-35",
+          "label": "PSYCHIATRIC ADV PRACTICE NURSE"
+        },
+        {
+          "id": "8200-41",
+          "label": "NSAIDS"
+        }
+      ]
+    },
+    {
+      "_id": "50-35",
+      "type": "cmumpss:Drug-50",
+      "label": "ATENOLOL 50MG TABLET @$.02",
+      "name-50": "ATENOLOL 50MG TABLET @$.02",
+      "primary_ndc_number-50": {
+        "id": "8252-591577710",
+        "label": "ATENOLOL",
+        "sameAs": "ndc:00591577710",
+        "sameAsLabel": "ATENOLOL 50 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "ATENOLOL 50MG TABLET *GG263 M231 5777*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "50",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "HALVES",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_35",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".0193",
+          "pdts_unit_cost-50_3": ".01933333333333333333",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "9",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "90",
+          "default_sig-50_3": "TAKE 1 TABLET BY MOUTH EVERY DAY",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_35",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TENORMIN",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_35",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TEN50",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_35",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ATE50",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_35",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-135-7373",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00310-0105-10",
+            "00038-0015-10"
+          ]
+        },
+        {
+          "id": "50_1-8_35",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "T50",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-9_35",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "55953-0039-80",
+          "ndc_codes-50_1": [
+            "55953-0039-80"
+          ]
+        },
+        {
+          "id": "50_1-10_35",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CARDIAC DRUGS"
+        }
+      ]
+    },
+    {
+      "_id": "50-36",
+      "type": "cmumpss:Drug-50",
+      "label": "ATRACURIUM--IV 10MG_ML INJ",
+      "name-50": "ATRACURIUM--IV 10MG/ML INJ",
+      "primary_ndc_number-50": {
+        "id": "8252-55390010310",
+        "label": "ATRACURIUM BESYLATE",
+        "sameAs": "ndc:55390010310",
+        "sameAsLabel": "ATRACURIUM 100 MG/10 ML VIAL"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "VIAL",
+      "injectable-50": "IV ADDITIVE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG/ML",
+      "dosage_strength-50": "10",
+      "drugroute_form-50": "IV SOLN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-7",
+        "label": "IV"
+      },
+      "form-50": {
+        "id": "51_6-31",
+        "label": "INJ"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-1347",
+        "label": "RUSHINGXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_36",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "1.17",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_36",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TRACRIUM",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_36",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TRA10INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_36",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ATR10INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_36",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-215-7755",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00081-0940-95"
+          ]
+        },
+        {
+          "id": "50_1-6_36",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "00081-0940-44",
+          "ndc_codes-50_1": [
+            "00081-0940-44"
+          ]
+        },
+        {
+          "id": "50_1-7_36",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SKELETAL MUSCLE RELAXANTS"
+        }
+      ]
+    },
+    {
+      "_id": "50-41",
+      "type": "cmumpss:Drug-50",
+      "label": "BACITRACIN--OPT 500U_GM OINT",
+      "name-50": "BACITRACIN--OPT 500U/GM OINT",
+      "primary_ndc_number-50": {
+        "id": "8252-168002638",
+        "label": "BACITRACIN",
+        "sameAs": "ndc:00168002638",
+        "sameAsLabel": "BACITRACIN 500 UNIT/GM OINTMNT"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "GM @3.5/TUBE",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "DAB",
+      "content_unit-50": "U/GM",
+      "dosage_strength-50": "500",
+      "drugroute_form-50": "OPT OINT",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-11",
+        "label": "OPT"
+      },
+      "form-50": {
+        "id": "51_6-43",
+        "label": "OINT"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99502",
+        "label": "CLEMENTSXXX,ORANGE"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-10606",
+        "label": "CHAUVINXXX,MAUVE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_41",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".26",
+          "pdts_unit_cost-50_3": "8.537142857142857143",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "***EYE PREP***",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "14",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "3.5",
+          "default_sig-50_3": "AAA TID #3.5",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_41",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "JWG",
+          "sig-50_15": "AAA QID AFTER WASHING"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-10",
+          "label": "OPTOMETRY"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_41",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BACOO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_41",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BACOPTH",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_41",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BACEYEO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_41",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BAC3.5",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00002-1861-17"
+          ]
+        },
+        {
+          "id": "50_1-7_41",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "0364-7174-70",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00168-0026-38"
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "50-42",
+      "type": "cmumpss:Drug-50",
+      "label": "BACITRACIN--TOP 500U_GM OINT",
+      "name-50": "BACITRACIN--TOP 500U/GM OINT",
+      "primary_ndc_number-50": {
+        "id": "8252-182020830",
+        "label": "BACITRACIN",
+        "sameAs": "ndc:00182020830",
+        "sameAsLabel": "BACITRACIN 500 UNITS/GM OINTMN"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "gm @30/tube",
+      "label_print_name-50": "BACITRACIN TOPICAL OINT 30GM/TUBE",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "DAB",
+      "content_unit-50": "U/GM",
+      "dosage_strength-50": "500",
+      "drugroute_form-50": "TOP OINT",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-17",
+        "label": "TOP"
+      },
+      "form-50": {
+        "id": "51_6-43",
+        "label": "OINT"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99502",
+        "label": "CLEMENTSXXX,ORANGE"
+      },
+      "drug_check_disable-50": "INTERACTION, OVERLAP OFF",
+      "drug_check_user-50": {
+        "id": "3-10416",
+        "label": "KLINKXXX,MAGENTA"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_42",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".02",
+          "pdts_unit_cost-50_3": ".047",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "13",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "30",
+          "default_sig-50_3": "AAA UD #30",
+          "continuable-50_3": true,
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_42",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "GU",
+          "sig-50_15": "AAA PRN"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_42",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BACIGUENT",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_42",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BACOT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_42",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BAC500",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_42",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-159-6625",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00002-1825-47",
+            "00168-0011-35",
+            "00332-5111-44"
+          ]
+        },
+        {
+          "id": "50_1-6_42",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BACO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_42",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BACUNG",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00839-5454-60"
+          ]
+        },
+        {
+          "id": "50_1-8_42",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTIBIOTICS"
+        }
+      ]
+    },
+    {
+      "_id": "50-43",
+      "type": "cmumpss:Drug-50",
+      "label": "BACLOFEN--PO 10MG TAB",
+      "name-50": "BACLOFEN--PO 10MG TAB",
+      "primary_ndc_number-50": {
+        "id": "8252-172409680",
+        "label": "BACLOFEN",
+        "sameAs": "ndc:00172409680",
+        "sameAsLabel": "BACLOFEN 10 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "BACLOFEN 10MG TAB *4959 25510 4096*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "10",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "HALVES",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-2498",
+        "label": "MILLIONXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-3947",
+        "label": "PROBSTXXX,VIOLET"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_43",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".173",
+          "pdts_unit_cost-50_3": ".03177777777777777778",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "1",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_43",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LIORESAL",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_43",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LIORESAL10",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_43",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BAC10",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_43",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LIO10",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_43",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LIOR10",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_43",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-062-5756",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00536-4959-05"
+          ]
+        },
+        {
+          "id": "50_1-7_43",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SKELETAL MUSCLE RELAXANTS"
+        }
+      ]
+    },
+    {
+      "_id": "50-44",
+      "type": "cmumpss:Drug-50",
+      "label": "BALANCED SALT (BSS) OPT SOLN @$37.15--IN",
+      "name-50": "BALANCED SALT (BSS) OPT SOLN @$37.15--IN",
+      "primary_ndc_number-50": {
+        "id": "8252-65079515",
+        "label": "BALANCED SALT IRRIG SOLN COMB2",
+        "sameAs": "ndc:00065079515",
+        "sameAsLabel": "BSS EYE SOLUTION"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "15ML BT",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "GTT",
+      "content_unit-50": "GTT",
+      "drugroute_form-50": "INJ SOLN",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-3",
+        "label": "INJ"
+      },
+      "form-50": {
+        "id": "51_6-50",
+        "label": "SOLN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_44",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BSS",
+          "intended_use-50_1": "TRADE NAME",
+          "ndc_codes-50_1": [
+            "0065-0795-15"
+          ]
+        },
+        {
+          "id": "50_1-2_44",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BSS15",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_44",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BAL SALT OS",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_44",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BSSOS",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00065-0795-15"
+          ]
+        },
+        {
+          "id": "50_1-5_44",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BSSOL",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_44",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-119-7693",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_44",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "EENT DRUGS,MISC"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_44",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "INPATIENT",
+          "local_cost-50_3": ".003",
+          "pdts_unit_cost-50_3": "2.781333333333333333",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "***inpatient use only***",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "14",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "1",
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ]
+    },
+    {
+      "_id": "50-46",
+      "type": "cmumpss:Drug-50",
+      "label": "D-BECLOMETHASONE NASAL SPRAY--NAS 42MCG",
+      "name-50": "D-BECLOMETHASONE NASAL SPRAY--NAS 42MCG",
+      "primary_ndc_number-50": {
+        "id": "8252-85004106",
+        "label": "BECLOMETHASONE DIPROPIONATE",
+        "sameAs": "ndc:00085004106",
+        "sameAsLabel": "VANCENASE 42MCG INHALER"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "GM  16.8/INH",
+      "label_print_name-50": "VANCENASE NASAL INHALER",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "SPRAY",
+      "content_unit-50": "MCG",
+      "dosage_strength-50": "42",
+      "drugroute_form-50": "NAS AERP",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-10",
+        "label": "NAS"
+      },
+      "form-50": {
+        "id": "51_6-2",
+        "label": "AERP"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_46",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "8.18",
+          "pdts_unit_cost-50_3": "2.23705882352941",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "DELETED FROM FORMULARY***MANUFACTURER BACK ORDER**",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "19,12",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "7",
+          "default_sig-50_3": "USE 2 SPRAYS IN EACH NOSTRIL BID #7",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ],
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_46",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "MJS",
+          "sig-50_15": "1 SPRAY EACH NOSTRIL BID"
+        }
+      ]
+    },
+    {
+      "_id": "50-47",
+      "type": "cmumpss:Drug-50",
+      "label": "D-BECLOMETHASONE ORAL_17GM INHALER--PO 4",
+      "name-50": "D-BECLOMETHASONE ORAL/17GM INHALER--PO 4",
+      "primary_ndc_number-50": {
+        "id": "8252-85073604",
+        "label": "BECLOMETHASONE DIPROPIONATE",
+        "sameAs": "ndc:00085073604",
+        "sameAsLabel": "VANCERIL INHALER"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "GM @17/INH",
+      "label_print_name-50": "BECLOMETHASONE *ORAL* INHALER 17GMS/CAN",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "SPRAY",
+      "content_unit-50": "MCG/DOS",
+      "dosage_strength-50": "42",
+      "drugroute_form-50": "PO INHA",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-30",
+        "label": "INHA"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "DUPLICATION, OVERLAP OFF",
+      "drug_check_user-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_47",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "1.12",
+          "pdts_unit_cost-50_3": "2.56352941176471",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "***DISCONTINUED BY MANUFACTURER***",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "12",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "17",
+          "default_sig-50_3": "INH 2 PUFFS QID THEN RINSE MOUTH WELL WITH WATER",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ],
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_47",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "MJS",
+          "sig-50_15": "2 PUFFS TID TO QID"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        }
+      ]
+    },
+    {
+      "_id": "50-49",
+      "type": "cmumpss:Drug-50",
+      "label": "BELLADONNA_OPIUM (B&O)--RECT SUPP",
+      "name-50": "BELLADONNA/OPIUM (B&O)--RECT SUPP",
+      "primary_ndc_number-50": {
+        "id": "8252-61451501607",
+        "label": "OPIUM_BELLADONNA ALKALOIDS",
+        "sameAs": "ndc:61451501607",
+        "sameAsLabel": "B & O SUPPRETTES NO.16-A"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "2",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "EA",
+      "drugroute_form-50": "RECT SUPP",
+      "divisible-50": "HALVES",
+      "route-50": {
+        "id": "51_5-14",
+        "label": "RECT"
+      },
+      "form-50": {
+        "id": "51_6-54",
+        "label": "SUPP"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "B&O SUPPOSITORIES",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00998-5015-75"
+          ]
+        },
+        {
+          "id": "50_1-4_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SUBO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SUB&O",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "SB&O",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00008-0330-01"
+          ]
+        },
+        {
+          "id": "50_1-8_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "OPIUM",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-9_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "B/O",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-10_49",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "opiate agonists"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_49",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "2.625",
+          "pdts_unit_cost-50_3": "1.61383333333333",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": " IL TRIPLICATE *GET MEDICATION FROM VAULT TECH TO DISPENSE*",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "warning_label-50_3": "1,26",
+          "default_expiration-50_3": "30",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "2",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ]
+    },
+    {
+      "_id": "50-50",
+      "type": "cmumpss:Drug-50",
+      "label": "DONNATAL EQUIV ORAL TABLET--PO 16.2MG TA",
+      "name-50": "DONNATAL EQUIV ORAL TABLET--PO 16.2MG TA",
+      "primary_ndc_number-50": {
+        "id": "8252-143114010",
+        "label": "PHENOBARB_HYOSCY_ATROPINE_SCOP",
+        "sameAs": "ndc:00143114010",
+        "sameAsLabel": "BELLADONNA-PHENOBARBITAL TAB"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "BELLADONNA ALK/Pb (=DONNATAL) *3920*140*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "EA",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "16.2",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-97574",
+        "label": "HULSEXXX,JADE"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-2045",
+        "label": "CONAWAYXXX,CITRINE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_50",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".01",
+          "pdts_unit_cost-50_3": ".03122222222222222222",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "dispense_complete_container-50_3": "NO",
+          "warning_label-50_3": "1",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DONNATAL",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DONT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BELPHE",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DONTABS",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-100-7983",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00228-2118-10",
+            "00031-4250-74",
+            "00031-4250-64"
+          ]
+        },
+        {
+          "id": "50_1-8_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BPB",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-9_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DON",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-10_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "HYOT"
+        },
+        {
+          "id": "50_1-11_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "HYOSOPHEN"
+        },
+        {
+          "id": "50_1-12_50",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTIMUSCARINICS/ANTISPASMODICS"
+        }
+      ]
+    },
+    {
+      "_id": "50-53",
+      "type": "cmumpss:Drug-50",
+      "label": "BENZONATATE 100MG @$.10 CAP--PO 100MG CA",
+      "name-50": "BENZONATATE 100MG @$.10 CAP--PO 100MG CA",
+      "primary_ndc_number-50": {
+        "id": "8252-50111085101",
+        "label": "BENZONATATE",
+        "sameAs": "ndc:50111085101",
+        "sameAsLabel": "BENZONATATE 100 MG CAPSULE"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "CAPSULE",
+      "label_print_name-50": "BENZONATATE 100MG CAPSULE (TESSALON Eq)",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "100",
+      "drugroute_form-50": "PO CAP",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-8",
+        "label": "CAP"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-12307",
+        "label": "MEADXXX,RUBY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-12307",
+        "label": "MEADXXX,RUBY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_53",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".696",
+          "pdts_unit_cost-50_3": ".08133333333333333333",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "5",
+          "warning_label-50_3": "5",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "15",
+          "default_sig-50_3": "ct po *SWALLOW WHOLE - DO NOT CHEW*",
+          "default_days_supply-50_3": "5",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "default_schedule_type-50_3": "CONTINUOUS"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        },
+        {
+          "id": "8200-30",
+          "label": "CLEVELAND"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_53",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TESSALON",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_53",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BEN100",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_53",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "TES100",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_53",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-660-1798",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00456-0688-01",
+            "00056-0010-70"
+          ]
+        },
+        {
+          "id": "50_1-5_53",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTITUSSIVES"
+        }
+      ]
+    },
+    {
+      "_id": "50-55",
+      "type": "cmumpss:Drug-50",
+      "label": "BENZTROPINE--PO 2MG TAB",
+      "name-50": "BENZTROPINE--PO 2MG TAB",
+      "primary_ndc_number-50": {
+        "id": "8252-832108200",
+        "label": "BENZTROPINE MESYLATE",
+        "sameAs": "ndc:00832108200",
+        "sameAsLabel": "BENZTROPINE MES 2 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "BENZTROPINE 2MG PO TAB *832BM2*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "2",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_55",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".039",
+          "pdts_unit_cost-50_3": ".02266666666666666667",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "03/07 NJT",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "1,8",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-35",
+          "label": "PSYCHIATRIC ADV PRACTICE NURSE"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_55",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "COGENTIN 2",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_55",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "COG2",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00536-3372-01"
+          ]
+        },
+        {
+          "id": "50_1-3_55",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-680-1907",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00006-0060-68",
+            "00006-0060-28"
+          ]
+        },
+        {
+          "id": "50_1-4_55",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BEN2",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_55",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "COG2MG",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00839-6772-16"
+          ]
+        },
+        {
+          "id": "50_1-6_55",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "ANTIPARKINSONIAN AGENTS"
+        }
+      ]
+    },
+    {
+      "_id": "50-56",
+      "type": "cmumpss:Drug-50",
+      "label": "Z-BETAMETHASONE PHS+ACT(CELESTONE)6MG_ML",
+      "name-50": "Z-BETAMETHASONE PHS+ACT(CELESTONE)6MG/ML",
+      "primary_ndc_number-50": {
+        "id": "8252-85056605",
+        "label": "BETAMET ACET_BETAMET NA PH",
+        "sameAs": "ndc:00085056605",
+        "sameAsLabel": "CELESTONE SOLUSPAN 6 MG/ML"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "VIAL",
+      "label_print_name-50": "Z-BETHAMETHASONE(CELESTONE SOLU)6MG/ML",
+      "injectable-50": "IV DRUG - NON-ADDITIVE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG/ML",
+      "dosage_strength-50": "6",
+      "drugroute_form-50": "INJ SOLN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-3",
+        "label": "INJ"
+      },
+      "form-50": {
+        "id": "51_6-50",
+        "label": "SOLN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-850",
+        "label": "HANNAXXX,GRAY"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_56",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "2.60",
+          "pdts_unit_cost-50_3": "2.9",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "***NONFORMULARY SPECIAL ORDER***",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "30",
+          "dispense_complete_container-50_3": "NO",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_56",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CELESTONE SOLUSPAN",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_56",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CEL6INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_56",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BET6INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_56",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BETINJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_56",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CELINJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-8_56",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-904-2190",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00085-0566-05"
+          ]
+        },
+        {
+          "id": "50_1-9_56",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BETAMETHASONE"
+        }
+      ]
+    },
+    {
+      "_id": "50-57",
+      "type": "cmumpss:Drug-50",
+      "label": "Z-BETHANECHOL(URECHOLINE)--PO 10MG TAB",
+      "name-50": "Z-BETHANECHOL(URECHOLINE)--PO 10MG TAB",
+      "primary_ndc_number-50": {
+        "id": "8252-51285069002",
+        "label": "BETHANECHOL CHLORIDE",
+        "sameAs": "ndc:51285069002",
+        "sameAsLabel": "URECHOLINE 10 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TAB",
+      "label_print_name-50": "Z-BETHANECHOL (URECHOLINE) 10MG TAB",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "10",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "HALVES",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_57",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".7776",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "***SPECIAL ORDER - NON FORMULARY***",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_57",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "URECHOLINE",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_57",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "URC10",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_57",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "URE10",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_57",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BET10",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_57",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-616-7856",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00527-1260-01",
+            "50111-0324-03"
+          ]
+        },
+        {
+          "id": "50_1-7_57",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CHOLINERGICS"
+        }
+      ]
+    },
+    {
+      "_id": "50-58",
+      "type": "cmumpss:Drug-50",
+      "label": "BISACODYL--PO 5MG TBEC",
+      "name-50": "BISACODYL--PO 5MG TBEC",
+      "primary_ndc_number-50": {
+        "id": "8252-904792780",
+        "label": "BISACODYL",
+        "sameAs": "ndc:00904792780",
+        "sameAsLabel": "BISACODYL EC 5 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "TAB EC",
+      "label_print_name-50": "BISACODYL 5MG TBEC **H**",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "5",
+      "drugroute_form-50": "PO TBEC",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-63",
+        "label": "TBEC"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-3947",
+        "label": "PROBSTXXX,VIOLET"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_58",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".001",
+          "pdts_unit_cost-50_3": ".004",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "5",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        },
+        {
+          "id": "8200-5",
+          "label": "NP_PA"
+        },
+        {
+          "id": "8200-6",
+          "label": "IDC"
+        },
+        {
+          "id": "8200-35",
+          "label": "PSYCHIATRIC ADV PRACTICE NURSE"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_58",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DULCOLAX",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-3_58",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DULT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_58",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BIS5",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00054-4098-31",
+            "00597-0012-61"
+          ]
+        },
+        {
+          "id": "50_1-5_58",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-889-9034",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-7_58",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "DUL5",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-9_58",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CATHARTICS"
+        },
+        {
+          "id": "50_1-10_58",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "LAXATIVES"
+        }
+      ]
+    },
+    {
+      "_id": "50-59",
+      "type": "cmumpss:Drug-50",
+      "label": "D-HEMORRHOIDAL (PLAIN) SUPPOSITORY--RECT",
+      "name-50": "D-HEMORRHOIDAL (PLAIN) SUPPOSITORY--RECT",
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "label_print_name-50": "D-HEMORRHOIDAL (PLAIN) SUPPOSITORY",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "EA",
+      "drugroute_form-50": "RECT SUPP",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-14",
+        "label": "RECT"
+      },
+      "form-50": {
+        "id": "51_6-54",
+        "label": "SUPP"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_disable-50": "INTERACTION, OVERLAP OFF",
+      "drug_check_user-50": {
+        "id": "3-4526",
+        "label": "LASHLEYXXX,COBALT"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_59",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "local_cost-50_3": ".168",
+          "pdts_unit_cost-50_3": "0.00",
+          "nonformulary-50_3": "N",
+          "message-50_3": "DELETED 6/97; DEPLETE CURRENT SUPPLY-NO REORDER",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_quantity-50_3": "0",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "26",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "50-61",
+      "type": "cmumpss:Drug-50",
+      "label": "Z-BLEOMYCIN 15UNITS  @$136.49",
+      "name-50": "Z-BLEOMYCIN 15UNITS  @$136.49",
+      "primary_ndc_number-50": {
+        "id": "8252-15301020",
+        "label": "BLEOMYCIN SULFATE",
+        "sameAs": "ndc:00015301020",
+        "sameAsLabel": "BLENOXANE 15 UNITS VIAL"
+      },
+      "dea_special_hdlg-50": "6",
+      "reconstitution_information-50": "3ml BNS/BWFI/NS/D5W = 5units/ml, dispense in glass syringe",
+      "default_unit-50": "VIAL",
+      "injectable-50": "IV ADDITIVE",
+      "calc_unit-50": "UNIT",
+      "content_unit-50": "UNIT",
+      "dosage_strength-50": "15",
+      "drugroute_form-50": "INJ SOLR",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-3",
+        "label": "INJ"
+      },
+      "form-50": {
+        "id": "51_6-51",
+        "label": "SOLR"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-1593",
+        "label": "BURDENXXX,GREEN"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-7865",
+        "label": "HOOPESXXX,FROST"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_61",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BLENOXANE",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_61",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BLEO",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_61",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BLEOMYCIN",
+          "ndc_codes-50_1": [
+            "00015-3010-20"
+          ]
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_61",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "136.49",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "NF (3ML NS = 5 UNITS/ML)",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "30",
+          "dispense_complete_container-50_3": "NO",
+          "default_expiration-50_3": "365",
+          "default_sig-50_3": "BLEOMYCIN __units in __ml SLOW IV PUSH",
+          "iv_print_name-50_3": "BLEOMYCIN SULFATE",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "special_iv_instructions-50_3": "TEST DOSE prior to 1st treatment w/ 1unit (0.2ml of 5unit/ml concentration)                                                                           ",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "50-63",
+      "type": "cmumpss:Drug-50",
+      "label": "D-BRETYLIUM--INJ 50MG_ML SOLN",
+      "name-50": "D-BRETYLIUM--INJ 50MG/ML SOLN",
+      "primary_ndc_number-50": {
+        "id": "8252-517881001",
+        "label": "BRETYLIUM TOSYLATE",
+        "sameAs": "ndc:00517881001",
+        "sameAsLabel": "BRETYLIUM 50 MG/ML VIAL"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "VIAL",
+      "injectable-50": "IV ADDITIVE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG/ML",
+      "dosage_strength-50": "50",
+      "drugroute_form-50": "INJ SOLN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-3",
+        "label": "INJ"
+      },
+      "form-50": {
+        "id": "51_6-50",
+        "label": "SOLN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-6236",
+        "label": "IVORYXXX,CERISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_63",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "2.06",
+          "pdts_unit_cost-50_3": "0.00",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "***NOT BreVIBLOC***",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ]
+    },
+    {
+      "_id": "50-64",
+      "type": "cmumpss:Drug-50",
+      "label": "Z-BROMOCRIPTINE 2.5MG TAB (PARLODEL)--PO",
+      "name-50": "Z-BROMOCRIPTINE 2.5MG TAB (PARLODEL)--PO",
+      "primary_ndc_number-50": {
+        "id": "8252-78001715",
+        "label": "BROMOCRIPTINE MESYLATE",
+        "sameAs": "ndc:00078001715",
+        "sameAsLabel": "PARLODEL 2.5 MG TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "6",
+      "default_unit-50": "TABLET",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG",
+      "dosage_strength-50": "2.5",
+      "drugroute_form-50": "PO TAB",
+      "divisible-50": "HALVES",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-59",
+        "label": "TAB"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-2498",
+        "label": "MILLIONXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-1347",
+        "label": "RUSHINGXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_64",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PARLODEL",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_64",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PAR25",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_64",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "PAR2.5",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_64",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BRO2.5",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-6_64",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-01-083-0900",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00078-0017-15"
+          ]
+        },
+        {
+          "id": "50_1-7_64",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BROMOCRIPTINE"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_64",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".844",
+          "pdts_unit_cost-50_3": ".242",
+          "nonformulary-50_3": "FORMULARY",
+          "message-50_3": "N/F: {Non-Formulary ** Special Order Item}",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "dispense_complete_container-50_3": "NO",
+          "warning_label-50_3": "10",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "50-65",
+      "type": "cmumpss:Drug-50",
+      "label": "D-BROMPHENIRAMINE CMPD TAB$.03--PO TBSR",
+      "name-50": "D-BROMPHENIRAMINE CMPD TAB$.03--PO TBSR",
+      "primary_ndc_number-50": {
+        "id": "8252-31225454",
+        "label": "PPA HCL_BROMPHENIRAMIN",
+        "sameAs": "ndc:00031225454",
+        "sameAsLabel": "DIMETAPP TABLET"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "TABLET",
+      "label_print_name-50": "DIMETAPP EXTENTABS or equiv *C177*",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "EA",
+      "content_unit-50": "MG",
+      "drugroute_form-50": "PO TBSR",
+      "divisible-50": "NOT DIVISIBLE",
+      "route-50": {
+        "id": "51_5-12",
+        "label": "PO"
+      },
+      "form-50": {
+        "id": "51_6-61",
+        "label": "TBSR"
+      },
+      "edited-50": {
+        "value": "1990-01-01T01:00:00",
+	"type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-110644",
+        "label": "SNIDERXXX,SCARLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-99502",
+        "label": "CLEMENTSXXX,ORANGE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "sig_codes-50": [
+        {
+          "id": "50_15-1_65",
+          "type": "cmumpss:Sig_CodeS-50_15",
+          "sig_codes-50_15": "MJS",
+          "sig-50_15": "T1 TB PO BID TO TID"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_65",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".033",
+          "nonformulary-50_3": "N",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "1,8",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "10",
+          "default_sig-50_3": "T1 PO BID #20",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "50-67",
+      "type": "cmumpss:Drug-50",
+      "label": "Z-BUTORPHANOL--INJ 2MG_ML SOLN",
+      "name-50": "Z-BUTORPHANOL--INJ 2MG/ML SOLN",
+      "primary_ndc_number-50": {
+        "id": "8252-54309036",
+        "label": "BUTORPHANOL TARTRATE",
+        "sameAs": "ndc:00054309036",
+        "sameAsLabel": "BUTORPHANOL 10 MG/ML SPRAY"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "4",
+      "default_unit-50": "VIAL",
+      "label_print_name-50": "Z-BUTORPHANOL (STADOL) 2MG/ML INJ",
+      "injectable-50": "IV DRUG - NON-ADDITIVE",
+      "calc_unit-50": "MG",
+      "content_unit-50": "MG/ML",
+      "dosage_strength-50": "2",
+      "drugroute_form-50": "NAS SPRA",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-10",
+        "label": "NAS"
+      },
+      "form-50": {
+        "id": "51_6-52",
+        "label": "SPRA"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-3947",
+        "label": "PROBSTXXX,VIOLET"
+      },
+      "drug_check_disable-50": "ALL ENABLED",
+      "drug_check_user-50": {
+        "id": "3-1347",
+        "label": "RUSHINGXXX,TURQUOISE"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_67",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": "3.444",
+          "nonformulary-50_3": "N",
+          "message-50_3": "N/F:",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "30",
+          "dispense_complete_container-50_3": "NO",
+          "default_expiration-50_3": "365",
+          "replenish_on_request-50_3": "NO",
+          "inpatient_order_duration-50_3": "100",
+          "inactive_date-50_3": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          }
+        }
+      ],
+      "drug_authorization_key-50": [
+        {
+          "id": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ],
+      "synonym-50": [
+        {
+          "id": "50_1-1_67",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "STADOL",
+          "intended_use-50_1": "TRADE NAME"
+        },
+        {
+          "id": "50_1-2_67",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "STA2INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_67",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BUT2INJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_67",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "STAINJ",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-5_67",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BUTINJ",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00015-5646-33"
+          ]
+        },
+        {
+          "id": "50_1-6_67",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BUTORPHANOL"
+        }
+      ]
+    },
+    {
+      "_id": "50-68",
+      "type": "cmumpss:Drug-50",
+      "label": "CALAMINE LOTION @.01--TOP LOTN",
+      "name-50": "CALAMINE LOTION @.01--TOP LOTN",
+      "primary_ndc_number-50": {
+        "id": "8252-182603037",
+        "label": "CALAMINE",
+        "sameAs": "ndc:00182603037",
+        "sameAsLabel": "CALAMINE LOTION"
+      },
+      "ndc_invalid-50": "Valid NDC",
+      "dea_special_hdlg-50": "9",
+      "default_unit-50": "ML@120/BTL",
+      "label_print_name-50": "CALAMINE LOTION",
+      "injectable-50": "NOT INJECTABLE",
+      "calc_unit-50": "ML",
+      "content_unit-50": "%",
+      "drugroute_form-50": "TOP LOTN",
+      "divisible-50": "MULTIPLE",
+      "route-50": {
+        "id": "51_5-17",
+        "label": "TOP"
+      },
+      "form-50": {
+        "id": "51_6-36",
+        "label": "LOTN"
+      },
+      "edited-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "editor-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_disable-50": "INTERACTION, OVERLAP OFF",
+      "drug_check_user-50": {
+        "id": "3-99002",
+        "label": "WYCHEXXX,IVORY"
+      },
+      "drug_check_date-50": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "synonym-50": [
+        {
+          "id": "50_1-1_68",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CALL",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-2_68",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CALOT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-3_68",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CALLOT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-4_68",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "6505-00-687-4535",
+          "intended_use-50_1": "QUICK CODE",
+          "ndc_codes-50_1": [
+            "00472-0725-04",
+            "00228-0093-04",
+            "00536-0332-85"
+          ]
+        },
+        {
+          "id": "50_1-5_68",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "CLOT",
+          "intended_use-50_1": "QUICK CODE"
+        },
+        {
+          "id": "50_1-8_68",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "BASIC LOTIONS/LINIMENTS"
+        },
+        {
+          "id": "50_1-9_68",
+          "type": "cmumpss:Synonym-50_1",
+          "synonym-50_1": "OTC9"
+        }
+      ],
+      "associated_formulary-50": [
+        {
+          "id": "50_3-1_68",
+          "type": "cmumpss:Associated_Formulary-50_3",
+          "associated_formulary-50_3": {
+            "id": "59_3-1",
+            "label": "FIRST FORMULARY GROUP"
+          },
+          "ip_op_indicator-50_3": "BOTH",
+          "local_cost-50_3": ".003",
+          "pdts_unit_cost-50_3": ".00775",
+          "nonformulary-50_3": "FORMULARY",
+          "local_pdts_cost_switch-50_3": "PDTS",
+          "maximum_days_supply-50_3": "90",
+          "warning_label-50_3": "12,13",
+          "default_expiration-50_3": "365",
+          "default_quantity-50_3": "120",
+          "default_sig-50_3": "AAA UD",
+          "default_days_supply-50_3": "30",
+          "replenish_on_request-50_3": "YES",
+          "inpatient_order_duration-50_3": "100"
+        }
+      ]
+    }
+  ]
+}

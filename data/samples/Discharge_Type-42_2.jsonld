@@ -1,0 +1,699 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "42_2-.5",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "CANCELLED ADMISSION",
+      "name-42_2": "CANCELLED ADMISSION",
+      "code-42_2": "53",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_.5",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-1",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCHARGED HOME",
+      "name-42_2": "DISCHARGED HOME",
+      "code-42_2": "05",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "2",
+      "synonym-42_2": "HOME",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_1",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-2",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "TO PDRL FROM TDRL (INCLUDING CRO)",
+      "name-42_2": "TO PDRL FROM TDRL (INCLUDING CRO)",
+      "code-42_2": "03",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "TPDR",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_2",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-3",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "TO DUTY FROM TDRL (INCLUDING CRO)",
+      "name-42_2": "TO DUTY FROM TDRL (INCLUDING CRO)",
+      "code-42_2": "02",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "TDUT",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_3",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-7",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "LEFT AGAINST MEDICAL ADVICE",
+      "name-42_2": "LEFT AGAINST MEDICAL ADVICE",
+      "code-42_2": "06",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "2",
+      "synonym-42_2": "AMA",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_7",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-12",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "TRANSFER TO ARMY MTF",
+      "name-42_2": "TRANSFER TO ARMY MTF",
+      "code-42_2": "21",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "TAR",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_12",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-13",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "TRANSFER TO NAVY MTF",
+      "name-42_2": "TRANSFER TO NAVY MTF",
+      "code-42_2": "22",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "TNF",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_13",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-16",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "AWOL (DROPPED FROM ROLLS)",
+      "name-42_2": "AWOL (DROPPED FROM ROLLS)",
+      "code-42_2": "04",
+      "active-42_2": "ACTIVE",
+      "svc_flag-42_2": "ANF",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "AWOL",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_16",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-17",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "CRO-OTHER",
+      "name-42_2": "CRO-OTHER",
+      "code-42_2": "50",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "CROO",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_17",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-18",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCHARGED TO CIVILIAN HOSPITAL, NURSING HOME, CONV CENTER",
+      "name-42_2": "DISCHARGED TO CIVILIAN HOSPITAL, NURSING HOME, CONV CENTER",
+      "code-42_2": "25",
+      "active-42_2": "INACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "2",
+      "synonym-42_2": "DCIV",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_18",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        },
+        {
+          "id": "42_21-2_18",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "INACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-20",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "SEPARATION FOR FAILURE TO MEET MED PROCUREMENT STNDS",
+      "name-42_2": "SEPARATION FOR FAILURE TO MEET MED PROCUREMENT STNDS",
+      "code-42_2": "15",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "DMPS",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_20",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-22",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "MEDICAL HOLDING",
+      "name-42_2": "MEDICAL HOLDING",
+      "code-42_2": "00",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "HOLD",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_22",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-23",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "SEPARATED_RETIRED-PDRL-(INCLUDING CRO)",
+      "name-42_2": "SEPARATED/RETIRED-PDRL-(INCLUDING CRO)",
+      "code-42_2": "10",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "PDRL",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_23",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-24",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "SEPARATED_RETIRED-TDRL-(INCLUDING CRO)",
+      "name-42_2": "SEPARATED/RETIRED-TDRL-(INCLUDING CRO)",
+      "code-42_2": "11",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "TDRL",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_24",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ],
+    },
+    {
+      "_id": "42_2-26",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "SEPARATION W_SEVERENCE PAY-(INCLUDING CRO)",
+      "name-42_2": "SEPARATION W/SEVERENCE PAY-(INCLUDING CRO)",
+      "code-42_2": "12",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "SWPL",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_26",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-27",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "SEPARATION WO_SEVERENCE PAY-(INCLUDING CRO)",
+      "name-42_2": "SEPARATION WO/SEVERENCE PAY-(INCLUDING CRO)",
+      "code-42_2": "13",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "SWOP",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_27",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-28",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "NONDISABILITY SEPARATION FOR DRUG_ALCOHOL ABUSE",
+      "name-42_2": "NONDISABILITY SEPARATION FOR DRUG/ALCOHOL ABUSE",
+      "code-42_2": "14",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "DAAP",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_28",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-30",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "TRANSFER TO AIR FORCE MTF",
+      "name-42_2": "TRANSFER TO AIR FORCE MTF",
+      "code-42_2": "23",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "TAF",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_30",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-31",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCHARGED TO OTHER FEDERAL FAC (VA, IHS) EXC ARMY, NAVY, AF",
+      "name-42_2": "DISCHARGED TO OTHER FEDERAL FAC (VA, IHS) EXC ARMY, NAVY, AF",
+      "code-42_2": "24",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "DOFF",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_31",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-32",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DIED DURING INPATIENT STAY",
+      "name-42_2": "DIED DURING INPATIENT STAY",
+      "code-42_2": "30",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "DIED",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_32",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-33",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "CRO-DIED OUT OF (INCL DOA)_ REPORTED BY MTF",
+      "name-42_2": "CRO-DIED OUT OF (INCL DOA)/ REPORTED BY MTF",
+      "code-42_2": "41",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "DOA",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_33",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-34",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "CRO-EMERGENCY ROOM (ER) DEATH",
+      "name-42_2": "CRO-EMERGENCY ROOM (ER) DEATH",
+      "code-42_2": "42",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "synonym-42_2": "ERD",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_34",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-35",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "CRO-KILLED IN ACTION (KIA)",
+      "name-42_2": "CRO-KILLED IN ACTION (KIA)",
+      "code-42_2": "51",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "1",
+      "synonym-42_2": "KIA",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_35",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-36",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "PRE-DISPOSITIONED",
+      "name-42_2": "PRE-DISPOSITIONED",
+      "code-42_2": "52",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "3",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_36",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        },
+        {
+          "id": "42_21-2_36",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-08-05",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "INACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-37",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCH CIV RESID_INTERMED CARE OR SUBSTANCE ABUSE REHAB FAC",
+      "name-42_2": "DISCH CIV RESID/INTERMED CARE OR SUBSTANCE ABUSE REHAB FAC",
+      "code-42_2": "28",
+      "synonym-42_2": "DCR",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_37",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        },
+        {
+          "id": "42_21-2_37",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-08-06",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "INACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-38",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCH TO CIVILIAN SKILLED NURSING OR LONG-TERM PSYCH FAC",
+      "name-42_2": "DISCH TO CIVILIAN SKILLED NURSING OR LONG-TERM PSYCH FAC",
+      "code-42_2": "27",
+      "synonym-42_2": "DCN",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_38",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        },
+        {
+          "id": "42_21-2_38",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-08-06",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "INACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-39",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCHARGE TO CIVILIAN ACUTE CARE FACILITY",
+      "name-42_2": "DISCHARGE TO CIVILIAN ACUTE CARE FACILITY",
+      "code-42_2": "26",
+      "synonym-42_2": "DCH",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_39",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        },
+        {
+          "id": "42_21-2_39",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "INACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-40",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCHARGED TO CIV ACUTE CARE FACILITY",
+      "name-42_2": "DISCHARGED TO CIV ACUTE CARE FACILITY",
+      "code-42_2": "26",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "2",
+      "synonym-42_2": "DCH",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_40",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-41",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCHARGED TO CIV SNF OR LONG TERM PSYCHIATRIC FACILITY",
+      "name-42_2": "DISCHARGED TO CIV SNF OR LONG TERM PSYCHIATRIC FACILITY",
+      "code-42_2": "27",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "2",
+      "synonym-42_2": "DCN",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_41",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "_id": "42_2-42",
+      "type": "cmumpss:Discharge_Type-42_2",
+      "label": "DISCHARGED TO CIV RES_INTER CARE OR SUB ABUSE REHAB FACILITY",
+      "name-42_2": "DISCHARGED TO CIV RES/INTER CARE OR SUB ABUSE REHAB FACILITY",
+      "code-42_2": "28",
+      "active-42_2": "ACTIVE",
+      "internal_service_code-42_2": "124",
+      "dutyactive_nonactive-42_2": "2",
+      "synonym-42_2": "DCR",
+      "activation_inactivation_date-42_2": [
+        {
+          "id": "42_21-1_42",
+          "type": "cmumpss:Activation_Inactivation_Date-42_21",
+          "activation_inactivation_date-42_21": {
+            "value": "1990-01-01",
+            "type": "xsd:date"
+          },
+          "active_inactive_status-42_21": "ACTIVE"
+        }
+      ]
+    }
+  ]
+}
