@@ -1,0 +1,253 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8250_4-118",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "W7NAEF",
+      "hic-8250_4": "W7NAEF",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_118",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-518",
+            "label": "518"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-58",
+            "label": "58"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-131",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "W7CGQW",
+      "hic-8250_4": "W7CGQW",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_131",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-512",
+            "label": "512"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-724",
+            "label": "724"
+          }
+        },
+        {
+          "id": "8250_41-2_131",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900508",
+            "label": "900508"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-527",
+            "label": "527"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-306",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "W5CG",
+      "hic-8250_4": "W5CG",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_306",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900565",
+            "label": "900565"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-576",
+            "label": "576"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-543",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "W1QW",
+      "hic-8250_4": "W1QW",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_543",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-3668",
+            "label": "3668"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-61",
+            "label": "61"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-557",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "W1QWME",
+      "hic-8250_4": "W1QWME",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_557",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-3668",
+            "label": "3668"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-61",
+            "label": "61"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-565",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "Q2UAGW",
+      "hic-8250_4": "Q2UAGW",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_565",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900341",
+            "label": "900341"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-369",
+            "label": "369"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-568",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "C5TZ",
+      "hic-8250_4": "C5TZ",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_568",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900548",
+            "label": "900548"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-427",
+            "label": "427"
+          }
+        },
+        {
+          "id": "8250_41-2_568",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900548",
+            "label": "900548"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-560",
+            "label": "560"
+          }
+        },
+        {
+          "id": "8250_41-3_568",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900548",
+            "label": "900548"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-695",
+            "label": "695"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-571",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "Z2LA",
+      "hic-8250_4": "Z2LA",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_571",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900560",
+            "label": "900560"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-710",
+            "label": "710"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-572",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "M4PI",
+      "hic-8250_4": "M4PI",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_572",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900401",
+            "label": "900401"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-427",
+            "label": "427"
+          }
+        },
+        {
+          "id": "8250_41-2_572",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900548",
+            "label": "900548"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-560",
+            "label": "560"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8250_4-590",
+      "type": "cmumpss:Fdb_Dam_Master_Table-8250_4",
+      "label": "A1AA",
+      "hic-8250_4": "A1AA",
+      "dacsp-8250_4": [
+        {
+          "id": "8250_41-1_590",
+          "type": "cmumpss:Dacsp-8250_41",
+          "dacsp-8250_41": {
+            "id": "8250_5-900128",
+            "label": "900128"
+          },
+          "daccs-8250_41": {
+            "id": "8253_05-164",
+            "label": "164"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8250_5-1",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "1",
+      "damagcsp-8250_5": "1",
+      "damagcspd-8250_5": "(DO NOT USE RETIRED CODE) UBIDECARENONE ANALOGUES"
+    },
+    {
+      "_id": "8250_5-2",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "2",
+      "damagcsp-8250_5": "2",
+      "damagcspd-8250_5": "(DO NOT USE RETIRED CODE) TIPEPIDINE"
+    },
+    {
+      "_id": "8250_5-3",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "3",
+      "damagcsp-8250_5": "3",
+      "damagcspd-8250_5": "CINNAMON ANALOGUES"
+    },
+    {
+      "_id": "8250_5-4",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "4",
+      "damagcsp-8250_5": "4",
+      "damagcspd-8250_5": "(DO NOT USE RETIRED CODE) IMATINIB"
+    },
+    {
+      "_id": "8250_5-5",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "5",
+      "damagcsp-8250_5": "5",
+      "damagcspd-8250_5": "(DO NOT USE RETIRED CODE) CLEBOPRIDE"
+    },
+    {
+      "_id": "8250_5-6",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "6",
+      "damagcsp-8250_5": "6",
+      "damagcspd-8250_5": "CARNITINE ANALOGUES"
+    },
+    {
+      "_id": "8250_5-7",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "7",
+      "damagcsp-8250_5": "7",
+      "damagcspd-8250_5": "IODINATED CONTRAST MEDIA - IV DYE",
+      "dac-8250_5": {
+        "id": "8250_2-5057",
+        "label": "5057"
+      }
+    },
+    {
+      "_id": "8250_5-8",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "8",
+      "damagcsp-8250_5": "8",
+      "damagcspd-8250_5": "CEDARWOOD (JUNIPERUS)"
+    },
+    {
+      "_id": "8250_5-9",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "9",
+      "damagcsp-8250_5": "9",
+      "damagcspd-8250_5": "CEDAR LEAF (THUJA)"
+    },
+    {
+      "_id": "8250_5-11",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "11",
+      "damagcsp-8250_5": "11",
+      "damagcspd-8250_5": "TOSITUMOMAB ANALOGUES"
+    },
+    {
+      "_id": "8250_5-14",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "14",
+      "damagcsp-8250_5": "14",
+      "damagcspd-8250_5": "ANDROGRAPHIS PANICULATA"
+    },
+    {
+      "_id": "8250_5-15",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "15",
+      "damagcsp-8250_5": "15",
+      "damagcspd-8250_5": "OLIVE"
+    },
+    {
+      "_id": "8250_5-17",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "17",
+      "damagcsp-8250_5": "17",
+      "damagcspd-8250_5": "PYGEUM AFRICANUM"
+    },
+    {
+      "_id": "8250_5-18",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "18",
+      "damagcsp-8250_5": "18",
+      "damagcspd-8250_5": "TITANIUM ANALOGUES"
+    },
+    {
+      "_id": "8250_5-19",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "19",
+      "damagcsp-8250_5": "19",
+      "damagcspd-8250_5": "ASCORBIC ACID (VITAMIN C)"
+    },
+    {
+      "_id": "8250_5-20",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "20",
+      "damagcsp-8250_5": "20",
+      "damagcspd-8250_5": "(DO NOT USE, NOT SCREENED) GLUTEN PROTEIN"
+    },
+    {
+      "_id": "8250_5-23",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "23",
+      "damagcsp-8250_5": "23",
+      "damagcspd-8250_5": "COCONUT"
+    },
+    {
+      "_id": "8250_5-24",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "24",
+      "damagcsp-8250_5": "24",
+      "damagcspd-8250_5": "BOGBEAN (MENYANTHES)"
+    },
+    {
+      "_id": "8250_5-25",
+      "type": "cmumpss:Fdb_Dam_Specific_Allergy_Code-8250_5",
+      "label": "25",
+      "damagcsp-8250_5": "25",
+      "damagcspd-8250_5": "SARSAPARILLA (SMILAX)"
+    }
+  ]
+}

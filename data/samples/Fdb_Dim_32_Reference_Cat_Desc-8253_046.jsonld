@@ -1,0 +1,47 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8253_046-1",
+      "type": "cmumpss:Fdb_Dim_32_Reference_Cat_Desc-8253_046",
+      "label": "1",
+      "iamtrefcat-8253_046": "1",
+      "iamtrefcatd-8253_046": "MANUFACTURER INFORMATION"
+    },
+    {
+      "_id": "8253_046-2",
+      "type": "cmumpss:Fdb_Dim_32_Reference_Cat_Desc-8253_046",
+      "label": "2",
+      "iamtrefcat-8253_046": "2",
+      "iamtrefcatd-8253_046": "HUMAN CLINICAL TRIAL"
+    },
+    {
+      "_id": "8253_046-3",
+      "type": "cmumpss:Fdb_Dim_32_Reference_Cat_Desc-8253_046",
+      "label": "3",
+      "iamtrefcat-8253_046": "3",
+      "iamtrefcatd-8253_046": "CASE REPORT"
+    },
+    {
+      "_id": "8253_046-4",
+      "type": "cmumpss:Fdb_Dim_32_Reference_Cat_Desc-8253_046",
+      "label": "4",
+      "iamtrefcat-8253_046": "4",
+      "iamtrefcatd-8253_046": "MEETING ABSTRACT"
+    },
+    {
+      "_id": "8253_046-5",
+      "type": "cmumpss:Fdb_Dim_32_Reference_Cat_Desc-8253_046",
+      "label": "5",
+      "iamtrefcat-8253_046": "5",
+      "iamtrefcatd-8253_046": "IN VITRO/ANIMAL STUDY"
+    },
+    {
+      "_id": "8253_046-6",
+      "type": "cmumpss:Fdb_Dim_32_Reference_Cat_Desc-8253_046",
+      "label": "6",
+      "iamtrefcat-8253_046": "6",
+      "iamtrefcatd-8253_046": "REVIEW"
+    }
+  ]
+}

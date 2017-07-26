@@ -1,0 +1,46 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8253_045-1",
+      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "label": "Contraindicated Drug Combination",
+      "dimslbtxt-8253_045": "Contraindicated Drug Combination",
+      "dimsltext-8253_045": [
+        "This drug combination is",
+        "contraindicated and generally should not be dispensed or administered",
+        "to the same patient."
+      ]
+    },
+    {
+      "_id": "8253_045-2",
+      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "label": "Severe Interaction",
+      "dimslbtxt-8253_045": "Severe Interaction",
+      "dimsltext-8253_045": [
+        "Action is required to reduce the risk of severe",
+        "adverse interaction."
+      ]
+    },
+    {
+      "_id": "8253_045-3",
+      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "label": "Moderate Interaction",
+      "dimslbtxt-8253_045": "Moderate Interaction",
+      "dimsltext-8253_045": [
+        "Assess the risk to the patient and take action",
+        "as needed."
+      ]
+    },
+    {
+      "_id": "8253_045-9",
+      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "label": "Undetermined Severity - Alternative Therapy Interaction",
+      "dimslbtxt-8253_045": "Undetermined Severity - Alternative Therapy Interaction",
+      "dimsltext-8253_045": [
+        "Assess the",
+        "risk to the patient and take action as needed."
+      ]
+    }
+  ]
+}
