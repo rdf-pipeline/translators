@@ -1,0 +1,641 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "62-1",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-72",
+        "label": "SERUM"
+      },
+      "tube_top_color-62": "MARBLE",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      },
+      "synonym-62": [
+        "TIGER TOP",
+        "MARBLE TOP"
+      ]
+    },
+    {
+      "_id": "62-2",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-73",
+        "label": "PLASMA"
+      },
+      "tube_top_color-62": "LT.BLUE",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      },
+      "synonym-62": [
+        "BP",
+        "BLUE TOP",
+        "LIGHT BLUE"
+      ]
+    },
+    {
+      "_id": "62-3",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      },
+      "tube_top_color-62": "LAV",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      },
+      "synonym-62": [
+        "LAVENDER",
+        "PURPLE TOP"
+      ]
+    },
+    {
+      "_id": "62-4",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-72",
+        "label": "SERUM"
+      },
+      "tube_top_color-62": "RED TOP",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      },
+      "synonym-62": [
+        "CLOT TUBE"
+      ]
+    },
+    {
+      "_id": "62-9",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "CSF",
+      "name-62": "CSF",
+      "default_specimen-62": {
+        "id": "61-74",
+        "label": "CEREBROSPINAL FLUID"
+      },
+      "tube_top_color-62": "CSF TUBE",
+      "snomed_code-62": {
+        "id": "8188_12-109200",
+        "label": "23889009"
+      },
+      "synonym-62": [
+        "SPINAL FLUID",
+        "CEREBROSPINAL FLUID"
+      ]
+    },
+    {
+      "_id": "62-17",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "STOOL",
+      "name-62": "STOOL",
+      "default_specimen-62": {
+        "id": "61-139",
+        "label": "FECES"
+      },
+      "tube_top_color-62": "STERILE CUP",
+      "snomed_code-62": {
+        "id": "8188_12-208062",
+        "label": "39477002"
+      },
+      "synonym-62": [
+        "FECES"
+      ]
+    },
+    {
+      "_id": "62-18",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "SPUTUM",
+      "name-62": "SPUTUM",
+      "default_specimen-62": {
+        "id": "61-360",
+        "label": "SPUTUM"
+      },
+      "tube_top_color-62": "STERILE CON",
+      "snomed_code-62": {
+        "id": "8188_12-219776",
+        "label": "45710003"
+      },
+      "synonym-62": [
+        "SP"
+      ]
+    },
+    {
+      "_id": "62-21",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "WOUND",
+      "name-62": "WOUND",
+      "snomed_code-62": {
+        "id": "8188_12-34318",
+        "label": "13924000"
+      }
+    },
+    {
+      "_id": "62-26",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BIOPSY",
+      "name-62": "BIOPSY",
+      "default_specimen-62": {
+        "id": "61-8729",
+        "label": "TISSUE"
+      },
+      "tube_top_color-62": "FORMALIN",
+      "snomed_code-62": {
+        "id": "8188_12-255532",
+        "label": "86273004"
+      }
+    },
+    {
+      "_id": "62-28",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BONE MARROW",
+      "name-62": "BONE MARROW",
+      "default_specimen-62": {
+        "id": "61-319",
+        "label": "BONE MARROW"
+      },
+      "snomed_code-62": {
+        "id": "8188_12-155832",
+        "label": "279729006"
+      }
+    },
+    {
+      "_id": "62-35",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "HAIR",
+      "name-62": "HAIR",
+      "default_specimen-62": {
+        "id": "61-201",
+        "label": "HAIR"
+      }
+    },
+    {
+      "_id": "62-40",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "TISSUE",
+      "name-62": "TISSUE",
+      "default_specimen-62": {
+        "id": "61-8729",
+        "label": "TISSUE"
+      }
+    },
+    {
+      "_id": "62-47",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      },
+      "tube_top_color-62": "BACTEC BTL",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      },
+      "synonym-62": [
+        "BACTEC BOTTLE",
+        "BLOOD CULTURE BOTTLE"
+      ]
+    },
+    {
+      "_id": "62-51",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "URINE_24HR",
+      "name-62": "URINE/24HR",
+      "default_specimen-62": {
+        "id": "61-8755",
+        "label": "24 HR. URINE"
+      }
+    },
+    {
+      "_id": "62-59",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "NASAL SWAB",
+      "name-62": "NASAL SWAB",
+      "default_specimen-62": {
+        "id": "61-3504",
+        "label": "NASAL MUCUS"
+      },
+      "snomed_code-62": {
+        "id": "8188_12-130194",
+        "label": "258699004"
+      },
+      "synonym-62": [
+        "NS"
+      ]
+    },
+    {
+      "_id": "62-79",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "THROAT",
+      "name-62": "THROAT",
+      "default_specimen-62": {
+        "id": "61-60",
+        "label": "PHARYNX"
+      }
+    },
+    {
+      "_id": "62-91",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "NOSE",
+      "name-62": "NOSE",
+      "default_specimen-62": {
+        "id": "61-331",
+        "label": "NOSE"
+      }
+    },
+    {
+      "_id": "62-92",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "URETHRA",
+      "name-62": "URETHRA",
+      "default_specimen-62": {
+        "id": "61-75",
+        "label": "URETHRA"
+      }
+    },
+    {
+      "_id": "62-97",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "EAR",
+      "name-62": "EAR",
+      "default_specimen-62": {
+        "id": "61-363",
+        "label": "EAR"
+      }
+    },
+    {
+      "_id": "62-98",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "EYE",
+      "name-62": "EYE",
+      "default_specimen-62": {
+        "id": "61-140",
+        "label": "EYE"
+      }
+    },
+    {
+      "_id": "62-108",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "ORAL CAVITY",
+      "name-62": "ORAL CAVITY",
+      "default_specimen-62": {
+        "id": "61-4713",
+        "label": "ORAL CAVITY"
+      },
+      "synonym-62": [
+        "MOUTH"
+      ]
+    },
+    {
+      "_id": "62-109",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "RECTAL SWAB",
+      "name-62": "RECTAL SWAB",
+      "default_specimen-62": {
+        "id": "61-68",
+        "label": "RECTUM"
+      },
+      "snomed_code-62": {
+        "id": "8188_12-127034",
+        "label": "258528007"
+      }
+    },
+    {
+      "_id": "62-110",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "URINE_CC",
+      "name-62": "URINE/CC",
+      "default_specimen-62": {
+        "id": "61-71",
+        "label": "VOIDED URINE"
+      },
+      "tube_top_color-62": "STERILE CUP"
+    },
+    {
+      "_id": "62-111",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "URINE_CATH",
+      "name-62": "URINE/CATH",
+      "default_specimen-62": {
+        "id": "61-5850",
+        "label": "CATH URINE"
+      },
+      "tube_top_color-62": "CATHETER"
+    },
+    {
+      "_id": "62-113",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "SWAB_ANAEROBE",
+      "name-62": "SWAB/ANAEROBE",
+      "tube_top_color-62": "CULTURETTE"
+    },
+    {
+      "_id": "62-120",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "AUTOPSY",
+      "name-62": "AUTOPSY"
+    },
+    {
+      "_id": "62-121",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "URINE_RANDOM",
+      "name-62": "URINE/RANDOM",
+      "default_specimen-62": {
+        "id": "61-71",
+        "label": "VOIDED URINE"
+      },
+      "tube_top_color-62": "URINE TUBE",
+      "synonym-62": [
+        "RANDOM URINE"
+      ]
+    },
+    {
+      "_id": "62-122",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "FINE NEEDLE ASPIRATE",
+      "name-62": "FINE NEEDLE ASPIRATE",
+      "tube_top_color-62": "SYRINGE",
+      "synonym-62": [
+        "FNA",
+        "CYTOLOGY"
+      ]
+    },
+    {
+      "_id": "62-123",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "PMT SAMPLE",
+      "name-62": "PMT SAMPLE",
+      "default_specimen-62": {
+        "id": "61-72",
+        "label": "SERUM"
+      },
+      "tube_top_color-62": "INDIGO",
+      "synonym-62": [
+        "PMT"
+      ]
+    },
+    {
+      "_id": "62-124",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-73",
+        "label": "PLASMA"
+      },
+      "tube_top_color-62": "GRAY",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      },
+      "synonym-62": [
+        "GREY",
+        "GTT TUBE"
+      ]
+    },
+    {
+      "_id": "62-125",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "GENITAL",
+      "name-62": "GENITAL",
+      "default_specimen-62": {
+        "id": "61-5528",
+        "label": "GENITAL SYSTEM"
+      },
+      "snomed_code-62": {
+        "id": "8188_12-138985",
+        "label": "263767004"
+      }
+    },
+    {
+      "_id": "62-126",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "CHLAMYDIA SWAB_GENITAL",
+      "name-62": "CHLAMYDIA SWAB/GENITAL",
+      "default_specimen-62": {
+        "id": "61-5528",
+        "label": "GENITAL SYSTEM"
+      },
+      "tube_top_color-62": "CULTURETTE"
+    },
+    {
+      "_id": "62-127",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-73",
+        "label": "PLASMA"
+      },
+      "tube_top_color-62": "GREEN",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      }
+    },
+    {
+      "_id": "62-128",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      },
+      "tube_top_color-62": "3 QFT TUBES"
+    },
+    {
+      "_id": "62-129",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BLOOD",
+      "name-62": "BLOOD",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      },
+      "tube_top_color-62": "BT FILTER",
+      "snomed_code-62": {
+        "id": "8188_12-256463",
+        "label": "87612001"
+      },
+      "synonym-62": [
+        "BLEEDING TIME"
+      ]
+    },
+    {
+      "_id": "62-130",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "ISOSTAT TUBE",
+      "name-62": "ISOSTAT TUBE",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      },
+      "tube_top_color-62": "YEL/BLACK"
+    },
+    {
+      "_id": "62-132",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "AEROBIC AND ANAEROBIC BOTTLES",
+      "name-62": "AEROBIC AND ANAEROBIC BOTTLES",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      }
+    },
+    {
+      "_id": "62-133",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "DIRECT SMEAR",
+      "name-62": "DIRECT SMEAR",
+      "tube_top_color-62": "SLIDE"
+    },
+    {
+      "_id": "62-134",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "ISOSTAT BLOOD CULTURE BOTTLE",
+      "name-62": "ISOSTAT BLOOD CULTURE BOTTLE",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      }
+    },
+    {
+      "_id": "62-135",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "WITH OR WITHOUT PRESERVATIVE",
+      "name-62": "WITH OR WITHOUT PRESERVATIVE",
+      "default_specimen-62": {
+        "id": "61-8755",
+        "label": "24 HR. URINE"
+      }
+    },
+    {
+      "_id": "62-136",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "URINE_24 HOUR",
+      "name-62": "URINE/24 HOUR",
+      "default_specimen-62": {
+        "id": "61-8755",
+        "label": "24 HR. URINE"
+      }
+    },
+    {
+      "_id": "62-137",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "24HR URINE",
+      "name-62": "24HR URINE",
+      "default_specimen-62": {
+        "id": "61-8755",
+        "label": "24 HR. URINE"
+      }
+    },
+    {
+      "_id": "62-138",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "WITH BORIC ACID PRESERVATIVE",
+      "name-62": "WITH BORIC ACID PRESERVATIVE"
+    },
+    {
+      "_id": "62-139",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "BODY FLUID NOS",
+      "name-62": "BODY FLUID NOS",
+      "default_specimen-62": {
+        "id": "61-8819",
+        "label": "BODY FLUID"
+      },
+      "tube_top_color-62": "STERILE CON"
+    },
+    {
+      "_id": "62-140",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "PLEURAL FLUID",
+      "name-62": "PLEURAL FLUID",
+      "default_specimen-62": {
+        "id": "61-77",
+        "label": "PLEURAL FLUID"
+      },
+      "tube_top_color-62": "STERILE CON",
+      "snomed_code-62": {
+        "id": "8188_12-146044",
+        "label": "2778004"
+      }
+    },
+    {
+      "_id": "62-141",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "PERITONEAL FLUID",
+      "name-62": "PERITONEAL FLUID",
+      "default_specimen-62": {
+        "id": "61-76",
+        "label": "PERITONEAL FLUID"
+      },
+      "tube_top_color-62": "STERILE CON",
+      "snomed_code-62": {
+        "id": "8188_12-297574",
+        "label": "409614007"
+      }
+    },
+    {
+      "_id": "62-142",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "PERICARDIAL FLUID",
+      "name-62": "PERICARDIAL FLUID",
+      "default_specimen-62": {
+        "id": "61-91",
+        "label": "PERICARDIAL FLUID"
+      },
+      "tube_top_color-62": "STERILE CON",
+      "snomed_code-62": {
+        "id": "8188_12-199319",
+        "label": "34429004"
+      }
+    },
+    {
+      "_id": "62-143",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "SMEAR_NASOPHARYNGEAL",
+      "name-62": "SMEAR/NASOPHARYNGEAL",
+      "default_specimen-62": {
+        "id": "61-3516",
+        "label": "NASOPHARYNGEAL MUCUS"
+      }
+    },
+    {
+      "_id": "62-144",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "ROYAL BLUE HEPARINIZED",
+      "name-62": "ROYAL BLUE HEPARINIZED",
+      "default_specimen-62": {
+        "id": "61-70",
+        "label": "BLOOD"
+      },
+      "tube_top_color-62": "ROYAL BLUE"
+    },
+    {
+      "_id": "62-145",
+      "type": "cmumpss:Collection_Sample-62",
+      "label": "URINARY CALCULUS",
+      "name-62": "URINARY CALCULUS",
+      "default_specimen-62": {
+        "id": "61-8826",
+        "label": "STONE,KIDNEY"
+      }
+    }
+  ]
+}

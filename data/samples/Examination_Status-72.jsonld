@@ -1,0 +1,129 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "72-1",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "ORDERED",
+      "status-72": "ORDERED",
+      "order-72": "1"
+    },
+    {
+      "_id": "72-2",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "COMPLETE",
+      "status-72": "COMPLETE",
+      "order-72": "9"
+    },
+    {
+      "_id": "72-3",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "CANCELLED",
+      "status-72": "CANCELLED",
+      "order-72": "0"
+    },
+    {
+      "_id": "72-4",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "ARRIVED",
+      "status-72": "ARRIVED",
+      "order-72": "3"
+    },
+    {
+      "_id": "72-5",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "EXAMINED",
+      "status-72": "EXAMINED",
+      "order-72": "6",
+      "type-72": "DEPARTURE STATUS"
+    },
+    {
+      "_id": "72-6",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "SCHEDULED",
+      "status-72": "SCHEDULED",
+      "order-72": "2"
+    },
+    {
+      "_id": "72-7",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "TRANSCRIBED",
+      "status-72": "TRANSCRIBED",
+      "order-72": "7"
+    },
+    {
+      "_id": "72-8",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "AMENDED",
+      "status-72": "AMENDED",
+      "order-72": "8"
+    },
+    {
+      "_id": "72-10",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "INCOMPLETE",
+      "status-72": "INCOMPLETE",
+      "order-72": "5",
+      "type-72": "DEPARTURE STATUS"
+    },
+    {
+      "_id": "72-11",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "ABORTED",
+      "status-72": "ABORTED",
+      "order-72": "4",
+      "type-72": "DEPARTURE STATUS"
+    },
+    {
+      "_id": "72-12",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "NO-SHOW",
+      "status-72": "NO-SHOW",
+      "order-72": "10"
+    },
+    {
+      "_id": "72-13",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "DICTATED",
+      "status-72": "DICTATED",
+      "order-72": "6.5"
+    }, 
+    {
+      "_id": "72-14",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "DENIED",
+      "status-72": "DENIED",
+      "order-72": "1.5"
+    },
+    {
+      "_id": "72-15",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "PRELIMINARY",
+      "status-72": "PRELIMINARY",
+      "order-72": "7.5"
+    },
+    {
+      "_id": "72-16",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "EXAM ONLY",
+      "status-72": "EXAM ONLY",
+      "order-72": "7.7",
+      "type-72": "DEPARTURE STATUS"
+    },
+    {
+      "_id": "72-17",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "REPORT ONLY",
+      "status-72": "REPORT ONLY",
+      "order-72": "7.8"
+    },
+    {
+      "_id": "72-18",
+      "type": "cmumpss:Examination_Status-72",
+      "label": "REFERRAL",
+      "status-72": "REFERRAL",
+      "order-72": "7.9",
+      "type-72": "DEPARTURE STATUS"
+    }
+  ]
+}
