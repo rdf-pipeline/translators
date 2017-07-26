@@ -1,0 +1,163 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "312-1",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "10",
+      "drg_code-312": "10",
+      "drg_description-312": "NERVOUS SYSTEM NEOPLASMS W CC",
+      "relative_weight-312": "1.4683"
+    },
+    {
+      "_id": "312-2",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "100",
+      "drg_code-312": "100",
+      "drg_description-312": "RESPIRATORY SIGNS & SYMPTOMS W/O CC",
+      "relative_weight-312": ".5395"
+    },
+    {
+      "_id": "312-3",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "101",
+      "drg_code-312": "101",
+      "drg_description-312": "OTHER RESPIRATORY SYSTEM DIAGNOSES W CC",
+      "relative_weight-312": ".9876"
+    },
+    {
+      "_id": "312-4",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "11",
+      "drg_code-312": "11",
+      "drg_description-312": "NERVOUS SYSTEM NEOPLASMS W/O CC",
+      "relative_weight-312": ".9437"
+    },
+    {
+      "_id": "312-5",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "112",
+      "drg_code-312": "112",
+      "drg_description-312": "PERCUTANEOUS CARDIOVASCULAR PROCEDURES"
+    },
+    {
+      "_id": "312-6",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "114",
+      "drg_code-312": "114",
+      "drg_description-312": "UPPER LIMB & TOE AMPUTATION FOR CIRC SYSTEM DIS",
+      "relative_weight-312": "1.7974"
+    },
+    {
+      "_id": "312-7",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "119",
+      "drg_code-312": "119",
+      "drg_description-312": "VEIN LIGATION & STRIPPING",
+      "relative_weight-312": ".9798"
+    },
+    {
+      "_id": "312-8",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "12",
+      "drg_code-312": "12",
+      "drg_description-312": "DEGENERATIVE NERVOUS SYSTEM DISORDERS",
+      "relative_weight-312": "1.7772"
+    },
+    {
+      "_id": "312-9",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "120",
+      "drg_code-312": "120",
+      "drg_description-312": "OTHER CIRCULATORY SYSTEM O.R. PROCEDURES",
+      "relative_weight-312": "2.5572"
+    },
+    {
+      "_id": "312-10",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "121",
+      "drg_code-312": "121",
+      "drg_description-312": "CIRCULATORY DISORDERS W AMI & MAJOR COMP, DISCHARGED ALIVE",
+      "relative_weight-312": "1.7418"
+    },
+    {
+      "_id": "312-11",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "122",
+      "drg_code-312": "122",
+      "drg_description-312": "CIRCULATORY DISORDERS W AMI W/O MAJOR COMP, DISCHARGED ALIVE",
+      "relative_weight-312": "1.1169"
+    },
+    {
+      "_id": "312-12",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "123",
+      "drg_code-312": "123",
+      "drg_description-312": "CIRCULATORY DISORDERS W AMI, EXPIRED"
+    },
+    {
+      "_id": "312-13",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "124",
+      "drg_code-312": "124",
+      "drg_description-312": "CIRCULATORY DISORDERS EXCEPT AMI, W CARD CATH & COMPLEX DIAG",
+      "relative_weight-312": "1.3739"
+    },
+    {
+      "_id": "312-14",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "125",
+      "drg_code-312": "125",
+      "drg_description-312": "CIRC DIS EX AMI, W CARD CATH W/O CMPLX DIAG",
+      "relative_weight-312": "1.0401"
+    },
+    {
+      "_id": "312-15",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "127",
+      "drg_code-312": "127",
+      "drg_description-312": "HEART FAILURE & SHOCK",
+      "relative_weight-312": "1.1577"
+    },
+    {
+      "_id": "312-16",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "128",
+      "drg_code-312": "128",
+      "drg_description-312": "DEEP VEIN THROMBOPHLEBITIS",
+      "relative_weight-312": ".7725"
+    },
+    {
+      "_id": "312-17",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "13",
+      "drg_code-312": "13",
+      "drg_description-312": "MULTIPLE SCLEROSIS & CEREBELLAR ATAXIA",
+      "relative_weight-312": ".825"
+    },
+    {
+      "_id": "312-18",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "130",
+      "drg_code-312": "130",
+      "drg_description-312": "PERIPHERAL VASCULAR DISORDERS W CC",
+      "relative_weight-312": "1.1062"
+    },
+    {
+      "_id": "312-19",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "131",
+      "drg_code-312": "131",
+      "drg_description-312": "PERIPHERAL VASCULAR DISORDERS W/O CC",
+      "relative_weight-312": ".7194"
+    },
+    {
+      "_id": "312-20",
+      "type": "cmumpss:Diagnostic_Related_Group-312",
+      "label": "132",
+      "drg_code-312": "132",
+      "drg_description-312": "ATHEROSCLEROSIS W CC",
+      "relative_weight-312": ".7197"
+    }
+  ]
+}
