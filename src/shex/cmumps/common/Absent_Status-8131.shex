@@ -1,0 +1,25 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX Ext: <urn:local:Ext:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/absent_status-8131>
+
+<http://hokukahu.com/absent_status-8131> {
+    cmumpss:identifier                                xsd:string        %Map:{ Ext:id %};
+    # cmumpss:cmumps_type                             xsd:string        %Map:{ Ext:cmumps_type %};
+    rdfs:label                                        xsd:string        %Map:{ Ext:label %};
+    cmumpss:name-8131                                 xsd:string        %Map:{ Ext:name_8131 %};
+    cmumpss:code-8131                                 xsd:string        %Map:{ Ext:code_8131 %};
+
+    cmumpss:activation_inactivation_date-8131 {
+       cmumpss:identifier                             xsd:string        %Map:{ Ext:activation_inactivation_date_id %};
+       # cmumpss:cmumps_type                          xsd:string        %Map:{ Ext:activation_inactivation_date_type %};
+       cmumpss:activation_inactivation_date-8131_01   xsd:date or
+                                                      xsd:dateTime or
+                                                      xsd:datetime?    %Map:{ Ext:activation_inactivation_date-8131_01 %};
+       cmumpss:active_inactive_status-8131_01         xsd:string       %Map:{ Ext:active_inactive_status-8131_01 %};
+    }*;
+}
