@@ -1,0 +1,34 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/anesthesias/Map/#>
+PREFIX anesthesia: <urn:local:anesthesia:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Anesthesia_Rate-8154_3>
+
+<http://hokukahu.com/Anesthesia_Rate-8154_3> {
+    cmumpss:identifier                                xsd:string        %Map:{ anesthesia:id %};
+    cmumpss:cmumps_type                               xsd:string?       %Map:{ anesthesia:cmumps_type %};
+    rdfs:label                                        xsd:string        %Map:{ anesthesia:label %};
+
+    cmumpss:cpt_code-8154_3 {
+       cmumpss:identifier       xsd:string    %Map:{ anesthesia:cpt_code_id %};
+       rdfs:label               xsd:string    %Map:{ anesthesia:cpt_code_label %};
+    };
+
+    cmumpss:anesthesia_rate_effective_date-8154_3 {
+       cmumpss:identifier                             xsd:string        %Map:{ anesthesia:anesthesia_rate_effective_date_id %};
+       cmumpss:cmumps_type                            xsd:string?       %Map:{ anesthesia:anesthesia_rate_effective_date_type %};
+       cmumpss:anesth_rate_effective_date-8154_31     xsd:date or
+                                                      xsd:dateTime or
+                                                      xsd:datetime      %Map:{ anesthesia:anesth_rate_effective_date %};
+       cmumpss:source_effective_date-8154_31          xsd:date or
+                                                      xsd:dateTime or
+                                                      xsd:datetime      %Map:{ anesthesia:source_effective_date %};
+       cmumpss:anesth_end_rate_effective_date-8154_3  xsd:date or
+                                                      xsd:dateTime or
+                                                      xsd:datetime?     %Map:{ anesthesia:anesth_end_rate_effective_date %};
+       cmumpss:rate-8154_31                           xsd:string        %Map:{ anesthesia:rate %};
+    }*;
+}

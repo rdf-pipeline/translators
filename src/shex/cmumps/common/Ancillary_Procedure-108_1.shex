@@ -84,7 +84,7 @@ start=@<http://hokukahu.com/Ancillary_Procedure-108_1>
     cmumpss:clinic_specialty-108_1 {
        cmumpss:identifier       xsd:string    %Map:{ procedure:clinic_specialty_id %};
        rdfs:label               xsd:string    %Map:{ procedure:clinic_specialty_label %};
-    }?;
+    }*;
  
     cmumpss:scheduled_consulting_clinic-108_1 {
        cmumpss:identifier                             xsd:string        %Map:{ procedure:scheduled_consulting_clinic_id %};
