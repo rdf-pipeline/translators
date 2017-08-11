@@ -5,24 +5,24 @@ PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 BASE <http://hl7.org/fhir/shape/>
 
-start=@<http://hokukahu.com/absent_status-8131>
+start=@<http://hokukahu.com/Absent_Status-8131>
 
-<http://hokukahu.com/absent_status-8131> {
+<http://hokukahu.com/Absent_Status-8131> {
     cmumpss:identifier                                xsd:string        %Map:{ ext:id %};
     cmumpss:cmumps_type                               xsd:string?       %Map:{ ext:cmumps_type %};
     rdfs:label                                        xsd:string        %Map:{ ext:label %};
     cmumpss:name-8131                                 xsd:string        %Map:{ ext:name %};
     cmumpss:code-8131                                 xsd:string        %Map:{ ext:code %};
 
-    cmumpss:army_chargeable-8131                      xsd:boolean?      %Map:{ ext:"army_chargeable %};
-    cmumpss:air_force_chargeable-8131                 xsd:boolean?      %Map:{ ext:"air_force_chargeable %};
-    cmumpss:marines_chargeable-8131                   xsd:boolean?      %Map:{ ext:"marines_chargeable %};
-    cmumpss:navy_chargeable-8131                      xsd:boolean?      %Map:{ ext:"navy_chargeable %};
-    cmumpss:insurance_chargeable-8131                 xsd:boolean?      %Map:{ ext:"insurance_chargeable %};
+    cmumpss:army_chargeable-8131                      xsd:boolean?      %Map:{ ext:army_chargeable %};
+    cmumpss:air_force_chargeable-8131                 xsd:boolean?      %Map:{ ext:air_force_chargeable %};
+    cmumpss:marines_chargeable-8131                   xsd:boolean?      %Map:{ ext:marines_chargeable %};
+    cmumpss:navy_chargeable-8131                      xsd:boolean?      %Map:{ ext:navy_chargeable %};
+    cmumpss:insurance_chargeable-8131                 xsd:boolean?      %Map:{ ext:insurance_chargeable %};
 
     cmumpss:activation_inactivation_date-8131 {
        cmumpss:identifier                             xsd:string        %Map:{ ext:activation_inactivation_date_id %};
-       cmumpss:cmumps_type                            xsd:string?        %Map:{ ext:activation_inactivation_date_type %};
+       cmumpss:cmumps_type                            xsd:string?       %Map:{ ext:activation_inactivation_date_type %};
        cmumpss:activation_inactivation_date-8131_01   xsd:date or
                                                       xsd:dateTime or
                                                       xsd:datetime      %Map:{ ext:activation_inactivation_date %};

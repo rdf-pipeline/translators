@@ -1,0 +1,97 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/procedures/Map/#>
+PREFIX procedure: <urn:local:procedure:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Ancillary_Procedure-108_1>
+
+<http://hokukahu.com/Ancillary_Procedure-108_1> {
+    cmumpss:identifier                                xsd:string        %Map:{ procedure:id %};
+    cmumpss:cmumps_type                               xsd:string?       %Map:{ procedure:cmumps_type %};
+    rdfs:label                                        xsd:string        %Map:{ procedure:label %};
+
+    cmumpss:name-108_1                                xsd:string        %Map:{ procedure:name %};
+    cmumpss:schedule_type-108_1                       xsd:string        %Map:{ procedure:schedule_type %};
+    cmumpss:result_type-108_1                         xsd:string        %Map:{ procedure:result_type %};
+
+    cmumpss:mnemonic-108_1                            xsd:string?       %Map:{ procedure:mnemonic_type %};
+    cmumpss:description-108_1                         xsd:string?       %Map:{ procedure:description %};
+    cmumpss:device-108_1                              xsd:string?       %Map:{ procedure:device %};
+
+    cmumpss:service-108_1 {
+       cmumpss:identifier       xsd:string    %Map:{ procedure:service_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:service_label %};
+    }?;
+
+    cmumpss:special_procedure_type-108_1              xsd:string?       %Map:{ procedure:special_procedure_type %};
+
+    cmumpss:display_clinic_specialty-108_1            xsd:boolean?      %Map:{ procedure:display_clinic_specialty %};
+    cmumpss:display_provider_specialty-108_1          xsd:boolean?      %Map:{ procedure:display_provider_specialty %};
+    cmumpss:display_consulting_clinic-108_1           xsd:boolean?      %Map:{ procedure:display_consulting_clinic %};
+    cmumpss:display_consulting_hcp-108_1              xsd:boolean?      %Map:{ procedure:display_consulting_hcp %};
+    cmumpss:order_review_required-108_1               xsd:boolean?      %Map:{ procedure:order_review_required %};
+
+    cmumpss:prompt_label-108_1                        xsd:string?       %Map:{ procedure:prompt_label %};
+    cmumpss:output_title-108_1                        xsd:string?       %Map:{ procedure:output_title %};
+    cmumpss:delimiter-108_1                           xsd:string?       %Map:{ procedure:delimiter %};
+    cmumpss:standard_entry-108_1                      xsd:string?       %Map:{ procedure:standard_entry %};
+    cmumpss:standard_entry-108_1                      xsd:string?       %Map:{ procedure:standard_entry %};
+
+    cmumpss:unit_of_measure-108_1                     xsd:string?       %Map:{ procedure:unit_of_measure %};
+
+    cmumpss:age_group-108_1 {
+       cmumpss:upper_limit-108_15   xsd:decimal?    %Map:{ procedure:upper_limit %};
+       cmumpss:age_group-108_15     xsd:string?     %Map:{ procedure:age_group %};
+       cmumpss:normal_range-108_15  xsd:string?     %Map:{ procedure:normal_range %};
+    }?;
+
+    cmumpss:not_orderable-108_1                       xsd:boolean?      %Map:{ procedure:not_orderable %};
+    cmumpss:unavailable-108_1                         xsd:boolean?      %Map:{ procedure:unavailable %};
+    cmumpss:physical_parameter-108_1                  xsd:boolean?      %Map:{ procedure:physical_parameter %};
+
+    cmumpss:codes-108_1 {
+       cmumpss:code-108_14          xsd:string?     %Map:{ procedure:code %};
+       cmumpss:code_meaning-108_14  xsd:string?     %Map:{ procedure:code_meaning %};
+    }?;
+
+    cmumpss:related_procedures-108_1 {
+       cmumpss:related_procedure-108_13 {
+          cmumpss:identifier    xsd:string    %Map:{ procedure:related_procedure_id %};
+          rdfs:label            xsd:string    %Map:{ procedure:related_procedure_label %};
+       };
+       cmumpss:prompt_order-108_13  xsd:decimal?    %Map:{ procedure:prompt_order %};
+       cmumpss:grouping-108_13      xsd:string?     %Map:{ procedure:grouping %};
+    }?;
+
+    cmumpss:countersignature-108_1       xsd:string?    %Map:{ procedure:countersignature %};
+
+    cmumpss:authorization_key-108_1 {
+       cmumpss:identifier       xsd:string    %Map:{ procedure:authorization_key_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:authorization_key_label %};
+    }?;
+    cmumpss:authorized_ordering_classes-108_1 {
+       cmumpss:identifier       xsd:string    %Map:{ procedure:authorized_ordering_classes_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:authorized_ordering_classes_label %};
+    }?;
+
+    cmumpss:default_cont_timing-108_1 {
+       cmumpss:identifier       xsd:string    %Map:{ procedure:default_cont_timing_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:default_cont_timing_label %};
+    }?;
+
+    cmumpss:clinic_specialty-108_1 {
+       cmumpss:identifier       xsd:string    %Map:{ procedure:clinic_specialty_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:clinic_specialty_label %};
+    }?;
+ 
+    cmumpss:scheduled_consulting_clinic-108_1 {
+       cmumpss:identifier                             xsd:string        %Map:{ procedure:scheduled_consulting_clinic_id %};
+       cmumpss:cmumps_type                            xsd:string?        %Map:{ procedure:scheduled_consulting_clinic_type %};
+       cmumpss:scheduled_consulting_clinic-108_18 {
+           cmumpss:identifier       xsd:string    %Map:{ procedure:scheduled_consulting_clinic_id %};
+           rdfs:label               xsd:string    %Map:{ procedure:scheduled_consulting_clinic_label %};
+       };
+    }*;
+}

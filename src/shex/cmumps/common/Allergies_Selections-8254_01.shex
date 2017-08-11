@@ -1,0 +1,40 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/substances/Map/#>
+PREFIX substance: <urn:local:substance:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Allergies_Selections-8254_01>
+
+<http://hokukahu.com/Allergies_Selections-8254_01> {
+    cmumpss:identifier                         xsd:string        %Map:{ substance:id %};
+    cmumpss:cmumps_type                        xsd:string?       %Map:{ substance:cmumps_type %};
+    rdfs:label                                 xsd:string        %Map:{ substance:label %};
+
+    cmumpss:bn_gnn-8254_01                     xsd:string        %Map:{ substance:bn_gnn %};
+    cmumpss:gnn-8254_01                        xsd:string?        %Map:{ substance:gnn %};
+    cmumpss:expanded_gnn-8254_01               xsd:string?        %Map:{ substance:expanded_gnn %};
+
+    cmumpss:allergy_definitions-8254_01 {
+       cmumpss:identifier                      xsd:string        %Map:{ substance:allergy_definitions_id %};
+       rdfs:label                              xsd:string        %Map:{ substance:allergy_definitions_label %};
+    };
+
+    cmumpss:hicl_source-8254_01 {
+       cmumpss:identifier                      xsd:string        %Map:{ substance:hicl_source_id %};
+       rdfs:label                              xsd:string        %Map:{ substance:hicl_source_label %};
+       cmumpss:sameAs                          xsd:string        %Map:{ substance:sameAs %};
+       cmumpss:sameAsLabel                     xsd:string        %Map:{ substance:sameAsLabel %};
+    }?;
+
+    cmumpss:alltype-8254_01                    xsd:string        %Map:{ substance:alltype %};
+    cmumpss:duplicate_brand_name-8254_01       xsd:string?       %Map:{ substance:duplicate_brand_name %};
+
+    cmumpss:comment-8254_01                    xsd:string?       %Map:{ substance:comment %};
+
+    cmumpss:obsolete_date-8254_01              xsd:date or
+                                               xsd:dateTime or
+                                               xsd:datetime?      %Map:{ ext:obsolete_date %};
+ 
+}

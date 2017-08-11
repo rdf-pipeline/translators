@@ -5,9 +5,9 @@ PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 BASE <http://hl7.org/fhir/shape/>
 
-start=@<http://hokukahu.com/allergies_definitions-8254_011>
+start=@<http://hokukahu.com/Allergies_Definitions-8254_011>
 
-<http://hokukahu.com/allergies_definitions-8254_011> {
+<http://hokukahu.com/Allergies_Definitions-8254_011> {
     cmumpss:identifier                                xsd:string        %Map:{ substance:id %};
     cmumpss:cmumps_type                               xsd:string?       %Map:{ substance:cmumps_type %};
     rdfs:label                                        xsd:string        %Map:{ substance:label %};
