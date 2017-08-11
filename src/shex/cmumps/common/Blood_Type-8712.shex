@@ -1,0 +1,16 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX specimenType: <urn:local:specimenType:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Blood_Type-8712>
+
+<http://hokukahu.com/Blood_Type-8712> {
+    cmumpss:identifier                  xsd:string       %Map:{ specimenType:id %};
+    cmumpss:cmumps_type                 xsd:string?      %Map:{ specimenType:cmumps_type %};
+    rdfs:label                          xsd:string       %Map:{ specimenType:label %};
+
+    cmumpss:blood_type-8712             xsd:string       %Map:{ specimenType:blood_type %};
+}
