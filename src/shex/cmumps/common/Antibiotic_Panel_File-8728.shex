@@ -1,0 +1,20 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/medications/Map/#>
+PREFIX medication: <urn:local:medication:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Antibiotic_Panel_File-8728>
+
+<http://hokukahu.com/Antibiotic_Panel_File-8728> {
+    cmumpss:identifier                                xsd:string        %Map:{ medication:id %};
+    cmumpss:cmumps_type                               xsd:string?       %Map:{ medication:cmumps_type %};
+    rdfs:label                                        xsd:string        %Map:{ medication:label %};
+
+    cmumpss:antibiotic_panel-8728                     xsd:string        %Map:{ medication:antibiotic_panel %};
+    cmumpss:default_antibiotics-8728 { 
+        cmumpss:identifier                             xsd:string        %Map:{ medication:default_antibiotics_id %};
+        rdfs:label                                     xsd:string        %Map:{ medication:default_antibiotics_label %};
+    }*;
+}

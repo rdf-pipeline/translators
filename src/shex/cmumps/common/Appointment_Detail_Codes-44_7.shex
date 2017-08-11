@@ -1,0 +1,18 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/appointments/Map/#>
+PREFIX appointment: <urn:local:appointment:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Appointment_Detail_Codes-44_7>
+
+<http://hokukahu.com/Appointment_Detail_Codes-44_7> {
+    cmumpss:identifier            xsd:string        %Map:{ appointment:id %};
+    cmumpss:cmumps_type           xsd:string?       %Map:{ appointment:cmumps_type %};
+    rdfs:label                    xsd:string        %Map:{ appointment:label %};
+
+    cmumpss:code-44_7             xsd:string        %Map:{ appointment:detail_code %};
+    cmumpss:status-44_7           xsd:string        %Map:{ appointment:detail_status %};
+    cmumpss:uneditable-44_7       xsd:boolean       %Map:{ appointment:detail_uneditable %};
+}
