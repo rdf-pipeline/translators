@@ -1,0 +1,29 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/branchOfServices/Map/#>
+PREFIX branchOfService: <urn:local:branchOfService:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Branch_Of_Service-23>
+
+<http://hokukahu.com/Branch_Of_Service-23> {
+    cmumpss:identifier                  xsd:string       %Map:{ branchOfService:id %};
+    cmumpss:cmumps_type                 xsd:string?      %Map:{ branchOfService:cmumps_type %};
+    rdfs:label                          xsd:string       %Map:{ branchOfService:label %};
+
+    cmumpss:name-23                     xsd:string       %Map:{ branchOfService:name %};
+    cmumpss:code-23                     xsd:string       %Map:{ branchOfService:code %};
+    cmumpss:abbreviation-23             xsd:string?      %Map:{ branchOfService:abbreviation %};
+
+    cmumpss:sidr_svc_flag-23            xsd:string?      %Map:{ branchOfService:sidr_svc_flag %};
+    cmumpss:single_svc_flag-23          xsd:boolean?     %Map:{ branchOfService:single_svc_flag %};
+
+    cmumpss:deers_pit_code-23           xsd:string       %Map:{ branchOfService:deers_pit_code %};
+    cmumpss:deers_elig_code-23          xsd:string?      %Map:{ branchOfService:deers_elig_code %};
+    cmumpss:dba_inactive_flag-23        xsd:string?      %Map:{ branchOfService:dba_inactive_flag %};
+
+    cmumpss:deactivation_date-23        xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?    %Map:{ branchOfService:deactivation_date %};
+}
