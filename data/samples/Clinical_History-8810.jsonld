@@ -1,0 +1,164 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8810-3",
+      "type": "cmumpss:Clinical_History-8810",
+      "label": "JETSON,GEORGE J",
+      "name-8810": {
+        "id": "2-3",
+        "label": "JETSON,GEORGE J"
+      },
+      "drug_allergy-8810": [
+        {
+          "id": "8810_03-1_3",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-999004",
+            "label": "NKDA"
+          },
+          "comment-8810_03": "Reaction(s): Unknown; Note: PER PT 01JAN90"
+        }
+      ]
+    },
+    {
+      "_id": "8810-4",
+      "type": "cmumpss:Clinical_History-8810",
+      "label": "JETSON,JANE A",
+      "name-8810": {
+        "id": "2-4",
+        "label": "JETSON,JANE A"
+      },
+      "drug_allergy-8810": [
+        {
+          "id": "8810_03-1_4",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-1025",
+            "label": "PENICILLIN V POTASSIUM",
+            "sameAs": "nddf:ins003942",
+            "sameAsLabel": "PENICILLIN V POTASSIUM"
+          },
+          "comment-8810_03": "swelling 1 jan 90 bat 8472598858"
+        }
+      ]
+    },
+    {
+      "_id": "8810-5",
+      "type": "cmumpss:Clinical_History-8810",
+      "label": "SPACELY,COSMO G",
+      "name-8810": {
+        "id": "2-5",
+        "label": "SPACELY,COSMO G"
+      },
+      "drug_allergy-8810": [
+        {
+          "id": "8810_03-1_5",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-58024",
+            "label": "YELLOW FEVER VACCINE"
+          },
+          "comment-8810_03": "Reaction(s): Unknown; Note: CHICKEN FEATHERS PER DAUGHTER 01/1/90"
+        }
+      ]
+    },
+    {
+      "_id": "8810-7",
+      "type": "cmumpss:Clinical_History-8810",
+      "label": "JETSON,JUDY L",
+      "name-8810": {
+        "id": "2-7",
+        "label": "JETSON,JUDY L"
+      },
+      "drug_allergy-8810": [
+        {
+          "id": "8810_03-1_7",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-999004",
+            "label": "NKDA"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8810-15",
+      "type": "cmumpss:Clinical_History-8810",
+      "label": "ORBIT,HENRY W",
+      "name-8810": {
+        "id": "2-15",
+        "label": "ORBIT,HENRY W"
+      },
+      "drug_allergy-8810": [
+        {
+          "id": "8810_03-1_15",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-999004",
+            "label": "NKDA"
+          },
+          "comment-8810_03": "01 jan 1990"
+        }
+      ]
+    },
+    {
+      "_id": "8810-71",
+      "type": "cmumpss:Clinical_History-8810",
+      "label": "COGSWELL,SPENCER M",
+      "name-8810": {
+        "id": "2-71",
+        "label": "COGSELL,SPENCER M"
+      },
+      "drug_allergy-8810": [
+        {
+          "id": "8810_03-1_71",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-999000",
+            "label": "NO KNOWN ALLERGIES"
+          }
+        },
+        {
+          "id": "8810_03-2_71",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-999004",
+            "label": "NKDA"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "8810-152",
+      "type": "cmumpss:Clinical_History-8810",
+      "label": "JETSON,ELROY G",
+      "name-8810": {
+        "id": "2-152",
+        "label": "JETSON,ELROY G"
+      },
+      "drug_allergy-8810": [
+        {
+          "id": "8810_03-1_152",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-1025",
+            "label": "PENICILLIN V POTASSIUM",
+            "sameAs": "nddf:ins003942",
+            "sameAsLabel": "PENICILLIN V POTASSIUM"
+          }
+        },
+        {
+          "id": "8810_03-2_152",
+          "type": "cmumpss:Drug_Allergy-8810_03",
+          "allergy_selection-8810_03": {
+            "id": "8254_01-9021",
+            "label": "ERYTHROMYCIN BASE",
+            "sameAs": "nddf:ins004022",
+            "sameAsLabel": "ERYTHROMYCIN BASE"
+          }
+        }
+      ]
+    }
+  ]
+}

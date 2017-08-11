@@ -1,0 +1,31 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX allergyIntolerance: <urn:local:allergyIntolerance:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Clinical_History-8810>
+
+<http://hokukahu.com/Clinical_History-8810> {
+    cmumpss:identifier                  xsd:string       %Map:{ allergyIntolerance:id %};
+    cmumpss:cmumps_type                 xsd:string?      %Map:{ allergyIntolerance:cmumps_type %};
+    rdfs:label                          xsd:string       %Map:{ allergyIntolerance:label %};
+
+    cmumpss:name-8810 {
+       cmumpss:identifier       xsd:string    %Map:{ allergyIntolerance:patient_id %};
+       rdfs:label               xsd:string    %Map:{ allergyIntolerance:patient_name_label %};
+    };
+
+    cmumpss:drug_allergy-8810 {
+       cmumpss:identifier       xsd:string    %Map:{ allergyIntolerance:drug_allergy_id %};
+       cmumpss:cmumps_type      xsd:string?   %Map:{ allergyIntolerance:drug_allergy_type %};
+       cmumpss:allergy_selection-8810_03 {
+           cmumpss:identifier       xsd:string    %Map:{ allergyIntolerance:drug_allergy_selection_id %};
+           rdfs:label               xsd:string    %Map:{ allergyIntolerance:drug_allergy_selection_label %};
+           cmumpss:sameAs           xsd:string?   %Map:{ allergyIntolerance:drug_allergy_selection_sameAs %};
+           cmumpss:sameAsLabel      xsd:string?   %Map:{ allergyIntolerance:drug_allergy_selection_sameAsLabel %};
+       };
+       cmumpss:comment-8810_03      xsd:string?   %Map:{ allergyIntolerance:drug_allergy_comment %};
+    }*;
+}
