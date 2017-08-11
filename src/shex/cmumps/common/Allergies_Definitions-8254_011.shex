@@ -1,0 +1,31 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/substances/Map/#>
+PREFIX substance: <urn:local:substance:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/allergies_definitions-8254_011>
+
+<http://hokukahu.com/allergies_definitions-8254_011> {
+    cmumpss:identifier                                xsd:string        %Map:{ substance:id %};
+    cmumpss:cmumps_type                               xsd:string?       %Map:{ substance:cmumps_type %};
+    rdfs:label                                        xsd:string        %Map:{ substance:label %};
+
+    cmumpss:allergy_name_gnn-8254_011                 xsd:string        %Map:{ substance:allergy_name_gnn %};
+    cmumpss:allergy_type-8254_011                     xsd:string        %Map:{ substance:allergy_type %};
+
+    cmumpss:hic_list-8254_011                         xsd:string?       %Map:{ substance:hic_list %};
+    cmumpss:hic3_list-8254_011                        xsd:string?       %Map:{ substance:hic3_list %};
+    cmumpss:hic_listext-8254_011                      xsd:string?       %Map:{ substance:hic_listext %};
+
+    cmumpss:dac_list-8254_011                         xsd:string?       %Map:{ substance:dac_list %};
+
+    cmumpss:next_a_s_ien-8254_011 {
+       cmumpss:identifier                             xsd:string        %Map:{ substance:next_a_s_ien_id %};
+       rdfs:label                                     xsd:string        %Map:{ substance:next_a_s_ien_label %};
+    };
+
+    cmumpss:damsplis-8254_011                         xsd:string        %Map:{ substance:damsplis %};
+    cmumpss:damcslis-8254_011                         xsd:string        %Map:{ substance:damcslis %};
+}
