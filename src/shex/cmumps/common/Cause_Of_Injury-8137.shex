@@ -1,0 +1,29 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX causeOfInjury: <urn:local:causeOfInjury:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Cause_Of_Injury-8137>
+
+<http://hokukahu.com/Cause_Of_Injury-8137> {
+    cmumpss:identifier                  xsd:string       %Map:{ causeOfInjury:id %};
+    cmumpss:cmumps_type                 xsd:string?      %Map:{ causeOfInjury:cmumps_type %};
+    rdfs:label                          xsd:string       %Map:{ causeOfInjury:label %};
+
+    cmumpss:code-8137                   xsd:string       %Map:{ causeOfInjury:code %};
+    cmumpss:name-8137                   xsd:string       %Map:{ causeOfInjury:name %};
+
+    cmumpss:category-8137 {
+       cmumpss:identifier       xsd:string    %Map:{ causeOfInjury:category_id %};
+       rdfs:label               xsd:string    %Map:{ causeOfInjury:category_label %};
+    };
+
+    cmumpss:description-8137            xsd:string?      %Map:{ causeOfInjury:description %};
+
+    cmumpss:dba_inactive_flag-8137      xsd:string?      %Map:{ causeOfInjury:dba_inactive_flag %};
+    cmumpss:deactivation_date-8137      xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?    %Map:{ causeOfInjury:deactivation_date %};
+}

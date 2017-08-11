@@ -15,9 +15,9 @@ start=@<http://hokukahu.com/Casualty_Status-8139>
     cmumpss:name-8139                   xsd:string       %Map:{ casualtyStatus:name %};
     cmumpss:code-8139                   xsd:string       %Map:{ casualtyStatus:code %};
 
-    cmumpss:dba_inactive_flag-8106      xsd:string?       %Map:{ casualtyStatus:dba_inactive_flag %};
+    cmumpss:dba_inactive_flag-8139      xsd:string?       %Map:{ casualtyStatus:dba_inactive_flag %};
 
-    cmumpss:deactivation_date-23        xsd:date or
+    cmumpss:deactivation_date-8139      xsd:date or
                                         xsd:dateTime or
                                         xsd:datetime?    %Map:{ casualtyStatus:deactivation_date %};
 }

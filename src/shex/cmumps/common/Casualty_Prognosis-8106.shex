@@ -17,7 +17,7 @@ start=@<http://hokukahu.com/Casualty_Prognosis-8106>
 
     cmumpss:dba_inactive_flag-8106      xsd:string?       %Map:{ casualtyPrognosis:dba_inactive_flag %};
 
-    cmumpss:deactivation_date-23        xsd:date or
+    cmumpss:deactivation_date-8106      xsd:date or
                                         xsd:dateTime or
                                         xsd:datetime?    %Map:{ casualtyPrognosis:deactivation_date %};
 }
