@@ -1,0 +1,37 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/foodPreferences/Map/#>
+PREFIX foodPreference: <urn:local:food-preference:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Diet-8410>
+
+<http://hokukahu.com/Diet-8410> {
+    cmumpss:identifier                    xsd:string        %Map:{ foodPreference:id %};
+    cmumpss:cmumps_type                   xsd:string?       %Map:{ foodPreference:cmumps_type %};
+    rdfs:label                            xsd:string        %Map:{ foodPreference:label %};
+
+    cmumpss:name-8410                     xsd:string        %Map:{ foodPreference:name %};
+    cmumpss:abbrev-8410                   xsd:string        %Map:{ foodPreference:abbrev %};
+    cmumpss:standard_entry-8410           xsd:string        %Map:{ foodPreference:standard_entry %};
+    cmumpss:description-8410              xsd:string        %Map:{ foodPreference:description %};
+    cmumpss:alternate_name-8410           xsd:string*       %Map:{ foodPreference:alternate_name %};
+
+    cmumpss:select-8410                   xsd:boolean?      %Map:{ foodPreference:select %};
+    cmumpss:error-8410                    xsd:boolean?      %Map:{ foodPreference:error %};
+    cmumpss:nutriadq-8410                 xsd:boolean?      %Map:{ foodPreference:nutriadq %};
+    cmumpss:select_in_dining_room-8410    xsd:boolean?      %Map:{ foodPreference:select_in_dining_room %};
+    cmumpss:npo_diet-8410                 xsd:boolean?      %Map:{ foodPreference:npo_diet %};
+
+    cmumpss:display_comment-8410          xsd:string?       %Map:{ foodPreference:display_comment %};
+
+    cmumpss:cho-8410                      xsd:decimal?       %Map:{ foodPreference:carbohydrate %};
+    cmumpss:fat-8410                      xsd:decimal?       %Map:{ foodPreference:fat %};
+    cmumpss:pro-8410                      xsd:decimal?       %Map:{ foodPreference:protein %};
+    cmumpss:calories-8410                 xsd:decimal?       %Map:{ foodPreference:calories %};
+
+    cmumpss:inactive_date-8410            xsd:date or
+                                          xsd:dateTime or
+                                          xsd:datetime?      %Map:{ foodPreference:inactive_date %};
+}

@@ -1,0 +1,32 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/dischargeDispositions/Map/#>
+PREFIX dischargeDisposition: <urn:local:discharge-disposition:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Discharge_Type-42_2>
+
+<http://hokukahu.com/Discharge_Type-42_2> {
+    cmumpss:identifier                     xsd:string        %Map:{ dischargeDisposition:id %};
+    cmumpss:cmumps_type                    xsd:string?       %Map:{ dischargeDisposition:cmumps_type %};
+    rdfs:label                             xsd:string        %Map:{ dischargeDisposition:label %};
+
+    cmumpss:name-42_2                      xsd:string        %Map:{ dischargeDisposition:name %};
+    cmumpss:code-42_2                      xsd:string        %Map:{ dischargeDisposition:code %};
+    cmumpss:active-42_2                    xsd:string        %Map:{ dischargeDisposition:active %};
+
+    cmumpss:internal_service_code-42_2     xsd:string        %Map:{ dischargeDisposition:internal_service_code %};
+    cmumpss:svc_flag-42_2                  xsd:string?      %Map:{ dischargeDisposition:svc_flag %};
+    cmumpss:dutyactive_nonactive-42_2      xsd:string?       %Map:{ dischargeDisposition:dutyactive_nonactive %};
+    cmumpss:synonym-42_2                   xsd:string?       %Map:{ dischargeDisposition:synonym %};
+
+    cmumpss:activation_inactivation_date-42_2 {
+       cmumpss:identifier                           xsd:string        %Map:{ dischargeDisposition:activation_inactivation_date_id %};
+       cmumpss:cmumps_type                          xsd:string?       %Map:{ dischargeDisposition:activation_inactivation_date_type %};
+       cmumpss:activation_inactivation_date-42_21   xsd:date or
+                                                    xsd:dateTime or
+                                                    xsd:datetime      %Map:{ dischargeDisposition:activation_inactivation_date-42_21 %};
+       cmumpss:active_inactive_status-42_21         xsd:string        %Map:{ dischargeDisposition:active_inactive_status %};
+    }*;
+}
