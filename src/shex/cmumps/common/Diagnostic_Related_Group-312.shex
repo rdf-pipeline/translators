@@ -1,6 +1,6 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/exts/Map/#>
-PREFIX DiagnosticReport: <urn:local:diagnostic-report:>
+PREFIX diagnosticReport: <urn:local:diagnostic-report:>
 PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 BASE <http://hl7.org/fhir/shape/>
@@ -8,11 +8,11 @@ BASE <http://hl7.org/fhir/shape/>
 start=@<http://hokukahu.com/Diagnostic_Related_Group-312>
 
 <http://hokukahu.com/Diagnostic_Related_Group-312> {
-    cmumpss:identifier              xsd:string       %Map:{ DiagnosticReport:id %};
-    cmumpss:cmumps_type             xsd:string?      %Map:{ DiagnosticReport:cmumps_type %};
-    rdfs:label                      xsd:string       %Map:{ DiagnosticReport:label %};
+    cmumpss:identifier              xsd:string       %Map:{ diagnosticReport:id %};
+    cmumpss:cmumps_type             xsd:string?      %Map:{ diagnosticReport:cmumps_type %};
+    rdfs:label                      xsd:string       %Map:{ diagnosticReport:label %};
 
-    cmumpss:drg_code-312            xsd:string       %Map:{ DiagnosticReport:drg_code %};
-    cmumpss:drg_description-312     xsd:string       %Map:{ DiagnosticReport:drg_description %};
-    cmumpss:relative_weight-312     xsd:string?      %Map:{ DiagnosticReport:relative_weight %};
+    cmumpss:drg_code-312            xsd:string       %Map:{ diagnosticReport:drg_code %};
+    cmumpss:drg_description-312     xsd:string       %Map:{ diagnosticReport:drg_description %};
+    cmumpss:relative_weight-312     xsd:string?      %Map:{ diagnosticReport:relative_weight %};
 }

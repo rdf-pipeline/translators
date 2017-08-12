@@ -1,0 +1,35 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX diagnosticService: <urn:local:diagnostic-service:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Dod_Standard_Lab_Test-8188_99>
+
+<http://hokukahu.com/Dod_Standard_Lab_Test-8188_99> {
+    cmumpss:identifier                     xsd:string       %Map:{ diagnosticService:id %};
+    cmumpss:cmumps_type                    xsd:string?      %Map:{ diagnosticService:cmumps_type %};
+    rdfs:label                             xsd:string       %Map:{ diagnosticService:label %};
+
+    cmumpss:test_name-8188_99              xsd:string       %Map:{ diagnosticService:test_name %};
+    cmumpss:test_print_name-8188_99        xsd:string       %Map:{ diagnosticService:test_print_name %};
+    cmumpss:test_code-8188_99              xsd:string       %Map:{ diagnosticService:test_code %};
+
+    cmumpss:loinc_component_analyte_name-8188_99 {
+        cmumpss:identifier                 xsd:string       %Map:{ diagnosticService:loinc_component_analyte_name_id %};
+        rdfs:label                         xsd:string       %Map:{ diagnosticService:loinc_component_analyte_name %};
+    };
+
+    cmumpss:standardized_lab_test-8188_99  xsd:boolean?     %Map:{ diagnosticService:standardized_lab_test %};
+
+    cmumpss:subscript-8188_99              xsd:string       %Map:{ diagnosticService:subscript %};
+
+    cmumpss:single_panel-8188_99           xsd:string       %Map:{ diagnosticService:single_panel %};
+    cmumpss:panel_names-8188_99            xsd:string?      %Map:{ diagnosticService:panel_names %};
+
+    cmumpss:dba_inactive_flag-8137      xsd:string?         %Map:{ diagnosticService:dba_inactive_flag %};
+    cmumpss:deactivation_date-8137      xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?       %Map:{ diagnosticService:deactivation_date %};
+}

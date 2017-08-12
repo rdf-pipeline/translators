@@ -1,6 +1,6 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/exts/Map/#>
-PREFIX DisabilityCondition: <urn:local:disability-condition:>
+PREFIX disabilityCondition: <urn:local:disability-condition:>
 PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 BASE <http://hl7.org/fhir/shape/>
@@ -8,17 +8,17 @@ BASE <http://hl7.org/fhir/shape/>
 start=@<http://hokukahu.com/Disability_Condition-31>
 
 <http://hokukahu.com/Disability_Condition-31> {
-    cmumpss:identifier                  xsd:string       %Map:{ DisabilityCondition:id %};
-    cmumpss:cmumps_type                 xsd:string?      %Map:{ DisabilityCondition:cmumps_type %};
-    rdfs:label                          xsd:string       %Map:{ DisabilityCondition:label %};
+    cmumpss:identifier                  xsd:string       %Map:{ disabilityCondition:id %};
+    cmumpss:cmumps_type                 xsd:string?      %Map:{ disabilityCondition:cmumps_type %};
+    rdfs:label                          xsd:string       %Map:{ disabilityCondition:label %};
 
-    cmumpss:dx_code-31                  xsd:string       %Map:{ DisabilityCondition:dx_code %};
-    cmumpss:name-31                     xsd:string       %Map:{ DisabilityCondition:name %};
-    cmumpss:disability_code-31          xsd:string       %Map:{ DisabilityCondition:disability_code %};
+    cmumpss:dx_code-31                  xsd:string       %Map:{ disabilityCondition:dx_code %};
+    cmumpss:name-31                     xsd:string       %Map:{ disabilityCondition:name %};
+    cmumpss:disability_code-31          xsd:string       %Map:{ disabilityCondition:disability_code %};
 
-    cmumpss:abbreviation-31             xsd:string?      %Map:{ DisabilityCondition:abbreviation %};
-    cmumpss:dba_inactive_flag-8137      xsd:string?      %Map:{ DisabilityCondition:dba_inactive_flag %};
+    cmumpss:abbreviation-31             xsd:string?      %Map:{ disabilityCondition:abbreviation %};
+    cmumpss:dba_inactive_flag-8137      xsd:string?      %Map:{ disabilityCondition:dba_inactive_flag %};
     cmumpss:deactivation_date-8137      xsd:date or
                                         xsd:dateTime or
-                                        xsd:datetime?    %Map:{ DisabilityCondition:deactivation_date %}; 
+                                        xsd:datetime?    %Map:{ disabilityCondition:deactivation_date %}; 
 }
