@@ -1,0 +1,17 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX nhcc: <urn:local:nhcc:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/Ned_Hcdp_Coverage_Code-8545>
+
+start=@<http://hokukahu.com/Ned_Hcdp_Coverage_Code-8545>
+
+<http://hokukahu.com/Ned_Hcdp_Coverage_Code-8545> {
+    cmumpss:identifier               xsd:string       %Map:{ nhcc:id %};
+    cmumpss:cmumps_type              xsd:string?      %Map:{ nhcc:cmumps_type %};
+    rdfs:label                       xsd:string       %Map:{ nhcc:label %};
+
+    cmumpss:code-8545                xsd:string       %Map:{ nhcc:code %};
+    cmumpss:text-8545                xsd:string       %Map:{ nhcc:text %};
+}
