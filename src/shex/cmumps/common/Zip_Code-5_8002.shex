@@ -1,0 +1,26 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX zipcode: <urn:local:zipcode:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Zip_Code-5_8002>
+
+<http://hokukahu.com/Zip_Code-5_8002> {
+    cmumpss:identifier                   xsd:string        %Map:{ zipcode:id %};
+    cmumpss:cmumps_type                  xsd:string?       %Map:{ zipcode:cmumps_type %};
+    rdfs:label                           xsd:string        %Map:{ zipcode:label %};
+
+    cmumpss:code-5_8002                    xsd:string       %Map:{ zipcode:code %};
+    cmumpss:city-5_8002                    xsd:string       %Map:{ zipcode:city %};
+    cmumpss:state-5_8002 {
+        cmumpss:identifier                xsd:string        %Map:{ zipcode:state_id %};
+        rdfs:label                        xsd:string        %Map:{ zipcode:state_label %};
+    };
+ 
+    cmumpss:dba_inactive_flag-5_8002      xsd:string?       %Map:{ zipcode:dba_inactive_flag %};
+    cmumpss:deactivation_date-5_8002      xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?       %Map:{ zipcode:deactivation_date %};
+}

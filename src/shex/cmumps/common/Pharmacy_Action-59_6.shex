@@ -1,0 +1,25 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX pharmacyAction: <urn:local:pharmacyAction:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Pharmacy_Action-59_6>
+
+<http://hokukahu.com/Pharmacy_Action-59_6> {
+    cmumpss:identifier                   xsd:string        %Map:{ pharmacyAction:id %};
+    cmumpss:cmumps_type                  xsd:string?       %Map:{ pharmacyAction:cmumps_type %};
+    rdfs:label                           xsd:string        %Map:{ pharmacyAction:label %};
+
+    cmumpss:abbreviated_name-59_6        xsd:string       %Map:{ pharmacyAction:abbreviated_name %};
+    cmumpss:name-59_6                    xsd:string       %Map:{ pharmacyAction:name %};
+    cmumpss:ancillary-59_6               xsd:string       %Map:{ pharmacyAction:ancillary %};
+
+    cmumpss:number-59_6                  xsd:string       %Map:{ pharmacyAction:number %};
+
+    cmumpss:security_key-59_6 {
+        cmumpss:identifier                xsd:string        %Map:{ pharmacyAction:security_key_id %};
+        rdfs:label                        xsd:string        %Map:{ pharmacyAction:security_key_label %};
+    }?;
+}

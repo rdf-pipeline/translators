@@ -1,0 +1,18 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX originOfOrder: <urn:local:originOfOrder:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/Origin_Of_Order-111>
+
+start=@<http://hokukahu.com/Origin_Of_Order-111>
+
+<http://hokukahu.com/Origin_Of_Order-111> {
+    cmumpss:identifier                  xsd:string        %Map:{ originOfOrder:id %};
+    cmumpss:cmumps_type                 xsd:string?       %Map:{ originOfOrder:cmumps_type %};
+    rdfs:label                          xsd:string        %Map:{ originOfOrder:label %};
+
+    cmumpss:name-111                    xsd:string       %Map:{ originOfOrder:name %};
+    cmumpss:code-111                    xsd:string       %Map:{ originOfOrder:code %};
+    cmumpss:description-111             xsd:string       %Map:{ originOfOrder:description %};
+}
