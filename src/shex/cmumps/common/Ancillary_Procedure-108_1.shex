@@ -37,7 +37,6 @@ start=@<http://hokukahu.com/Ancillary_Procedure-108_1>
     cmumpss:output_title-108_1                        xsd:string?       %Map:{ procedure:output_title %};
     cmumpss:delimiter-108_1                           xsd:string?       %Map:{ procedure:delimiter %};
     cmumpss:standard_entry-108_1                      xsd:string?       %Map:{ procedure:standard_entry %};
-    cmumpss:standard_entry-108_1                      xsd:string?       %Map:{ procedure:standard_entry %};
 
     cmumpss:unit_of_measure-108_1                     xsd:string?       %Map:{ procedure:unit_of_measure %};
 

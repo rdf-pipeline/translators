@@ -31,7 +31,6 @@ start=@<http://hokukahu.com/Additional_Medical_Treatment_Facility-8101_1>
 
     cmumpss:ein_ssn_indicator-8101_1                  xsd:string?      %Map:{ location:ein_ssn_indicator-8101_1 %};
     cmumpss:provider_ein_ssn-8101_1                   xsd:string?      %Map:{ location:provider_ein_ssn-8101_1 %};
-    cmumpss:provider_ein_ssn-8101_1                   xsd:string?      %Map:{ location:provider_ein_ssn-8101_1 %};
 
     cmumpss:division-8101_1 {
        cmumpss:identifier                             xsd:string       %Map:{ location:division_id %};

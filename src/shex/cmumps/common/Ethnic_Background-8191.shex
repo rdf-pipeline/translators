@@ -1,0 +1,22 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX ethnicity: <urn:local:ethnicity:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Ethnic_Background-8191>
+
+<http://hokukahu.com/Ethnic_Background-8191> {
+    cmumpss:identifier                                xsd:string        %Map:{ ethnicity:id %};
+    cmumpss:cmumps_type                               xsd:string?       %Map:{ ethnicity:cmumps_type %};
+    rdfs:label                                        xsd:string        %Map:{ ethnicity:label %};
+
+    cmumpss:code-8191                                 xsd:string        %Map:{ ethnicity:code %};
+    cmumpss:description-8191                          xsd:string        %Map:{ ethnicity:description %};
+ 
+    cmumpss:dba_inactive_flag-8191      xsd:string?         %Map:{ ethnicity:dba_inactive_flag %};
+    cmumpss:deactivation_date-8191      xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?       %Map:{ ethnicity:deactivation_date %};
+}
