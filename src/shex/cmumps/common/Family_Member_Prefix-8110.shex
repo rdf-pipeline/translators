@@ -1,0 +1,22 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX fmp: <urn:local:fmp:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/Family_Member_Prefix-8110>
+
+start=@<http://hokukahu.com/Family_Member_Prefix-8110>
+
+<http://hokukahu.com/Family_Member_Prefix-8110> {
+    cmumpss:identifier               xsd:string       %Map:{ fmp:id %};
+    cmumpss:cmumps_type              xsd:string?      %Map:{ fmp:cmumps_type %};
+    rdfs:label                       xsd:string       %Map:{ fmp:label %};
+
+    cmumpss:fmp-8110                 xsd:string       %Map:{ fmp:family_member_prefix %};
+    cmumpss:description-8110         xsd:string       %Map:{ fmp:description %};
+
+    cmumpss:dba_inactive_flag-8110   xsd:string?      %Map:{ fmp:dba_inactive_flag %};
+    cmumpss:deactivation_date-8110   xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime?    %Map:{ fmp:deactivation_date %};
+}
