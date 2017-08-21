@@ -26,7 +26,7 @@ start=@<http://hokukahu.com/Discharge_Type-42_2>
        cmumpss:cmumps_type                          xsd:string?       %Map:{ dischargeDisposition:activation_inactivation_date_type %};
        cmumpss:activation_inactivation_date-42_21   xsd:date or
                                                     xsd:dateTime or
-                                                    xsd:datetime      %Map:{ dischargeDisposition:activation_inactivation_date-42_21 %};
+                                                    xsd:datetime      %Map:{ dischargeDisposition:activation_inactivation_date %};
        cmumpss:active_inactive_status-42_21         xsd:string        %Map:{ dischargeDisposition:active_inactive_status %};
     }*;
 }
