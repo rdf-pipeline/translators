@@ -1,0 +1,51 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX etiology: <urn:local:etiology:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Etiology_Field-61_2>
+
+<http://hokukahu.com/Etiology_Field-61_2> {
+    cmumpss:identifier                    xsd:string          %Map:{ etiology:id %};
+    cmumpss:cmumps_type                   xsd:string?         %Map:{ etiology:cmumps_type %};
+    rdfs:label                            xsd:string          %Map:{ etiology:label %};
+
+    cmumpss:name-61_2                     xsd:string          %Map:{ etiology:name %};
+    cmumpss:identifier-61_2               xsd:string          %Map:{ etiology:gram_stain_identifier %};
+
+    cmumpss:snomed_code-61_2 {
+        cmumpss:identifier                xsd:string          %Map:{ etiology:snomed_code_id %};
+        rdfs:label                        xsd:string          %Map:{ etiology:snomed_code_label %};
+    }?;
+
+    cmumpss:gram_stain-61_2               xsd:string?         %Map:{ etiology:gram_stain %};
+    cmumpss:default_antibiotic_panel-61_2 {
+        cmumpss:identifier                xsd:string          %Map:{ etiology:default_antibiotic_panel_id %};
+        rdfs:label                        xsd:string          %Map:{ etiology:default_antibiotic_panel_label %};
+    }?;
+
+    cmumpss:class_grouptribe_family-61_2  xsd:string?         %Map:{ etiology:class_grouptribe_family %};
+    cmumpss:auto_id-61_2                  xsd:string*         %Map:{ etiology:auto_id %};
+    cmumpss:synonym-61_2                  xsd:string*         %Map:{ etiology:synonym %};
+
+    cmumpss:labwork_element_61-23 {
+        cmumpss:identifier                xsd:string          %Map:{ etiology:labwork_element_id %};
+        rdfs:label                        xsd:string          %Map:{ etiology:labwork_element_label %};
+        cmumpss:antibiotic_panel-61_23 {
+            cmumpss:identifier            xsd:string          %Map:{ etiology:antibiotic_panel_id %};
+            rdfs:label                    xsd:string          %Map:{ etiology:antibiotic_panel_label %};
+        }?;
+    }?;
+
+
+    cmumpss:inactive_flag-62_2            xsd:string?         %Map:{ etiology:inactive_flag %};
+    cmumpss:inactivation_date_time-62_2   xsd:date or
+                                          xsd:dateTime or
+                                          xsd:datetime?       %Map:{ etiology:inactivation_date_time %};
+    cmumpss:inactivated_by-61_2 {
+        cmumpss:identifier                xsd:string          %Map:{ etiology:inactivated_by_id %};
+        rdfs:label                        xsd:string          %Map:{ etiology:inactivated_by_label %};
+    }?;
+}
