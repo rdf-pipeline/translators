@@ -1,0 +1,18 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX examinationStatus: <urn:local:examinationStatus:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/Examination_Status-72>
+
+start=@<http://hokukahu.com/Examination_Status-72>
+
+<http://hokukahu.com/Examination_Status-72> {
+    cmumpss:identifier               xsd:string       %Map:{ examinationStatus:id %};
+    cmumpss:cmumps_type              xsd:string?      %Map:{ examinationStatus:cmumps_type %};
+    rdfs:label                       xsd:string       %Map:{ examinationStatus:label %};
+
+    cmumpss:status-72                xsd:string       %Map:{ examinationStatus:status %};
+    cmumpss:order-72                 xsd:string       %Map:{ examinationStatus:order %};
+    cmumpss:type-72                  xsd:string?      %Map:{ examinationStatus:exam_status_type %};
+}
