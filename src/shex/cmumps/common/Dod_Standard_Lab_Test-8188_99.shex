@@ -28,8 +28,8 @@ start=@<http://hokukahu.com/Dod_Standard_Lab_Test-8188_99>
     cmumpss:single_panel-8188_99           xsd:string       %Map:{ diagnosticService:single_panel %};
     cmumpss:panel_names-8188_99            xsd:string?      %Map:{ diagnosticService:panel_names %};
 
-    cmumpss:dba_inactive_flag-8137      xsd:string?         %Map:{ diagnosticService:dba_inactive_flag %};
-    cmumpss:deactivation_date-8137      xsd:date or
-                                        xsd:dateTime or
-                                        xsd:datetime?       %Map:{ diagnosticService:deactivation_date %};
+    cmumpss:dba_inactive_flag-8188_99      xsd:string?         %Map:{ diagnosticService:dba_inactive_flag %};
+    cmumpss:deactivation_date-8188_99      xsd:date or
+                                           xsd:dateTime or
+                                           xsd:datetime?       %Map:{ diagnosticService:deactivation_date %};
 }

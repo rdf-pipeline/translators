@@ -17,8 +17,8 @@ start=@<http://hokukahu.com/Disability_Condition-31>
     cmumpss:disability_code-31          xsd:string       %Map:{ disabilityCondition:disability_code %};
 
     cmumpss:abbreviation-31             xsd:string?      %Map:{ disabilityCondition:abbreviation %};
-    cmumpss:dba_inactive_flag-8137      xsd:string?      %Map:{ disabilityCondition:dba_inactive_flag %};
-    cmumpss:deactivation_date-8137      xsd:date or
+    cmumpss:dba_inactive_flag-31        xsd:string?      %Map:{ disabilityCondition:dba_inactive_flag %};
+    cmumpss:deactivation_date-31        xsd:date or
                                         xsd:dateTime or
                                         xsd:datetime?    %Map:{ disabilityCondition:deactivation_date %}; 
 }
