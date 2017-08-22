@@ -1,8 +1,8 @@
-PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-PREFIX Map:<http://shex.io/extensions/Map/#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
 PREFIX provider:<urn:local:provider:>
-PREFIX cmumpss:<http://hokukahu.com/schema/cmumpss#>
-PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 BASE <http://hl7.org/fhir/shape/>
 

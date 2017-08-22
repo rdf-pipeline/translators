@@ -1,0 +1,12 @@
+{
+  "urn:local:provider:constAddrPostal": "postal",
+  "urn:local:provider:constCmumpsDefLang": "English",
+  "urn:local:provider:constCmumpsEphone": "phone",
+  "urn:local:provider:constCmumpsPhone": "phone",
+  "urn:local:provider:constCmumpsCodingSys": "cmumps",
+  "urn:local:provider:constCmumpsVersion": "0.0.1",
+  "urn:local:provider:constIdentifierSysCmumps": "http://hokukahu.com/cmumps/provider/",
+  "urn:local:provider:constIdentifierSysSSN": "http://hl7.org/fhir/sid/us-ssn",
+  "urn:local:provider:constNameUse": "usual",
+  "urn:local:provider:constCmumpsState": "http://hokukahu.com/cmumps/provider/state-6"
+}
