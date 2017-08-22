@@ -1,0 +1,324 @@
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX Map:<http://shex.io/extensions/Map/#>
+PREFIX provider:<urn:local:provider:>
+PREFIX cmumpss:<http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/provider-6>
+
+<http://hokukahu.com/provider-6> {
+
+    cmumpss:identifier     xsd:string    %Map:{ provider:id %};
+    cmumpss:cmumps_type    xsd:string?    %Map:{ provider:type %};
+    rdfs:label             xsd:string    %Map:{ provider:label %};
+
+    cmumpss:name-6         xsd:string    %Map:{ regex(/"(?<provider:family>[a-zA-Z'\\-]+),\\s*(?<provider:given>[a-zA-Z'\\-\\s]+)"/) %};
+    cmumpss:initials-6     xsd:string?   %Map:{ provider:initials %};
+    cmumpss:salutation-6    xsd:string?  %Map:{ provider:salutation %};
+
+    cmumpss:sex-6           xsd:string?  
+       %Map:{ hashmap( provider:sex_label, {"FEMALE": "Female", "MALE": "Male", "OTHER": "Other"}) %};
+
+    cmumpss:dob-6           xsd:date or 
+                            xsd:dateTime or 
+                            xsd:datetime?  %Map:{ provider:dob %};
+
+    cmumpss:place_of_birth-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:place_of_birth_id %};
+       rdfs:label           xsd:string   %Map:{ provider:place_of_birth_label %};
+    }?;
+
+    cmumpss:language-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:language_id %};
+       rdfs:label           xsd:string   %Map:{ provider:language_label %};
+    }?;
+
+    cmumpss:citizenship-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:citizenship_id %};
+       rdfs:label           xsd:string   %Map:{ provider:citizenship_label %};
+    }?;
+
+    cmumpss:home_phone-6                 xsd:string?   %Map:{ provider:home_phone %};
+    cmumpss:home_street_address_1-6      xsd:string?   %Map:{ provider:home_street_address_1 %};
+    cmumpss:home_street_address_2-6      xsd:string?   %Map:{ provider:home_street_address_2 %};
+    cmumpss:home_street_address_3-6      xsd:string?   %Map:{ provider:home_street_address_3 %};
+    cmumpss:home_city-6                  xsd:string?   %Map:{ provider:home_city %};
+    cmumpss:home_state-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:home_state_id %};
+       rdfs:label           xsd:string   %Map:{ provider:home_state_label %};
+    }?;
+    cmumpss:home_zipcode-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:home_zipcode_id %};
+       rdfs:label           xsd:string   %Map:{ provider:home_zipcode_label %};
+    }?;
+
+    cmumpss:duty_phone_1-6               xsd:string?   %Map:{ provider:phone %};
+    cmumpss:duty_phone_2-6               xsd:string?   %Map:{ provider:duty_phone_2 %};
+    cmumpss:duty_fax_number-6            xsd:string?   %Map:{ provider:duty_fax_number %};
+    cmumpss:pager_number-6               xsd:string?   %Map:{ provider:pager_number %};
+
+    cmumpss:office_street_address_1-6    xsd:string?   %Map:{ provider:office_street_address %};
+    cmumpss:office_city-6                xsd:string?   %Map:{ provider:office_city %};
+    cmumpss:office_state-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:office_state_id %};
+       rdfs:label           xsd:string   %Map:{ provider:office_state_label %};
+    }?;
+    cmumpss:office_zipcode-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:office_zipcode_id %};
+       rdfs:label           xsd:string   %Map:{ provider:office_zipcode_label %};
+    }?;
+
+    cmumpss:class-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:class_id %};
+       rdfs:label           xsd:string   %Map:{ provider:class_label %};
+    }?;
+
+    cmumpss:provider_id-6                   xsd:string    %Map:{ provider:provider_id %};
+    cmumpss:ssn-6                           xsd:string?   %Map:{ provider:ssn_id %};
+    cmumpss:person_identifier_type_code-6   xsd:string?   %Map:{ provider:person_identifier_type_code %};
+    cmumpss:npi_id_editable_flag-6          xsd:string?   %Map:{ provider:npi_id_editable_flag %};
+
+    cmumpss:type-6                          xsd:string?   %Map:{ provider:provider_type %};
+    cmumpss:require_supervising_provider-6  xsd:boolean   %Map:{ provider:require_supervising_provider %};
+    cmumpss:supervisor-6                    xsd:string?   %Map:{ provider:supervisor %};
+
+    cmumpss:ccqas_last_name-6                 xsd:string?   %Map:{ provider:ccqas_last_name %};
+    cmumpss:ccqas_first_name-6                xsd:string?   %Map:{ provider:ccqas_first_name %};
+    cmumpss:ccqas_middle_name-6               xsd:string?   %Map:{ provider:ccqas_middle_name %};
+    cmumpss:ccqas_cadency-6                   xsd:string?   %Map:{ provider:ccqas_cadency %};
+    cmumpss:ccqas_date_time_of_last_update-6  xsd:date or 
+                                              xsd:dateTime or 
+                                              xsd:datetime? %Map:{ provider:ccqas_date_time_of_last_update %};
+    cmumpss:ccqascontrolled_fields-6          xsd:string?   %Map:{ provider:ccqascontrolled_fields %};
+
+    cmumpss:hcpnumber-6                       xsd:string?   %Map:{ provider:hcpnumber %};
+    cmumpss:hcp_sidrid-6                      xsd:string?   %Map:{ provider:hcp_sidrid %};
+    cmumpss:primary_hipaa_taxonomy-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:primary_hipaa_taxonomy_id %};
+       rdfs:label           xsd:string   %Map:{ provider:primary_hipaa_taxonomy_label %};
+    }?;
+
+    cmumpss:termination_date-6               xsd:date or 
+                                             xsd:dateTime or 
+                                             xsd:datetime? %Map:{ provider:termination_date %};
+    cmumpss:order_entry_inactivation_date-6  xsd:date or 
+                                             xsd:dateTime or 
+                                             xsd:datetime? %Map:{ provider:order_entry_inactivation_date %};
+    cmumpss:date_of_retirement_eligibility-6 xsd:date or 
+                                             xsd:dateTime or 
+                                             xsd:datetime? %Map:{ provider:date_of_retirement_eligibility %};
+    cmumpss:date_assigned_to_mtf-6           xsd:date or 
+                                             xsd:dateTime or 
+                                             xsd:datetime? %Map:{ provider:date_assigned_to_mtf %};
+    cmumpss:date_time_flagged_for_rcmas-6    xsd:date or 
+                                             xsd:dateTime or 
+                                             xsd:datetime? %Map:{ provider:date_time_flagged_for_rcmas %};
+
+    cmumpss:location-6 {
+       cmumpss:identifier          xsd:string   %Map:{ provider:location_id %};
+       rdfs:label                  xsd:string   %Map:{ provider:location_label %};
+    }?;
+
+    cmumpss:branch-6 {
+       cmumpss:identifier          xsd:string   %Map:{ provider:branch_id %};
+       rdfs:label                  xsd:string   %Map:{ provider:branch_label %};
+    }?;
+    cmumpss:rank-6 {
+       cmumpss:identifier          xsd:string   %Map:{ provider:rank_id %};
+       rdfs:label                  xsd:string   %Map:{ provider:rank_label %};
+    }?;
+    cmumpss:military_corps_name-6  xsd:string?   %Map:{ provider:military_corps_name %};
+    cmumpss:military_status-6 {
+       cmumpss:identifier          xsd:string   %Map:{ provider:military_status_id %};
+       rdfs:label                  xsd:string   %Map:{ provider:military_status_label %};
+    }?;
+    cmumpss:military_specialty-6 {
+       cmumpss:identifier          xsd:string   %Map:{ provider:military_specialty_id %};
+       rdfs:label                  xsd:string   %Map:{ provider:military_specialty_label %};
+    }?;
+    cmumpss:department_id_code-6 {
+       cmumpss:identifier          xsd:string   %Map:{ provider:department_code_id %};
+       rdfs:label                  xsd:string   %Map:{ provider:department_code_label %};
+    }?;
+    cmumpss:reappointment_date-6    xsd:date or 
+                                    xsd:dateTime or 
+                                    xsd:datetime? %Map:{ provider:reappointment_date %};
+    cmumpss:date_of_active_duty_commitment-6 xsd:string?   %Map:{ provider:date_of_active_duty_commitment %};
+
+    cmumpss:offboard_provider_id-6    xsd:string?   %Map:{ provider:offboard_provider_id %};
+    cmumpss:flying_status-6           xsd:boolean?   %Map:{ provider:flying_status %};
+
+    cmumpss:license_-6                xsd:string    %Map:{ provider:license %};
+    cmumpss:license_renewal_date-6    xsd:date or 
+                                      xsd:dateTime or 
+                                      xsd:datetime? %Map:{ provider:license_renewal_date %};
+    cmumpss:license_state-6 {
+       cmumpss:identifier       xsd:string   %Map:{ provider:license_state_id %};
+       rdfs:label               xsd:string   %Map:{ provider:license_state_label %};
+    }?;
+    cmumpss:licensure-6 {
+       cmumpss:identifier                  xsd:string   %Map:{ provider:licensure_id %};
+       cmumpss:cmumps_type                 xsd:string?  %Map:{ provider:licensure_type %};
+       cmumpss:date_time-6_11              xsd:date or 
+                                           xsd:dateTime or 
+                                           xsd:datetime  %Map:{ provider:licensure_date_time %};
+       cmumpss:status_6_11 {
+          cmumpss:identifier               xsd:string   %Map:{ provider:licensure_status_id %};
+          rdfs:label                       xsd:string   %Map:{ provider:licensure_status_label %};
+       }?;
+       cmumpss:license_number-6_11         xsd:string?  %Map:{ provider:licensure_number %};
+       cmumpss:issuing_state-6 {
+          cmumpss:identifier               xsd:string   %Map:{ provider:licensure_issuing_state_id %};
+          rdfs:label                       xsd:string   %Map:{ provider:licensure_issuing_state_label %};
+       }?;
+       cmumpss:date_of_issue-6_11          xsd:string?   %Map:{ provider:licensure_date_of_issue %};
+       cmumpss:licensure_renewal_date-6_11 xsd:date or 
+                                           xsd:dateTime or 
+                                           xsd:datetime?  %Map:{ provider:licensure_renewal_date %};
+       cmumpss:verification_date-6_11      xsd:date or 
+                                           xsd:dateTime or 
+                                           xsd:datetime?  %Map:{ provider:verification_date %};
+       cmumpss:type-6_11 {
+          cmumpss:identifier               xsd:string   %Map:{ provider:licensure_type_id %};
+          rdfs:label                       xsd:string   %Map:{ provider:licensure_type_label %};
+       }?;
+    }*;
+
+    cmumpss:signature_block-6   xsd:string    %Map:{ provider:signature_block %};
+    cmumpss:provider_flag-6     xsd:string?   %Map:{ provider:provider_flag %};
+
+    cmumpss:entered_by-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:entered_by_id %};
+       rdfs:label           xsd:string   %Map:{ provider:entered_by_label %};
+    }?;
+
+    cmumpss:datetime_entered-6         xsd:date or 
+                                       xsd:dateTime or 
+                                       xsd:datetime  %Map:{ provider:datetime_entered %};
+    cmumpss:cmac_modification_date-6   xsd:date or 
+                                       xsd:dateTime or 
+                                       xsd:datetime  %Map:{ provider:cmac_modification_date %};
+
+    cmumpss:dba_inactive_flag-6        xsd:string?       %Map:{ provider:dba_inactive_flag %};
+    cmumpss:deactivation_date-6        xsd:date or
+                                       xsd:dateTime or
+                                       xsd:datetime?     %Map:{ provider:deactivation_date %};
+    cmumpss:purge_notification_date-6  xsd:date or
+                                       xsd:dateTime or
+                                       xsd:datetime?     %Map:{ provider:purge_notification_date %};
+
+    cmumpss:verified-6                 xsd:boolean?   %Map:{ provider:verified %};
+    cmumpss:verified_by-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:verified_by_id %};
+       rdfs:label           xsd:string   %Map:{ provider:verified_by_label %};
+    }?;
+    cmumpss:date_verified-6            xsd:date or
+                                       xsd:dateTime or
+                                       xsd:datetime?     %Map:{ provider:date_verified %};
+    cmumpss:inactivated_by-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:inactivated_by_id %};
+       rdfs:label           xsd:string   %Map:{ provider:inactivated_by_label %};
+    }?;
+    cmumpss:replaced_by-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:replaced_by_id %};
+       rdfs:label           xsd:string   %Map:{ provider:replaced_by_label %};
+    }?;
+    cmumpss:replaced_selected_by-6 {
+       cmumpss:identifier   xsd:string   %Map:{ provider:replaced_selected_by_id %};
+       rdfs:label           xsd:string   %Map:{ provider:replaced_selected_by_label %};
+    }?;
+
+    cmumpss:deanumber-6           xsd:string?   %Map:{ provider:deanumber %};
+
+    cmumpss:biographical_data-6        xsd:string?   %Map:{ provider:biographical_data %};
+    cmumpss:certification-6 { 
+        cmumpss:identifier             xsd:string    %Map:{ provider:certification_id %};
+        cmumpss:cmumps_type            xsd:string?    %Map:{ provider:certification_type %};
+        cmumpss:date_time-6_12         xsd:date or
+                                       xsd:dateTime or
+                                       xsd:datetime?   %Map:{ provider:certificate_date_time %};
+        cmumpss:location-6_12          xsd:string?     %Map:{ provider:certificate_location %};
+        cmumpss:certifying_organization-6_12 {
+            cmumpss:identifier         xsd:string   %Map:{ provider:certifying_organization_id %};
+            rdfs:label                 xsd:string   %Map:{ provider:certifying_organization_label %};
+        }?;
+        cmumpss:date_of_certification-6_12  xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?   %Map:{ provider:date_of_certification %};
+        cmumpss:type-6_12 {
+            cmumpss:identifier         xsd:string   %Map:{ provider:certification_type_id %};
+            rdfs:label                 xsd:string   %Map:{ provider:certification_type_label %};
+        }?;
+    }*;
+
+    cmumpss:periodic_training-6 {
+        cmumpss:identifier                          xsd:string      %Map:{ provider:periodic_training_id %};
+        cmumpss:cmumps_type                         xsd:string?     %Map:{ provider:periodic_training_type %};
+        cmumpss:date_time-6_19                      xsd:date or
+                                                    xsd:dateTime or
+                                                    xsd:datetime?   %Map:{ provider:periodic_training_date_time %};
+        cmumpss:periodic_training_renewal_date-6_19 xsd:date or 
+                                                    xsd:dateTime or 
+                                                    xsd:datetime?   %Map:{ provider:periodic_training_renewal_date %};
+        cmumpss:location-6_19                       xsd:string?     %Map:{ provider:periodic_training_location %};
+        cmumpss:sponsoring_institution-6_19         xsd:string?     %Map:{ provider:periodic_training_sponsoring_institution %};
+        cmumpss:periodic_training_start_date-6_19   xsd:date or 
+                                                    xsd:dateTime or 
+                                                    xsd:datetime?   %Map:{ provider:periodic_training_start_date %};
+        cmumpss:periodic_training_end_date-6_19     xsd:date or 
+                                                    xsd:dateTime or 
+                                                    xsd:datetime?   %Map:{ provider:periodic_training_end_date %};
+        cmumpss:education_degree-6 {
+            cmumpss:identifier                      xsd:string      %Map:{ provider:education_degree_id %};
+            cmumpss:cmumps_type                     xsd:string?     %Map:{ provider:education_degree_type %};
+            cmumpss:date_time-6_09                  xsd:date or
+                                                    xsd:dateTime or
+                                                    xsd:datetime?   %Map:{ provider:education_degree_date_time %};
+            cmumpss:degree_diploma-6_09 {
+                cmumpss:identifier                  xsd:string      %Map:{ provider:degree_diploma_id %};
+                rdfs:label                          xsd:string      %Map:{ provider:degree_diploma_label %};
+            };
+            cmumpss:location-6_09                   xsd:string?     %Map:{ provider:education_degree_location %};
+            cmumpss:school-6_09                     xsd:string      %Map:{ provider:education_degree_school %};
+            cmumpss:start_date-6_09                 xsd:string?     %Map:{ provider:education_degree_start_date %};
+            cmumpss:end_date-6_09                   xsd:string?     %Map:{ provider:education_degree_end_date %};
+            cmumpss:level-6_09 {
+                cmumpss:identifier                  xsd:string      %Map:{ provider:education_degree_level_id %};
+                rdfs:label                          xsd:string      %Map:{ provider:education_degree_level_label %};
+            }?;
+        }*;
+
+        cmumpss:post_graduate_training-6 {
+            cmumpss:identifier                      xsd:string      %Map:{ provider:post_graduate_training_id %};
+            cmumpss:cmumps_type                     xsd:string?     %Map:{ provider:post_graduate_training_type %};
+            cmumpss:date_time-6_1                   xsd:date or
+                                                    xsd:dateTime or
+                                                    xsd:datetime?   %Map:{ provider:post_graduate_training_date_time %};
+            cmumpss:institution-6_1                 xsd:string      %Map:{ provider:post_graduate_training_institution %};
+            cmumpss:location-6_1                   xsd:string?     %Map:{ provider:post_graduate_training_location %};
+            cmumpss:certificate-6_1 {
+                cmumpss:identifier                  xsd:string      %Map:{ provider:post_graduate_training_certificate_id %};
+                rdfs:label                          xsd:string      %Map:{ provider:post_graduate_training_certificate_label %};
+            };
+            cmumpss:start_date-6_1                  xsd:string?     %Map:{ provider:post_graduate_training_start_date %};
+            cmumpss:end_date-6_1                    xsd:string?     %Map:{ provider:post_graduate_training_end_date %};
+            cmumpss:level-6_1 {
+                cmumpss:identifier                  xsd:string      %Map:{ provider:post_graduate_training_level_id %};
+                rdfs:label                          xsd:string      %Map:{ provider:post_graduate_training_level_label %};
+            }?;
+        }*;
+
+    }*;
+
+    cmumpss:provider_specialtys-6 {
+       cmumpss:identifier                     xsd:string        %Map:{ provider:provider_specialtys_id %};
+       rdfs:label                             xsd:string        %Map:{ provider:provider_specialtys_label %};
+    }*;
+
+    cmumpss:drug_authorization_key-6 {
+       cmumpss:identifier                     xsd:string        %Map:{ provider:drug_authorization_key_id %};
+       rdfs:label                             xsd:string        %Map:{ provider:drug_authorization_key_label %};
+    }?;
+}

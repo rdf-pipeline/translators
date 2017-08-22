@@ -1,0 +1,389 @@
+{
+   "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+   "@graph": [
+     {
+      "_id": "6-26",
+      "identifier": "6-26",
+      "type": "cmumpss:Provider-6",
+
+      "label": "FLINTSTONE,WILMA",
+      "name-6": "FLINTSTONE,WILMA",
+      "initials-6": "WLF",
+      "salutation-6": "NEUROLOGY-CONSULTANT",
+
+      "sex-6": "FEMALE",
+      "dob-6": { 
+         "value": "1990-01-01", 
+         "type": "xsd:date" 
+      },
+
+      "place_of_birth-6": {
+        "identifier": "5-17",
+        "label": "ILLINOIS"
+      },
+
+      "language-6": { 
+         "identifier": "8146-82", 
+         "label": "EN" 
+      },
+      "citizenship-6": {
+        "identifier": "5-112",
+        "label": "IRELAND"
+      },
+
+      "home_phone-6": "200 555 5555",
+      "home_street_address_1-6": "2593 InternalTest Way",
+      "home_street_address_2-6": "Apartment",
+      "home_street_address_3-6": "#123",
+      "home_city-6": "TOWNSVILLE",
+      "home_state-6": {
+        "identifier": "5-17",
+        "label": "ILLINOIS"
+      },
+      "home_zipcode-6": {
+        "identifier": "5_8002-26457",
+        "label": "60050"
+      },
+
+      "duty_phone_1-6": "000 111 2222",
+      "duty_phone_2-6": "111 222 3333",
+      "duty_fax_number-6": "222 333 4444",
+      "pager_number-6": "333 444 5555",
+      "office_street_address_1-6": "180 Bedrock Blvd",
+      "office_city-6": "BEDROCK",
+      "office_state-6": {
+        "identifier": "5-17",
+        "label": "NEBRASKA"
+      },
+      "office_zipcode-6": {
+        "identifier": "5_8002-26744",
+        "label": "68501"
+      },
+
+      "class-6": {
+        "identifier": "7-19",
+        "label": "OUTSIDE PROVIDER"
+      },
+
+      "provider_id-6": "111223333",
+      "ssn-6": "111223333",
+      "type-6": "FULL TIME",
+      "require_supervising_provider-6": true,
+      "supervisor-6": "BETTY RUBBLE",
+
+      "ccqas_last_name-6": "FLINTSTONE",
+      "ccqas_first_name-6": "WILMA",
+      "ccqas_middle_name-6": "LYN",
+      "ccqas_cadency-6": "III",
+      "ccqas_date_time_of_last_update-6": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      },
+      "ccqascontrolled_fields-6": "2,4,6,8",
+
+      "hcpnumber-6": "987654321",
+      "hcp_sidrid-6": "900100",
+      "primary_hipaa_taxonomy-6": {
+        "identifier": "8171-451",
+        "label": "246Z00000X"
+      },
+      "termination_date-6": {
+        "value": "1990-01-03",
+        "type": "xsd:date"
+      },
+      "order_entry_inactivation_date-6": {
+        "value": "1990-01-02",
+        "type": "xsd:date"
+      },
+      "date_of_retirement_eligibility-6": {
+        "value": "1990-01-05",
+        "type": "xsd:date"
+      },
+
+      "location-6": {
+        "identifier": "44-7",
+        "label": "BEDROCK SUPPORT 200H"
+      },
+
+      "branch-6": {
+        "identifier": "23-1",
+        "label": "ARMY"
+      },
+      "flying_status-6": true,
+      "military_corps_name-6": "MEDICAL CORPS",
+      "rank-6": {
+        "identifier": "8104-88",
+        "label": "COMMANDER"
+      },
+      "department_id_code-6": {
+        "identifier": "45_7-22",
+        "label": "LABORATORY_CLINICAL PATH,BEDROCK"
+      },
+      "offboard_provider_id-6": "444444",
+
+      "date_assigned_to_mtf-6": {
+        "value": "1987-06-01",
+        "type": "xsd:date"
+      },
+
+      "date_time_flagged_for_rcmas-6": {
+        "value": "1990-01-05T00:00:00",
+        "type": "xsd:dateTime"
+      },
+
+      "license_-6": "00001",
+      "license_renewal_date-6": {
+        "value": "1990-07-31",
+        "type": "xsd:date"
+      },
+      "license_state-6": {
+        "identifier": "5-17",
+        "label": "ILLINOIS"
+      },
+
+      "signature_block-6": "Wilma Flintstone",
+      "provider_flag-6": "PROVIDER",
+
+      "military_status-6": {
+        "identifier": "8569-12",
+        "label": "CI"
+      },
+      "military_speciality-6": {
+        "identifier": "8124-14",
+        "label": "21"
+      },
+
+      "person_identifier_type_code-6": "SOCIAL SECURITY NUMBER (SSN)",
+      "npi_id_editable_flag-6": "EDITABLE",
+
+      "reappointment_date-6": {
+        "value": "1993-07-28",
+        "type": "xsd:date"
+      },
+      "date_of_active_duty_commitment-6": "1990-01-01",
+
+      "dba_inactive_flag-6": "INACTIVE",
+      "deactivation_date-6": {
+        "value": "2004-04-02",
+        "type": "xsd:date"
+      },
+      "purge_notification_date-6": {
+        "value": "1997-09-26",
+        "type": "xsd:date"
+      },
+
+      "verified-6": true,
+      "verified_by-6": {
+        "identifier": "3-431",
+        "label": "FLINTSTONE,PEBBLES"
+      },
+      "date_verified-6": {
+        "value": "1990-01-10T00:00:00",
+        "type": "xsd:dateTime"
+      },
+
+      "inactivated_by-6": {
+        "identifier": "3-8147",
+        "label": "RUBBLE,BAMM-BAMM"
+      },
+
+      "replaced_by-6": {
+        "identifier": "6-692",
+        "label": "SLATE,HARRY"
+      },
+      "replaced_selected_by-6": {
+        "identifier": "3-850",
+        "label": "RUBBLE,BARNEY"
+      },
+      "replaced_on-6": {
+        "value": "1990-01-10T00:00:00",
+        "type": "xsd:dateTime"
+      },
+
+      "entered_by-6": {
+        "identifier": "3-8",
+        "label": "RUBBLE,BETTY"
+      },
+
+      "datetime_entered-6": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "cmac_modification_date-6": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      },
+
+      "biographical_data-6": "Provider biography",
+
+      "certification-6": [
+        {
+          "identifier": "6_12-1_28",
+          "type": "cmumpss:Certification-6_12",
+          "date_time-6_12": {
+            "value": "1990-01-01T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "location-6_12": "DEL",
+          "certifying_organization-6_12": {
+            "identifier": "8895_7-35",
+            "label": "AMERICAN BOARD OF ORTHOPAEDIC SURGERY"
+          },
+          "date_of_certification-6_12": {
+            "value": "1990-01-07",
+            "type": "xsd:date"
+          },
+          "type-6_12": {
+            "identifier": "8128-1",
+            "label": "B"
+          }
+        }
+      ],
+      "deanumber-6": "123456789",
+      "drug_authorization_key-6": [
+        {
+          "identifier": "8200-4",
+          "label": "MD_DO_DDS"
+        }
+      ],
+      "licensure-6": [
+        {
+          "identifier": "6_11-1_28",
+          "type": "cmumpss:Licensure-6_11",
+          "date_time-6_11": {
+            "value": "1990-01-07T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "status-6_11": {
+            "identifier": "8118-1",
+            "label": "A"
+          },
+          "license_number-6_11": "036-060376",
+          "issuing_state-6_11": {
+            "identifier": "5-17",
+            "label": "ILLINOIS"
+          },
+          "date_of_issue-6_11": "1990-01-10",
+          "renewal_date-6_11": {
+            "value": "1991-01-10",
+            "type": "xsd:date"
+          },
+          "verification_date-6_11": {
+            "value": "1990-01-06",
+            "type": "xsd:date"
+          },
+          "type-6_11": {
+            "identifier": "8127-2",
+            "label": "M"
+          }
+        }
+      ],
+      "periodic_training-6": [
+        {
+          "identifier": "6_19-1_28",
+          "type": "cmumpss:Periodic_Training-6_19",
+          "date_time-6_19": {
+            "value": "1990-01-08T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "renewal_date-6_19": {
+            "value": "1991-01-10",
+            "type": "xsd:date"
+          },
+          "location-6_19": "GREAT LAKES, IL",
+          "sponsoring_institution-6_19": "NAVHOSP",
+          "start_date-6_19": {
+            "value": "1990-01-02",
+            "type": "xsd:date"
+          },
+          "end_date-6_19": {
+            "value": "1990-02-01",
+            "type": "xsd:date"
+          },
+          "type-6_19": {
+            "identifier": "8126-27",
+            "label": "PE"
+          }
+        }
+      ],
+      "education_degree-6": [
+        {
+          "identifier": "6_09-1_28",
+          "type": "cmumpss:Education_Degree-6_09",
+          "date_time-6_09": {
+            "value": "1990-01-03T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "degree_diploma-6_09": {
+            "identifier": "8129-9",
+            "label": "MD"
+          },
+          "location-6_09": "NORTH CHICAGO, IL",
+          "school-6_09": "CHICAGO MEDICAL SCHOOL",
+          "start_date-6_09": "1990-00-00",
+          "end_date-6_09": "1990-00-01",
+          "level-6_09": {
+            "identifier": "8109-3",
+            "label": "D"
+          }
+        }
+      ],
+      "post_graduate_training-6": [
+        {
+          "identifier": "6_1-1_28",
+          "type": "cmumpss:Post_Graduate_Training-6_1",
+          "date_time-6_1": {
+            "value": "1990-01-07T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "institution-6_1": "COOK COUNTY HOSP",
+          "location-6_1": "CHICAGO, IL",
+          "certificate-6_1": {
+            "identifier": "8141-36",
+            "label": "ORT"
+          },
+          "start_date-6_1": "1990-07-00",
+          "end_date-6_1": "1990-08-00",
+          "level-6_1": {
+            "identifier": "8113-3",
+            "label": "RESIDENT"
+          }
+        },
+        {
+          "identifier": "6_1-2_28",
+          "type": "cmumpss:Post_Graduate_Training-6_1",
+          "date_time-6_1": {
+            "value": "1990-01-09T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "institution-6_1": "CHICAGO MED SCHOOL",
+          "location-6_1": "NO CHG, IL",
+          "certificate-6_1": {
+            "identifier": "8141-36",
+            "label": "ORT"
+          },
+          "start_date-6_1": "1990-01-09",
+          "end_date-6_1": "1990-01-10",
+          "level-6_1": {
+            "identifier": "8113-1",
+            "label": "FELLOW"
+          }
+        }
+      ],
+      "hipaa_taxonomy-6": [
+        {
+          "identifier": "8171-451",
+          "label": "246Z00000X"
+        }
+      ],
+      "provider_specialtys-6": [
+        {
+          "identifier": "8100-181",
+          "label": "900"
+        }
+      ]
+
+     }
+  ]
+}
+

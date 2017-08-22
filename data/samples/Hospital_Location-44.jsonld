@@ -1,0 +1,41 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "44-.5",
+      "type": "cmumpss:Hospital_Location-44",
+      "label": "QUARTERS",
+      "name-44": "QUARTERS",
+      "abbreviation-44": "QTRS",
+      "location_type-44": "WARD",
+      "mtf-44": {
+        "id": "1-1234",
+        "label": "LA LA LAND IL"
+      },
+      "division-44": {
+        "id": "40_8-1",
+        "label": "LA LA LAND, 200H"
+      },
+      "access_to_care_reporting-44": true,
+      "city-44": "LA LA LAND",
+      "state-44": {
+        "id": "5-17",
+        "label": "ILLINOIS"
+      },
+      "zip-44": {
+        "id": "5_8002-26489",
+        "label": "60088"
+      },
+      "meprs_code-44": {
+        "id": "8119-386",
+        "label": "FCDA"
+      },
+      "dba_inactive_flag-44": "INACTIVE",
+      "deactivation_date-44": {
+        "value": "1995-10-01",
+        "type": "xsd:date"
+      },
+      "activation_status-44": "NOT ACTIVATED"
+    }
+  ]
+}
