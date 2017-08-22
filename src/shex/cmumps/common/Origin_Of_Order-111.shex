@@ -3,7 +3,7 @@ PREFIX Map: <http://shex.io/exts/Map/#>
 PREFIX originOfOrder: <urn:local:originOfOrder:>
 PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-BASE <http://hl7.org/fhir/shape/Origin_Of_Order-111>
+BASE <http://hl7.org/fhir/shape/>
 
 start=@<http://hokukahu.com/Origin_Of_Order-111>
 

@@ -3,7 +3,7 @@ PREFIX Map: <http://shex.io/exts/Map/#>
 PREFIX fmp: <urn:local:fmp:>
 PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-BASE <http://hl7.org/fhir/shape/Family_Member_Prefix-8110>
+BASE <http://hl7.org/fhir/shape/>
 
 start=@<http://hokukahu.com/Family_Member_Prefix-8110>
 

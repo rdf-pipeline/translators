@@ -3,7 +3,7 @@ PREFIX Map: <http://shex.io/exts/Map/#>
 PREFIX nhcc: <urn:local:nhcc:>
 PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-BASE <http://hl7.org/fhir/shape/Ned_Hcdp_Coverage_Code-8545>
+BASE <http://hl7.org/fhir/shape/>
 
 start=@<http://hokukahu.com/Ned_Hcdp_Coverage_Code-8545>
 
