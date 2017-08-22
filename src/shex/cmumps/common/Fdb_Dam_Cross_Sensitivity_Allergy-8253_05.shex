@@ -1,0 +1,17 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX fdcsa: <urn:local:fdcsa:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Fdb_Dam_Cross_Sensitivity_Allergy-8253_05>
+
+<http://hokukahu.com/Fdb_Dam_Cross_Sensitivity_Allergy-8253_05> {
+    cmumpss:identifier               xsd:string       %Map:{ fdcsa:id %};
+    cmumpss:cmumps_type              xsd:string?      %Map:{ fdcsa:cmumps_type %};
+    rdfs:label                       xsd:string       %Map:{ fdcsa:label %};
+
+    cmumpss:damagccs-8253_05         xsd:string       %Map:{ fdcsa:damagccs %};
+    cmumpss:damagccsd-8253_05        xsd:string       %Map:{ fdcsa:damagccsd %};
+}

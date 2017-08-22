@@ -1,0 +1,17 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX fdsl: <urn:local:fdsl:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Fdb_Ddi_Severity_Level-8253_045>
+
+<http://hokukahu.com/Fdb_Ddi_Severity_Level-8253_045> {
+    cmumpss:identifier                   xsd:string        %Map:{ fdsl:id %};
+    cmumpss:cmumps_type                  xsd:string?       %Map:{ fdsl:cmumps_type %};
+    rdfs:label                           xsd:string        %Map:{ fdsl:label %};
+
+    cmumpss:dimslbtxt-8253_045           xsd:string        %Map:{ fdsl:dimslbtxt %};
+    cmumpss:dimsltext-8253_045           xsd:string*       %Map:{ fdsl:dimsltext %};
+}
