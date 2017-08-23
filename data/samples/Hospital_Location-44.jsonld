@@ -32,7 +32,7 @@
       },
       "dba_inactive_flag-44": "INACTIVE",
       "deactivation_date-44": {
-        "value": "1995-10-01",
+        "value": "1990-01-01",
         "type": "xsd:date"
       },
       "activation_status-44": "NOT ACTIVATED"
