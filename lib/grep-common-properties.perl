@@ -14,15 +14,16 @@ foreach my $f ( @ARGV ) {
 	# print "$all\n"; exit 0;
 
 	# Grab only %Map:{ ... %} portions:
-	my @maps = ($all =~ m/\%Map\:\s*\{\s*(.*?)\s*\%\}/msg);
+	my @maps = ($all =~ m/\%Map\:\s*\{\s*(.*?)\s*\%\}/imsg);
 	my $nMaps = scalar(@maps);
-	my @simpleMaps = ($all =~ m/\b(Map)\b/msg);
+	my @simpleMaps = ($all =~ m/\b(Map)\b/imsg);
 	my $nSimpleMaps = scalar(@simpleMaps);
 	# print "maps: @maps\n"; 
 	@maps = map { 
 		my @props = ($_ =~ m/(\w+\:[\w\-]+)/msg); 
 		my $n = scalar(@props);
 		# print "$n @props\n"; 
+		warn "[WARNING] No %Map properties found: { $_ }\n" if !@props;
 		@props 
 		} @maps;
 	
