@@ -1,0 +1,432 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/cmumps-1/5-1> a cmumps:Geographic_Location-5 ;
+    rdfs:label "ALABAMA" ;
+    cmumps:abbreviation-5 "AL" ;
+    cmumps:activation_inactivation_date-5 <http://hokukahu.com/systems/cmumps-1/5_03-1_1> ;
+    cmumps:capital-5 "MONTGOMERY" ;
+    cmumps:cmumps_type "cmumpss:Geographic_Location-5" ;
+    cmumps:country-5 <http://hokukahu.com/systems/cmumps-1/5-266> ;
+    cmumps:county-5 <http://hokukahu.com/systems/cmumps-1/5_01-10_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-11_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-12_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-13_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-14_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-15_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-16_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-17_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-18_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-19_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-1_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-20_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-21_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-22_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-23_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-24_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-25_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-26_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-27_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-28_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-29_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-30_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-31_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-32_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-33_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-34_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-35_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-36_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-37_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-38_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-39_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-40_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-41_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-42_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-43_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-44_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-45_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-46_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-47_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-48_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-49_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-4_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-50_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-51_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-52_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-53_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-54_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-55_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-56_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-57_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-58_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-59_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-5_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-60_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-61_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-62_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-63_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-64_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-65_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-66_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-67_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-68_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-69_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-6_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-7_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-8_1>,
+        <http://hokukahu.com/systems/cmumps-1/5_01-9_1> ;
+    cmumps:fips-5 "01" ;
+    cmumps:identifier "5-1" ;
+    cmumps:name-5 "ALABAMA" ;
+    cmumps:physical_location-5 "CONUS" .
+
+<http://hokukahu.com/systems/cmumps-1/5-266> rdfs:label "UNITED STATES" ;
+    cmumps:identifier "5-266" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-10_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "BUTLER" ;
+    cmumps:identifier "5_01-10_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-11_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CALHOUN" ;
+    cmumps:identifier "5_01-11_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-12_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CHAMBERS" ;
+    cmumps:identifier "5_01-12_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-13_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CHEROKEE" ;
+    cmumps:identifier "5_01-13_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-14_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CHILTON" ;
+    cmumps:identifier "5_01-14_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-15_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CHOCTAW" ;
+    cmumps:identifier "5_01-15_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-16_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CLARKE" ;
+    cmumps:identifier "5_01-16_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-17_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CLAY" ;
+    cmumps:identifier "5_01-17_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-18_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CLEBURNE" ;
+    cmumps:identifier "5_01-18_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-19_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "COFFEE" ;
+    cmumps:identifier "5_01-19_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-1_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MOBILE" ;
+    cmumps:identifier "5_01-1_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-20_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "COLBERT" ;
+    cmumps:identifier "5_01-20_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-21_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CONECUH" ;
+    cmumps:identifier "5_01-21_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-22_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "COOSA" ;
+    cmumps:identifier "5_01-22_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-23_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "COVINGTON" ;
+    cmumps:identifier "5_01-23_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-24_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CRENSHAW" ;
+    cmumps:identifier "5_01-24_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-25_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "CULLMAN" ;
+    cmumps:identifier "5_01-25_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-26_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "DALE" ;
+    cmumps:identifier "5_01-26_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-27_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "DALLAS" ;
+    cmumps:identifier "5_01-27_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-28_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "DE KALB" ;
+    cmumps:identifier "5_01-28_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-29_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "ELMORE" ;
+    cmumps:identifier "5_01-29_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-30_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "ESCAMBIA" ;
+    cmumps:identifier "5_01-30_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-31_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "ETOWAH" ;
+    cmumps:identifier "5_01-31_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-32_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "FAYETTE" ;
+    cmumps:identifier "5_01-32_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-33_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "FRANKLIN" ;
+    cmumps:identifier "5_01-33_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-34_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "GENEVA" ;
+    cmumps:identifier "5_01-34_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-35_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "GREENE" ;
+    cmumps:identifier "5_01-35_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-36_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "HALE" ;
+    cmumps:identifier "5_01-36_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-37_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "HENRY" ;
+    cmumps:identifier "5_01-37_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-38_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "HOUSTON" ;
+    cmumps:identifier "5_01-38_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-39_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "JACKSON" ;
+    cmumps:identifier "5_01-39_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-40_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "JEFFERSON" ;
+    cmumps:identifier "5_01-40_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-41_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "LAMAR" ;
+    cmumps:identifier "5_01-41_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-42_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "LAUDERDALE" ;
+    cmumps:identifier "5_01-42_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-43_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "LAWRENCE" ;
+    cmumps:identifier "5_01-43_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-44_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "LEE" ;
+    cmumps:identifier "5_01-44_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-45_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "LIMESTONE" ;
+    cmumps:identifier "5_01-45_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-46_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "LOWNDES" ;
+    cmumps:identifier "5_01-46_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-47_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MACON" ;
+    cmumps:identifier "5_01-47_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-48_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MADISON" ;
+    cmumps:identifier "5_01-48_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-49_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MARENGO" ;
+    cmumps:identifier "5_01-49_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-4_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "AUTAUGA" ;
+    cmumps:identifier "5_01-4_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-50_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MARION" ;
+    cmumps:identifier "5_01-50_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-51_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MARSHALL" ;
+    cmumps:identifier "5_01-51_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-52_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MONROE" ;
+    cmumps:identifier "5_01-52_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-53_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MONTGOMERY" ;
+    cmumps:identifier "5_01-53_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-54_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "MORGAN" ;
+    cmumps:identifier "5_01-54_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-55_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "PERRY" ;
+    cmumps:identifier "5_01-55_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-56_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "PICKENS" ;
+    cmumps:identifier "5_01-56_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-57_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "PIKE" ;
+    cmumps:identifier "5_01-57_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-58_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "RANDOLPH" ;
+    cmumps:identifier "5_01-58_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-59_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "RUSSELL" ;
+    cmumps:identifier "5_01-59_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-5_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "BALDWIN" ;
+    cmumps:identifier "5_01-5_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-60_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "SAINT CLAIR" ;
+    cmumps:identifier "5_01-60_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-61_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "SHELBY" ;
+    cmumps:identifier "5_01-61_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-62_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "SUMTER" ;
+    cmumps:identifier "5_01-62_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-63_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "TALLADEGA" ;
+    cmumps:identifier "5_01-63_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-64_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "TALLAPOOSA" ;
+    cmumps:identifier "5_01-64_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-65_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "TUSCALOOSA" ;
+    cmumps:identifier "5_01-65_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-66_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "WALKER" ;
+    cmumps:identifier "5_01-66_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-67_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "WASHINGTON" ;
+    cmumps:identifier "5_01-67_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-68_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "WILCOX" ;
+    cmumps:identifier "5_01-68_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-69_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "WINSTON" ;
+    cmumps:identifier "5_01-69_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-6_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "BARBOUR" ;
+    cmumps:identifier "5_01-6_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-7_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "BIBB" ;
+    cmumps:identifier "5_01-7_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-8_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "BLOUNT" ;
+    cmumps:identifier "5_01-8_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_01-9_1> a cmumps:County-5_01 ;
+    cmumps:cmumps_type "cmumpss:County-5_01" ;
+    cmumps:county-5_01 "BULLOCK" ;
+    cmumps:identifier "5_01-9_1" .
+
+<http://hokukahu.com/systems/cmumps-1/5_03-1_1> a cmumps:Activation_Inactivation_Date-5_03 ;
+    cmumps:activation_inactivation_date-5_03 "1990-01-01"^^xsd:date ;
+    cmumps:active_inactive_status-5_03 "ACTIVE" ;
+    cmumps:cmumps_type "cmumpss:Activation_Inactivation_Date-5_03" ;
+    cmumps:identifier "5_03-1_1" .
+
+

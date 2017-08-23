@@ -1,0 +1,27 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/cmumps-1/757_02-1> a cmumps:Codes-757_02 ;
+    rdfs:label "Unresolved" ;
+    cmumps:classification_source-757_02 <http://hokukahu.com/systems/cmumps-1/757_03-12> ;
+    cmumps:cmumps_type "cmumpss:Codes-757_02" ;
+    cmumps:code-757_02 "799.9" ;
+    cmumps:expression-757_02 <http://hokukahu.com/systems/cmumps-1/757_01-1> ;
+    cmumps:identifier "757_02-1" ;
+    cmumps:major_concept-757_02 <http://hokukahu.com/systems/cmumps-1/757-1> .
+
+<http://hokukahu.com/systems/cmumps-1/757-1> rdfs:label "Unresolved" ;
+    cmumps:identifier "757-1" .
+
+<http://hokukahu.com/systems/cmumps-1/757_01-1> rdfs:label "Unresolved" ;
+    cmumps:identifier "757_01-1" .
+
+<http://hokukahu.com/systems/cmumps-1/757_03-12> rdfs:label "ICD91" ;
+    cmumps:identifier "757_03-12" .
+
+

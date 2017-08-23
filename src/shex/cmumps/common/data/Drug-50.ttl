@@ -1,0 +1,138 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix ns2: <http://datasets.caregraf.org/fms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/cmumps-1/50-1> a cmumps:Drug-50 ;
+    rdfs:label "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG " ;
+    cmumps:associated_formulary-50 <http://hokukahu.com/systems/cmumps-1/50_3-1_1> ;
+    cmumps:calc_unit-50 "MG" ;
+    cmumps:cmumps_type "cmumpss:Drug-50" ;
+    cmumps:content_unit-50 "MG" ;
+    cmumps:dea_special_hdlg-50 "9" ;
+    cmumps:default_unit-50 "TABLET" ;
+    cmumps:divisible-50 "HALVES" ;
+    cmumps:dosage_strength-50 "325" ;
+    cmumps:drug_check_date-50 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    cmumps:drug_check_disable-50 "ALL ENABLED" ;
+    cmumps:drug_check_user-50 <http://hokukahu.com/systems/cmumps-1/3-7565> ;
+    cmumps:drugroute_form-50 "PO TAB" ;
+    cmumps:edited-50 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    cmumps:editor-50 <http://hokukahu.com/systems/cmumps-1/3-97574> ;
+    cmumps:form-50 <http://hokukahu.com/systems/cmumps-1/51_6-59> ;
+    cmumps:identifier "50-1" ;
+    cmumps:injectable-50 "NOT INJECTABLE" ;
+    cmumps:label_print_name-50 "ACETAMINOPHEN 325MG TABLET" ;
+    cmumps:name-50 "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG " ;
+    cmumps:ndc_invalid-50 "Valid NDC" ;
+    cmumps:primary_ndc_number-50 <http://hokukahu.com/systems/cmumps-1/8252-50580049660> ;
+    cmumps:route-50 <http://hokukahu.com/systems/cmumps-1/51_5-12> ;
+    cmumps:sig_codes-50 <http://hokukahu.com/systems/cmumps-1/50_15-1_1> ;
+    cmumps:synonym-50 <http://hokukahu.com/systems/cmumps-1/50_1-10_1>,
+        <http://hokukahu.com/systems/cmumps-1/50_1-11_1>,
+        <http://hokukahu.com/systems/cmumps-1/50_1-12_1>,
+        <http://hokukahu.com/systems/cmumps-1/50_1-13_1>,
+        <http://hokukahu.com/systems/cmumps-1/50_1-14_1>,
+        <http://hokukahu.com/systems/cmumps-1/50_1-15_1>,
+        <http://hokukahu.com/systems/cmumps-1/50_1-8_1>,
+        <http://hokukahu.com/systems/cmumps-1/50_1-9_1> .
+
+<http://hokukahu.com/systems/cmumps-1/3-7565> rdfs:label "HOOPESXXX,COBALT" ;
+    cmumps:identifier "3-7565" .
+
+<http://hokukahu.com/systems/cmumps-1/3-97574> rdfs:label "HULSEXXX,JADE" ;
+    cmumps:identifier "3-97574" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-10_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-10_1" ;
+    cmumps:intended_use-50_1 "QUICK CODE" ;
+    cmumps:synonym-50_1 "TYL325" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-11_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-11_1" ;
+    cmumps:intended_use-50_1 "QUICK CODE" ;
+    cmumps:synonym-50_1 "T325" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-12_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-12_1" ;
+    cmumps:intended_use-50_1 "QUICK CODE" ;
+    cmumps:synonym-50_1 "ACE325" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-13_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-13_1" ;
+    cmumps:synonym-50_1 "analgesics/antipyretic,misc" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-14_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-14_1" ;
+    cmumps:intended_use-50_1 "QUICK CODE" ;
+    cmumps:synonym-50_1 "par1" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-15_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-15_1" ;
+    cmumps:synonym-50_1 "TYLENOL" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-8_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-8_1" ;
+    cmumps:intended_use-50_1 "QUICK CODE" ;
+    cmumps:synonym-50_1 "OTC6" .
+
+<http://hokukahu.com/systems/cmumps-1/50_1-9_1> a cmumps:Synonym-50_1 ;
+    cmumps:cmumps_type "cmumpss:Synonym-50_1" ;
+    cmumps:identifier "50_1-9_1" ;
+    cmumps:intended_use-50_1 "QUICK CODE" ;
+    cmumps:synonym-50_1 "RTS" .
+
+<http://hokukahu.com/systems/cmumps-1/50_15-1_1> a cmumps:Sig_CodeS-50_15 ;
+    cmumps:cmumps_type "cmumpss:Sig_CodeS-50_15" ;
+    cmumps:identifier "50_15-1_1" ;
+    cmumps:sig-50_15 "T 1-2 PO QID PRN FP" ;
+    cmumps:sig_codes-50_15 "MJ" .
+
+<http://hokukahu.com/systems/cmumps-1/50_3-1_1> a cmumps:Associated_Formulary-50_3 ;
+    cmumps:associated_formulary-50_3 <http://hokukahu.com/systems/cmumps-1/59_3-1> ;
+    cmumps:cmumps_type "cmumpss:Associated_Formulary-50_3" ;
+    cmumps:continuable-50_3 true ;
+    cmumps:default_days_supply-50_3 "3" ;
+    cmumps:default_expiration-50_3 "365" ;
+    cmumps:default_quantity-50_3 "50" ;
+    cmumps:default_sig-50_3 "TAKE 1 TAB PO Q6H PRN headache/fever/pain or as directed" ;
+    cmumps:identifier "50_3-1_1" ;
+    cmumps:inpatient_order_duration-50_3 "100" ;
+    cmumps:ip_op_indicator-50_3 "BOTH" ;
+    cmumps:local_cost-50_3 ".03" ;
+    cmumps:local_pdts_cost_switch-50_3 "PDTS" ;
+    cmumps:maximum_days_supply-50_3 "30" ;
+    cmumps:maximum_quantity-50_3 "50" ;
+    cmumps:message-50_3 "**OTC HANDOUT**" ;
+    cmumps:nonformulary-50_3 "FORMULARY" ;
+    cmumps:pdts_unit_cost-50_3 ".0034" ;
+    cmumps:replenish_on_request-50_3 "NO" ;
+    cmumps:warning_label-50_3 "8" .
+
+<http://hokukahu.com/systems/cmumps-1/51_5-12> rdfs:label "PO" ;
+    cmumps:identifier "51_5-12" .
+
+<http://hokukahu.com/systems/cmumps-1/51_6-59> rdfs:label "TAB" ;
+    cmumps:identifier "51_6-59" .
+
+<http://hokukahu.com/systems/cmumps-1/59_3-1> rdfs:label "FIRST FORMULARY GROUP" ;
+    cmumps:identifier "59_3-1" .
+
+<http://hokukahu.com/systems/cmumps-1/8252-50580049660> rdfs:label "ACETAMINOPHEN" ;
+    ns2:sameAsLabel "TYLENOL 325 MG TABLET" ;
+    cmumps:identifier "8252-50580049660" ;
+    ns1:sameAs <http://hokukahu.com/schema/ndc#50580049660> .
+
+

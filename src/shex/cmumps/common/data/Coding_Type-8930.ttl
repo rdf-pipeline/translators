@@ -1,0 +1,40 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/cmumps-1/8930-1> a cmumps:Coding_Type-8930 ;
+    rdfs:label "SNOMED" ;
+    cmumps:cmumps_type "cmumpss:Coding_Type-8930" ;
+    cmumps:functional_area-8930 "LABORATORY" ;
+    cmumps:identifier "8930-1" ;
+    cmumps:name-8930 "SNOMED" ;
+    cmumps:source_files-8930 <http://hokukahu.com/systems/cmumps-1/8930_01-61.1_1>,
+        <http://hokukahu.com/systems/cmumps-1/8930_01-61.2_1> .
+
+<http://hokukahu.com/systems/cmumps-1/1-61.1> rdfs:label "MORPHOLOGY FIELD" ;
+    cmumps:identifier "1-61.1" .
+
+<http://hokukahu.com/systems/cmumps-1/1-61.2> rdfs:label "ETIOLOGY FIELD" ;
+    cmumps:identifier "1-61.2" .
+
+<http://hokukahu.com/systems/cmumps-1/8930_01-61.1_1> a cmumps:Source_Files-8930_01 ;
+    cmumps:cmumps_type "cmumpss:Source_Files-8930_01" ;
+    cmumps:code_field_in_source-8930_01 "2" ;
+    cmumps:code_transformation-8930_01 "S X=\"M-\"_X" ;
+    cmumps:identifier "8930_01-61.1_1" ;
+    cmumps:interpretation_field_in_source-8930_01 ".01" ;
+    cmumps:source_file-8930_01 <http://hokukahu.com/systems/cmumps-1/1-61.1> .
+
+<http://hokukahu.com/systems/cmumps-1/8930_01-61.2_1> a cmumps:Source_Files-8930_01 ;
+    cmumps:cmumps_type "cmumpss:Source_Files-8930_01" ;
+    cmumps:code_field_in_source-8930_01 "2" ;
+    cmumps:code_transformation-8930_01 "S X=\"E-\"_X" ;
+    cmumps:identifier "8930_01-61.2_1" ;
+    cmumps:interpretation_field_in_source-8930_01 ".01" ;
+    cmumps:source_file-8930_01 <http://hokukahu.com/systems/cmumps-1/1-61.2> .
+
+

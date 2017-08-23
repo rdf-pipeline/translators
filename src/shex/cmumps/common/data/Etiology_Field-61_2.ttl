@@ -1,0 +1,32 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/cmumps-1/61_2-1> a cmumps:Etiology_Field-61_2 ;
+    rdfs:label "ESCHERICHIA COLI" ;
+    cmumps:auto_id-61_2 "1",
+        "851",
+        "esccol" ;
+    cmumps:cmumps_type "cmumpss:Etiology_Field-61_2" ;
+    cmumps:default_antibiotic_panel-61_2 <http://hokukahu.com/systems/cmumps-1/8728-1> ;
+    cmumps:gram_stain-61_2 "GRAM NEGATIVE" ;
+    cmumps:identifier "61_2-1" ;
+    cmumps:identifier-61_2 "BACTERIUM" ;
+    cmumps:name-61_2 "ESCHERICHIA COLI" ;
+    cmumps:snomed_code-61_2 <http://hokukahu.com/systems/cmumps-1/8188_12-13180> ;
+    cmumps:synonym-61_2 "01",
+        "851",
+        "E.C.",
+        "E.COLI" .
+
+<http://hokukahu.com/systems/cmumps-1/8188_12-13180> rdfs:label "112283007" ;
+    cmumps:identifier "8188_12-13180" .
+
+<http://hokukahu.com/systems/cmumps-1/8728-1> rdfs:label "GRAM NEG" ;
+    cmumps:identifier "8728-1" .
+
+

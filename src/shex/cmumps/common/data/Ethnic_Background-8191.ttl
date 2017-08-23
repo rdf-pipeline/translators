@@ -1,0 +1,16 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/cmumps-1/8191-1> a cmumps:Ethnic_Background-8191 ;
+    rdfs:label "1" ;
+    cmumps:cmumps_type "cmumpss:Ethnic_Background-8191" ;
+    cmumps:code-8191 "1" ;
+    cmumps:description-8191 "HISPANIC" ;
+    cmumps:identifier "8191-1" .
+
+

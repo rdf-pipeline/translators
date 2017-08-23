@@ -1,0 +1,22 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/cmumps-1/8131-1> a cmumps:Absent_Status-8131 ;
+    rdfs:label "ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES" ;
+    cmumps:activation_inactivation_date-8131 <http://hokukahu.com/systems/cmumps-1/8131_01-1_1> ;
+    cmumps:cmumps_type "cmumpss:Absent_Status-8131" ;
+    cmumps:code-8131 "AC" ;
+    cmumps:identifier "8131-1" ;
+    cmumps:name-8131 "ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES" .
+
+<http://hokukahu.com/systems/cmumps-1/8131_01-1_1> a cmumps:Activation_Inactivation_Date-8131_01 ;
+    cmumps:activation_inactivation_date-8131_01 "1990-01-01"^^xsd:date ;
+    cmumps:active_inactive_status-8131_01 "ACTIVE" ;
+    cmumps:cmumps_type "cmumpss:Activation_Inactivation_Date-8131_01" ;
+    cmumps:identifier "8131_01-1_1" .
+
