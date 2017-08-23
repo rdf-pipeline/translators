@@ -20,7 +20,7 @@ foreach my $f ( @ARGV ) {
 	my $nSimpleMaps = scalar(@simpleMaps);
 	# print "maps: @maps\n"; 
 	@maps = map { 
-		my @props = ($_ =~ m/(\w+\:[\w\-]+)/msg); 
+		my @props = ($_ =~ m/(\w+\:[\w\-\.]+)/msg); 
 		my $n = scalar(@props);
 		# print "$n @props\n"; 
 		warn "[WARNING] No %Map properties found: { $_ }\n" if !@props;
