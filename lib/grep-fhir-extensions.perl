@@ -3,7 +3,9 @@
 # List FHIR extensions from shex schemas.
 # NOT GUARENTEED TO WORK!
 # Use like this:
-# ./grep-fhir-extensions.perl *.shex |sort -u
+#    ./grep-fhir-extensions.perl *.shex |sort -u 
+# Then (optionally) pipe through:
+#    perl -p -e 's/(dem:const(Cmumps)?(.*))$/$1 ($3)/'
 
 foreach my $f ( @ARGV ) {
 	open(my $fh, "<$f") || die;
