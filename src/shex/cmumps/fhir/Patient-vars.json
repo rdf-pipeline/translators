@@ -1,0 +1,18 @@
+{
+  "urn:local:patient:constAddrPostal": "postal",
+  "urn:local:patient:constCmumpsDefLang": "English",
+  "urn:local:patient:constCmumpsEphone": "phone",
+  "urn:local:patient:constCmumpsPhone": "phone",
+  "urn:local:patient:constCmumpsCodingSys": "cmumps",
+  "urn:local:patient:constCmumpsVersion": "0.0.1",
+  "urn:local:patient:constIdentifierSysCmumps": "http://hokukahu.com/cmumps/patient/",
+  "urn:local:patient:constIdentifierSysSSN": "http://hl7.org/fhir/sid/us-ssn",
+  "urn:local:patient:constNameUse": "usual",
+  "urn:local:patient:constCmumpsFmp2": "http://hokukahu.com/cmumps/patient/fmp-2",
+  "urn:local:patient:constCmumpsMedicalRecordType2": "http://hokukahu.com/cmumps/patient/medical_record_type-2",
+  "urn:local:patient:constCmumpsMedicalRecordType": "http://hokukahu.com/cmumps/patient/medical_record_type-2_03",
+  "urn:local:patient:constCmumpsMedicalRecordRoom": "http://hokukahu.com/cmumps/patient/medical_record_room-2_03",
+  "urn:local:patient:constUserAlteringPatientRecord2": "http://hokukahu.com/cmumps/patient/user_altering_patient_record-2",
+  "urn:local:patient:constUserAlteredRecordDateTime": "http://hokukahu.com/cmumps/patient/constUserAlteredRecordDateTime",
+  "urn:local:patient:constUserAlteringPatientRecord24": "http://hokukahu.com/cmumps/patient/constUserAlteringPatientRecord-2_4"
+}
