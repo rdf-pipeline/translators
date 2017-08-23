@@ -236,10 +236,10 @@ start=@<http://hokukahu.com/Hospital_Location-44>
         rdfs:label                               xsd:string       %Map:{ hospitalLoc:key_person_label %};
     }?;
 
-    cmumpss:activiation_status-44              xsd:string?       %Map:{ hospitalLoc:activation_status %};
+    cmumpss:activation_status-44                 xsd:string?       %Map:{ hospitalLoc:activation_status %};
 
-    cmumpss:dba_inactive_flag-44               xsd:string?       %Map:{ hospitalLoc:dba_inactive_flag %};
-    cmumpss:deactivation_date-44               xsd:date or
-                                               xsd:dateTime or
-                                               xsd:datetime?     %Map:{ hospitalLoc:deactivation_date %};
+    cmumpss:dba_inactive_flag-44                 xsd:string?       %Map:{ hospitalLoc:dba_inactive_flag %};
+    cmumpss:deactivation_date-44                 xsd:date or
+                                                 xsd:dateTime or
+                                                 xsd:datetime?     %Map:{ hospitalLoc:deactivation_date %};
 }
