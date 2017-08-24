@@ -63,7 +63,10 @@ function normalizeAttribute(object, sourceKeys, targetKey) {
         if (key === "@context") {
               ; // leave it alone
         } else if (typeof object[key] === "object") {
-            normalizeAttribute(object[key], sourceKeys, targetKey);
+            if (_.isEmpty(object[key]['type']) ||  
+                object[key]['type'].indexOf('xsd:date') < 0) {
+               normalizeAttribute(object[key], sourceKeys, targetKey);
+            }
         } else if (sourceKeys.indexOf(key) !== -1) {
             object[targetKey] = object[key];
         }
