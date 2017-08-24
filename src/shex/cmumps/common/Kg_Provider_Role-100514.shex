@@ -1,0 +1,19 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/providerRoles/Map/#>
+PREFIX providerRole: <urn:local:providerRole:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Kg_Provider_Role-100514>
+
+<http://hokukahu.com/Kg_Provider_Role-100514> {
+    cmumpss:identifier                  xsd:string     %Map:{ providerRole:id %};
+    cmumpss:cmumps_type                 xsd:string?    %Map:{ providerRole:cmumps_type %};
+    rdfs:label                          xsd:string     %Map:{ providerRole:label %};
+
+    cmumpss:role_code-100514            xsd:string     %Map:{ providerRole:role_code %};
+    cmumpss:role_description-100514     xsd:string     %Map:{ providerRole:role_description %};
+    cmumpss:standard-100514             xsd:boolean    %Map:{ providerRole:standard %};
+    cmumpss:apv-100514                  xsd:boolean    %Map:{ providerRole:apv %};
+}
