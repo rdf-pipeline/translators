@@ -1,0 +1,37 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Procedure-1074046 a cmumps:Procedure ;
+    rdfs:label "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat" ;
+    cmumps:cmumps_type "Procedure" ;
+    cmumps:comments "Encounter Procedure" ;
+    cmumps:dateReported "1990-01-01T00:00:00"^^xsd:dateTime ;
+    cmumps:description entity:HDDConcept-67355 ;
+    cmumps:identifier "Procedure-1074046" ;
+    cmumps:patient entity:Patient-000007 ;
+    cmumps:provider entity:Provider-41200034 ;
+    cmumps:source entity:HDDConcept-1450368 ;
+    cmumps:status entity:HDDConcept-1024 ;
+    cmumps:verified true .
+
+entity:HDDConcept-1024 rdfs:label "Active" ;
+    cmumps:identifier "HDDConcept-1024" .
+
+entity:HDDConcept-1450368 rdfs:label "Clinical Evidence" ;
+    cmumps:identifier "HDDConcept-1450368" .
+
+entity:HDDConcept-67355 rdfs:label "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat" ;
+    cmumps:identifier "HDDConcept-67355" .
+
+entity:Patient-000007 rdfs:label "BUNNY,BUGS" ;
+    cmumps:identifier "Patient-000007" .
+
+entity:Provider-41200034 rdfs:label "MOUSE,MICKEY" ;
+    cmumps:identifier "Provider-41200034" .
+
+

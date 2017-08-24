@@ -1,0 +1,46 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX procedure: <urn:local:procedure:>
+PREFIX cmumpss: <http://hokukahu.com/schema/cmumpss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/Procedure>
+
+<http://hokukahu.com/Procedure> {
+    cmumpss:identifier             xsd:string        %Map:{ procedure:id %};
+    cmumpss:cmumps_type            xsd:string?       %Map:{ procedure:cmumps_type %};
+    rdfs:label                     xsd:string        %Map:{ procedure:label %};
+
+    cmumpss:patient {
+       cmumpss:identifier          xsd:string        %Map:{ procedure:patient_id %};
+       rdfs:label                  xsd:string        %Map:{ procedure:patient_label %};
+    };
+
+    cmumpss:comment                xsd:string?       %Map:{ procedure:name %};
+    cmumpss:description {
+       cmumpss:identifier          xsd:string        %Map:{ procedure:description_id %};
+       rdfs:label                  xsd:string        %Map:{ procedure:description_label %};
+    }?;
+
+    cmumpss:dateReported           xsd:date or
+                                   xsd:dateTime or
+                                   xsd:datetime?     %Map:{ procedure:dateReported %};
+
+    cmumpss:provider {
+       cmumpss:identifier          xsd:string        %Map:{ procedure:provider_id %};
+       rdfs:label                  xsd:string        %Map:{ procedure:provider_label %};
+    }?;
+
+    cmumpss:source {
+       cmumpss:identifier          xsd:string        %Map:{ procedure:source_id %};
+       rdfs:label                  xsd:string        %Map:{ procedure:source_label %};
+    }?;
+
+    cmumpss:status {
+       cmumpss:identifier          xsd:string        %Map:{ procedure:status_id %};
+       rdfs:label                  xsd:string        %Map:{ procedure:status_label %};
+    }?;
+
+    cmumpss:verified               xsd:boolean?      %Map:{ procedure:verified %};
+}
