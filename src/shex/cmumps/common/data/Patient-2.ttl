@@ -37,14 +37,14 @@
     cmumps:emergency_contact-2 "RUNNAH, ROAD" ;
     cmumps:ephone-2 "555 555 5558" ;
     cmumps:erelationship-2 <http://hokukahu.com/systems/cmumps-1/8140-20> ;
-    cmumps:estate-2 <http://hokukahu.com/systems/cmumps-1/5-17> ;
+    cmumps:estate-2 <http://hokukahu.com/systems/cmumps-1/5-18> ;
     cmumps:estreet_address-1 "c/o Mel Blanc" ;
     cmumps:estreet_address-2 "7000 InternalTest Boulevard" ;
     cmumps:ezip-2 "55555" ;
     cmumps:fax_number-2 "555 555 5556" ;
     cmumps:fmp-2 <http://hokukahu.com/systems/cmumps-1/8110-20> ;
     cmumps:fmp_ssn-2 "20/777777777" ;
-    cmumps:geo_loc_of_ship_unit-2 <http://hokukahu.com/systems/cmumps-1/5-17> ;
+    cmumps:geo_loc_of_ship_unit-2 <http://hokukahu.com/systems/cmumps-1/5-19> ;
     cmumps:identifier "2-000007" ;
     cmumps:marital_status-2 <http://hokukahu.com/systems/cmumps-1/11-2> ;
     cmumps:medical_record_type-2 <http://hokukahu.com/systems/cmumps-1/2_03-1_000007> ;
@@ -98,6 +98,15 @@
 <http://hokukahu.com/systems/cmumps-1/40_8-4> rdfs:label "ANY HEALTH CLINIC" ;
     cmumps:identifier "40_8-4" .
 
+<http://hokukahu.com/systems/cmumps-1/5-17> rdfs:label "ILLINOIS" ;
+    cmumps:identifier "5-17" .
+
+<http://hokukahu.com/systems/cmumps-1/5-18> rdfs:label "NEW MEXICO" ;
+    cmumps:identifier "5-18" .
+
+<http://hokukahu.com/systems/cmumps-1/5-19> rdfs:label "MYSTATE" ;
+    cmumps:identifier "5-19" .
+
 <http://hokukahu.com/systems/cmumps-1/8104-97> rdfs:label "ANYRANK" ;
     cmumps:identifier "8104-97" .
 
@@ -121,10 +130,5 @@
 
 <http://hokukahu.com/systems/cmumps-1/44-100> rdfs:label "ANY HEALTH CLINIC" ;
     cmumps:identifier "44-100" .
-
-<http://hokukahu.com/systems/cmumps-1/5-17> rdfs:label "ILLINOIS",
-        "MYSTATE",
-        "NEW MEXICO" ;
-    cmumps:identifier "5-17" .
 
 

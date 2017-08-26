@@ -44,7 +44,7 @@
             "estreet_address-2" : "7000 InternalTest Boulevard",
             "ecity-2" : "ALBUQUERQUE",
             "estate-2" : {
-                "id" : "5-17",
+                "id" : "5-18",
                 "label" : "NEW MEXICO"
             },
             "ezip-2" : "55555",
@@ -68,7 +68,7 @@
             },
             "deers_address_updated-2": true,
             "geo_loc_of_ship_unit-2": {
-                "id": "5-17",
+                "id": "5-19",
                 "label": "MYSTATE"
             },
             "dob-2": {

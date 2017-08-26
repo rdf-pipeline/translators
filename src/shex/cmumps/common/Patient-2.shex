@@ -19,7 +19,7 @@ start=@<http://hokukahu.com/Patient-2>
     cmumpss:sex-2  {
        cmumpss:identifier                   xsd:string    %Map:{ patient:sex_id %};
        rdfs:label                           xsd:string    %Map:{ hashmap( patient:sex_label, {"FEMALE": "Female", "MALE": "Male", "OTHER": "Other"}) %};
-    };
+    }?;
 
     cmumpss:marital_status-2  {
        cmumpss:identifier                   xsd:string    %Map:{ patient:marital_status_id %};
