@@ -11,7 +11,9 @@ MATERIALIZE="${CWD}/../../../../../node_modules/shex/extensions/shex-map/bin/mat
 
 SOURCE=${1}
 TARGET=${2}
-ROOT=${3}
+NODE=${3}
+SHAPE=${4}
+ROOT=${5}
 
 SOURCE_SHEX="${CWD}/../../common/${SOURCE}.shex"
 SOURCE_DATA="${CWD}/../../common/data/${SOURCE}.ttl"
@@ -45,7 +47,7 @@ function verify_file_not_empty() {
   fi
 }
 
-VALIDATE_CMD="${VALIDATE} -d \"${SOURCE_DATA}\"  -x \"${SOURCE_SHEX}\" --regex-module \"nfax-val-1err\" > \"${VAL_FILE}\""
+VALIDATE_CMD="${VALIDATE} -d \"${SOURCE_DATA}\"  -x \"${SOURCE_SHEX}\" -n \"${NODE}\" -s \"${SHAPE}\" --regex-module \"nfax-val-1err\" > \"${VAL_FILE}\""
 echo "\nExecuting ${VALIDATE_CMD}"
 eval ${VALIDATE_CMD}
 if [ $? -ne 0 ]; then
