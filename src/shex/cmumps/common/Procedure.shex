@@ -17,7 +17,7 @@ start=@<http://hokukahu.com/Procedure>
        rdfs:label                  xsd:string        %Map:{ procedure:patient_label %};
     };
 
-    cmumpss:comment                xsd:string?       %Map:{ procedure:name %};
+    cmumpss:comment                xsd:string?       %Map:{ procedure:comment %};
     cmumpss:description {
        cmumpss:identifier          xsd:string        %Map:{ procedure:description_id %};
        rdfs:label                  xsd:string        %Map:{ procedure:description_label %};
