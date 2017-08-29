@@ -1,0 +1,22 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/5_8002-1> a chcs:Zip_Code-5_8002 ;
+    rdfs:label "00401" ;
+    chcs:city-5_8002 "PLEASANTVILLE" ;
+    chcs:chcs_type "chcss:Zip_Code-5_8002" ;
+    chcs:code-5_8002 "00401" ;
+    chcs:dba_inactive_flag-5_8002 "INACTIVE" ;
+    chcs:deactivation_date-5_8002 "1990-01-01"^^xsd:date ;
+    chcs:identifier "5_8002-1" ;
+    chcs:state-5_8002 <http://hokukahu.com/systems/chcs-1/5-36> .
+
+<http://hokukahu.com/systems/chcs-1/5-36> rdfs:label "NEW YORK" ;
+    chcs:identifier "5-36" .
+
+

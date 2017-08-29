@@ -1,0 +1,27 @@
+# Contains all the user defined antibiotic panel configurations. Antibiotic panels are 
+# used to determine the specific antibiotics that will be reported by organism identification 
+# and/or Site/Specimen.
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Antibiotic_Panel_File-8728.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/medications/Map/#>
+PREFIX medication: <urn:local:medication:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Antibiotic_Panel_File-8728>
+
+<http://hokukahu.com/chcs/Antibiotic_Panel_File-8728> {
+    chcss:identifier                    xsd:string        %Map:{ medication:id %};
+    chcss:chcs_type                     xsd:string?       %Map:{ medication:chcs_type %};
+    rdfs:label                          xsd:string        %Map:{ medication:label %};
+
+    chcss:antibiotic_panel-8728         xsd:string        %Map:{ medication:antibiotic_panel %};
+    chcss:default_antibiotics-8728 { 
+        chcss:identifier                xsd:string        %Map:{ medication:default_antibiotics_id %};
+        rdfs:label                      xsd:string        %Map:{ medication:default_antibiotics_label %};
+    }*;
+}

@@ -1,0 +1,48 @@
+# This schema contains the Classification Codes from the Intl' Classification of Diseases
+# and Diagnosis (ICD), Current Procedural Terminology (CPT), Diagnostic and 
+# Statistical Manual of Mental Disorders (DSM), Systematic Nomenclature of 
+# Medicine (SNOMED), North American Nursing Diagnosis Association (NANDA), 
+# Nursing Interventions (NIC), Omaha Nursing Diagnosis Set (OMA), AI/Rheum
+# National Library of Medicine (AIR), American College of Radiology - Radiology
+# Diagnosis (ACR), Computer Stored Ambulatory Records Term File (COSTAR), 
+# Coding Symbol Thesaurus, Adverse Reaction Terms (COSTART), National Institute 
+# of Health, Thesaurus (CRISP), Diagnostic Prompting System (DXPLAIN), 
+# McMaster University List of Epidemiology Terms (MCM) and the Universal 
+# Medical Device Nomenclature System (UMD).
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Codes-757_02.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX conditionCategory: <urn:local:condition-category:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Codes-757_02>
+
+<http://hokukahu.com/chcs/Codes-757_02> {
+    chcss:identifier               xsd:string       %Map:{ conditionCategory:id %};
+    chcss:chcs_type                xsd:string?      %Map:{ conditionCategory:chcs_type %};
+    rdfs:label                     xsd:string       %Map:{ conditionCategory:label %};
+
+    chcss:code-757_02              xsd:string       %Map:{ conditionCategory:code %};
+
+    chcss:expression-757_02 {
+       chcss:identifier   xsd:string    %Map:{ conditionCategory:expression_id %};
+       rdfs:label         xsd:string    %Map:{ conditionCategory:expression_label %};
+    };
+
+    chcss:classification_source-757_02 {
+       chcss:identifier   xsd:string    %Map:{ conditionCategory:classification_source_id %};
+       rdfs:label         xsd:string    %Map:{ conditionCategory:classification_source_label %};
+    };
+
+    chcss:major_concept-757_02 {
+       chcss:identifier   xsd:string    %Map:{ conditionCategory:major_concept_id %};
+       rdfs:label         xsd:string    %Map:{ conditionCategory:major_concept_label %};
+    };
+
+    chcss:preference_flag-757_02   xsd:string?     %Map:{ conditionCategory:preference_flag %};
+}

@@ -1,0 +1,25 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/42_2-.5> a chcs:Discharge_Type-42_2 ;
+    rdfs:label "CANCELLED ADMISSION" ;
+    chcs:activation_inactivation_date-42_2 <http://hokukahu.com/systems/chcs-1/42_21-1_.5> ;
+    chcs:active-42_2 "ACTIVE" ;
+    chcs:chcs_type "chcss:Discharge_Type-42_2" ;
+    chcs:code-42_2 "53" ;
+    chcs:identifier "42_2-.5" ;
+    chcs:internal_service_code-42_2 "124" ;
+    chcs:name-42_2 "CANCELLED ADMISSION" .
+
+<http://hokukahu.com/systems/chcs-1/42_21-1_.5> a chcs:Activation_Inactivation_Date-42_21 ;
+    chcs:activation_inactivation_date-42_21 "1990-01-01"^^xsd:date ;
+    chcs:active_inactive_status-42_21 "ACTIVE" ;
+    chcs:chcs_type "chcss:Activation_Inactivation_Date-42_21" ;
+    chcs:identifier "42_21-1_.5" .
+
+

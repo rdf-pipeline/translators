@@ -1,0 +1,138 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix ns2: <http://datasets.caregraf.org/fms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/50-1> a chcs:Drug-50 ;
+    rdfs:label "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG " ;
+    chcs:associated_formulary-50 <http://hokukahu.com/systems/chcs-1/50_3-1_1> ;
+    chcs:calc_unit-50 "MG" ;
+    chcs:chcs_type "chcss:Drug-50" ;
+    chcs:content_unit-50 "MG" ;
+    chcs:dea_special_hdlg-50 "9" ;
+    chcs:default_unit-50 "TABLET" ;
+    chcs:divisible-50 "HALVES" ;
+    chcs:dosage_strength-50 "325" ;
+    chcs:drug_check_date-50 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcs:drug_check_disable-50 "ALL ENABLED" ;
+    chcs:drug_check_user-50 <http://hokukahu.com/systems/chcs-1/3-7565> ;
+    chcs:drugroute_form-50 "PO TAB" ;
+    chcs:edited-50 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcs:editor-50 <http://hokukahu.com/systems/chcs-1/3-97574> ;
+    chcs:form-50 <http://hokukahu.com/systems/chcs-1/51_6-59> ;
+    chcs:identifier "50-1" ;
+    chcs:injectable-50 "NOT INJECTABLE" ;
+    chcs:label_print_name-50 "ACETAMINOPHEN 325MG TABLET" ;
+    chcs:name-50 "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG " ;
+    chcs:ndc_invalid-50 "Valid NDC" ;
+    chcs:primary_ndc_number-50 <http://hokukahu.com/systems/chcs-1/8252-50580049660> ;
+    chcs:route-50 <http://hokukahu.com/systems/chcs-1/51_5-12> ;
+    chcs:sig_codes-50 <http://hokukahu.com/systems/chcs-1/50_15-1_1> ;
+    chcs:synonym-50 <http://hokukahu.com/systems/chcs-1/50_1-10_1>,
+        <http://hokukahu.com/systems/chcs-1/50_1-11_1>,
+        <http://hokukahu.com/systems/chcs-1/50_1-12_1>,
+        <http://hokukahu.com/systems/chcs-1/50_1-13_1>,
+        <http://hokukahu.com/systems/chcs-1/50_1-14_1>,
+        <http://hokukahu.com/systems/chcs-1/50_1-15_1>,
+        <http://hokukahu.com/systems/chcs-1/50_1-8_1>,
+        <http://hokukahu.com/systems/chcs-1/50_1-9_1> .
+
+<http://hokukahu.com/systems/chcs-1/3-7565> rdfs:label "HOOPESXXX,COBALT" ;
+    chcs:identifier "3-7565" .
+
+<http://hokukahu.com/systems/chcs-1/3-97574> rdfs:label "HULSEXXX,JADE" ;
+    chcs:identifier "3-97574" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-10_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-10_1" ;
+    chcs:intended_use-50_1 "QUICK CODE" ;
+    chcs:synonym-50_1 "TYL325" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-11_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-11_1" ;
+    chcs:intended_use-50_1 "QUICK CODE" ;
+    chcs:synonym-50_1 "T325" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-12_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-12_1" ;
+    chcs:intended_use-50_1 "QUICK CODE" ;
+    chcs:synonym-50_1 "ACE325" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-13_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-13_1" ;
+    chcs:synonym-50_1 "analgesics/antipyretic,misc" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-14_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-14_1" ;
+    chcs:intended_use-50_1 "QUICK CODE" ;
+    chcs:synonym-50_1 "par1" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-15_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-15_1" ;
+    chcs:synonym-50_1 "TYLENOL" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-8_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-8_1" ;
+    chcs:intended_use-50_1 "QUICK CODE" ;
+    chcs:synonym-50_1 "OTC6" .
+
+<http://hokukahu.com/systems/chcs-1/50_1-9_1> a chcs:Synonym-50_1 ;
+    chcs:chcs_type "chcss:Synonym-50_1" ;
+    chcs:identifier "50_1-9_1" ;
+    chcs:intended_use-50_1 "QUICK CODE" ;
+    chcs:synonym-50_1 "RTS" .
+
+<http://hokukahu.com/systems/chcs-1/50_15-1_1> a chcs:Sig_CodeS-50_15 ;
+    chcs:chcs_type "chcss:Sig_CodeS-50_15" ;
+    chcs:identifier "50_15-1_1" ;
+    chcs:sig-50_15 "T 1-2 PO QID PRN FP" ;
+    chcs:sig_codes-50_15 "MJ" .
+
+<http://hokukahu.com/systems/chcs-1/50_3-1_1> a chcs:Associated_Formulary-50_3 ;
+    chcs:associated_formulary-50_3 <http://hokukahu.com/systems/chcs-1/59_3-1> ;
+    chcs:chcs_type "chcss:Associated_Formulary-50_3" ;
+    chcs:continuable-50_3 true ;
+    chcs:default_days_supply-50_3 "3" ;
+    chcs:default_expiration-50_3 "365" ;
+    chcs:default_quantity-50_3 "50" ;
+    chcs:default_sig-50_3 "TAKE 1 TAB PO Q6H PRN headache/fever/pain or as directed" ;
+    chcs:identifier "50_3-1_1" ;
+    chcs:inpatient_order_duration-50_3 "100" ;
+    chcs:ip_op_indicator-50_3 "BOTH" ;
+    chcs:local_cost-50_3 ".03" ;
+    chcs:local_pdts_cost_switch-50_3 "PDTS" ;
+    chcs:maximum_days_supply-50_3 "30" ;
+    chcs:maximum_quantity-50_3 "50" ;
+    chcs:message-50_3 "**OTC HANDOUT**" ;
+    chcs:nonformulary-50_3 "FORMULARY" ;
+    chcs:pdts_unit_cost-50_3 ".0034" ;
+    chcs:replenish_on_request-50_3 "NO" ;
+    chcs:warning_label-50_3 "8" .
+
+<http://hokukahu.com/systems/chcs-1/51_5-12> rdfs:label "PO" ;
+    chcs:identifier "51_5-12" .
+
+<http://hokukahu.com/systems/chcs-1/51_6-59> rdfs:label "TAB" ;
+    chcs:identifier "51_6-59" .
+
+<http://hokukahu.com/systems/chcs-1/59_3-1> rdfs:label "FIRST FORMULARY GROUP" ;
+    chcs:identifier "59_3-1" .
+
+<http://hokukahu.com/systems/chcs-1/8252-50580049660> rdfs:label "ACETAMINOPHEN" ;
+    ns2:sameAsLabel "TYLENOL 325 MG TABLET" ;
+    chcs:identifier "8252-50580049660" ;
+    ns1:sameAs <http://hokukahu.com/schema/ndc#50580049660> .
+
+

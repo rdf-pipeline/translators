@@ -1,0 +1,42 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/44-.5> a chcs:Hospital_Location-44 ;
+    rdfs:label "QUARTERS" ;
+    chcs:abbreviation-44 "QTRS" ;
+    chcs:access_to_care_reporting-44 true ;
+    chcs:activation_status-44 "NOT ACTIVATED" ;
+    chcs:city-44 "LA LA LAND" ;
+    chcs:chcs_type "chcss:Hospital_Location-44" ;
+    chcs:dba_inactive_flag-44 "INACTIVE" ;
+    chcs:deactivation_date-44 "1990-01-01"^^xsd:date ;
+    chcs:division-44 <http://hokukahu.com/systems/chcs-1/40_8-1> ;
+    chcs:identifier "44-.5" ;
+    chcs:location_type-44 "WARD" ;
+    chcs:meprs_code-44 <http://hokukahu.com/systems/chcs-1/8119-386> ;
+    chcs:mtf-44 <http://hokukahu.com/systems/chcs-1/1-1234> ;
+    chcs:name-44 "QUARTERS" ;
+    chcs:state-44 <http://hokukahu.com/systems/chcs-1/5-17> ;
+    chcs:zip-44 <http://hokukahu.com/systems/chcs-1/5_8002-26489> .
+
+<http://hokukahu.com/systems/chcs-1/1-1234> rdfs:label "LA LA LAND IL" ;
+    chcs:identifier "1-1234" .
+
+<http://hokukahu.com/systems/chcs-1/40_8-1> rdfs:label "LA LA LAND, 200H" ;
+    chcs:identifier "40_8-1" .
+
+<http://hokukahu.com/systems/chcs-1/5-17> rdfs:label "ILLINOIS" ;
+    chcs:identifier "5-17" .
+
+<http://hokukahu.com/systems/chcs-1/5_8002-26489> rdfs:label "60088" ;
+    chcs:identifier "5_8002-26489" .
+
+<http://hokukahu.com/systems/chcs-1/8119-386> rdfs:label "FCDA" ;
+    chcs:identifier "8119-386" .
+
+

@@ -1,0 +1,16 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/39_9-1> a chcs:Ancillary_Tracking-39_9 ;
+    rdfs:label "PAD" ;
+    chcs:chcs_type "chcss:Ancillary_Tracking-39_9" ;
+    chcs:description-39_9 "Patient Administration" ;
+    chcs:identifier "39_9-1" ;
+    chcs:name-39_9 "PAD" .
+
+

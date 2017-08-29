@@ -1,0 +1,27 @@
+# This schema contains a table of codes and descriptions for all family member prefixes.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Family_Member_Prefix-8110.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX fmp: <urn:local:fmp:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Family_Member_Prefix-8110>
+
+<http://hokukahu.com/chcs/Family_Member_Prefix-8110> {
+    chcss:identifier               xsd:string       %Map:{ fmp:id %};
+    chcss:chcs_type                xsd:string?      %Map:{ fmp:chcs_type %};
+    rdfs:label                     xsd:string       %Map:{ fmp:label %};
+
+    chcss:fmp-8110                 xsd:string       %Map:{ fmp:family_member_prefix %};
+    chcss:description-8110         xsd:string       %Map:{ fmp:description %};
+
+    chcss:dba_inactive_flag-8110   xsd:string?      %Map:{ fmp:dba_inactive_flag %};
+    chcss:deactivation_date-8110   xsd:date or
+                                   xsd:dateTime or
+                                   xsd:datetime?    %Map:{ fmp:deactivation_date %};
+}

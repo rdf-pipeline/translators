@@ -1,0 +1,22 @@
+# This schema is the FDB Dim table that contains the definition of DDI Severity Levels.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Fdb_Ddi_Severity_Level-8253_045.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX fdsl: <urn:local:fdsl:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Fdb_Ddi_Severity_Level-8253_045>
+
+<http://hokukahu.com/chcs/Fdb_Ddi_Severity_Level-8253_045> {
+    chcss:identifier            xsd:string     %Map:{ fdsl:id %};
+    chcss:chcs_type             xsd:string?    %Map:{ fdsl:chcs_type %};
+    rdfs:label                  xsd:string     %Map:{ fdsl:label %};
+
+    chcss:dimslbtxt-8253_045    xsd:string     %Map:{ fdsl:dimslbtxt %};
+    chcss:dimsltext-8253_045    xsd:string*    %Map:{ fdsl:dimsltext %};
+}

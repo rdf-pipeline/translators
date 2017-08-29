@@ -1,0 +1,21 @@
+# This schema holds the ancillary three character code and it's description
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Ancillary_Tracking-39_9.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/procedures/Map/#>
+PREFIX tracking: <urn:local:tracking:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Ancillary_Tracking-39_9>
+
+<http://hokukahu.com/chcs/Ancillary_Tracking-39_9> {
+    chcss:identifier          xsd:string     %Map:{ tracking:id %};
+    chcss:chcs_type           xsd:string?    %Map:{ tracking:chcs_type %};
+    rdfs:label                xsd:string     %Map:{ tracking:label %};
+    chcss:name-39_9           xsd:string     %Map:{ tracking:name %};
+    chcss:description-39_9    xsd:string     %Map:{ tracking:description %};
+}

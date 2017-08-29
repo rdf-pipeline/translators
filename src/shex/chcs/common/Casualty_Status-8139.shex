@@ -1,0 +1,28 @@
+# This schema contains the codes that describe the casualty status of the patient.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Casualty_Status-8139.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX casualtyStatus: <urn:local:casualtyStatus:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Casualty_Status-8139>
+
+<http://hokukahu.com/chcs/Casualty_Status-8139> {
+    chcss:identifier                xsd:string       %Map:{ casualtyStatus:id %};
+    chcss:chcs_type                 xsd:string?      %Map:{ casualtyStatus:chcs_type %};
+    rdfs:label                      xsd:string       %Map:{ casualtyStatus:label %};
+
+    chcss:name-8139                 xsd:string       %Map:{ casualtyStatus:name %};
+    chcss:code-8139                 xsd:string       %Map:{ casualtyStatus:code %};
+
+    chcss:dba_inactive_flag-8139    xsd:string?      %Map:{ casualtyStatus:dba_inactive_flag %};
+
+    chcss:deactivation_date-8139    xsd:date or
+                                    xsd:dateTime or
+                                    xsd:datetime?    %Map:{ casualtyStatus:deactivation_date %};
+}

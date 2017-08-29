@@ -1,0 +1,21 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/8137-2> a chcs:Cause_Of_Injury-8137 ;
+    rdfs:label "001" ;
+    chcs:category-8137 <http://hokukahu.com/systems/chcs-1/8145-1> ;
+    chcs:chcs_type "chcss:Cause_Of_Injury-8137" ;
+    chcs:code-8137 "001" ;
+    chcs:description-8137 "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Take-off from or landing on aircraft carrier (includes taxiing)." ;
+    chcs:identifier "8137-2" ;
+    chcs:name-8137 "AIR ACCIDENT, FIXED-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER" .
+
+<http://hokukahu.com/systems/chcs-1/8145-1> rdfs:label "I" ;
+    chcs:identifier "8145-1" .
+
+

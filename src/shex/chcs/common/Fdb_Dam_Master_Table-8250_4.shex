@@ -1,0 +1,36 @@
+# This schema holds the FDB DAM Master table.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Fdb_Dam_Master_Table-8250_4.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX fdmt: <urn:local:fdmt:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Fdb_Dam_Master_Table-8250_4>
+
+<http://hokukahu.com/chcs/Fdb_Dam_Master_Table-8250_4> {
+    chcss:identifier                xsd:string        %Map:{ fdmt:id %};
+    chcss:chcs_type                 xsd:string?       %Map:{ fdmt:chcs_type %};
+    rdfs:label                      xsd:string        %Map:{ fdmt:label %};
+
+    chcss:hic-8250_4                xsd:string       %Map:{ fdmt:hic %};
+
+    chcss:dacsp-8250_4 {
+        chcss:identifier             xsd:string        %Map:{ fdmt:dacsp_id %};
+        chcss:chcs_type              xsd:string?       %Map:{ fdmt:dacsp_type %};
+
+        chcss:dacsp-8250_41 {
+            chcss:identifier         xsd:string        %Map:{ fdmt:allergy_specific_id %};
+            rdfs:label               xsd:string        %Map:{ fdmt:allergy_specific_label %};
+        };
+
+        chcss:daccs-8250_41 {
+            chcss:identifier         xsd:string        %Map:{ fdmt:allergy_group_code_id %};
+            rdfs:label               xsd:string        %Map:{ fdmt:allergy_group_code_label %};
+        };
+    }*;
+}

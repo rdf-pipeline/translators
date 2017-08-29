@@ -1,0 +1,50 @@
+# This schema described a medical procedure performed by a provider ona patient.
+# The data for this schema did not come from the chcs-nc schema - it was from ahlta.
+# As a result, we do not have the usual endpoint documentation available. 
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX procedure: <urn:local:procedure:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Procedure>
+
+<http://hokukahu.com/chcs/Procedure> {
+    chcss:identifier             xsd:string        %Map:{ procedure:id %};
+    chcss:chcs_type              xsd:string?       %Map:{ procedure:chcs_type %};
+    rdfs:label                   xsd:string        %Map:{ procedure:label %};
+
+    chcss:patient {
+       chcss:identifier          xsd:string        %Map:{ procedure:patient_id %};
+       rdfs:label                xsd:string        %Map:{ procedure:patient_label %};
+    };
+
+    chcss:comment                xsd:string?       %Map:{ procedure:comment %};
+    chcss:description {
+       chcss:identifier          xsd:string        %Map:{ procedure:description_id %};
+       rdfs:label                xsd:string        %Map:{ procedure:description_label %};
+    }?;
+
+    chcss:dateReported           xsd:date or
+                                 xsd:dateTime or
+                                 xsd:datetime?     %Map:{ procedure:dateReported %};
+
+    chcss:provider {
+       chcss:identifier          xsd:string        %Map:{ procedure:provider_id %};
+       rdfs:label                xsd:string        %Map:{ procedure:provider_label %};
+    }?;
+
+    chcss:source {
+       chcss:identifier          xsd:string        %Map:{ procedure:source_id %};
+       rdfs:label                xsd:string        %Map:{ procedure:source_label %};
+    }?;
+
+    chcss:status {
+       chcss:identifier          xsd:string        %Map:{ procedure:status_id %};
+       rdfs:label                xsd:string        %Map:{ procedure:status_label %};
+    }?;
+
+    chcss:verified               xsd:boolean?      %Map:{ procedure:verified %};
+}

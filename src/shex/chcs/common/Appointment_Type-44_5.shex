@@ -1,0 +1,31 @@
+# This schema contains the appointment types. It is customized by each MTF to contain 
+# the appointment types used at each facility. 
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Appointment_Type-44_5.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/appointments/Map/#>
+PREFIX appointment: <urn:local:appointment:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Appointment_Type-44_5>
+
+<http://hokukahu.com/chcs/Appointment_Type-44_5> {
+    chcss:identifier                        xsd:string     %Map:{ appointment:id %};
+    chcss:chcs_type                         xsd:string?    %Map:{ appointment:chcs_type %};
+    rdfs:label                              xsd:string     %Map:{ appointment:label %};
+
+    chcss:name-44_5                         xsd:string     %Map:{ appointment:type_name %};
+    chcss:description-44_5                  xsd:string     %Map:{ appointment:type_description %};
+
+    chcss:are_appt_slots_searchable-44_5    xsd:boolean    %Map:{ appointment:are_appt_slots_searchable %};
+
+    chcss:status-44_5                       xsd:string     %Map:{ appointment:type_status %};
+    chcss:category-44_5                     xsd:string     %Map:{ appointment:type_category %};
+
+    chcss:medical_appointment_type-44_5     xsd:boolean    %Map:{ appointment:medical_appointment_type %};
+    chcss:nonmedical_appointment_type-44_5  xsd:boolean    %Map:{ appointment:nonmedical_appointment_type %};
+}

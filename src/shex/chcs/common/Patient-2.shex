@@ -1,0 +1,460 @@
+# This schema contains patient demographic data and pointers to medical data about the patient
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Patient-2.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX patient:<urn:local:patient:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Patient-2>
+
+<http://hokukahu.com/chcs/Patient-2> {
+    chcss:identifier                    xsd:string     %Map:{ patient:id %};
+    chcss:chcs_type                     xsd:string?    %Map:{ patient:type %};
+    rdfs:label                          xsd:string     %Map:{ patient:patient_label %};
+
+    chcss:name-2                        xsd:string    %Map:{ regex(/"(?<patient:family>[a-zA-Z'\\-]+), (?<patient:given>[a-zA-Z'\\-\\s]+)"/) %};
+    chcss:alias-2                       xsd:string?    %Map:{ patient:alias %};
+
+    chcss:sex-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:sex_id %};
+       rdfs:label                         xsd:string    %Map:{ hashmap( patient:sex_label, {"FEMALE": "Female", "MALE": "Male", "OTHER": "Other"}) %};
+    }?;
+
+    chcss:marital_status-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:marital_status_id %};
+       rdfs:label                         xsd:string?   %Map:{ hashmap( patient:marital_status_label, {"DIVORCED": "D", "MARRIED": "M", "SINGLE,NEVER MARRIED": "S", "UNKNOWN": "UNK"}) %};
+    };
+
+    chcss:race-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:race_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:race_label %};
+    }?;
+
+    chcss:dob-2                           xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:dob %};
+    chcss:age_range_category-2            xsd:string?    %Map:{ patient:age_range_category %};
+
+    chcss:employment_status-2             xsd:string?   %Map:{ patient:employment_status %};
+    chcss:pcn_flag-2                      xsd:string?   %Map:{ patient:pcn_flag %};
+    chcss:occupation-2                    xsd:string?   %Map:{ patient:occupation %};
+    chcss:religion-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:religion_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:religion_label %};
+    }?;
+
+    chcss:fmp_ssn-2                       xsd:string?   %Map:{ patient:fmp_ssn %};
+    chcss:fmp-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:fmp_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:fmp_label %};
+    }?;
+    chcss:sponsor_name-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:sponsor_name_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:sponsor_name_label %};
+    }?;
+
+    chcss:patient_ssn-2                   xsd:string?   %Map:{ patient:patient_ssn %};
+    chcss:ssn-2                           xsd:string?   %Map:{ patient:ssn %};
+    chcss:dod_id-2                        xsd:string?   %Map:{ patient:dod_id %};
+    chcss:dod_id_number-2                 xsd:string?   %Map:{ patient:dod_id_number %};
+
+    chcss:street_address-2                xsd:string?   %Map:{ patient:street_address %};
+    chcss:street_address-2-2              xsd:string?   %Map:{ patient:street_address_2 %};
+    chcss:street_address-3-2              xsd:string?   %Map:{ patient:street_address_3 %};
+    chcss:city-2                          xsd:string?   %Map:{ patient:city %};
+    chcss:county-2                        xsd:string?   %Map:{ patient:county %};
+    chcss:zip_code-2                      xsd:string?   %Map:{ patient:zipcode %};
+    chcss:state-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:state_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:state_label %};
+    }?;
+
+    chcss:contact_preference-2            xsd:boolean?   %Map:{ patient:contact_preference %};
+    chcss:preferred_contact_method-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:preferred_contact_method_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:preferred_contact_method_label %};
+    }?;
+
+    chcss:military_grade_rank-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:military_grade_rank_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:military_grade_rank_label %};
+    }?;
+    chcss:military_id_card_number-2       xsd:string?   %Map:{ patient:military_id_card_number %};
+    chcss:military_duty_station_unit-2    xsd:string?   %Map:{ patient:military_duty_station_unit %};
+    chcss:military_flying_status-2        xsd:boolean?  %Map:{ patient:military_flying_status %};
+    chcss:military_id_expiration_date-2   xsd:string?   %Map:{ patient:military_id_expiration_date %};
+    chcss:military_occupation_code-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:military_occupation_code_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:military_occupation_code_label %};
+    }?;
+    chcss:military_theater_operations-2 {
+       chcss:identifier                   xsd:string    %Map:{ patient:military_theater_operations_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:military_theater_operations_label %};
+    }?;
+
+    chcss:military_street_address-2       xsd:string?   %Map:{ patient:military_street_address %};
+    chcss:military_street_address-2-2     xsd:string?   %Map:{ patient:military_street_address_2 %};
+    chcss:military_street_address-3-2     xsd:string?   %Map:{ patient:military_street_address_3 %};
+    chcss:military_city-2                 xsd:string?   %Map:{ patient:military_city %};
+    chcss:military_state-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:military_state_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:military_state_label %};
+    }?;
+    chcss:military_zip_code-2             xsd:string?   %Map:{ patient:military_zipcode %};
+
+    chcss:temporary_address_1-2           xsd:string?   %Map:{ patient:temporary_address %};
+    chcss:temporary_address_2-2           xsd:string?   %Map:{ patient:temporary_address_2 %};
+    chcss:temporary_city-2                xsd:string?   %Map:{ patient:temporary_city %};
+    chcss:temporary_zip_code-2            xsd:string?   %Map:{ patient:temporary_zipcode %};
+    chcss:temporary_state-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:temporary_state_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:temporary_state_label %};
+    }?;
+    chcss:temporary_contact_eff_until-2   xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime? %Map:{ patient:temporary_contact_eff_until %};
+    chcss:temporary_contact_reason-2      xsd:string?   %Map:{ patient:temporary_contact_reason %};
+
+    chcss:phone-2                         xsd:string?   %Map:{ patient:phone %};
+    chcss:cell_phone-2                    xsd:string?   %Map:{ patient:cell_phone %};
+    chcss:dsn-2                           xsd:string?   %Map:{ patient:dsn %};
+    chcss:office_phone-2                  xsd:string?   %Map:{ patient:office_phone %};
+    chcss:temporary_phone-2               xsd:string?   %Map:{ patient:temporary_phone %};
+    chcss:fax_number-2                    xsd:string?   %Map:{ patient:fax_number %};
+
+    chcss:pob_city-2                      xsd:string?   %Map:{ patient:pob_city %};
+    chcss:pob_state-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:pob_state_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:pob_state_label %};
+    }?;
+
+    chcss:email_address-2                 xsd:string?   %Map:{ patient:email_address %};
+
+    chcss:remarks-2                       xsd:string?   %Map:{ patient:remark %};
+
+    chcss:registration_comment-2          xsd:string?   %Map:{ patient:registration_comment %};
+    chcss:registration_location-2         xsd:string?   %Map:{ patient:registration_location %};
+    chcss:registration_verified-2         xsd:boolean?  %Map:{ patient:registration_verified %};
+    chcss:registration_verified_by-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:registration_verified_by_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:registration_verified_by_label %};
+    }?;
+    chcss:registration_verified_by_pad-2  xsd:boolean?  %Map:{ patient:registration_verified_by_pad %};
+    chcss:registration_verified_rep-2     xsd:boolean?  %Map:{ patient:registration_verified_rep %};
+    chcss:registration_type-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:registration_type_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:registration_type_label %};
+    }?;
+    chcss:registration_verified_date-2    xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:registration_verified_datee %};
+    chcss:verified_by_pad_person-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:verified_by_pad_person_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:verified_by_pad_person_label %};
+    }?;
+    chcss:verified_by_pad_date_time-2     xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:verified_by_pad_date_time %};
+
+    chcss:dstreet_address-2               xsd:string?   %Map:{ patient:dstreet_address_2 %};
+    chcss:dcity-2                         xsd:string?   %Map:{ patient:dcity %};
+    chcss:dstate-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:dstate_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:dstate_label %};
+    }?;
+    chcss:dzip-2                          xsd:string?   %Map:{ patient:dzip %};
+
+    chcss:is_econtact_same_as_next_of_kin-2  xsd:boolean?  %Map:{ patient:is_econtact_the_next_of_kin %};
+    chcss:emergency_contact-2             xsd:string?   %Map:{ patient:emergency_contact %};
+    chcss:ephone-2                        xsd:string?   %Map:{ patient:ephone %};
+    chcss:estreet_address-2               xsd:string?   %Map:{ patient:estreet_address_2 %};
+    chcss:ecity-2                         xsd:string?   %Map:{ patient:ecity %};
+    chcss:estate-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:estate_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:estate_label %};
+    }?;
+    chcss:ezip-2                          xsd:string?   %Map:{ patient:ezip %};
+    chcss:erelationship-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:erelationship_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:erelationship_label %};
+    }?;
+
+    chcss:next_of_kin-2                   xsd:string?   %Map:{ patient:next_of_kin %};
+    chcss:is_kaddress_same_as_patients-2  xsd:boolean?  %Map:{ patient:is_kaddress_same_as_patients %};
+    chcss:nok_relationship-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:nok_relationship_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:nok_relationship_label %};
+    }?;
+    chcss:nokstreet_address-2             xsd:string?   %Map:{ patient:nok_street_address %};
+    chcss:nokstreet_address-2-2           xsd:string?   %Map:{ patient:nok_street_address_2 %};
+    chcss:nokstreet_address-3-2           xsd:string?   %Map:{ patient:nok_street_address_3 %};
+    chcss:nokcity-2                       xsd:string?   %Map:{ patient:nok_city %};
+    chcss:nokzip-2                        xsd:string?   %Map:{ patient:nok_zipcode %};
+    chcss:nokstate-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:nok_state_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:nok_state_label %};
+    }?;
+
+
+    chcss:branch_of_service_last-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:branch_of_service_last_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:branch_of_service_last_label %};
+    }?;
+
+    chcss:length_of_service-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:length_of_service_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:length_of_service_label %};
+    }?;
+
+    chcss:return_location-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:return_location_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:return_location_label %};
+    }?;
+
+    chcss:outpatient_record_location-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:outpatient_record_location_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:outpatient_record_location_label %};
+    }?;
+
+    chcss:deers_address_updated-2         xsd:boolean?  %Map:{ patient:deers_address_updated %};
+    chcss:deers_address_updated-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:deers_address_updated_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:deers_address_updated_label %};
+    }?;
+
+    chcss:deers_discrepancy_code-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:deers_discrepancy_code_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:deers_discrepancy_code_label %};
+    }?;
+    chcss:deers_address_update_date-2     xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:deers_address_update_date %};
+
+    chcss:address_update_date-2           xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:address_update_date %};
+
+    chcss:active_duty-2                   xsd:boolean?  %Map:{ patient:active_duty %};
+    chcss:advance_directive-2             xsd:boolean?  %Map:{ patient:advance_directive %};
+    chcss:on_medical_hold-2               xsd:boolean?  %Map:{ patient:on_medical_hold %};
+    chcss:ron_status-2                    xsd:boolean?  %Map:{ patient:ron_status %};
+
+    chcss:on_absence-2                    xsd:boolean?  %Map:{ patient:on_absence %};
+    chcss:absent_status-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:absent_status_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:absent_status_label %};
+    }?;
+
+    chcss:advance_directive-2             xsd:boolean?  %Map:{ patient:advance_directive %};
+    chcss:advance_directive_other_loc-2   xsd:string?   %Map:{ patient:advance_directive_other_loc %};
+    chcss:advance_directive_location-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:advance_directive_location_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:advance_directive_location_label %};
+    }?;
+    chcss:advance_directive_eff_date-2    xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:advance_directive_eff_date %};
+
+    chcss:geo_loc_of_ship_unit-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:geo_loc_of_ship_unit_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:geo_loc_of_ship_unit_label %};
+    }?;
+
+    chcss:unit_ship_id-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:unit_ship_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:unit_ship_label %};
+    }?;
+
+    chcss:deers_uic-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:deers_uic_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:deers_uic_label %};
+    }?;
+
+    chcss:user_altering_patient_record-2 {
+        chcss:identifier                  xsd:string    %Map:{ patient:user_altering_patient_record_id %};
+        chcss:chcs_type                   xsd:string?   %Map:{ patient:user_altering_patient_record_type %};
+        rdfs:label                        xsd:string    %Map:{ patient:user_altering_patient_record_label %};
+
+        chcss:user_altering_patient_record-2_4  {
+           chcss:identifier                   xsd:string    %Map:{ patient:user_alt_patient_rec_id %};
+           rdfs:label                         xsd:string    %Map:{ patient:user_alt_patient_rec_label %};
+        }?;
+        chcss:modified_date_time-2_4      xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:user_altering_patient_record_modified_date_time %};
+    }*;
+
+    chcss:patient_category-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:patient_category_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:patient_category_label %};
+    }?;
+
+    chcss:organ_donor-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:organ_donor_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:organ_donor_label %};
+    }?;
+    chcss:organ_donor_date-2              xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:organ_donor_date %};
+
+    chcss:date_of_death-2                 xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:date_of_death %};
+
+    chcss:medical_record_type-2 {
+        chcss:identifier                  xsd:string     %Map:{ patient:medical_record_id %};
+        chcss:chcs_type                   xsd:string?    %Map:{ patient:medical_record_type %};
+        rdfs:label                        xsd:string     %Map:{ patient:medical_record_label %};
+
+        chcss:type-2_03  {
+           chcss:identifier               xsd:string    %Map:{ patient:med_rec_type_id %};
+           rdfs:label                     xsd:string    %Map:{ patient:med_rec_type_label %};
+        }?;
+
+        chcss:record_room-2_03 {
+            chcss:identifier              xsd:string     %Map:{ patient:record_room_id %};
+            rdfs:label                    xsd:string     %Map:{ patient:record_room_label %};
+        }?;
+    }*;
+
+    chcss:who_entered_patient-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:who_entered_patient_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:who_entered_patient_label %};
+    }?;
+    chcss:date_entered_into_file-2        xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:date_entered_into_file %};
+
+    chcss:registration_incomplete-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:registration_incomplete_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:registration_incomplete_label %};
+    }?;
+
+    chcss:correct_patient-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:correct_patient_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:correct_patient_label %};
+    }?;
+
+    chcss:id_duplicate_by-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:id_duplicate_by_id %};
+       rdfs:label                           xsd:string    %Map:{ patient:id_duplicate_by_label %};
+    }?;
+    chcss:id_duplicate_date_time-2        xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:id_duplicate_date_time %};
+
+    chcss:archive_action_flag-2           xsd:string?   %Map:{ patient:archive_action_flag %};
+
+    chcss:merged_by-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:merged_by_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:merged_by_label %};
+    }?;
+    chcss:merge_date_time-2               xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:merge_date_time %};
+
+    chcss:command_interest_category-2 {
+        chcss:identifier                  xsd:string    %Map:{ patient:command_interest_category_id %};
+        rdfs:label                        xsd:string    %Map:{ patient:command_interest_category_label %};
+        chcss:command_interest_category-2_13 {
+           chcss:identifier               xsd:string    %Map:{ patient:cmd_interest_category_id %};
+           rdfs:label                     xsd:string    %Map:{ patient:cmd_interest_category_label %};
+        }?;
+        chcss:jpta_inpat_processing_date-2_13  xsd:date or 
+                                               xsd:dateTime or 
+                                               xsd:datetime?  %Map:{ patient:jpta_inpat_processing_date %};
+        chcss:jpta_outpat_processing_date-2_13 xsd:date or 
+                                               xsd:dateTime or 
+                                               xsd:datetime?  %Map:{ patient:jpta_outpat_processing_date %};
+        chcss:jpta_end_processing_date-2_13    xsd:date or 
+                                               xsd:dateTime or 
+                                               xsd:datetime?  %Map:{ patient:jpta_end_processing_date %};
+    }*;
+
+    chcss:admission_date-2                xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:admission_date %};
+    chcss:current_admission_entry_number-2 xsd:string?   %Map:{ patient:current_admission_entry_number %};
+
+    chcss:pseudopatient-2                 xsd:string?   %Map:{ patient:pseudopatient %};
+    chcss:current_register_number-2       xsd:string?   %Map:{ patient:current_register_number %};
+    chcss:reserved_bed-2                  xsd:string?   %Map:{ patient:reserved_bed %};
+    chcss:room-2                          xsd:string?   %Map:{ patient:room %};
+    chcss:roombed-2                       xsd:string?   %Map:{ patient:roombed %};
+    chcss:visiting_hours-2                xsd:string?   %Map:{ patient:visiting_hours %};
+
+    chcss:ward_location-2                 xsd:string?   %Map:{ patient:ward_location %};
+    chcss:internal_ward_location-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:internal_ward_location_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:internal_ward_location_label %};
+    }?;
+    chcss:requested_ward_location-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:requested_ward_location_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:requested_ward_location_label %};
+    }?;
+    chcss:reserved_ward-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:reserved_ward_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:reserved_ward_label %};
+    }?;
+
+    chcss:clinical_service-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:clinical_service_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:clinical_service_label %};
+    }?;
+
+    chcss:meprs_code-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:meprs_code_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:meprs_code_label %};
+    }?;
+
+    chcss:primary_physician-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:primary_physician_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:primary_physician_label %};
+    }?;
+
+    chcss:test_requestor-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:test_requestor_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:test_requestor_label %};
+    }?;
+    chcss:specimen_comment-2              xsd:string?   %Map:{ patient:specimen_comment %};
+
+    chcss:provider-2  {
+       chcss:identifier                   xsd:string    %Map:{ patient:provider_id %};
+       rdfs:label                         xsd:string    %Map:{ patient:provider_label %};
+    }?;
+
+    chcss:health_care_provider-2 {
+        chcss:identifier                  xsd:string   %Map:{ patient:health_care_provider_id %};
+        rdfs:label                        xsd:string   %Map:{ patient:health_care_provider_label %};
+        chcss:clinical_service-2_12  {
+           chcss:identifier               xsd:string %Map:{ patient:healthcare_clinical_service_id %};
+           rdfs:label                     xsd:string %Map:{ patient:healthcare_clinical_service_label %};
+        }?;
+        chcss:health_care_provider-2_12  {
+            chcss:identifier              xsd:string %Map:{ patient:healthcare_provider_id %};
+            rdfs:label                    xsd:string %Map:{ patient:healthcare_provider_label %};
+         }?;
+         chcss:location-2_12  {
+             chcss:identifier             xsd:string %Map:{ patient:healthcare_provider_location_id %};
+             rdfs:label                   xsd:string %Map:{ patient:healthcare_provider_location_label %};
+         }?;
+    }*;
+
+    chcss:patient_covered_by_insurance-2  xsd:string?   %Map:{ patient:patient_covered_by_insurance %};
+
+    chcss:hipaa_compliance_status-2       xsd:string?   %Map:{ patient:hipaa_compliance_status %};
+    chcss:hipaa_dental_consent-2          xsd:boolean?  %Map:{ patient:hipaa_dental_consent %};
+    chcss:date_of_hipaa_dental_consent-2  xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:date_of_hipaa_dental_consent %};
+
+    chcss:date_of_acknowledgement-2       xsd:date or 
+                                          xsd:dateTime or 
+                                          xsd:datetime?  %Map:{ patient:date_of_acknowledgement %};
+}

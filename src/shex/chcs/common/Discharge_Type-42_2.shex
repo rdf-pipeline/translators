@@ -1,0 +1,39 @@
+# This schema contains a table of codes and descriptions for the
+#  various disposition types available for an inpatient at a 
+# Medical Treatment Facility (MTF). 
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Discharge_Type-42_2.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/dischargeDispositions/Map/#>
+PREFIX dischargeDisposition: <urn:local:discharge-disposition:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Discharge_Type-42_2>
+
+<http://hokukahu.com/chcs/Discharge_Type-42_2> {
+    chcss:identifier                     xsd:string        %Map:{ dischargeDisposition:id %};
+    chcss:chcs_type                      xsd:string?       %Map:{ dischargeDisposition:chcs_type %};
+    rdfs:label                           xsd:string        %Map:{ dischargeDisposition:label %};
+
+    chcss:name-42_2                      xsd:string        %Map:{ dischargeDisposition:name %};
+    chcss:code-42_2                      xsd:string        %Map:{ dischargeDisposition:code %};
+    chcss:active-42_2                    xsd:string        %Map:{ dischargeDisposition:active %};
+
+    chcss:internal_service_code-42_2     xsd:string        %Map:{ dischargeDisposition:internal_service_code %};
+    chcss:svc_flag-42_2                  xsd:string?      %Map:{ dischargeDisposition:svc_flag %};
+    chcss:dutyactive_nonactive-42_2      xsd:string?       %Map:{ dischargeDisposition:dutyactive_nonactive %};
+    chcss:synonym-42_2                   xsd:string?       %Map:{ dischargeDisposition:synonym %};
+
+    chcss:activation_inactivation_date-42_2 {
+       chcss:identifier                           xsd:string        %Map:{ dischargeDisposition:activation_inactivation_date_id %};
+       chcss:chcs_type                            xsd:string?       %Map:{ dischargeDisposition:activation_inactivation_date_type %};
+       chcss:activation_inactivation_date-42_21   xsd:date or
+                                                  xsd:dateTime or
+                                                  xsd:datetime      %Map:{ dischargeDisposition:activation_inactivation_date %};
+       chcss:active_inactive_status-42_21         xsd:string        %Map:{ dischargeDisposition:active_inactive_status %};
+    }*;
+}

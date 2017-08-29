@@ -1,0 +1,16 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/8250_5-1> a chcs:Fdb_Dam_Specific_Allergy_Code-8250_5 ;
+    rdfs:label "1" ;
+    chcs:chcs_type "chcss:Fdb_Dam_Specific_Allergy_Code-8250_5" ;
+    chcs:damagcsp-8250_5 "1" ;
+    chcs:damagcspd-8250_5 "(DO NOT USE RETIRED CODE) UBIDECARENONE ANALOGUES" ;
+    chcs:identifier "8250_5-1" .
+
+

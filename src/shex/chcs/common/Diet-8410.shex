@@ -1,0 +1,42 @@
+# This schema contains all iets and their associated menu patterns.
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Diet-8410.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/foodPreferences/Map/#>
+PREFIX foodPreference: <urn:local:food-preference:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Diet-8410>
+
+<http://hokukahu.com/chcs/Diet-8410> {
+    chcss:identifier                    xsd:string        %Map:{ foodPreference:id %};
+    chcss:chcs_type                     xsd:string?       %Map:{ foodPreference:chcs_type %};
+    rdfs:label                          xsd:string        %Map:{ foodPreference:label %};
+
+    chcss:name-8410                     xsd:string        %Map:{ foodPreference:name %};
+    chcss:abbrev-8410                   xsd:string        %Map:{ foodPreference:abbrev %};
+    chcss:standard_entry-8410           xsd:string        %Map:{ foodPreference:standard_entry %};
+    chcss:description-8410              xsd:string        %Map:{ foodPreference:description %};
+    chcss:alternate_name-8410           xsd:string*       %Map:{ foodPreference:alternate_name %};
+
+    chcss:select-8410                   xsd:boolean?      %Map:{ foodPreference:select %};
+    chcss:error-8410                    xsd:boolean?      %Map:{ foodPreference:error %};
+    chcss:nutriadq-8410                 xsd:boolean?      %Map:{ foodPreference:nutriadq %};
+    chcss:select_in_dining_room-8410    xsd:boolean?      %Map:{ foodPreference:select_in_dining_room %};
+    chcss:npo_diet-8410                 xsd:boolean?      %Map:{ foodPreference:npo_diet %};
+
+    chcss:display_comment-8410          xsd:string?       %Map:{ foodPreference:display_comment %};
+
+    chcss:cho-8410                      xsd:decimal?       %Map:{ foodPreference:carbohydrate %};
+    chcss:fat-8410                      xsd:decimal?       %Map:{ foodPreference:fat %};
+    chcss:pro-8410                      xsd:decimal?       %Map:{ foodPreference:protein %};
+    chcss:calories-8410                 xsd:decimal?       %Map:{ foodPreference:calories %};
+
+    chcss:inactive_date-8410            xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?      %Map:{ foodPreference:inactive_date %};
+}

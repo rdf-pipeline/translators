@@ -1,0 +1,23 @@
+# This schema contains detail codes that are used for Appt Type Standardization
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Appointment_Detail_Codes-44_7.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/appointments/Map/#>
+PREFIX appointment: <urn:local:appointment:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Appointment_Detail_Codes-44_7>
+
+<http://hokukahu.com/chcs/Appointment_Detail_Codes-44_7> {
+    chcss:identifier          xsd:string       %Map:{ appointment:id %};
+    chcss:chcs_type           xsd:string?      %Map:{ appointment:chcs_type %};
+    rdfs:label                xsd:string       %Map:{ appointment:label %};
+
+    chcss:code-44_7           xsd:string       %Map:{ appointment:detail_code %};
+    chcss:status-44_7         xsd:string       %Map:{ appointment:detail_status %};
+    chcss:uneditable-44_7     xsd:boolean      %Map:{ appointment:detail_uneditable %};
+}

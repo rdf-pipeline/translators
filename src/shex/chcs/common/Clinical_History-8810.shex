@@ -1,0 +1,38 @@
+# This schema contains the drug allergy information for each patient.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Clinical_History-8810.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX allergyIntolerance: <urn:local:allergyIntolerance:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Clinical_History-8810>
+
+<http://hokukahu.com/chcs/Clinical_History-8810> {
+    chcss:identifier                xsd:string       %Map:{ allergyIntolerance:id %};
+    chcss:chcs_type                 xsd:string?      %Map:{ allergyIntolerance:chcs_type %};
+    rdfs:label                      xsd:string       %Map:{ allergyIntolerance:label %};
+
+    chcss:name-8810 {
+       chcss:identifier    xsd:string    %Map:{ allergyIntolerance:patient_id %};
+       rdfs:label          xsd:string    %Map:{ allergyIntolerance:patient_name_label %};
+    };
+
+    chcss:drug_allergy-8810 {
+       chcss:identifier        xsd:string    %Map:{ allergyIntolerance:drug_allergy_id %};
+       chcss:chcs_type         xsd:string?   %Map:{ allergyIntolerance:drug_allergy_type %};
+
+       chcss:allergy_selection-8810_03 {
+           chcss:identifier    xsd:string    %Map:{ allergyIntolerance:drug_allergy_selection_id %};
+           rdfs:label          xsd:string    %Map:{ allergyIntolerance:drug_allergy_selection_label %};
+           chcss:sameAs        xsd:string?   %Map:{ allergyIntolerance:drug_allergy_selection_sameAs %};
+           chcss:sameAsLabel   xsd:string?   %Map:{ allergyIntolerance:drug_allergy_selection_sameAsLabel %};
+       };
+
+       chcss:comment-8810_03   xsd:string?   %Map:{ allergyIntolerance:drug_allergy_comment %};
+    }*;
+}

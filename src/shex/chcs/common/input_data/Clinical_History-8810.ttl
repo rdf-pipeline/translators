@@ -1,0 +1,28 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/8810-3> a chcs:Clinical_History-8810 ;
+    rdfs:label "JETSON,GEORGE J" ;
+    chcs:chcs_type "chcss:Clinical_History-8810" ;
+    chcs:drug_allergy-8810 <http://hokukahu.com/systems/chcs-1/8810_03-1_3> ;
+    chcs:identifier "8810-3" ;
+    chcs:name-8810 <http://hokukahu.com/systems/chcs-1/2-3> .
+
+<http://hokukahu.com/systems/chcs-1/2-3> rdfs:label "JETSON,GEORGE J" ;
+    chcs:identifier "2-3" .
+
+<http://hokukahu.com/systems/chcs-1/8254_01-999004> rdfs:label "NKDA" ;
+    chcs:identifier "8254_01-999004" .
+
+<http://hokukahu.com/systems/chcs-1/8810_03-1_3> a chcs:Drug_Allergy-8810_03 ;
+    chcs:allergy_selection-8810_03 <http://hokukahu.com/systems/chcs-1/8254_01-999004> ;
+    chcs:chcs_type "chcss:Drug_Allergy-8810_03" ;
+    chcs:comment-8810_03 "Reaction(s): Unknown; Note: PER PT 01JAN90" ;
+    chcs:identifier "8810_03-1_3" .
+
+

@@ -1,0 +1,46 @@
+# The allergy selection selection schema contains all the allergy classes, brand names, generic names, 
+# and ingredients for the user to select
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Allergies_Selections-8254_01.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/substances/Map/#>
+PREFIX substance: <urn:local:substance:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Allergies_Selections-8254_01>
+
+<http://hokukahu.com/chcs/Allergies_Selections-8254_01> {
+    chcss:identifier              xsd:string        %Map:{ substance:id %};
+    chcss:chcs_type               xsd:string?       %Map:{ substance:chcs_type %};
+    rdfs:label                    xsd:string        %Map:{ substance:label %};
+
+    chcss:bn_gnn-8254_01          xsd:string        %Map:{ substance:bn_gnn %};
+    chcss:gnn-8254_01             xsd:string?       %Map:{ substance:gnn %};
+    chcss:expanded_gnn-8254_01    xsd:string?       %Map:{ substance:expanded_gnn %};
+
+    chcss:allergy_definitions-8254_01 {
+       chcss:identifier    xsd:string        %Map:{ substance:allergy_definitions_id %};
+       rdfs:label          xsd:string        %Map:{ substance:allergy_definitions_label %};
+    };
+
+    chcss:hicl_source-8254_01 {
+       chcss:identifier    xsd:string        %Map:{ substance:hicl_source_id %};
+       rdfs:label          xsd:string        %Map:{ substance:hicl_source_label %};
+       chcss:sameAs        xsd:string        %Map:{ substance:sameAs %};
+       chcss:sameAsLabel   xsd:string        %Map:{ substance:sameAsLabel %};
+    }?;
+
+    chcss:alltype-8254_01                xsd:string        %Map:{ substance:alltype %};
+    chcss:duplicate_brand_name-8254_01   xsd:string?       %Map:{ substance:duplicate_brand_name %};
+
+    chcss:comment-8254_01                xsd:string?       %Map:{ substance:comment %};
+
+    chcss:obsolete_date-8254_01          xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?      %Map:{ ext:obsolete_date %};
+ 
+}

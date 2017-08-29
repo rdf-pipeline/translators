@@ -1,0 +1,18 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/8253_045-1> a chcs:Fdb_Ddi_Severity_Level-8253_045 ;
+    rdfs:label "Contraindicated Drug Combination" ;
+    chcs:chcs_type "chcss:Fdb_Ddi_Severity_Level-8253_045" ;
+    chcs:dimslbtxt-8253_045 "Contraindicated Drug Combination" ;
+    chcs:dimsltext-8253_045 "This drug combination is",
+        "contraindicated and generally should not be dispensed or administered",
+        "to the same patient." ;
+    chcs:identifier "8253_045-1" .
+
+

@@ -1,0 +1,30 @@
+# This schema contains types of blood products currently available from the Defense Blood Standard System
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Blood_Product_Type-8161.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX bloodProduct: <urn:local:bloodProduct:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Blood_Product_Type-8161>
+
+<http://hokukahu.com/chcs/Blood_Product_Type-8161> {
+    chcss:identifier                xsd:string       %Map:{ bloodProduct:id %};
+    chcss:chcs_type                 xsd:string?      %Map:{ bloodProduct:chcs_type %};
+    rdfs:label                      xsd:string       %Map:{ bloodProduct:label %};
+
+    chcss:code-8161                 xsd:string       %Map:{ bloodProduct:code %};
+    chcss:description-8161          xsd:string       %Map:{ bloodProduct:description %};
+    chcss:dba_inactive_flag-8161    xsd:string       %Map:{ bloodProduct:dba_inactive_flag %};
+
+    chcss:autologous_donation-8161  xsd:boolean?     %Map:{ bloodProduct:autologous_donation %};
+    chcss:synonym-8161              xsd:string?      %Map:{ bloodProduct:synonym-8161 %};
+
+    chcss:deactivation_date-8161    xsd:date or
+                                    xsd:dateTime or
+                                    xsd:datetime?    %Map:{ bloodProduct:deactivation_date %};
+}

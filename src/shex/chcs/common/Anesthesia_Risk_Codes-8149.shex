@@ -1,0 +1,23 @@
+# This schema contains standard anesthesia risk codes.
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Anesthesia_Risk_Codes-8149.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/anesthesias/Map/#>
+PREFIX anesthesia: <urn:local:anesthesia:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Anesthesia_Risk_Codes-8149>
+
+<http://hokukahu.com/chcs/Anesthesia_Risk_Codes-8149> {
+    chcss:identifier                        xsd:string     %Map:{ anesthesia:id %};
+    chcss:chcs_type                         xsd:string?    %Map:{ anesthesia:chcs_type %};
+    rdfs:label                              xsd:string     %Map:{ anesthesia:label %};
+
+    chcss:classification-8149               xsd:string     %Map:{ anesthesia:classification %};
+    chcss:physical_status-8149              xsd:string     %Map:{ anesthesia:physical_status %};
+    chcss:physical_status_full_desc-8149    xsd:string     %Map:{ anesthesia:physical_status_full_desc %};
+}

@@ -1,0 +1,38 @@
+# This CHCS schema contains a list of all absent status designations
+# 
+# CHCS schema documentation: 
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Absent_Status-8131.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX absentStatus: <urn:local:absentStatus:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Absent_Status-8131>
+
+<http://hokukahu.com/chcs/Absent_Status-8131> {
+    chcss:identifier                     xsd:string     %Map:{ absentStatus:id %};
+    chcss:chcs_type                      xsd:string?    %Map:{ absentStatus:chcs_type %};
+    rdfs:label                           xsd:string     %Map:{ absentStatus:label %};
+
+    chcss:name-8131                      xsd:string     %Map:{ absentStatus:name %};
+    chcss:code-8131                      xsd:string     %Map:{ absentStatus:code %};
+
+    chcss:army_chargeable-8131           xsd:boolean?   %Map:{ absentStatus:army_chargeable %};
+    chcss:air_force_chargeable-8131      xsd:boolean?   %Map:{ absentStatus:air_force_chargeable %};
+    chcss:marines_chargeable-8131        xsd:boolean?   %Map:{ absentStatus:marines_chargeable %};
+    chcss:navy_chargeable-8131           xsd:boolean?   %Map:{ absentStatus:navy_chargeable %};
+    chcss:insurance_chargeable-8131      xsd:boolean?   %Map:{ absentStatus:insurance_chargeable %};
+
+    chcss:activation_inactivation_date-8131 {
+       chcss:identifier                             xsd:string     %Map:{ absentStatus:activation_inactivation_date_id %};
+       chcss:chcs_type                              xsd:string?    %Map:{ absentStatus:activation_inactivation_date_type %};
+
+       chcss:activation_inactivation_date-8131_01   xsd:date or
+                                                    xsd:dateTime or
+                                                    xsd:datetime   %Map:{ absentStatus:activation_inactivation_date %};
+       chcss:active_inactive_status-8131_01         xsd:string     %Map:{ absentStatus:active_inactive_status %};
+    }*;
+}

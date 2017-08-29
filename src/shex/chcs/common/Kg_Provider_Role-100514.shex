@@ -1,0 +1,25 @@
+# This schema contains the provider role description.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Kg_Provider_Role-100514.htm
+
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/providerRoles/Map/#>
+PREFIX providerRole: <urn:local:providerRole:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Kg_Provider_Role-100514>
+
+<http://hokukahu.com/chcs/Kg_Provider_Role-100514> {
+    chcss:identifier                xsd:string     %Map:{ providerRole:id %};
+    chcss:chcs_type                 xsd:string?    %Map:{ providerRole:chcs_type %};
+    rdfs:label                      xsd:string     %Map:{ providerRole:label %};
+
+    chcss:role_code-100514          xsd:string     %Map:{ providerRole:role_code %};
+    chcss:role_description-100514   xsd:string     %Map:{ providerRole:role_description %};
+    chcss:standard-100514           xsd:boolean    %Map:{ providerRole:standard %};
+    chcss:apv-100514                xsd:boolean    %Map:{ providerRole:apv %};
+}

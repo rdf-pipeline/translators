@@ -1,0 +1,32 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/61_2-1> a chcs:Etiology_Field-61_2 ;
+    rdfs:label "ESCHERICHIA COLI" ;
+    chcs:auto_id-61_2 "1",
+        "851",
+        "esccol" ;
+    chcs:chcs_type "chcss:Etiology_Field-61_2" ;
+    chcs:default_antibiotic_panel-61_2 <http://hokukahu.com/systems/chcs-1/8728-1> ;
+    chcs:gram_stain-61_2 "GRAM NEGATIVE" ;
+    chcs:identifier "61_2-1" ;
+    chcs:identifier-61_2 "BACTERIUM" ;
+    chcs:name-61_2 "ESCHERICHIA COLI" ;
+    chcs:snomed_code-61_2 <http://hokukahu.com/systems/chcs-1/8188_12-13180> ;
+    chcs:synonym-61_2 "01",
+        "851",
+        "E.C.",
+        "E.COLI" .
+
+<http://hokukahu.com/systems/chcs-1/8188_12-13180> rdfs:label "112283007" ;
+    chcs:identifier "8188_12-13180" .
+
+<http://hokukahu.com/systems/chcs-1/8728-1> rdfs:label "GRAM NEG" ;
+    chcs:identifier "8728-1" .
+
+

@@ -1,0 +1,35 @@
+# This schema contains codes and descriptions for injuries. Specifically, it defines 
+# the type of injury sustained by the patient. 
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Cause_Of_Injury-8137.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX causeOfInjury: <urn:local:causeOfInjury:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Cause_Of_Injury-8137>
+
+<http://hokukahu.com/chcs/Cause_Of_Injury-8137> {
+    chcss:identifier                xsd:string       %Map:{ causeOfInjury:id %};
+    chcss:chcs_type                 xsd:string?      %Map:{ causeOfInjury:chcs_type %};
+    rdfs:label                      xsd:string       %Map:{ causeOfInjury:label %};
+
+    chcss:code-8137                 xsd:string       %Map:{ causeOfInjury:code %};
+    chcss:name-8137                 xsd:string       %Map:{ causeOfInjury:name %};
+
+    chcss:category-8137 {
+       chcss:identifier   xsd:string    %Map:{ causeOfInjury:category_id %};
+       rdfs:label         xsd:string    %Map:{ causeOfInjury:category_label %};
+    };
+
+    chcss:description-8137          xsd:string?      %Map:{ causeOfInjury:description %};
+
+    chcss:dba_inactive_flag-8137    xsd:string?      %Map:{ causeOfInjury:dba_inactive_flag %};
+    chcss:deactivation_date-8137    xsd:date or
+                                    xsd:dateTime or
+                                    xsd:datetime?    %Map:{ causeOfInjury:deactivation_date %};
+}

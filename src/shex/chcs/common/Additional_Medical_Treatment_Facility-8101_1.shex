@@ -1,0 +1,56 @@
+# This schema contains Medical Treatment Facility (MTF) entries that are not part of the standard set of entries.
+# It is classified as Group 3 (entries are built through user-interaction with the system).
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Additional_Medical_Treatment_Facility-8101_1.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX location: <urn:local:location:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Additional_Medical_Treatment_Facility-8101_1>
+
+<http://hokukahu.com/chcs/Additional_Medical_Treatment_Facility-8101_1> {
+    chcss:identifier        xsd:string       %Map:{ location:id %};
+    chcss:chcs_type         xsd:string?      %Map:{ location:chcs_type %};
+    rdfs:label              xsd:string       %Map:{ location:label %};
+
+    chcss:facility_code-8101_1        xsd:string       %Map:{ location:facility_code %};
+    chcss:name-8101_1                 xsd:string       %Map:{ location:name %};
+
+    chcss:phone-8101_1                xsd:string?      %Map:{ location:phone %};
+    chcss:street_address_1-8101_1     xsd:string?      %Map:{ location:street_address_1 %};
+    chcss:street_address_2-8101_2     xsd:string?      %Map:{ location:street_address_2 %};
+    chcss:city-8101_1                 xsd:string?      %Map:{ location:city %};
+
+    chcss:state_geographic_loc-8101_1 {
+       chcss:identifier       xsd:string    %Map:{ location:state_id %};
+       rdfs:label             xsd:string    %Map:{ location:state_label %};
+    }?;
+    chcss:zip_code-8101_1 {
+       chcss:identifier       xsd:string    %Map:{ location:zipcode_id %};
+       rdfs:label             xsd:string    %Map:{ location:zipcode_label %};
+    }?;
+
+    chcss:ein_ssn_indicator-8101_1    xsd:string?      %Map:{ location:ein_ssn_indicator-8101_1 %};
+    chcss:provider_ein_ssn-8101_1     xsd:string?      %Map:{ location:provider_ein_ssn-8101_1 %};
+
+    chcss:division-8101_1 {
+       chcss:identifier                     xsd:string       %Map:{ location:division_id %};
+       chcss:division_meprs_code-8101_11    xsd:string       %Map:{ location:division_meprs_code %};
+       chcss:client_number-8101_11          xsd:string       %Map:{ location:client_number %};
+       chcss:clianumber-8101_11             xsd:string       %Map:{ location:clianumber %};
+    }?;
+
+    chcss:non_dod_facility_code-8101_1      xsd:string       %Map:{ location:non_dod_facility_code %};
+    chcss:lab_poc-8101_1                    xsd:string?      %Map:{ location:lab_poc %};
+    chcss:lab_phone-8101_1                  xsd:string?      %Map:{ location:lab_phone %};
+
+    chcss:dba_inactive_flag-8101_1          xsd:string?      %Map:{ location:dba_inactive_flag %};
+    chcss:deactivation_date-8101_1          xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?     %Map:{ location:deactivation_date %};
+}

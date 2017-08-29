@@ -1,0 +1,30 @@
+# This schema contains contains a table of disability conditions used in the
+# Patient Administration process
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Disability_Condition-31.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX disabilityCondition: <urn:local:disability-condition:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Disability_Condition-31>
+
+<http://hokukahu.com/chcs/Disability_Condition-31> {
+    chcss:identifier                  xsd:string       %Map:{ disabilityCondition:id %};
+    chcss:chcs_type                   xsd:string?      %Map:{ disabilityCondition:chcs_type %};
+    rdfs:label                        xsd:string       %Map:{ disabilityCondition:label %};
+
+    chcss:dx_code-31                  xsd:string       %Map:{ disabilityCondition:dx_code %};
+    chcss:name-31                     xsd:string       %Map:{ disabilityCondition:name %};
+    chcss:disability_code-31          xsd:string       %Map:{ disabilityCondition:disability_code %};
+
+    chcss:abbreviation-31             xsd:string?      %Map:{ disabilityCondition:abbreviation %};
+    chcss:dba_inactive_flag-31        xsd:string?      %Map:{ disabilityCondition:dba_inactive_flag %};
+    chcss:deactivation_date-31        xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?    %Map:{ disabilityCondition:deactivation_date %}; 
+}

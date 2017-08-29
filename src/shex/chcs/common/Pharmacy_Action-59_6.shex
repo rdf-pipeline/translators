@@ -1,0 +1,30 @@
+# This schema contains the pharmacy actions that may be taken based on IV action profile
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Pharmacy_Action-59_6.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX pharmacyAction: <urn:local:pharmacyAction:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Pharmacy_Action-59_6>
+
+<http://hokukahu.com/chcs/Pharmacy_Action-59_6> {
+    chcss:identifier                 xsd:string     %Map:{ pharmacyAction:id %};
+    chcss:chcs_type                  xsd:string?    %Map:{ pharmacyAction:chcs_type %};
+    rdfs:label                       xsd:string     %Map:{ pharmacyAction:label %};
+
+    chcss:abbreviated_name-59_6      xsd:string     %Map:{ pharmacyAction:abbreviated_name %};
+    chcss:name-59_6                  xsd:string     %Map:{ pharmacyAction:name %};
+    chcss:ancillary-59_6             xsd:string     %Map:{ pharmacyAction:ancillary %};
+
+    chcss:number-59_6                xsd:string     %Map:{ pharmacyAction:number %};
+
+    chcss:security_key-59_6 {
+        chcss:identifier             xsd:string     %Map:{ pharmacyAction:security_key_id %};
+        rdfs:label                   xsd:string     %Map:{ pharmacyAction:security_key_label %};
+    }?;
+}

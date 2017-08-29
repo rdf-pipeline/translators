@@ -1,0 +1,252 @@
+# This schema contains the profile information for the Clinics and the Health Care Provider 
+# profiles for each Health Care Provider within each Clinic.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Hospital_Location-44.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX hospitalLoc: <urn:local:hospitalLoc:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Hospital_Location-44>
+
+<http://hokukahu.com/chcs/Hospital_Location-44> {
+    chcss:identifier                         xsd:string       %Map:{ hospitalLoc:id %};
+    chcss:chcs_type                          xsd:string?      %Map:{ hospitalLoc:chcs_type %};
+    rdfs:label                               xsd:string       %Map:{ hospitalLoc:label %};
+  
+    chcss:name-44                            xsd:string       %Map:{ hospitalLoc:name %};
+    chcss:description-44                     xsd:string?      %Map:{ hospitalLoc:description %};
+    chcss:abbreviation-44                    xsd:string?      %Map:{ hospitalLoc:abbreviation %};
+    chcss:location_type-44                   xsd:string?      %Map:{ hospitalLoc:location_type %};
+    chcss:location_id-44                     xsd:string?      %Map:{ hospitalLoc:location_id %};
+
+    chcss:medical_record_type-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:medical_record_type_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:medical_record_type_label %};
+    }?;
+
+    chcss:referring_meprs-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:referring_meprs_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:referring_meprs_label %};
+    }?;
+
+    chcss:dga_meprs_code-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:dga_meprs_code_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:dga_meprs_code_label %};
+    }?;
+
+    chcss:meprs_code-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:meprs_code_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:meprs_code_label %};
+    }?;
+
+    chcss:cost_pool_code-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:cost_pool_code_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:cost_pool_code_label %};
+    }?;
+
+    chcss:generic_patient_label-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:generic_patient_label_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:generic_patient_label_label %};
+    }?;
+
+    chcss:mtf-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:mtf_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:mtf_label %};
+    }?;
+
+    chcss:division-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:division_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:division_label %};
+    }?;
+
+    chcss:default_device-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:default_device_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:default_device_label %};
+    }?;
+
+    chcss:service-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:service_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:service_label %};
+    }?;
+
+    chcss:contact_method-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:contact_method_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:contact_method_label %};
+    }?;
+
+    chcss:clinic_availability-44          xsd:string?       %Map:{ hospitalLoc:clinic_availability %};
+    chcss:clinic_appt_instructions-44     xsd:string?       %Map:{ hospitalLoc:clinic_appt_instructions %};
+    chcss:clinic_specialty-44             xsd:string?       %Map:{ hospitalLoc:clinic_specialty %};
+
+    chcss:clinic_location-44              xsd:string?       %Map:{ hospitalLoc:clinic_location %};
+    chcss:clinic_type-44                  xsd:string?       %Map:{ hospitalLoc:clinic_type %};
+    chcss:building_name-44                xsd:string?       %Map:{ hospitalLoc:building_name %};
+    chcss:building_number-44              xsd:string?       %Map:{ hospitalLoc:building_number %};
+    chcss:street_address-44               xsd:string?       %Map:{ hospitalLoc:street_address %};
+    chcss:city-44                         xsd:string?       %Map:{ hospitalLoc:city %};
+    chcss:state-44 {
+        chcss:identifier                  xsd:string        %Map:{ hospitalLoc:state_id %};
+        rdfs:label                        xsd:string        %Map:{ hospitalLoc:state_label %};
+    }?;
+    chcss:zip-44 {
+        chcss:identifier                  xsd:string        %Map:{ hospitalLoc:zipcode_id %};
+        rdfs:label                        xsd:string        %Map:{ hospitalLoc:zipcode_label %};
+    }?;
+    chcss:telephone-44                    xsd:string?       %Map:{ hospitalLoc:telephone %};
+
+    chcss:type_of_care-44                 xsd:string?       %Map:{ hospitalLoc:type_of_care %};
+    chcss:available_schedule-44 {
+        chcss:identifier                  xsd:string        %Map:{ hospitalLoc:available_schedule_id %};
+        rdfs:label                        xsd:string        %Map:{ hospitalLoc:available_schedule_label %};
+    }?;
+
+
+    chcss:access_to_care_reporting-44          xsd:boolean?      %Map:{ hospitalLoc:access_to_care_reporting %};
+    chcss:check_holiday_file-44                xsd:boolean?      %Map:{ hospitalLoc:check_holiday_file %};
+    chcss:default_date_of_release-44           xsd:boolean?      %Map:{ hospitalLoc:default_date_of_release %};
+    chcss:enrollee_lockout-44                  xsd:boolean?      %Map:{ hospitalLoc:enrollee_lockout %};
+    chcss:is_this_an_emergency_room-44         xsd:boolean?      %Map:{ hospitalLoc:is_this_an_emergency_room %};
+    chcss:last_queue_date_time-44              xsd:boolean?      %Map:{ hospitalLoc:last_queue_date_time %};
+    chcss:remind_patient_of_appointment-44     xsd:boolean?      %Map:{ hospitalLoc:remind_patient_of_appointment %};
+    chcss:print_all_lab_results-44             xsd:boolean?      %Map:{ hospitalLoc:print_all_lab_results %};
+    chcss:self_referrals_allowed-44            xsd:boolean?      %Map:{ hospitalLoc:self_referrals_allowed %};
+    chcss:stat_rpt_to_requesting_locn-44       xsd:boolean?      %Map:{ hospitalLoc:stat_rpt_to_requesting_locn %};
+
+    
+    chcss:automatic_wait_list_processing-44    xsd:boolean?      %Map:{ hospitalLoc:automatic_wait_list_processing %};
+    chcss:wait_list_hcp_mandatory-44           xsd:boolean?      %Map:{ hospitalLoc:wait_list_hcp_mandatory %};
+    chcss:wait_list_activated-44               xsd:boolean?      %Map:{ hospitalLoc:wait_list_activated %};
+    chcss:wait_list_hold_duration-44           xsd:string?       %Map:{ hospitalLoc:wait_list_hold_duration %};
+    chcss:maximum_wait_list_days-44            xsd:string?       %Map:{ hospitalLoc:maximum_wait_list_days %};
+    chcss:number_patients_on_waitlist-44       xsd:string?       %Map:{ hospitalLoc:number_patients_on_waitlist %};
+
+    chcss:lab_report_printer-44                xsd:string?       %Map:{ hospitalLoc:lab_report_printer %};
+    chcss:prepare_reminder_notices-44          xsd:string?       %Map:{ hospitalLoc:prepare_reminder_notices %};
+    chcss:roster_production-44                 xsd:string?       %Map:{ hospitalLoc:roster_production %};
+    chcss:schedule_hold_duration-44            xsd:string?       %Map:{ hospitalLoc:schedule_hold_duration %};
+
+    chcss:appointment_interval-44              xsd:string?       %Map:{ hospitalLoc:appointment_interval %};
+    chcss:work_days-44                         xsd:string?       %Map:{ hospitalLoc:work_days %};
+    chcss:clinic_start_time-44                 xsd:string?       %Map:{ hospitalLoc:clinic_start_time%};
+    chcss:clinic_stop_time-44                  xsd:string?       %Map:{ hospitalLoc:clinic_stop_time %};
+   
+    chcss:appointment_detail_code-44 {
+        chcss:identifier          xsd:string       %Map:{ hospitalLoc:appointment_detail_code_id %};
+        rdfs:label                xsd:string       %Map:{ hospitalLoc:appointment_detail_code_label %};
+    }?;
+
+    chcss:appointment_type-44 {
+        chcss:identifier          xsd:string        %Map:{ hospitalLoc:valid_appointment_type_id %};
+        rdfs:label                xsd:string        %Map:{ hospitalLoc:valid_appointment_type_label %};
+
+        chcss: {
+            chcss:identifier      xsd:string        %Map:{ hospitalLoc:appointment_type_id %};
+            rdfs:label            xsd:string        %Map:{ hospitalLoc:appointment_type_label %};
+        }?;
+
+        chcss:duration-44_05              xsd:string?       %Map:{ hospitalLoc:appointment_type_duration %};
+        chcss:instructions_type-44_05     xsd:string?       %Map:{ hospitalLoc:instructions_type %};
+
+        chcss:max_number_of_overbooks_per_slot-44_05 xsd:boolean? %Map:{ hospitalLoc:max_number_of_overbooks_per_slot %};
+        chcss:pull_patient_record-44_05              xsd:boolean?      %Map:{ hospitalLoc:pull_patient_record %};
+        chcss:pull_radiology_record-44_05      xsd:boolean?      %Map:{ hospitalLoc:pull_radiology_record %};
+        chcss:produce_encounter_forms-44_05    xsd:boolean?      %Map:{ hospitalLoc:produce_encounter_forms %};
+        chcss:reconf_flag-44_05                xsd:boolean?      %Map:{ hospitalLoc:reconf_flag %};
+        chcss:referral_required-44_05          xsd:boolean?      %Map:{ hospitalLoc:referral_required %};
+        chcss:send_reminder_notice-44_05       xsd:boolean?      %Map:{ hospitalLoc:send_reminder_notice %};
+
+        chcss:status-44_05                     xsd:string?       %Map:{ hospitalLoc:status %};
+        chcss:total_number_of_overbooks-44_05  xsd:string?       %Map:{ hospitalLoc:total_number_of_overbooks %};
+        chcss:workload_type-44_05              xsd:string?       %Map:{ hospitalLoc:workload_type %};
+
+        chcss:appt_change_authority-44_05 {
+            chcss:identifier    xsd:string        %Map:{ hospitalLoc:appt_change_authority_id %};
+            rdfs:label          xsd:string        %Map:{ hospitalLoc:appt_change_authority_label %};
+        }?;
+
+        chcss:booking_authority-44_05 {
+            chcss:identifier    xsd:string        %Map:{ hospitalLoc:booking_authority_id %};
+            rdfs:label          xsd:string        %Map:{ hospitalLoc:booking_authority_label %};
+        }?;
+
+        chcss:overbook_authority-44_05 {
+            chcss:identifier    xsd:string        %Map:{ hospitalLoc:overbook_authority_id %};
+            rdfs:label          xsd:string        %Map:{ hospitalLoc:overbook_authority_label %};
+        }?;
+    }*;
+ 
+    chcss:cbs_slot_effect-44    xsd:string?       %Map:{ hospitalLoc:cbs_slot_effect %};
+    chcss:cbs_operatory_treatment_room-44 {
+        chcss:identifier        xsd:string       %Map:{ hospitalLoc:cbs_operatory_treatment_room_id %};
+        rdfs:label              xsd:string       %Map:{ hospitalLoc:cbs_operatory_treatment_room_label %};
+    }?;
+
+    chcss:er_default_printer-44 {
+        chcss:identifier        xsd:string       %Map:{ hospitalLoc:er_default_printer_id %};
+        rdfs:label              xsd:string       %Map:{ hospitalLoc:er_default_printer_label %};
+    }?;
+    chcss:cer_provider_default-44 {
+        chcss:identifier        xsd:string       %Map:{ hospitalLoc:cer_provider_default_id %};
+        rdfs:label              xsd:string       %Map:{ hospitalLoc:cer_provider_default_label %};
+    }?;
+    chcss:default_treatment_room-44 {
+        chcss:identifier        xsd:string       %Map:{ hospitalLoc:default_treatment_room_id %};
+        rdfs:label              xsd:string       %Map:{ hospitalLoc:default_treatment_room_label %};
+    }?;
+
+    chcss:ner_sf558_default-44  xsd:string?      %Map:{ hospitalLoc:ner_sf558_default %};
+    chcss:cer_sf558_default-44  xsd:string?      %Map:{ hospitalLoc:cer_sf558_default %};
+
+    chcss:provider-44 {
+        chcss:identifier        xsd:string       %Map:{ hospitalLoc:provider_id %};
+        rdfs:label              xsd:string       %Map:{ hospitalLoc:provider_label %};
+    }?;
+
+    chcss:created_by-44 {
+        chcss:identifier        xsd:string       %Map:{ hospitalLoc:created_by_id %};
+        rdfs:label              xsd:string       %Map:{ hospitalLoc:created_by_label %};
+    }?;
+    chcss:date_of_creation-44   xsd:date or
+                                xsd:dateTime or
+                                xsd:datetime?     %Map:{ hospitalLoc:date_of_creation %};
+
+    chcss:last_edited_by-44 {
+        chcss:identifier        xsd:string       %Map:{ hospitalLoc:last_edited_by_id %};
+        rdfs:label              xsd:string       %Map:{ hospitalLoc:last_edited_by_label %};
+    }?;
+    chcss:date_of_last_edit-44  xsd:date or
+                                xsd:dateTime or
+                                xsd:datetime?     %Map:{ hospitalLoc:date_of_last_edit %};
+
+    chcss:access-44                            xsd:string?      %Map:{ hospitalLoc:access %};
+    chcss:prompt_for_requesting_service-44     xsd:boolean?     %Map:{ hospitalLoc:prompt_for_requesting_service  %};
+    chcss:patient_record_pull-44               xsd:string?      %Map:{ hospitalLoc:patient_record_pull %};
+    chcss:radiology_record_pull-44             xsd:string?      %Map:{ hospitalLoc:radiology_record_pull %};
+    chcss:print_radiology_reports-44           xsd:boolean?     %Map:{ hospitalLoc:print_radiology_reports %};
+    chcss:radiology_queue_frequency-44         xsd:string?      %Map:{ hospitalLoc:radiology_queue_frequency-44 %};
+    chcss:radiology_report_printer-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:radiology_report_printer_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:radiology_report_printer_label %};
+    }?;
+    chcss:days_to_restrict_output-44           xsd:string*      %Map:{ hospitalLoc:days_to_restrict_output %};
+    chcss:last_queue_date_time-44              xsd:date or
+                                               xsd:dateTime or
+                                               xsd:datetime?     %Map:{ hospitalLoc:last_queue_date_time %};
+
+    chcss:key_person-44 {
+        chcss:identifier      xsd:string       %Map:{ hospitalLoc:key_person_id %};
+        rdfs:label            xsd:string       %Map:{ hospitalLoc:key_person_label %};
+    }?;
+
+    chcss:activation_status-44   xsd:string?       %Map:{ hospitalLoc:activation_status %};
+
+    chcss:dba_inactive_flag-44   xsd:string?       %Map:{ hospitalLoc:dba_inactive_flag %};
+    chcss:deactivation_date-44   xsd:date or
+                                 xsd:dateTime or
+                                 xsd:datetime?     %Map:{ hospitalLoc:deactivation_date %};
+}

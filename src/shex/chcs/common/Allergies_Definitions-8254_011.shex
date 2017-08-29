@@ -1,0 +1,39 @@
+# The allergy definitions schema is a companion to the allergy selection schema. 
+# While allergy selection file contains all the allergy classes, brand names, 
+# generic names, and ingredients for the user to select, allergy definition file 
+# contains the actual definitions used by the system to do clinical screening
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Allergies_Definitions-8254_011.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/substances/Map/#>
+PREFIX substance: <urn:local:substance:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Allergies_Definitions-8254_011>
+
+<http://hokukahu.com/chcs/Allergies_Definitions-8254_011> {
+    chcss:identifier                 xsd:string        %Map:{ substance:id %};
+    chcss:chcs_type                  xsd:string?       %Map:{ substance:chcs_type %};
+    rdfs:label                       xsd:string        %Map:{ substance:label %};
+
+    chcss:allergy_name_gnn-8254_011  xsd:string        %Map:{ substance:allergy_name_gnn %};
+    chcss:allergy_type-8254_011      xsd:string        %Map:{ substance:allergy_type %};
+
+    chcss:hic_list-8254_011          xsd:string?       %Map:{ substance:hic_list %};
+    chcss:hic3_list-8254_011         xsd:string?       %Map:{ substance:hic3_list %};
+    chcss:hic_listext-8254_011       xsd:string?       %Map:{ substance:hic_listext %};
+
+    chcss:dac_list-8254_011          xsd:string?       %Map:{ substance:dac_list %};
+
+    chcss:next_a_s_ien-8254_011 {
+       chcss:identifier              xsd:string        %Map:{ substance:next_a_s_ien_id %};
+       rdfs:label                    xsd:string        %Map:{ substance:next_a_s_ien_label %};
+    };
+
+    chcss:damsplis-8254_011          xsd:string        %Map:{ substance:damsplis %};
+    chcss:damcslis-8254_011          xsd:string        %Map:{ substance:damcslis %};
+}

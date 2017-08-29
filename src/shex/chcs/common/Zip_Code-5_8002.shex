@@ -1,0 +1,26 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX zipcode: <urn:local:zipcode:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Zip_Code-5_8002>
+
+<http://hokukahu.com/chcs/Zip_Code-5_8002> {
+    chcss:identifier                    xsd:string        %Map:{ zipcode:id %};
+    chcss:chcs_type                     xsd:string?       %Map:{ zipcode:chcs_type %};
+    rdfs:label                          xsd:string        %Map:{ zipcode:label %};
+
+    chcss:code-5_8002                   xsd:string       %Map:{ zipcode:code %};
+    chcss:city-5_8002                   xsd:string       %Map:{ zipcode:city %};
+    chcss:state-5_8002 {
+        chcss:identifier                xsd:string        %Map:{ zipcode:state_id %};
+        rdfs:label                      xsd:string        %Map:{ zipcode:state_label %};
+    };
+ 
+    chcss:dba_inactive_flag-5_8002      xsd:string?       %Map:{ zipcode:dba_inactive_flag %};
+    chcss:deactivation_date-5_8002      xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?       %Map:{ zipcode:deactivation_date %};
+}

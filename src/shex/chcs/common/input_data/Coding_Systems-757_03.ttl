@@ -1,0 +1,17 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/757_03-1> a chcs:Coding_Systems-757_03 ;
+    rdfs:label "ICD89" ;
+    chcs:chcs_type "chcss:Coding_Systems-757_03" ;
+    chcs:identifier "757_03-1" ;
+    chcs:nomenclature-757_03 "ICD-9" ;
+    chcs:source_abbreviation-757_03 "ICD89" ;
+    chcs:source_title-757_03 "Intl' Class of Diseases, 9th Rev, 1989" .
+
+

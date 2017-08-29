@@ -1,0 +1,172 @@
+# This schema contains the Ambulatory Procedure Visit (APV) appointment record
+# used to link APV activity in order entry to appointment and ADM data 
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/appointments/Map/#>
+PREFIX appointment: <urn:local:appointment:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Apv_Appointment-44_3>
+
+<http://hokukahu.com/chcs/Apv_Appointment-44_3> {
+    chcss:identifier                   xsd:string        %Map:{ appointment:id %};
+    chcss:chcs_type                    xsd:string?       %Map:{ appointment:chcs_type %};
+    rdfs:label                         xsd:string        %Map:{ appointment:label %};
+
+    chcss:apv_tracking_number-44_3     xsd:string?    %Map:{ appointment:apv_tracking_number %};
+    chcss:order-44_3 {
+       chcss:identifier       xsd:string    %Map:{ appointment:order_id %};
+       rdfs:label             xsd:string    %Map:{ appointment:order_label %};
+    }?;
+
+    chcss:depart_to_proc_date_time-44_3   xsd:date or
+                                          xsd:dateTime or
+                                          xsd:datetime?      %Map:{ appointment:depart_to_proc_date_time %};
+
+    chcss:return_from_proc_date_time-44_3   xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?      %Map:{ appointment:return_from_proc_date_time %};
+
+    chcss:nursing_int_date_time-44_3        xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?      %Map:{ appointment:nursing_int_date_time %};
+
+    chcss:patient_ien-44_3 {
+       chcss:identifier       xsd:string    %Map:{ appointment:patient_ien_id %};
+       rdfs:label             xsd:string    %Map:{ appointment:patient_ien_label %};
+    };
+
+    chcss:division-44_3 {
+       chcss:identifier       xsd:string    %Map:{ appointment:division_id %};
+       rdfs:label             xsd:string    %Map:{ appointment:division_label %};
+    };
+
+    chcss:creation_date_time-44_3   xsd:date or
+                                    xsd:dateTime or
+                                    xsd:datetime      %Map:{ appointment:creation_date_time %};
+
+    chcss:creation_user-44_3 {
+       chcss:identifier       xsd:string    %Map:{ appointment:creation_user_id %};
+       rdfs:label             xsd:string    %Map:{ appointment:creation_user_label %};
+    };
+
+    chcss:preadmit_only-44_3  xsd:boolean?    %Map:{ appointment:preadmit_only %};
+
+    chcss:patient_appointment_ien-44_3 {
+       chcss:identifier       xsd:string    %Map:{ appointment:patient_appointment_ien_id %};
+       rdfs:label             xsd:string    %Map:{ appointment:patient_appointment_ien_label %};
+    };
+
+    chcss:disposition_date_time-44_3   xsd:date or
+                                       xsd:dateTime or
+                                       xsd:datetime?      %Map:{ appointment:disposition_date_time %};
+
+    chcss:hospital_location-44_3 {
+       chcss:identifier       xsd:string    %Map:{ appointment:hospital_location_id %};
+       rdfs:label             xsd:string    %Map:{ appointment:hospital_location_label %};
+    }?;
+
+    chcss:preop_location-44_3 {
+       chcss:identifier                           xsd:string        %Map:{ appointment:preop_location_id %};
+       chcss:chcs_type                            xsd:string?       %Map:{ appointment:preop_location_type %};
+       chcss:preop_location-44_31 {
+          chcss:identifier       xsd:string    %Map:{ appointment:preop_location_label_id %};
+          rdfs:label             xsd:string    %Map:{ appointment:preop_location_label %};
+       };
+       chcss:appointment_status-44_31 {
+          chcss:identifier       xsd:string    %Map:{ appointment:preop_appointment_status_id %};
+          rdfs:label             xsd:string    %Map:{ appointment:preop_appointment_status_label %};
+       };
+       chcss:arrival_time-44_3   xsd:date or
+                                 xsd:dateTime or
+                                 xsd:datetime?      %Map:{ appointment:preop_arrival_time %};
+
+       chcss:disposition_date_time-44_3   xsd:date or
+                                          xsd:dateTime or
+                                          xsd:datetime?      %Map:{ appointment:disposition_date_time %};
+
+       chcss:temp_disposition_date_time-44_31   xsd:date or
+                                                xsd:dateTime or
+                                                xsd:datetime?     %Map:{ appointment:temp_disposition_date_time %};
+
+       chcss:temp_outpatient_disposition-44_31 {
+          chcss:identifier       xsd:string    %Map:{ appointment:temp_outpatient_disposition_id %};
+          rdfs:label             xsd:string    %Map:{ appointment:temp_outpatient_disposition_label %};
+       }?;
+
+       chcss:start_date_time-44_31 {
+          chcss:identifier            xsd:string        %Map:{ appointment:preop_start_date_time_id %};
+          chcss:chcs_type             xsd:string?       %Map:{ appointment:preop_start_date_time_type %};
+
+          chcss:start_date_time-44_33   xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime      %Map:{ appointment:postop_start_date_time %};
+          chcss:stop_date_time-44_33    xsd:date or
+                                        xsd:dateTime or
+                                        xsd:datetime?     %Map:{ appointment:postop_start_date_time %};
+          chcss:mos-44_33               xsd:string        %Map:{ appointment:mos %};
+       }*;
+    }*;
+
+    chcss:preop_teaching_location-44_3 {
+       chcss:identifier     xsd:string        %Map:{ appointment:preop_teaching_location_id %};
+       chcss:chcs_type      xsd:string?       %Map:{ appointment:preop_teaching_location_type %};
+       chcss:preop_teaching_location-44_32 {
+           chcss:identifier       xsd:string        %Map:{ appointment:preop_teaching_location_label_id %};
+           rdfs:label             xsd:string        %Map:{ appointment:preop_teaching_location_label %};
+       };
+       chcss:start_date_time-44_33   xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime      %Map:{ appointment:preop_teaching_location_start_date_time %};
+    }?;
+
+    chcss:postop_location-44_3 {
+       chcss:identifier                           xsd:string        %Map:{ appointment:postop_location_id %};
+       chcss:chcs_type                            xsd:string?       %Map:{ appointment:postop_location_type %};
+       chcss:postop_location-44_34 {
+          chcss:identifier       xsd:string    %Map:{ appointment:postop_location_label_id %};
+          rdfs:label             xsd:string    %Map:{ appointment:postop_location_label %};
+       };
+    }*;
+
+    chcss:extended_recovery_location-44_3 {
+       chcss:identifier       xsd:string    %Map:{ appointment:extended_recovery_location_id %};
+       rdfs:label             xsd:string    %Map:{ appointment:extended_recovery_location_label %};
+
+       chcss:extended_recovery_location_35 {
+           chcss:identifier       xsd:string        %Map:{ appointment:ext_recovery_location_hosp_id %};
+           rdfs:label             xsd:string        %Map:{ appointment:ext_recovery_location_hosp_label %};
+       };
+       chcss:start_date_time-44_33   xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime      %Map:{ appointment:ext_recovery_location_start_date_time %};
+       chcss:temp_disposition_date_time-44_31   xsd:date or
+                                                xsd:dateTime or
+                                                xsd:datetime?     %Map:{ appointment:ext_recovery_temp_disposition_date_time %};
+
+       chcss:temp_outpatient_disposition-44_31 {
+          chcss:identifier       xsd:string    %Map:{ appointment:ext_recovery_temp_outpatient_disposition_id %};
+          rdfs:label             xsd:string    %Map:{ appointment:ext_recovery_temp_outpatient_disposition_label %};
+       }?;
+    }?;
+
+    chcss:preadm_cpt_codes-44_3 {
+        chcss:identifier       xsd:string    %Map:{ appointment:preadm_cpt_code_id %};
+        rdfs:label             xsd:string    %Map:{ appointment:preadm_cpt_code_label %};
+    }?;
+
+    chcss:teaching_appointment-44_3 {
+        chcss:identifier       xsd:string    %Map:{ appointment:teaching_appointment_id %};
+        rdfs:label             xsd:string    %Map:{ appointment:teaching_appointment_label %};
+    }?;
+
+    chcss:meprs-44_3 {
+        chcss:identifier       xsd:string    %Map:{ appointment:meprs_id %};
+        rdfs:label             xsd:string    %Map:{ appointment:meprs_label %};
+    }?;
+}

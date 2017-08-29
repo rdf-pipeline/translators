@@ -1,0 +1,28 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/8250_4-118> a chcs:Fdb_Dam_Master_Table-8250_4 ;
+    rdfs:label "W7NAEF" ;
+    chcs:chcs_type "chcss:Fdb_Dam_Master_Table-8250_4" ;
+    chcs:dacsp-8250_4 <http://hokukahu.com/systems/chcs-1/8250_41-1_118> ;
+    chcs:hic-8250_4 "W7NAEF" ;
+    chcs:identifier "8250_4-118" .
+
+<http://hokukahu.com/systems/chcs-1/8250_41-1_118> a chcs:Dacsp-8250_41 ;
+    chcs:chcs_type "chcss:Dacsp-8250_41" ;
+    chcs:daccs-8250_41 <http://hokukahu.com/systems/chcs-1/8253_05-58> ;
+    chcs:dacsp-8250_41 <http://hokukahu.com/systems/chcs-1/8250_5-518> ;
+    chcs:identifier "8250_41-1_118" .
+
+<http://hokukahu.com/systems/chcs-1/8250_5-518> rdfs:label "518" ;
+    chcs:identifier "8250_5-518" .
+
+<http://hokukahu.com/systems/chcs-1/8253_05-58> rdfs:label "58" ;
+    chcs:identifier "8253_05-58" .
+
+

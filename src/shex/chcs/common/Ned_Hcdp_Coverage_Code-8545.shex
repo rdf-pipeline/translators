@@ -1,0 +1,22 @@
+# This schema contains the National Enrollment Database Health Care Delivery Program Coverage Codes
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Ned_Hcdp_Coverage_Code-8545.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX nhcc: <urn:local:nhcc:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Ned_Hcdp_Coverage_Code-8545>
+
+<http://hokukahu.com/chcs/Ned_Hcdp_Coverage_Code-8545> {
+    chcss:identifier         xsd:string       %Map:{ nhcc:id %};
+    chcss:chcs_type          xsd:string?      %Map:{ nhcc:chcs_type %};
+    rdfs:label               xsd:string       %Map:{ nhcc:label %};
+
+    chcss:code-8545          xsd:string       %Map:{ nhcc:code %};
+    chcss:text-8545          xsd:string       %Map:{ nhcc:text %};
+}

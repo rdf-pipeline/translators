@@ -1,0 +1,432 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/5-1> a chcs:Geographic_Location-5 ;
+    rdfs:label "ALABAMA" ;
+    chcs:abbreviation-5 "AL" ;
+    chcs:activation_inactivation_date-5 <http://hokukahu.com/systems/chcs-1/5_03-1_1> ;
+    chcs:capital-5 "MONTGOMERY" ;
+    chcs:chcs_type "chcss:Geographic_Location-5" ;
+    chcs:country-5 <http://hokukahu.com/systems/chcs-1/5-266> ;
+    chcs:county-5 <http://hokukahu.com/systems/chcs-1/5_01-10_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-11_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-12_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-13_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-14_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-15_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-16_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-17_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-18_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-19_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-1_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-20_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-21_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-22_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-23_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-24_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-25_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-26_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-27_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-28_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-29_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-30_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-31_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-32_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-33_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-34_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-35_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-36_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-37_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-38_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-39_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-40_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-41_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-42_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-43_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-44_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-45_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-46_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-47_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-48_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-49_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-4_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-50_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-51_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-52_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-53_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-54_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-55_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-56_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-57_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-58_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-59_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-5_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-60_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-61_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-62_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-63_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-64_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-65_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-66_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-67_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-68_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-69_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-6_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-7_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-8_1>,
+        <http://hokukahu.com/systems/chcs-1/5_01-9_1> ;
+    chcs:fips-5 "01" ;
+    chcs:identifier "5-1" ;
+    chcs:name-5 "ALABAMA" ;
+    chcs:physical_location-5 "CONUS" .
+
+<http://hokukahu.com/systems/chcs-1/5-266> rdfs:label "UNITED STATES" ;
+    chcs:identifier "5-266" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-10_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "BUTLER" ;
+    chcs:identifier "5_01-10_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-11_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CALHOUN" ;
+    chcs:identifier "5_01-11_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-12_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CHAMBERS" ;
+    chcs:identifier "5_01-12_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-13_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CHEROKEE" ;
+    chcs:identifier "5_01-13_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-14_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CHILTON" ;
+    chcs:identifier "5_01-14_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-15_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CHOCTAW" ;
+    chcs:identifier "5_01-15_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-16_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CLARKE" ;
+    chcs:identifier "5_01-16_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-17_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CLAY" ;
+    chcs:identifier "5_01-17_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-18_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CLEBURNE" ;
+    chcs:identifier "5_01-18_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-19_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "COFFEE" ;
+    chcs:identifier "5_01-19_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-1_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MOBILE" ;
+    chcs:identifier "5_01-1_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-20_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "COLBERT" ;
+    chcs:identifier "5_01-20_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-21_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CONECUH" ;
+    chcs:identifier "5_01-21_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-22_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "COOSA" ;
+    chcs:identifier "5_01-22_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-23_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "COVINGTON" ;
+    chcs:identifier "5_01-23_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-24_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CRENSHAW" ;
+    chcs:identifier "5_01-24_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-25_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "CULLMAN" ;
+    chcs:identifier "5_01-25_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-26_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "DALE" ;
+    chcs:identifier "5_01-26_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-27_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "DALLAS" ;
+    chcs:identifier "5_01-27_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-28_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "DE KALB" ;
+    chcs:identifier "5_01-28_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-29_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "ELMORE" ;
+    chcs:identifier "5_01-29_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-30_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "ESCAMBIA" ;
+    chcs:identifier "5_01-30_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-31_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "ETOWAH" ;
+    chcs:identifier "5_01-31_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-32_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "FAYETTE" ;
+    chcs:identifier "5_01-32_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-33_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "FRANKLIN" ;
+    chcs:identifier "5_01-33_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-34_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "GENEVA" ;
+    chcs:identifier "5_01-34_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-35_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "GREENE" ;
+    chcs:identifier "5_01-35_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-36_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "HALE" ;
+    chcs:identifier "5_01-36_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-37_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "HENRY" ;
+    chcs:identifier "5_01-37_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-38_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "HOUSTON" ;
+    chcs:identifier "5_01-38_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-39_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "JACKSON" ;
+    chcs:identifier "5_01-39_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-40_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "JEFFERSON" ;
+    chcs:identifier "5_01-40_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-41_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "LAMAR" ;
+    chcs:identifier "5_01-41_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-42_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "LAUDERDALE" ;
+    chcs:identifier "5_01-42_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-43_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "LAWRENCE" ;
+    chcs:identifier "5_01-43_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-44_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "LEE" ;
+    chcs:identifier "5_01-44_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-45_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "LIMESTONE" ;
+    chcs:identifier "5_01-45_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-46_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "LOWNDES" ;
+    chcs:identifier "5_01-46_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-47_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MACON" ;
+    chcs:identifier "5_01-47_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-48_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MADISON" ;
+    chcs:identifier "5_01-48_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-49_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MARENGO" ;
+    chcs:identifier "5_01-49_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-4_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "AUTAUGA" ;
+    chcs:identifier "5_01-4_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-50_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MARION" ;
+    chcs:identifier "5_01-50_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-51_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MARSHALL" ;
+    chcs:identifier "5_01-51_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-52_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MONROE" ;
+    chcs:identifier "5_01-52_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-53_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MONTGOMERY" ;
+    chcs:identifier "5_01-53_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-54_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "MORGAN" ;
+    chcs:identifier "5_01-54_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-55_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "PERRY" ;
+    chcs:identifier "5_01-55_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-56_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "PICKENS" ;
+    chcs:identifier "5_01-56_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-57_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "PIKE" ;
+    chcs:identifier "5_01-57_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-58_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "RANDOLPH" ;
+    chcs:identifier "5_01-58_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-59_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "RUSSELL" ;
+    chcs:identifier "5_01-59_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-5_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "BALDWIN" ;
+    chcs:identifier "5_01-5_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-60_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "SAINT CLAIR" ;
+    chcs:identifier "5_01-60_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-61_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "SHELBY" ;
+    chcs:identifier "5_01-61_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-62_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "SUMTER" ;
+    chcs:identifier "5_01-62_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-63_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "TALLADEGA" ;
+    chcs:identifier "5_01-63_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-64_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "TALLAPOOSA" ;
+    chcs:identifier "5_01-64_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-65_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "TUSCALOOSA" ;
+    chcs:identifier "5_01-65_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-66_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "WALKER" ;
+    chcs:identifier "5_01-66_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-67_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "WASHINGTON" ;
+    chcs:identifier "5_01-67_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-68_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "WILCOX" ;
+    chcs:identifier "5_01-68_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-69_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "WINSTON" ;
+    chcs:identifier "5_01-69_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-6_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "BARBOUR" ;
+    chcs:identifier "5_01-6_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-7_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "BIBB" ;
+    chcs:identifier "5_01-7_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-8_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "BLOUNT" ;
+    chcs:identifier "5_01-8_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_01-9_1> a chcs:County-5_01 ;
+    chcs:chcs_type "chcss:County-5_01" ;
+    chcs:county-5_01 "BULLOCK" ;
+    chcs:identifier "5_01-9_1" .
+
+<http://hokukahu.com/systems/chcs-1/5_03-1_1> a chcs:Activation_Inactivation_Date-5_03 ;
+    chcs:activation_inactivation_date-5_03 "1990-01-01"^^xsd:date ;
+    chcs:active_inactive_status-5_03 "ACTIVE" ;
+    chcs:chcs_type "chcss:Activation_Inactivation_Date-5_03" ;
+    chcs:identifier "5_03-1_1" .
+
+

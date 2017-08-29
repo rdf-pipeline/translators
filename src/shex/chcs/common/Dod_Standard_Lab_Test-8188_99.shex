@@ -1,0 +1,41 @@
+# This schema contains the standardized Lab test names supplied by the Government and is used 
+# to standardized the CHCS lab tests
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Dod_Standard_Lab_Test-8188_99.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX diagnosticService: <urn:local:diagnostic-service:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Dod_Standard_Lab_Test-8188_99>
+
+<http://hokukahu.com/chcs/Dod_Standard_Lab_Test-8188_99> {
+    chcss:identifier                     xsd:string       %Map:{ diagnosticService:id %};
+    chcss:chcs_type                      xsd:string?      %Map:{ diagnosticService:chcs_type %};
+    rdfs:label                           xsd:string       %Map:{ diagnosticService:label %};
+
+    chcss:test_name-8188_99              xsd:string       %Map:{ diagnosticService:test_name %};
+    chcss:test_print_name-8188_99        xsd:string       %Map:{ diagnosticService:test_print_name %};
+    chcss:test_code-8188_99              xsd:string       %Map:{ diagnosticService:test_code %};
+
+    chcss:loinc_component_analyte_name-8188_99 {
+        chcss:identifier                 xsd:string       %Map:{ diagnosticService:loinc_component_analyte_name_id %};
+        rdfs:label                       xsd:string       %Map:{ diagnosticService:loinc_component_analyte_name %};
+    };
+
+    chcss:standardized_lab_test-8188_99  xsd:boolean?     %Map:{ diagnosticService:standardized_lab_test %};
+
+    chcss:subscript-8188_99              xsd:string       %Map:{ diagnosticService:subscript %};
+
+    chcss:single_panel-8188_99           xsd:string       %Map:{ diagnosticService:single_panel %};
+    chcss:panel_names-8188_99            xsd:string?      %Map:{ diagnosticService:panel_names %};
+
+    chcss:dba_inactive_flag-8188_99      xsd:string?      %Map:{ diagnosticService:dba_inactive_flag %};
+    chcss:deactivation_date-8188_99      xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?    %Map:{ diagnosticService:deactivation_date %};
+}

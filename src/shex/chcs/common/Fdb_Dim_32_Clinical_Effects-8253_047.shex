@@ -1,0 +1,22 @@
+# This schema is for the FDB Dim table that contains the definition of DDI clinical effects.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Fdb_Dim_32_Clinical_Effects-8253_047.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/fdces/Map/#>
+PREFIX fdce: <urn:local:fdce:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Fdb_Dim_32_Clinical_Effects-8253_047>
+
+<http://hokukahu.com/chcs/Fdb_Dim_32_Clinical_Effects-8253_047> {
+    chcss:identifier             xsd:string     %Map:{ fdce:id %};
+    chcss:chcs_type              xsd:string?    %Map:{ fdce:chcs_type %};
+    rdfs:label                   xsd:string     %Map:{ fdce:label %};
+
+    chcss:adiefftc-8253_047      xsd:string     %Map:{ fdce:adiefftc %};
+    chcss:adiefftxt-8253_047     xsd:string     %Map:{ fdce:adiefftxt %};
+}

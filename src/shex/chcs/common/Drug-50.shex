@@ -1,0 +1,196 @@
+# This schema holds the information related to each drug that can be used to fill a prescription.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Drug-50.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/medications/Map/#>
+PREFIX medication: <urn:local:medication:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Drug-50>
+
+<http://hokukahu.com/chcs/Drug-50> {
+    chcss:identifier                        xsd:string        %Map:{ medication:id %};
+    chcss:chcs_type                         xsd:string?       %Map:{ medication:chcs_type %};
+    rdfs:label                              xsd:string        %Map:{ medication:label %};
+
+    chcss:name-50                           xsd:string        %Map:{ medication:name %};
+    chcss:medication_type-50                xsd:string?       %Map:{ medication:medication_type %};
+
+    chcss:primary_ndc_number-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:primary_ndc_number_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:primary_ndc_number_label %};
+       chcss:sameAs                         xsd:string?       %Map:{ medication:sameAs %};
+       chcss:sameAsLabel                    xsd:string?       %Map:{ medication:sameAsLabel %};
+    }?;
+    chcss:deleted_ndc-50                    xsd:boolean?      %Map:{ medication:deleted_ndc %};
+    chcss:ndc_invalid-50                    xsd:string?       %Map:{ medication:ndc_invalid %};
+    chcss:ndc_numbers-50 {
+       chcss:ndc_numbers-50_09{ 
+            chcss:identifier                xsd:string        %Map:{ medication:ndc_numbers_id %};
+            rdfs:label                      xsd:string        %Map:{ medication:ndc_numbers_label %};
+       };
+       chcss:ndc_compound_quantity-50_09    xsd:string        %Map:{ medication:ndc_compound_quantity %};
+    }*;
+
+    chcss:component_therapeutic_class-50    xsd:string?       %Map:{ medication:component_therapeutic_class %};
+
+   
+    chcss:compound-50                       xsd:boolean?      %Map:{ medication:compound %};
+    chcss:compound_total_qty-50             xsd:string?       %Map:{ medication:compound_total_qty %};
+    chcss:compound_metric_unit-50           xsd:string?       %Map:{ medication:compound_metric_unit %};
+
+    chcss:dea_special_hdlg-50               xsd:string        %Map:{ medication:dea_special_hdlg %};
+
+    chcss:iv_incompatibilities-50           xsd:string?       %Map:{ medication:iv_incompatibilities %};
+    chcss:iv_drug_units-50                  xsd:string?       %Map:{ medication:iv_drug_units %};
+    chcss:print_name_for_iv-50              xsd:string?       %Map:{ medication:print_name_for_iv %};
+
+    chcss:reconstitution_information-50     xsd:string?       %Map:{ medication:reconstitution_information %};
+    chcss:current_inventory-50              xsd:string?       %Map:{ medication:current_inventory %};
+
+    chcss:default_unit-50                   xsd:string?       %Map:{ medication:default_unit %};
+
+    chcss:label_print_name-50               xsd:string?       %Map:{ medication:label_print_name %};
+    chcss:package_size-50                   xsd:string?       %Map:{ medication:package_size %};
+
+    chcss:injectable-50                     xsd:string        %Map:{ medication:injectable %};
+
+    chcss:calc_unit-50                      xsd:string?       %Map:{ medication:calc_unit %};
+    chcss:content_unit-50                   xsd:string?       %Map:{ medication:content_unit %};
+
+    chcss:dosage_strength-50                xsd:string?       %Map:{ medication:dosage_strength %};
+    chcss:divisible-50                      xsd:string        %Map:{ medication:divisible %};
+
+    chcss:drugroute_form-50                 xsd:string        %Map:{ medication:drugroute_form %};
+    chcss:route-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:route_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:route_label %};
+    };
+
+    chcss:form-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:form_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:form_label %};
+    };
+    chcss:created-50                        xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?     %Map:{ medication:created %};
+    chcss:creator-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:creator_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:creator_label %};
+    }?;
+    chcss:edited-50                         xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?     %Map:{ medication:edited %};
+    chcss:editor-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:editor_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:editor_label %};
+    }?;
+
+    chcss:drug_check_disable-50             xsd:string        %Map:{ medication:drug_check_disable %};
+    chcss:drug_check_user-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:drug_check_user_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:drug_check_user_label %};
+    };
+    chcss:drug_check_date-50                xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?     %Map:{ medication:drug_check_date %};
+
+    chcss:age_related_dosages-50 {
+       chcss:age_range-50_02                xsd:string        %Map:{ medication:age_range %};
+       chcss:minimum_dose_per_day-50_02     xsd:string        %Map:{ medication:minimum_dose_per_day %};
+       chcss:maximum_dose_per_day-50_02     xsd:string        %Map:{ medication:maximum_dose_per_day %};
+       chcss:unit_of_measure-50_02          xsd:string        %Map:{ medication:unit_of_measure %};
+       chcss:dose_per_body_weight-50_02     xsd:string        %Map:{ medication:dose_per_body_weight %};
+    }*;
+
+    chcss:associated_formulary {
+       chcss:identifier                     xsd:string        %Map:{ medication:associated_formulary_id %};
+       chcss:chcs_type                      xsd:string?       %Map:{ medication:associated_formulary_type %};
+
+       chcss:associated_formulary-50_3 {
+          chcss:identifier                  xsd:string        %Map:{ medication:associated_formulary_group_id %};
+          rdfs:label                        xsd:string        %Map:{ medication:associated_formulary_group_label %};
+       };
+
+       chcss:ip_op_indicator-50_3           xsd:string        %Map:{ medication:ip_op_indicator %};
+       chcss:local_cost-50_3                xsd:string?       %Map:{ medication:local_cost %};
+       chcss:pdts_unit_cost-50_3            xsd:string?       %Map:{ medication:pdts_unit_cost %};
+       chcss:nonformulary-50_3              xsd:string        %Map:{ medication:nonformulary %};
+       chcss:message-50_3                   xsd:string?       %Map:{ medication:message %};
+       chcss:local_pdts_cost_switch-50_3    xsd:string        %Map:{ medication:local_pdts_cost_switch %};
+       chcss:maximum_days_supply-50_3       xsd:string        %Map:{ medication:maximum_days_supply %};
+       chcss:warning_label-50_3             xsd:string        %Map:{ medication:warning_label %};
+       chcss:default_expiration-50_3        xsd:string        %Map:{ medication:default_expiration %};
+       chcss:default_quantity-50_3          xsd:string?       %Map:{ medication:default_quantity %};
+       chcss:default_sig-50_3               xsd:string?       %Map:{ medication:default_sig %};
+       chcss:default_days_supply-50_3       xsd:string?       %Map:{ medication:default_days_supply %};
+       chcss:continuable-50_3               xsd:boolean?      %Map:{ medication:continuable %};
+       chcss:replenish_on_request-50_3      xsd:string        %Map:{ medication:replenish_on_request %};
+       chcss:inpatient_order_duration-50_3  xsd:string        %Map:{ medication:inpatient_order_duration %};
+       chcss:default_schedule_type-50_3     xsd:string?       %Map:{ medication:default_schedule_type %};
+       chcss:inactive_date-50_3             xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?     %Map:{ medication:inactive_date %};
+    }*;
+
+    chcss:sig_codes-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:sig_codes_id %};
+       chcss:chcs_type                      xsd:string?       %Map:{ medication:sig_codes_type %};
+       chcss:sig_codes-50_15                xsd:string        %Map:{ medication:sig_codes %};
+       chcss:sig-50_15                      xsd:string        %Map:{ medication:sig %};
+    }*;
+
+    chcss:synonym-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:synonym_id %};
+       chcss:chcs_type                      xsd:string?       %Map:{ medication:synonym_type %};
+       chcss:synonym-50_1                   xsd:string        %Map:{ medication:synonym %};
+       chcss:intended_use-50_1              xsd:string?       %Map:{ medication:synonym_intended_use %};
+       chcss:ndc_codes-50_1                 xsd:string*       %Map:{ medication:synonym_ndc_codes %};
+    }*;
+
+    chcss:old_names-50 {
+       chcss:old_names-50_01                xsd:string        %Map:{ medication:old_names %};
+       chcss:date_changed-50_01             xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?     %Map:{ medication:date_changed %};
+    }*;
+
+    chcss:tmp_ip_op_ind-50                  xsd:string?       %Map:{ medication:tmp_ip_op_ind %};
+    chcss:tmp_local_cost-50                 xsd:string?       %Map:{ medication:tmp_local_cost %};
+    chcss:tmp_pdts_unit_cost-50             xsd:string?       %Map:{ medication:tmp_pdts_unit_cost %};
+    chcss:tmp_nonformulary-50               xsd:string?       %Map:{ medication:tmp_nonformulary %};
+    chcss:tmp_message-50                    xsd:string?       %Map:{ medication:tmp_message %};
+    chcss:tmp_cost_switch-50                xsd:string?       %Map:{ medication:tmp_cost_switch %};
+    chcss:tmp_max_qty-50                    xsd:string?       %Map:{ medication:tmp_max_qty %};
+    chcss:tmp_max_days-50                   xsd:string?       %Map:{ medication:tmp_max_days %};
+    chcss:tmp_max_refills-50                xsd:string?       %Map:{ medication:tmp_max_refills %};
+    chcss:tmp_dispense_comp_cont-50         xsd:string?       %Map:{ medication:tmp_dispense_comp_cont %};
+    chcss:tmp_warning_label-50              xsd:string?       %Map:{ medication:tmp_warning_label %};
+    chcss:tmp_def_exp-50                    xsd:string?       %Map:{ medication:tmp_def_exp %};
+    chcss:tmp_def_qty-50                    xsd:string?       %Map:{ medication:tmp_def_qty %};
+    chcss:tmp_def_sig-50                    xsd:string?       %Map:{ medication:tmp_def_sig %};
+    chcss:tmp_inactive-50                   xsd:string?       %Map:{ medication:tmp_inactive %};
+    chcss:tmp_def_days_supply-50            xsd:string?       %Map:{ medication:tmp_def_days_supply %};
+    chcss:tmp_spec_iv-50                    xsd:string?       %Map:{ medication:tmp_spec_iv %};
+    chcss:tmp_continuable-50                xsd:string?       %Map:{ medication:tmp_continuable %};
+    chcss:tmp_iv_prnt_name-50               xsd:string?       %Map:{ medication:tmp_iv_prnt_name %};
+    chcss:tmp_replenish-50                  xsd:string?       %Map:{ medication:tmp_replenish %};
+    chcss:tmp_ord_dur-50                    xsd:string?       %Map:{ medication:tmp_ord_dur %};
+    chcss:tmp_def_sched-50                  xsd:string?       %Map:{ medication:tmp_def_sched %};
+    
+    chcss:tmop_unit_of_measure-50           xsd:string?       %Map:{ medication:tmop_unit_of_measure %};
+    chcss:tmop_mailable-50                  xsd:boolean?      %Map:{ medication:tmop_mailable %};
+
+    chcss:authorized_ordering_classes-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:authorized_ordering_classes_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:authorized_ordering_classes_label %};
+    }?;
+    chcss:drug_authorization_key-50 {
+       chcss:identifier                     xsd:string        %Map:{ medication:drug_authorization_key_id %};
+       rdfs:label                           xsd:string        %Map:{ medication:drug_authorization_key_label %};
+    }?;
+}

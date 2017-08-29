@@ -1,0 +1,117 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/8728-1> a chcs:Antibiotic_Panel_File-8728 ;
+    rdfs:label "GRAM NEG" ;
+    chcs:antibiotic_panel-8728 "GRAM NEG" ;
+    chcs:chcs_type "chcss:Antibiotic_Panel_File-8728" ;
+    chcs:default_antibiotics-8728 <http://hokukahu.com/systems/chcs-1/62_12-12>,
+        <http://hokukahu.com/systems/chcs-1/62_12-125>,
+        <http://hokukahu.com/systems/chcs-1/62_12-138>,
+        <http://hokukahu.com/systems/chcs-1/62_12-145>,
+        <http://hokukahu.com/systems/chcs-1/62_12-32>,
+        <http://hokukahu.com/systems/chcs-1/62_12-4>,
+        <http://hokukahu.com/systems/chcs-1/62_12-42>,
+        <http://hokukahu.com/systems/chcs-1/62_12-56>,
+        <http://hokukahu.com/systems/chcs-1/62_12-6>,
+        <http://hokukahu.com/systems/chcs-1/62_12-68>,
+        <http://hokukahu.com/systems/chcs-1/62_12-74>,
+        <http://hokukahu.com/systems/chcs-1/62_12-8>,
+        <http://hokukahu.com/systems/chcs-1/62_12-84>,
+        <http://hokukahu.com/systems/chcs-1/62_12-86>,
+        <http://hokukahu.com/systems/chcs-1/62_12-92>,
+        <http://hokukahu.com/systems/chcs-1/62_12-96> ;
+    chcs:identifier "8728-1" ;
+    chcs:site_specimen-8728 <http://hokukahu.com/systems/chcs-1/8728_01-70_1>,
+        <http://hokukahu.com/systems/chcs-1/8728_01-71_1> .
+
+<http://hokukahu.com/systems/chcs-1/61-70> rdfs:label "BLOOD" ;
+    chcs:identifier "61-70" .
+
+<http://hokukahu.com/systems/chcs-1/61-71> rdfs:label "VOIDED URINE" ;
+    chcs:identifier "61-71" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-127> rdfs:label "AZTREONAM" ;
+    chcs:identifier "62_12-127" .
+
+<http://hokukahu.com/systems/chcs-1/8728_01-70_1> a chcs:Site_Specimen-8728_01 ;
+    chcs:chcs_type "chcss:Site_Specimen-8728_01" ;
+    chcs:identifier "8728_01-70_1" ;
+    chcs:site_specimen-8728_01 <http://hokukahu.com/systems/chcs-1/61-70> .
+
+<http://hokukahu.com/systems/chcs-1/8728_01-71_1> a chcs:Site_Specimen-8728_01 ;
+    chcs:antibiotics-8728_01 <http://hokukahu.com/systems/chcs-1/62_12-12>,
+        <http://hokukahu.com/systems/chcs-1/62_12-125>,
+        <http://hokukahu.com/systems/chcs-1/62_12-127>,
+        <http://hokukahu.com/systems/chcs-1/62_12-138>,
+        <http://hokukahu.com/systems/chcs-1/62_12-145>,
+        <http://hokukahu.com/systems/chcs-1/62_12-32>,
+        <http://hokukahu.com/systems/chcs-1/62_12-4>,
+        <http://hokukahu.com/systems/chcs-1/62_12-42>,
+        <http://hokukahu.com/systems/chcs-1/62_12-56>,
+        <http://hokukahu.com/systems/chcs-1/62_12-6>,
+        <http://hokukahu.com/systems/chcs-1/62_12-68>,
+        <http://hokukahu.com/systems/chcs-1/62_12-74>,
+        <http://hokukahu.com/systems/chcs-1/62_12-8>,
+        <http://hokukahu.com/systems/chcs-1/62_12-84>,
+        <http://hokukahu.com/systems/chcs-1/62_12-86>,
+        <http://hokukahu.com/systems/chcs-1/62_12-92>,
+        <http://hokukahu.com/systems/chcs-1/62_12-96> ;
+    chcs:chcs_type "chcss:Site_Specimen-8728_01" ;
+    chcs:identifier "8728_01-71_1" ;
+    chcs:site_specimen-8728_01 <http://hokukahu.com/systems/chcs-1/61-71> .
+
+<http://hokukahu.com/systems/chcs-1/62_12-12> rdfs:label "CEFAZOLIN" ;
+    chcs:identifier "62_12-12" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-125> rdfs:label "AMPICILLIN_SULBACTAM" ;
+    chcs:identifier "62_12-125" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-138> rdfs:label "LEVOFLOXACIN" ;
+    chcs:identifier "62_12-138" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-145> rdfs:label "ESBL" ;
+    chcs:identifier "62_12-145" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-32> rdfs:label "GENTAMICIN" ;
+    chcs:identifier "62_12-32" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-4> rdfs:label "AMIKACIN" ;
+    chcs:identifier "62_12-4" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-42> rdfs:label "NITROFURANTOIN" ;
+    chcs:identifier "62_12-42" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-56> rdfs:label "PIPERACILLIN_TAZOBACTAM" ;
+    chcs:identifier "62_12-56" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-6> rdfs:label "AMPICILLIN" ;
+    chcs:identifier "62_12-6" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-68> rdfs:label "TOBRAMYCIN" ;
+    chcs:identifier "62_12-68" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-74> rdfs:label "TRIMETH_SULFA" ;
+    chcs:identifier "62_12-74" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-8> rdfs:label "CEFTAZIDIME" ;
+    chcs:identifier "62_12-8" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-84> rdfs:label "CIPROFLOXACIN" ;
+    chcs:identifier "62_12-84" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-86> rdfs:label "TICARCILLIN_CA" ;
+    chcs:identifier "62_12-86" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-92> rdfs:label "CEFTRIAXONE" ;
+    chcs:identifier "62_12-92" .
+
+<http://hokukahu.com/systems/chcs-1/62_12-96> rdfs:label "IMIPENEM" ;
+    chcs:identifier "62_12-96" .
+
+

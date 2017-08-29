@@ -1,0 +1,22 @@
+# This schema contains the various types of warnings which the system currently handles for order entry.  
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Order_Warnings-102_1.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/orderWarningss/Map/#>
+PREFIX orderWarnings: <urn:local:orderWarnings:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Order_Warnings-102_1>
+
+<http://hokukahu.com/chcs/Order_Warnings-102_1> {
+    chcss:identifier             xsd:string     %Map:{ orderWarnings:id %};
+    chcss:chcs_type              xsd:string?    %Map:{ orderWarnings:chcs_type %};
+    rdfs:label                   xsd:string     %Map:{ orderWarnings:label %};
+
+    chcss:name-102_1             xsd:string     %Map:{ orderWarnings:name %};
+    chcss:message_text-102_1     xsd:string     %Map:{ orderWarnings:message_text %};
+}

@@ -1,0 +1,104 @@
+# This schema holds those procedures which are not included in the automated ancillaries. 
+# For example, respiratory therapy and cardiology orders (EG. EKG, Pulmonary Function tests, Consultations)
+# These Orders may either be scheduled procedures or not.
+# 
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Ancillary_Procedure-108_1.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/procedures/Map/#>
+PREFIX procedure: <urn:local:procedure:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Ancillary_Procedure-108_1>
+
+<http://hokukahu.com/chcs/Ancillary_Procedure-108_1> {
+    chcss:identifier                              xsd:string        %Map:{ procedure:id %};
+    chcss:chcs_type                               xsd:string?       %Map:{ procedure:chcs_type %};
+    rdfs:label                                    xsd:string        %Map:{ procedure:label %};
+
+    chcss:name-108_1                              xsd:string        %Map:{ procedure:name %};
+    chcss:schedule_type-108_1                     xsd:string        %Map:{ procedure:schedule_type %};
+    chcss:result_type-108_1                       xsd:string        %Map:{ procedure:result_type %};
+
+    chcss:mnemonic-108_1                          xsd:string?       %Map:{ procedure:mnemonic_type %};
+    chcss:description-108_1                       xsd:string?       %Map:{ procedure:description %};
+    chcss:device-108_1                            xsd:string?       %Map:{ procedure:device %};
+
+    chcss:service-108_1 {
+       chcss:identifier      xsd:string    %Map:{ procedure:service_id %};
+       rdfs:label            xsd:string    %Map:{ procedure:service_label %};
+    }?;
+
+    chcss:special_procedure_type-108_1            xsd:string?       %Map:{ procedure:special_procedure_type %};
+
+    chcss:display_clinic_specialty-108_1          xsd:boolean?      %Map:{ procedure:display_clinic_specialty %};
+    chcss:display_provider_specialty-108_1        xsd:boolean?      %Map:{ procedure:display_provider_specialty %};
+    chcss:display_consulting_clinic-108_1         xsd:boolean?      %Map:{ procedure:display_consulting_clinic %};
+    chcss:display_consulting_hcp-108_1            xsd:boolean?      %Map:{ procedure:display_consulting_hcp %};
+    chcss:order_review_required-108_1             xsd:boolean?      %Map:{ procedure:order_review_required %};
+
+    chcss:prompt_label-108_1                      xsd:string?       %Map:{ procedure:prompt_label %};
+    chcss:output_title-108_1                      xsd:string?       %Map:{ procedure:output_title %};
+    chcss:delimiter-108_1                         xsd:string?       %Map:{ procedure:delimiter %};
+    chcss:standard_entry-108_1                    xsd:string?       %Map:{ procedure:standard_entry %};
+
+    chcss:unit_of_measure-108_1                   xsd:string?       %Map:{ procedure:unit_of_measure %};
+
+    chcss:age_group-108_1 {
+       chcss:upper_limit-108_15   xsd:decimal?    %Map:{ procedure:upper_limit %};
+       chcss:age_group-108_15     xsd:string?     %Map:{ procedure:age_group %};
+       chcss:normal_range-108_15  xsd:string?     %Map:{ procedure:normal_range %};
+    }?;
+
+    chcss:not_orderable-108_1                     xsd:boolean?      %Map:{ procedure:not_orderable %};
+    chcss:unavailable-108_1                       xsd:boolean?      %Map:{ procedure:unavailable %};
+    chcss:physical_parameter-108_1                xsd:boolean?      %Map:{ procedure:physical_parameter %};
+
+    chcss:codes-108_1 {
+       chcss:code-108_14          xsd:string?     %Map:{ procedure:code %};
+       chcss:code_meaning-108_14  xsd:string?     %Map:{ procedure:code_meaning %};
+    }?;
+
+    chcss:related_procedures-108_1 {
+       chcss:related_procedure-108_13 {
+          chcss:identifier      xsd:string    %Map:{ procedure:related_procedure_id %};
+          rdfs:label            xsd:string    %Map:{ procedure:related_procedure_label %};
+       };
+       chcss:prompt_order-108_13  xsd:decimal?    %Map:{ procedure:prompt_order %};
+       chcss:grouping-108_13      xsd:string?     %Map:{ procedure:grouping %};
+    }?;
+
+    chcss:countersignature-108_1  xsd:string?     %Map:{ procedure:countersignature %};
+
+    chcss:authorization_key-108_1 {
+       chcss:identifier         xsd:string    %Map:{ procedure:authorization_key_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:authorization_key_label %};
+    }?;
+    chcss:authorized_ordering_classes-108_1 {
+       chcss:identifier         xsd:string    %Map:{ procedure:authorized_ordering_classes_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:authorized_ordering_classes_label %};
+    }?;
+
+    chcss:default_cont_timing-108_1 {
+       chcss:identifier         xsd:string    %Map:{ procedure:default_cont_timing_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:default_cont_timing_label %};
+    }?;
+
+    chcss:clinic_specialty-108_1 {
+       chcss:identifier         xsd:string    %Map:{ procedure:clinic_specialty_id %};
+       rdfs:label               xsd:string    %Map:{ procedure:clinic_specialty_label %};
+    }*;
+ 
+    chcss:scheduled_consulting_clinic-108_1 {
+       chcss:identifier         xsd:string    %Map:{ procedure:scheduled_consulting_clinic_id %};
+       chcss:chcs_type          xsd:string?   %Map:{ procedure:scheduled_consulting_clinic_type %};
+
+       chcss:scheduled_consulting_clinic-108_18 {
+           chcss:identifier     xsd:string    %Map:{ procedure:scheduled_consulting_clinic_id %};
+           rdfs:label           xsd:string    %Map:{ procedure:scheduled_consulting_clinic_label %};
+       };
+    }*;
+}

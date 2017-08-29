@@ -1,0 +1,28 @@
+# This schema contains a list of codes and descriptions for the
+# patient's ethnic background. 
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Ethnic_Background-8191.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX ethnicity: <urn:local:ethnicity:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Ethnic_Background-8191>
+
+<http://hokukahu.com/chcs/Ethnic_Background-8191> {
+    chcss:identifier                                xsd:string        %Map:{ ethnicity:id %};
+    chcss:chcs_type                                 xsd:string?       %Map:{ ethnicity:chcs_type %};
+    rdfs:label                                      xsd:string        %Map:{ ethnicity:label %};
+
+    chcss:code-8191                                 xsd:string        %Map:{ ethnicity:code %};
+    chcss:description-8191                          xsd:string        %Map:{ ethnicity:description %};
+ 
+    chcss:dba_inactive_flag-8191      xsd:string?         %Map:{ ethnicity:dba_inactive_flag %};
+    chcss:deactivation_date-8191      xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?       %Map:{ ethnicity:deactivation_date %};
+}

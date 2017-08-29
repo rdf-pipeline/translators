@@ -1,0 +1,23 @@
+# This schema defines the groups of related drugs
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Diagnostic_Related_Group-312.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX diagnosticReport: <urn:local:diagnostic-report:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Diagnostic_Related_Group-312>
+
+<http://hokukahu.com/chcs/Diagnostic_Related_Group-312> {
+    chcss:identifier              xsd:string       %Map:{ diagnosticReport:id %};
+    chcss:chcs_type               xsd:string?      %Map:{ diagnosticReport:chcs_type %};
+    rdfs:label                    xsd:string       %Map:{ diagnosticReport:label %};
+
+    chcss:drg_code-312            xsd:string       %Map:{ diagnosticReport:drg_code %};
+    chcss:drg_description-312     xsd:string       %Map:{ diagnosticReport:drg_description %};
+    chcss:relative_weight-312     xsd:string?      %Map:{ diagnosticReport:relative_weight %};
+}

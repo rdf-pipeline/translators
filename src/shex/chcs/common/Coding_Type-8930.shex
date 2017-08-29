@@ -1,0 +1,36 @@
+# This schedma contains the medical terminology code soruce types
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Coding_Type-8930.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX codingType: <urn:local:coding-type:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Coding_Type-8930>
+
+<http://hokukahu.com/chcs/Coding_Type-8930> {
+    chcss:identifier               xsd:string       %Map:{ codingType:id %};
+    chcss:chcs_type                xsd:string?      %Map:{ codingType:chcs_type %};
+    rdfs:label                     xsd:string       %Map:{ codingType:label %};
+
+    chcss:name-8930                xsd:string       %Map:{ codingType:name %};
+    chcss:functional_area-8930     xsd:string       %Map:{ codingType:functional_area %};
+
+    chcss:source_files-8930 {
+       chcss:identifier            xsd:string    %Map:{ codingType:source_files_id %};
+       chcss:chcs_type             xsd:string?   %Map:{ codingType:source_files_type %};
+
+       chcss:source_file-8930_01 {
+           chcss:identifier       xsd:string    %Map:{ codingType:source_file_id %};
+           rdfs:label             xsd:string    %Map:{ codingType:source_file_label %};
+       };
+       chcss:code_field_in_source-8930_01             xsd:string   %Map:{ codingType:code_field_in_source %};
+       chcss:interpretation_field_in_source-8930_01   xsd:string   %Map:{ codingType:interpretation_field_in_source %};
+       chcss:code_transformation-8930_01              xsd:string   %Map:{ codingType:code_transformation %};
+       chcss:dictionary_built-8930_01                 xsd:boolean? %Map:{ codingType:dictionary_built %};
+    }*;
+}

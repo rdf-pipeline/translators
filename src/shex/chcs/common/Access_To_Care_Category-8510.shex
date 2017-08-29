@@ -1,0 +1,20 @@
+# This CHCS schema lists all access to healthcare categories.
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Access_To_Care_Category-8510.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX carePlanCategory: <urn:local:care-plan-category:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Access_To_Care_Category-8510>
+
+<http://hokukahu.com/chcs/Access_To_Care_Category-8510> {
+    chcss:identifier        xsd:string     %Map:{ carePlanCategory:id %};
+    chcss:chcs_type         xsd:string?    %Map:{ carePlanCategory:chcs_type %};
+    rdfs:label              xsd:string     %Map:{ carePlanCategory:label %};
+    chcss:name-8510         xsd:string     %Map:{ carePlanCategory:name %};
+    chcss:standard-8510     xsd:string     %Map:{ carePlanCategory:standard %};
+}

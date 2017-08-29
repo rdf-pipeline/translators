@@ -1,0 +1,24 @@
+# This schema is used to list of possible appointment statuses, e.g., kept, cancel, no-show, etc.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Appointment_Status-8514.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/appointments/Map/#>
+PREFIX appointment: <urn:local:appointment:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Appointment_Status-8514>
+
+<http://hokukahu.com/chcs/Appointment_Status-8514> {
+    chcss:identifier                xsd:string        %Map:{ appointment:id %};
+    chcss:chcs_type                 xsd:string?       %Map:{ appointment:chcs_type %};
+    rdfs:label                      xsd:string        %Map:{ appointment:label %};
+
+    chcss:appointment_status-8514   xsd:string        %Map:{ appointment:appointment_status %};
+
+    chcss:number-8514               xsd:integer?      %Map:{ appointment:status_number %};
+    chcss:screen-8514               xsd:boolean?      %Map:{ appointment:status_screen %};
+}

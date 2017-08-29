@@ -1,0 +1,23 @@
+# This schema contains data on where a medical order originated. 
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Origin_Of_Order-111.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX originOfOrder: <urn:local:originOfOrder:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Origin_Of_Order-111>
+
+<http://hokukahu.com/chcs/Origin_Of_Order-111> {
+    chcss:identifier           xsd:string        %Map:{ originOfOrder:id %};
+    chcss:chcs_type            xsd:string?       %Map:{ originOfOrder:chcs_type %};
+    rdfs:label                 xsd:string        %Map:{ originOfOrder:label %};
+
+    chcss:name-111             xsd:string       %Map:{ originOfOrder:name %};
+    chcss:code-111             xsd:string       %Map:{ originOfOrder:code %};
+    chcss:description-111      xsd:string       %Map:{ originOfOrder:description %};
+}

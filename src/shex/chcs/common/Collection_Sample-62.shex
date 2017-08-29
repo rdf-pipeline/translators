@@ -1,0 +1,44 @@
+# This schema contains a dictionary for collection samples and 
+# describes the collection sample requirements specific to a laboratory.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Collection_Sample-62.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX labSpecimenRequirements: <urn:local:lab-specimen-requirements:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Collection_Sample-62>
+
+<http://hokukahu.com/chcs/Collection_Sample-62> {
+    chcss:identifier           xsd:string       %Map:{ labSpecimenRequirements:id %};
+    chcss:chcs_type            xsd:string?      %Map:{ labSpecimenRequirements:chcs_type %};
+    rdfs:label                 xsd:string       %Map:{ labSpecimenRequirements:label %};
+
+    chcss:name-62              xsd:string       %Map:{ labSpecimenRequirements:name %};
+    chcss:default_specimen-62 {
+        chcss:identifier       xsd:string       %Map:{ labSpecimenRequirements:default_specimen_id %};
+        rdfs:label             xsd:string       %Map:{ labSpecimenRequirements:default_specimen_label %};
+    }?;
+
+    chcss:tube_top_color-62    xsd:string       %Map:{ labSpecimenRequirements:tube_top_color %};
+
+    chcss:snomed_code-62 {
+        chcss:identifier       xsd:string       %Map:{ labSpecimenRequirements:snomed_code_id %};
+        rdfs:label             xsd:string       %Map:{ labSpecimenRequirements:snomed_code_label %};
+    }?;
+
+    chcss:synonym-62           xsd:string*      %Map:{ labSpecimenRequirements:synonym_id %};
+
+    chcss:inactive_flag-62     xsd:string?      %Map:{ branchOfService:inactive_flag %};
+    chcss:inactivation_date_time-62   xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?   %Map:{ branchOfService:inactivation_date_time %};
+    chcss:inactivated_by-62 {
+        chcss:identifier       xsd:string       %Map:{ labSpecimenRequirements:inactivated_by_id %};
+        rdfs:label             xsd:string       %Map:{ labSpecimenRequirements:inactivated_by_label %};
+    }?;
+}

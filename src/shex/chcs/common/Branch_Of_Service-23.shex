@@ -1,0 +1,35 @@
+# This schema contains a table of military and government services, e.g., air force,
+# foreign military, US public health service, etc.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Branch_Of_Service-23.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/branchOfServices/Map/#>
+PREFIX branchOfService: <urn:local:branchOfService:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Branch_Of_Service-23>
+
+<http://hokukahu.com/chcs/Branch_Of_Service-23> {
+    chcss:identifier                xsd:string       %Map:{ branchOfService:id %};
+    chcss:chcs_type                 xsd:string?      %Map:{ branchOfService:chcs_type %};
+    rdfs:label                      xsd:string       %Map:{ branchOfService:label %};
+
+    chcss:name-23                   xsd:string       %Map:{ branchOfService:name %};
+    chcss:code-23                   xsd:string       %Map:{ branchOfService:code %};
+    chcss:abbreviation-23           xsd:string?      %Map:{ branchOfService:abbreviation %};
+
+    chcss:sidr_svc_flag-23          xsd:string?      %Map:{ branchOfService:sidr_svc_flag %};
+    chcss:single_svc_flag-23        xsd:boolean?     %Map:{ branchOfService:single_svc_flag %};
+
+    chcss:deers_pit_code-23         xsd:string       %Map:{ branchOfService:deers_pit_code %};
+    chcss:deers_elig_code-23        xsd:string?      %Map:{ branchOfService:deers_elig_code %};
+    chcss:dba_inactive_flag-23      xsd:string?      %Map:{ branchOfService:dba_inactive_flag %};
+
+    chcss:deactivation_date-23      xsd:date or
+                                    xsd:dateTime or
+                                    xsd:datetime?    %Map:{ branchOfService:deactivation_date %};
+}

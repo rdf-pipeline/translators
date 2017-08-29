@@ -1,0 +1,54 @@
+# This schema contains a list of all fifty states and abbreviations, state codes, 
+# and county information. This file also contains certain continents and countries 
+# outside the continental United States. 
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Geographic_Location-5.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX geographicLoc: <urn:local:geographicLoc:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Geographic_Location-5>
+
+<http://hokukahu.com/chcs/Geographic_Location-5> {
+    chcss:identifier                   xsd:string        %Map:{ geographicLoc:id %};
+    chcss:chcs_type                    xsd:string?       %Map:{ geographicLoc:chcs_type %};
+    rdfs:label                         xsd:string        %Map:{ geographicLoc:label %};
+
+    chcss:name-5                       xsd:string        %Map:{ geographicLoc:name %};
+    chcss:abbreviation-5               xsd:string        %Map:{ geographicLoc:abbreviated_name %};
+    chcss:fips-5                       xsd:string        %Map:{ geographicLoc:fips %};
+    chcss:capital-5                    xsd:string        %Map:{ geographicLoc:capital %};
+    chcss:country-5 {
+        chcss:identifier                xsd:string       %Map:{ geographicLoc:country_id %};
+        rdfs:label                      xsd:string       %Map:{ geographicLoc:country_label %};
+    };
+
+    chcss:military_mailing_location-5   xsd:boolean?     %Map:{ geographicLoc:military_mailing_location %};
+    chcss:ship-5                        xsd:boolean?     %Map:{ geographicLoc:ship %};
+
+    chcss:physical_location-5           xsd:string       %Map:{ geographicLoc:physical_location %};
+    chcss:oconus_licensed_for_cpt-5     xsd:string?      %Map:{ geographicLoc:oconus_licensed_for_cpt %};
+    chcss:iso_3166_digraph-5            xsd:string?      %Map:{ geographicLoc:iso_3166_digraph %};
+    chcss:iso_3166_trigraph-5           xsd:string?      %Map:{ geographicLoc:iso_3166_trigraph %};
+
+    chcss:county-5 {
+        chcss:identifier                xsd:string       %Map:{ geographicLoc:county_id %};
+        chcss:chcs_type                 xsd:string?      %Map:{ geographicLoc:county_type %};
+        chcss:county-5_01               xsd:string       %Map:{ geographicLoc:county_label %};
+    }*;
+ 
+    chcss:activation_inactivation_date-5 {
+       chcss:identifier                           xsd:string        %Map:{ geographicLoc:activation_inactivation_date_id %};
+       chcss:chcs_type                            xsd:string?       %Map:{ geographicLoc:activation_inactivation_date_type %};
+
+       chcss:active_inactive_status-5_03          xsd:string        %Map:{ geographicLoc:active_inactive_status %};
+       chcss:activation_inactivation_date-5_03    xsd:date or
+                                                  xsd:dateTime or
+                                                  xsd:datetime      %Map:{ geographicLoc:activation_inactivation_date %};
+    }*;
+}

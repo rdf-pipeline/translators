@@ -1,0 +1,29 @@
+# This schema contains codes that describe the casualty prognosis of a
+# patient. 
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Casualty_Prognosis-8106.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX casualtyPrognosis: <urn:local:casualtyPrognosis:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Casualty_Prognosis-8106>
+
+<http://hokukahu.com/chcs/Casualty_Prognosis-8106> {
+    chcss:identifier                xsd:string       %Map:{ casualtyPrognosis:id %};
+    chcss:chcs_type                 xsd:string?      %Map:{ casualtyPrognosis:chcs_type %};
+    rdfs:label                      xsd:string       %Map:{ casualtyPrognosis:label %};
+
+    chcss:name-8106                 xsd:string       %Map:{ casualtyPrognosis:name %};
+    chcss:code-8106                 xsd:string       %Map:{ casualtyPrognosis:code %};
+
+    chcss:dba_inactive_flag-8106    xsd:string?      %Map:{ casualtyPrognosis:dba_inactive_flag %};
+
+    chcss:deactivation_date-8106    xsd:date or
+                                    xsd:dateTime or
+                                    xsd:datetime?    %Map:{ casualtyPrognosis:deactivation_date %};
+}

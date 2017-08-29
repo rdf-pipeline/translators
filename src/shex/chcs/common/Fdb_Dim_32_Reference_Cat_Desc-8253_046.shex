@@ -1,0 +1,22 @@
+# This schema holds the FDB Dim table that contains the definition of DDI Reference Categories.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Fdb_Dim_32_Reference_Cat_Desc-8253_046.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX fdrcd: <urn:local:fdrcd:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Fdb_Dim_32_Reference_Cat_Desc-8253_046>
+
+<http://hokukahu.com/chcs/Fdb_Dim_32_Reference_Cat_Desc-8253_046> {
+    chcss:identifier               xsd:string       %Map:{ fdrcd:id %};
+    chcss:chcs_type                xsd:string?      %Map:{ fdrcd:chcs_type %};
+    rdfs:label                     xsd:string       %Map:{ fdrcd:label %};
+
+    chcss:iamtrefcat-8253_046      xsd:string       %Map:{ fdrcd:iamtrefcat %};
+    chcss:iamtrefcatd-8253_046     xsd:string       %Map:{ fdrcd:iamtrefcatd %};
+}

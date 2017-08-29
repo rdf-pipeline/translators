@@ -1,0 +1,27 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/757_02-1> a chcs:Codes-757_02 ;
+    rdfs:label "Unresolved" ;
+    chcs:classification_source-757_02 <http://hokukahu.com/systems/chcs-1/757_03-12> ;
+    chcs:chcs_type "chcss:Codes-757_02" ;
+    chcs:code-757_02 "799.9" ;
+    chcs:expression-757_02 <http://hokukahu.com/systems/chcs-1/757_01-1> ;
+    chcs:identifier "757_02-1" ;
+    chcs:major_concept-757_02 <http://hokukahu.com/systems/chcs-1/757-1> .
+
+<http://hokukahu.com/systems/chcs-1/757-1> rdfs:label "Unresolved" ;
+    chcs:identifier "757-1" .
+
+<http://hokukahu.com/systems/chcs-1/757_01-1> rdfs:label "Unresolved" ;
+    chcs:identifier "757_01-1" .
+
+<http://hokukahu.com/systems/chcs-1/757_03-12> rdfs:label "ICD91" ;
+    chcs:identifier "757_03-12" .
+
+

@@ -1,0 +1,18 @@
+@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/100514-1> a chcs:Kg_Provider_Role-100514 ;
+    rdfs:label "1" ;
+    chcs:apv-100514 true ;
+    chcs:chcs_type "chcss:Kg_Provider_Role-100514" ;
+    chcs:identifier "100514-1" ;
+    chcs:role_code-100514 "1" ;
+    chcs:role_description-100514 "ATTENDING" ;
+    chcs:standard-100514 true .
+
+

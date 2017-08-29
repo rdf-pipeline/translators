@@ -1,0 +1,24 @@
+# This schema contains the descriptive titles for medical terminology and
+# diagnosis and classification systems.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Coding_Systems-757_03.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX codingSystem: <urn:local:coding-system:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Coding_Systems-757_03>
+
+<http://hokukahu.com/chcs/Coding_Systems-757_03> {
+    chcss:identifier                   xsd:string       %Map:{ codingSystem:id %};
+    chcss:chcs_type                    xsd:string?      %Map:{ codingSystem:chcs_type %};
+    rdfs:label                         xsd:string       %Map:{ codingSystem:label %};
+
+    chcss:source_abbreviation-757_03   xsd:string       %Map:{ codingSystem:source_abbreviation %};
+    chcss:nomenclature-757_03          xsd:string       %Map:{ codingSystem:nomenclature %};
+    chcss:source_title-757_03          xsd:string       %Map:{ codingSystem:source_title %};
+}
