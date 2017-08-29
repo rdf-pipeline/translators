@@ -3,42 +3,42 @@
     "@graph": [
         {
             "_id": "8510-1",
-            "type": "cmumpss:Access_To_Care_Category-8510",
+            "type": "chcss:Access_To_Care_Category-8510",
             "label": "ACUTE",
             "name-8510": "ACUTE",
             "standard-8510": "1"
         },
         {
             "_id": "8510-2",
-            "type": "cmumpss:Access_To_Care_Category-8510",
+            "type": "chcss:Access_To_Care_Category-8510",
             "label": "ROUTINE",
             "name-8510": "ROUTINE",
             "standard-8510": "7"
         },
         {
             "_id": "8510-3",
-            "type": "cmumpss:Access_To_Care_Category-8510",
+            "type": "chcss:Access_To_Care_Category-8510",
             "label": "SPECIALTY",
             "name-8510": "SPECIALTY",
             "standard-8510": "28"
         },
         {
             "_id": "8510-4",
-            "type": "cmumpss:Access_To_Care_Category-8510",
+            "type": "chcss:Access_To_Care_Category-8510",
             "label": "WELLNESS",
             "name-8510": "WELLNESS",
             "standard-8510": "28"
 	},
         {
             "_id": "8510-5",
-            "type": "cmumpss:Access_To_Care_Category-8510",
+            "type": "chcss:Access_To_Care_Category-8510",
             "label": "FUTURE REQUEST",
             "name-8510": "FUTURE REQUEST",
             "standard-8510": "28"
         },
         {
             "_id": "8510-6",
-            "type": "cmumpss:Access_To_Care_Category-8510",
+            "type": "chcss:Access_To_Care_Category-8510",
             "label": "DROUTINE",
             "name-8510": "DROUTINE",
             "standard-8510": "21"

@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "31-793",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "100",
       "dx_code-31": "100",
       "name-31": "ATROPHY OF UPPER EXTREMITY,RIGHT",
@@ -11,7 +11,7 @@
     },
     {
       "_id": "31-794",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "101",
       "dx_code-31": "101",
       "name-31": "ATROPHY OF UPPER EXTREMITY,LEFT",
@@ -19,7 +19,7 @@
     },
     {
       "_id": "31-795",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "102",
       "dx_code-31": "102",
       "name-31": "ATROPHY OF UPPER EXTREMITIES,BOTH",
@@ -27,7 +27,7 @@
     },
     {
       "_id": "31-796",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "103",
       "dx_code-31": "103",
       "name-31": "ATROPHY OF LOWER EXTREMITY,ONE",
@@ -35,7 +35,7 @@
     },
     {
       "_id": "31-797",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "104",
       "dx_code-31": "104",
       "name-31": "ATROPHY OF LOWER EXTREMITIES,BOTH",
@@ -43,7 +43,7 @@
     },
     {
       "_id": "31-798",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "113",
       "dx_code-31": "113",
       "name-31": "BLINDNESS,PARTIAL,ONE EYE",
@@ -51,7 +51,7 @@
     },
     {
       "_id": "31-799",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "114",
       "dx_code-31": "114",
       "name-31": "BLINDNESS,PARTIAL,BOTH EYES",
@@ -59,7 +59,7 @@
     },
     {
       "_id": "31-800",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "115",
       "dx_code-31": "115",
       "name-31": "BLINDNESS,TOTAL,ONE EYE/PARTIAL OTHER",
@@ -67,7 +67,7 @@
     },
     {
       "_id": "31-801",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "116",
       "dx_code-31": "116",
       "name-31": "BLINDNESS,TOTAL,ONE EYE AND LOSS OF OTHER EYE",
@@ -75,7 +75,7 @@
     },
     {
       "_id": "31-802",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "117",
       "dx_code-31": "117",
       "name-31": "BLINDNESS,PARTIAL,ONE EYE AND LOSS OF OTHER EYE",
@@ -83,7 +83,7 @@
     },
     {
       "_id": "31-803",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "123",
       "dx_code-31": "123",
       "name-31": "BLINDNESS,TOTAL,ONE EYE",
@@ -91,7 +91,7 @@
     },
     {
       "_id": "31-804",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "124",
       "dx_code-31": "124",
       "name-31": "BLINDNESS,TOTAL,BOTH EYES",
@@ -99,7 +99,7 @@
     },
     {
       "_id": "31-805",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "125",
       "dx_code-31": "125",
       "name-31": "CONDITIONS OF EYE AND ADNEXA OTHER THAN BLINDNESS",
@@ -107,7 +107,7 @@
     },
     {
       "_id": "31-806",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "130",
       "dx_code-31": "130",
       "name-31": "ARTHRITIS, TRAUMATIC, UPPER EXTREMITY(IES) INCLUDING SHOULDER(S)",
@@ -115,7 +115,7 @@
     },
     {
       "_id": "31-807",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "131",
       "dx_code-31": "131",
       "name-31": "ARTHRITIS, TRAUMATIC, HIP(S)",
@@ -123,7 +123,7 @@
     },
     {
       "_id": "31-808",
-      "type": "cmumpss:Disability_Condition-31",
+      "type": "chcss:Disability_Condition-31",
       "label": "132",
       "dx_code-31": "132",
       "name-31": "ARTHRITIS, TRAUMATIC, LOWER EXTREMITY(IES), EXCLUDING HIP(S)",

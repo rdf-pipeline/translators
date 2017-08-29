@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "59_6-1",
-      "type": "cmumpss:Pharmacy_Action-59_6",
+      "type": "chcss:Pharmacy_Action-59_6",
       "label": "PRF",
       "abbreviated_name-59_6": "PRF",
       "name-59_6": "Expanded Profile",
@@ -12,7 +12,7 @@
     },
     {
       "_id": "59_6-2",
-      "type": "cmumpss:Pharmacy_Action-59_6",
+      "type": "chcss:Pharmacy_Action-59_6",
       "label": "EDIT",
       "abbreviated_name-59_6": "EDIT",
       "name-59_6": "Edit Order",
@@ -21,7 +21,7 @@
     },
     {
       "_id": "59_6-4",
-      "type": "cmumpss:Pharmacy_Action-59_6",
+      "type": "chcss:Pharmacy_Action-59_6",
       "label": "BOTH",
       "abbreviated_name-59_6": "BOTH",
       "name-59_6": "ALL ORDERS",
@@ -30,7 +30,7 @@
     },
     {
       "_id": "59_6-5",
-      "type": "cmumpss:Pharmacy_Action-59_6",
+      "type": "chcss:Pharmacy_Action-59_6",
       "label": "ACT",
       "abbreviated_name-59_6": "ACT",
       "name-59_6": "Display Active Orders",
@@ -39,7 +39,7 @@
     },
     {
       "_id": "59_6-6",
-      "type": "cmumpss:Pharmacy_Action-59_6",
+      "type": "chcss:Pharmacy_Action-59_6",
       "label": "DUE",
       "abbreviated_name-59_6": "DUE",
       "name-59_6": "Adjust Due Times",

@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "8810-3",
-      "type": "cmumpss:Clinical_History-8810",
+      "type": "chcss:Clinical_History-8810",
       "label": "JETSON,GEORGE J",
       "name-8810": {
         "id": "2-3",
@@ -12,7 +12,7 @@
       "drug_allergy-8810": [
         {
           "id": "8810_03-1_3",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-999004",
             "label": "NKDA"
@@ -23,7 +23,7 @@
     },
     {
       "_id": "8810-4",
-      "type": "cmumpss:Clinical_History-8810",
+      "type": "chcss:Clinical_History-8810",
       "label": "JETSON,JANE A",
       "name-8810": {
         "id": "2-4",
@@ -32,7 +32,7 @@
       "drug_allergy-8810": [
         {
           "id": "8810_03-1_4",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-1025",
             "label": "PENICILLIN V POTASSIUM",
@@ -45,7 +45,7 @@
     },
     {
       "_id": "8810-5",
-      "type": "cmumpss:Clinical_History-8810",
+      "type": "chcss:Clinical_History-8810",
       "label": "SPACELY,COSMO G",
       "name-8810": {
         "id": "2-5",
@@ -54,7 +54,7 @@
       "drug_allergy-8810": [
         {
           "id": "8810_03-1_5",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-58024",
             "label": "YELLOW FEVER VACCINE"
@@ -65,7 +65,7 @@
     },
     {
       "_id": "8810-7",
-      "type": "cmumpss:Clinical_History-8810",
+      "type": "chcss:Clinical_History-8810",
       "label": "JETSON,JUDY L",
       "name-8810": {
         "id": "2-7",
@@ -74,7 +74,7 @@
       "drug_allergy-8810": [
         {
           "id": "8810_03-1_7",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-999004",
             "label": "NKDA"
@@ -84,7 +84,7 @@
     },
     {
       "_id": "8810-15",
-      "type": "cmumpss:Clinical_History-8810",
+      "type": "chcss:Clinical_History-8810",
       "label": "ORBIT,HENRY W",
       "name-8810": {
         "id": "2-15",
@@ -93,7 +93,7 @@
       "drug_allergy-8810": [
         {
           "id": "8810_03-1_15",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-999004",
             "label": "NKDA"
@@ -104,7 +104,7 @@
     },
     {
       "_id": "8810-71",
-      "type": "cmumpss:Clinical_History-8810",
+      "type": "chcss:Clinical_History-8810",
       "label": "COGSWELL,SPENCER M",
       "name-8810": {
         "id": "2-71",
@@ -113,7 +113,7 @@
       "drug_allergy-8810": [
         {
           "id": "8810_03-1_71",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-999000",
             "label": "NO KNOWN ALLERGIES"
@@ -121,7 +121,7 @@
         },
         {
           "id": "8810_03-2_71",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-999004",
             "label": "NKDA"
@@ -131,7 +131,7 @@
     },
     {
       "_id": "8810-152",
-      "type": "cmumpss:Clinical_History-8810",
+      "type": "chcss:Clinical_History-8810",
       "label": "JETSON,ELROY G",
       "name-8810": {
         "id": "2-152",
@@ -140,7 +140,7 @@
       "drug_allergy-8810": [
         {
           "id": "8810_03-1_152",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-1025",
             "label": "PENICILLIN V POTASSIUM",
@@ -150,7 +150,7 @@
         },
         {
           "id": "8810_03-2_152",
-          "type": "cmumpss:Drug_Allergy-8810_03",
+          "type": "chcss:Drug_Allergy-8810_03",
           "allergy_selection-8810_03": {
             "id": "8254_01-9021",
             "label": "ERYTHROMYCIN BASE",

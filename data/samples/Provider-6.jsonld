@@ -4,7 +4,7 @@
      {
       "_id": "6-26",
       "identifier": "6-26",
-      "type": "cmumpss:Provider-6",
+      "type": "chcss:Provider-6",
 
       "label": "FLINTSTONE,WILMA",
       "name-6": "FLINTSTONE,WILMA",
@@ -219,7 +219,7 @@
       "certification-6": [
         {
           "identifier": "6_12-1_28",
-          "type": "cmumpss:Certification-6_12",
+          "type": "chcss:Certification-6_12",
           "date_time-6_12": {
             "value": "1990-01-01T00:00:00",
             "type": "xsd:dateTime"
@@ -249,7 +249,7 @@
       "licensure-6": [
         {
           "identifier": "6_11-1_28",
-          "type": "cmumpss:Licensure-6_11",
+          "type": "chcss:Licensure-6_11",
           "date_time-6_11": {
             "value": "1990-01-07T00:00:00",
             "type": "xsd:dateTime"
@@ -281,7 +281,7 @@
       "periodic_training-6": [
         {
           "identifier": "6_19-1_28",
-          "type": "cmumpss:Periodic_Training-6_19",
+          "type": "chcss:Periodic_Training-6_19",
           "date_time-6_19": {
             "value": "1990-01-08T00:00:00",
             "type": "xsd:dateTime"
@@ -309,7 +309,7 @@
       "education_degree-6": [
         {
           "identifier": "6_09-1_28",
-          "type": "cmumpss:Education_Degree-6_09",
+          "type": "chcss:Education_Degree-6_09",
           "date_time-6_09": {
             "value": "1990-01-03T00:00:00",
             "type": "xsd:dateTime"
@@ -331,7 +331,7 @@
       "post_graduate_training-6": [
         {
           "identifier": "6_1-1_28",
-          "type": "cmumpss:Post_Graduate_Training-6_1",
+          "type": "chcss:Post_Graduate_Training-6_1",
           "date_time-6_1": {
             "value": "1990-01-07T00:00:00",
             "type": "xsd:dateTime"
@@ -351,7 +351,7 @@
         },
         {
           "identifier": "6_1-2_28",
-          "type": "cmumpss:Post_Graduate_Training-6_1",
+          "type": "chcss:Post_Graduate_Training-6_1",
           "date_time-6_1": {
             "value": "1990-01-09T00:00:00",
             "type": "xsd:dateTime"

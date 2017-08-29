@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "8137-2",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "001",
       "code-8137": "001",
       "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER",
@@ -15,7 +15,7 @@
     },
     {
       "_id": "8137-3",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "000",
       "code-8137": "000",
       "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, BOARDING OR ALIGHTING",
@@ -27,7 +27,7 @@
     },
     {
       "_id": "8137-4",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "002",
       "code-8137": "002",
       "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, TAKEOFF,OTHER (INC CRASH ON TAKEOFF)",
@@ -39,7 +39,7 @@
     },
     {
       "_id": "8137-6",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "004",
       "code-8137": "004",
       "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, LANDING (INC CRASH ON LANDING)",
@@ -51,7 +51,7 @@
     },
     {
       "_id": "8137-7",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "005",
       "code-8137": "005",
       "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, TERM OF FLIGHT NOT AT AIRFIELD",
@@ -63,7 +63,7 @@
     },
      {
       "_id": "8137-8",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "006",
       "code-8137": "006",
       "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, RADIATION INJURY & OTHER NUC",
@@ -75,7 +75,7 @@
     },
     {
       "_id": "8137-9",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "009",
       "code-8137": "009",
       "name-8137": "AIR ACCIDENT, FIXED-WING MILITARY, OTHER INJURY",
@@ -87,7 +87,7 @@
     },
     {
       "_id": "8137-10",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "010",
       "code-8137": "010",
       "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, BOARDING OR ALIGHTING",
@@ -99,7 +99,7 @@
     },
     {
       "_id": "8137-11",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "011",
       "code-8137": "011",
       "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER",
@@ -111,7 +111,7 @@
     },
     {
       "_id": "8137-12",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "012",
       "code-8137": "012",
       "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TAXIING (INC COLLISION) & HOVERING",
@@ -123,7 +123,7 @@
     },
     {
       "_id": "8137-13",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "013",
       "code-8137": "013",
       "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TAKEOFF",
@@ -135,7 +135,7 @@
     },
     {
       "_id": "8137-14",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "014",
       "code-8137": "014",
       "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, LANDING",
@@ -147,7 +147,7 @@
     },
     {
       "_id": "8137-15",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "015",
       "code-8137": "015",
       "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, TERMINATION OF FLIGHT",
@@ -159,7 +159,7 @@
     },
     {
       "_id": "8137-16",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "016",
       "code-8137": "016",
       "name-8137": "AIR ACCIDENT, ROTARY-WING MILITARY, OTHER",
@@ -171,7 +171,7 @@
     },
     {
       "_id": "8137-17",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "017",
       "code-8137": "017",
       "name-8137": "AIR ACCIDENT, OTHER MILITARY AIRCRAFT, GLIDER",
@@ -183,7 +183,7 @@
     },
     {
       "_id": "8137-18",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "018",
       "code-8137": "018",
       "name-8137": "AIR ACCIDENT, OTHER MILITARY AIRCRAFT, LIGHTER-THAN-AIR CRAFT",
@@ -195,7 +195,7 @@
     },
     {
       "_id": "8137-19",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "019",
       "code-8137": "019",
       "name-8137": "AIR ACCIDENT, OTHER MILITARY AIRCRAFT, PLATFORM OR LIKE AIRCRAFT",
@@ -207,7 +207,7 @@
     },
     {
       "_id": "8137-20",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "020",
       "code-8137": "020",
       "name-8137": "AIR ACCIDENT, PARACHUTING FROM DAMAGED OR FAILED MILITARY AIRCRAFT",
@@ -219,7 +219,7 @@
     },
     {
       "_id": "8137-49",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "052",
       "code-8137": "052",
       "name-8137": "ESCAPE INJURY, AIR OR SPACECRAFT CREW, FROM IMPACT WITH PARTS OF CRAFT",
@@ -231,7 +231,7 @@
     },
     {
       "_id": "8137-50",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "053",
       "code-8137": "053",
       "name-8137": "ESCAPE INJURY, AIR OR SPACECRAFT CREW, FROM WINDBLAST",
@@ -243,7 +243,7 @@
     },
     {
       "_id": "8137-51",
-      "type": "cmumpss:Cause_Of_Injury-8137",
+      "type": "chcss:Cause_Of_Injury-8137",
       "label": "054",
       "code-8137": "054",
       "name-8137": "ESCAPE INJURY, AIR OR SPACECRAFT CREW, FROM FALL",

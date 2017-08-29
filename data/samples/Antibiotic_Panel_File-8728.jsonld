@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "8728-1",
-            "type": "cmumpss:Antibiotic_Panel_File-8728",
+            "type": "chcss:Antibiotic_Panel_File-8728",
             "label": "GRAM NEG",
             "antibiotic_panel-8728": "GRAM NEG",
             "default_antibiotics-8728": [
@@ -75,7 +75,7 @@
             "site_specimen-8728": [
                 {
                     "id": "8728_01-70_1",
-                    "type": "cmumpss:Site_Specimen-8728_01",
+                    "type": "chcss:Site_Specimen-8728_01",
                     "site_specimen-8728_01": {
                         "id": "61-70",
                         "label": "BLOOD"
@@ -83,7 +83,7 @@
                 },
                 {
                     "id": "8728_01-71_1",
-                    "type": "cmumpss:Site_Specimen-8728_01",
+                    "type": "chcss:Site_Specimen-8728_01",
                     "site_specimen-8728_01": {
                         "id": "61-71",
                         "label": "VOIDED URINE"

@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "44_3-6",
-            "type": "cmumpss:Apv_Appointment-44_3",
+            "type": "chcss:Apv_Appointment-44_3",
             "label": "199809080006",
             "apv_tracking_number-44_3": "199809080006",
             "order-44_3": {
@@ -41,7 +41,7 @@
             "postop_location-44_3": [
                 {
                     "id": "44_34-1_6",
-                    "type": "cmumpss:PostOp_Location-44_34",
+                    "type": "chcss:PostOp_Location-44_34",
                     "postop_location-44_34": {
                         "id": "44-1192",
                         "label": "APV 12E DENTAL CARE"
@@ -51,7 +51,7 @@
             "preop_location-44_3": [
                 {
                     "id": "44_31-1_6",
-                    "type": "cmumpss:PreOp_Location-44_31",
+                    "type": "chcss:PreOp_Location-44_31",
                     "preop_location-44_31": {
                         "id": "44-1192",
                         "label": "APV 12E DENTAL CARE"
@@ -67,7 +67,7 @@
                     "start_date_time-44_31": [
                         {
                             "id": "44_33-1_1_6",
-                            "type": "cmumpss:Start_Date_Time-44_33",
+                            "type": "chcss:Start_Date_Time-44_33",
                             "start_date_time-44_33": {
                                 "value": "1990-01-01T00:00:00",
                                 "type": "xsd:dateTime"

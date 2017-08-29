@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "44_7-1",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "PPD+",
             "code-44_7": "PPD+",
             "description-44_7": "POSITIVE PURIFIED PROTEIN DERIVATIVE (PPD) OR OTHER TUBERCULOSIS TEST EVALS",
@@ -12,7 +12,7 @@
         },
         {
             "_id": "44_7-2",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "BF>",
             "code-44_7": "BF>",
             "description-44_7": "WEIGHT EXCEEDING BODY FAT STANDARDS",
@@ -21,7 +21,7 @@
         },
         {
             "_id": "44_7-3",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "ADHD",
             "code-44_7": "ADHD",
             "description-44_7": "ATTENTION DEFICIT AND HYPERACTIVITY DISORDER OR ATTENTION DEFICIT DISORDER",
@@ -30,7 +30,7 @@
         },
         {
             "_id": "44_7-4",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "ANGER",
             "code-44_7": "ANGER",
             "description-44_7": "ANGER MANAGEMENT EDUCATION",
@@ -39,7 +39,7 @@
         },
         {
             "_id": "44_7-5",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "ASTHMA",
             "code-44_7": "ASTHMA",
             "description-44_7": "ASTHMA EVALUATION OR EDUCATION APPOINTMENTS",
@@ -48,7 +48,7 @@
         },
         {
             "_id": "44_7-6",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "BCP",
             "code-44_7": "BCP",
             "description-44_7": "BIRTH CONTROL",
@@ -57,7 +57,7 @@
         },
         {
             "_id": "44_7-6",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "BCP",
             "code-44_7": "BCP",
             "description-44_7": "BIRTH CONTROL",
@@ -66,7 +66,7 @@
         },
         {
             "_id": "44_7-7",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "BEPC",
             "code-44_7": "BEPC",
             "description-44_7": "BIRTH AND EARLY PARENTING CLASS",
@@ -75,7 +75,7 @@
         },
         {
             "_id": "44_7-8",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "BFC",
             "code-44_7": "BFC",
             "description-44_7": "BREAST FEEDING CLASS",
@@ -84,7 +84,7 @@
         },
         {
             "_id": "44_7-9",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "BK",
             "code-44_7": "BK",
             "description-44_7": "BACK PAIN OR PROBLEM",
@@ -93,7 +93,7 @@
         },
         {
             "_id": "44_7-10",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "BTL",
             "code-44_7": "BTL",
             "description-44_7": "BILATERAL TUBAL LIGATION",
@@ -102,7 +102,7 @@
         },
         {
             "_id": "44_7-11",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "CHOL",
             "code-44_7": "CHOL",
             "description-44_7": "CHOLESTEROL",
@@ -111,7 +111,7 @@
         },
         {
             "_id": "44_7-12",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "CIRC",
             "code-44_7": "CIRC",
             "description-44_7": "CIRCUMCISION",
@@ -120,7 +120,7 @@
         },
         {
             "_id": "44_7-13",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "COLPO",
             "code-44_7": "COLPO",
             "description-44_7": "COLPOSCOPY, ABNORMAL PAP REQUIRED",
@@ -129,7 +129,7 @@
         },
         {
             "_id": "44_7-14",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "DM",
             "code-44_7": "DM",
             "description-44_7": "DIABETES",
@@ -138,7 +138,7 @@
         },
         {
             "_id": "44_7-15",
-            "type": "cmumpss:Appointment_Detail_Codes-44_7",
+            "type": "chcss:Appointment_Detail_Codes-44_7",
             "label": "DSGCH",
             "code-44_7": "DSGCH",
             "description-44_7": "DRESSING/BANDAGE CHANGE",

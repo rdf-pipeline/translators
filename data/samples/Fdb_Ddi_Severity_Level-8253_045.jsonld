@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "8253_045-1",
-      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "type": "chcss:Fdb_Ddi_Severity_Level-8253_045",
       "label": "Contraindicated Drug Combination",
       "dimslbtxt-8253_045": "Contraindicated Drug Combination",
       "dimsltext-8253_045": [
@@ -14,7 +14,7 @@
     },
     {
       "_id": "8253_045-2",
-      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "type": "chcss:Fdb_Ddi_Severity_Level-8253_045",
       "label": "Severe Interaction",
       "dimslbtxt-8253_045": "Severe Interaction",
       "dimsltext-8253_045": [
@@ -24,7 +24,7 @@
     },
     {
       "_id": "8253_045-3",
-      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "type": "chcss:Fdb_Ddi_Severity_Level-8253_045",
       "label": "Moderate Interaction",
       "dimslbtxt-8253_045": "Moderate Interaction",
       "dimsltext-8253_045": [
@@ -34,7 +34,7 @@
     },
     {
       "_id": "8253_045-9",
-      "type": "cmumpss:Fdb_Ddi_Severity_Level-8253_045",
+      "type": "chcss:Fdb_Ddi_Severity_Level-8253_045",
       "label": "Undetermined Severity - Alternative Therapy Interaction",
       "dimslbtxt-8253_045": "Undetermined Severity - Alternative Therapy Interaction",
       "dimsltext-8253_045": [

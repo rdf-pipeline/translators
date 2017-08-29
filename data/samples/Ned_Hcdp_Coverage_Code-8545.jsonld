@@ -3,105 +3,105 @@
   "@graph": [
     {
       "_id": "8545-1",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "001",
       "code-8545": "001",
       "text-8545": "DIRECT CARE FOR ACTIVE DUTY SPONSORS"
     },
     {
       "_id": "8545-2",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "002",
       "code-8545": "002",
       "text-8545": "DIRECT CARE FOR ACTIVE DUTY FAMILY MEMBERS"
     },
     {
       "_id": "8545-3",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "003",
       "code-8545": "003",
       "text-8545": "TRICARE STANDARD FOR ACTIVE DUTY FAMILY MEMBERS"
     },
     {
       "_id": "8545-4",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "004",
       "code-8545": "004",
       "text-8545": "DIRECT CARE FOR SURVIVORS OF ACTIVE DUTY DECEASED SPONSORS"
     },
     {
       "_id": "8545-5",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "005",
       "code-8545": "005",
       "text-8545": "TRICARE STANDARD FOR SURVIVORS OF ACTIVE DUTY DECEASED SPONSORS"
     },
     {
       "_id": "8545-6",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "006",
       "code-8545": "006",
       "text-8545": "DIRECT CARE FOR TRANSITIONAL ASSISTANCE FAMILY MEMBERS"
     },
     {
       "_id": "8545-7",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "007",
       "code-8545": "007",
       "text-8545": "TRICARE STANDARD FOR TRANSITIONAL ASSISTANCE SPONSORS AND FAMILY MEMBERS"
     },
     {
       "_id": "8545-8",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "008",
       "code-8545": "008",
       "text-8545": "DIRECT CARE FOR RETIRED SPONSORS AND FAMILY MEMBERS"
     },
     {
       "_id": "8545-9",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "009",
       "code-8545": "009",
       "text-8545": "TRICARE STANDARD FOR RETIRED AND MEDAL OF HONOR SPONSORS AND FAMILY MEMBERS"
     },
     {
       "_id": "8545-10",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "010",
       "code-8545": "010",
       "text-8545": "TRICARE STANDARD FOR TRANSITIONAL SURVIVORS OF ACTIVE DUTY DECEASED SPONSORS"
     },
     {
       "_id": "8545-11",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "011",
       "code-8545": "011",
       "text-8545": "DIRECT CARE FOR CONUS DOD AFFILIATES"
     },
     {
       "_id": "8545-12",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "012",
       "code-8545": "012",
       "text-8545": "TRICARE STANDARD FOR CONUS DOD AFFILIATES"
     },
     {
       "_id": "8545-13",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "013",
       "code-8545": "013",
       "text-8545": "DIRECT CARE FOR OCONUS DOD AFFILIATES"
     },
     {
       "_id": "8545-14",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "014",
       "code-8545": "014",
       "text-8545": "DIRECT CARE FOR TRANSITIONAL SURVIVORS OF ACTIVE DUTY DECEASED SPONSORS"
     },
     {
       "_id": "8545-15",
-      "type": "cmumpss:Ned_Hcdp_Coverage_Code-8545",
+      "type": "chcss:Ned_Hcdp_Coverage_Code-8545",
       "label": "015",
       "code-8545": "015",
       "text-8545": "TRICARE STANDARD FOR TRANSITIONAL SURVIVORS OF GUARD/RESERVE DECEASED SPONSORS"

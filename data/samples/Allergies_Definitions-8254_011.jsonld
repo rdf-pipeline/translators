@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "8254_011-3",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "CINNAMON ANALOGUES",
             "allergy_name_gnn-8254_011": "CINNAMON ANALOGUES",
             "allergy_type-8254_011": "Class Name",
@@ -17,7 +17,7 @@
         },
         {
             "_id": "8254_011-6",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "CARNITINE ANALOGUES",
             "allergy_name_gnn-8254_011": "CARNITINE ANALOGUES",
             "allergy_type-8254_011": "Class Name",
@@ -31,7 +31,7 @@
         },
         {
             "_id": "8254_011-7",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "IODINATED CONTRAST MEDIA - IV DYE",
             "allergy_name_gnn-8254_011": "IODINATED CONTRAST MEDIA - IV DYE",
             "allergy_type-8254_011": "Class Name",
@@ -46,7 +46,7 @@
         },
         {
             "_id": "8254_011-8",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "CEDARWOOD (JUNIPERUS)",
             "allergy_name_gnn-8254_011": "CEDARWOOD (JUNIPERUS)",
             "allergy_type-8254_011": "Class Name",
@@ -60,7 +60,7 @@
         },
         {
             "_id": "8254_011-9",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "CEDAR LEAF (THUJA)",
             "allergy_name_gnn-8254_011": "CEDAR LEAF (THUJA)",
             "allergy_type-8254_011": "Class Name",
@@ -74,7 +74,7 @@
         },
         {
             "_id": "8254_011-11",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "TOSITUMOMAB ANALOGUES",
             "allergy_name_gnn-8254_011": "TOSITUMOMAB ANALOGUES",
             "allergy_type-8254_011": "Class Name",
@@ -88,7 +88,7 @@
         },
         {
             "_id": "8254_011-14",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "ANDROGRAPHIS PANICULATA",
             "allergy_name_gnn-8254_011": "ANDROGRAPHIS PANICULATA",
             "allergy_type-8254_011": "Class Name",
@@ -102,7 +102,7 @@
         },
         {
             "_id": "8254_011-15",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "OLIVE",
             "allergy_name_gnn-8254_011": "OLIVE",
             "allergy_type-8254_011": "Class Name",
@@ -116,7 +116,7 @@
         },
         {
             "_id": "8254_011-18",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "TITANIUM ANALOGUES",
             "allergy_name_gnn-8254_011": "TITANIUM ANALOGUES",
             "allergy_type-8254_011": "Class Name",
@@ -130,7 +130,7 @@
         },
         {
             "_id": "8254_011-19",
-            "type": "cmumpss:Allergies_Definitions-8254_011",
+            "type": "chcss:Allergies_Definitions-8254_011",
             "label": "ASCORBIC ACID (VITAMIN C)",
             "allergy_name_gnn-8254_011": "ASCORBIC ACID (VITAMIN C)",
             "allergy_type-8254_011": "Class Name",

@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "108_1-1",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "AEROSOL TX - ALUPENT",
             "name-108_1": "AEROSOL TX - ALUPENT",
             "schedule_type-108_1": "CONTINUOUS",
@@ -11,7 +11,7 @@
         },
         {
             "_id": "108_1-2",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "AEROSOL TX - BRONKOSOL",
             "name-108_1": "AEROSOL TX - BRONKOSOL",
             "schedule_type-108_1": "CONTINUOUS",
@@ -19,7 +19,7 @@
         },
         {
             "_id": "108_1-3",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "AEROSOL TX - RACEMIC EPINEPHR",
             "name-108_1": "AEROSOL TX - RACEMIC EPINEPHR",
             "schedule_type-108_1": "CONTINUOUS",
@@ -27,7 +27,7 @@
         },
         {
             "_id": "108_1-4",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "AEROSOL TX - OTHER",
             "name-108_1": "AEROSOL TX - OTHER",
             "schedule_type-108_1": "CONTINUOUS",
@@ -35,7 +35,7 @@
         },
         {
             "_id": "108_1-5",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "BRONCHOSCOPY",
             "name-108_1": "BRONCHOSCOPY",
             "schedule_type-108_1": "ONE TIME",
@@ -43,7 +43,7 @@
         },
         {
             "_id": "108_1-6",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "CHEST PT W_POSTURAL DRAINAGE",
             "name-108_1": "CHEST PT W/POSTURAL DRAINAGE",
             "schedule_type-108_1": "CONTINUOUS",
@@ -53,7 +53,7 @@
         },
         {
             "_id": "108_1-7",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "CHEST PT W_O POS DRAINAGE",
             "name-108_1": "CHEST PT W/O POS DRAINAGE",
             "schedule_type-108_1": "CONTINUOUS",
@@ -62,7 +62,7 @@
         },
         {
             "_id": "108_1-8",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "COLONOSCOPY",
             "name-108_1": "COLONOSCOPY",
             "schedule_type-108_1": "ONE TIME",
@@ -70,7 +70,7 @@
         },
         {
             "_id": "108_1-9",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "CARDIOLOGY CONSULT",
             "name-108_1": "CARDIOLOGY CONSULT",
             "schedule_type-108_1": "SCHEDULED",
@@ -95,7 +95,7 @@
             "scheduled_consulting_clinic-108_1": [
                 {
                     "id": "108_18-1_9",
-                    "type": "cmumpss:Scheduled_Consulting_Clinic-108_18",
+                    "type": "chcss:Scheduled_Consulting_Clinic-108_18",
                     "scheduled_consulting_clinic-108_18": {
                         "id": "44-15",
                         "label": "CARDIOLOGY CLINIC 200H"
@@ -105,7 +105,7 @@
         },
         {
             "_id": "108_1-10",
-            "type": "cmumpss:Ancillary_Procedure-108_1",
+            "type": "chcss:Ancillary_Procedure-108_1",
             "label": "ORTHOPEDICS CONSULT",
             "name-108_1": "ORTHOPEDICS CONSULT",
             "schedule_type-108_1": "SCHEDULED",
@@ -130,7 +130,7 @@
             "scheduled_consulting_clinic-108_1": [
                 {
                     "id": "108_18-1_10",
-                    "type": "cmumpss:Scheduled_Consulting_Clinic-108_18",
+                    "type": "chcss:Scheduled_Consulting_Clinic-108_18",
                     "scheduled_consulting_clinic-108_18": {
                         "id": "44-32",
                         "label": "ORTHOPEDIC CLINIC 200H"

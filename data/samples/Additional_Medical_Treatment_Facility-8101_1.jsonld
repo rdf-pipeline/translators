@@ -3,7 +3,7 @@
     "@graph": [
        {
             "_id": "8101_1-1",
-            "type": "cmumpss:Additional_Medical_Treatment_Facility-8101_1",
+            "type": "chcss:Additional_Medical_Treatment_Facility-8101_1",
             "label": "1",
             "facility_code-8101_1": "1",
             "name-8101_1": "UTOPIA CENTER 47746",
@@ -25,7 +25,7 @@
         },
         {
             "_id": "8101_1-4",
-            "type": "cmumpss:Additional_Medical_Treatment_Facility-8101_1",
+            "type": "chcss:Additional_Medical_Treatment_Facility-8101_1",
             "label": "300",
             "facility_code-8101_1": "300",
             "name-8101_1": "BIKINI BOTTOM 1 MI CO BRIDG",
@@ -45,7 +45,7 @@
         },
         {
             "_id": "8101_1-10",
-            "type": "cmumpss:Additional_Medical_Treatment_Facility-8101_1",
+            "type": "chcss:Additional_Medical_Treatment_Facility-8101_1",
             "label": "300",
             "facility_code-8101_1": "300",
             "name-8101_1": "ZAZA 14243 OH I&I STAFF",

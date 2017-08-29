@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "23-1",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "ARMY",
       "name-23": "ARMY",
       "code-23": "A",
@@ -15,7 +15,7 @@
     },
     {
       "_id": "23-2",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "AIR FORCE",
       "name-23": "AIR FORCE",
       "code-23": "F",
@@ -27,7 +27,7 @@
     },
     {
       "_id": "23-3",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "MARINE CORPS",
       "name-23": "MARINE CORPS",
       "code-23": "M",
@@ -39,7 +39,7 @@
     },
     {
       "_id": "23-4",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "NAVY",
       "name-23": "NAVY",
       "code-23": "N",
@@ -51,7 +51,7 @@
     },
     {
       "_id": "23-5",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "NATIONAL OCEANIC & ATMOSPHERIC ADMIN",
       "name-23": "NATIONAL OCEANIC & ATMOSPHERIC ADMIN",
       "code-23": "B",
@@ -63,7 +63,7 @@
     },
     {
       "_id": "23-6",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "COAST GUARD",
       "name-23": "COAST GUARD",
       "code-23": "C",
@@ -75,7 +75,7 @@
     },
     {
       "_id": "23-7",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "BRANCH OF SVC UNKNOWN",
       "name-23": "BRANCH OF SVC UNKNOWN",
       "code-23": "U",
@@ -85,7 +85,7 @@
     },
     {
       "_id": "23-8",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "U.S. PUBLIC HEALTH SERVICE",
       "name-23": "U.S. PUBLIC HEALTH SERVICE",
       "code-23": "P",
@@ -97,7 +97,7 @@
     },
     {
       "_id": "23-9",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "CIVILIAN NON-SERVICE AFFILIATED",
       "name-23": "CIVILIAN NON-SERVICE AFFILIATED",
       "code-23": "X",
@@ -107,7 +107,7 @@
     },
     {
       "_id": "23-10",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "ARMY_AIR FORCE",
       "name-23": "ARMY/AIR FORCE",
       "code-23": "AF",
@@ -115,7 +115,7 @@
     },
     {
       "_id": "23-11",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "ARMY_AIR FORCE_NAVY",
       "name-23": "ARMY/AIR FORCE/NAVY",
       "code-23": "AFN",
@@ -123,7 +123,7 @@
     },
     {
       "_id": "23-12",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "ARMY_NAVY",
       "name-23": "ARMY/NAVY",
       "code-23": "AN",
@@ -131,7 +131,7 @@
     },
     {
       "_id": "23-13",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "AIR FORCE_NAVY",
       "name-23": "AIR FORCE/NAVY",
       "code-23": "FN",
@@ -139,7 +139,7 @@
     },
     {
       "_id": "23-14",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "VETERANS ADMINISTRATION",
       "name-23": "VETERANS ADMINISTRATION",
       "code-23": "V",
@@ -149,7 +149,7 @@
     },
     {
       "_id": "23-15",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "OTHER_NOT APPLICABLE",
       "name-23": "OTHER/NOT APPLICABLE",
       "code-23": "O",
@@ -161,7 +161,7 @@
     },
     {
       "_id": "23-16",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "FOREIGN MILITARY",
       "name-23": "FOREIGN MILITARY",
       "code-23": "FM",
@@ -171,7 +171,7 @@
     },
     {
       "_id": "23-17",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "ORDNANCE CORPS",
       "name-23": "ORDNANCE CORPS",
       "code-23": "OD",
@@ -183,7 +183,7 @@
     },
     {
       "_id": "23-18",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "PROFESSOR USMA",
       "name-23": "PROFESSOR USMA",
       "code-23": "PR",
@@ -195,7 +195,7 @@
     },
     {
       "_id": "23-19",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "QUARTERMASTER CORPS",
       "name-23": "QUARTERMASTER CORPS",
       "code-23": "QM",
@@ -207,7 +207,7 @@
     },
     {
       "_id": "23-20",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "SIGNAL CORPS",
       "name-23": "SIGNAL CORPS",
       "code-23": "SC",
@@ -219,7 +219,7 @@
     },
     {
       "_id": "23-21",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "SPECIAL FORCES",
       "name-23": "SPECIAL FORCES",
       "code-23": "SF",
@@ -231,7 +231,7 @@
     },
     {
       "_id": "23-22",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "TRANSPORTATION CORPS",
       "name-23": "TRANSPORTATION CORPS",
       "code-23": "TC",
@@ -243,7 +243,7 @@
     },
     {
       "_id": "23-23",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "UNKNOWN",
       "name-23": "UNKNOWN",
       "code-23": "FN",
@@ -255,7 +255,7 @@
     },
     {
       "_id": "23-24",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "VETERINARY CORPS",
       "name-23": "VETERINARY CORPS",
       "code-23": "VC",
@@ -267,7 +267,7 @@
     },
     {
       "_id": "23-25",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "OFFICE OF THE SECRETARY OF DEFENSE",
       "name-23": "OFFICE OF THE SECRETARY OF DEFENSE",
       "code-23": "D",
@@ -276,7 +276,7 @@
     },
     {
       "_id": "23-26",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "FOREIGN ARMY",
       "name-23": "FOREIGN ARMY",
       "abbreviation-23": "FM1",
@@ -284,7 +284,7 @@
     },
     {
       "_id": "23-27",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "FOREIGN AIR FORCE",
       "name-23": "FOREIGN AIR FORCE",
       "abbreviation-23": "FM4",
@@ -292,7 +292,7 @@
     },
     {
       "_id": "23-28",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "FOREIGN MARINE CORPS",
       "name-23": "FOREIGN MARINE CORPS",
       "abbreviation-23": "FM3",
@@ -300,7 +300,7 @@
     },
     {
       "_id": "23-29",
-      "type": "cmumpss:Branch_Of_Service-23",
+      "type": "chcss:Branch_Of_Service-23",
       "label": "FOREIGN NAVY",
       "name-23": "FOREIGN NAVY",
       "abbreviation-23": "FM2",

@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "62-1",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -22,7 +22,7 @@
     },
     {
       "_id": "62-2",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -42,7 +42,7 @@
     },
     {
       "_id": "62-3",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -61,7 +61,7 @@
     },
     {
       "_id": "62-4",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -79,7 +79,7 @@
     },
     {
       "_id": "62-9",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "CSF",
       "name-62": "CSF",
       "default_specimen-62": {
@@ -98,7 +98,7 @@
     },
     {
       "_id": "62-17",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "STOOL",
       "name-62": "STOOL",
       "default_specimen-62": {
@@ -116,7 +116,7 @@
     },
     {
       "_id": "62-18",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "SPUTUM",
       "name-62": "SPUTUM",
       "default_specimen-62": {
@@ -134,7 +134,7 @@
     },
     {
       "_id": "62-21",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "WOUND",
       "name-62": "WOUND",
       "snomed_code-62": {
@@ -144,7 +144,7 @@
     },
     {
       "_id": "62-26",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BIOPSY",
       "name-62": "BIOPSY",
       "default_specimen-62": {
@@ -159,7 +159,7 @@
     },
     {
       "_id": "62-28",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BONE MARROW",
       "name-62": "BONE MARROW",
       "default_specimen-62": {
@@ -173,7 +173,7 @@
     },
     {
       "_id": "62-35",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "HAIR",
       "name-62": "HAIR",
       "default_specimen-62": {
@@ -183,7 +183,7 @@
     },
     {
       "_id": "62-40",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "TISSUE",
       "name-62": "TISSUE",
       "default_specimen-62": {
@@ -193,7 +193,7 @@
     },
     {
       "_id": "62-47",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -212,7 +212,7 @@
     },
     {
       "_id": "62-51",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "URINE_24HR",
       "name-62": "URINE/24HR",
       "default_specimen-62": {
@@ -222,7 +222,7 @@
     },
     {
       "_id": "62-59",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "NASAL SWAB",
       "name-62": "NASAL SWAB",
       "default_specimen-62": {
@@ -239,7 +239,7 @@
     },
     {
       "_id": "62-79",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "THROAT",
       "name-62": "THROAT",
       "default_specimen-62": {
@@ -249,7 +249,7 @@
     },
     {
       "_id": "62-91",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "NOSE",
       "name-62": "NOSE",
       "default_specimen-62": {
@@ -259,7 +259,7 @@
     },
     {
       "_id": "62-92",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "URETHRA",
       "name-62": "URETHRA",
       "default_specimen-62": {
@@ -269,7 +269,7 @@
     },
     {
       "_id": "62-97",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "EAR",
       "name-62": "EAR",
       "default_specimen-62": {
@@ -279,7 +279,7 @@
     },
     {
       "_id": "62-98",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "EYE",
       "name-62": "EYE",
       "default_specimen-62": {
@@ -289,7 +289,7 @@
     },
     {
       "_id": "62-108",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "ORAL CAVITY",
       "name-62": "ORAL CAVITY",
       "default_specimen-62": {
@@ -302,7 +302,7 @@
     },
     {
       "_id": "62-109",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "RECTAL SWAB",
       "name-62": "RECTAL SWAB",
       "default_specimen-62": {
@@ -316,7 +316,7 @@
     },
     {
       "_id": "62-110",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "URINE_CC",
       "name-62": "URINE/CC",
       "default_specimen-62": {
@@ -327,7 +327,7 @@
     },
     {
       "_id": "62-111",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "URINE_CATH",
       "name-62": "URINE/CATH",
       "default_specimen-62": {
@@ -338,20 +338,20 @@
     },
     {
       "_id": "62-113",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "SWAB_ANAEROBE",
       "name-62": "SWAB/ANAEROBE",
       "tube_top_color-62": "CULTURETTE"
     },
     {
       "_id": "62-120",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "AUTOPSY",
       "name-62": "AUTOPSY"
     },
     {
       "_id": "62-121",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "URINE_RANDOM",
       "name-62": "URINE/RANDOM",
       "default_specimen-62": {
@@ -365,7 +365,7 @@
     },
     {
       "_id": "62-122",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "FINE NEEDLE ASPIRATE",
       "name-62": "FINE NEEDLE ASPIRATE",
       "tube_top_color-62": "SYRINGE",
@@ -376,7 +376,7 @@
     },
     {
       "_id": "62-123",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "PMT SAMPLE",
       "name-62": "PMT SAMPLE",
       "default_specimen-62": {
@@ -390,7 +390,7 @@
     },
     {
       "_id": "62-124",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -409,7 +409,7 @@
     },
     {
       "_id": "62-125",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "GENITAL",
       "name-62": "GENITAL",
       "default_specimen-62": {
@@ -423,7 +423,7 @@
     },
     {
       "_id": "62-126",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "CHLAMYDIA SWAB_GENITAL",
       "name-62": "CHLAMYDIA SWAB/GENITAL",
       "default_specimen-62": {
@@ -434,7 +434,7 @@
     },
     {
       "_id": "62-127",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -449,7 +449,7 @@
     },
     {
       "_id": "62-128",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -460,7 +460,7 @@
     },
     {
       "_id": "62-129",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BLOOD",
       "name-62": "BLOOD",
       "default_specimen-62": {
@@ -478,7 +478,7 @@
     },
     {
       "_id": "62-130",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "ISOSTAT TUBE",
       "name-62": "ISOSTAT TUBE",
       "default_specimen-62": {
@@ -489,7 +489,7 @@
     },
     {
       "_id": "62-132",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "AEROBIC AND ANAEROBIC BOTTLES",
       "name-62": "AEROBIC AND ANAEROBIC BOTTLES",
       "default_specimen-62": {
@@ -499,14 +499,14 @@
     },
     {
       "_id": "62-133",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "DIRECT SMEAR",
       "name-62": "DIRECT SMEAR",
       "tube_top_color-62": "SLIDE"
     },
     {
       "_id": "62-134",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "ISOSTAT BLOOD CULTURE BOTTLE",
       "name-62": "ISOSTAT BLOOD CULTURE BOTTLE",
       "default_specimen-62": {
@@ -516,7 +516,7 @@
     },
     {
       "_id": "62-135",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "WITH OR WITHOUT PRESERVATIVE",
       "name-62": "WITH OR WITHOUT PRESERVATIVE",
       "default_specimen-62": {
@@ -526,7 +526,7 @@
     },
     {
       "_id": "62-136",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "URINE_24 HOUR",
       "name-62": "URINE/24 HOUR",
       "default_specimen-62": {
@@ -536,7 +536,7 @@
     },
     {
       "_id": "62-137",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "24HR URINE",
       "name-62": "24HR URINE",
       "default_specimen-62": {
@@ -546,13 +546,13 @@
     },
     {
       "_id": "62-138",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "WITH BORIC ACID PRESERVATIVE",
       "name-62": "WITH BORIC ACID PRESERVATIVE"
     },
     {
       "_id": "62-139",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "BODY FLUID NOS",
       "name-62": "BODY FLUID NOS",
       "default_specimen-62": {
@@ -563,7 +563,7 @@
     },
     {
       "_id": "62-140",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "PLEURAL FLUID",
       "name-62": "PLEURAL FLUID",
       "default_specimen-62": {
@@ -578,7 +578,7 @@
     },
     {
       "_id": "62-141",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "PERITONEAL FLUID",
       "name-62": "PERITONEAL FLUID",
       "default_specimen-62": {
@@ -593,7 +593,7 @@
     },
     {
       "_id": "62-142",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "PERICARDIAL FLUID",
       "name-62": "PERICARDIAL FLUID",
       "default_specimen-62": {
@@ -608,7 +608,7 @@
     },
     {
       "_id": "62-143",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "SMEAR_NASOPHARYNGEAL",
       "name-62": "SMEAR/NASOPHARYNGEAL",
       "default_specimen-62": {
@@ -618,7 +618,7 @@
     },
     {
       "_id": "62-144",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "ROYAL BLUE HEPARINIZED",
       "name-62": "ROYAL BLUE HEPARINIZED",
       "default_specimen-62": {
@@ -629,7 +629,7 @@
     },
     {
       "_id": "62-145",
-      "type": "cmumpss:Collection_Sample-62",
+      "type": "chcss:Collection_Sample-62",
       "label": "URINARY CALCULUS",
       "name-62": "URINARY CALCULUS",
       "default_specimen-62": {

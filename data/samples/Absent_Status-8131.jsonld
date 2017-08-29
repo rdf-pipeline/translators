@@ -3,14 +3,14 @@
     "@graph": [
         {
             "_id": "8131-1",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES",
             "name-8131": "ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES",
             "code-8131": "AC",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_1",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -21,14 +21,14 @@
         },
         {
             "_id": "8131-2",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "AWOL (MORE THAN 10 DAYS) DFR",
             "name-8131": "AWOL (MORE THAN 10 DAYS) DFR",
             "code-8131": "AG",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_2",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -39,14 +39,14 @@
         },
         {
             "_id": "8131-3",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "ABSENT IN CUSTODY OF MILITARY AUTHORITIES",
             "name-8131": "ABSENT IN CUSTODY OF MILITARY AUTHORITIES",
             "code-8131": "AM",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_3",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -57,14 +57,14 @@
         },
         {
             "_id": "8131-4",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "ABSENT SICK NON-MILITARY MTF",
             "name-8131": "ABSENT SICK NON-MILITARY MTF",
             "code-8131": "AS",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_4",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -73,7 +73,7 @@
                 },
                 {
                     "id": "8131_01-2_4",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -84,14 +84,14 @@
         },
         {
             "_id": "8131-5",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "AWOL (LESS THAN 10 DAYS)",
             "name-8131": "AWOL (LESS THAN 10 DAYS)",
             "code-8131": "AW",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_5",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -102,14 +102,14 @@
         },
         {
             "_id": "8131-6",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "BED OCCUPANT THIS MTF",
             "name-8131": "BED OCCUPANT THIS MTF",
             "code-8131": "BO",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_6",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -120,14 +120,14 @@
         },
         {
             "_id": "8131-7",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "COOPERATIVE CARE",
             "name-8131": "COOPERATIVE CARE",
             "code-8131": "CC",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_7",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -138,14 +138,14 @@
         },
         {
             "_id": "8131-8",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "CONVALESCENT LEAVE",
             "name-8131": "CONVALESCENT LEAVE",
             "code-8131": "CL",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_8",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -156,14 +156,14 @@
         },
         {
             "_id": "8131-9",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "CARDED FOR RECORD ONLY",
             "name-8131": "CARDED FOR RECORD ONLY",
             "code-8131": "CR",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_9",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -172,7 +172,7 @@
                 },
                 {
                     "id": "8131_01-2_9",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -183,14 +183,14 @@
         },
         {
             "_id": "8131-10",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "EMERGENCY ROOM DEATH",
             "name-8131": "EMERGENCY ROOM DEATH",
             "code-8131": "ER",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_10",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -199,7 +199,7 @@
                 },
                 {
                     "id": "8131_01-2_10",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -210,14 +210,14 @@
         },
         {
             "_id": "8131-11",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "EMERGENCY LEAVE",
             "name-8131": "EMERGENCY LEAVE",
             "code-8131": "EL",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_11",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -228,14 +228,14 @@
         },
         {
             "_id": "8131-12",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "PCS HOME PENDING SEPARATION_RETIREMENT",
             "name-8131": "PCS HOME PENDING SEPARATION/RETIREMENT",
             "code-8131": "PH",
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_12",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -246,7 +246,7 @@
         },
         {
             "_id": "8131-13",
-            "type": "cmumpss:Absent_Status-8131",
+            "type": "chcss:Absent_Status-8131",
             "label": "ON PASS",
             "name-8131": "ON PASS",
             "code-8131": "PS",
@@ -254,7 +254,7 @@
             "activation_inactivation_date-8131": [
                 {
                     "id": "8131_01-1_13",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"
@@ -263,7 +263,7 @@
                 },
                 {
                     "id": "8131_01-2_13",
-                    "type": "cmumpss:Activation_Inactivation_Date-8131_01",
+                    "type": "chcss:Activation_Inactivation_Date-8131_01",
                     "activation_inactivation_date-8131_01": {
                         "value": "1990-01-01",
                         "type": "xsd:date"

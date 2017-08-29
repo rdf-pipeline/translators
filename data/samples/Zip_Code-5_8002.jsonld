@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "5_8002-1",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00401",
       "code-5_8002": "00401",
       "city-5_8002": "PLEASANTVILLE",
@@ -19,7 +19,7 @@
     },
     {
       "_id": "5_8002-2",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00501",
       "code-5_8002": "00501",
       "city-5_8002": "HOLTSVILLE",
@@ -30,7 +30,7 @@
     },
     {
       "_id": "5_8002-3",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00544",
       "code-5_8002": "00544",
       "city-5_8002": "HOLTSVILLE",
@@ -41,7 +41,7 @@
     },
     {
       "_id": "5_8002-4",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00601",
       "code-5_8002": "00601",
       "city-5_8002": "ADJUNTAS",
@@ -52,7 +52,7 @@
     },
     {
       "_id": "5_8002-5",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00602",
       "code-5_8002": "00602",
       "city-5_8002": "AGUADA",
@@ -63,7 +63,7 @@
     },
     {
       "_id": "5_8002-6",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00603",
       "code-5_8002": "00603",
       "city-5_8002": "AGUADILLA",
@@ -74,7 +74,7 @@
     },
     {
       "_id": "5_8002-7",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00604",
       "code-5_8002": "00604",
       "city-5_8002": "AGUADILLA",
@@ -85,7 +85,7 @@
     },
     {
       "_id": "5_8002-8",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00605",
       "code-5_8002": "00605",
       "city-5_8002": "AGUADILLA",
@@ -96,7 +96,7 @@
     },
     {
       "_id": "5_8002-9",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00703",
       "code-5_8002": "00703",
       "city-5_8002": "AGUAS BUENAS",
@@ -107,7 +107,7 @@
     },
     {
       "_id": "5_8002-10",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00704",
       "code-5_8002": "00704",
       "city-5_8002": "AGUIRRE",
@@ -118,7 +118,7 @@
     },
     {
       "_id": "5_8002-11",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00705",
       "code-5_8002": "00705",
       "city-5_8002": "AIBONITO",
@@ -129,7 +129,7 @@
     },
     {
       "_id": "5_8002-12",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00610",
       "code-5_8002": "00610",
       "city-5_8002": "ANASCO",
@@ -140,7 +140,7 @@
     },
     {
       "_id": "5_8002-13",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00611",
       "code-5_8002": "00611",
       "city-5_8002": "ANGELES",
@@ -151,7 +151,7 @@
     },
     {
       "_id": "5_8002-14",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00612",
       "code-5_8002": "00612",
       "city-5_8002": "ARECIBO",
@@ -162,7 +162,7 @@
     },
     {
       "_id": "5_8002-15",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00613",
       "code-5_8002": "00613",
       "city-5_8002": "ARECIBO",
@@ -173,7 +173,7 @@
     },
     {
       "_id": "5_8002-16",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00714",
       "code-5_8002": "00714",
       "city-5_8002": "ARROYO",
@@ -184,7 +184,7 @@
     },
     {
       "_id": "5_8002-17",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00616",
       "code-5_8002": "00616",
       "city-5_8002": "BAJADERO",
@@ -195,7 +195,7 @@
     },
     {
       "_id": "5_8002-18",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00617",
       "code-5_8002": "00617",
       "city-5_8002": "BARCELONETA",
@@ -206,7 +206,7 @@
     },
     {
       "_id": "5_8002-19",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00794",
       "code-5_8002": "00794",
       "city-5_8002": "BARRANQUITAS",
@@ -217,7 +217,7 @@
     },
     {
       "_id": "5_8002-20",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "00619",
       "code-5_8002": "00619",
       "city-5_8002": "BAYAMON",
@@ -233,7 +233,7 @@
     },
     {
       "_id": "5_8002-263",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "01152",
       "code-5_8002": "01152",
       "city-5_8002": "SPRINGFIELD",
@@ -244,7 +244,7 @@
     },
     {
       "_id": "5_8002-262",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "01151",
       "code-5_8002": "01151",
       "city-5_8002": "INDIAN ORCHARD",
@@ -255,7 +255,7 @@
     },
     {
       "_id": "5_8002-264",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "01199",
       "code-5_8002": "01199",
       "city-5_8002": "SPRINGFIELD",
@@ -266,7 +266,7 @@
     },
     {
       "_id": "5_8002-265",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "01201",
       "code-5_8002": "01201",
       "city-5_8002": "PITTSFIELD",
@@ -277,7 +277,7 @@
     },
     {
       "_id": "5_8002-266",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "01202",
       "code-5_8002": "01202",
       "city-5_8002": "PITTSFIELD",
@@ -288,7 +288,7 @@
     },
     {
       "_id": "5_8002-267",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "01203",
       "code-5_8002": "01203",
       "city-5_8002": "PITTSFIELD",
@@ -299,7 +299,7 @@
     },
     {
       "_id": "5_8002-462",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "01805",
       "code-5_8002": "01805",
       "city-5_8002": "BURLINGTON",
@@ -310,7 +310,7 @@
     },
     {
       "_id": "5_8002-10114",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "24440",
       "code-5_8002": "24440",
       "city-5_8002": "GREENVILLE",
@@ -321,7 +321,7 @@
     },
     {
       "_id": "5_8002-10115",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "24441",
       "code-5_8002": "24441",
       "city-5_8002": "GROTTOES",
@@ -332,7 +332,7 @@
     },
      {
       "_id": "5_8002-10116",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "24442",
       "code-5_8002": "24442",
       "city-5_8002": "HEAD WATERS",
@@ -343,7 +343,7 @@
     },
     {
       "_id": "5_8002-10117",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "24444",
       "code-5_8002": "24444",
       "city-5_8002": "HIGHTOWN",
@@ -359,7 +359,7 @@
     },
     {
       "_id": "5_8002-10264",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "24733",
       "code-5_8002": "24733",
       "city-5_8002": "LASHMEET",
@@ -370,7 +370,7 @@
     },
     {
       "_id": "5_8002-10265",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "24735",
       "code-5_8002": "24735",
       "city-5_8002": "MC COMAS",
@@ -386,7 +386,7 @@
     },
     {
       "_id": "5_8002-10266",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "24736",
       "code-5_8002": "24736",
       "city-5_8002": "MATOAKA",
@@ -397,7 +397,7 @@
     },
     {
       "_id": "5_8002-1115",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "03584",
       "code-5_8002": "03584",
       "city-5_8002": "LANCASTER",
@@ -408,7 +408,7 @@
     },
     {
       "_id": "5_8002-1116",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "03585",
       "code-5_8002": "03585",
       "city-5_8002": "LISBON",
@@ -419,7 +419,7 @@
     },
     {
       "_id": "5_8002-1117",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "03587",
       "code-5_8002": "03587",
       "city-5_8002": "MEADOWS",
@@ -435,7 +435,7 @@
     },
     {
       "_id": "5_8002-1118",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "03588",
       "code-5_8002": "03588",
       "city-5_8002": "MILAN",
@@ -446,7 +446,7 @@
     },
     {
       "_id": "5_8002-1365",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "04238",
       "code-5_8002": "04238",
       "city-5_8002": "HEBRON",
@@ -457,7 +457,7 @@
     },
     {
       "_id": "5_8002-1366",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "04239",
       "code-5_8002": "04239",
       "city-5_8002": "JAY",
@@ -468,7 +468,7 @@
     },
     {
       "_id": "5_8002-1367",
-      "type": "cmumpss:Zip_Code-5_8002",
+      "type": "chcss:Zip_Code-5_8002",
       "label": "04240",
       "code-5_8002": "04240",
       "city-5_8002": "LEWISTON",

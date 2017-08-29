@@ -3,98 +3,98 @@
   "@graph": [
     {
       "_id": "8253_047-1",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "ADD",
       "adiefftc-8253_047": "ADD",
       "adiefftxt-8253_047": "Additive side effects from both drugs"
     },
     {
       "_id": "8253_047-2",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "ARF",
       "adiefftc-8253_047": "ARF",
       "adiefftxt-8253_047": "Adverse reaction of the former drug"
     },
     {
       "_id": "8253_047-3",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "ARL",
       "adiefftc-8253_047": "ARL",
       "adiefftxt-8253_047": "Adverse reaction of the latter drug"
     },
     {
       "_id": "8253_047-4",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "AVD",
       "adiefftc-8253_047": "AVD",
       "adiefftxt-8253_047": "Avoid concurrent use when possible"
     },
     {
       "_id": "8253_047-5",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "CEE",
       "adiefftc-8253_047": "CEE",
       "adiefftxt-8253_047": "Conflicting evidence exists in medical literature"
     },
     {
       "_id": "8253_047-6",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "CIS",
       "adiefftc-8253_047": "CIS",
       "adiefftxt-8253_047": "Contraindicated in some patients"
     },
     {
       "_id": "8253_047-7",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "DEF",
       "adiefftc-8253_047": "DEF",
       "adiefftxt-8253_047": "Decreased effect of the former drug"
     },
     {
       "_id": "8253_047-8",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "DEL",
       "adiefftc-8253_047": "DEL",
       "adiefftxt-8253_047": "Decreased effect of the latter drug"
     },
     {
       "_id": "8253_047-9",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "INF",
       "adiefftc-8253_047": "INF",
       "adiefftxt-8253_047": "Increased effect of the former drug"
     },
     {
       "_id": "8253_047-10",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "INL",
       "adiefftc-8253_047": "INL",
       "adiefftxt-8253_047": "Increased effect of the latter drug"
     },
     {
       "_id": "8253_047-11",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "LBC",
       "adiefftc-8253_047": "LBC",
       "adiefftxt-8253_047": "Labeling conflicts between countries or products"
     },
     {
       "_id": "8253_047-12",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "MAR",
       "adiefftc-8253_047": "MAR",
       "adiefftxt-8253_047": "Adverse reaction with both drugs"
     },
     {
       "_id": "8253_047-13",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "MXF",
       "adiefftc-8253_047": "MXF",
       "adiefftxt-8253_047": "Mixed effects of the former drug"
     },
     {
       "_id": "8253_047-14",
-      "type": "cmumpss:Fdb_Dim_32_Clinical_Effects-8253_047",
+      "type": "chcss:Fdb_Dim_32_Clinical_Effects-8253_047",
       "label": "MXL",
       "adiefftc-8253_047": "MXL",
       "adiefftxt-8253_047": "Mixed effects of the latter drug"

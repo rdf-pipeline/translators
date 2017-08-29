@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "44-.5",
-      "type": "cmumpss:Hospital_Location-44",
+      "type": "chcss:Hospital_Location-44",
       "label": "QUARTERS",
       "name-44": "QUARTERS",
       "abbreviation-44": "QTRS",

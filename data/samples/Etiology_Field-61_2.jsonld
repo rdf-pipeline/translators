@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "61_2-1",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ESCHERICHIA COLI",
       "name-61_2": "ESCHERICHIA COLI",
       "snomed_code-61_2": {
@@ -30,7 +30,7 @@
     },
     {
       "_id": "61_2-2",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "STAPHYLOCOCCUS AUREUS",
       "name-61_2": "STAPHYLOCOCCUS AUREUS",
       "snomed_code-61_2": {
@@ -54,7 +54,7 @@
     },
     {
       "_id": "61_2-3",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "PARAGONIMUS WESTERMANII",
       "name-61_2": "PARAGONIMUS WESTERMANII",
       "snomed_code-61_2": {
@@ -65,7 +65,7 @@
     },
     {
       "_id": "61_2-5",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "CANDIDA ALBICANS",
       "name-61_2": "CANDIDA ALBICANS",
       "snomed_code-61_2": {
@@ -84,7 +84,7 @@
     },
     {
       "_id": "61_2-6",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "MICROBIOLOGIC AGENT",
       "name-61_2": "MICROBIOLOGIC AGENT",
       "snomed_code-61_2": {
@@ -94,7 +94,7 @@
     },
     {
       "_id": "61_2-7",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "SALMONELLA TYPHI",
       "name-61_2": "SALMONELLA TYPHI",
       "snomed_code-61_2": {
@@ -119,85 +119,85 @@
     },
     {
       "_id": "61_2-8",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, PSYCHIC DEPRIVATION",
       "name-61_2": "ETIOLOGY, PSYCHIC DEPRIVATION"
     },
     {
       "_id": "61_2-9",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, EMOTIONAL DEPRIVATION",
       "name-61_2": "ETIOLOGY, EMOTIONAL DEPRIVATION"
     },
     {
       "_id": "61_2-10",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, SOCIAL DEPRIVATION",
       "name-61_2": "ETIOLOGY, SOCIAL DEPRIVATION"
     },
     {
       "_id": "61_2-11",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, ECONOMIC DEPRIVATION",
       "name-61_2": "ETIOLOGY, ECONOMIC DEPRIVATION"
     },
     {
       "_id": "61_2-16",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, THERAPEUTIC MISADVENTURE",
       "name-61_2": "ETIOLOGY, THERAPEUTIC MISADVENTURE"
     },
     {
       "_id": "61_2-17",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, DRUG ASSOCIATION",
       "name-61_2": "ETIOLOGY, DRUG ASSOCIATION"
     },
     {
       "_id": "61_2-18",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, PRIMARY",
       "name-61_2": "ETIOLOGY, PRIMARY"
     },
     {
       "_id": "61_2-19",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, SECONDARY",
       "name-61_2": "ETIOLOGY, SECONDARY"
     },
     {
       "_id": "61_2-20",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, ACQUIRED",
       "name-61_2": "ETIOLOGY, ACQUIRED"
     },
     {
       "_id": "61_2-21",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, INFECTION TRANSMITTED BY CARRIER",
       "name-61_2": "ETIOLOGY, INFECTION TRANSMITTED BY CARRIER"
     },
     {
       "_id": "61_2-22",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, INANIMATE CARRIER OF INFECTION",
       "name-61_2": "ETIOLOGY, INANIMATE CARRIER OF INFECTION"
     },
     {
       "_id": "61_2-23",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, ENVIRONMENT, AS CAUSE OF",
       "name-61_2": "ETIOLOGY, ENVIRONMENT, AS CAUSE OF"
     },
     {
       "_id": "61_2-24",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ETIOLOGY, OCCUPATION, AS CAUSE OF",
       "name-61_2": "ETIOLOGY, OCCUPATION, AS CAUSE OF"
     },
     {
       "_id": "61_2-25",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "BACILLUS SPECIES",
       "name-61_2": "BACILLUS SPECIES",
       "snomed_code-61_2": {
@@ -224,44 +224,44 @@
     },
     {
       "_id": "61_2-26",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ENDEMIC ASSOCIATION",
       "name-61_2": "ENDEMIC ASSOCIATION"
     },
     {
       "_id": "61_2-27",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "BATEROIDES SP.",
       "name-61_2": "BATEROIDES SP.",
       "identifier-61_2": "BACTERIUM"
     },
     {
       "_id": "61_2-28",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "PANDEMIC ASSOCIATION",
       "name-61_2": "PANDEMIC ASSOCIATION"
     },
     {
       "_id": "61_2-29",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ENZOOTIC ASSOCIATION",
       "name-61_2": "ENZOOTIC ASSOCIATION"
     },
     {
       "_id": "61_2-30",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "EPIZOOTIC ASSOCIATION",
       "name-61_2": "EPIZOOTIC ASSOCIATION"
     },
     {
       "_id": "61_2-31",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER OR ASSOCIATION",
       "name-61_2": "HEREDITARY DISORDER OR ASSOCIATION"
     },
     {
       "_id": "61_2-32",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "BRUCELLA SPECIES",
       "name-61_2": "BRUCELLA SPECIES",
       "snomed_code-61_2": {
@@ -273,31 +273,31 @@
     },
     {
       "_id": "61_2-33",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, NON CHROMOSOMAL, NON CYTOLOGIC, SEX LINKED",
       "name-61_2": "HEREDITARY DISORDER, NON CHROMOSOMAL, NON CYTOLOGIC, SEX LINKED"
     },
     {
       "_id": "61_2-34",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, AUTOSOMAL, DOMINANT, COMPLETE PENETRANCE",
       "name-61_2": "HEREDITARY DISORDER, AUTOSOMAL, DOMINANT, COMPLETE PENETRANCE"
     },
     {
       "_id": "61_2-35",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, AUTOSOMAL, DOMINANT, INCOMPLETE PENETRANCE",
       "name-61_2": "HEREDITARY DISORDER, AUTOSOMAL, DOMINANT, INCOMPLETE PENETRANCE"
     },
     {
       "_id": "61_2-36",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, RECESSIVE",
       "name-61_2": "HEREDITARY DISORDER, RECESSIVE"
     },
     {
       "_id": "61_2-37",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, POLYGENIC",
       "name-61_2": "HEREDITARY DISORDER, POLYGENIC",
       "snomed_code-61_2": {
@@ -307,31 +307,31 @@
     },
     {
       "_id": "61_2-38",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, TRAIT",
       "name-61_2": "HEREDITARY DISORDER, TRAIT"
     },
     {
       "_id": "61_2-39",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, CONGENITAL",
       "name-61_2": "HEREDITARY DISORDER, CONGENITAL"
     },
     {
       "_id": "61_2-40",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "HEREDITARY DISORDER, DOMINANT",
       "name-61_2": "HEREDITARY DISORDER, DOMINANT"
     },
     {
       "_id": "61_2-42",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "ASSOCIATION, FAMILIAL",
       "name-61_2": "ASSOCIATION, FAMILIAL"
     },
     {
       "_id": "61_2-49",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "BACTERIUM",
       "name-61_2": "BACTERIUM",
       "snomed_code-61_2": {
@@ -342,14 +342,14 @@
     },
     {
       "_id": "61_2-50",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "BACILLI",
       "name-61_2": "BACILLI",
       "identifier-61_2": "BACTERIUM"
     },
     {
       "_id": "61_2-51",
-      "type": "cmumpss:Etiology_Field-61_2",
+      "type": "chcss:Etiology_Field-61_2",
       "label": "COCCUS",
       "name-61_2": "COCCUS",
       "identifier-61_2": "BACTERIUM"

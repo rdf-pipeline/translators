@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "8161-1",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3AX",
       "code-8161": "3AX",
       "description-8161": "WHOLE BLOOD",
@@ -15,7 +15,7 @@
     },
     {
       "_id": "8161-1",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3AX",
       "code-8161": "3AX",
       "description-8161": "WHOLE BLOOD",
@@ -27,7 +27,7 @@
     },
     {
       "_id": "8161-3",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3CX",
       "code-8161": "3CX",
       "description-8161": "WHOLE BLOOD, DIRECTED",
@@ -39,7 +39,7 @@
     },
     {
       "_id": "8161-4",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3DX",
       "code-8161": "3DX",
       "description-8161": "WHOLE BLOOD, CRYOPRECIPITATE REMOVED",
@@ -51,7 +51,7 @@
     },
     {
       "_id": "8161-5",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3GX",
       "code-8161": "3GX",
       "description-8161": "WHOLE BLOOD, PLATELETS REMOVED",
@@ -63,7 +63,7 @@
     },
     {
       "_id": "8161-6",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3JX",
       "code-8161": "3JX",
       "description-8161": "WHOLE BLOOD, THERAPEUTIC",
@@ -75,7 +75,7 @@
     },
     {
       "_id": "8161-7",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3KX",
       "code-8161": "3KX",
       "description-8161": "WHOLE BLOOD, LEUKOCYTES REMOVED",
@@ -87,7 +87,7 @@
     },
     {
       "_id": "8161-8",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3LX",
       "code-8161": "3LX",
       "description-8161": "WHOLE BLOOD, IRRADIATED",
@@ -99,7 +99,7 @@
     },
     {
       "_id": "8161-9",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3MX",
       "code-8161": "3MX",
       "description-8161": "WHOLE BLOOD, DIRECTED, IRRADIATED",
@@ -111,7 +111,7 @@
     },
     {
       "_id": "8161-10",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3NX",
       "code-8161": "3NX",
       "description-8161": "WHOLE BLOOD, CRYO REMOVED, IRRADIATED",
@@ -123,7 +123,7 @@
     },
     {
       "_id": "8161-11",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3PX",
       "code-8161": "3PX",
       "description-8161": "WHOLE BLOOD, PLATELETS REMOVED, IRRADIATED",
@@ -135,7 +135,7 @@
     },
     {
       "_id": "8161-12",
-      "type": "cmumpss:Blood_Product_Type-8161",
+      "type": "chcss:Blood_Product_Type-8161",
       "label": "3RX",
       "code-8161": "3RX",
       "description-8161": "WHOLE BLOOD, LEUKOCYTES REMOVED, IRRADIATED",

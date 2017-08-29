@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "8254_01-1000",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "PENICILLINS",
             "bn_gnn-8254_01": "PENICILLINS",
             "allergy_definitions-8254_01": {
@@ -16,7 +16,7 @@
         },
         {
             "_id": "8254_01-1001",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "CEPHALOSPORINS",
             "bn_gnn-8254_01": "CEPHALOSPORINS",
             "allergy_definitions-8254_01": {
@@ -29,7 +29,7 @@
         },
         {
             "_id": "8254_01-1002",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "CARBAPENEM",
             "bn_gnn-8254_01": "CARBAPENEM",
             "allergy_definitions-8254_01": {
@@ -42,7 +42,7 @@
         },
         {
             "_id": "8254_01-1003",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "PENICILLAMINE",
             "bn_gnn-8254_01": "PENICILLAMINE",
             "allergy_definitions-8254_01": {
@@ -61,7 +61,7 @@
         },
         {
             "_id": "8254_01-1004",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "CUPRIMINE",
             "bn_gnn-8254_01": "CUPRIMINE",
             "allergy_definitions-8254_01": {
@@ -80,7 +80,7 @@
         },
         {
             "_id": "8254_01-1005",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "DEPEN",
             "bn_gnn-8254_01": "DEPEN",
             "allergy_definitions-8254_01": {
@@ -99,7 +99,7 @@
         },
         {
             "_id": "8254_01-1006",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "PENICILLIN G SODIUM",
             "bn_gnn-8254_01": "PENICILLIN G SODIUM",
             "allergy_definitions-8254_01": {
@@ -118,7 +118,7 @@
         },
         {
             "_id": "8254_01-1007",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "PENICILLIN G POTASSIUM",
             "bn_gnn-8254_01": "PENICILLIN G POTASSIUM",
             "allergy_definitions-8254_01": {
@@ -137,7 +137,7 @@
         },
         {
             "_id": "8254_01-1008",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "PFIZERPEN",
             "bn_gnn-8254_01": "PFIZERPEN",
             "allergy_definitions-8254_01": {
@@ -156,7 +156,7 @@
         },
         {
             "_id": "8254_01-1009",
-            "type": "cmumpss:Allergies_Selections-8254_01",
+            "type": "chcss:Allergies_Selections-8254_01",
             "label": "PENTIDS 200",
             "bn_gnn-8254_01": "PENTIDS 200",
             "allergy_definitions-8254_01": {

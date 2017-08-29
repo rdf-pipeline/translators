@@ -3,56 +3,56 @@
   "@graph": [
    {
       "_id": "8139-2",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "EXPIRED",
       "name-8139": "EXPIRED",
       "code-8139": "EXP"
     },
     {
       "_id": "8139-3",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "INCAPACITATING ILLNESS OR INJURY",
       "name-8139": "INCAPACITATING ILLNESS OR INJURY",
       "code-8139": "III"
     },
     {
       "_id": "8139-4",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "REMOVED AS CASUALTY",
       "name-8139": "REMOVED AS CASUALTY",
       "code-8139": "REM"
     },
     {
       "_id": "8139-5",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "SPECIAL CATEGORY",
       "name-8139": "SPECIAL CATEGORY",
       "code-8139": "SC"
     },
     {
       "_id": "8139-6",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "SERIOUSLY ILL",
       "name-8139": "SERIOUSLY ILL",
       "code-8139": "SI"
     },
     {
       "_id": "8139-7",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "VERY SERIOUSLY ILL",
       "name-8139": "VERY SERIOUSLY ILL",
       "code-8139": "VSI"
     },
     {
       "_id": "8139-8",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "TERMINALLY ILL",
       "name-8139": "TERMINALLY ILL",
       "code-8139": "TI"
     },
     {
       "_id": "8139-9",
-      "type": "cmumpss:Casualty_Status-8139",
+      "type": "chcss:Casualty_Status-8139",
       "label": "NON-CASUALTY",
       "name-8139": "NON-CASUALTY",
       "code-8139": "CS"

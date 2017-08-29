@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "50-1",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG ",
       "name-50": "ACETAMINOPHEN 325MG TAB *OTC*--PO 325MG ",
       "primary_ndc_number-50": {
@@ -50,7 +50,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_1",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -76,7 +76,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_1",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "MJ",
           "sig-50_15": "T 1-2 PO QID PRN FP"
         }
@@ -84,55 +84,55 @@
       "synonym-50": [
         {
           "id": "50_1-8_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "OTC6",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-9_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "RTS",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-10_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TYL325",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-11_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "T325",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-12_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ACE325",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-13_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "analgesics/antipyretic,misc"
         },
         {
           "id": "50_1-14_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "par1",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-15_1",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TYLENOL"
         }
       ]
     },
     {
       "_id": "50-2",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ACETAZOLAMIDE 250MG TAB (DIAMOX)EQ",
       "name-50": "ACETAZOLAMIDE 250MG TAB (DIAMOX)EQ",
       "primary_ndc_number-50": {
@@ -179,7 +179,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_2",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -210,19 +210,19 @@
       "synonym-50": [
         {
           "id": "50_1-1_2",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DIAMOX",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_2",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DMX",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_2",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DIA250",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -231,7 +231,7 @@
         },
         {
           "id": "50_1-4_2",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ACE250",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -240,7 +240,7 @@
         },
         {
           "id": "50_1-6_2",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DIAM250",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -249,20 +249,20 @@
         },
         {
           "id": "50_1-7_2",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DM250",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-8_2",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CARBONIC ANHYDRASE INH"
         }
       ]
     },
     {
       "_id": "50-6",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ACETYLCYSTEINE 20%--MISC 1GM_5ML INJ",
       "name-50": "ACETYLCYSTEINE 20%--MISC 1GM/5ML INJ",
       "primary_ndc_number-50": {
@@ -309,7 +309,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_6",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -348,19 +348,19 @@
       "synonym-50": [
         {
           "id": "50_1-8_6",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "MUCOMYST",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-9_6",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "MUC20",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-10_6",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ACE20",
           "intended_use-50_1": "QUICK CODE"
         }
@@ -368,7 +368,7 @@
     },
     {
       "_id": "50-10",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-ALBUTEROL INHALER @$1.72 INH 90MCG--IN",
       "name-50": "D-ALBUTEROL INHALER @$1.72 INH 90MCG--IN",
       "primary_ndc_number-50": {
@@ -415,7 +415,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_10",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -439,7 +439,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_10",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "MJS",
           "sig-50_15": "2 PUFFS QID AND BEFORE EXERCISE"
         }
@@ -461,7 +461,7 @@
     },
     {
       "_id": "50-12",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ALCOHOL ISOPROPYL--MISC 70% SOLN",
       "name-50": "ALCOHOL ISOPROPYL--MISC 70% SOLN",
       "primary_ndc_number-50": {
@@ -507,7 +507,7 @@
       "synonym-50": [
         {
           "id": "50_1-3_12",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ISOPROPYL ALCOHOL",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -516,25 +516,25 @@
         },
         {
           "id": "50_1-4_12",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "RUBBING ALCOHOL",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_12",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ALC70",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_12",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-299-8095",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_12",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ISOPROPYL70",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -543,14 +543,14 @@
         },
         {
           "id": "50_1-8_12",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SKIN/MUCOUS MENBRANE,MISC"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_12",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -569,7 +569,7 @@
     },
     {
       "_id": "50-13",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ALLOPURINOL 100MG TAB--PO 100MG TAB",
       "name-50": "ALLOPURINOL 100MG TAB--PO 100MG TAB",
       "primary_ndc_number-50": {
@@ -616,7 +616,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_13",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -653,25 +653,25 @@
       "synonym-50": [
         {
           "id": "50_1-2_13",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LOPURIN",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_13",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ZYL100",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_13",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ALL100",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_13",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-998-4381",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -682,24 +682,24 @@
         },
         {
           "id": "50_1-8_13",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "THERAPEUTICS, UNCLASS"
         },
         {
           "id": "50_1-9_13",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ZYLOPRIM"
         },
         {
           "id": "50_1-10_13",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LOP100"
         }
       ]
     },
     {
       "_id": "50-15",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "DOMEBORO TOPICAL PACKET (MULT OF 12)",
       "name-50": "DOMEBORO TOPICAL PACKET (MULT OF 12)",
       "primary_ndc_number-50": {
@@ -744,7 +744,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_15",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "RA",
           "sig-50_15": "2 TB IN 1QT H20 AND SOAK AFFECTED AREA FOR 15 MIN 2 TO 4 TIMES A DAY"
         }
@@ -752,37 +752,37 @@
       "synonym-50": [
         {
           "id": "50_1-1_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DOMEBORO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-2_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BURT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DOMT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BUROW'S TABLETS",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BTAB",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-890-1633",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -791,7 +791,7 @@
         },
         {
           "id": "50_1-7_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DOMEBORO",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -800,29 +800,29 @@
         },
         {
           "id": "50_1-8_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BLUBORO"
         },
         {
           "id": "50_1-9_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ASTRINGENTS"
         },
         {
           "id": "50_1-10_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PEDIBORO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-11_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PEDI-BORO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-12_15",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BOROPAK",
           "intended_use-50_1": "QUICK CODE"
         }
@@ -830,7 +830,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_15",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -855,7 +855,7 @@
     },
     {
       "_id": "50-16",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AL HYDROX(ALTERNAGELEQ) 600MG_5ML-PO",
       "name-50": "AL HYDROX(ALTERNAGELEQ) 600MG/5ML-PO",
       "primary_ndc_number-50": {
@@ -901,43 +901,43 @@
       "synonym-50": [
         {
           "id": "50_1-1_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ALTERNAGEL",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-2_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMPHOJEL",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMPHOJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ALTGEL",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ALUJEL",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ALTL",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-8_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-074-0934",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -947,14 +947,14 @@
         },
         {
           "id": "50_1-9_16",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTACIDS/ABSORBENTS"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_16",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -975,7 +975,7 @@
     },
     {
       "_id": "50-17",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AMANTADINE--PO 100MG CAP",
       "name-50": "AMANTADINE--PO 100MG CAP",
       "primary_ndc_number-50": {
@@ -1022,7 +1022,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_17",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1050,25 +1050,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_17",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SYMMETREL 100",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_17",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SYM100",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_17",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMA100",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_17",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-148-4624",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1077,19 +1077,19 @@
         },
         {
           "id": "50_1-6_17",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTIVIRALS"
         },
         {
           "id": "50_1-7_17",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "cns agents,misc"
         }
       ]
     },
     {
       "_id": "50-18",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AMCINONIDE 0.1% CREAM ($10.20_60GM)--TOP",
       "name-50": "AMCINONIDE 0.1% CREAM ($10.20/60GM)--TOP",
       "primary_ndc_number-50": {
@@ -1136,7 +1136,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_18",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1174,25 +1174,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_18",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CYCLOCORT",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_18",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CYCCR60",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_18",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CYC60CR",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_18",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-093-7968",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1201,7 +1201,7 @@
         },
         {
           "id": "50_1-5_18",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CYCC",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1210,14 +1210,14 @@
         },
         {
           "id": "50_1-6_18",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTI-INFLAMMATORY AGENTS"
         }
       ]
     },
     {
       "_id": "50-19",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AMIKACIN--INJ 250MG_ML INJ",
       "name-50": "AMIKACIN--INJ 250MG/ML INJ",
       "ndc_invalid-50": "Valid NDC",
@@ -1257,7 +1257,7 @@
       "synonym-50": [
         {
           "id": "50_1-1_19",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMIKIN",
           "intended_use-50_1": "TRADE NAME",
           "ndc_codes-50_1": [
@@ -1266,14 +1266,14 @@
         },
         {
           "id": "50_1-2_19",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMINOGLYCOSIDES"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_19",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1299,7 +1299,7 @@
     },
     {
       "_id": "50-22",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-AMINOPHYLLINE--PO 105MG_5ML LIQ",
       "name-50": "D-AMINOPHYLLINE--PO 105MG/5ML LIQ",
       "primary_ndc_number-50": {
@@ -1346,7 +1346,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_22",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1368,7 +1368,7 @@
     },
     {
       "_id": "50-23",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AMITRIPTYLINE--PO 10MG TAB",
       "name-50": "AMITRIPTYLINE--PO 10MG TAB",
       "primary_ndc_number-50": {
@@ -1415,7 +1415,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_23",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1450,19 +1450,19 @@
       "synonym-50": [
         {
           "id": "50_1-1_23",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ELAVIL",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_23",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ENDEP",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_23",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMI10",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1472,7 +1472,7 @@
         },
         {
           "id": "50_1-5_23",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ELA10",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1481,19 +1481,19 @@
         },
         {
           "id": "50_1-6_23",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "antidepressants"
         },
         {
           "id": "50_1-7_23",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "END10"
         }
       ]
     },
     {
       "_id": "50-25",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AMOXICILLIN 250MG @$0.03_CAPSULE",
       "name-50": "AMOXICILLIN 250MG @$0.03/CAPSULE",
       "primary_ndc_number-50": {
@@ -1540,7 +1540,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_25",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1561,13 +1561,13 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_25",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "MJS",
           "sig-50_15": "T2 CAPSULES PO TID F21D"
         },
         {
           "id": "50_15-2_25",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "MJ",
           "sig-50_15": "T2 CAPS PO Q6H F10D"
         }
@@ -1593,7 +1593,7 @@
       "synonym-50": [
         {
           "id": "50_1-1_25",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMOXIL",
           "intended_use-50_1": "TRADE NAME",
           "ndc_codes-50_1": [
@@ -1602,25 +1602,25 @@
         },
         {
           "id": "50_1-2_25",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMX",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_25",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMO250",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_25",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMOX250",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_25",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-010-7953",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1629,14 +1629,14 @@
         },
         {
           "id": "50_1-6_25",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PENICILLINS"
         }
       ]
     },
     {
       "_id": "50-27",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AMPICILLIN--INJ 500MG SOLN",
       "name-50": "AMPICILLIN--INJ 500MG SOLN",
       "primary_ndc_number-50": {
@@ -1680,31 +1680,31 @@
       "synonym-50": [
         {
           "id": "50_1-1_27",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "A500INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-2_27",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "POLYCILLIN",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_27",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AMP500INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_27",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "POL500INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_27",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-946-4700",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1714,14 +1714,14 @@
         },
         {
           "id": "50_1-6_27",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PENICILLINS"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_27",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1748,7 +1748,7 @@
     },
     {
       "_id": "50-30",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-LIPSTICK (COLD CLIMATE)      --TOP PST",
       "name-50": "D-LIPSTICK (COLD CLIMATE)      --TOP PST",
       "primary_ndc_number-50": {
@@ -1791,7 +1791,7 @@
       "synonym-50": [
         {
           "id": "50_1-1_30",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CHAPSTICK",
           "intended_use-50_1": "TRADE NAME",
           "ndc_codes-50_1": [
@@ -1800,7 +1800,7 @@
         },
         {
           "id": "50_1-2_30",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTICHAP",
           "intended_use-50_1": "QUICK CODE"
         }
@@ -1808,7 +1808,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_30",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1835,7 +1835,7 @@
     },
     {
       "_id": "50-31",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "AURALGAN*EQ* OTIC SOLN",
       "name-50": "AURALGAN*EQ* OTIC SOLN",
       "primary_ndc_number-50": {
@@ -1880,31 +1880,31 @@
       "synonym-50": [
         {
           "id": "50_1-1_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AURALGAN",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-2_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AURO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AUREAR",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AURED",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-598-5830",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -1914,24 +1914,24 @@
         },
         {
           "id": "50_1-6_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTIPYRENE",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BENZOCAINE",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-8_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LOCAL ANESTHETICS"
         },
         {
           "id": "50_1-9_31",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "AURODEX",
           "intended_use-50_1": "QUICK CODE"
         }
@@ -1939,7 +1939,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_31",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -1980,7 +1980,7 @@
     },
     {
       "_id": "50-32",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ANTIVENIN (CROTALIDAE) POLYVAL--INJ SOLN",
       "name-50": "ANTIVENIN (CROTALIDAE) POLYVAL--INJ SOLN",
       "primary_ndc_number-50": {
@@ -2023,31 +2023,31 @@
       "synonym-50": [
         {
           "id": "50_1-2_32",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTISNAKE BITE SERUM",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_32",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "VIPER",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_32",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PIT VIPER ANTIVENIN",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-5_32",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SNAKE",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_32",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-680-2787",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2056,14 +2056,14 @@
         },
         {
           "id": "50_1-7_32",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SERUMS"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_32",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2087,7 +2087,7 @@
     },
     {
       "_id": "50-33",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "VITAMIN C 500MG TAB--PO 500MG TAB",
       "name-50": "VITAMIN C 500MG TAB--PO 500MG TAB",
       "primary_ndc_number-50": {
@@ -2134,7 +2134,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_33",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2155,25 +2155,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_33",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ASCORBIC ACID",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-2_33",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "VITC",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_33",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "VC",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_33",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-891-7555",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2183,26 +2183,26 @@
         },
         {
           "id": "50_1-8_33",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "VITC500",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-9_33",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "C500",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-10_33",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "VITAMIN C"
         }
       ]
     },
     {
       "_id": "50-34",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-ASPIRIN 325MG @$.01 TAB--PO 325MG TAB",
       "name-50": "D-ASPIRIN 325MG @$.01 TAB--PO 325MG TAB",
       "primary_ndc_number-50": {
@@ -2249,7 +2249,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_34",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2298,7 +2298,7 @@
     },
     {
       "_id": "50-35",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ATENOLOL 50MG TABLET @$.02",
       "name-50": "ATENOLOL 50MG TABLET @$.02",
       "primary_ndc_number-50": {
@@ -2345,7 +2345,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_35",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2382,25 +2382,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_35",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TENORMIN",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_35",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TEN50",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_35",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ATE50",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_35",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-135-7373",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2410,13 +2410,13 @@
         },
         {
           "id": "50_1-8_35",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "T50",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-9_35",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "55953-0039-80",
           "ndc_codes-50_1": [
             "55953-0039-80"
@@ -2424,14 +2424,14 @@
         },
         {
           "id": "50_1-10_35",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CARDIAC DRUGS"
         }
       ]
     },
     {
       "_id": "50-36",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "ATRACURIUM--IV 10MG_ML INJ",
       "name-50": "ATRACURIUM--IV 10MG/ML INJ",
       "primary_ndc_number-50": {
@@ -2477,7 +2477,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_36",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2505,25 +2505,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_36",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TRACRIUM",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_36",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TRA10INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_36",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ATR10INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_36",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-215-7755",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2532,7 +2532,7 @@
         },
         {
           "id": "50_1-6_36",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "00081-0940-44",
           "ndc_codes-50_1": [
             "00081-0940-44"
@@ -2540,14 +2540,14 @@
         },
         {
           "id": "50_1-7_36",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SKELETAL MUSCLE RELAXANTS"
         }
       ]
     },
     {
       "_id": "50-41",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BACITRACIN--OPT 500U_GM OINT",
       "name-50": "BACITRACIN--OPT 500U/GM OINT",
       "primary_ndc_number-50": {
@@ -2593,7 +2593,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_41",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2617,7 +2617,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_41",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "JWG",
           "sig-50_15": "AAA QID AFTER WASHING"
         }
@@ -2643,25 +2643,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_41",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BACOO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_41",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BACOPTH",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_41",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BACEYEO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_41",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BAC3.5",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2670,7 +2670,7 @@
         },
         {
           "id": "50_1-7_41",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "0364-7174-70",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2681,7 +2681,7 @@
     },
     {
       "_id": "50-42",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BACITRACIN--TOP 500U_GM OINT",
       "name-50": "BACITRACIN--TOP 500U/GM OINT",
       "primary_ndc_number-50": {
@@ -2728,7 +2728,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_42",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2751,7 +2751,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_42",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "GU",
           "sig-50_15": "AAA PRN"
         }
@@ -2773,25 +2773,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_42",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BACIGUENT",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_42",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BACOT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_42",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BAC500",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_42",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-159-6625",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2802,13 +2802,13 @@
         },
         {
           "id": "50_1-6_42",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BACO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_42",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BACUNG",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2817,14 +2817,14 @@
         },
         {
           "id": "50_1-8_42",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTIBIOTICS"
         }
       ]
     },
     {
       "_id": "50-43",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BACLOFEN--PO 10MG TAB",
       "name-50": "BACLOFEN--PO 10MG TAB",
       "primary_ndc_number-50": {
@@ -2871,7 +2871,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_43",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -2898,37 +2898,37 @@
       "synonym-50": [
         {
           "id": "50_1-1_43",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LIORESAL",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_43",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LIORESAL10",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_43",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BAC10",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_43",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LIO10",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_43",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LIOR10",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_43",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-062-5756",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -2937,14 +2937,14 @@
         },
         {
           "id": "50_1-7_43",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SKELETAL MUSCLE RELAXANTS"
         }
       ]
     },
     {
       "_id": "50-44",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BALANCED SALT (BSS) OPT SOLN @$37.15--IN",
       "name-50": "BALANCED SALT (BSS) OPT SOLN @$37.15--IN",
       "primary_ndc_number-50": {
@@ -2989,7 +2989,7 @@
       "synonym-50": [
         {
           "id": "50_1-1_44",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BSS",
           "intended_use-50_1": "TRADE NAME",
           "ndc_codes-50_1": [
@@ -2998,19 +2998,19 @@
         },
         {
           "id": "50_1-2_44",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BSS15",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_44",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BAL SALT OS",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_44",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BSSOS",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3019,26 +3019,26 @@
         },
         {
           "id": "50_1-5_44",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BSSOL",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_44",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-119-7693",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_44",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "EENT DRUGS,MISC"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_44",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3066,7 +3066,7 @@
     },
     {
       "_id": "50-46",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-BECLOMETHASONE NASAL SPRAY--NAS 42MCG",
       "name-50": "D-BECLOMETHASONE NASAL SPRAY--NAS 42MCG",
       "primary_ndc_number-50": {
@@ -3113,7 +3113,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_46",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3139,7 +3139,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_46",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "MJS",
           "sig-50_15": "1 SPRAY EACH NOSTRIL BID"
         }
@@ -3147,7 +3147,7 @@
     },
     {
       "_id": "50-47",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-BECLOMETHASONE ORAL_17GM INHALER--PO 4",
       "name-50": "D-BECLOMETHASONE ORAL/17GM INHALER--PO 4",
       "primary_ndc_number-50": {
@@ -3194,7 +3194,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_47",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3220,7 +3220,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_47",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "MJS",
           "sig-50_15": "2 PUFFS TID TO QID"
         }
@@ -3246,7 +3246,7 @@
     },
     {
       "_id": "50-49",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BELLADONNA_OPIUM (B&O)--RECT SUPP",
       "name-50": "BELLADONNA/OPIUM (B&O)--RECT SUPP",
       "primary_ndc_number-50": {
@@ -3289,7 +3289,7 @@
       "synonym-50": [
         {
           "id": "50_1-1_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "B&O SUPPOSITORIES",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3298,25 +3298,25 @@
         },
         {
           "id": "50_1-4_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SUBO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SUB&O",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "SB&O",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3325,26 +3325,26 @@
         },
         {
           "id": "50_1-8_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "OPIUM",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-9_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "B/O",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-10_49",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "opiate agonists"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_49",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3371,7 +3371,7 @@
     },
     {
       "_id": "50-50",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "DONNATAL EQUIV ORAL TABLET--PO 16.2MG TA",
       "name-50": "DONNATAL EQUIV ORAL TABLET--PO 16.2MG TA",
       "primary_ndc_number-50": {
@@ -3418,7 +3418,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_50",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3452,37 +3452,37 @@
       "synonym-50": [
         {
           "id": "50_1-1_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DONNATAL",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DONT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BELPHE",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DONTABS",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-100-7983",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3493,36 +3493,36 @@
         },
         {
           "id": "50_1-8_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BPB",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-9_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DON",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-10_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "HYOT"
         },
         {
           "id": "50_1-11_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "HYOSOPHEN"
         },
         {
           "id": "50_1-12_50",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTIMUSCARINICS/ANTISPASMODICS"
         }
       ]
     },
     {
       "_id": "50-53",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BENZONATATE 100MG @$.10 CAP--PO 100MG CA",
       "name-50": "BENZONATATE 100MG @$.10 CAP--PO 100MG CA",
       "primary_ndc_number-50": {
@@ -3569,7 +3569,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_53",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3611,25 +3611,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_53",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TESSALON",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_53",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BEN100",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_53",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "TES100",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_53",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-660-1798",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3639,14 +3639,14 @@
         },
         {
           "id": "50_1-5_53",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTITUSSIVES"
         }
       ]
     },
     {
       "_id": "50-55",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BENZTROPINE--PO 2MG TAB",
       "name-50": "BENZTROPINE--PO 2MG TAB",
       "primary_ndc_number-50": {
@@ -3693,7 +3693,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_55",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3724,13 +3724,13 @@
       "synonym-50": [
         {
           "id": "50_1-1_55",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "COGENTIN 2",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_55",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "COG2",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3739,7 +3739,7 @@
         },
         {
           "id": "50_1-3_55",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-680-1907",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3749,13 +3749,13 @@
         },
         {
           "id": "50_1-4_55",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BEN2",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_55",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "COG2MG",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3764,14 +3764,14 @@
         },
         {
           "id": "50_1-6_55",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "ANTIPARKINSONIAN AGENTS"
         }
       ]
     },
     {
       "_id": "50-56",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "Z-BETAMETHASONE PHS+ACT(CELESTONE)6MG_ML",
       "name-50": "Z-BETAMETHASONE PHS+ACT(CELESTONE)6MG/ML",
       "primary_ndc_number-50": {
@@ -3818,7 +3818,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_56",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3843,37 +3843,37 @@
       "synonym-50": [
         {
           "id": "50_1-1_56",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CELESTONE SOLUSPAN",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_56",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CEL6INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_56",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BET6INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_56",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BETINJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_56",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CELINJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-8_56",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-904-2190",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3882,14 +3882,14 @@
         },
         {
           "id": "50_1-9_56",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BETAMETHASONE"
         }
       ]
     },
     {
       "_id": "50-57",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "Z-BETHANECHOL(URECHOLINE)--PO 10MG TAB",
       "name-50": "Z-BETHANECHOL(URECHOLINE)--PO 10MG TAB",
       "primary_ndc_number-50": {
@@ -3936,7 +3936,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_57",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -3959,31 +3959,31 @@
       "synonym-50": [
         {
           "id": "50_1-1_57",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "URECHOLINE",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_57",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "URC10",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_57",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "URE10",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_57",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BET10",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_57",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-616-7856",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -3993,14 +3993,14 @@
         },
         {
           "id": "50_1-7_57",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CHOLINERGICS"
         }
       ]
     },
     {
       "_id": "50-58",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "BISACODYL--PO 5MG TBEC",
       "name-50": "BISACODYL--PO 5MG TBEC",
       "primary_ndc_number-50": {
@@ -4047,7 +4047,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_58",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -4085,19 +4085,19 @@
       "synonym-50": [
         {
           "id": "50_1-1_58",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DULCOLAX",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-3_58",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DULT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_58",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BIS5",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -4107,31 +4107,31 @@
         },
         {
           "id": "50_1-5_58",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-889-9034",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-7_58",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "DUL5",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-9_58",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CATHARTICS"
         },
         {
           "id": "50_1-10_58",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "LAXATIVES"
         }
       ]
     },
     {
       "_id": "50-59",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-HEMORRHOIDAL (PLAIN) SUPPOSITORY--RECT",
       "name-50": "D-HEMORRHOIDAL (PLAIN) SUPPOSITORY--RECT",
       "ndc_invalid-50": "Valid NDC",
@@ -4169,7 +4169,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_59",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -4194,7 +4194,7 @@
     },
     {
       "_id": "50-61",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "Z-BLEOMYCIN 15UNITS  @$136.49",
       "name-50": "Z-BLEOMYCIN 15UNITS  @$136.49",
       "primary_ndc_number-50": {
@@ -4240,19 +4240,19 @@
       "synonym-50": [
         {
           "id": "50_1-1_61",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BLENOXANE",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_61",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BLEO",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_61",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BLEOMYCIN",
           "ndc_codes-50_1": [
             "00015-3010-20"
@@ -4262,7 +4262,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_61",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -4289,7 +4289,7 @@
     },
     {
       "_id": "50-63",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-BRETYLIUM--INJ 50MG_ML SOLN",
       "name-50": "D-BRETYLIUM--INJ 50MG/ML SOLN",
       "primary_ndc_number-50": {
@@ -4335,7 +4335,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_63",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -4361,7 +4361,7 @@
     },
     {
       "_id": "50-64",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "Z-BROMOCRIPTINE 2.5MG TAB (PARLODEL)--PO",
       "name-50": "Z-BROMOCRIPTINE 2.5MG TAB (PARLODEL)--PO",
       "primary_ndc_number-50": {
@@ -4407,31 +4407,31 @@
       "synonym-50": [
         {
           "id": "50_1-1_64",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PARLODEL",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_64",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PAR25",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_64",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "PAR2.5",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_64",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BRO2.5",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-6_64",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-01-083-0900",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -4440,14 +4440,14 @@
         },
         {
           "id": "50_1-7_64",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BROMOCRIPTINE"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_64",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -4473,7 +4473,7 @@
     },
     {
       "_id": "50-65",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "D-BROMPHENIRAMINE CMPD TAB$.03--PO TBSR",
       "name-50": "D-BROMPHENIRAMINE CMPD TAB$.03--PO TBSR",
       "primary_ndc_number-50": {
@@ -4519,7 +4519,7 @@
       "sig_codes-50": [
         {
           "id": "50_15-1_65",
-          "type": "cmumpss:Sig_CodeS-50_15",
+          "type": "chcss:Sig_CodeS-50_15",
           "sig_codes-50_15": "MJS",
           "sig-50_15": "T1 TB PO BID TO TID"
         }
@@ -4527,7 +4527,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_65",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -4550,7 +4550,7 @@
     },
     {
       "_id": "50-67",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "Z-BUTORPHANOL--INJ 2MG_ML SOLN",
       "name-50": "Z-BUTORPHANOL--INJ 2MG/ML SOLN",
       "primary_ndc_number-50": {
@@ -4597,7 +4597,7 @@
       "associated_formulary-50": [
         {
           "id": "50_3-1_67",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"
@@ -4627,31 +4627,31 @@
       "synonym-50": [
         {
           "id": "50_1-1_67",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "STADOL",
           "intended_use-50_1": "TRADE NAME"
         },
         {
           "id": "50_1-2_67",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "STA2INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_67",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BUT2INJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_67",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "STAINJ",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-5_67",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BUTINJ",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -4660,14 +4660,14 @@
         },
         {
           "id": "50_1-6_67",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BUTORPHANOL"
         }
       ]
     },
     {
       "_id": "50-68",
-      "type": "cmumpss:Drug-50",
+      "type": "chcss:Drug-50",
       "label": "CALAMINE LOTION @.01--TOP LOTN",
       "name-50": "CALAMINE LOTION @.01--TOP LOTN",
       "primary_ndc_number-50": {
@@ -4713,25 +4713,25 @@
       "synonym-50": [
         {
           "id": "50_1-1_68",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CALL",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-2_68",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CALOT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-3_68",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CALLOT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-4_68",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "6505-00-687-4535",
           "intended_use-50_1": "QUICK CODE",
           "ndc_codes-50_1": [
@@ -4742,25 +4742,25 @@
         },
         {
           "id": "50_1-5_68",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "CLOT",
           "intended_use-50_1": "QUICK CODE"
         },
         {
           "id": "50_1-8_68",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "BASIC LOTIONS/LINIMENTS"
         },
         {
           "id": "50_1-9_68",
-          "type": "cmumpss:Synonym-50_1",
+          "type": "chcss:Synonym-50_1",
           "synonym-50_1": "OTC9"
         }
       ],
       "associated_formulary-50": [
         {
           "id": "50_3-1_68",
-          "type": "cmumpss:Associated_Formulary-50_3",
+          "type": "chcss:Associated_Formulary-50_3",
           "associated_formulary-50_3": {
             "id": "59_3-1",
             "label": "FIRST FORMULARY GROUP"

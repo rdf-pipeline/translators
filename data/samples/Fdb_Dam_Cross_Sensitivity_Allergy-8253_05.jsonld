@@ -3,70 +3,70 @@
   "@graph": [
     {
       "_id": "8253_05-1",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "1",
       "damagccs-8253_05": "1",
       "damagccsd-8253_05": "BETA LACTAM ANTIBIOTIC"
     },
     {
       "_id": "8253_05-2",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "2",
       "damagccs-8253_05": "2",
       "damagccsd-8253_05": "CORTICOSTEROIDS (GLUCOCORTICOIDS)"
     },
     {
       "_id": "8253_05-3",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "3",
       "damagccs-8253_05": "3",
       "damagccsd-8253_05": "ASPIRIN-LIKE ANALGESIC, SALICYLATES"
     },
     {
       "_id": "8253_05-4",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "4",
       "damagccs-8253_05": "4",
       "damagccsd-8253_05": "(DO NOT USE RETIRED CODE) TIPEPIDINE"
     },
     {
       "_id": "8253_05-5",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "5",
       "damagccs-8253_05": "5",
       "damagccsd-8253_05": "OPIOIDS - MORPHINE ANALOGUES"
     },
     {
       "_id": "8253_05-6",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "6",
       "damagccs-8253_05": "6",
       "damagccsd-8253_05": "BARBITURATES"
     },
     {
       "_id": "8253_05-7",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "7",
       "damagccs-8253_05": "7",
       "damagccsd-8253_05": "TETRACYCLINES"
     },
     {
       "_id": "8253_05-8",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "8",
       "damagccs-8253_05": "8",
       "damagccsd-8253_05": "PHENOTHIAZINES"
     },
     {
       "_id": "8253_05-9",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "9",
       "damagccs-8253_05": "9",
       "damagccsd-8253_05": "MACROLIDE ANTIBIOTICS"
     },
     {
       "_id": "8253_05-10",
-      "type": "cmumpss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+      "type": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
       "label": "10",
       "damagccs-8253_05": "10",
       "damagccsd-8253_05": "AMINOGLYCOSIDES"

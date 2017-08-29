@@ -3,7 +3,7 @@
   "@graph": [
     {
       "_id": "8410-1",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "REGULAR",
       "name-8410": "REGULAR",
       "abbrev-8410": "REG",
@@ -19,7 +19,7 @@
     },
     {
       "_id": "8410-2",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "VEGETARIAN",
       "name-8410": "VEGETARIAN",
       "abbrev-8410": "VEG",
@@ -34,7 +34,7 @@
     },
     {
       "_id": "8410-3",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "KOSHER",
       "name-8410": "KOSHER",
       "abbrev-8410": "KOSHER",
@@ -49,7 +49,7 @@
     },
     {
       "_id": "8410-4",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "HIGH CALORIE HIGH PROTEIN",
       "name-8410": "HIGH CALORIE HIGH PROTEIN",
       "abbrev-8410": "HICAL",
@@ -64,7 +64,7 @@
     },
     {
       "_id": "8410-5",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "NO CONCENTRATED SWEETS",
       "name-8410": "NO CONCENTRATED SWEETS",
       "abbrev-8410": "NSWEET",
@@ -78,7 +78,7 @@
     },
     {
       "_id": "8410-6",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "CLEAR LIQUID",
       "name-8410": "CLEAR LIQUID",
       "abbrev-8410": "CL",
@@ -90,7 +90,7 @@
     },
     {
       "_id": "8410-7",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "FULL LIQUID",
       "name-8410": "FULL LIQUID",
       "abbrev-8410": "FL",
@@ -102,7 +102,7 @@
     },
     {
       "_id": "8410-8",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "COLD SEMILIQUID",
       "name-8410": "COLD SEMILIQUID",
       "abbrev-8410": "SEMI L",
@@ -114,7 +114,7 @@
     },
     {
       "_id": "8410-9",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "DENTAL LIQUID",
       "name-8410": "DENTAL LIQUID",
       "abbrev-8410": "DENTAL",
@@ -126,7 +126,7 @@
     },
     {
       "_id": "8410-10",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PUREED",
       "name-8410": "PUREED",
       "abbrev-8410": "PUREED",
@@ -135,7 +135,7 @@
     },
     {
       "_id": "8410-11",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "MECHANICAL SOFT",
       "name-8410": "MECHANICAL SOFT",
       "abbrev-8410": "MSOFT",
@@ -147,7 +147,7 @@
     },
     {
       "_id": "8410-12",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "SOFT",
       "name-8410": "SOFT",
       "abbrev-8410": "SOFT",
@@ -159,7 +159,7 @@
     },
     {
       "_id": "8410-13",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "SPECIAL",
       "name-8410": "SPECIAL",
       "abbrev-8410": "SPEC",
@@ -168,7 +168,7 @@
     },
     {
       "_id": "8410-14",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST - FECAL FAT TEST",
       "name-8410": "TEST - FECAL FAT TEST",
       "abbrev-8410": "100FAT",
@@ -182,7 +182,7 @@
     },
     {
       "_id": "8410-15",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST - GLUCOSE TOLERANCE",
       "name-8410": "TEST - GLUCOSE TOLERANCE",
       "abbrev-8410": "GTT",
@@ -196,7 +196,7 @@
     },
     {
       "_id": "8410-16",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST - MEAT FREE TEST DIET",
       "name-8410": "TEST - MEAT FREE TEST DIET",
       "abbrev-8410": "NOMEAT",
@@ -210,7 +210,7 @@
     },
     {
       "_id": "8410-17",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST - SEROTONIN TEST",
       "name-8410": "TEST - SEROTONIN TEST",
       "abbrev-8410": "5-HIAA",
@@ -224,7 +224,7 @@
     },
     {
       "_id": "8410-18",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST - VANILLYMANDELIC ACID",
       "name-8410": "TEST - VANILLYMANDELIC ACID",
       "abbrev-8410": "VMA",
@@ -236,7 +236,7 @@
     },
     {
       "_id": "8410-19",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST - BARIUM ENEMA PREP",
       "name-8410": "TEST - BARIUM ENEMA PREP",
       "abbrev-8410": "BEPREP",
@@ -249,7 +249,7 @@
     },
     {
       "_id": "8410-20",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST - IODINE RESTRICTED",
       "name-8410": "TEST - IODINE RESTRICTED",
       "abbrev-8410": "IODRES",
@@ -262,7 +262,7 @@
     },
     {
       "_id": "8410-21",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "TEST-Z OTHER",
       "name-8410": "TEST-Z OTHER",
       "standard_entry-8410": "STANDARD ENTRY",
@@ -273,7 +273,7 @@
     },
     {
       "_id": "8410-22",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "STEP-ONE AHA DIET",
       "name-8410": "STEP-ONE AHA DIET",
       "abbrev-8410": "AHA",
@@ -294,7 +294,7 @@
     },
     {
       "_id": "8410-23",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "STEP-TWO AHA DIET",
       "name-8410": "STEP-TWO AHA DIET",
       "abbrev-8410": "AHAII",
@@ -312,7 +312,7 @@
     },
     {
       "_id": "8410-24",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "SODIUM RESTRICTED 500 MG NA",
       "name-8410": "SODIUM RESTRICTED 500 MG NA",
       "abbrev-8410": "RENAL",
@@ -333,7 +333,7 @@
     },
     {
       "_id": "8410-25",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "SODIUM RESTRICTED 1000 MG NA",
       "name-8410": "SODIUM RESTRICTED 1000 MG NA",
       "abbrev-8410": "RENAL",
@@ -354,7 +354,7 @@
     },
     {
       "_id": "8410-26",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "SODIUM RESTRICTED 2000 MG NA",
       "name-8410": "SODIUM RESTRICTED 2000 MG NA",
       "abbrev-8410": "RENAL",
@@ -375,7 +375,7 @@
     },
     {
       "_id": "8410-27",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "SODIUM RESTRICTED 3000 MG NA",
       "name-8410": "SODIUM RESTRICTED 3000 MG NA",
       "abbrev-8410": "RENAL",
@@ -396,7 +396,7 @@
     },
     {
       "_id": "8410-28",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "CARDIAC DIET",
       "name-8410": "CARDIAC DIET",
       "abbrev-8410": "CARD",
@@ -408,7 +408,7 @@
     },
     {
       "_id": "8410-29",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "CALCIUM RESTRICTED 400-600 MG",
       "name-8410": "CALCIUM RESTRICTED 400-600 MG",
       "abbrev-8410": "CAREST",
@@ -423,7 +423,7 @@
     },
     {
       "_id": "8410-30",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "CALCIUM RESTRICTED <1000 MG",
       "name-8410": "CALCIUM RESTRICTED <1000 MG",
       "abbrev-8410": "CAREST",
@@ -438,7 +438,7 @@
     },
     {
       "_id": "8410-31",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "CALCIUM RESTRC 400-600MG_OXALATE RESTRC",
       "name-8410": "CALCIUM RESTRC 400-600MG/OXALATE RESTRC",
       "abbrev-8410": "CAORES",
@@ -453,7 +453,7 @@
     },
     {
       "_id": "8410-32",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "CALCIUM RESTRC <1000MG_OXALATE RESTRC",
       "name-8410": "CALCIUM RESTRC <1000MG/OXALATE RESTRC",
       "standard_entry-8410": "STANDARD ENTRY",
@@ -467,7 +467,7 @@
     },
     {
       "_id": "8410-33",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 40 GM_NA 2000 MG_K 45 MEQ",
       "name-8410": "PROTEIN 40 GM/NA 2000 MG/K 45 MEQ",
       "abbrev-8410": "RENAL",
@@ -484,7 +484,7 @@
     },
     {
       "_id": "8410-34",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 60 GM_NA 2000 MG_K 60 MEQ",
       "name-8410": "PROTEIN 60 GM/NA 2000 MG/K 60 MEQ",
       "abbrev-8410": "RENAL",
@@ -503,7 +503,7 @@
     },
     {
       "_id": "8410-35",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 80 GM_NA 2000 MG_K 80 MEQ",
       "name-8410": "PROTEIN 80 GM/NA 2000 MG/K 80 MEQ",
       "abbrev-8410": "RENAL",
@@ -523,7 +523,7 @@
     },
     {
       "_id": "8410-36",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 60GM_NA2000MG_K60MEQ_PHOS1000MG",
       "name-8410": "PROTEIN 60GM/NA2000MG/K60MEQ/PHOS1000MG",
       "standard_entry-8410": "STANDARD ENTRY",
@@ -540,7 +540,7 @@
     },
     {
       "_id": "8410-37",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 80GM_NA3000MG_K80MEQ_PHOS1200MG",
       "name-8410": "PROTEIN 80GM/NA3000MG/K80MEQ/PHOS1200MG",
       "abbrev-8410": "RENAL",
@@ -558,7 +558,7 @@
     },
     {
       "_id": "8410-38",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 20 GMNA 1000 MG",
       "name-8410": "PROTEIN 20 GMNA 1000 MG",
       "abbrev-8410": "LIVER",
@@ -576,7 +576,7 @@
     },
     {
       "_id": "8410-39",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 40 GMNA 2000 MG",
       "name-8410": "PROTEIN 40 GMNA 2000 MG",
       "abbrev-8410": "LIVER",
@@ -594,7 +594,7 @@
     },
     {
       "_id": "8410-40",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 60 GM_NA 2000 MG",
       "name-8410": "PROTEIN 60 GM/NA 2000 MG",
       "abbrev-8410": "LIVER",
@@ -614,7 +614,7 @@
     },
     {
       "_id": "8410-41",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 80 GMNA 2000 MG",
       "name-8410": "PROTEIN 80 GMNA 2000 MG",
       "abbrev-8410": "LIVER",
@@ -634,7 +634,7 @@
     },
     {
       "_id": "8410-42",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "PROTEIN 100GM NA2000MG",
       "name-8410": "PROTEIN 100GM NA2000MG",
       "abbrev-8410": "LIVER",
@@ -651,7 +651,7 @@
     },
     {
       "_id": "8410-43",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "GESTATIONAL DIABETIC 2000 KCAL",
       "name-8410": "GESTATIONAL DIABETIC 2000 KCAL",
       "abbrev-8410": "ADA",
@@ -670,7 +670,7 @@
     },
     {
       "_id": "8410-44",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "GESTATIONAL DIABETIC 2200 KCAL",
       "name-8410": "GESTATIONAL DIABETIC 2200 KCAL",
       "abbrev-8410": "ADA",
@@ -689,7 +689,7 @@
     },
     {
       "_id": "8410-45",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "GESTATIONAL DIABETIC 2400 KCAL",
       "name-8410": "GESTATIONAL DIABETIC 2400 KCAL",
       "abbrev-8410": "ADA",
@@ -708,7 +708,7 @@
     },
     {
       "_id": "8410-46",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "GESTATIONAL DIABETIC 2600 KCAL",
       "name-8410": "GESTATIONAL DIABETIC 2600 KCAL",
       "abbrev-8410": "ADA",
@@ -727,7 +727,7 @@
     },
     {
       "_id": "8410-47",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "GESTATIONAL DIABETIC ____ KCAL",
       "name-8410": "GESTATIONAL DIABETIC ____ KCAL",
       "abbrev-8410": "ADA",
@@ -743,7 +743,7 @@
     },
     {
       "_id": "8410-48",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "DIABETIC 1200 KCAL-IDDM",
       "name-8410": "DIABETIC 1200 KCAL-IDDM",
       "abbrev-8410": "ADA",
@@ -760,7 +760,7 @@
     },
     {
       "_id": "8410-49",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "DIABETIC 1500 KCAL-IDDM",
       "name-8410": "DIABETIC 1500 KCAL-IDDM",
       "abbrev-8410": "ADA",
@@ -777,7 +777,7 @@
     },
     {
       "_id": "8410-50",
-      "type": "cmumpss:Diet-8410",
+      "type": "chcss:Diet-8410",
       "label": "DIABETIC 1800 KCAL-IDDM",
       "name-8410": "DIABETIC 1800 KCAL-IDDM",
       "abbrev-8410": "ADA",

@@ -3,42 +3,42 @@
   "@graph": [
     {
       "_id": "8191-1",
-      "type": "cmumpss:Ethnic_Background-8191",
+      "type": "chcss:Ethnic_Background-8191",
       "label": "1",
       "code-8191": "1",
       "description-8191": "HISPANIC"
     },
     {
       "_id": "8191-2",
-      "type": "cmumpss:Ethnic_Background-8191",
+      "type": "chcss:Ethnic_Background-8191",
       "label": "2",
       "code-8191": "2",
       "description-8191": "SE ASIAN"
     },
     {
       "_id": "8191-3",
-      "type": "cmumpss:Ethnic_Background-8191",
+      "type": "chcss:Ethnic_Background-8191",
       "label": "3",
       "code-8191": "3",
       "description-8191": "FILIPINO"
     },
     {
       "_id": "8191-4",
-      "type": "cmumpss:Ethnic_Background-8191",
+      "type": "chcss:Ethnic_Background-8191",
       "label": "4",
       "code-8191": "4",
       "description-8191": "OTHER ASIAN/PACIFIC ISLANDER"
     },
     {
       "_id": "8191-5",
-      "type": "cmumpss:Ethnic_Background-8191",
+      "type": "chcss:Ethnic_Background-8191",
       "label": "9",
       "code-8191": "9",
       "description-8191": "OTHER"
     },
     {
       "_id": "8191-6",
-      "type": "cmumpss:Ethnic_Background-8191",
+      "type": "chcss:Ethnic_Background-8191",
       "label": "Z",
       "code-8191": "Z",
       "description-8191": "UNKNOWN"

@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "8149-1",
-            "type": "cmumpss:Anesthesia_Risk_Codes-8149",
+            "type": "chcss:Anesthesia_Risk_Codes-8149",
             "label": "1",
             "classification-8149": "1",
             "physical_status-8149": "No organic, physiologic, biochemical or psychiatric disturbance.",
@@ -11,7 +11,7 @@
         },
         {
             "_id": "8149-2",
-            "type": "cmumpss:Anesthesia_Risk_Codes-8149",
+            "type": "chcss:Anesthesia_Risk_Codes-8149",
             "label": "2",
             "classification-8149": "2",
             "physical_status-8149": "Moderate systemic disturbance may/may not be related to surg proc.",
@@ -19,7 +19,7 @@
         },
         {
             "_id": "8149-3",
-            "type": "cmumpss:Anesthesia_Risk_Codes-8149",
+            "type": "chcss:Anesthesia_Risk_Codes-8149",
             "label": "3",
             "classification-8149": "3",
             "physical_status-8149": "Severe systemic disturbance may/may not be related to surg proc.",
@@ -27,7 +27,7 @@
         },
         {
             "_id": "8149-4",
-            "type": "cmumpss:Anesthesia_Risk_Codes-8149",
+            "type": "chcss:Anesthesia_Risk_Codes-8149",
             "label": "4",
             "classification-8149": "4",
             "physical_status-8149": "Severe systemic distrubance that is life-threatening w/wo surgery.",
@@ -35,7 +35,7 @@
         },
         {
             "_id": "8149-5",
-            "type": "cmumpss:Anesthesia_Risk_Codes-8149",
+            "type": "chcss:Anesthesia_Risk_Codes-8149",
             "label": "5",
             "classification-8149": "5",
             "physical_status-8149": "Moribund and little chance for survival. Surgery performed.",
@@ -43,7 +43,7 @@
         },
         {
             "_id": "8149-6",
-            "type": "cmumpss:Anesthesia_Risk_Codes-8149",
+            "type": "chcss:Anesthesia_Risk_Codes-8149",
             "label": "E",
             "classification-8149": "E",
             "physical_status-8149": "Patient requires emergency operation.",

@@ -3,14 +3,14 @@
   "@graph": [
     {
       "_id": "8930-1",
-      "type": "cmumpss:Coding_Type-8930",
+      "type": "chcss:Coding_Type-8930",
       "label": "SNOMED",
       "name-8930": "SNOMED",
       "functional_area-8930": "LABORATORY",
       "source_files-8930": [
         {
           "id": "8930_01-61.1_1",
-          "type": "cmumpss:Source_Files-8930_01",
+          "type": "chcss:Source_Files-8930_01",
           "source_file-8930_01": {
             "id": "1-61.1",
             "label": "MORPHOLOGY FIELD"
@@ -21,7 +21,7 @@
         },
         {
           "id": "8930_01-61.2_1",
-          "type": "cmumpss:Source_Files-8930_01",
+          "type": "chcss:Source_Files-8930_01",
           "source_file-8930_01": {
             "id": "1-61.2",
             "label": "ETIOLOGY FIELD"

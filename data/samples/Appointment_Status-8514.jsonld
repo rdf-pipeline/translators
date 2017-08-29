@@ -3,61 +3,61 @@
     "@graph": [
         {
             "_id": "8514-1",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "PENDING",
             "appointment_status-8514": "PENDING"
         },
         {
             "_id": "8514-2",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "KEPT",
             "appointment_status-8514": "KEPT"
         },
         {
             "_id": "8514-3",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "CANCEL",
             "appointment_status-8514": "CANCEL"
         },
         {
             "_id": "8514-4",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "NO-SHOW",
             "appointment_status-8514": "NO-SHOW"
         },
         {
             "_id": "8514-5",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "WALK-IN",
             "appointment_status-8514": "WALK-IN"
         },
         {
             "_id": "8514-6",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "S-CALL",
             "appointment_status-8514": "S-CALL"
         },
         {
             "_id": "8514-7",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "TEL-CON",
             "appointment_status-8514": "TEL-CON"
         },
         {
             "_id": "8514-8",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "LWOBS",
             "appointment_status-8514": "LWOBS"
         },
         {
             "_id": "8514-9",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "ADMIN",
             "appointment_status-8514": "ADMIN"
         },
         {
             "_id": "8514-10",
-            "type": "cmumpss:Appointment_Status-8514",
+            "type": "chcss:Appointment_Status-8514",
             "label": "OCC-SVC",
             "appointment_status-8514": "OCC-SVC"
         }

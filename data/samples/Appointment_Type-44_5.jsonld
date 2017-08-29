@@ -3,7 +3,7 @@
     "@graph": [
         {
             "_id": "44_5-1",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "RAD*",
             "name-44_5": "RAD*",
             "description-44_5": "RAD APPOINTMENT",
@@ -15,7 +15,7 @@
         },
         {
             "_id": "44_5-2",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "NEW",
             "name-44_5": "NEW",
             "description-44_5": "NEW APPTS",
@@ -27,7 +27,7 @@
         },
         {
             "_id": "44_5-3",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "NWA",
             "name-44_5": "NWA",
             "description-44_5": "NEW ACTIVE DUTY APPTS",
@@ -39,7 +39,7 @@
         },
         {
             "_id": "44_5-4",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "RET",
             "name-44_5": "RET",
             "description-44_5": "RETURN APPTS",
@@ -51,7 +51,7 @@
         },
         {
             "_id": "44_5-5",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "PHY",
             "name-44_5": "PHY",
             "description-44_5": "PRE SCHOOL PHYSICALS",
@@ -63,7 +63,7 @@
         },
         {
             "_id": "44_5-5",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "PHY",
             "name-44_5": "PHY",
             "description-44_5": "PRE SCHOOL PHYSICALS",
@@ -75,7 +75,7 @@
         },
         {
             "_id": "44_5-6",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "WCC",
             "name-44_5": "WCC",
             "description-44_5": "WELL CHILD CLINIC",
@@ -87,7 +87,7 @@
         },
         {
             "_id": "44_5-7",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "WBC",
             "name-44_5": "WBC",
             "description-44_5": "WELL BABY CHECK",
@@ -99,7 +99,7 @@
         },
         {
             "_id": "44_5-8",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "ACUTE",
             "name-44_5": "ACUTE",
             "description-44_5": "ACUTE CARE",
@@ -111,7 +111,7 @@
         },
         {
             "_id": "44_5-9",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "AFTER",
             "name-44_5": "AFTER",
             "description-44_5": "AFTER HOURS CLINIC",
@@ -123,7 +123,7 @@
         },
         {
             "_id": "44_5-10",
-            "type": "cmumpss:Appointment_Type-44_5",
+            "type": "chcss:Appointment_Type-44_5",
             "label": "F_U",
             "name-44_5": "F/U",
             "description-44_5": "FOLLOW-UP APPT",
