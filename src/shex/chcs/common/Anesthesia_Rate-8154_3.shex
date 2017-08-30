@@ -1,5 +1,5 @@
 # This schema represents the standard DOD (Group 1) file which is sent fully populated to the sites, 
-# with annual updates provided. This file contains a flat rate for each Anesthesia CPT code.
+# with annual updates provided; it contains a flat rate for each Anesthesia CPT code.
 # 
 # CHCS schema documentation:
 #    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Anesthesia_Rate-8154_3.htm

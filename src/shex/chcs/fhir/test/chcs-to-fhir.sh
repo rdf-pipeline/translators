@@ -16,7 +16,7 @@ SHAPE=${4}
 ROOT=${5}
 
 SOURCE_SHEX="${CWD}/../../common/${SOURCE}.shex"
-SOURCE_DATA="${CWD}/../../common/data/${SOURCE}.ttl"
+SOURCE_DATA="${CWD}/../../common/input_data/${SOURCE}.ttl"
 VAL_FILE="/tmp/${SOURCE}.val"
 
 TARGET_SHEX="${CWD}/../${TARGET}.shex"
@@ -61,7 +61,7 @@ verify_file_content "${VAL_FILE}" "Failure\|Error" "Validation failed; ${VAL_FIL
 echo -e "${GREEN_FONT}Validation succeeded - results available in ${VAL_FILE}" >&2
 echo -e "${DEFAULT_COLOR}"
 
-MATERIALIZE_CMD="cat ${VAL_FILE} | ~/src/shex.js/extensions/shex-map/bin/materialize -t \"${TARGET_SHEX}\" -r \"${ROOT}\" > \"${TTL_FILE}\""
+MATERIALIZE_CMD="cat ${VAL_FILE} | ${MATERIALIZE} -t \"${TARGET_SHEX}\" -r \"${ROOT}\" > \"${TTL_FILE}\""
 echo "\nExecuting ${MATERIALIZE_CMD}"
 eval ${MATERIALIZE_CMD}
 if [ $? -ne 0 ]; then
