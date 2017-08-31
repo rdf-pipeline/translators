@@ -18,7 +18,7 @@ start=@<http://hokukahu.com/chcs/Patient-2>
     chcss:chcs_type                     xsd:string?    %Map:{ patient:type %};
     rdfs:label                          xsd:string     %Map:{ patient:patient_label %};
 
-    chcss:name-2                        xsd:string    %Map:{ regex(/"(?<patient:family>[a-zA-Z'\\-]+), (?<patient:given>[a-zA-Z'\\-\\s]+)"/) %};
+    chcss:name-2                        xsd:string    %Map:{ regex(/"(?<patient:family>[a-zA-Z'\\-]+),(?<patient:given>[a-zA-Z'\\-\\s]+)"/) %};
     chcss:alias-2                       xsd:string?    %Map:{ patient:alias %};
 
     chcss:sex-2  {

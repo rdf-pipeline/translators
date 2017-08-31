@@ -1,0 +1,837 @@
+{
+  "type": "ShapeTest",
+  "node": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+  "shape": "http://hokukahu.com/chcs/Procedure",
+  "solution": {
+    "type": "EachOfSolutions",
+    "solutions": [
+      {
+        "type": "EachOfSolution",
+        "expressions": [
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                "object": {
+                  "value": "Procedure-1074046"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:procedure:id": "\"Procedure-1074046\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " procedure:id "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                "object": {
+                  "value": "Procedure"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:procedure:chcs_type": "\"Procedure\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " procedure:chcs_type "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "object": {
+                  "value": "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:procedure:label": "\"Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " procedure:label "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#patient",
+            "valueExpr": {
+              "type": "Shape",
+              "expression": {
+                "type": "EachOf",
+                "expressions": [
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:patient_id "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:patient_label "
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#patient",
+                "object": "http://hokukahu.com/systems/chcs-1/Patient-000007",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://hokukahu.com/systems/chcs-1/Patient-000007",
+                  "shape": "http://hokukahu.com/chcs/Procedure",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/Patient-000007",
+                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                "object": {
+                                  "value": "Patient-000007"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:patient_id": "\"Patient-000007\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:patient_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/Patient-000007",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "BUNNY,BUGS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:patient_label": "\"BUNNY,BUGS\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:patient_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#comment",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " procedure:comment "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#description",
+            "valueExpr": {
+              "type": "Shape",
+              "expression": {
+                "type": "EachOf",
+                "expressions": [
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:description_id "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:description_label "
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#description",
+                "object": "http://hokukahu.com/systems/chcs-1/HDDConcept-67355",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://hokukahu.com/systems/chcs-1/HDDConcept-67355",
+                  "shape": "http://hokukahu.com/chcs/Procedure",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/HDDConcept-67355",
+                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                "object": {
+                                  "value": "HDDConcept-67355"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:description_id": "\"HDDConcept-67355\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:description_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/HDDConcept-67355",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:description_label": "\"Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:description_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#dateReported",
+            "valueExpr": {
+              "type": "ShapeOr",
+              "shapeExprs": [
+                {
+                  "type": "NodeConstraint",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                {
+                  "type": "NodeConstraint",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                {
+                  "type": "NodeConstraint",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#datetime"
+                }
+              ]
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#dateReported",
+                "object": {
+                  "value": "1990-01-01T00:00:00",
+                  "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:procedure:dateReported": "\"1990-01-01T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " procedure:dateReported "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#provider",
+            "valueExpr": {
+              "type": "Shape",
+              "expression": {
+                "type": "EachOf",
+                "expressions": [
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:provider_id "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:provider_label "
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#provider",
+                "object": "http://hokukahu.com/systems/chcs-1/Provider-41200034",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://hokukahu.com/systems/chcs-1/Provider-41200034",
+                  "shape": "http://hokukahu.com/chcs/Procedure",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/Provider-41200034",
+                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                "object": {
+                                  "value": "Provider-41200034"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:provider_id": "\"Provider-41200034\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:provider_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/Provider-41200034",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "MOUSE,MICKEY"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:provider_label": "\"MOUSE,MICKEY\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:provider_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#source",
+            "valueExpr": {
+              "type": "Shape",
+              "expression": {
+                "type": "EachOf",
+                "expressions": [
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:source_id "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:source_label "
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#source",
+                "object": "http://hokukahu.com/systems/chcs-1/HDDConcept-1450368",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://hokukahu.com/systems/chcs-1/HDDConcept-1450368",
+                  "shape": "http://hokukahu.com/chcs/Procedure",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/HDDConcept-1450368",
+                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                "object": {
+                                  "value": "HDDConcept-1450368"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:source_id": "\"HDDConcept-1450368\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:source_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/HDDConcept-1450368",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "Clinical Evidence"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:source_label": "\"Clinical Evidence\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:source_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#status",
+            "valueExpr": {
+              "type": "Shape",
+              "expression": {
+                "type": "EachOf",
+                "expressions": [
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:status_id "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " procedure:status_label "
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#status",
+                "object": "http://hokukahu.com/systems/chcs-1/HDDConcept-1024",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://hokukahu.com/systems/chcs-1/HDDConcept-1024",
+                  "shape": "http://hokukahu.com/chcs/Procedure",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/HDDConcept-1024",
+                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                "object": {
+                                  "value": "HDDConcept-1024"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:status_id": "\"HDDConcept-1024\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:status_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/HDDConcept-1024",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "Active"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:procedure:status_label": "\"Active\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " procedure:status_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#verified",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/Procedure-1074046",
+                "predicate": "http://hokukahu.com/schema/chcss#verified",
+                "object": {
+                  "value": "true",
+                  "type": "http://www.w3.org/2001/XMLSchema#boolean"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:procedure:verified": "\"true\"^^http://www.w3.org/2001/XMLSchema#boolean"
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " procedure:verified "
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

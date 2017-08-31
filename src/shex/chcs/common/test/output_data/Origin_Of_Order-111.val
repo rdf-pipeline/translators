@@ -1,0 +1,197 @@
+{
+  "type": "ShapeTest",
+  "node": "http://hokukahu.com/systems/chcs-1/111-1",
+  "shape": "http://hokukahu.com/chcs/Origin_Of_Order-111",
+  "solution": {
+    "type": "EachOfSolutions",
+    "solutions": [
+      {
+        "type": "EachOfSolution",
+        "expressions": [
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/111-1",
+                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                "object": {
+                  "value": "111-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:originOfOrder:id": "\"111-1\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " originOfOrder:id "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/111-1",
+                "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                "object": {
+                  "value": "chcss:Origin_Of_Order-111"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:originOfOrder:chcs_type": "\"chcss:Origin_Of_Order-111\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " originOfOrder:chcs_type "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/111-1",
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "object": {
+                  "value": "COPATH_AP COTS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:originOfOrder:label": "\"COPATH_AP COTS\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " originOfOrder:label "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#name-111",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/111-1",
+                "predicate": "http://hokukahu.com/schema/chcss#name-111",
+                "object": {
+                  "value": "COPATH/AP COTS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:originOfOrder:name": "\"COPATH/AP COTS\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " originOfOrder:name "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#code-111",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/111-1",
+                "predicate": "http://hokukahu.com/schema/chcss#code-111",
+                "object": {
+                  "value": "APCOTS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:originOfOrder:code": "\"APCOTS\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " originOfOrder:code "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#description-111",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/111-1",
+                "predicate": "http://hokukahu.com/schema/chcss#description-111",
+                "object": {
+                  "value": "Off-board Anatomic Pathology System."
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:originOfOrder:description": "\"Off-board Anatomic Pathology System.\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " originOfOrder:description "
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

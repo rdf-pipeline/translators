@@ -1,0 +1,373 @@
+{
+  "type": "ShapeTest",
+  "node": "http://hokukahu.com/systems/chcs-1/8137-2",
+  "shape": "http://hokukahu.com/chcs/Cause_Of_Injury-8137",
+  "solution": {
+    "type": "EachOfSolutions",
+    "solutions": [
+      {
+        "type": "EachOfSolution",
+        "expressions": [
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8137-2",
+                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                "object": {
+                  "value": "8137-2"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:id": "\"8137-2\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:id "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8137-2",
+                "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                "object": {
+                  "value": "chcss:Cause_Of_Injury-8137"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:chcs_type": "\"chcss:Cause_Of_Injury-8137\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:chcs_type "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8137-2",
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "object": {
+                  "value": "001"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:label": "\"001\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:label "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#code-8137",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8137-2",
+                "predicate": "http://hokukahu.com/schema/chcss#code-8137",
+                "object": {
+                  "value": "001"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:code": "\"001\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:code "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#name-8137",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8137-2",
+                "predicate": "http://hokukahu.com/schema/chcss#name-8137",
+                "object": {
+                  "value": "AIR ACCIDENT, FIXED-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:name": "\"AIR ACCIDENT, FIXED-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:name "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#category-8137",
+            "valueExpr": {
+              "type": "Shape",
+              "expression": {
+                "type": "EachOf",
+                "expressions": [
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " causeOfInjury:category_id "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " causeOfInjury:category_label "
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8137-2",
+                "predicate": "http://hokukahu.com/schema/chcss#category-8137",
+                "object": "http://hokukahu.com/systems/chcs-1/8145-1",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://hokukahu.com/systems/chcs-1/8145-1",
+                  "shape": "http://hokukahu.com/chcs/Cause_Of_Injury-8137",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/8145-1",
+                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                "object": {
+                                  "value": "8145-1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:causeOfInjury:category_id": "\"8145-1\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " causeOfInjury:category_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/8145-1",
+                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "object": {
+                                  "value": "I"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:causeOfInjury:category_label": "\"I\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " causeOfInjury:category_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#description-8137",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8137-2",
+                "predicate": "http://hokukahu.com/schema/chcss#description-8137",
+                "object": {
+                  "value": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Take-off from or landing on aircraft carrier (includes taxiing)."
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:description": "\"ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Take-off from or landing on aircraft carrier (includes taxiing).\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:description "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#dba_inactive_flag-8137",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:dba_inactive_flag "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#deactivation_date-8137",
+            "valueExpr": {
+              "type": "ShapeOr",
+              "shapeExprs": [
+                {
+                  "type": "NodeConstraint",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                {
+                  "type": "NodeConstraint",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                {
+                  "type": "NodeConstraint",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#datetime"
+                }
+              ]
+            },
+            "solutions": [],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " causeOfInjury:deactivation_date "
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

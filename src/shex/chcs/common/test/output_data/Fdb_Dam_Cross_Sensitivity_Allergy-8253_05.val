@@ -1,0 +1,167 @@
+{
+  "type": "ShapeTest",
+  "node": "http://hokukahu.com/systems/chcs-1/8253_05-1",
+  "shape": "http://hokukahu.com/chcs/Fdb_Dam_Cross_Sensitivity_Allergy-8253_05",
+  "solution": {
+    "type": "EachOfSolutions",
+    "solutions": [
+      {
+        "type": "EachOfSolution",
+        "expressions": [
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_05-1",
+                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                "object": {
+                  "value": "8253_05-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdcsa:id": "\"8253_05-1\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdcsa:id "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_05-1",
+                "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                "object": {
+                  "value": "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdcsa:chcs_type": "\"chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdcsa:chcs_type "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_05-1",
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "object": {
+                  "value": "1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdcsa:label": "\"1\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdcsa:label "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#damagccs-8253_05",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_05-1",
+                "predicate": "http://hokukahu.com/schema/chcss#damagccs-8253_05",
+                "object": {
+                  "value": "1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdcsa:damagccs": "\"1\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdcsa:damagccs "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#damagccsd-8253_05",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_05-1",
+                "predicate": "http://hokukahu.com/schema/chcss#damagccsd-8253_05",
+                "object": {
+                  "value": "BETA LACTAM ANTIBIOTIC"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdcsa:damagccsd": "\"BETA LACTAM ANTIBIOTIC\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdcsa:damagccsd "
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

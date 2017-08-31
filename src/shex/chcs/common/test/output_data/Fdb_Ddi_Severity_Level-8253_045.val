@@ -1,0 +1,195 @@
+{
+  "type": "ShapeTest",
+  "node": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+  "shape": "http://hokukahu.com/chcs/Fdb_Ddi_Severity_Level-8253_045",
+  "solution": {
+    "type": "EachOfSolutions",
+    "solutions": [
+      {
+        "type": "EachOfSolution",
+        "expressions": [
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                "object": {
+                  "value": "8253_045-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:id": "\"8253_045-1\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdsl:id "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+                "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                "object": {
+                  "value": "chcss:Fdb_Ddi_Severity_Level-8253_045"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:chcs_type": "\"chcss:Fdb_Ddi_Severity_Level-8253_045\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdsl:chcs_type "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "object": {
+                  "value": "Contraindicated Drug Combination"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:label": "\"Contraindicated Drug Combination\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdsl:label "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#dimslbtxt-8253_045",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+                "predicate": "http://hokukahu.com/schema/chcss#dimslbtxt-8253_045",
+                "object": {
+                  "value": "Contraindicated Drug Combination"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimslbtxt": "\"Contraindicated Drug Combination\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdsl:dimslbtxt "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": -1,
+            "predicate": "http://hokukahu.com/schema/chcss#dimsltext-8253_045",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+                "predicate": "http://hokukahu.com/schema/chcss#dimsltext-8253_045",
+                "object": {
+                  "value": "This drug combination is"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimsltext": "\"This drug combination is\""
+                  }
+                }
+              },
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+                "predicate": "http://hokukahu.com/schema/chcss#dimsltext-8253_045",
+                "object": {
+                  "value": "contraindicated and generally should not be dispensed or administered"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimsltext": "\"contraindicated and generally should not be dispensed or administered\""
+                  }
+                }
+              },
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8253_045-1",
+                "predicate": "http://hokukahu.com/schema/chcss#dimsltext-8253_045",
+                "object": {
+                  "value": "to the same patient."
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimsltext": "\"to the same patient.\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdsl:dimsltext "
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

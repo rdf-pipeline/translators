@@ -1,0 +1,602 @@
+{
+  "type": "ShapeTest",
+  "node": "http://hokukahu.com/systems/chcs-1/8250_4-118",
+  "shape": "http://hokukahu.com/chcs/Fdb_Dam_Master_Table-8250_4",
+  "solution": {
+    "type": "EachOfSolutions",
+    "solutions": [
+      {
+        "type": "EachOfSolution",
+        "expressions": [
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8250_4-118",
+                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                "object": {
+                  "value": "8250_4-118"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:id": "\"8250_4-118\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdmt:id "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": 1,
+            "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8250_4-118",
+                "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                "object": {
+                  "value": "chcss:Fdb_Dam_Master_Table-8250_4"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:chcs_type": "\"chcss:Fdb_Dam_Master_Table-8250_4\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdmt:chcs_type "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8250_4-118",
+                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                "object": {
+                  "value": "W7NAEF"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:label": "\"W7NAEF\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdmt:label "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "predicate": "http://hokukahu.com/schema/chcss#hic-8250_4",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8250_4-118",
+                "predicate": "http://hokukahu.com/schema/chcss#hic-8250_4",
+                "object": {
+                  "value": "W7NAEF"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:hic": "\"W7NAEF\""
+                  }
+                }
+              }
+            ],
+            "semActs": [
+              {
+                "type": "SemAct",
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " fdmt:hic "
+              }
+            ]
+          },
+          {
+            "type": "TripleConstraintSolutions",
+            "min": 0,
+            "max": -1,
+            "predicate": "http://hokukahu.com/schema/chcss#dacsp-8250_4",
+            "valueExpr": {
+              "type": "Shape",
+              "expression": {
+                "type": "EachOf",
+                "expressions": [
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " fdmt:dacsp_id "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                    "valueExpr": {
+                      "type": "NodeConstraint",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                    },
+                    "min": 0,
+                    "max": 1,
+                    "semActs": [
+                      {
+                        "type": "SemAct",
+                        "name": "http://shex.io/extensions/Map/#",
+                        "code": " fdmt:dacsp_type "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#dacsp-8250_41",
+                    "valueExpr": {
+                      "type": "Shape",
+                      "expression": {
+                        "type": "EachOf",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraint",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " fdmt:allergy_specific_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraint",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " fdmt:allergy_specific_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "TripleConstraint",
+                    "predicate": "http://hokukahu.com/schema/chcss#daccs-8250_41",
+                    "valueExpr": {
+                      "type": "Shape",
+                      "expression": {
+                        "type": "EachOf",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraint",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " fdmt:allergy_group_code_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraint",
+                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " fdmt:allergy_group_code_label "
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "solutions": [
+              {
+                "type": "TestedTriple",
+                "subject": "http://hokukahu.com/systems/chcs-1/8250_4-118",
+                "predicate": "http://hokukahu.com/schema/chcss#dacsp-8250_4",
+                "object": "http://hokukahu.com/systems/chcs-1/8250_41-1_118",
+                "referenced": {
+                  "type": "ShapeTest",
+                  "node": "http://hokukahu.com/systems/chcs-1/8250_41-1_118",
+                  "shape": "http://hokukahu.com/chcs/Fdb_Dam_Master_Table-8250_4",
+                  "solution": {
+                    "type": "EachOfSolutions",
+                    "solutions": [
+                      {
+                        "type": "EachOfSolution",
+                        "expressions": [
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/8250_41-1_118",
+                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                "object": {
+                                  "value": "8250_41-1_118"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:fdmt:dacsp_id": "\"8250_41-1_118\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " fdmt:dacsp_id "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "min": 0,
+                            "max": 1,
+                            "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                            "valueExpr": {
+                              "type": "NodeConstraint",
+                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/8250_41-1_118",
+                                "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
+                                "object": {
+                                  "value": "chcss:Dacsp-8250_41"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:fdmt:dacsp_type": "\"chcss:Dacsp-8250_41\""
+                                  }
+                                }
+                              }
+                            ],
+                            "semActs": [
+                              {
+                                "type": "SemAct",
+                                "name": "http://shex.io/extensions/Map/#",
+                                "code": " fdmt:dacsp_type "
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#dacsp-8250_41",
+                            "valueExpr": {
+                              "type": "Shape",
+                              "expression": {
+                                "type": "EachOf",
+                                "expressions": [
+                                  {
+                                    "type": "TripleConstraint",
+                                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                    },
+                                    "semActs": [
+                                      {
+                                        "type": "SemAct",
+                                        "name": "http://shex.io/extensions/Map/#",
+                                        "code": " fdmt:allergy_specific_id "
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "TripleConstraint",
+                                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                    },
+                                    "semActs": [
+                                      {
+                                        "type": "SemAct",
+                                        "name": "http://shex.io/extensions/Map/#",
+                                        "code": " fdmt:allergy_specific_label "
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/8250_41-1_118",
+                                "predicate": "http://hokukahu.com/schema/chcss#dacsp-8250_41",
+                                "object": "http://hokukahu.com/systems/chcs-1/8250_5-518",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "http://hokukahu.com/systems/chcs-1/8250_5-518",
+                                  "shape": "http://hokukahu.com/chcs/Fdb_Dam_Master_Table-8250_4",
+                                  "solution": {
+                                    "type": "EachOfSolutions",
+                                    "solutions": [
+                                      {
+                                        "type": "EachOfSolution",
+                                        "expressions": [
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                            },
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://hokukahu.com/systems/chcs-1/8250_5-518",
+                                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                                "object": {
+                                                  "value": "8250_5-518"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_specific_id": "\"8250_5-518\""
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "semActs": [
+                                              {
+                                                "type": "SemAct",
+                                                "name": "http://shex.io/extensions/Map/#",
+                                                "code": " fdmt:allergy_specific_id "
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                            },
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://hokukahu.com/systems/chcs-1/8250_5-518",
+                                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                "object": {
+                                                  "value": "518"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_specific_label": "\"518\""
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "semActs": [
+                                              {
+                                                "type": "SemAct",
+                                                "name": "http://shex.io/extensions/Map/#",
+                                                "code": " fdmt:allergy_specific_label "
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "TripleConstraintSolutions",
+                            "predicate": "http://hokukahu.com/schema/chcss#daccs-8250_41",
+                            "valueExpr": {
+                              "type": "Shape",
+                              "expression": {
+                                "type": "EachOf",
+                                "expressions": [
+                                  {
+                                    "type": "TripleConstraint",
+                                    "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                    },
+                                    "semActs": [
+                                      {
+                                        "type": "SemAct",
+                                        "name": "http://shex.io/extensions/Map/#",
+                                        "code": " fdmt:allergy_group_code_id "
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "TripleConstraint",
+                                    "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                    "valueExpr": {
+                                      "type": "NodeConstraint",
+                                      "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                    },
+                                    "semActs": [
+                                      {
+                                        "type": "SemAct",
+                                        "name": "http://shex.io/extensions/Map/#",
+                                        "code": " fdmt:allergy_group_code_label "
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            "solutions": [
+                              {
+                                "type": "TestedTriple",
+                                "subject": "http://hokukahu.com/systems/chcs-1/8250_41-1_118",
+                                "predicate": "http://hokukahu.com/schema/chcss#daccs-8250_41",
+                                "object": "http://hokukahu.com/systems/chcs-1/8253_05-58",
+                                "referenced": {
+                                  "type": "ShapeTest",
+                                  "node": "http://hokukahu.com/systems/chcs-1/8253_05-58",
+                                  "shape": "http://hokukahu.com/chcs/Fdb_Dam_Master_Table-8250_4",
+                                  "solution": {
+                                    "type": "EachOfSolutions",
+                                    "solutions": [
+                                      {
+                                        "type": "EachOfSolution",
+                                        "expressions": [
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                            },
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://hokukahu.com/systems/chcs-1/8253_05-58",
+                                                "predicate": "http://hokukahu.com/schema/chcss#identifier",
+                                                "object": {
+                                                  "value": "8253_05-58"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_group_code_id": "\"8253_05-58\""
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "semActs": [
+                                              {
+                                                "type": "SemAct",
+                                                "name": "http://shex.io/extensions/Map/#",
+                                                "code": " fdmt:allergy_group_code_id "
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "type": "TripleConstraintSolutions",
+                                            "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                            "valueExpr": {
+                                              "type": "NodeConstraint",
+                                              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+                                            },
+                                            "solutions": [
+                                              {
+                                                "type": "TestedTriple",
+                                                "subject": "http://hokukahu.com/systems/chcs-1/8253_05-58",
+                                                "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                                                "object": {
+                                                  "value": "58"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_group_code_label": "\"58\""
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "semActs": [
+                                              {
+                                                "type": "SemAct",
+                                                "name": "http://shex.io/extensions/Map/#",
+                                                "code": " fdmt:allergy_group_code_label "
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
