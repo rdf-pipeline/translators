@@ -5,7 +5,7 @@
 #    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Ethnic_Background-8191.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX Map: <http://shex.io/exts/Map/#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
 PREFIX ethnicity: <urn:local:ethnicity:>
 PREFIX chcss: <http://hokukahu.com/schema/chcss#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
