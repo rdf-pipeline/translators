@@ -1,4 +1,4 @@
-# This schema described a medical procedure performed by a provider ona patient.
+# This schema describes a medical procedure performed by a provider on a patient.
 # The data for this schema did not come from the chcs-nc schema - it was from ahlta.
 # As a result, we do not have the usual endpoint documentation available. 
 
