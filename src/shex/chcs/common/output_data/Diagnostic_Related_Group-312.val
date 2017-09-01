@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "312-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-report:id": "\"312-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticReport:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Diagnostic_Related_Group-312"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-report:chcs_type": "\"chcss:Diagnostic_Related_Group-312\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticReport:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "10"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-report:label": "\"10\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticReport:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#drg_code-312",
                 "object": {
                   "value": "10"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-report:drg_code": "\"10\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticReport:drg_code "
               }
             ]
@@ -124,13 +144,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#drg_description-312",
                 "object": {
                   "value": "NERVOUS SYSTEM NEOPLASMS W CC"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-report:drg_description": "\"NERVOUS SYSTEM NEOPLASMS W CC\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticReport:drg_description "
               }
             ]
@@ -151,13 +176,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#relative_weight-312",
                 "object": {
                   "value": "1.4683"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-report:relative_weight": "\"1.4683\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticReport:relative_weight "
               }
             ]

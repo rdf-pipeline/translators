@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "2-000007"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:id": "\"2-000007\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Patient-2"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:type": "\"chcss:Patient-2\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "BUNNY,BUGS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:patient_label": "\"BUNNY,BUGS\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:patient_label "
               }
             ]
@@ -99,14 +114,20 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-2",
                 "object": {
                   "value": "BUNNY,BUGS DOC"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:family": "BUNNY",
+                    "urn:local:patient:given": "BUGS DOC"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
-                "code": " regex(/\"(?<patient:family>[a-zA-Z'\\-]+), (?<patient:given>[a-zA-Z'\\-\\s]+)\"/) "
+                "name": "http://shex.io/extensions/Map/#",
+                "code": " regex(/\"(?<patient:family>[a-zA-Z'\\-]+),(?<patient:given>[a-zA-Z'\\-\\s]+)\"/) "
               }
             ]
           },
@@ -123,7 +144,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:alias "
               }
             ]
@@ -148,7 +169,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:sex_id "
                       }
                     ]
@@ -163,7 +184,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hashmap( patient:sex_label, {\"FEMALE\": \"Female\", \"MALE\": \"Male\", \"OTHER\": \"Other\"}) "
                       }
                     ]
@@ -201,13 +222,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "chcss:2__02_E-MALE"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:sex_id": "\"chcss:2__02_E-MALE\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:sex_id "
                               }
                             ]
@@ -226,13 +252,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "MALE"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:sex_label": "Male"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hashmap( patient:sex_label, {\"FEMALE\": \"Female\", \"MALE\": \"Male\", \"OTHER\": \"Other\"}) "
                               }
                             ]
@@ -263,7 +294,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:marital_status_id "
                       }
                     ]
@@ -280,7 +311,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hashmap( patient:marital_status_label, {\"DIVORCED\": \"D\", \"MARRIED\": \"M\", \"SINGLE,NEVER MARRIED\": \"S\", \"UNKNOWN\": \"UNK\"}) "
                       }
                     ]
@@ -318,13 +349,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "11-2"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:marital_status_id": "\"11-2\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:marital_status_id "
                               }
                             ]
@@ -345,13 +381,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "DIVORCED"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:marital_status_label": "D"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hashmap( patient:marital_status_label, {\"DIVORCED\": \"D\", \"MARRIED\": \"M\", \"SINGLE,NEVER MARRIED\": \"S\", \"UNKNOWN\": \"UNK\"}) "
                               }
                             ]
@@ -384,7 +425,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:race_id "
                       }
                     ]
@@ -399,7 +440,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:race_label "
                       }
                     ]
@@ -439,13 +480,18 @@
                 "object": {
                   "value": "1990-01-01",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:dob": "\"1990-01-01\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:dob "
               }
             ]
@@ -463,7 +509,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:age_range_category "
               }
             ]
@@ -481,7 +527,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:employment_status "
               }
             ]
@@ -499,7 +545,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:pcn_flag "
               }
             ]
@@ -517,7 +563,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:occupation "
               }
             ]
@@ -542,7 +588,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:religion_id "
                       }
                     ]
@@ -557,7 +603,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:religion_label "
                       }
                     ]
@@ -583,13 +629,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#fmp_ssn-2",
                 "object": {
                   "value": "20/777777777"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:fmp_ssn": "\"20/777777777\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:fmp_ssn "
               }
             ]
@@ -614,7 +665,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:fmp_id "
                       }
                     ]
@@ -629,7 +680,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:fmp_label "
                       }
                     ]
@@ -667,13 +718,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8110-20"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:fmp_id": "\"8110-20\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:fmp_id "
                               }
                             ]
@@ -692,13 +748,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "20"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:fmp_label": "\"20\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:fmp_label "
                               }
                             ]
@@ -731,7 +792,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:sponsor_name_id "
                       }
                     ]
@@ -746,7 +807,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:sponsor_name_label "
                       }
                     ]
@@ -784,13 +845,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "2-000007"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:sponsor_name_id": "\"2-000007\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:sponsor_name_id "
                               }
                             ]
@@ -809,13 +875,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "BUNNY,BUGS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:sponsor_name_label": "\"BUNNY,BUGS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:sponsor_name_label "
                               }
                             ]
@@ -844,13 +915,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#patient_ssn-2",
                 "object": {
                   "value": "777777777"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:patient_ssn": "\"777777777\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:patient_ssn "
               }
             ]
@@ -871,13 +947,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ssn-2",
                 "object": {
                   "value": "777777777"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:ssn": "\"777777777\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:ssn "
               }
             ]
@@ -895,7 +976,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:dod_id "
               }
             ]
@@ -913,7 +994,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:dod_id_number "
               }
             ]
@@ -934,13 +1015,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#street_address-2",
                 "object": {
                   "value": "100 MAIN ST"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:street_address": "\"100 MAIN ST\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:street_address "
               }
             ]
@@ -958,7 +1044,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:street_address_2 "
               }
             ]
@@ -976,7 +1062,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:street_address_3 "
               }
             ]
@@ -997,13 +1083,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#city-2",
                 "object": {
                   "value": "ANYTOWN"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:city": "\"ANYTOWN\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:city "
               }
             ]
@@ -1021,7 +1112,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:county "
               }
             ]
@@ -1042,13 +1133,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#zip_code-2",
                 "object": {
                   "value": "60040"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:zipcode": "\"60040\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:zipcode "
               }
             ]
@@ -1073,7 +1169,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:state_id "
                       }
                     ]
@@ -1088,7 +1184,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:state_label "
                       }
                     ]
@@ -1126,13 +1222,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-17"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:state_id": "\"5-17\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:state_id "
                               }
                             ]
@@ -1151,13 +1252,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ILLINOIS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:state_label": "\"ILLINOIS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:state_label "
                               }
                             ]
@@ -1183,7 +1289,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:contact_preference "
               }
             ]
@@ -1208,7 +1314,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:preferred_contact_method_id "
                       }
                     ]
@@ -1223,7 +1329,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:preferred_contact_method_label "
                       }
                     ]
@@ -1253,7 +1359,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_grade_rank_id "
                       }
                     ]
@@ -1268,7 +1374,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_grade_rank_label "
                       }
                     ]
@@ -1306,13 +1412,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8104-97"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:military_grade_rank_id": "\"8104-97\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:military_grade_rank_id "
                               }
                             ]
@@ -1331,13 +1442,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ANYRANK"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:military_grade_rank_label": "\"ANYRANK\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:military_grade_rank_label "
                               }
                             ]
@@ -1363,7 +1479,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_id_card_number "
               }
             ]
@@ -1381,7 +1497,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_duty_station_unit "
               }
             ]
@@ -1399,7 +1515,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_flying_status "
               }
             ]
@@ -1417,7 +1533,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_id_expiration_date "
               }
             ]
@@ -1442,7 +1558,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_occupation_code_id "
                       }
                     ]
@@ -1457,7 +1573,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_occupation_code_label "
                       }
                     ]
@@ -1487,7 +1603,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_theater_operations_id "
                       }
                     ]
@@ -1502,7 +1618,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_theater_operations_label "
                       }
                     ]
@@ -1525,7 +1641,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_street_address "
               }
             ]
@@ -1543,7 +1659,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_street_address_2 "
               }
             ]
@@ -1561,7 +1677,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_street_address_3 "
               }
             ]
@@ -1579,7 +1695,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_city "
               }
             ]
@@ -1604,7 +1720,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_state_id "
                       }
                     ]
@@ -1619,7 +1735,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:military_state_label "
                       }
                     ]
@@ -1642,7 +1758,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:military_zipcode "
               }
             ]
@@ -1660,7 +1776,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:temporary_address "
               }
             ]
@@ -1678,7 +1794,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:temporary_address_2 "
               }
             ]
@@ -1696,7 +1812,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:temporary_city "
               }
             ]
@@ -1714,7 +1830,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:temporary_zipcode "
               }
             ]
@@ -1739,7 +1855,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:temporary_state_id "
                       }
                     ]
@@ -1754,7 +1870,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:temporary_state_label "
                       }
                     ]
@@ -1790,7 +1906,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:temporary_contact_eff_until "
               }
             ]
@@ -1808,7 +1924,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:temporary_contact_reason "
               }
             ]
@@ -1829,13 +1945,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#phone-2",
                 "object": {
                   "value": "555 555 5555"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:phone": "\"555 555 5555\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:phone "
               }
             ]
@@ -1853,7 +1974,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:cell_phone "
               }
             ]
@@ -1871,7 +1992,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:dsn "
               }
             ]
@@ -1892,13 +2013,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#office_phone-2",
                 "object": {
                   "value": "555 555 5556"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:office_phone": "\"555 555 5556\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:office_phone "
               }
             ]
@@ -1919,13 +2045,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#temporary_phone-2",
                 "object": {
                   "value": "555 555 5555"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:temporary_phone": "\"555 555 5555\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:temporary_phone "
               }
             ]
@@ -1946,13 +2077,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#fax_number-2",
                 "object": {
                   "value": "555 555 5556"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:fax_number": "\"555 555 5556\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:fax_number "
               }
             ]
@@ -1970,7 +2106,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:pob_city "
               }
             ]
@@ -1995,7 +2131,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:pob_state_id "
                       }
                     ]
@@ -2010,7 +2146,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:pob_state_label "
                       }
                     ]
@@ -2036,13 +2172,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#email_address-2",
                 "object": {
                   "value": "bugs.bunny@looneytun.es"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:email_address": "\"bugs.bunny@looneytun.es\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:email_address "
               }
             ]
@@ -2060,7 +2201,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:remark "
               }
             ]
@@ -2081,13 +2222,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#registration_comment-2",
                 "object": {
                   "value": "fake text"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:registration_comment": "\"fake text\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:registration_comment "
               }
             ]
@@ -2105,7 +2251,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:registration_location "
               }
             ]
@@ -2123,7 +2269,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:registration_verified "
               }
             ]
@@ -2148,7 +2294,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:registration_verified_by_id "
                       }
                     ]
@@ -2163,7 +2309,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:registration_verified_by_label "
                       }
                     ]
@@ -2186,7 +2332,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:registration_verified_by_pad "
               }
             ]
@@ -2204,7 +2350,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:registration_verified_rep "
               }
             ]
@@ -2229,7 +2375,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:registration_type_id "
                       }
                     ]
@@ -2244,7 +2390,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:registration_type_label "
                       }
                     ]
@@ -2282,13 +2428,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "chcss:2_8002_E-MINI"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:registration_type_id": "\"chcss:2_8002_E-MINI\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:registration_type_id "
                               }
                             ]
@@ -2307,13 +2458,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "MINI"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:registration_type_label": "\"MINI\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:registration_type_label "
                               }
                             ]
@@ -2352,7 +2508,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:registration_verified_datee "
               }
             ]
@@ -2377,7 +2533,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:verified_by_pad_person_id "
                       }
                     ]
@@ -2392,7 +2548,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:verified_by_pad_person_label "
                       }
                     ]
@@ -2428,7 +2584,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:verified_by_pad_date_time "
               }
             ]
@@ -2446,7 +2602,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:dstreet_address_2 "
               }
             ]
@@ -2464,7 +2620,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:dcity "
               }
             ]
@@ -2489,7 +2645,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:dstate_id "
                       }
                     ]
@@ -2504,7 +2660,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:dstate_label "
                       }
                     ]
@@ -2527,7 +2683,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:dzip "
               }
             ]
@@ -2545,7 +2701,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:is_econtact_the_next_of_kin "
               }
             ]
@@ -2566,13 +2722,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#emergency_contact-2",
                 "object": {
                   "value": "RUNNAH, ROAD"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:emergency_contact": "\"RUNNAH, ROAD\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:emergency_contact "
               }
             ]
@@ -2593,13 +2754,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ephone-2",
                 "object": {
                   "value": "555 555 5558"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:ephone": "\"555 555 5558\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:ephone "
               }
             ]
@@ -2620,13 +2786,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#estreet_address-2",
                 "object": {
                   "value": "7000 InternalTest Boulevard"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:estreet_address_2": "\"7000 InternalTest Boulevard\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:estreet_address_2 "
               }
             ]
@@ -2647,13 +2818,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ecity-2",
                 "object": {
                   "value": "ALBUQUERQUE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:ecity": "\"ALBUQUERQUE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:ecity "
               }
             ]
@@ -2678,7 +2854,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:estate_id "
                       }
                     ]
@@ -2693,7 +2869,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:estate_label "
                       }
                     ]
@@ -2731,13 +2907,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-18"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:estate_id": "\"5-18\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:estate_id "
                               }
                             ]
@@ -2756,13 +2937,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "NEW MEXICO"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:estate_label": "\"NEW MEXICO\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:estate_label "
                               }
                             ]
@@ -2791,13 +2977,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ezip-2",
                 "object": {
                   "value": "55555"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:ezip": "\"55555\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:ezip "
               }
             ]
@@ -2822,7 +3013,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:erelationship_id "
                       }
                     ]
@@ -2837,7 +3028,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:erelationship_label "
                       }
                     ]
@@ -2875,13 +3066,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8140-20"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:erelationship_id": "\"8140-20\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:erelationship_id "
                               }
                             ]
@@ -2900,13 +3096,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "OTHER RELATIONSHIP"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:erelationship_label": "\"OTHER RELATIONSHIP\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:erelationship_label "
                               }
                             ]
@@ -2932,7 +3133,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:next_of_kin "
               }
             ]
@@ -2950,7 +3151,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:is_kaddress_same_as_patients "
               }
             ]
@@ -2975,7 +3176,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:nok_relationship_id "
                       }
                     ]
@@ -2990,7 +3191,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:nok_relationship_label "
                       }
                     ]
@@ -3013,7 +3214,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:nok_street_address "
               }
             ]
@@ -3031,7 +3232,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:nok_street_address_2 "
               }
             ]
@@ -3049,7 +3250,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:nok_street_address_3 "
               }
             ]
@@ -3067,7 +3268,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:nok_city "
               }
             ]
@@ -3085,7 +3286,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:nok_zipcode "
               }
             ]
@@ -3110,7 +3311,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:nok_state_id "
                       }
                     ]
@@ -3125,7 +3326,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:nok_state_label "
                       }
                     ]
@@ -3155,7 +3356,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:branch_of_service_last_id "
                       }
                     ]
@@ -3170,7 +3371,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:branch_of_service_last_label "
                       }
                     ]
@@ -3208,13 +3409,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "23-4"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:branch_of_service_last_id": "\"23-4\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:branch_of_service_last_id "
                               }
                             ]
@@ -3233,13 +3439,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ANY"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:branch_of_service_last_label": "\"ANY\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:branch_of_service_last_label "
                               }
                             ]
@@ -3272,7 +3483,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:length_of_service_id "
                       }
                     ]
@@ -3287,7 +3498,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:length_of_service_label "
                       }
                     ]
@@ -3317,7 +3528,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:return_location_id "
                       }
                     ]
@@ -3332,7 +3543,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:return_location_label "
                       }
                     ]
@@ -3362,7 +3573,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:outpatient_record_location_id "
                       }
                     ]
@@ -3377,7 +3588,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:outpatient_record_location_label "
                       }
                     ]
@@ -3415,13 +3626,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "44-100"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:outpatient_record_location_id": "\"44-100\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:outpatient_record_location_id "
                               }
                             ]
@@ -3440,13 +3656,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ANY HEALTH CLINIC"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:outpatient_record_location_label": "\"ANY HEALTH CLINIC\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:outpatient_record_location_label "
                               }
                             ]
@@ -3476,13 +3697,18 @@
                 "object": {
                   "value": "true",
                   "type": "http://www.w3.org/2001/XMLSchema#boolean"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:deers_address_updated": "\"true\"^^http://www.w3.org/2001/XMLSchema#boolean"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:deers_address_updated "
               }
             ]
@@ -3507,7 +3733,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:deers_address_updated_id "
                       }
                     ]
@@ -3522,7 +3748,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:deers_address_updated_label "
                       }
                     ]
@@ -3552,7 +3778,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:deers_discrepancy_code_id "
                       }
                     ]
@@ -3567,7 +3793,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:deers_discrepancy_code_label "
                       }
                     ]
@@ -3603,7 +3829,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:deers_address_update_date "
               }
             ]
@@ -3634,7 +3860,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:address_update_date "
               }
             ]
@@ -3656,13 +3882,18 @@
                 "object": {
                   "value": "true",
                   "type": "http://www.w3.org/2001/XMLSchema#boolean"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:active_duty": "\"true\"^^http://www.w3.org/2001/XMLSchema#boolean"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:active_duty "
               }
             ]
@@ -3680,7 +3911,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:advance_directive "
               }
             ]
@@ -3698,7 +3929,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:on_medical_hold "
               }
             ]
@@ -3716,7 +3947,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:ron_status "
               }
             ]
@@ -3734,7 +3965,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:on_absence "
               }
             ]
@@ -3759,7 +3990,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:absent_status_id "
                       }
                     ]
@@ -3774,7 +4005,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:absent_status_label "
                       }
                     ]
@@ -3797,7 +4028,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:advance_directive "
               }
             ]
@@ -3815,7 +4046,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:advance_directive_other_loc "
               }
             ]
@@ -3840,7 +4071,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:advance_directive_location_id "
                       }
                     ]
@@ -3855,7 +4086,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:advance_directive_location_label "
                       }
                     ]
@@ -3891,7 +4122,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:advance_directive_eff_date "
               }
             ]
@@ -3916,7 +4147,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:geo_loc_of_ship_unit_id "
                       }
                     ]
@@ -3931,7 +4162,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:geo_loc_of_ship_unit_label "
                       }
                     ]
@@ -3969,13 +4200,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-19"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:geo_loc_of_ship_unit_id": "\"5-19\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:geo_loc_of_ship_unit_id "
                               }
                             ]
@@ -3994,13 +4230,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "MYSTATE"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:geo_loc_of_ship_unit_label": "\"MYSTATE\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:geo_loc_of_ship_unit_label "
                               }
                             ]
@@ -4033,7 +4274,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:unit_ship_id "
                       }
                     ]
@@ -4048,7 +4289,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:unit_ship_label "
                       }
                     ]
@@ -4086,13 +4327,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8111-11111"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:unit_ship_id": "\"8111-11111\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:unit_ship_id "
                               }
                             ]
@@ -4111,13 +4357,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ANYUNIT"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:unit_ship_label": "\"ANYUNIT\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:unit_ship_label "
                               }
                             ]
@@ -4150,7 +4401,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:deers_uic_id "
                       }
                     ]
@@ -4165,7 +4416,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:deers_uic_label "
                       }
                     ]
@@ -4203,13 +4454,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8111-50428"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:deers_uic_id": "\"8111-50428\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:deers_uic_id "
                               }
                             ]
@@ -4228,13 +4484,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "DEERS UIC"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:deers_uic_label": "\"DEERS UIC\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:deers_uic_label "
                               }
                             ]
@@ -4267,7 +4528,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:user_altering_patient_record_id "
                       }
                     ]
@@ -4284,7 +4545,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:user_altering_patient_record_type "
                       }
                     ]
@@ -4299,7 +4560,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:user_altering_patient_record_label "
                       }
                     ]
@@ -4322,7 +4583,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:user_alt_patient_rec_id "
                               }
                             ]
@@ -4337,7 +4598,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:user_alt_patient_rec_label "
                               }
                             ]
@@ -4373,7 +4634,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:user_altering_patient_record_modified_date_time "
                       }
                     ]
@@ -4411,13 +4672,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "2_4-1_000007"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:user_altering_patient_record_id": "\"2_4-1_000007\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:user_altering_patient_record_id "
                               }
                             ]
@@ -4438,13 +4704,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:2_4"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:user_altering_patient_record_type": "\"chcss:2_4\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:user_altering_patient_record_type "
                               }
                             ]
@@ -4463,13 +4734,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "DUCK,DONALD"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:user_altering_patient_record_label": "\"DUCK,DONALD\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:user_altering_patient_record_label "
                               }
                             ]
@@ -4494,7 +4770,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " patient:user_alt_patient_rec_id "
                                       }
                                     ]
@@ -4509,7 +4785,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " patient:user_alt_patient_rec_label "
                                       }
                                     ]
@@ -4547,13 +4823,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "3-11111"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:patient:user_alt_patient_rec_id": "\"3-11111\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " patient:user_alt_patient_rec_id "
                                               }
                                             ]
@@ -4572,13 +4853,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "DUCK,DONALD"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:patient:user_alt_patient_rec_label": "\"DUCK,DONALD\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " patient:user_alt_patient_rec_label "
                                               }
                                             ]
@@ -4621,13 +4907,18 @@
                                 "object": {
                                   "value": "1990-01-01T00:00:00",
                                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:user_altering_patient_record_modified_date_time": "\"1990-01-01T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:user_altering_patient_record_modified_date_time "
                               }
                             ]
@@ -4660,7 +4951,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:patient_category_id "
                       }
                     ]
@@ -4675,7 +4966,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:patient_category_label "
                       }
                     ]
@@ -4713,13 +5004,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8156-4149"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:patient_category_id": "\"8156-4149\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:patient_category_id "
                               }
                             ]
@@ -4738,13 +5034,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "BRANCH AD RECRUIT"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:patient_category_label": "\"BRANCH AD RECRUIT\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:patient_category_label "
                               }
                             ]
@@ -4777,7 +5078,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:organ_donor_id "
                       }
                     ]
@@ -4792,7 +5093,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:organ_donor_label "
                       }
                     ]
@@ -4830,13 +5131,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "chcss:2_9001_01_E-UNDECIDED"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:organ_donor_id": "\"chcss:2_9001_01_E-UNDECIDED\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:organ_donor_id "
                               }
                             ]
@@ -4855,13 +5161,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "UNDECIDED"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:organ_donor_label": "\"UNDECIDED\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:organ_donor_label "
                               }
                             ]
@@ -4904,13 +5215,18 @@
                 "object": {
                   "value": "1990-01-01T00:00:00",
                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:organ_donor_date": "\"1990-01-01T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:organ_donor_date "
               }
             ]
@@ -4941,7 +5257,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:date_of_death "
               }
             ]
@@ -4966,7 +5282,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:medical_record_id "
                       }
                     ]
@@ -4983,7 +5299,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:medical_record_type "
                       }
                     ]
@@ -4998,7 +5314,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:medical_record_label "
                       }
                     ]
@@ -5021,7 +5337,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:med_rec_type_id "
                               }
                             ]
@@ -5036,7 +5352,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:med_rec_type_label "
                               }
                             ]
@@ -5065,7 +5381,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:record_room_id "
                               }
                             ]
@@ -5080,7 +5396,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:record_room_label "
                               }
                             ]
@@ -5124,13 +5440,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "2_03-1_000007"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:medical_record_id": "\"2_03-1_000007\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:medical_record_id "
                               }
                             ]
@@ -5151,13 +5472,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:2_03"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:medical_record_type": "\"chcss:2_03\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:medical_record_type "
                               }
                             ]
@@ -5176,13 +5502,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "OUTPATIENT"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:medical_record_label": "\"OUTPATIENT\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:medical_record_label "
                               }
                             ]
@@ -5207,7 +5538,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " patient:med_rec_type_id "
                                       }
                                     ]
@@ -5222,7 +5553,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " patient:med_rec_type_label "
                                       }
                                     ]
@@ -5260,13 +5591,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "8125-1"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:patient:med_rec_type_id": "\"8125-1\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " patient:med_rec_type_id "
                                               }
                                             ]
@@ -5285,13 +5621,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "OUTPATIENT"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:patient:med_rec_type_label": "\"OUTPATIENT\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " patient:med_rec_type_label "
                                               }
                                             ]
@@ -5324,7 +5665,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " patient:record_room_id "
                                       }
                                     ]
@@ -5339,7 +5680,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " patient:record_room_label "
                                       }
                                     ]
@@ -5377,13 +5718,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "44-100"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:patient:record_room_id": "\"44-100\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " patient:record_room_id "
                                               }
                                             ]
@@ -5402,13 +5748,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "ANY HEALTH CLINIC"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:patient:record_room_label": "\"ANY HEALTH CLINIC\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " patient:record_room_label "
                                               }
                                             ]
@@ -5449,7 +5800,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:who_entered_patient_id "
                       }
                     ]
@@ -5464,7 +5815,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:who_entered_patient_label "
                       }
                     ]
@@ -5502,13 +5853,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "3-75573"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:who_entered_patient_id": "\"3-75573\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:who_entered_patient_id "
                               }
                             ]
@@ -5527,13 +5883,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "DUCK,DONALD"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:who_entered_patient_label": "\"DUCK,DONALD\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:who_entered_patient_label "
                               }
                             ]
@@ -5576,13 +5937,18 @@
                 "object": {
                   "value": "1990-01-01T00:00:00",
                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:patient:date_entered_into_file": "\"1990-01-01T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:date_entered_into_file "
               }
             ]
@@ -5607,7 +5973,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:registration_incomplete_id "
                       }
                     ]
@@ -5622,7 +5988,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:registration_incomplete_label "
                       }
                     ]
@@ -5660,13 +6026,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "chcss:2__0991_E-REGISTRATION_IS_COMPLETE"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:registration_incomplete_id": "\"chcss:2__0991_E-REGISTRATION_IS_COMPLETE\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:registration_incomplete_id "
                               }
                             ]
@@ -5685,13 +6056,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "REGISTRATION_IS_COMPLETE"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:patient:registration_incomplete_label": "\"REGISTRATION_IS_COMPLETE\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:registration_incomplete_label "
                               }
                             ]
@@ -5724,7 +6100,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:correct_patient_id "
                       }
                     ]
@@ -5739,7 +6115,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:correct_patient_label "
                       }
                     ]
@@ -5769,7 +6145,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:id_duplicate_by_id "
                       }
                     ]
@@ -5784,7 +6160,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:id_duplicate_by_label "
                       }
                     ]
@@ -5820,7 +6196,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:id_duplicate_date_time "
               }
             ]
@@ -5838,7 +6214,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:archive_action_flag "
               }
             ]
@@ -5863,7 +6239,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:merged_by_id "
                       }
                     ]
@@ -5878,7 +6254,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:merged_by_label "
                       }
                     ]
@@ -5914,7 +6290,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:merge_date_time "
               }
             ]
@@ -5939,7 +6315,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:command_interest_category_id "
                       }
                     ]
@@ -5954,7 +6330,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:command_interest_category_label "
                       }
                     ]
@@ -5977,7 +6353,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:cmd_interest_category_id "
                               }
                             ]
@@ -5992,7 +6368,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:cmd_interest_category_label "
                               }
                             ]
@@ -6028,7 +6404,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:jpta_inpat_processing_date "
                       }
                     ]
@@ -6058,7 +6434,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:jpta_outpat_processing_date "
                       }
                     ]
@@ -6088,7 +6464,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:jpta_end_processing_date "
                       }
                     ]
@@ -6124,7 +6500,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:admission_date "
               }
             ]
@@ -6142,7 +6518,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:current_admission_entry_number "
               }
             ]
@@ -6160,7 +6536,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:pseudopatient "
               }
             ]
@@ -6178,7 +6554,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:current_register_number "
               }
             ]
@@ -6196,7 +6572,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:reserved_bed "
               }
             ]
@@ -6214,7 +6590,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:room "
               }
             ]
@@ -6232,7 +6608,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:roombed "
               }
             ]
@@ -6250,7 +6626,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:visiting_hours "
               }
             ]
@@ -6268,7 +6644,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:ward_location "
               }
             ]
@@ -6293,7 +6669,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:internal_ward_location_id "
                       }
                     ]
@@ -6308,7 +6684,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:internal_ward_location_label "
                       }
                     ]
@@ -6338,7 +6714,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:requested_ward_location_id "
                       }
                     ]
@@ -6353,7 +6729,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:requested_ward_location_label "
                       }
                     ]
@@ -6383,7 +6759,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:reserved_ward_id "
                       }
                     ]
@@ -6398,7 +6774,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:reserved_ward_label "
                       }
                     ]
@@ -6428,7 +6804,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:clinical_service_id "
                       }
                     ]
@@ -6443,7 +6819,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:clinical_service_label "
                       }
                     ]
@@ -6473,7 +6849,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:meprs_code_id "
                       }
                     ]
@@ -6488,7 +6864,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:meprs_code_label "
                       }
                     ]
@@ -6518,7 +6894,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:primary_physician_id "
                       }
                     ]
@@ -6533,7 +6909,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:primary_physician_label "
                       }
                     ]
@@ -6563,7 +6939,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:test_requestor_id "
                       }
                     ]
@@ -6578,7 +6954,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:test_requestor_label "
                       }
                     ]
@@ -6601,7 +6977,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:specimen_comment "
               }
             ]
@@ -6626,7 +7002,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:provider_id "
                       }
                     ]
@@ -6641,7 +7017,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:provider_label "
                       }
                     ]
@@ -6671,7 +7047,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:health_care_provider_id "
                       }
                     ]
@@ -6686,7 +7062,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " patient:health_care_provider_label "
                       }
                     ]
@@ -6709,7 +7085,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:healthcare_clinical_service_id "
                               }
                             ]
@@ -6724,7 +7100,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:healthcare_clinical_service_label "
                               }
                             ]
@@ -6753,7 +7129,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:healthcare_provider_id "
                               }
                             ]
@@ -6768,7 +7144,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:healthcare_provider_label "
                               }
                             ]
@@ -6797,7 +7173,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:healthcare_provider_location_id "
                               }
                             ]
@@ -6812,7 +7188,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " patient:healthcare_provider_location_label "
                               }
                             ]
@@ -6841,7 +7217,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:patient_covered_by_insurance "
               }
             ]
@@ -6859,7 +7235,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:hipaa_compliance_status "
               }
             ]
@@ -6877,7 +7253,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:hipaa_dental_consent "
               }
             ]
@@ -6908,7 +7284,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:date_of_hipaa_dental_consent "
               }
             ]
@@ -6939,7 +7315,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " patient:date_of_acknowledgement "
               }
             ]

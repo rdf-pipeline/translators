@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "8810-3"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:allergyIntolerance:id": "\"8810-3\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " allergyIntolerance:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Clinical_History-8810"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:allergyIntolerance:chcs_type": "\"chcss:Clinical_History-8810\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " allergyIntolerance:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "JETSON,GEORGE J"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:allergyIntolerance:label": "\"JETSON,GEORGE J\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " allergyIntolerance:label "
               }
             ]
@@ -103,7 +118,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " allergyIntolerance:patient_id "
                       }
                     ]
@@ -118,7 +133,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " allergyIntolerance:patient_name_label "
                       }
                     ]
@@ -156,13 +171,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "2-3"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:allergyIntolerance:patient_id": "\"2-3\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:patient_id "
                               }
                             ]
@@ -181,13 +201,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "JETSON,GEORGE J"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:allergyIntolerance:patient_name_label": "\"JETSON,GEORGE J\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:patient_name_label "
                               }
                             ]
@@ -220,7 +245,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " allergyIntolerance:drug_allergy_id "
                       }
                     ]
@@ -237,7 +262,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " allergyIntolerance:drug_allergy_type "
                       }
                     ]
@@ -260,7 +285,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:drug_allergy_selection_id "
                               }
                             ]
@@ -275,7 +300,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:drug_allergy_selection_label "
                               }
                             ]
@@ -292,7 +317,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:drug_allergy_selection_sameAs "
                               }
                             ]
@@ -309,7 +334,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:drug_allergy_selection_sameAsLabel "
                               }
                             ]
@@ -330,7 +355,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " allergyIntolerance:drug_allergy_comment "
                       }
                     ]
@@ -368,13 +393,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8810_03-1_3"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:allergyIntolerance:drug_allergy_id": "\"8810_03-1_3\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:drug_allergy_id "
                               }
                             ]
@@ -395,13 +425,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:Drug_Allergy-8810_03"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:allergyIntolerance:drug_allergy_type": "\"chcss:Drug_Allergy-8810_03\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:drug_allergy_type "
                               }
                             ]
@@ -424,7 +459,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " allergyIntolerance:drug_allergy_selection_id "
                                       }
                                     ]
@@ -439,7 +474,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " allergyIntolerance:drug_allergy_selection_label "
                                       }
                                     ]
@@ -456,7 +491,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " allergyIntolerance:drug_allergy_selection_sameAs "
                                       }
                                     ]
@@ -473,7 +508,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " allergyIntolerance:drug_allergy_selection_sameAsLabel "
                                       }
                                     ]
@@ -511,13 +546,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "8254_01-999004"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:allergyIntolerance:drug_allergy_selection_id": "\"8254_01-999004\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " allergyIntolerance:drug_allergy_selection_id "
                                               }
                                             ]
@@ -536,13 +576,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "NKDA"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:allergyIntolerance:drug_allergy_selection_label": "\"NKDA\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " allergyIntolerance:drug_allergy_selection_label "
                                               }
                                             ]
@@ -560,7 +605,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " allergyIntolerance:drug_allergy_selection_sameAs "
                                               }
                                             ]
@@ -578,7 +623,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " allergyIntolerance:drug_allergy_selection_sameAsLabel "
                                               }
                                             ]
@@ -607,13 +652,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#comment-8810_03",
                                 "object": {
                                   "value": "Reaction(s): Unknown; Note: PER PT 01JAN90"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:allergyIntolerance:drug_allergy_comment": "\"Reaction(s): Unknown; Note: PER PT 01JAN90\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " allergyIntolerance:drug_allergy_comment "
                               }
                             ]

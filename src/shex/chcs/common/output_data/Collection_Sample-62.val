@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "62-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:lab-specimen-requirements:id": "\"62-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " labSpecimenRequirements:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Collection_Sample-62"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:lab-specimen-requirements:chcs_type": "\"chcss:Collection_Sample-62\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " labSpecimenRequirements:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "BLOOD"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:lab-specimen-requirements:label": "\"BLOOD\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " labSpecimenRequirements:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-62",
                 "object": {
                   "value": "BLOOD"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:lab-specimen-requirements:name": "\"BLOOD\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " labSpecimenRequirements:name "
               }
             ]
@@ -130,7 +150,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " labSpecimenRequirements:default_specimen_id "
                       }
                     ]
@@ -145,7 +165,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " labSpecimenRequirements:default_specimen_label "
                       }
                     ]
@@ -183,13 +203,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "61-72"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:lab-specimen-requirements:default_specimen_id": "\"61-72\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " labSpecimenRequirements:default_specimen_id "
                               }
                             ]
@@ -208,13 +233,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "SERUM"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:lab-specimen-requirements:default_specimen_label": "\"SERUM\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " labSpecimenRequirements:default_specimen_label "
                               }
                             ]
@@ -241,13 +271,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#tube_top_color-62",
                 "object": {
                   "value": "MARBLE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:lab-specimen-requirements:tube_top_color": "\"MARBLE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " labSpecimenRequirements:tube_top_color "
               }
             ]
@@ -272,7 +307,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " labSpecimenRequirements:snomed_code_id "
                       }
                     ]
@@ -287,7 +322,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " labSpecimenRequirements:snomed_code_label "
                       }
                     ]
@@ -325,13 +360,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8188_12-256463"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:lab-specimen-requirements:snomed_code_id": "\"8188_12-256463\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " labSpecimenRequirements:snomed_code_id "
                               }
                             ]
@@ -350,13 +390,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "87612001"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:lab-specimen-requirements:snomed_code_label": "\"87612001\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " labSpecimenRequirements:snomed_code_label "
                               }
                             ]
@@ -385,6 +430,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#synonym-62",
                 "object": {
                   "value": "MARBLE TOP"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:lab-specimen-requirements:synonym_id": "\"MARBLE TOP\""
+                  }
                 }
               },
               {
@@ -393,13 +443,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#synonym-62",
                 "object": {
                   "value": "TIGER TOP"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:lab-specimen-requirements:synonym_id": "\"TIGER TOP\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " labSpecimenRequirements:synonym_id "
               }
             ]
@@ -417,7 +472,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " branchOfService:inactive_flag "
               }
             ]
@@ -448,7 +503,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " branchOfService:inactivation_date_time "
               }
             ]
@@ -473,7 +528,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " labSpecimenRequirements:inactivated_by_id "
                       }
                     ]
@@ -488,7 +543,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " labSpecimenRequirements:inactivated_by_label "
                       }
                     ]

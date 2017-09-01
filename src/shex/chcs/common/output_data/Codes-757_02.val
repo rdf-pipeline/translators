@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "757_02-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:condition-category:id": "\"757_02-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " conditionCategory:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Codes-757_02"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:condition-category:chcs_type": "\"chcss:Codes-757_02\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " conditionCategory:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "Unresolved"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:condition-category:label": "\"Unresolved\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " conditionCategory:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#code-757_02",
                 "object": {
                   "value": "799.9"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:condition-category:code": "\"799.9\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " conditionCategory:code "
               }
             ]
@@ -128,7 +148,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " conditionCategory:expression_id "
                       }
                     ]
@@ -143,7 +163,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " conditionCategory:expression_label "
                       }
                     ]
@@ -181,13 +201,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "757_01-1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:condition-category:expression_id": "\"757_01-1\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " conditionCategory:expression_id "
                               }
                             ]
@@ -206,13 +231,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "Unresolved"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:condition-category:expression_label": "\"Unresolved\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " conditionCategory:expression_label "
                               }
                             ]
@@ -243,7 +273,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " conditionCategory:classification_source_id "
                       }
                     ]
@@ -258,7 +288,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " conditionCategory:classification_source_label "
                       }
                     ]
@@ -296,13 +326,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "757_03-12"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:condition-category:classification_source_id": "\"757_03-12\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " conditionCategory:classification_source_id "
                               }
                             ]
@@ -321,13 +356,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ICD91"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:condition-category:classification_source_label": "\"ICD91\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " conditionCategory:classification_source_label "
                               }
                             ]
@@ -358,7 +398,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " conditionCategory:major_concept_id "
                       }
                     ]
@@ -373,7 +413,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " conditionCategory:major_concept_label "
                       }
                     ]
@@ -411,13 +451,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "757-1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:condition-category:major_concept_id": "\"757-1\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " conditionCategory:major_concept_id "
                               }
                             ]
@@ -436,13 +481,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "Unresolved"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:condition-category:major_concept_label": "\"Unresolved\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " conditionCategory:major_concept_label "
                               }
                             ]
@@ -468,7 +518,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " conditionCategory:preference_flag "
               }
             ]

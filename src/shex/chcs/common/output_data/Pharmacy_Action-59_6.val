@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "59_6-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:pharmacyAction:id": "\"59_6-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " pharmacyAction:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Pharmacy_Action-59_6"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:pharmacyAction:chcs_type": "\"chcss:Pharmacy_Action-59_6\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " pharmacyAction:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "PRF"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:pharmacyAction:label": "\"PRF\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " pharmacyAction:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#abbreviated_name-59_6",
                 "object": {
                   "value": "PRF"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:pharmacyAction:abbreviated_name": "\"PRF\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " pharmacyAction:abbreviated_name "
               }
             ]
@@ -124,13 +144,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-59_6",
                 "object": {
                   "value": "Expanded Profile"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:pharmacyAction:name": "\"Expanded Profile\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " pharmacyAction:name "
               }
             ]
@@ -149,13 +174,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ancillary-59_6",
                 "object": {
                   "value": "IV"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:pharmacyAction:ancillary": "\"IV\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " pharmacyAction:ancillary "
               }
             ]
@@ -174,13 +204,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#number-59_6",
                 "object": {
                   "value": "1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:pharmacyAction:number": "\"1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " pharmacyAction:number "
               }
             ]
@@ -205,7 +240,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " pharmacyAction:security_key_id "
                       }
                     ]
@@ -220,7 +255,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " pharmacyAction:security_key_label "
                       }
                     ]

@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "8101_1-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:id": "\"8101_1-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Additional_Medical_Treatment_Facility-8101_1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:chcs_type": "\"chcss:Additional_Medical_Treatment_Facility-8101_1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:label": "\"1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#facility_code-8101_1",
                 "object": {
                   "value": "1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:facility_code": "\"1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:facility_code "
               }
             ]
@@ -124,13 +144,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-8101_1",
                 "object": {
                   "value": "UTOPIA CENTER 47746"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:name": "\"UTOPIA CENTER 47746\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:name "
               }
             ]
@@ -151,13 +176,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#phone-8101_1",
                 "object": {
                   "value": "(111) 111-1111"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:phone": "\"(111) 111-1111\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:phone "
               }
             ]
@@ -178,13 +208,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#street_address_1-8101_1",
                 "object": {
                   "value": "47746"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:street_address_1": "\"47746\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:street_address_1 "
               }
             ]
@@ -202,7 +237,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:street_address_2 "
               }
             ]
@@ -223,13 +258,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#city-8101_1",
                 "object": {
                   "value": "UTOPIA"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:city": "\"UTOPIA\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:city "
               }
             ]
@@ -254,7 +294,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:state_id "
                       }
                     ]
@@ -269,7 +309,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:state_label "
                       }
                     ]
@@ -307,13 +347,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-17"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:location:state_id": "\"5-17\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " location:state_id "
                               }
                             ]
@@ -332,13 +377,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ILLINOIS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:location:state_label": "\"ILLINOIS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " location:state_label "
                               }
                             ]
@@ -371,7 +421,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:zipcode_id "
                       }
                     ]
@@ -386,7 +436,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:zipcode_label "
                       }
                     ]
@@ -424,13 +474,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5_8002-26489"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:location:zipcode_id": "\"5_8002-26489\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " location:zipcode_id "
                               }
                             ]
@@ -449,13 +504,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "60088"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:location:zipcode_label": "\"60088\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " location:zipcode_label "
                               }
                             ]
@@ -481,7 +541,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:ein_ssn_indicator-8101_1 "
               }
             ]
@@ -499,7 +559,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:provider_ein_ssn-8101_1 "
               }
             ]
@@ -524,7 +584,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:division_id "
                       }
                     ]
@@ -539,7 +599,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:division_meprs_code "
                       }
                     ]
@@ -554,7 +614,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:client_number "
                       }
                     ]
@@ -569,7 +629,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " location:clianumber "
                       }
                     ]
@@ -593,13 +653,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#non_dod_facility_code-8101_1",
                 "object": {
                   "value": "OTHER"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:non_dod_facility_code": "\"OTHER\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:non_dod_facility_code "
               }
             ]
@@ -620,13 +685,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#lab_poc-8101_1",
                 "object": {
                   "value": "222-2222"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:lab_poc": "\"222-2222\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:lab_poc "
               }
             ]
@@ -647,13 +717,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#lab_phone-8101_1",
                 "object": {
                   "value": "FAX: (333) 333-3333"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:location:lab_phone": "\"FAX: (333) 333-3333\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:lab_phone "
               }
             ]
@@ -671,7 +746,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:dba_inactive_flag "
               }
             ]
@@ -702,7 +777,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " location:deactivation_date "
               }
             ]

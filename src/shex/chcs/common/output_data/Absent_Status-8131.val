@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "8131-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:absentStatus:id": "\"8131-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Absent_Status-8131"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:absentStatus:chcs_type": "\"chcss:Absent_Status-8131\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:absentStatus:label": "\"ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-8131",
                 "object": {
                   "value": "ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:absentStatus:name": "\"ABSENT IN CUSTODY OF CIVILIAN AUTHORITIES\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:name "
               }
             ]
@@ -124,13 +144,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#code-8131",
                 "object": {
                   "value": "AC"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:absentStatus:code": "\"AC\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:code "
               }
             ]
@@ -148,7 +173,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:army_chargeable "
               }
             ]
@@ -166,7 +191,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:air_force_chargeable "
               }
             ]
@@ -184,7 +209,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:marines_chargeable "
               }
             ]
@@ -202,7 +227,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:navy_chargeable "
               }
             ]
@@ -220,7 +245,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " absentStatus:insurance_chargeable "
               }
             ]
@@ -245,7 +270,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " absentStatus:activation_inactivation_date_id "
                       }
                     ]
@@ -262,7 +287,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " absentStatus:activation_inactivation_date_type "
                       }
                     ]
@@ -290,7 +315,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " absentStatus:activation_inactivation_date "
                       }
                     ]
@@ -305,7 +330,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " absentStatus:active_inactive_status "
                       }
                     ]
@@ -343,13 +368,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8131_01-1_1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:absentStatus:activation_inactivation_date_id": "\"8131_01-1_1\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " absentStatus:activation_inactivation_date_id "
                               }
                             ]
@@ -370,13 +400,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:Activation_Inactivation_Date-8131_01"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:absentStatus:activation_inactivation_date_type": "\"chcss:Activation_Inactivation_Date-8131_01\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " absentStatus:activation_inactivation_date_type "
                               }
                             ]
@@ -409,13 +444,18 @@
                                 "object": {
                                   "value": "1990-01-01",
                                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:absentStatus:activation_inactivation_date": "\"1990-01-01\"^^http://www.w3.org/2001/XMLSchema#date"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " absentStatus:activation_inactivation_date "
                               }
                             ]
@@ -434,13 +474,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#active_inactive_status-8131_01",
                                 "object": {
                                   "value": "ACTIVE"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:absentStatus:active_inactive_status": "\"ACTIVE\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " absentStatus:active_inactive_status "
                               }
                             ]

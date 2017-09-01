@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "8188_99-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:id": "\"8188_99-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Dod_Standard_Lab_Test-8188_99"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:chcs_type": "\"chcss:Dod_Standard_Lab_Test-8188_99\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "1,1,1-TRICHLOROETHANE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:label": "\"1,1,1-TRICHLOROETHANE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#test_name-8188_99",
                 "object": {
                   "value": "1,1,1-TRICHLOROETHANE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:test_name": "\"1,1,1-TRICHLOROETHANE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:test_name "
               }
             ]
@@ -124,13 +144,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#test_print_name-8188_99",
                 "object": {
                   "value": "1,1,1-TRICHLORO"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:test_print_name": "\"1,1,1-TRICHLORO\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:test_print_name "
               }
             ]
@@ -149,13 +174,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#test_code-8188_99",
                 "object": {
                   "value": "1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:test_code": "\"1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:test_code "
               }
             ]
@@ -178,7 +208,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " diagnosticService:loinc_component_analyte_name_id "
                       }
                     ]
@@ -193,7 +223,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " diagnosticService:loinc_component_analyte_name "
                       }
                     ]
@@ -231,13 +261,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8188_1-65"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:diagnostic-service:loinc_component_analyte_name_id": "\"8188_1-65\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " diagnosticService:loinc_component_analyte_name_id "
                               }
                             ]
@@ -256,13 +291,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "1,1,1-TRICHLOROETHANE"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:diagnostic-service:loinc_component_analyte_name": "\"1,1,1-TRICHLOROETHANE\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " diagnosticService:loinc_component_analyte_name "
                               }
                             ]
@@ -288,7 +328,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:standardized_lab_test "
               }
             ]
@@ -307,13 +347,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#subscript-8188_99",
                 "object": {
                   "value": "CLINICAL CHEMISTRY"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:subscript": "\"CLINICAL CHEMISTRY\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:subscript "
               }
             ]
@@ -332,13 +377,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#single_panel-8188_99",
                 "object": {
                   "value": "SINGLE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:diagnostic-service:single_panel": "\"SINGLE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:single_panel "
               }
             ]
@@ -356,7 +406,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:panel_names "
               }
             ]
@@ -374,7 +424,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:dba_inactive_flag "
               }
             ]
@@ -405,7 +455,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " diagnosticService:deactivation_date "
               }
             ]

@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "8137-2"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:id": "\"8137-2\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Cause_Of_Injury-8137"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:chcs_type": "\"chcss:Cause_Of_Injury-8137\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "001"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:label": "\"001\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#code-8137",
                 "object": {
                   "value": "001"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:code": "\"001\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:code "
               }
             ]
@@ -124,13 +144,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-8137",
                 "object": {
                   "value": "AIR ACCIDENT, FIXED-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:name": "\"AIR ACCIDENT, FIXED-WING MILITARY, TAXIING,TAKEOFF,LANDING ON CARRIER\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:name "
               }
             ]
@@ -153,7 +178,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " causeOfInjury:category_id "
                       }
                     ]
@@ -168,7 +193,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " causeOfInjury:category_label "
                       }
                     ]
@@ -206,13 +231,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8145-1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:causeOfInjury:category_id": "\"8145-1\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " causeOfInjury:category_id "
                               }
                             ]
@@ -231,13 +261,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "I"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:causeOfInjury:category_label": "\"I\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " causeOfInjury:category_label "
                               }
                             ]
@@ -266,13 +301,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#description-8137",
                 "object": {
                   "value": "ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Take-off from or landing on aircraft carrier (includes taxiing)."
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:causeOfInjury:description": "\"ACCIDENTS IN AIR TRANSPORT, AS SPECIFICALLY DEFINED,INVOLVING MILITARY AIRCRAFT (000-029)Injured person was in (or boarding etc.) powered heavier-than-air military aircraft, and the accident involved: Take-off from or landing on aircraft carrier (includes taxiing).\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:description "
               }
             ]
@@ -290,7 +330,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:dba_inactive_flag "
               }
             ]
@@ -321,7 +361,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " causeOfInjury:deactivation_date "
               }
             ]

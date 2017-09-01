@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "6-26"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:id": "\"6-26\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Provider-6"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:type": "\"chcss:Provider-6\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "FLINTSTONE,WILMA"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:label": "\"FLINTSTONE,WILMA\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:label "
               }
             ]
@@ -99,13 +114,19 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-6",
                 "object": {
                   "value": "FLINTSTONE,WILMA"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:family": "FLINTSTONE",
+                    "urn:local:provider:given": "WILMA"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " regex(/\"(?<provider:family>[a-zA-Z'\\-]+),\\s*(?<provider:given>[a-zA-Z'\\-\\s]+)\"/) "
               }
             ]
@@ -126,13 +147,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#initials-6",
                 "object": {
                   "value": "WLF"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:initials": "\"WLF\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:initials "
               }
             ]
@@ -153,13 +179,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#salutation-6",
                 "object": {
                   "value": "NEUROLOGY-CONSULTANT"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:salutation": "\"NEUROLOGY-CONSULTANT\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:salutation "
               }
             ]
@@ -180,13 +211,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#sex-6",
                 "object": {
                   "value": "FEMALE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:sex_label": "Female"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hashmap( provider:sex_label, {\"FEMALE\": \"Female\", \"MALE\": \"Male\", \"OTHER\": \"Other\"}) "
               }
             ]
@@ -221,13 +257,18 @@
                 "object": {
                   "value": "1990-01-01",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:dob": "\"1990-01-01\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:dob "
               }
             ]
@@ -252,7 +293,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:place_of_birth_id "
                       }
                     ]
@@ -267,7 +308,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:place_of_birth_label "
                       }
                     ]
@@ -305,13 +346,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-17"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:place_of_birth_id": "\"5-17\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:place_of_birth_id "
                               }
                             ]
@@ -330,13 +376,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ILLINOIS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:place_of_birth_label": "\"ILLINOIS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:place_of_birth_label "
                               }
                             ]
@@ -369,7 +420,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:language_id "
                       }
                     ]
@@ -384,7 +435,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:language_label "
                       }
                     ]
@@ -422,13 +473,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8146-82"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:language_id": "\"8146-82\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:language_id "
                               }
                             ]
@@ -447,13 +503,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "EN"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:language_label": "\"EN\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:language_label "
                               }
                             ]
@@ -486,7 +547,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:citizenship_id "
                       }
                     ]
@@ -501,7 +562,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:citizenship_label "
                       }
                     ]
@@ -539,13 +600,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-112"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:citizenship_id": "\"5-112\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:citizenship_id "
                               }
                             ]
@@ -564,13 +630,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "IRELAND"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:citizenship_label": "\"IRELAND\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:citizenship_label "
                               }
                             ]
@@ -599,13 +670,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#home_phone-6",
                 "object": {
                   "value": "200 555 5555"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:home_phone": "\"200 555 5555\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:home_phone "
               }
             ]
@@ -626,13 +702,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#home_street_address_1-6",
                 "object": {
                   "value": "2593 InternalTest Way"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:home_street_address_1": "\"2593 InternalTest Way\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:home_street_address_1 "
               }
             ]
@@ -653,13 +734,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#home_street_address_2-6",
                 "object": {
                   "value": "Apartment"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:home_street_address_2": "\"Apartment\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:home_street_address_2 "
               }
             ]
@@ -680,13 +766,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#home_street_address_3-6",
                 "object": {
                   "value": "#123"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:home_street_address_3": "\"#123\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:home_street_address_3 "
               }
             ]
@@ -707,13 +798,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#home_city-6",
                 "object": {
                   "value": "TOWNSVILLE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:home_city": "\"TOWNSVILLE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:home_city "
               }
             ]
@@ -738,7 +834,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:home_state_id "
                       }
                     ]
@@ -753,7 +849,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:home_state_label "
                       }
                     ]
@@ -791,13 +887,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-17"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:home_state_id": "\"5-17\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:home_state_id "
                               }
                             ]
@@ -816,13 +917,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ILLINOIS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:home_state_label": "\"ILLINOIS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:home_state_label "
                               }
                             ]
@@ -855,7 +961,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:home_zipcode_id "
                       }
                     ]
@@ -870,7 +976,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:home_zipcode_label "
                       }
                     ]
@@ -908,13 +1014,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5_8002-26457"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:home_zipcode_id": "\"5_8002-26457\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:home_zipcode_id "
                               }
                             ]
@@ -933,13 +1044,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "60050"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:home_zipcode_label": "\"60050\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:home_zipcode_label "
                               }
                             ]
@@ -968,13 +1084,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#duty_phone_1-6",
                 "object": {
                   "value": "000 111 2222"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:phone": "\"000 111 2222\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:phone "
               }
             ]
@@ -995,13 +1116,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#duty_phone_2-6",
                 "object": {
                   "value": "111 222 3333"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:duty_phone_2": "\"111 222 3333\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:duty_phone_2 "
               }
             ]
@@ -1022,13 +1148,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#duty_fax_number-6",
                 "object": {
                   "value": "222 333 4444"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:duty_fax_number": "\"222 333 4444\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:duty_fax_number "
               }
             ]
@@ -1049,13 +1180,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#pager_number-6",
                 "object": {
                   "value": "333 444 5555"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:pager_number": "\"333 444 5555\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:pager_number "
               }
             ]
@@ -1076,13 +1212,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#office_street_address_1-6",
                 "object": {
                   "value": "180 Bedrock Blvd"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:office_street_address": "\"180 Bedrock Blvd\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:office_street_address "
               }
             ]
@@ -1103,13 +1244,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#office_city-6",
                 "object": {
                   "value": "BEDROCK"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:office_city": "\"BEDROCK\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:office_city "
               }
             ]
@@ -1134,7 +1280,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:office_state_id "
                       }
                     ]
@@ -1149,7 +1295,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:office_state_label "
                       }
                     ]
@@ -1187,13 +1333,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-17"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:office_state_id": "\"5-17\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:office_state_id "
                               }
                             ]
@@ -1212,13 +1363,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "NEBRASKA"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:office_state_label": "\"NEBRASKA\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:office_state_label "
                               }
                             ]
@@ -1251,7 +1407,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:office_zipcode_id "
                       }
                     ]
@@ -1266,7 +1422,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:office_zipcode_label "
                       }
                     ]
@@ -1304,13 +1460,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5_8002-26744"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:office_zipcode_id": "\"5_8002-26744\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:office_zipcode_id "
                               }
                             ]
@@ -1329,13 +1490,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "68501"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:office_zipcode_label": "\"68501\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:office_zipcode_label "
                               }
                             ]
@@ -1368,7 +1534,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:class_id "
                       }
                     ]
@@ -1383,7 +1549,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:class_label "
                       }
                     ]
@@ -1421,13 +1587,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "7-19"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:class_id": "\"7-19\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:class_id "
                               }
                             ]
@@ -1446,13 +1617,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "OUTSIDE PROVIDER"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:class_label": "\"OUTSIDE PROVIDER\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:class_label "
                               }
                             ]
@@ -1479,13 +1655,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#provider_id-6",
                 "object": {
                   "value": "111223333"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:provider_id": "\"111223333\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:provider_id "
               }
             ]
@@ -1506,13 +1687,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ssn-6",
                 "object": {
                   "value": "111223333"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:ssn_id": "\"111223333\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:ssn_id "
               }
             ]
@@ -1533,13 +1719,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#person_identifier_type_code-6",
                 "object": {
                   "value": "SOCIAL SECURITY NUMBER (SSN)"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:person_identifier_type_code": "\"SOCIAL SECURITY NUMBER (SSN)\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:person_identifier_type_code "
               }
             ]
@@ -1560,13 +1751,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#npi_id_editable_flag-6",
                 "object": {
                   "value": "EDITABLE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:npi_id_editable_flag": "\"EDITABLE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:npi_id_editable_flag "
               }
             ]
@@ -1587,13 +1783,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#type-6",
                 "object": {
                   "value": "FULL TIME"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:provider_type": "\"FULL TIME\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:provider_type "
               }
             ]
@@ -1613,13 +1814,18 @@
                 "object": {
                   "value": "true",
                   "type": "http://www.w3.org/2001/XMLSchema#boolean"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:require_supervising_provider": "\"true\"^^http://www.w3.org/2001/XMLSchema#boolean"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:require_supervising_provider "
               }
             ]
@@ -1640,13 +1846,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#supervisor-6",
                 "object": {
                   "value": "BETTY RUBBLE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:supervisor": "\"BETTY RUBBLE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:supervisor "
               }
             ]
@@ -1667,13 +1878,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ccqas_last_name-6",
                 "object": {
                   "value": "FLINTSTONE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:ccqas_last_name": "\"FLINTSTONE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:ccqas_last_name "
               }
             ]
@@ -1694,13 +1910,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ccqas_first_name-6",
                 "object": {
                   "value": "WILMA"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:ccqas_first_name": "\"WILMA\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:ccqas_first_name "
               }
             ]
@@ -1721,13 +1942,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ccqas_middle_name-6",
                 "object": {
                   "value": "LYN"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:ccqas_middle_name": "\"LYN\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:ccqas_middle_name "
               }
             ]
@@ -1748,13 +1974,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ccqas_cadency-6",
                 "object": {
                   "value": "III"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:ccqas_cadency": "\"III\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:ccqas_cadency "
               }
             ]
@@ -1789,13 +2020,18 @@
                 "object": {
                   "value": "1990-01-01",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:ccqas_date_time_of_last_update": "\"1990-01-01\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:ccqas_date_time_of_last_update "
               }
             ]
@@ -1816,13 +2052,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#ccqascontrolled_fields-6",
                 "object": {
                   "value": "2,4,6,8"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:ccqascontrolled_fields": "\"2,4,6,8\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:ccqascontrolled_fields "
               }
             ]
@@ -1843,13 +2084,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#hcpnumber-6",
                 "object": {
                   "value": "987654321"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:hcpnumber": "\"987654321\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:hcpnumber "
               }
             ]
@@ -1870,13 +2116,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#hcp_sidrid-6",
                 "object": {
                   "value": "900100"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:hcp_sidrid": "\"900100\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:hcp_sidrid "
               }
             ]
@@ -1901,7 +2152,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:primary_hipaa_taxonomy_id "
                       }
                     ]
@@ -1916,7 +2167,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:primary_hipaa_taxonomy_label "
                       }
                     ]
@@ -1954,13 +2205,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8171-451"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:primary_hipaa_taxonomy_id": "\"8171-451\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:primary_hipaa_taxonomy_id "
                               }
                             ]
@@ -1979,13 +2235,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "246Z00000X"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:primary_hipaa_taxonomy_label": "\"246Z00000X\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:primary_hipaa_taxonomy_label "
                               }
                             ]
@@ -2028,13 +2289,18 @@
                 "object": {
                   "value": "1990-01-03",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:termination_date": "\"1990-01-03\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:termination_date "
               }
             ]
@@ -2069,13 +2335,18 @@
                 "object": {
                   "value": "1990-01-02",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:order_entry_inactivation_date": "\"1990-01-02\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:order_entry_inactivation_date "
               }
             ]
@@ -2110,13 +2381,18 @@
                 "object": {
                   "value": "1990-01-05",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:date_of_retirement_eligibility": "\"1990-01-05\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:date_of_retirement_eligibility "
               }
             ]
@@ -2151,13 +2427,18 @@
                 "object": {
                   "value": "1987-06-01",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:date_assigned_to_mtf": "\"1987-06-01\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:date_assigned_to_mtf "
               }
             ]
@@ -2192,13 +2473,18 @@
                 "object": {
                   "value": "1990-01-05T00:00:00",
                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:date_time_flagged_for_rcmas": "\"1990-01-05T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:date_time_flagged_for_rcmas "
               }
             ]
@@ -2223,7 +2509,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:location_id "
                       }
                     ]
@@ -2238,7 +2524,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:location_label "
                       }
                     ]
@@ -2276,13 +2562,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "44-7"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:location_id": "\"44-7\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:location_id "
                               }
                             ]
@@ -2301,13 +2592,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "BEDROCK SUPPORT 200H"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:location_label": "\"BEDROCK SUPPORT 200H\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:location_label "
                               }
                             ]
@@ -2340,7 +2636,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:branch_id "
                       }
                     ]
@@ -2355,7 +2651,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:branch_label "
                       }
                     ]
@@ -2393,13 +2689,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "23-1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:branch_id": "\"23-1\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:branch_id "
                               }
                             ]
@@ -2418,13 +2719,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ARMY"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:branch_label": "\"ARMY\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:branch_label "
                               }
                             ]
@@ -2457,7 +2763,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:rank_id "
                       }
                     ]
@@ -2472,7 +2778,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:rank_label "
                       }
                     ]
@@ -2510,13 +2816,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8104-88"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:rank_id": "\"8104-88\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:rank_id "
                               }
                             ]
@@ -2535,13 +2846,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "COMMANDER"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:rank_label": "\"COMMANDER\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:rank_label "
                               }
                             ]
@@ -2570,13 +2886,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#military_corps_name-6",
                 "object": {
                   "value": "MEDICAL CORPS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:military_corps_name": "\"MEDICAL CORPS\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:military_corps_name "
               }
             ]
@@ -2601,7 +2922,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:military_status_id "
                       }
                     ]
@@ -2616,7 +2937,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:military_status_label "
                       }
                     ]
@@ -2654,13 +2975,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8569-12"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:military_status_id": "\"8569-12\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:military_status_id "
                               }
                             ]
@@ -2679,13 +3005,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "CI"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:military_status_label": "\"CI\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:military_status_label "
                               }
                             ]
@@ -2718,7 +3049,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:military_specialty_id "
                       }
                     ]
@@ -2733,7 +3064,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:military_specialty_label "
                       }
                     ]
@@ -2763,7 +3094,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:department_code_id "
                       }
                     ]
@@ -2778,7 +3109,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:department_code_label "
                       }
                     ]
@@ -2816,13 +3147,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "45_7-22"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:department_code_id": "\"45_7-22\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:department_code_id "
                               }
                             ]
@@ -2841,13 +3177,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "LABORATORY_CLINICAL PATH,BEDROCK"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:department_code_label": "\"LABORATORY_CLINICAL PATH,BEDROCK\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:department_code_label "
                               }
                             ]
@@ -2890,13 +3231,18 @@
                 "object": {
                   "value": "1993-07-28",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:reappointment_date": "\"1993-07-28\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:reappointment_date "
               }
             ]
@@ -2917,13 +3263,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#date_of_active_duty_commitment-6",
                 "object": {
                   "value": "1990-01-01"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:date_of_active_duty_commitment": "\"1990-01-01\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:date_of_active_duty_commitment "
               }
             ]
@@ -2944,13 +3295,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#offboard_provider_id-6",
                 "object": {
                   "value": "444444"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:offboard_provider_id": "\"444444\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:offboard_provider_id "
               }
             ]
@@ -2972,13 +3328,18 @@
                 "object": {
                   "value": "true",
                   "type": "http://www.w3.org/2001/XMLSchema#boolean"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:flying_status": "\"true\"^^http://www.w3.org/2001/XMLSchema#boolean"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:flying_status "
               }
             ]
@@ -2997,13 +3358,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#license_-6",
                 "object": {
                   "value": "00001"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:license": "\"00001\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:license "
               }
             ]
@@ -3038,13 +3404,18 @@
                 "object": {
                   "value": "1990-07-31",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:license_renewal_date": "\"1990-07-31\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:license_renewal_date "
               }
             ]
@@ -3069,7 +3440,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:license_state_id "
                       }
                     ]
@@ -3084,7 +3455,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:license_state_label "
                       }
                     ]
@@ -3122,13 +3493,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-17"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:license_state_id": "\"5-17\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:license_state_id "
                               }
                             ]
@@ -3147,13 +3523,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ILLINOIS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:license_state_label": "\"ILLINOIS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:license_state_label "
                               }
                             ]
@@ -3186,7 +3567,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:licensure_id "
                       }
                     ]
@@ -3203,7 +3584,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:licensure_type "
                       }
                     ]
@@ -3231,7 +3612,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:licensure_date_time "
                       }
                     ]
@@ -3254,7 +3635,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_status_id "
                               }
                             ]
@@ -3269,7 +3650,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_status_label "
                               }
                             ]
@@ -3292,7 +3673,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:licensure_number "
                       }
                     ]
@@ -3315,7 +3696,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_issuing_state_id "
                               }
                             ]
@@ -3330,7 +3711,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_issuing_state_label "
                               }
                             ]
@@ -3353,7 +3734,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:licensure_date_of_issue "
                       }
                     ]
@@ -3383,7 +3764,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:licensure_renewal_date "
                       }
                     ]
@@ -3413,7 +3794,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:verification_date "
                       }
                     ]
@@ -3436,7 +3817,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_type_id "
                               }
                             ]
@@ -3451,7 +3832,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_type_label "
                               }
                             ]
@@ -3495,13 +3876,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "6_11-1_28"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:licensure_id": "\"6_11-1_28\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_id "
                               }
                             ]
@@ -3522,13 +3908,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:Licensure-6_11"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:licensure_type": "\"chcss:Licensure-6_11\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_type "
                               }
                             ]
@@ -3561,13 +3952,18 @@
                                 "object": {
                                   "value": "1990-01-07T00:00:00",
                                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:licensure_date_time": "\"1990-01-07T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_date_time "
                               }
                             ]
@@ -3592,7 +3988,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:licensure_status_id "
                                       }
                                     ]
@@ -3607,7 +4003,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:licensure_status_label "
                                       }
                                     ]
@@ -3633,13 +4029,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#license_number-6_11",
                                 "object": {
                                   "value": "036-060376"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:licensure_number": "\"036-060376\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_number "
                               }
                             ]
@@ -3664,7 +4065,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:licensure_issuing_state_id "
                                       }
                                     ]
@@ -3679,7 +4080,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:licensure_issuing_state_label "
                                       }
                                     ]
@@ -3705,13 +4106,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#date_of_issue-6_11",
                                 "object": {
                                   "value": "1990-01-10"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:licensure_date_of_issue": "\"1990-01-10\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_date_of_issue "
                               }
                             ]
@@ -3742,7 +4148,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:licensure_renewal_date "
                               }
                             ]
@@ -3777,13 +4183,18 @@
                                 "object": {
                                   "value": "1990-01-06",
                                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:verification_date": "\"1990-01-06\"^^http://www.w3.org/2001/XMLSchema#date"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:verification_date "
                               }
                             ]
@@ -3808,7 +4219,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:licensure_type_id "
                                       }
                                     ]
@@ -3823,7 +4234,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:licensure_type_label "
                                       }
                                     ]
@@ -3861,13 +4272,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "8127-2"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:provider:licensure_type_id": "\"8127-2\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:licensure_type_id "
                                               }
                                             ]
@@ -3886,13 +4302,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "M"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:provider:licensure_type_label": "\"M\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:licensure_type_label "
                                               }
                                             ]
@@ -3927,13 +4348,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#signature_block-6",
                 "object": {
                   "value": "Wilma Flintstone"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:signature_block": "\"Wilma Flintstone\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:signature_block "
               }
             ]
@@ -3954,13 +4380,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#provider_flag-6",
                 "object": {
                   "value": "PROVIDER"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:provider_flag": "\"PROVIDER\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:provider_flag "
               }
             ]
@@ -3985,7 +4416,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:entered_by_id "
                       }
                     ]
@@ -4000,7 +4431,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:entered_by_label "
                       }
                     ]
@@ -4038,13 +4469,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "3-8"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:entered_by_id": "\"3-8\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:entered_by_id "
                               }
                             ]
@@ -4063,13 +4499,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "RUBBLE,BETTY"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:entered_by_label": "\"RUBBLE,BETTY\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:entered_by_label "
                               }
                             ]
@@ -4110,13 +4551,18 @@
                 "object": {
                   "value": "1990-01-01T00:00:00",
                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:datetime_entered": "\"1990-01-01T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:datetime_entered "
               }
             ]
@@ -4149,13 +4595,18 @@
                 "object": {
                   "value": "1990-01-01",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:cmac_modification_date": "\"1990-01-01\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:cmac_modification_date "
               }
             ]
@@ -4176,13 +4627,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#dba_inactive_flag-6",
                 "object": {
                   "value": "INACTIVE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:dba_inactive_flag": "\"INACTIVE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:dba_inactive_flag "
               }
             ]
@@ -4217,13 +4673,18 @@
                 "object": {
                   "value": "2004-04-02",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:deactivation_date": "\"2004-04-02\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:deactivation_date "
               }
             ]
@@ -4258,13 +4719,18 @@
                 "object": {
                   "value": "1997-09-26",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:purge_notification_date": "\"1997-09-26\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:purge_notification_date "
               }
             ]
@@ -4286,13 +4752,18 @@
                 "object": {
                   "value": "true",
                   "type": "http://www.w3.org/2001/XMLSchema#boolean"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:verified": "\"true\"^^http://www.w3.org/2001/XMLSchema#boolean"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:verified "
               }
             ]
@@ -4317,7 +4788,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:verified_by_id "
                       }
                     ]
@@ -4332,7 +4803,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:verified_by_label "
                       }
                     ]
@@ -4370,13 +4841,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "3-431"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:verified_by_id": "\"3-431\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:verified_by_id "
                               }
                             ]
@@ -4395,13 +4871,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "FLINTSTONE,PEBBLES"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:verified_by_label": "\"FLINTSTONE,PEBBLES\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:verified_by_label "
                               }
                             ]
@@ -4444,13 +4925,18 @@
                 "object": {
                   "value": "1990-01-10T00:00:00",
                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:date_verified": "\"1990-01-10T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:date_verified "
               }
             ]
@@ -4475,7 +4961,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:inactivated_by_id "
                       }
                     ]
@@ -4490,7 +4976,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:inactivated_by_label "
                       }
                     ]
@@ -4528,13 +5014,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "3-8147"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:inactivated_by_id": "\"3-8147\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:inactivated_by_id "
                               }
                             ]
@@ -4553,13 +5044,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "RUBBLE,BAMM-BAMM"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:inactivated_by_label": "\"RUBBLE,BAMM-BAMM\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:inactivated_by_label "
                               }
                             ]
@@ -4592,7 +5088,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:replaced_by_id "
                       }
                     ]
@@ -4607,7 +5103,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:replaced_by_label "
                       }
                     ]
@@ -4645,13 +5141,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "6-692"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:replaced_by_id": "\"6-692\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:replaced_by_id "
                               }
                             ]
@@ -4670,13 +5171,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "SLATE,HARRY"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:replaced_by_label": "\"SLATE,HARRY\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:replaced_by_label "
                               }
                             ]
@@ -4709,7 +5215,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:replaced_selected_by_id "
                       }
                     ]
@@ -4724,7 +5230,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:replaced_selected_by_label "
                       }
                     ]
@@ -4762,13 +5268,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "3-850"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:replaced_selected_by_id": "\"3-850\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:replaced_selected_by_id "
                               }
                             ]
@@ -4787,13 +5298,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "RUBBLE,BARNEY"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:replaced_selected_by_label": "\"RUBBLE,BARNEY\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:replaced_selected_by_label "
                               }
                             ]
@@ -4822,13 +5338,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#deanumber-6",
                 "object": {
                   "value": "123456789"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:deanumber": "\"123456789\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:deanumber "
               }
             ]
@@ -4849,13 +5370,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#biographical_data-6",
                 "object": {
                   "value": "Provider biography"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:provider:biographical_data": "\"Provider biography\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " provider:biographical_data "
               }
             ]
@@ -4880,7 +5406,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:certification_id "
                       }
                     ]
@@ -4897,7 +5423,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:certification_type "
                       }
                     ]
@@ -4927,7 +5453,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:certificate_date_time "
                       }
                     ]
@@ -4944,7 +5470,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:certificate_location "
                       }
                     ]
@@ -4967,7 +5493,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certifying_organization_id "
                               }
                             ]
@@ -4982,7 +5508,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certifying_organization_label "
                               }
                             ]
@@ -5018,7 +5544,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:date_of_certification "
                       }
                     ]
@@ -5041,7 +5567,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certification_type_id "
                               }
                             ]
@@ -5056,7 +5582,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certification_type_label "
                               }
                             ]
@@ -5100,13 +5626,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "6_12-1_28"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:certification_id": "\"6_12-1_28\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certification_id "
                               }
                             ]
@@ -5127,13 +5658,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:Certification-6_12"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:certification_type": "\"chcss:Certification-6_12\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certification_type "
                               }
                             ]
@@ -5168,13 +5704,18 @@
                                 "object": {
                                   "value": "1990-01-01T00:00:00",
                                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:certificate_date_time": "\"1990-01-01T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certificate_date_time "
                               }
                             ]
@@ -5195,13 +5736,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#location-6_12",
                                 "object": {
                                   "value": "DEL"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:certificate_location": "\"DEL\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:certificate_location "
                               }
                             ]
@@ -5226,7 +5772,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:certifying_organization_id "
                                       }
                                     ]
@@ -5241,7 +5787,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:certifying_organization_label "
                                       }
                                     ]
@@ -5279,13 +5825,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "8895_7-35"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:provider:certifying_organization_id": "\"8895_7-35\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:certifying_organization_id "
                                               }
                                             ]
@@ -5304,13 +5855,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "AMERICAN BOARD OF ORTHOPAEDIC SURGERY"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:provider:certifying_organization_label": "\"AMERICAN BOARD OF ORTHOPAEDIC SURGERY\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:certifying_organization_label "
                                               }
                                             ]
@@ -5353,13 +5909,18 @@
                                 "object": {
                                   "value": "1990-01-07",
                                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:date_of_certification": "\"1990-01-07\"^^http://www.w3.org/2001/XMLSchema#date"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:date_of_certification "
                               }
                             ]
@@ -5384,7 +5945,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:certification_type_id "
                                       }
                                     ]
@@ -5399,7 +5960,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:certification_type_label "
                                       }
                                     ]
@@ -5437,13 +5998,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "8128-1"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:provider:certification_type_id": "\"8128-1\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:certification_type_id "
                                               }
                                             ]
@@ -5462,13 +6028,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "B"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:provider:certification_type_label": "\"B\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:certification_type_label "
                                               }
                                             ]
@@ -5509,7 +6080,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_id "
                       }
                     ]
@@ -5526,7 +6097,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_type "
                       }
                     ]
@@ -5556,7 +6127,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_date_time "
                       }
                     ]
@@ -5586,7 +6157,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_renewal_date "
                       }
                     ]
@@ -5603,7 +6174,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_location "
                       }
                     ]
@@ -5620,7 +6191,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_sponsoring_institution "
                       }
                     ]
@@ -5650,7 +6221,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_start_date "
                       }
                     ]
@@ -5680,7 +6251,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:periodic_training_end_date "
                       }
                     ]
@@ -5703,7 +6274,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:education_degree_id "
                               }
                             ]
@@ -5720,7 +6291,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:education_degree_type "
                               }
                             ]
@@ -5750,7 +6321,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:education_degree_date_time "
                               }
                             ]
@@ -5773,7 +6344,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:degree_diploma_id "
                                       }
                                     ]
@@ -5788,7 +6359,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:degree_diploma_label "
                                       }
                                     ]
@@ -5809,7 +6380,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:education_degree_location "
                               }
                             ]
@@ -5824,7 +6395,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:education_degree_school "
                               }
                             ]
@@ -5841,7 +6412,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:education_degree_start_date "
                               }
                             ]
@@ -5858,7 +6429,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:education_degree_end_date "
                               }
                             ]
@@ -5881,7 +6452,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_level_id "
                                       }
                                     ]
@@ -5896,7 +6467,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_level_label "
                                       }
                                     ]
@@ -5931,7 +6502,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:post_graduate_training_id "
                               }
                             ]
@@ -5948,7 +6519,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:post_graduate_training_type "
                               }
                             ]
@@ -5978,7 +6549,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:post_graduate_training_date_time "
                               }
                             ]
@@ -5993,7 +6564,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:post_graduate_training_institution "
                               }
                             ]
@@ -6010,7 +6581,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:post_graduate_training_location "
                               }
                             ]
@@ -6033,7 +6604,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_certificate_id "
                                       }
                                     ]
@@ -6048,7 +6619,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_certificate_label "
                                       }
                                     ]
@@ -6069,7 +6640,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:post_graduate_training_start_date "
                               }
                             ]
@@ -6086,7 +6657,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:post_graduate_training_end_date "
                               }
                             ]
@@ -6109,7 +6680,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_level_id "
                                       }
                                     ]
@@ -6124,7 +6695,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_level_label "
                                       }
                                     ]
@@ -6174,13 +6745,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "6_19-1_28"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:periodic_training_id": "\"6_19-1_28\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_id "
                               }
                             ]
@@ -6201,13 +6777,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:Periodic_Training-6_19"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:periodic_training_type": "\"chcss:Periodic_Training-6_19\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_type "
                               }
                             ]
@@ -6242,13 +6823,18 @@
                                 "object": {
                                   "value": "1990-01-08T00:00:00",
                                   "type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:periodic_training_date_time": "\"1990-01-08T00:00:00\"^^http://www.w3.org/2001/XMLSchema#dateTime"
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_date_time "
                               }
                             ]
@@ -6279,7 +6865,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_renewal_date "
                               }
                             ]
@@ -6300,13 +6886,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#location-6_19",
                                 "object": {
                                   "value": "GREAT LAKES, IL"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:periodic_training_location": "\"GREAT LAKES, IL\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_location "
                               }
                             ]
@@ -6327,13 +6918,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#sponsoring_institution-6_19",
                                 "object": {
                                   "value": "NAVHOSP"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:periodic_training_sponsoring_institution": "\"NAVHOSP\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_sponsoring_institution "
                               }
                             ]
@@ -6364,7 +6960,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_start_date "
                               }
                             ]
@@ -6395,7 +6991,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:periodic_training_end_date "
                               }
                             ]
@@ -6420,7 +7016,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_id "
                                       }
                                     ]
@@ -6437,7 +7033,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_type "
                                       }
                                     ]
@@ -6467,7 +7063,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_date_time "
                                       }
                                     ]
@@ -6490,7 +7086,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:degree_diploma_id "
                                               }
                                             ]
@@ -6505,7 +7101,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:degree_diploma_label "
                                               }
                                             ]
@@ -6526,7 +7122,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_location "
                                       }
                                     ]
@@ -6541,7 +7137,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_school "
                                       }
                                     ]
@@ -6558,7 +7154,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_start_date "
                                       }
                                     ]
@@ -6575,7 +7171,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:education_degree_end_date "
                                       }
                                     ]
@@ -6598,7 +7194,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:education_degree_level_id "
                                               }
                                             ]
@@ -6613,7 +7209,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:education_degree_level_label "
                                               }
                                             ]
@@ -6649,7 +7245,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_id "
                                       }
                                     ]
@@ -6666,7 +7262,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_type "
                                       }
                                     ]
@@ -6696,7 +7292,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_date_time "
                                       }
                                     ]
@@ -6711,7 +7307,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_institution "
                                       }
                                     ]
@@ -6728,7 +7324,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_location "
                                       }
                                     ]
@@ -6751,7 +7347,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:post_graduate_training_certificate_id "
                                               }
                                             ]
@@ -6766,7 +7362,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:post_graduate_training_certificate_label "
                                               }
                                             ]
@@ -6787,7 +7383,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_start_date "
                                       }
                                     ]
@@ -6804,7 +7400,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " provider:post_graduate_training_end_date "
                                       }
                                     ]
@@ -6827,7 +7423,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:post_graduate_training_level_id "
                                               }
                                             ]
@@ -6842,7 +7438,7 @@
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " provider:post_graduate_training_level_label "
                                               }
                                             ]
@@ -6886,7 +7482,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:provider_specialtys_id "
                       }
                     ]
@@ -6901,7 +7497,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:provider_specialtys_label "
                       }
                     ]
@@ -6939,13 +7535,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8100-181"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:provider_specialtys_id": "\"8100-181\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:provider_specialtys_id "
                               }
                             ]
@@ -6964,13 +7565,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "900"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:provider_specialtys_label": "\"900\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:provider_specialtys_label "
                               }
                             ]
@@ -7003,7 +7609,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:drug_authorization_key_id "
                       }
                     ]
@@ -7018,7 +7624,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " provider:drug_authorization_key_label "
                       }
                     ]
@@ -7056,13 +7662,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8200-4"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:drug_authorization_key_id": "\"8200-4\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:drug_authorization_key_id "
                               }
                             ]
@@ -7081,13 +7692,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "MD_DO_DDS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:provider:drug_authorization_key_label": "\"MD_DO_DDS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " provider:drug_authorization_key_label "
                               }
                             ]

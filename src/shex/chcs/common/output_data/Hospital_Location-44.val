@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "44-.5"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:id": "\"44-.5\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Hospital_Location-44"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:chcs_type": "\"chcss:Hospital_Location-44\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "QUARTERS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:label": "\"QUARTERS\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-44",
                 "object": {
                   "value": "QUARTERS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:name": "\"QUARTERS\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:name "
               }
             ]
@@ -123,7 +143,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:description "
               }
             ]
@@ -144,13 +164,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#abbreviation-44",
                 "object": {
                   "value": "QTRS"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:abbreviation": "\"QTRS\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:abbreviation "
               }
             ]
@@ -171,13 +196,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#location_type-44",
                 "object": {
                   "value": "WARD"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:location_type": "\"WARD\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:location_type "
               }
             ]
@@ -195,7 +225,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:location_id "
               }
             ]
@@ -220,7 +250,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:medical_record_type_id "
                       }
                     ]
@@ -235,7 +265,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:medical_record_type_label "
                       }
                     ]
@@ -265,7 +295,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:referring_meprs_id "
                       }
                     ]
@@ -280,7 +310,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:referring_meprs_label "
                       }
                     ]
@@ -310,7 +340,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:dga_meprs_code_id "
                       }
                     ]
@@ -325,7 +355,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:dga_meprs_code_label "
                       }
                     ]
@@ -355,7 +385,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:meprs_code_id "
                       }
                     ]
@@ -370,7 +400,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:meprs_code_label "
                       }
                     ]
@@ -408,13 +438,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8119-386"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:meprs_code_id": "\"8119-386\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:meprs_code_id "
                               }
                             ]
@@ -433,13 +468,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "FCDA"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:meprs_code_label": "\"FCDA\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:meprs_code_label "
                               }
                             ]
@@ -472,7 +512,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:cost_pool_code_id "
                       }
                     ]
@@ -487,7 +527,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:cost_pool_code_label "
                       }
                     ]
@@ -517,7 +557,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:generic_patient_label_id "
                       }
                     ]
@@ -532,7 +572,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:generic_patient_label_label "
                       }
                     ]
@@ -562,7 +602,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:mtf_id "
                       }
                     ]
@@ -577,7 +617,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:mtf_label "
                       }
                     ]
@@ -615,13 +655,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "1-1234"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:mtf_id": "\"1-1234\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:mtf_id "
                               }
                             ]
@@ -640,13 +685,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "LA LA LAND IL"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:mtf_label": "\"LA LA LAND IL\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:mtf_label "
                               }
                             ]
@@ -679,7 +729,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:division_id "
                       }
                     ]
@@ -694,7 +744,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:division_label "
                       }
                     ]
@@ -732,13 +782,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "40_8-1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:division_id": "\"40_8-1\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:division_id "
                               }
                             ]
@@ -757,13 +812,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "LA LA LAND, 200H"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:division_label": "\"LA LA LAND, 200H\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:division_label "
                               }
                             ]
@@ -796,7 +856,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:default_device_id "
                       }
                     ]
@@ -811,7 +871,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:default_device_label "
                       }
                     ]
@@ -841,7 +901,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:service_id "
                       }
                     ]
@@ -856,7 +916,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:service_label "
                       }
                     ]
@@ -886,7 +946,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:contact_method_id "
                       }
                     ]
@@ -901,7 +961,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:contact_method_label "
                       }
                     ]
@@ -924,7 +984,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:clinic_availability "
               }
             ]
@@ -942,7 +1002,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:clinic_appt_instructions "
               }
             ]
@@ -960,7 +1020,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:clinic_specialty "
               }
             ]
@@ -978,7 +1038,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:clinic_location "
               }
             ]
@@ -996,7 +1056,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:clinic_type "
               }
             ]
@@ -1014,7 +1074,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:building_name "
               }
             ]
@@ -1032,7 +1092,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:building_number "
               }
             ]
@@ -1050,7 +1110,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:street_address "
               }
             ]
@@ -1071,13 +1131,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#city-44",
                 "object": {
                   "value": "LA LA LAND"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:city": "\"LA LA LAND\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:city "
               }
             ]
@@ -1102,7 +1167,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:state_id "
                       }
                     ]
@@ -1117,7 +1182,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:state_label "
                       }
                     ]
@@ -1155,13 +1220,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5-17"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:state_id": "\"5-17\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:state_id "
                               }
                             ]
@@ -1180,13 +1250,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "ILLINOIS"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:state_label": "\"ILLINOIS\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:state_label "
                               }
                             ]
@@ -1219,7 +1294,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:zipcode_id "
                       }
                     ]
@@ -1234,7 +1309,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:zipcode_label "
                       }
                     ]
@@ -1272,13 +1347,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "5_8002-26489"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:zipcode_id": "\"5_8002-26489\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:zipcode_id "
                               }
                             ]
@@ -1297,13 +1377,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "60088"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:hospitalLoc:zipcode_label": "\"60088\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:zipcode_label "
                               }
                             ]
@@ -1329,7 +1414,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:telephone "
               }
             ]
@@ -1347,7 +1432,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:type_of_care "
               }
             ]
@@ -1372,7 +1457,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:available_schedule_id "
                       }
                     ]
@@ -1387,7 +1472,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:available_schedule_label "
                       }
                     ]
@@ -1414,13 +1499,18 @@
                 "object": {
                   "value": "true",
                   "type": "http://www.w3.org/2001/XMLSchema#boolean"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:access_to_care_reporting": "\"true\"^^http://www.w3.org/2001/XMLSchema#boolean"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:access_to_care_reporting "
               }
             ]
@@ -1438,7 +1528,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:check_holiday_file "
               }
             ]
@@ -1456,7 +1546,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:default_date_of_release "
               }
             ]
@@ -1474,7 +1564,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:enrollee_lockout "
               }
             ]
@@ -1492,7 +1582,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:is_this_an_emergency_room "
               }
             ]
@@ -1510,7 +1600,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:last_queue_date_time "
               }
             ]
@@ -1528,7 +1618,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:remind_patient_of_appointment "
               }
             ]
@@ -1546,7 +1636,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:print_all_lab_results "
               }
             ]
@@ -1564,7 +1654,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:self_referrals_allowed "
               }
             ]
@@ -1582,7 +1672,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:stat_rpt_to_requesting_locn "
               }
             ]
@@ -1600,7 +1690,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:automatic_wait_list_processing "
               }
             ]
@@ -1618,7 +1708,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:wait_list_hcp_mandatory "
               }
             ]
@@ -1636,7 +1726,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:wait_list_activated "
               }
             ]
@@ -1654,7 +1744,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:wait_list_hold_duration "
               }
             ]
@@ -1672,7 +1762,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:maximum_wait_list_days "
               }
             ]
@@ -1690,7 +1780,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:number_patients_on_waitlist "
               }
             ]
@@ -1708,7 +1798,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:lab_report_printer "
               }
             ]
@@ -1726,7 +1816,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:prepare_reminder_notices "
               }
             ]
@@ -1744,7 +1834,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:roster_production "
               }
             ]
@@ -1762,7 +1852,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:schedule_hold_duration "
               }
             ]
@@ -1780,7 +1870,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:appointment_interval "
               }
             ]
@@ -1798,7 +1888,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:work_days "
               }
             ]
@@ -1816,7 +1906,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:clinic_start_time"
               }
             ]
@@ -1834,7 +1924,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:clinic_stop_time "
               }
             ]
@@ -1859,7 +1949,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:appointment_detail_code_id "
                       }
                     ]
@@ -1874,7 +1964,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:appointment_detail_code_label "
                       }
                     ]
@@ -1904,7 +1994,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:valid_appointment_type_id "
                       }
                     ]
@@ -1919,7 +2009,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:valid_appointment_type_label "
                       }
                     ]
@@ -1942,7 +2032,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:appointment_type_id "
                               }
                             ]
@@ -1957,7 +2047,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:appointment_type_label "
                               }
                             ]
@@ -1980,7 +2070,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:appointment_type_duration "
                       }
                     ]
@@ -1997,7 +2087,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:instructions_type "
                       }
                     ]
@@ -2014,7 +2104,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:max_number_of_overbooks_per_slot "
                       }
                     ]
@@ -2031,7 +2121,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:pull_patient_record "
                       }
                     ]
@@ -2048,7 +2138,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:pull_radiology_record "
                       }
                     ]
@@ -2065,7 +2155,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:produce_encounter_forms "
                       }
                     ]
@@ -2082,7 +2172,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:reconf_flag "
                       }
                     ]
@@ -2099,7 +2189,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:referral_required "
                       }
                     ]
@@ -2116,7 +2206,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:send_reminder_notice "
                       }
                     ]
@@ -2133,7 +2223,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:status "
                       }
                     ]
@@ -2150,7 +2240,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:total_number_of_overbooks "
                       }
                     ]
@@ -2167,7 +2257,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:workload_type "
                       }
                     ]
@@ -2190,7 +2280,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:appt_change_authority_id "
                               }
                             ]
@@ -2205,7 +2295,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:appt_change_authority_label "
                               }
                             ]
@@ -2234,7 +2324,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:booking_authority_id "
                               }
                             ]
@@ -2249,7 +2339,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:booking_authority_label "
                               }
                             ]
@@ -2278,7 +2368,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:overbook_authority_id "
                               }
                             ]
@@ -2293,7 +2383,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " hospitalLoc:overbook_authority_label "
                               }
                             ]
@@ -2322,7 +2412,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:cbs_slot_effect "
               }
             ]
@@ -2347,7 +2437,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:cbs_operatory_treatment_room_id "
                       }
                     ]
@@ -2362,7 +2452,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:cbs_operatory_treatment_room_label "
                       }
                     ]
@@ -2392,7 +2482,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:er_default_printer_id "
                       }
                     ]
@@ -2407,7 +2497,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:er_default_printer_label "
                       }
                     ]
@@ -2437,7 +2527,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:cer_provider_default_id "
                       }
                     ]
@@ -2452,7 +2542,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:cer_provider_default_label "
                       }
                     ]
@@ -2482,7 +2572,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:default_treatment_room_id "
                       }
                     ]
@@ -2497,7 +2587,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:default_treatment_room_label "
                       }
                     ]
@@ -2520,7 +2610,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:ner_sf558_default "
               }
             ]
@@ -2538,7 +2628,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:cer_sf558_default "
               }
             ]
@@ -2563,7 +2653,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:provider_id "
                       }
                     ]
@@ -2578,7 +2668,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:provider_label "
                       }
                     ]
@@ -2608,7 +2698,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:created_by_id "
                       }
                     ]
@@ -2623,7 +2713,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:created_by_label "
                       }
                     ]
@@ -2659,7 +2749,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:date_of_creation "
               }
             ]
@@ -2684,7 +2774,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:last_edited_by_id "
                       }
                     ]
@@ -2699,7 +2789,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:last_edited_by_label "
                       }
                     ]
@@ -2735,7 +2825,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:date_of_last_edit "
               }
             ]
@@ -2753,7 +2843,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:access "
               }
             ]
@@ -2771,7 +2861,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:prompt_for_requesting_service  "
               }
             ]
@@ -2789,7 +2879,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:patient_record_pull "
               }
             ]
@@ -2807,7 +2897,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:radiology_record_pull "
               }
             ]
@@ -2825,7 +2915,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:print_radiology_reports "
               }
             ]
@@ -2843,7 +2933,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:radiology_queue_frequency-44 "
               }
             ]
@@ -2868,7 +2958,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:radiology_report_printer_id "
                       }
                     ]
@@ -2883,7 +2973,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:radiology_report_printer_label "
                       }
                     ]
@@ -2906,7 +2996,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:days_to_restrict_output "
               }
             ]
@@ -2937,7 +3027,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:last_queue_date_time "
               }
             ]
@@ -2962,7 +3052,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:key_person_id "
                       }
                     ]
@@ -2977,7 +3067,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " hospitalLoc:key_person_label "
                       }
                     ]
@@ -3003,13 +3093,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#activation_status-44",
                 "object": {
                   "value": "NOT ACTIVATED"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:activation_status": "\"NOT ACTIVATED\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:activation_status "
               }
             ]
@@ -3030,13 +3125,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#dba_inactive_flag-44",
                 "object": {
                   "value": "INACTIVE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:dba_inactive_flag": "\"INACTIVE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:dba_inactive_flag "
               }
             ]
@@ -3071,13 +3171,18 @@
                 "object": {
                   "value": "1990-01-01",
                   "type": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:hospitalLoc:deactivation_date": "\"1990-01-01\"^^http://www.w3.org/2001/XMLSchema#date"
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " hospitalLoc:deactivation_date "
               }
             ]

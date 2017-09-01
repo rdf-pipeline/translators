@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "8250_4-118"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:id": "\"8250_4-118\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdmt:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Fdb_Dam_Master_Table-8250_4"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:chcs_type": "\"chcss:Fdb_Dam_Master_Table-8250_4\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdmt:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "W7NAEF"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:label": "\"W7NAEF\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdmt:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#hic-8250_4",
                 "object": {
                   "value": "W7NAEF"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdmt:hic": "\"W7NAEF\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdmt:hic "
               }
             ]
@@ -130,7 +150,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " fdmt:dacsp_id "
                       }
                     ]
@@ -147,7 +167,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " fdmt:dacsp_type "
                       }
                     ]
@@ -170,7 +190,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " fdmt:allergy_specific_id "
                               }
                             ]
@@ -185,7 +205,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " fdmt:allergy_specific_label "
                               }
                             ]
@@ -212,7 +232,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " fdmt:allergy_group_code_id "
                               }
                             ]
@@ -227,7 +247,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " fdmt:allergy_group_code_label "
                               }
                             ]
@@ -269,13 +289,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8250_41-1_118"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:fdmt:dacsp_id": "\"8250_41-1_118\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " fdmt:dacsp_id "
                               }
                             ]
@@ -296,13 +321,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                                 "object": {
                                   "value": "chcss:Dacsp-8250_41"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:fdmt:dacsp_type": "\"chcss:Dacsp-8250_41\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " fdmt:dacsp_type "
                               }
                             ]
@@ -325,7 +355,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " fdmt:allergy_specific_id "
                                       }
                                     ]
@@ -340,7 +370,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " fdmt:allergy_specific_label "
                                       }
                                     ]
@@ -378,13 +408,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "8250_5-518"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_specific_id": "\"8250_5-518\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " fdmt:allergy_specific_id "
                                               }
                                             ]
@@ -403,13 +438,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "518"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_specific_label": "\"518\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " fdmt:allergy_specific_label "
                                               }
                                             ]
@@ -440,7 +480,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " fdmt:allergy_group_code_id "
                                       }
                                     ]
@@ -455,7 +495,7 @@
                                     "semActs": [
                                       {
                                         "type": "SemAct",
-                                        "name": "http://shex.io/exts/Map/#",
+                                        "name": "http://shex.io/extensions/Map/#",
                                         "code": " fdmt:allergy_group_code_label "
                                       }
                                     ]
@@ -493,13 +533,18 @@
                                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                                 "object": {
                                                   "value": "8253_05-58"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_group_code_id": "\"8253_05-58\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " fdmt:allergy_group_code_id "
                                               }
                                             ]
@@ -518,13 +563,18 @@
                                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                                 "object": {
                                                   "value": "58"
+                                                },
+                                                "extensions": {
+                                                  "http://shex.io/extensions/Map/#": {
+                                                    "urn:local:fdmt:allergy_group_code_label": "\"58\""
+                                                  }
                                                 }
                                               }
                                             ],
                                             "semActs": [
                                               {
                                                 "type": "SemAct",
-                                                "name": "http://shex.io/exts/Map/#",
+                                                "name": "http://shex.io/extensions/Map/#",
                                                 "code": " fdmt:allergy_group_code_label "
                                               }
                                             ]

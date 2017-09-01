@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "61_2-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:id": "\"61_2-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Etiology_Field-61_2"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:chcs_type": "\"chcss:Etiology_Field-61_2\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "ESCHERICHIA COLI"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:label": "\"ESCHERICHIA COLI\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#name-61_2",
                 "object": {
                   "value": "ESCHERICHIA COLI"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:name": "\"ESCHERICHIA COLI\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:name "
               }
             ]
@@ -124,13 +144,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier-61_2",
                 "object": {
                   "value": "BACTERIUM"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:gram_stain_identifier": "\"BACTERIUM\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:gram_stain_identifier "
               }
             ]
@@ -155,7 +180,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:snomed_code_id "
                       }
                     ]
@@ -170,7 +195,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:snomed_code_label "
                       }
                     ]
@@ -208,13 +233,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8188_12-13180"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:etiology:snomed_code_id": "\"8188_12-13180\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " etiology:snomed_code_id "
                               }
                             ]
@@ -233,13 +263,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "112283007"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:etiology:snomed_code_label": "\"112283007\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " etiology:snomed_code_label "
                               }
                             ]
@@ -268,13 +303,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#gram_stain-61_2",
                 "object": {
                   "value": "GRAM NEGATIVE"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:gram_stain": "\"GRAM NEGATIVE\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:gram_stain "
               }
             ]
@@ -299,7 +339,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:default_antibiotic_panel_id "
                       }
                     ]
@@ -314,7 +354,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:default_antibiotic_panel_label "
                       }
                     ]
@@ -352,13 +392,18 @@
                                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                                 "object": {
                                   "value": "8728-1"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:etiology:default_antibiotic_panel_id": "\"8728-1\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " etiology:default_antibiotic_panel_id "
                               }
                             ]
@@ -377,13 +422,18 @@
                                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                                 "object": {
                                   "value": "GRAM NEG"
+                                },
+                                "extensions": {
+                                  "http://shex.io/extensions/Map/#": {
+                                    "urn:local:etiology:default_antibiotic_panel_label": "\"GRAM NEG\""
+                                  }
                                 }
                               }
                             ],
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " etiology:default_antibiotic_panel_label "
                               }
                             ]
@@ -409,7 +459,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:class_grouptribe_family "
               }
             ]
@@ -430,6 +480,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#auto_id-61_2",
                 "object": {
                   "value": "851"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:auto_id": "\"851\""
+                  }
                 }
               },
               {
@@ -438,6 +493,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#auto_id-61_2",
                 "object": {
                   "value": "1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:auto_id": "\"1\""
+                  }
                 }
               },
               {
@@ -446,13 +506,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#auto_id-61_2",
                 "object": {
                   "value": "esccol"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:auto_id": "\"esccol\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:auto_id "
               }
             ]
@@ -473,6 +538,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#synonym-61_2",
                 "object": {
                   "value": "851"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:synonym": "\"851\""
+                  }
                 }
               },
               {
@@ -481,6 +551,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#synonym-61_2",
                 "object": {
                   "value": "01"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:synonym": "\"01\""
+                  }
                 }
               },
               {
@@ -489,6 +564,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#synonym-61_2",
                 "object": {
                   "value": "E.C."
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:synonym": "\"E.C.\""
+                  }
                 }
               },
               {
@@ -497,13 +577,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#synonym-61_2",
                 "object": {
                   "value": "E.COLI"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:etiology:synonym": "\"E.COLI\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:synonym "
               }
             ]
@@ -528,7 +613,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:labwork_element_id "
                       }
                     ]
@@ -543,7 +628,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:labwork_element_label "
                       }
                     ]
@@ -566,7 +651,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " etiology:antibiotic_panel_id "
                               }
                             ]
@@ -581,7 +666,7 @@
                             "semActs": [
                               {
                                 "type": "SemAct",
-                                "name": "http://shex.io/exts/Map/#",
+                                "name": "http://shex.io/extensions/Map/#",
                                 "code": " etiology:antibiotic_panel_label "
                               }
                             ]
@@ -610,7 +695,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:inactive_flag "
               }
             ]
@@ -641,7 +726,7 @@
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " etiology:inactivation_date_time "
               }
             ]
@@ -666,7 +751,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:inactivated_by_id "
                       }
                     ]
@@ -681,7 +766,7 @@
                     "semActs": [
                       {
                         "type": "SemAct",
-                        "name": "http://shex.io/exts/Map/#",
+                        "name": "http://shex.io/extensions/Map/#",
                         "code": " etiology:inactivated_by_label "
                       }
                     ]

@@ -22,13 +22,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#identifier",
                 "object": {
                   "value": "8253_045-1"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:id": "\"8253_045-1\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdsl:id "
               }
             ]
@@ -49,13 +54,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#chcs_type",
                 "object": {
                   "value": "chcss:Fdb_Ddi_Severity_Level-8253_045"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:chcs_type": "\"chcss:Fdb_Ddi_Severity_Level-8253_045\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdsl:chcs_type "
               }
             ]
@@ -74,13 +84,18 @@
                 "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
                 "object": {
                   "value": "Contraindicated Drug Combination"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:label": "\"Contraindicated Drug Combination\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdsl:label "
               }
             ]
@@ -99,13 +114,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#dimslbtxt-8253_045",
                 "object": {
                   "value": "Contraindicated Drug Combination"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimslbtxt": "\"Contraindicated Drug Combination\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdsl:dimslbtxt "
               }
             ]
@@ -126,6 +146,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#dimsltext-8253_045",
                 "object": {
                   "value": "This drug combination is"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimsltext": "\"This drug combination is\""
+                  }
                 }
               },
               {
@@ -134,6 +159,11 @@
                 "predicate": "http://hokukahu.com/schema/chcss#dimsltext-8253_045",
                 "object": {
                   "value": "contraindicated and generally should not be dispensed or administered"
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimsltext": "\"contraindicated and generally should not be dispensed or administered\""
+                  }
                 }
               },
               {
@@ -142,13 +172,18 @@
                 "predicate": "http://hokukahu.com/schema/chcss#dimsltext-8253_045",
                 "object": {
                   "value": "to the same patient."
+                },
+                "extensions": {
+                  "http://shex.io/extensions/Map/#": {
+                    "urn:local:fdsl:dimsltext": "\"to the same patient.\""
+                  }
                 }
               }
             ],
             "semActs": [
               {
                 "type": "SemAct",
-                "name": "http://shex.io/exts/Map/#",
+                "name": "http://shex.io/extensions/Map/#",
                 "code": " fdsl:dimsltext "
               }
             ]
