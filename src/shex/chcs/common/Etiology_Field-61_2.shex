@@ -1,5 +1,4 @@
-# This schema is used to describe the underlying cause of a disease process 
-# and an individual's method of acquiring the disease.
+# This schema is used to describe the underlying cause of a disease process and an individual's method of acquiring the disease.
 #
 # CHCS schema documentation:
 #    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Etiology_Field-61_2.htm

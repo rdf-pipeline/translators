@@ -1,5 +1,5 @@
 # This schema contains the standardized Lab test names supplied by the Government and is used 
-# to standardized the CHCS lab tests
+# to standardize the CHCS lab tests
 #
 # CHCS schema documentation:
 #    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Dod_Standard_Lab_Test-8188_99.htm
