@@ -1,5 +1,4 @@
-# This schema contains codes that describe the casualty prognosis of a
-# patient. 
+# This schema contains codes that describe the casualty prognosis of a patient. 
 #
 # CHCS schema documentation:
 #    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Casualty_Prognosis-8106.htm
