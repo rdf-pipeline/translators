@@ -1,4 +1,4 @@
-﻿PREFIX fhir:<http://hl7.org/fhir/> 
+PREFIX fhir:<http://hl7.org/fhir/> 
 PREFIX fhirvs:<http://hl7.org/fhir/ValueSet/>
 PREFIX Map:<http://shex.io/extensions/Map/#>
 PREFIX patient:<urn:local:patient:>
@@ -17,7 +17,7 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
       a [fhir:Identifier]?;
       fhir:Element.id      { fhir:value xsd:string  %Map:{ patient:id %} };
       fhir:value           { fhir:value ["Patient"] };
-    }*;
+    };
 
     # fhir:Resource.meta @<Meta>?;              # Metadata about the resource
     # fhir:Resource.implicitRules @<uri>?;      # A set of rules under which this
@@ -33,7 +33,7 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
       fhir:url                        { fhir:value ["http://hokukahu.com/chcs/patient/fmp-2"] };
       fhir:valueId                    { fhir:value xsd:string %Map: { patient:fmp_id %} };
       fhir:valueString                { fhir:value xsd:string %Map: { patient:fmp_label %} };
-    }*;
+    };
 
     # fhir:modifierExtension @<Extension>*;     # Extensions that cannot be ignored
 
@@ -41,23 +41,23 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
     fhir:Patient.identifier  {              
       a [fhir:Identifier]?;
       fhir:Identifier.system    { fhir:value ["http://hokukahu.com/chcs/patient"] };
-      fhir:Identifier.value     { fhir:value xsd:string  %Map:{ patient:id %} };
-    }*;
+#      fhir:Identifier.value     { fhir:value xsd:string  %Map:{ patient:id %} };
+    };
 
     # fhir:Patient.active @<boolean>?;          # Whether this patient's record is
                                                 # in active use
-    fhir:Patient.active  { fhir:value    xsd:boolean?   %Map: { patient:active %} };
+#    fhir:Patient.active  { fhir:value    xsd:boolean?   %Map: { patient:active %} };
 
     # fhir:Patient.name @<HumanName>*;          # A name associated with the patient
     fhir:Patient.name { 
        fhir:HumanName.use    { fhir:value ["usual"] };
        fhir:HumanName.text   { fhir:value xsd:string? %Map:{ patient:patient_label %} };
-    }*; 
+    }; 
 
     # fhir:Patient.telecom @<ContactPoint>*;    # A contact detail for the individual
     fhir:Patient.telecom { 
       fhir:ContactPoint.value { fhir:value xsd:string? %Map:{ patient:phone %} };
-    }*;
+    };
 
     # fhir:Patient.gender @<code> AND
         # {fhir:value @fhirvs:administrative-gender}?;  # male | female | other | unknown
@@ -76,10 +76,10 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
     fhir:Patient.address  {
        fhir:Address.line        { fhir:value xsd:string? %Map:{ patient:street_address %} };
        fhir:Address.city        { fhir:value xsd:string? %Map:{ patient:city %} };
-       fhir:Address.state       { fhir:value xsd:string? %Map:{ patient:state %} };
+#       fhir:Address.state       { fhir:value xsd:string? %Map:{ patient:state %} };
        fhir:Address.postalCode  { fhir:value xsd:string? %Map:{ patient:zipcode %} };
        fhir:Address.type        { fhir:value ["postal"] };
-    }*;
+    };
 
     # fhir:Patient.maritalStatus @<CodeableConcept>?;  # Marital (civil) status of a patient
     # (                                                # Whether patient is part of a
@@ -113,8 +113,8 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
       fhir:Patient.contact.telecom {
         fhir:ContactPoint.system { fhir:value ["phone"] };
         fhir:ContactPoint.value  { fhir:value xsd:string? %Map:{ patient:ephone %} };
-      }*;
-    }*;
+      };
+    };
 
     # fhir:Patient.animal @<Patient.animal>?;  # This patient is known to be an
                                                # animal (non-human)

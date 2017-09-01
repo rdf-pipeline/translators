@@ -1,0 +1,68 @@
+<urn:local:patient> a <http://hl7.org/fhir/Patient>;
+    <http://hl7.org/fhir/nodeRole> <http://hl7.org/fhir/treeRoot>;
+    <http://hl7.org/fhir/Resource.id> _:b0;
+    <http://hl7.org/fhir/extension> _:b3;
+    <http://hl7.org/fhir/Patient.identifier> _:b7;
+    <http://hl7.org/fhir/Patient.name> _:b9;
+    <http://hl7.org/fhir/Patient.telecom> _:b12;
+    <http://hl7.org/fhir/Patient.birthDate> "1990-01-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <http://hl7.org/fhir/Patient.address> _:b14;
+    <http://hl7.org/fhir/Patient.contact> _:b19.
+_:b0 a <http://hl7.org/fhir/Identifier>;
+    <http://hl7.org/fhir/Element.id> _:b1;
+    <http://hl7.org/fhir/value> _:b2.
+_:b1 <http://hl7.org/fhir/value> "2-000007".
+_:b2 <http://hl7.org/fhir/value> "Patient".
+_:b3 <http://hl7.org/fhir/url> _:b4;
+    <http://hl7.org/fhir/valueId> _:b5;
+    <http://hl7.org/fhir/valueString> _:b6.
+_:b4 <http://hl7.org/fhir/value> "http://hokukahu.com/chcs/patient/fmp-2".
+_:b5 <http://hl7.org/fhir/value> "8110-20".
+_:b6 <http://hl7.org/fhir/value> "20".
+_:b7 a <http://hl7.org/fhir/Identifier>;
+    <http://hl7.org/fhir/Identifier.system> _:b8.
+_:b8 <http://hl7.org/fhir/value> "http://hokukahu.com/chcs/patient".
+_:b9 <http://hl7.org/fhir/HumanName.use> _:b10;
+    <http://hl7.org/fhir/HumanName.text> _:b11.
+_:b10 <http://hl7.org/fhir/value> "usual".
+_:b11 <http://hl7.org/fhir/value> "BUNNY,BUGS".
+_:b12 <http://hl7.org/fhir/ContactPoint.value> _:b13.
+_:b13 <http://hl7.org/fhir/value> "555 555 5555".
+_:b14 <http://hl7.org/fhir/Address.line> _:b15;
+    <http://hl7.org/fhir/Address.city> _:b16;
+    <http://hl7.org/fhir/Address.postalCode> _:b17;
+    <http://hl7.org/fhir/Address.type> _:b18.
+_:b15 <http://hl7.org/fhir/value> "100 MAIN ST".
+_:b16 <http://hl7.org/fhir/value> "ANYTOWN".
+_:b17 <http://hl7.org/fhir/value> "60040".
+_:b18 <http://hl7.org/fhir/value> "postal".
+_:b19 <http://hl7.org/fhir/Patient.contact.relationship> _:b20;
+    <http://hl7.org/fhir/Patient.contact.name> _:b26;
+    <http://hl7.org/fhir/Patient.contact.address> _:b29;
+    <http://hl7.org/fhir/Patient.contact.telecom> _:b34.
+_:b20 <http://hl7.org/fhir/Element.id> _:b21;
+    <http://hl7.org/fhir/CodeableConcept.coding> _:b22.
+_:b21 <http://hl7.org/fhir/value> "8140-20".
+_:b22 <http://hl7.org/fhir/Coding.system> _:b23;
+    <http://hl7.org/fhir/Coding.version> _:b24;
+    <http://hl7.org/fhir/Coding.display> _:b25.
+_:b23 <http://hl7.org/fhir/value> "postal".
+_:b24 <http://hl7.org/fhir/value> "0.0.1".
+_:b25 <http://hl7.org/fhir/value> "OTHER RELATIONSHIP".
+_:b26 <http://hl7.org/fhir/HumanName.use> _:b27;
+    <http://hl7.org/fhir/HumanName.text> _:b28.
+_:b27 <http://hl7.org/fhir/value> "usual".
+_:b28 <http://hl7.org/fhir/value> "RUNNAH, ROAD".
+_:b29 <http://hl7.org/fhir/Address.line> _:b30;
+    <http://hl7.org/fhir/Address.city> _:b31;
+    <http://hl7.org/fhir/Address.postalCode> _:b32;
+    <http://hl7.org/fhir/Address.type> _:b33.
+_:b30 <http://hl7.org/fhir/value> "7000 InternalTest Boulevard".
+_:b31 <http://hl7.org/fhir/value> "ALBUQUERQUE".
+_:b32 <http://hl7.org/fhir/value> "55555".
+_:b33 <http://hl7.org/fhir/value> "postal".
+_:b34 <http://hl7.org/fhir/ContactPoint.value> _:b36;
+    <http://hl7.org/fhir/ContactPoint.system> _:b35.
+_:b35 <http://hl7.org/fhir/value> "phone".
+_:b36 <http://hl7.org/fhir/value> "555 555 5558".
+
