@@ -21,7 +21,7 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
       a [fhir:Identifier]?;
       fhir:Element.id      { fhir:value xsd:string  %Map:{ provider:id %} };
       fhir:value           { fhir:value ["Practitioner"] };
-    }*;
+    };
 
     # fhir:Resource.meta @<Meta>?;            # Metadata about the resource
     # fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
@@ -40,7 +40,7 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
       fhir:url                        { fhir:value ["http://hokukahu.com/chcs/provider/office_state_id"] };
       fhir:valueId                    { fhir:value xsd:string %Map: { provider:office_state_id %} };
       fhir:valueString                { fhir:value xsd:string %Map: { provider:office_state_label %} };
-    }*;
+    }?;
 
     fhir:extension {
       fhir:url                        { fhir:value ["http://hokukahu.com/chcs/provider/class"] };
@@ -51,22 +51,22 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
     fhir:extension {
       fhir:url                        { fhir:value ["http://hokukahu.com/chcs/provider/ssn"] };
       fhir:valueString                { fhir:value xsd:string?  %Map: { provider:ssn_id %} };
-    }*;
+    }?;
 
     fhir:extension {
       fhir:url                        { fhir:value ["http://hokukahu.com/chcs/provider/require_supervising_provider"] };
       fhir:valueBoolean               { fhir:value xsd:boolean  %Map: { provider:require_supervising_provider %} };
-    }*;
+    };
 
     fhir:extension {
       fhir:url                        { fhir:value ["http://hokukahu.com/chcs/provider/cmac_modification_date"] };
       fhir:valueString                { fhir:value xsd:date or xsd:dateTime or xsd:datetime  %Map: { provider:cmac_modification_date %} };
-    }*;
+    }?;
 
     fhir:extension {
       fhir:url                        { fhir:value ["http://hokukahu.com/chcs/provider/datetime_entered"] };
       fhir:valueString                { fhir:value xsd:dateTime or xsd:datetime or xsd:date  %Map: { provider:datetime_entered %} };
-    }*;
+    }?;
 
 
     # fhir:DomainResource.modifierExtension @<Extension>*;  # Extensions that cannot be ignored
@@ -77,7 +77,7 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
       a [fhir:Identifier]?;
       fhir:Identifier.system      { fhir:value ["http://hokukahu.com/chcs/provider"] };
       fhir:Identifier.value       { fhir:value xsd:string  %Map:{ provider:provider_id %} };
-    }*;
+    };
 
     # fhir:Practitioner.active @<boolean>?;   # Whether this practitioner's record 
                                             # is in active use 
@@ -86,14 +86,14 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
     fhir:Practitioner.name {
        fhir:HumanName.use    { fhir:value ["usual"] };
        fhir:HumanName.text   { fhir:value xsd:string? %Map:{ provider:label %} };
-    }*;
+    };
 
     # fhir:Practitioner.telecom @<ContactPoint>*;  # A contact detail for the 
                                                    # practitioner (that apply to all 
                                                    # roles) 
     fhir:Practitioner.telecom {
       fhir:ContactPoint.value { fhir:value xsd:string? %Map:{ provider:phone %} };
-    }*;
+    }?;
 
     # fhir:Practitioner.address @<Address>*;  # Address(es) of the practitioner 
                                               # that are not role specific 
@@ -118,7 +118,7 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
           fhir:valueId                    { fhir:value xsd:string %Map: { provider:location_id %} };
           fhir:valueString                { fhir:value xsd:string %Map: { provider:location_label %} };
        };
-    }*;
+    }?;
 
     # fhir:Practitioner.gender @<code> AND
     	# {fhir:value @fhirvs:administrative-gender}?;  # male | female | other | unknown
