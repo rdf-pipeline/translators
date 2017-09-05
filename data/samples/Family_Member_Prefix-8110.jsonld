@@ -1,5 +1,5 @@
 {
-  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
   "@graph": [
     {
       "_id": "8110-1",

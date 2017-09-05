@@ -1,11 +1,11 @@
 {
-    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
 
     "@graph": [
 
         {
             "_id": "100417-4559064",
-            "type": "cmumpss:Kg_Patient_Diagnosis-100417",
+            "type": "chcss:Kg_Patient_Diagnosis-100417",
             "label": "27642;OTHER EXAMINATION DEFINED POPULATION",
             "problem-100417": "27642;OTHER EXAMINATION DEFINED POPULATION",
             "patient-100417": {

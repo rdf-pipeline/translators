@@ -1,10 +1,10 @@
 {
-    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
 
     "@graph": [
         {
             "_id": "52-40863",
-            "type": "cmumpss:Prescription-52",
+            "type": "chcss:Prescription-52",
             "label": "H46358",
             "rx_-52": "H46358",
             "patient-52": {
@@ -74,7 +74,7 @@
             "activity_log-52": [
                 {
                     "id": "52_02-1_40863",
-                    "type": "cmumpss:Activity_Log-52_02",
+                    "type": "chcss:Activity_Log-52_02",
                     "activity_log-52_02": {
                         "value": "1990-01-01T00:00:00",
                         "type": "xsd:dateTime"
@@ -98,7 +98,7 @@
             "fill_dates-52": [
                 {
                     "id": "52_01-1_40863",
-                    "type": "cmumpss:Fill_Dates-52_01",
+                    "type": "chcss:Fill_Dates-52_01",
                     "fill_dates-52_01": {
                         "value": "1990-01-01T00:00:00",
                         "type": "xsd:dateTime"
