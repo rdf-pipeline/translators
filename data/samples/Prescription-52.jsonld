@@ -1,0 +1,130 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+
+    "@graph": [
+        {
+            "_id": "52-40863",
+            "type": "cmumpss:Prescription-52",
+            "label": "H46358",
+            "rx_-52": "H46358",
+            "patient-52": {
+                "id": "2-000007",
+                "label": "BUNNY,BUGS"
+            },
+            "provider-52": {
+                "id": "6-111111",
+                "label": "DUCK,DONALD"
+            },
+            "drug-52": {
+                "id": "50-260",
+                "label": "PAINKILLER 400MG TAB",
+                "sameAs": "nddf:cdc008348",
+                "sameAsLabel": "PAINKILLER 400 MG TABLET"
+            },
+            "qty-52": "120",
+            "days_supply-52": "120",
+            "refills-52": "0",
+            "logged_by-52": {
+                "id": "3-2",
+                "label": "COYOTE, WILE E"
+            },
+            "login_date-52": {
+                "value": "1990-01-01T00:00:00Z",
+                "type": "xsd:dateTime"
+            },
+            "mtf_division-52": {
+                "id": "40_8-1",
+                "label": "ANYTOWN, USA"
+            },
+            "status-52": "DISCONTINUED",
+            "refills_remaining-52": "0",
+            "child_resistant_cont-52": true,
+            "fill_expiration-52": {
+                "value": "1990-01-01",
+                "type": "xsd:date"
+            },
+            "order_date_time-52": {
+                "value": "1990-01-01T00:00:00",
+                "type": "xsd:dateTime"
+            },
+            "order_entry_number-52": "941103-00522",
+            "order_pointer-52": {
+                "id": "101-227995",
+                "label": "941103-00522"
+            },
+            "date_time_received_from_oe-52": {
+                "value": "1990-01-01T00:00:00",
+                "type": "xsd:dateTime"
+            },
+            "outpatient_site-52": {
+                "id": "59_2-1",
+                "label": "MAIN PHARMACY"
+            },
+            "expiration_date-52": {
+                "value": "1990-01-01",
+                "type": "xsd:date"
+            },
+            "meprs_code-52": {
+                "id": "8119-331",
+                "label": "AAAA"
+            },
+            "oerxbatch-52": "227995",
+            "comments-52": "NONE",
+            "sig-52": "T1 TAB Q1D #120 RF0",
+            "activity_log-52": [
+                {
+                    "id": "52_02-1_40863",
+                    "type": "cmumpss:Activity_Log-52_02",
+                    "activity_log-52_02": {
+                        "value": "1990-01-01T00:00:00",
+                        "type": "xsd:dateTime"
+                    },
+                    "user_comments-52_02": "CANCEL PMT ORDER",
+                    "logged_by-52_02": {
+                        "id": "3-2",
+                        "label": "COYOTE, WILE E"
+                    },
+                    "pharmacy_site-52_02": {
+                        "id": "59_2-1",
+                        "label": "MAIN PHARMACY"
+                    },
+                    "associated_fill_number-52_02": "1",
+                    "reason_code-52_02": {
+                        "id": "52_3-30",
+                        "label": "DISCONTINUE"
+                    }
+                }
+            ],
+            "fill_dates-52": [
+                {
+                    "id": "52_01-1_40863",
+                    "type": "cmumpss:Fill_Dates-52_01",
+                    "fill_dates-52_01": {
+                        "value": "1990-01-01T00:00:00",
+                        "type": "xsd:dateTime"
+                    },
+                    "fill_number-52_01": "1",
+                    "logged_by-52_01": {
+                        "id": "3-2",
+                        "label": "COYOTE, WILE E"
+                    },
+                    "qty-52_01": "120",
+                    "outpatient_site-52_01": {
+                        "id": "59_2-1",
+                        "label": "MAIN PHARMACY"
+                    },
+                    "mtf_division-52_01": {
+                        "id": "40_8-1",
+                        "label": "ANYTOWN, NY"
+                    },
+                    "meprs_code-52_01": {
+                        "id": "8119-331",
+                        "label": "AAAA"
+                    },
+                    "action-52_01": "ORIGINAL FILL",
+                    "suspense-52_01": "SUSPENSE"
+                }
+            ]
+        }
+    ]
+}
