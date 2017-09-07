@@ -2,7 +2,7 @@
 # and ingredients for the user to select
 # 
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Allergies_Selections-8254_01.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Allergies_Selections-8254_01.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/substances/Map/#>

@@ -1,7 +1,7 @@
 # This schema contains detail codes that are used for Appt Type Standardization
 # 
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Appointment_Detail_Codes-44_7.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Appointment_Detail_Codes-44_7.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/appointments/Map/#>

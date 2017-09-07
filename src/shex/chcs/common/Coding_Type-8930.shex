@@ -1,7 +1,7 @@
 # This schedma contains the medical terminology code soruce types
 #
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Coding_Type-8930.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Coding_Type-8930.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/extensions/Map/#>

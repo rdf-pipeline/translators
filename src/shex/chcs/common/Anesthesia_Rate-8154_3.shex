@@ -2,7 +2,7 @@
 # with annual updates provided; it contains a flat rate for each Anesthesia CPT code.
 # 
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Anesthesia_Rate-8154_3.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Anesthesia_Rate-8154_3.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/anesthesias/Map/#>

@@ -1,7 +1,7 @@
 # This schema contains the various types of warnings which the system currently handles for order entry.  
 #
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Order_Warnings-102_1.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Order_Warnings-102_1.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/orderWarningss/Map/#>
