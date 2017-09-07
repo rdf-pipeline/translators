@@ -112,6 +112,7 @@ validateIt "Origin_Of_Order-111"                          "http://hokukahu.com/s
 
 validateIt "Patient-2"                                    "http://hokukahu.com/systems/chcs-1/2-000007"
 validateIt "Pharmacy_Action-59_6"                         "http://hokukahu.com/systems/chcs-1/59_6-1"
+validateIt "Prescription-52"                              "http://hokukahu.com/systems/chcs-1/52-40863"
 validateIt "Procedure"                                    "entity:Procedure-1074046"
 validateIt "Provider-6"                                   "http://hokukahu.com/systems/chcs-1/6-26"
 

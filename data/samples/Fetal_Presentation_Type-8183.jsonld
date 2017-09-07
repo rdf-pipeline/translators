@@ -1,0 +1,110 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8183-1",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "UNDETERMINED, LIVEBIRTH",
+      "name-8183": "UNDETERMINED, LIVEBIRTH",
+      "code-8183": "1A"
+    },
+    {
+      "_id": "8183-2",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT OCCIPITOANTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT OCCIPITOANTERIOR, LIVEBIRTH",
+      "code-8183": "1B"
+    },
+    {
+      "_id": "8183-3",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT OCCIPITOTRANSVERSE, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT OCCIPITOTRANSVERSE, LIVEBIRTH",
+      "code-8183": "1C"
+    },
+    {
+      "_id": "8183-4",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT OCCIPITOPOSTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT OCCIPITOPOSTERIOR, LIVEBIRTH",
+      "code-8183": "1D"
+    },
+    {
+      "_id": "8183-5",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "DOUBLE FOOTLING, LIVEBIRTH",
+      "name-8183": "DOUBLE FOOTLING, LIVEBIRTH",
+      "code-8183": "1E"
+    },
+    {
+      "_id": "8183-6",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "FOOTLING, LIVEBIRTH",
+      "name-8183": "FOOTLING, LIVEBIRTH",
+      "code-8183": "1F"
+    },
+    {
+      "_id": "8183-7",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT SACROANTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT SACROANTERIOR, LIVEBIRTH",
+      "code-8183": "1H"
+    },
+    {
+      "_id": "8183-8",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT SACROPOSTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT SACROPOSTERIOR, LIVEBIRTH",
+      "code-8183": "1J"
+    },
+    {
+      "_id": "8183-9",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "FRANK (OR SINGLE), LIVEBIRTH",
+      "name-8183": "FRANK (OR SINGLE), LIVEBIRTH",
+      "code-8183": "1K"
+    },
+    {
+      "_id": "8183-10",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "COMPLETE (OR DOUBLE), LIVEBIRTH",
+      "name-8183": "COMPLETE (OR DOUBLE), LIVEBIRTH",
+      "code-8183": "1L"
+    },
+    {
+      "_id": "8183-11",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "INCOMPLETE, LIVEBIRTH",
+      "name-8183": "INCOMPLETE, LIVEBIRTH",
+      "code-8183": "1M"
+    },
+    {
+      "_id": "8183-12",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT FRONTOANTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT FRONTOANTERIOR, LIVEBIRTH",
+      "code-8183": "1N"
+    },
+    {
+      "_id": "8183-13",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT FRONTOPOSTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT FRONTOPOSTERIOR, LIVEBIRTH",
+      "code-8183": "1P"
+    },
+    {
+      "_id": "8183-14",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT MENTOANTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT MENTOANTERIOR, LIVEBIRTH",
+      "code-8183": "1Q"
+    },
+    {
+      "_id": "8183-15",
+      "type": "chcss:Fetal_Presentation_Type-8183",
+      "label": "LEFT_RIGHT MENTOPOSTERIOR, LIVEBIRTH",
+      "name-8183": "LEFT/RIGHT MENTOPOSTERIOR, LIVEBIRTH",
+      "code-8183": "1R"
+    }
+  ]
+}
