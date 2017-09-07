@@ -100,6 +100,7 @@ validateIt "Fdb_Dam_Master_Table-8250_4"                  "http://hokukahu.com/s
 validateIt "Fdb_Ddi_Severity_Level-8253_045"              "http://hokukahu.com/systems/chcs-1/8253_045-1"
 validateIt "Fdb_Dim_32_Clinical_Effects-8253_047"         "http://hokukahu.com/systems/chcs-1/8253_047-1"
 validateIt "Fdb_Dim_32_Reference_Cat_Desc-8253_046"       "http://hokukahu.com/systems/chcs-1/8253_046-1"
+validateIt "Fetal_Presentation_Type-8183"                 "http://hokukahu.com/systems/chcs-1/8183-1"
 
 validateIt "Geographic_Location-5"                        "http://hokukahu.com/systems/chcs-1/5-1"
 validateIt "Hospital_Location-44"                         "http://hokukahu.com/systems/chcs-1/44-.5"

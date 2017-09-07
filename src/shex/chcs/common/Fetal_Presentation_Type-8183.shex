@@ -1,0 +1,29 @@
+# This schema contains contains a table (code and description) of fetal presentation types that 
+# are categorized by "LIVEBIRTH" and "FETAL DEATH". When a delivery occurs, this data is recorded 
+# for the purpose of coding the manner in which a fetus(es) was delivered.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Fetal_Presentation_Type-8183.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX fetalPresentationType: <urn:local:fetalPresentationType:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Fetal_Presentation_Type-8183>
+
+<http://hokukahu.com/chcs/Fetal_Presentation_Type-8183> {
+    chcss:identifier                 xsd:string     %Map:{ fetalPresentationType:id %};
+    chcss:chcs_type                  xsd:string?    %Map:{ fetalPresentationType:chcs_type %};
+    rdfs:label                       xsd:string     %Map:{ fetalPresentationType:label %};
+
+    chcss:name-8183                  xsd:string     %Map:{ fetalPresentationType:name %};
+    chcss:code-8183                  xsd:string     %Map:{ fetalPresentationType:code %};
+
+    chcss:dba_inactive_flag-5_8002   xsd:string?      %Map:{ fetalPresentationType:dba_inactive_flag %};
+    chcss:deactivation_date-5_8002   xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime?    %Map:{ fetalPresentationType:deactivation_date %};
+}
