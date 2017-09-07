@@ -1,0 +1,280 @@
+# This schema contains prescription demographic data and pointers to medical data about the prescription
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/cmumps-nc/Prescription-52.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX prescription:<urn:local:prescription:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Prescription-52>
+
+<http://hokukahu.com/chcs/Prescription-52> {
+    chcss:identifier          xsd:string      %Map:{ prescription:id %};
+    chcss:chcs_type           xsd:string?     %Map:{ prescription:type %};
+    rdfs:label                xsd:string      %Map:{ prescription:prescription_label %};
+
+    chcss:rx_-52              xsd:string      %Map:{ prescription:rx_number %};
+
+    chcss:patient-52  {
+       chcss:identifier    xsd:string    %Map:{ prescription:patient_id %};
+       rdfs:label          xsd:string    %Map:{ prescription:patient_label %};
+    };
+
+    chcss:provider-52  {
+       chcss:identifier    xsd:string    %Map:{ prescription:provider_id %};
+       rdfs:label          xsd:string    %Map:{ prescription:provider_label %};
+    };
+
+    chcss:drug-52  {
+       chcss:identifier    xsd:string    %Map:{ prescription:drug_id %};
+       rdfs:label          xsd:string?   %Map:{ prescription:drug_label %};
+       chcss:sameAs        xsd:string?   %Map:{ prescription:drug_sameAs %};
+       chcss:sameAsLabel   xsd:string?   %Map:{ prescription:drug_sameAsLabel %};
+    };
+
+    chcss:qty-52                    xsd:string    %Map:{ prescription:quantity %};
+    chcss:days_supply-52            xsd:string?   %Map:{ prescription:days_supply %};
+    chcss:label_width-52            xsd:string?   %Map:{ prescription:label_width %};
+    chcss:refills-52                xsd:string    %Map:{ prescription:refills %};
+    chcss:refill_control-52         xsd:string?   %Map:{ prescription:refill_control %};
+    chcss:refills_remaining-52      xsd:string?   %Map:{ prescription:refills_remaining %};
+    chcss:child_resistant_cont-52   xsd:boolean?  %Map:{ prescription:child_resistant_container %};
+    chcss:order_entry_number-52     xsd:string    %Map:{ prescription:order_entry_number %};
+    chcss:order_pointer-52  {
+       chcss:identifier     xsd:string    %Map:{ prescription:order_pointer_id %};
+       rdfs:label           xsd:string    %Map:{ prescription:order_pointer_label %};
+    }?;
+
+    chcss:pdts_prescription_number-52    xsd:string?   %Map:{ prescription:pdts_prescription_number %};
+    chcss:pdts_metric_quantity-52        xsd:string?   %Map:{ prescription:pdts_metric_quantity %};
+
+    chcss:fill_expiration-52             xsd:date or 
+                                         xsd:dateTime or 
+                                         xsd:datetime? %Map:{ prescription:fill_expiration %};
+    chcss:last_expiration-52             xsd:date or 
+                                         xsd:dateTime or 
+                                         xsd:datetime? %Map:{ prescription:last_expiration %};
+    chcss:order_date_time-52             xsd:date or 
+                                         xsd:dateTime or 
+                                         xsd:datetime? %Map:{ prescription:order_date_time %};
+    chcss:date_time_received-52          xsd:date or 
+                                         xsd:dateTime or 
+                                         xsd:datetime? %Map:{ prescription:date_time_received %};
+    chcss:date_time_received_from_oe-52  xsd:date or 
+                                         xsd:dateTime or 
+                                         xsd:datetime? %Map:{ prescription:date_time_received_from_oe %};
+    chcss:expiration_date-52             xsd:date or 
+                                         xsd:dateTime or 
+                                         xsd:datetime? %Map:{ prescription:expiration_date %};
+
+    chcss:logged_by-52  {
+        chcss:identifier    xsd:string    %Map:{ prescription:logged_by_id %};
+        rdfs:label          xsd:string    %Map:{ prescription:logged_by_label %};
+    }?;
+
+    chcss:login_date-52               xsd:date or 
+                                      xsd:dateTime or 
+                                      xsd:datetime? %Map:{ prescription:login_date %};
+
+    chcss:last_label_print_date-52    xsd:date or 
+                                      xsd:dateTime or 
+                                      xsd:datetime? %Map:{ prescription:last_label_print_date %};
+
+    chcss:mtf_division-52  {
+       chcss:identifier        xsd:string    %Map:{ prescription:mtf_division_id %};
+       rdfs:label              xsd:string    %Map:{ prescription:mtf_division_label %};
+    }?;
+
+    chcss:outpatient_site-52  {
+       chcss:identifier        xsd:string    %Map:{ prescription:outpatient_site_id %};
+       rdfs:label              xsd:string    %Map:{ prescription:outpatient_site_label %};
+    }?;
+
+    chcss:last_dispensing_pharmacy-52 {
+       chcss:identifier        xsd:string    %Map:{ prescription:last_dispensing_pharmacy_id %};
+       rdfs:label              xsd:string    %Map:{ prescription:last_dispensing_pharmacy_label %};
+    }?;
+
+    chcss:meprs_code-52 {
+       chcss:identifier        xsd:string    %Map:{ prescription:meprs_code_id %};
+       rdfs:label              xsd:string    %Map:{ prescription:meprs_code_label %};
+    }?;
+
+    chcss:parent_prescription-52 {
+       chcss:identifier        xsd:string    %Map:{ prescription:parent_prescription_id %};
+       rdfs:label              xsd:string    %Map:{ prescription:parent_prescription_label %};
+    }?;
+
+    chcss:baker_cell-52              xsd:string?   %Map:{ prescription:baker_cell %};
+    chcss:baker_drug_edit-52         xsd:string?   %Map:{ prescription:baker_drug_edit %};
+    chcss:baker_quantity_edit-52     xsd:string?   %Map:{ prescription:baker_quantity_edit %};
+
+    chcss:activity_log_comments-52   xsd:string?   %Map:{ prescription:activity_log_comments %};
+    chcss:comments-52                xsd:string?   %Map:{ prescription:comments %};
+
+    chcss:edited-52                  xsd:string?   %Map:{ prescription:edited %};
+    chcss:notification_type-52       xsd:string?   %Map:{ prescription:notification_type %};
+    chcss:oerxbatch-52               xsd:string?   %Map:{ prescription:oerxbatch %};
+    chcss:patient_batch_name-52      xsd:string?   %Map:{ prescription:patient_batch_name %};
+    chcss:pharmacy_originated-52     xsd:boolean?  %Map:{ prescription:pharmacy_originated %};
+
+    chcss:status-52                  xsd:string?   %Map:{ prescription:status %};
+
+    chcss:expanded_sig-52            xsd:string?   %Map:{ prescription:expanded_sig %};
+    chcss:sig_overflow-52            xsd:string?   %Map:{ prescription:sig_overflow %};
+    chcss:sig-52                     xsd:string?   %Map:{ prescription:sig %};
+
+    chcss:activity_log-52 {
+        chcss:identifier                     xsd:string    %Map:{ prescription:activity_log_id %};
+        chcss:chcs_type                      xsd:string?   %Map:{ prescription:activity_log_type %};
+
+        chcss:associated_fill_number-52_02   xsd:string?   %Map:{ prescription:associated_fill_number %};
+        chcss:remarks-52_02                  xsd:string?   %Map:{ prescription:activity_log_remarks %};
+        chcss:user_comments-52_02            xsd:string?   %Map:{ prescription:activity_log_user_comments %};
+
+        chcss:activity_log-52_02             xsd:date or 
+                                             xsd:dateTime or 
+                                             xsd:datetime? %Map:{ prescription:activity_log_date %};
+        chcss:authorizing_provider-52 {
+            chcss:identifier                 xsd:string    %Map:{ prescription:activity_log_authorizing_provider_id %};
+            rdfs:label                       xsd:string    %Map:{ prescription:activity_log_authorizing_provider_label %};
+        }?;
+        chcss:logged_by-52 {
+            chcss:identifier                 xsd:string    %Map:{ prescription:activity_log_logged_by_id %};
+            rdfs:label                       xsd:string    %Map:{ prescription:activity_log_logged_by_label %};
+        }?;
+
+        chcss:pharmacy_site-52_02 {
+           chcss:identifier                  xsd:string    %Map:{ prescription:pharmacy_site_id %};
+           rdfs:label                        xsd:string    %Map:{ prescription:pharmacy_site_label %};
+        }?;
+
+        chcss:reason_code-52_02 {
+           chcss:identifier                  xsd:string    %Map:{ prescription:reason_code_id %};
+           rdfs:label                        xsd:string    %Map:{ prescription:reason_code_label %};
+        }?;
+    }*;
+
+    chcss:fill_dates-52 {
+        chcss:identifier                          xsd:string      %Map:{ prescription:fill_dates_id %};
+        chcss:chcs_type                           xsd:string?     %Map:{ prescription:fill_dates_type %};
+
+        chcss:fill_number-52_01                   xsd:string?   %Map:{ prescription:fill_date_number %};
+        chcss:fill_cost-52_01                     xsd:string?   %Map:{ prescription:fill_date_fill_cost %};
+        chcss:fill_cost_flag-52_01                xsd:string?   %Map:{ prescription:fill_date_fill_cost_flag %};
+  
+        chcss:qty-52_01                           xsd:string?   %Map:{ prescription:fill_date_quantity %};
+        chcss:action-52_01                        xsd:string?   %Map:{ prescription:fill_date_action %};
+        chcss:suspense-52_01                      xsd:string?   %Map:{ prescription:fill_date_suspense %};
+        chcss:oib_suspense-52_01                  xsd:string?   %Map:{ prescription:fill_date_oib_suspense %};
+        chcss:oib_ascii_disposition-52_01         xsd:string?   %Map:{ prescription:fill_date_oib_ascii_disposition %};
+        chcss:patient_category-52_01              xsd:string?   %Map:{ prescription:fill_date_patient_category %};
+
+        chcss:dispensed_date-52_01                xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_dispensed_date %};
+
+        chcss:tmop_eligible-52_01                 xsd:string?   %Map:{ prescription:fill_date_tmop_eligible %};
+        chcss:cmop_status_change_date-52_01       xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_cmop_status_change_date %};
+
+        chcss:cmop_status_change_date-52_01       xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_cmop_status_change_date %};
+
+        chcss:fill_dates-52_01                    xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_dates %};
+
+        chcss:tpc_event_date-52_01                xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_tpc_event_date %};
+
+        chcss:logged_by-52_01 {
+            chcss:identifier                      xsd:string    %Map:{ prescription:fill_date_logged_by_id %};
+            rdfs:label                            xsd:string    %Map:{ prescription:fill_date_logged_by_label %};
+        }?;
+
+        chcss:outpatient_site-52_01 {
+            chcss:identifier                      xsd:string    %Map:{ prescription:fill_date_outpatient_site_id %};
+            rdfs:label                            xsd:string    %Map:{ prescription:fill_date_outpatient_site_label %};
+        }?;
+
+        chcss:mtf_division-52_01 {
+            chcss:identifier                      xsd:string    %Map:{ prescription:fill_date_mtf_division_id %};
+            rdfs:label                            xsd:string    %Map:{ prescription:fill_date_mtf_division_label %};
+        }?;
+
+        chcss:meprs_code-52_01 {
+            chcss:identifier                      xsd:string    %Map:{ prescription:fill_date_meprs_code_id %};
+            rdfs:label                            xsd:string    %Map:{ prescription:fill_date_meprs_code_label %};
+        }?;
+
+        chcss:label_flag-52_01                    xsd:string?   %Map:{ prescription:fill_date_label_flag %};
+        chcss:label_print_date_time-52_01         xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_label_print_date_time %};
+        chcss:message_type-52_01                  xsd:string?   %Map:{ prescription:fill_date_message_type %};
+        chcss:ncpdp_version_number-52_01          xsd:string?   %Map:{ prescription:fill_date_ncpdp_version_number %};
+        chcss:pdts_partial_days_supply-52_01      xsd:string?   %Map:{ prescription:fill_date_pdts_partial_days_supply %};
+
+        chcss:pdts_date_filled-52_01              xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_pdts_date_filled %};
+        chcss:pdts_dos_partial-52_01              xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_pdts_dos_partial %};
+        chcss:pdts_collection-52_01 {
+            chcss:identifier                      xsd:string    %Map:{ prescription:fill_date_pdts_collection_id %};
+            rdfs:label                            xsd:string    %Map:{ prescription:fill_date_pdts_collection_label %};
+        }?;
+        chcss:pdts_fill_cost-52_01                xsd:string?   %Map:{ prescription:fill_date_pdts_fill_cost %};
+        chcss:pdts_fill_cost_flag-52_01           xsd:string?   %Map:{ prescription:fill_date_pdts_fill_cost_flag %};
+        chcss:pdts_pharmacy_number-52_01          xsd:string?   %Map:{ prescription:fill_date_pdts_pharmacy_number %};
+        chcss:pdts_reversal-52_01                 xsd:string?   %Map:{ prescription:fill_date_pdts_reversal %};
+        chcss:pdts_sent-52_01                     xsd:string?   %Map:{ prescription:fill_date_pdts_sent %};
+        chcss:pdts_unavailable-52_01              xsd:string?   %Map:{ prescription:fill_date_pdts_unavailable %};
+
+        chcss:qty-52_01                           xsd:string?   %Map:{ prescription:fill_date_quantity %};
+
+        chcss:user_comments-52_01                 xsd:string?   %Map:{ prescription:fill_date_user_comments %};
+
+        chcss:chcs_warning_log {
+            chcss:identifier                      xsd:string    %Map:{ prescription:fill_date_chcs_warning_log %};
+            rdfs:label                            xsd:string    %Map:{ prescription:fill_date_chcs_warning_log %};
+        }?;
+
+        chcss:va_cmop_date_time_in_batch          xsd:date or 
+                                                  xsd:dateTime or 
+                                                  xsd:datetime? %Map:{ prescription:fill_date_va_cmop_date_time_in_batch %};
+        chcss:va_cmop_status-52_01                xsd:string?   %Map:{ prescription:fill_date_va_cmop_status %};
+        chcss:va_product_id {
+            chcss:identifier                      xsd:string    %Map:{ prescription:fill_date_va_product_id %};
+            rdfs:label                            xsd:string    %Map:{ prescription:fill_date_va_product_id_label %};
+        }?;
+        chcss:va_cmop_reject_reason-52_01         xsd:string?   %Map:{ prescription:fill_date_va_cmop_reject_reason %};
+        chcss:va_cmop_lot_number-52_01            xsd:string?   %Map:{ prescription:fill_date_va_cmop_lot_number %};
+        chcss:va_cmop_expiration_date-52_01       xsd:string?   %Map:{ prescription:fill_date_va_cmop_expiration_date %};
+        chcss:va_cmop_carrier-52_01               xsd:string?   %Map:{ prescription:fill_date_va_cmop_carrier %};
+        chcss:va_cmop_carrier_tracking_num-52_01  xsd:string?   %Map:{ prescription:fill_date_va_cmop_carrier_tracking_num %};
+
+        chcss:workload_counted-52_01              xsd:string?   %Map:{ prescription:fill_date_workload_counted %};
+    }*;
+
+    chcss:error-52 {
+        chcss:identifier                          xsd:string      %Map:{ prescription:error_id %};
+        chcss:chcs_type                           xsd:string?     %Map:{ prescription:error_type %};
+
+        chcss:error-52_8888                       xsd:string?     %Map:{ prescription:error %};
+        chcss:error_description-52_8888           xsd:string?     %Map:{ prescription:error_description %};
+    }?;
+
+    chcss:archive_edited-52    xsd:string?    %Map:{ prescription:archive_edited %};
+    chcss:archived_flag-52     xsd:boolean?   %Map:{ prescription:archive_flag %};
+}

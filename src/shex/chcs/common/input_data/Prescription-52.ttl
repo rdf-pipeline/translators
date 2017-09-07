@@ -1,0 +1,95 @@
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix ns1: <http://hokukahu.com/schema/chcss#> .
+@prefix ns2: <http://www.w3.org/2002/07/owl#> .
+@prefix ns3: <http://datasets.caregraf.org/fms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/52-40863> a ns1:Prescription-52 ;
+    rdfs:label "H46358" ;
+    ns1:activity_log-52 <http://hokukahu.com/systems/chcs-1/52_02-1_40863> ;
+    ns1:child_resistant_cont-52 true ;
+    ns1:cmumps_type "chcss:Prescription-52" ;
+    ns1:comments-52 "NONE" ;
+    ns1:date_time_received_from_oe-52 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    ns1:days_supply-52 "120" ;
+    ns1:drug-52 <http://hokukahu.com/systems/chcs-1/50-260> ;
+    ns1:expiration_date-52 "1990-01-01"^^xsd:date ;
+    ns1:fill_dates-52 <http://hokukahu.com/systems/chcs-1/52_01-1_40863> ;
+    ns1:fill_expiration-52 "1990-01-01"^^xsd:date ;
+    ns1:identifier "52-40863" ;
+    ns1:logged_by-52 <http://hokukahu.com/systems/chcs-1/3-2> ;
+    ns1:login_date-52 "1990-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    ns1:meprs_code-52 <http://hokukahu.com/systems/chcs-1/8119-331> ;
+    ns1:mtf_division-52 <http://hokukahu.com/systems/chcs-1/40_8-1> ;
+    ns1:oerxbatch-52 "227995" ;
+    ns1:order_date_time-52 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    ns1:order_entry_number-52 "941103-00522" ;
+    ns1:order_pointer-52 <http://hokukahu.com/systems/chcs-1/101-227995> ;
+    ns1:outpatient_site-52 <http://hokukahu.com/systems/chcs-1/59_2-1> ;
+    ns1:patient-52 <http://hokukahu.com/systems/chcs-1/2-000007> ;
+    ns1:provider-52 <http://hokukahu.com/systems/chcs-1/6-111111> ;
+    ns1:qty-52 "120" ;
+    ns1:refills-52 "0" ;
+    ns1:refills_remaining-52 "0" ;
+    ns1:rx_-52 "H46358" ;
+    ns1:sig-52 "T1 TAB Q1D #120 RF0" ;
+    ns1:status-52 "DISCONTINUED" .
+
+<http://hokukahu.com/systems/chcs-1/101-227995> rdfs:label "941103-00522" ;
+    ns1:identifier "101-227995" .
+
+<http://hokukahu.com/systems/chcs-1/2-000007> rdfs:label "BUNNY,BUGS" ;
+    ns1:identifier "2-000007" .
+
+<http://hokukahu.com/systems/chcs-1/50-260> rdfs:label "PAINKILLER 400MG TAB" ;
+    ns3:sameAsLabel "PAINKILLER 400 MG TABLET" ;
+    ns1:identifier "50-260" ;
+    ns2:sameAs <http://hokukahu.com/schema/nddf#cdc008348> .
+
+<http://hokukahu.com/systems/chcs-1/52_01-1_40863> a ns1:Fill_Dates-52_01 ;
+    ns1:action-52_01 "ORIGINAL FILL" ;
+    ns1:cmumps_type "chcss:Fill_Dates-52_01" ;
+    ns1:fill_dates-52_01 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    ns1:fill_number-52_01 "1" ;
+    ns1:identifier "52_01-1_40863" ;
+    ns1:logged_by-52_01 <http://hokukahu.com/systems/chcs-1/3-2> ;
+    ns1:meprs_code-52_01 <http://hokukahu.com/systems/chcs-1/8119-331> ;
+    ns1:mtf_division-52_01 <http://hokukahu.com/systems/chcs-1/40_8-1> ;
+    ns1:outpatient_site-52_01 <http://hokukahu.com/systems/chcs-1/59_2-1> ;
+    ns1:qty-52_01 "120" ;
+    ns1:suspense-52_01 "SUSPENSE" .
+
+<http://hokukahu.com/systems/chcs-1/52_02-1_40863> a ns1:Activity_Log-52_02 ;
+    ns1:activity_log-52_02 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    ns1:associated_fill_number-52_02 "1" ;
+    ns1:cmumps_type "chcss:Activity_Log-52_02" ;
+    ns1:identifier "52_02-1_40863" ;
+    ns1:logged_by-52_02 <http://hokukahu.com/systems/chcs-1/3-2> ;
+    ns1:pharmacy_site-52_02 <http://hokukahu.com/systems/chcs-1/59_2-1> ;
+    ns1:reason_code-52_02 <http://hokukahu.com/systems/chcs-1/52_3-30> ;
+    ns1:user_comments-52_02 "CANCEL PMT ORDER" .
+
+<http://hokukahu.com/systems/chcs-1/52_3-30> rdfs:label "DISCONTINUE" ;
+    ns1:identifier "52_3-30" .
+
+<http://hokukahu.com/systems/chcs-1/6-111111> rdfs:label "DUCK,DONALD" ;
+    ns1:identifier "6-111111" .
+
+<http://hokukahu.com/systems/chcs-1/40_8-1> rdfs:label "ANYTOWN, NY" ;
+    ns1:identifier "40_8-1" .
+
+<http://hokukahu.com/systems/chcs-1/8119-331> rdfs:label "AAAA" ;
+    ns1:identifier "8119-331" .
+
+<http://hokukahu.com/systems/chcs-1/3-2> rdfs:label "COYOTE, WILE E" ;
+    ns1:identifier "3-2" .
+
+<http://hokukahu.com/systems/chcs-1/59_2-1> rdfs:label "MAIN PHARMACY" ;
+    ns1:identifier "59_2-1" .
+
+
