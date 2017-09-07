@@ -45,7 +45,7 @@ define([
             var selector = $(el).find('#barChart1 .loading-label');
             selector.html('loading...');
             BarChart.displayBarChart({
-                jsonPath: '/cmumps/ig/bar_chart',
+                jsonPath: '/chcs/ig/bar_chart',
                 divId: 'barChart1',
                 selector: el,
                 margin: {
@@ -69,7 +69,7 @@ define([
             var selector = $(el).find('#barChart2 .loading-label');
             selector.html('loading...');
             BarDual.displayBarChart({
-                jsonPath: '/cmumps/ig/dual_bar_chart',
+                jsonPath: '/chcs/ig/dual_bar_chart',
                 divId: 'barChart2',
                 selector: el,
                 margin: {
@@ -81,9 +81,9 @@ define([
                 width: 800,
                 height: 400,
                 nameTitle: 'file',
-                valueTitle: 'cmumpssPop',
+                valueTitle: 'chcssPop',
                 valueTitle2: 'tc2Pop',
-                valueTitleDisplay: 'CMUMPSS',
+                valueTitleDisplay: 'CHCSS',
                 valueTitleDisplay2: 'TC2',
                 XLabelTitle: 'file',
                 onDisplay: function() {
@@ -93,7 +93,7 @@ define([
         },
         //generate area chart demo by using c3.js
         generateAreaChart: function(el) {
-            $.getJSON('/cmumps/ig/area_chart').done(function(data) {
+            $.getJSON('/chcs/ig/area_chart').done(function(data) {
                 var chart = c3.generate({
                     bindto: '#areaChart1',
                     data: {
@@ -120,7 +120,7 @@ define([
                 });
                 return res;
             };
-            $.getJSON('/cmumps/ig/patient_gender?dataset=cmumps-1').done(function(data) {
+            $.getJSON('/chcs/ig/patient_gender?dataset=chcs-1').done(function(data) {
                 var chart = c3.generate({
                     bindto: d3.select(el).select('#pieChart1'),
                     data: {
@@ -148,7 +148,7 @@ define([
             PieChart.displayPie({
                 divId: 'pieChart2', //to display the pie
                 selector: el,
-                json: '/cmumps/ig/patient_gender?dataset=cmumps-1', //path to json file
+                json: '/chcs/ig/patient_gender?dataset=chcs-1', //path to json file
                 categoryTitle: '_id', //the category name of the json data
                 valueTitle: 'count', //the value name of the json data
                 width: 400,
@@ -175,7 +175,7 @@ define([
                 colors: ["#d0743c", "#6b486b"], //color of stacked bar
                 divId: "barChart3", //div to show the chart
                 selector: el, //parent container element
-                jsonPath: "/cmumps/ig/stacked_bar_chart", // json path
+                jsonPath: "/chcs/ig/stacked_bar_chart", // json path
                 categoryTitle: "fileIndex", //x axis category
                 nameTitle: "name", //name to be displayed when mouse over
                 valueTitles: ["propertiesDataType", "propertiesObjectType"], //values to show in each bar,
@@ -195,7 +195,7 @@ define([
             CircleChart.displayCircleChart({
                 divId: 'circleChart1',
                 selector: el,
-                jsonPath: '/cmumps/ig/circle_chart',
+                jsonPath: '/chcs/ig/circle_chart',
                 title: 'Relative patient data sizes',
                 minimumBubbleSize: 5,
                 height: 400,
@@ -212,7 +212,7 @@ define([
             CirclePack.displayCirclePack({
                 divId: "circleChart2",
                 selector: el,
-                jsonPath: "/cmumps/ig/circle_pack_chart",
+                jsonPath: "/chcs/ig/circle_pack_chart",
                 margin: 10,
                 outerDiameter: 800,
                 colors: ["#FFFFFF", "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"], //colors to show on the circles
@@ -228,7 +228,7 @@ define([
             var selector = $(el).find('#directedChart1 .loading-label');
             selector.html('loading...');
             DirectedGraph.showDirectedGraph({
-                jsonPath: '/cmumps/ig/directed_graph_chart',
+                jsonPath: '/chcs/ig/directed_graph_chart',
                 showArrow: true,
                 width: 1000,
                 height: 1000,
@@ -249,7 +249,7 @@ define([
                 margin: [20, 20, 20, 120],
                 width: 1000,
                 height: 1000,
-                jsonPath: "/cmumps/ig/tree_chart",
+                jsonPath: "/chcs/ig/tree_chart",
                 topDown: false, //false - left to right, true - top down
                 divId: "treeChart1",
                 selector: el,
@@ -265,7 +265,7 @@ define([
             TreeMap.displayTreeMap({
                 width: 1000,
                 height: 620,
-                jsonPath: "/cmumps/ig/tree_map_chart",
+                jsonPath: "/chcs/ig/tree_map_chart",
                 valueTitle: "size",
                 nameTitle: "name",
                 divId: "treeMapChart1",

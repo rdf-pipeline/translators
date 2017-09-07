@@ -41,7 +41,7 @@ define([
                     var pos = id.indexOf('-');
                     if (pos > -1) {
                         var coll = id.substring(0, pos);
-                        //#record?dataset=cmumps-1&collection=2&id=2-42
+                        //#record?dataset=chcs-1&collection=2&id=2-42
                         var link = '<a href=#record?dataset=' + self.dataset + '&datatype=' + coll + '&id=' + id + '>' + id + '</a>';
                         el.html(link);
                     }

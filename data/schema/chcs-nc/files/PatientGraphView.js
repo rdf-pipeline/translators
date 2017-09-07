@@ -350,7 +350,7 @@ define([
         },
 
         getLabel: function(collection) {
-            return Util.CMUMPS_Cllection_Labels[collection] ? Util.CMUMPS_Cllection_Labels[collection] + '(' + collection + ')' : collection;
+            return Util.CHCS_Cllection_Labels[collection] ? Util.CHCS_Cllection_Labels[collection] + '(' + collection + ')' : collection;
         },
 
         viewAllTypes: function() {

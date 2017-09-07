@@ -101,7 +101,7 @@ define([
 				this.generatePieChartDataPopulated(this.el);			
 			else if (id === 'gatheringClass')
 				this.generateStackedBarChartForClasses(this.el);			     				
-			else if (id === 'cmumpsUsers') 
+			else if (id === 'chcsUsers') 
 				this.generatePieChartDataPopulated(this.el);
 			else if (id === 'classesOfCmumpsUsers') 
 				this.generatePieChartDataPopulated(this.el);				

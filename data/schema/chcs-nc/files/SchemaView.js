@@ -293,7 +293,7 @@ define([
                 self.setIds();
             });
 
-            //this.currentDataset = "cmumps-AB";
+            //this.currentDataset = "chcs-AB";
             //this.setIds();
 
 

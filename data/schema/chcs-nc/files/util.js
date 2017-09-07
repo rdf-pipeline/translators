@@ -30,7 +30,7 @@ define(['underscore'],
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         };
 
-        Util.CMUMPS_Cllection_Labels = {
+        Util.CHCS_Cllection_Labels = {
             '2': 'PATIENT',
             '107': 'ORDER TASK',
             '101': 'ORDER',

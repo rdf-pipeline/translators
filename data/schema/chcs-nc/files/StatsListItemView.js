@@ -17,8 +17,8 @@ define([
             this.model.bind("destroy", this.close, this);
             this.model.set('countStr', Util.numberWithCommas(this.model.get('count')));
             var collection = this.model.get('collection');
-            if(Util.CMUMPS_Cllection_Labels[collection]) {
-                this.model.set('collectionName', Util.CMUMPS_Cllection_Labels[collection] + ' (' + collection + ')');
+            if(Util.CHCS_Cllection_Labels[collection]) {
+                this.model.set('collectionName', Util.CHCS_Cllection_Labels[collection] + ' (' + collection + ')');
             } else {
                 this.model.set('collectionName', collection.toString());
             }
