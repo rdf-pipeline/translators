@@ -117,6 +117,8 @@ validateIt "Prescription-52"                              "http://hokukahu.com/s
 validateIt "Procedure"                                    "entity:Procedure-1074046"
 validateIt "Provider-6"                                   "http://hokukahu.com/systems/chcs-1/6-26"
 
+validateIt "User-3"                                       "http://hokukahu.com/systems/chcs-1/3-0"
+
 validateIt "Zip_Code-5_8002" "http://hokukahu.com/systems/chcs-1/5_8002-1"
 
 # clean up after success
