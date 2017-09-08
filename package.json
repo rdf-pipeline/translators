@@ -44,7 +44,7 @@
   },
   "scripts": {
     "build": "echo build ## tbs",
-    "test": "./node_modules/.bin/mocha test src/js/translate/test"
+    "test": "./node_modules/.bin/mocha test src/js/translate/test; src/shex/chcs/common/test/validate_test.sh"
   },
   "devDependencies": {
     "chai": "^3.5.0",

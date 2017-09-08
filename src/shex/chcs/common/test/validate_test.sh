@@ -51,7 +51,7 @@ function validateIt() {
          exit 1
      fi
 
-     echo "Validation of ${NAME} completed sucessfully"
+     echo "Validation of ${NAME} common ShEx mapping completed sucessfully"
 }
 
 # validate by passing in the name of the CHCS class to validate and the node in the sample data to use for validation
