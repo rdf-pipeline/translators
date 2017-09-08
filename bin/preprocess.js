@@ -42,7 +42,7 @@ function preprocess(input_file, output_file) {
     var jsonData = JSON.parse(Fs.readFileSync(input_file, "UTF-8"));
 
     var normalizedData =  normalizeAttribute( jsonData, ["id", "_id"], "identifier");
-    normalizedData =  normalizeAttribute( normalizedData, ["type"], "cmumps_type");
+    normalizedData =  normalizeAttribute( normalizedData, ["type"], "chcs_type");
 
     Fs.writeFileSync(output_file, JSON.stringify(normalizedData, null, 2));
     return output_file;
