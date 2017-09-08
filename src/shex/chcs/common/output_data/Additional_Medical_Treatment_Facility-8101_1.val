@@ -542,7 +542,7 @@
               {
                 "type": "SemAct",
                 "name": "http://shex.io/extensions/Map/#",
-                "code": " location:ein_ssn_indicator-8101_1 "
+                "code": " location:ein_ssn_indicator "
               }
             ]
           },
@@ -560,7 +560,7 @@
               {
                 "type": "SemAct",
                 "name": "http://shex.io/extensions/Map/#",
-                "code": " location:provider_ein_ssn-8101_1 "
+                "code": " location:provider_ein_ssn "
               }
             ]
           },
