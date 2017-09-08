@@ -1,0 +1,143 @@
+# This schema contains data used to control the various users of the CHCS system.
+#
+# CHCS schema documentation:
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/User-3.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX user: <urn:local:user:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/User-3>
+
+<http://hokukahu.com/chcs/User-3> {
+    chcss:identifier                 xsd:string         %Map:{ user:id %};
+    chcss:chcs_type                  xsd:string?        %Map:{ user:chcs_type %};
+    rdfs:label                       xsd:string         %Map:{ user:label %};
+
+    chcss:name-3                     xsd:string         %Map:{ user:name %};
+    chcss:nick_name-3                xsd:string         %Map:{ user:nick_name %};
+    chcss:vms_username-3             xsd:string?        %Map:{ user:vms_username %};
+    chcss:initial-3                  xsd:string         %Map:{ user:initial %};
+
+    chcss:gender-3                   xsd:string?         %Map:{ user:gender %};
+    chcss:dob-3                      xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime?      %Map:{ user:dob %};
+
+    chcss:mail_name-3                xsd:string?        %Map:{ user:mail_name %};
+    chcss:mail_code-3                xsd:string?        %Map:{ user:mail_code %};
+    chcss:telephone-3                xsd:string?        %Map:{ user:phone %};
+
+    chcss:ssn-3                      xsd:string?        %Map:{ user:ssn %};
+
+    chcss:active_ahlta_account-3     xsd:boolean?       %Map:{ user:delete_mailbox_at_termination %};
+
+    chcss:delete_mailbox_at_termination-3   xsd:boolean    %Map:{ user:delete_mailbox_at_termination %};
+    chcss:delete_keys_at_termination-3      xsd:boolean    %Map:{ user:delete_keys_at_termination %};
+    chcss:delete_groups_at_termination-3    xsd:boolean    %Map:{ user:delete_groups_at_termination %};
+    chcss:delete_desktop_at_termination-3   xsd:boolean    %Map:{ user:delete_desktop_at_termination %};
+
+    chcss:access_code-3                     xsd:string?    %Map:{ user:access_code %};
+    chcss:file_manager_access_code-3        xsd:string?    %Map:{ user:file_manager_access_code %};
+    chcss:want_to_edit_access_code_y_n-3    xsd:string?    %Map:{ user:want_to_edit_access_code_y_n %};
+
+    chcss:want_to_edit_verify_code_y_n-3    xsd:string?    %Map:{ user:want_to_edit_verify_code_y_n %};
+    chcss:verify_code-3                     xsd:string?    %Map:{ user:verify_code %};
+    chcss:date_verify_code_last_changed-3   xsd:string?    %Map:{ user:date_verify_code_last_changed %};
+    chcss:expire_verify_code-3              xsd:boolean?   %Map:{ user:expire_verify_code %};
+
+    chcss:pac-3                             xsd:string?   %Map:{ user:pac %};
+    chcss:prohibited_times_for_signon-3     xsd:string?   %Map:{ user:prohibited_times_for_signon %};
+
+    chcss:default_insert_mode-3             xsd:string?    %Map:{ user:default_insert_mode %};
+
+    chcss:typeahead-3                       xsd:string?    %Map:{ user:typeahead %};
+
+    chcss:allowable_division-3 {
+       chcss:identifier              xsd:string         %Map:{ user:allowable_division_id %};
+       rdfs:label                    xsd:string         %Map:{ user:allowable_division_label %};
+    }?;
+    chcss:default_division-3 {
+       chcss:identifier              xsd:string         %Map:{ user:default_division_id %};
+       rdfs:label                    xsd:string         %Map:{ user:default_division_label %};
+    }?;
+    chcss:allowable_remote_site_access-3 {
+       chcss:identifier              xsd:string         %Map:{ user:allowable_remote_site_access_id %};
+       rdfs:label                    xsd:string         %Map:{ user:allowable_remote_site_access_label %};
+    }?;
+
+    chcss:creator-3 {
+       chcss:identifier              xsd:string         %Map:{ user:creator_id %};
+       rdfs:label                    xsd:string         %Map:{ user:creator_label %};
+    }?;
+    chcss:date_entered-3             xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime       %Map:{ user:date_entered %};
+
+    chcss:multiple_signon-3          xsd:string?        %Map:{ user:multiple_signon %};
+
+    chcss:auto_menu-3                xsd:string?        %Map:{ user:auto_menu %};
+    chcss:timed_read__of_seconds-3   xsd:string?        %Map:{ user:timed_read__of_seconds %};
+    chcss:timestamp-3                xsd:string?        %Map:{ user:timestamp %};
+    chcss:primary_menu_option-3 {
+       chcss:identifier              xsd:string         %Map:{ user:primary_menu_option_id %};
+       rdfs:label                    xsd:string         %Map:{ user:primary_menu_option_label %};
+    }?;
+    chcss:secondary_menu_options-3 {
+       chcss:identifier              xsd:string         %Map:{ user:secondary_menu_option_id %};
+       chcss:chcs_type               xsd:string?        %Map:{ user:chcs_type %};
+       chcss:synonym-3_03            xsd:string?        %Map:{ user:secondary_menu_options_synonym %};
+       chcss:secondary_menu_options-3_03 {
+          chcss:identifier           xsd:string         %Map:{ user:secondary_menu_options_details_id %};
+          rdfs:label                 xsd:string         %Map:{ user:secondary_menu_options_details_label %};
+       };
+    }*;
+
+    chcss:last_option_main_menu-3    xsd:string?        %Map:{ user:last_option_main_menu %};
+    chcss:last_option_accessed-3 {
+       chcss:identifier              xsd:string         %Map:{ user:last_option_accessed_id %};
+       rdfs:label                    xsd:string         %Map:{ user:last_option_accessed_label %};
+    }?;
+
+    chcss:screen_type-3 {
+       chcss:identifier              xsd:string         %Map:{ user:screen_type_id %};
+       rdfs:label                    xsd:string         %Map:{ user:screen_type_label %};
+    }?;
+    chcss:title-3 {
+       chcss:identifier              xsd:string         %Map:{ user:title_id %};
+       rdfs:label                    xsd:string         %Map:{ user:title_label %};
+    }?;
+
+    chcss:uci-3 {
+       chcss:identifier              xsd:string         %Map:{ user:uci_id %};
+       rdfs:label                    xsd:string         %Map:{ user:uci_label %};
+       chcss:uci-3_01 {
+           chcss:identifier           xsd:string        %Map:{ user:uci_details_id %};
+           rdfs:label                 xsd:string        %Map:{ user:uci_details_label %};
+           chcss:uci-3_01                xsd:string?    %Map:{ user:uci_details %};
+           chcss:routines_rn1rn2-3_01    xsd:string?    %Map:{ user:uci_routines %};
+       }?;
+    }*;
+
+    chcss:default_device-3 {
+       chcss:identifier              xsd:string         %Map:{ user:default_device_id %};
+       rdfs:label                    xsd:string         %Map:{ user:default_device_label %};
+    }?;
+
+    chcss:provider-3 {
+       chcss:identifier              xsd:string         %Map:{ user:provider_id %};
+       rdfs:label                    xsd:string         %Map:{ user:provider_label %};
+    }?;
+
+    chcss:primary_clinic_location-3 {
+       chcss:identifier              xsd:string         %Map:{ user:primary_clinic_location_id %};
+       rdfs:label                    xsd:string         %Map:{ user:primary_clinic_location_label %};
+    }?;
+
+    chcss:termination_date-3         xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime?     %Map:{ user:termination_date %};
+}

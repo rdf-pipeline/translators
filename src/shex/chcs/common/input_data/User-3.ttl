@@ -1,0 +1,83 @@
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/19-1750> rdfs:label "YYY MERGE STATUS" ;
+    chcss:identifier "19-1750" .
+
+<http://hokukahu.com/systems/chcs-1/19-1770> rdfs:label "YYY UNMERGE STATUS" ;
+    chcss:identifier "19-1770" .
+
+<http://hokukahu.com/systems/chcs-1/19-20> rdfs:label "XMUSER" ;
+    chcss:identifier "19-20" .
+
+<http://hokukahu.com/systems/chcs-1/19-30> rdfs:label "XXPROG" ;
+    chcss:identifier "19-30" .
+
+<http://hokukahu.com/systems/chcs-1/19-80> rdfs:label "XXXMGR" ;
+    chcss:identifier "19-80" .
+
+<http://hokukahu.com/systems/chcs-1/3-0> a chcss:User-3 ;
+    rdfs:label "BANNER,BRUCE" ;
+    chcss:auto_menu-3 "SCROLLING MENUS" ;
+    chcss:chcs_type "chcss:User-3" ;
+    chcss:creator-3 <http://hokukahu.com/systems/chcs-1/3-0> ;
+    chcss:date_entered-3 "1990-01-01"^^xsd:date ;
+    chcss:date_verify_code_last_changed-3 "12345,09876" ;
+    chcss:default_division-3 <http://hokukahu.com/systems/chcs-1/40_8-0> ;
+    chcss:delete_desktop_at_termination-3 true ;
+    chcss:delete_groups_at_termination-3 true ;
+    chcss:delete_keys_at_termination-3 true ;
+    chcss:delete_mailbox_at_termination-3 true ;
+    chcss:identifier "3-0" ;
+    chcss:initial-3 "BB" ;
+    chcss:mail_name-3 "BRUCE.BANNER" ;
+    chcss:multiple_signon-3 "1" ;
+    chcss:name-3 "BANNER,BRUCE" ;
+    chcss:nick_name-3 "HULK" ;
+    chcss:primary_menu_option-3 <http://hokukahu.com/systems/chcs-1/19-20> ;
+    chcss:screen_type-3 <http://hokukahu.com/systems/chcs-1/3_2-30> ;
+    chcss:secondary_menu_options-3 <http://hokukahu.com/systems/chcs-1/3_03-1_1>,
+        <http://hokukahu.com/systems/chcs-1/3_03-3_1>,
+        <http://hokukahu.com/systems/chcs-1/3_03-4_1>,
+        <http://hokukahu.com/systems/chcs-1/3_03-5_1> ;
+    chcss:telephone-3 "Unknown" ;
+    chcss:termination_date-3 "1990-01-01"^^xsd:date ;
+    chcss:timed_read__of_seconds-3 "99999" ;
+    chcss:timestamp-3 "12345,67890" .
+
+<http://hokukahu.com/systems/chcs-1/3_03-1_1> a chcss:Secondary_Menu_Options-3_03 ;
+    chcss:chcs_type "chcss:Secondary_Menu_Options-3_03" ;
+    chcss:identifier "3_03-1_1" ;
+    chcss:secondary_menu_options-3_03 <http://hokukahu.com/systems/chcs-1/19-80> ;
+    chcss:synonym-3_03 "XXX" .
+
+<http://hokukahu.com/systems/chcs-1/3_03-3_1> a chcss:Secondary_Menu_Options-3_03 ;
+    chcss:chcs_type "chcss:Secondary_Menu_Options-3_03" ;
+    chcss:identifier "3_03-3_1" ;
+    chcss:secondary_menu_options-3_03 <http://hokukahu.com/systems/chcs-1/19-30> ;
+    chcss:synonym-3_03 "XP" .
+
+<http://hokukahu.com/systems/chcs-1/3_03-4_1> a chcss:Secondary_Menu_Options-3_03 ;
+    chcss:chcs_type "chcss:Secondary_Menu_Options-3_03" ;
+    chcss:identifier "3_03-4_1" ;
+    chcss:secondary_menu_options-3_03 <http://hokukahu.com/systems/chcs-1/19-1750> ;
+    chcss:synonym-3_03 "MST" .
+
+<http://hokukahu.com/systems/chcs-1/3_03-5_1> a chcss:Secondary_Menu_Options-3_03 ;
+    chcss:chcs_type "chcss:Secondary_Menu_Options-3_03" ;
+    chcss:identifier "3_03-5_1" ;
+    chcss:secondary_menu_options-3_03 <http://hokukahu.com/systems/chcs-1/19-1770> ;
+    chcss:synonym-3_03 "STA" .
+
+<http://hokukahu.com/systems/chcs-1/3_2-30> rdfs:label "C-VT320" ;
+    chcss:identifier "3_2-30" .
+
+<http://hokukahu.com/systems/chcs-1/40_8-0> rdfs:label "NH XANADU, 100H" ;
+    chcss:identifier "40_8-0" .
+
+
