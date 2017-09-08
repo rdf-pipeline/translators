@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,10 +6,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8514-1> a chcs:Appointment_Status-8514 ;
+<http://hokukahu.com/systems/chcs-1/8514-1> a chcss:Appointment_Status-8514 ;
     rdfs:label "PENDING" ;
-    chcs:appointment_status-8514 "PENDING" ;
-    chcs:chcs_type "chcss:Appointment_Status-8514" ;
-    chcs:identifier "8514-1" .
+    chcss:appointment_status-8514 "PENDING" ;
+    chcss:chcs_type "chcss:Appointment_Status-8514" ;
+    chcss:identifier "8514-1" .
 
 

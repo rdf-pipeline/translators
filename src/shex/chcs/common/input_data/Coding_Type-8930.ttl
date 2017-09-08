@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,35 +6,35 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8930-1> a chcs:Coding_Type-8930 ;
+<http://hokukahu.com/systems/chcs-1/8930-1> a chcss:Coding_Type-8930 ;
     rdfs:label "SNOMED" ;
-    chcs:chcs_type "chcss:Coding_Type-8930" ;
-    chcs:functional_area-8930 "LABORATORY" ;
-    chcs:identifier "8930-1" ;
-    chcs:name-8930 "SNOMED" ;
-    chcs:source_files-8930 <http://hokukahu.com/systems/chcs-1/8930_01-61.1_1>,
+    chcss:chcs_type "chcss:Coding_Type-8930" ;
+    chcss:functional_area-8930 "LABORATORY" ;
+    chcss:identifier "8930-1" ;
+    chcss:name-8930 "SNOMED" ;
+    chcss:source_files-8930 <http://hokukahu.com/systems/chcs-1/8930_01-61.1_1>,
         <http://hokukahu.com/systems/chcs-1/8930_01-61.2_1> .
 
 <http://hokukahu.com/systems/chcs-1/1-61.1> rdfs:label "MORPHOLOGY FIELD" ;
-    chcs:identifier "1-61.1" .
+    chcss:identifier "1-61.1" .
 
 <http://hokukahu.com/systems/chcs-1/1-61.2> rdfs:label "ETIOLOGY FIELD" ;
-    chcs:identifier "1-61.2" .
+    chcss:identifier "1-61.2" .
 
-<http://hokukahu.com/systems/chcs-1/8930_01-61.1_1> a chcs:Source_Files-8930_01 ;
-    chcs:chcs_type "chcss:Source_Files-8930_01" ;
-    chcs:code_field_in_source-8930_01 "2" ;
-    chcs:code_transformation-8930_01 "S X=\"M-\"_X" ;
-    chcs:identifier "8930_01-61.1_1" ;
-    chcs:interpretation_field_in_source-8930_01 ".01" ;
-    chcs:source_file-8930_01 <http://hokukahu.com/systems/chcs-1/1-61.1> .
+<http://hokukahu.com/systems/chcs-1/8930_01-61.1_1> a chcss:Source_Files-8930_01 ;
+    chcss:chcs_type "chcss:Source_Files-8930_01" ;
+    chcss:code_field_in_source-8930_01 "2" ;
+    chcss:code_transformation-8930_01 "S X=\"M-\"_X" ;
+    chcss:identifier "8930_01-61.1_1" ;
+    chcss:interpretation_field_in_source-8930_01 ".01" ;
+    chcss:source_file-8930_01 <http://hokukahu.com/systems/chcs-1/1-61.1> .
 
-<http://hokukahu.com/systems/chcs-1/8930_01-61.2_1> a chcs:Source_Files-8930_01 ;
-    chcs:chcs_type "chcss:Source_Files-8930_01" ;
-    chcs:code_field_in_source-8930_01 "2" ;
-    chcs:code_transformation-8930_01 "S X=\"E-\"_X" ;
-    chcs:identifier "8930_01-61.2_1" ;
-    chcs:interpretation_field_in_source-8930_01 ".01" ;
-    chcs:source_file-8930_01 <http://hokukahu.com/systems/chcs-1/1-61.2> .
+<http://hokukahu.com/systems/chcs-1/8930_01-61.2_1> a chcss:Source_Files-8930_01 ;
+    chcss:chcs_type "chcss:Source_Files-8930_01" ;
+    chcss:code_field_in_source-8930_01 "2" ;
+    chcss:code_transformation-8930_01 "S X=\"E-\"_X" ;
+    chcss:identifier "8930_01-61.2_1" ;
+    chcss:interpretation_field_in_source-8930_01 ".01" ;
+    chcss:source_file-8930_01 <http://hokukahu.com/systems/chcs-1/1-61.2> .
 
 

@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,32 +6,32 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-entity:Procedure-1074046 a chcs:Procedure ;
+entity:Procedure-1074046 a chcss:Procedure ;
     rdfs:label "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat" ;
-    chcs:chcs_type "Procedure" ;
-    chcs:comments "Encounter Procedure" ;
-    chcs:dateReported "1990-01-01T00:00:00"^^xsd:dateTime ;
-    chcs:description entity:HDDConcept-67355 ;
-    chcs:identifier "Procedure-1074046" ;
-    chcs:patient entity:Patient-000007 ;
-    chcs:provider entity:Provider-41200034 ;
-    chcs:source entity:HDDConcept-1450368 ;
-    chcs:status entity:HDDConcept-1024 ;
-    chcs:verified true .
+    chcss:chcs_type "Procedure" ;
+    chcss:comments "Encounter Procedure" ;
+    chcss:dateReported "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:description entity:HDDConcept-67355 ;
+    chcss:identifier "Procedure-1074046" ;
+    chcss:patient entity:Patient-000007 ;
+    chcss:provider entity:Provider-41200034 ;
+    chcss:source entity:HDDConcept-1450368 ;
+    chcss:status entity:HDDConcept-1024 ;
+    chcss:verified true .
 
 entity:HDDConcept-1024 rdfs:label "Active" ;
-    chcs:identifier "HDDConcept-1024" .
+    chcss:identifier "HDDConcept-1024" .
 
 entity:HDDConcept-1450368 rdfs:label "Clinical Evidence" ;
-    chcs:identifier "HDDConcept-1450368" .
+    chcss:identifier "HDDConcept-1450368" .
 
 entity:HDDConcept-67355 rdfs:label "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat" ;
-    chcs:identifier "HDDConcept-67355" .
+    chcss:identifier "HDDConcept-67355" .
 
 entity:Patient-000007 rdfs:label "BUNNY,BUGS" ;
-    chcs:identifier "Patient-000007" .
+    chcss:identifier "Patient-000007" .
 
 entity:Provider-41200034 rdfs:label "MOUSE,MICKEY" ;
-    chcs:identifier "Provider-41200034" .
+    chcss:identifier "Provider-41200034" .
 
 

@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8253_05-1> a chcs:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05 ;
+<http://hokukahu.com/systems/chcs-1/8253_05-1> a chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05 ;
     rdfs:label "1" ;
-    chcs:chcs_type "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05" ;
-    chcs:damagccs-8253_05 "1" ;
-    chcs:damagccsd-8253_05 "BETA LACTAM ANTIBIOTIC" ;
-    chcs:identifier "8253_05-1" .
+    chcss:chcs_type "chcss:Fdb_Dam_Cross_Sensitivity_Allergy-8253_05" ;
+    chcss:damagccs-8253_05 "1" ;
+    chcss:damagccsd-8253_05 "BETA LACTAM ANTIBIOTIC" ;
+    chcss:identifier "8253_05-1" .
 
 

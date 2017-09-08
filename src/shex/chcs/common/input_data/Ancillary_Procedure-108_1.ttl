@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,12 +6,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/108_1-1> a chcs:Ancillary_Procedure-108_1 ;
+<http://hokukahu.com/systems/chcs-1/108_1-1> a chcss:Ancillary_Procedure-108_1 ;
     rdfs:label "AEROSOL TX - ALUPENT" ;
-    chcs:chcs_type "chcss:Ancillary_Procedure-108_1" ;
-    chcs:identifier "108_1-1" ;
-    chcs:name-108_1 "AEROSOL TX - ALUPENT" ;
-    chcs:result_type-108_1 "FREE TEXT" ;
-    chcs:schedule_type-108_1 "CONTINUOUS" .
+    chcss:chcs_type "chcss:Ancillary_Procedure-108_1" ;
+    chcss:identifier "108_1-1" ;
+    chcss:name-108_1 "AEROSOL TX - ALUPENT" ;
+    chcss:result_type-108_1 "FREE TEXT" ;
+    chcss:schedule_type-108_1 "CONTINUOUS" .
 
 

@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,10 +6,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8510-1> a chcs:Access_To_Care_Category-8510 ;
+<http://hokukahu.com/systems/chcs-1/8510-1> a chcss:Access_To_Care_Category-8510 ;
     rdfs:label "ACUTE" ;
-    chcs:chcs_type "chcss:Access_To_Care_Category-8510" ;
-    chcs:identifier "8510-1" ;
-    chcs:name-8510 "ACUTE" ;
-    chcs:standard-8510 "1" .
+    chcss:chcs_type "chcss:Access_To_Care_Category-8510" ;
+    chcss:identifier "8510-1" ;
+    chcss:name-8510 "ACUTE" ;
+    chcss:standard-8510 "1" .
 

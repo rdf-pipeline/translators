@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,26 +6,26 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8101_1-1> a chcs:Additional_Medical_Treatment_Facility-8101_1 ;
+<http://hokukahu.com/systems/chcs-1/8101_1-1> a chcss:Additional_Medical_Treatment_Facility-8101_1 ;
     rdfs:label "1" ;
-    chcs:city-8101_1 "UTOPIA" ;
-    chcs:chcs_type "chcss:Additional_Medical_Treatment_Facility-8101_1" ;
-    chcs:facility_code-8101_1 "1" ;
-    chcs:identifier "8101_1-1" ;
-    chcs:lab_phone-8101_1 "FAX: (333) 333-3333" ;
-    chcs:lab_poc-8101_1 "222-2222" ;
-    chcs:name-8101_1 "UTOPIA CENTER 47746" ;
-    chcs:non_dod_facility_code-8101_1 "OTHER" ;
-    chcs:phone-8101_1 "(111) 111-1111" ;
-    chcs:state_geographic_loc-8101_1 <http://hokukahu.com/systems/chcs-1/5-17> ;
-    chcs:street_address_1-8101_1 "47746" ;
-    chcs:street_address_2-8101_1 "1 HEAVENLY ROAD BLDG 1" ;
-    chcs:zip_code-8101_1 <http://hokukahu.com/systems/chcs-1/5_8002-26489> .
+    chcss:city-8101_1 "UTOPIA" ;
+    chcss:chcs_type "chcss:Additional_Medical_Treatment_Facility-8101_1" ;
+    chcss:facility_code-8101_1 "1" ;
+    chcss:identifier "8101_1-1" ;
+    chcss:lab_phone-8101_1 "FAX: (333) 333-3333" ;
+    chcss:lab_poc-8101_1 "222-2222" ;
+    chcss:name-8101_1 "UTOPIA CENTER 47746" ;
+    chcss:non_dod_facility_code-8101_1 "OTHER" ;
+    chcss:phone-8101_1 "(111) 111-1111" ;
+    chcss:state_geographic_loc-8101_1 <http://hokukahu.com/systems/chcs-1/5-17> ;
+    chcss:street_address_1-8101_1 "47746" ;
+    chcss:street_address_2-8101_1 "1 HEAVENLY ROAD BLDG 1" ;
+    chcss:zip_code-8101_1 <http://hokukahu.com/systems/chcs-1/5_8002-26489> .
 
 <http://hokukahu.com/systems/chcs-1/5-17> rdfs:label "ILLINOIS" ;
-    chcs:identifier "5-17" .
+    chcss:identifier "5-17" .
 
 <http://hokukahu.com/systems/chcs-1/5_8002-26489> rdfs:label "60088" ;
-    chcs:identifier "5_8002-26489" .
+    chcss:identifier "5_8002-26489" .
 
 

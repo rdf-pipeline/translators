@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8139-2> a chcs:Casualty_Status-8139 ;
+<http://hokukahu.com/systems/chcs-1/8139-2> a chcss:Casualty_Status-8139 ;
     rdfs:label "EXPIRED" ;
-    chcs:chcs_type "chcss:Casualty_Status-8139" ;
-    chcs:code-8139 "EXP" ;
-    chcs:identifier "8139-2" ;
-    chcs:name-8139 "EXPIRED" .
+    chcss:chcs_type "chcss:Casualty_Status-8139" ;
+    chcss:code-8139 "EXP" ;
+    chcss:identifier "8139-2" ;
+    chcss:name-8139 "EXPIRED" .
 
 

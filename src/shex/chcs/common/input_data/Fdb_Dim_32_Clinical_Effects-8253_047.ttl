@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8253_047-1> a chcs:Fdb_Dim_32_Clinical_Effects-8253_047 ;
+<http://hokukahu.com/systems/chcs-1/8253_047-1> a chcss:Fdb_Dim_32_Clinical_Effects-8253_047 ;
     rdfs:label "ADD" ;
-    chcs:adiefftc-8253_047 "ADD" ;
-    chcs:adiefftxt-8253_047 "Additive side effects from both drugs" ;
-    chcs:chcs_type "chcss:Fdb_Dim_32_Clinical_Effects-8253_047" ;
-    chcs:identifier "8253_047-1" .
+    chcss:adiefftc-8253_047 "ADD" ;
+    chcss:adiefftxt-8253_047 "Additive side effects from both drugs" ;
+    chcss:chcs_type "chcss:Fdb_Dim_32_Clinical_Effects-8253_047" ;
+    chcss:identifier "8253_047-1" .
 
 

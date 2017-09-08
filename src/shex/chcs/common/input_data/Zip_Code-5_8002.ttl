@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,17 +6,17 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/5_8002-1> a chcs:Zip_Code-5_8002 ;
+<http://hokukahu.com/systems/chcs-1/5_8002-1> a chcss:Zip_Code-5_8002 ;
     rdfs:label "00401" ;
-    chcs:city-5_8002 "PLEASANTVILLE" ;
-    chcs:chcs_type "chcss:Zip_Code-5_8002" ;
-    chcs:code-5_8002 "00401" ;
-    chcs:dba_inactive_flag-5_8002 "INACTIVE" ;
-    chcs:deactivation_date-5_8002 "1990-01-01"^^xsd:date ;
-    chcs:identifier "5_8002-1" ;
-    chcs:state-5_8002 <http://hokukahu.com/systems/chcs-1/5-36> .
+    chcss:city-5_8002 "PLEASANTVILLE" ;
+    chcss:chcs_type "chcss:Zip_Code-5_8002" ;
+    chcss:code-5_8002 "00401" ;
+    chcss:dba_inactive_flag-5_8002 "INACTIVE" ;
+    chcss:deactivation_date-5_8002 "1990-01-01"^^xsd:date ;
+    chcss:identifier "5_8002-1" ;
+    chcss:state-5_8002 <http://hokukahu.com/systems/chcs-1/5-36> .
 
 <http://hokukahu.com/systems/chcs-1/5-36> rdfs:label "NEW YORK" ;
-    chcs:identifier "5-36" .
+    chcss:identifier "5-36" .
 
 

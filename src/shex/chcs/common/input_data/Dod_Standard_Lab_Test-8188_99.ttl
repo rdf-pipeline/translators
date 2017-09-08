@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,18 +6,18 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8188_99-1> a chcs:Dod_Standard_Lab_Test-8188_99 ;
+<http://hokukahu.com/systems/chcs-1/8188_99-1> a chcss:Dod_Standard_Lab_Test-8188_99 ;
     rdfs:label "1,1,1-TRICHLOROETHANE" ;
-    chcs:chcs_type "chcss:Dod_Standard_Lab_Test-8188_99" ;
-    chcs:identifier "8188_99-1" ;
-    chcs:loinc_component_analyte_name-8188_99 <http://hokukahu.com/systems/chcs-1/8188_1-65> ;
-    chcs:single_panel-8188_99 "SINGLE" ;
-    chcs:subscript-8188_99 "CLINICAL CHEMISTRY" ;
-    chcs:test_code-8188_99 "1" ;
-    chcs:test_name-8188_99 "1,1,1-TRICHLOROETHANE" ;
-    chcs:test_print_name-8188_99 "1,1,1-TRICHLORO" .
+    chcss:chcs_type "chcss:Dod_Standard_Lab_Test-8188_99" ;
+    chcss:identifier "8188_99-1" ;
+    chcss:loinc_component_analyte_name-8188_99 <http://hokukahu.com/systems/chcs-1/8188_1-65> ;
+    chcss:single_panel-8188_99 "SINGLE" ;
+    chcss:subscript-8188_99 "CLINICAL CHEMISTRY" ;
+    chcss:test_code-8188_99 "1" ;
+    chcss:test_name-8188_99 "1,1,1-TRICHLOROETHANE" ;
+    chcss:test_print_name-8188_99 "1,1,1-TRICHLORO" .
 
 <http://hokukahu.com/systems/chcs-1/8188_1-65> rdfs:label "1,1,1-TRICHLOROETHANE" ;
-    chcs:identifier "8188_1-65" .
+    chcss:identifier "8188_1-65" .
 
 

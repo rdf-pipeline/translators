@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,10 +6,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8712-1> a chcs:Blood_Type-8712 ;
+<http://hokukahu.com/systems/chcs-1/8712-1> a chcss:Blood_Type-8712 ;
     rdfs:label "A POS" ;
-    chcs:blood_type-8712 "A POS" ;
-    chcs:chcs_type "chcss:Blood_Type-8712" ;
-    chcs:identifier "8712-1" .
+    chcss:blood_type-8712 "A POS" ;
+    chcss:chcs_type "chcss:Blood_Type-8712" ;
+    chcss:identifier "8712-1" .
 
 

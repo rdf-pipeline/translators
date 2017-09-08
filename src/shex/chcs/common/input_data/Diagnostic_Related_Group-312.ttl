@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,12 +6,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/312-1> a chcs:Diagnostic_Related_Group-312 ;
+<http://hokukahu.com/systems/chcs-1/312-1> a chcss:Diagnostic_Related_Group-312 ;
     rdfs:label "10" ;
-    chcs:chcs_type "chcss:Diagnostic_Related_Group-312" ;
-    chcs:drg_code-312 "10" ;
-    chcs:drg_description-312 "NERVOUS SYSTEM NEOPLASMS W CC" ;
-    chcs:identifier "312-1" ;
-    chcs:relative_weight-312 "1.4683" .
+    chcss:chcs_type "chcss:Diagnostic_Related_Group-312" ;
+    chcss:drg_code-312 "10" ;
+    chcss:drg_description-312 "NERVOUS SYSTEM NEOPLASMS W CC" ;
+    chcss:identifier "312-1" ;
+    chcss:relative_weight-312 "1.4683" .
 
 

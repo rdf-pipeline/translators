@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/102_1-1> a chcs:Order_Warnings-102_1 ;
+<http://hokukahu.com/systems/chcs-1/102_1-1> a chcss:Order_Warnings-102_1 ;
     rdfs:label "DRUG-DRUG INTERACTION" ;
-    chcs:chcs_type "chcss:Order_Warnings-102_1" ;
-    chcs:identifier "102_1-1" ;
-    chcs:message_text-102_1 "W !!,\"This order represents a potential drug-drug interaction.\"" ;
-    chcs:name-102_1 "DRUG-DRUG INTERACTION" .
+    chcss:chcs_type "chcss:Order_Warnings-102_1" ;
+    chcss:identifier "102_1-1" ;
+    chcss:message_text-102_1 "W !!,\"This order represents a potential drug-drug interaction.\"" ;
+    chcss:name-102_1 "DRUG-DRUG INTERACTION" .
 
 

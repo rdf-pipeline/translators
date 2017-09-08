@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,9 +6,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8154_3-2> a chcs:Anesthesia_Rate-8154_3 ;
+<http://hokukahu.com/systems/chcs-1/8154_3-2> a chcss:Anesthesia_Rate-8154_3 ;
     rdfs:label "00102" ;
-    chcs:anesthesia_rate_effective_date-8154_3 <http://hokukahu.com/systems/chcs-1/8154_31-6869669_2>,
+    chcss:anesthesia_rate_effective_date-8154_3 <http://hokukahu.com/systems/chcs-1/8154_31-6869669_2>,
         <http://hokukahu.com/systems/chcs-1/8154_31-6909299_2>,
         <http://hokukahu.com/systems/chcs-1/8154_31-6919097_2>,
         <http://hokukahu.com/systems/chcs-1/8154_31-6929370_2>,
@@ -17,82 +17,82 @@
         <http://hokukahu.com/systems/chcs-1/8154_31-6958986_2>,
         <http://hokukahu.com/systems/chcs-1/8154_31-6969484_2>,
         <http://hokukahu.com/systems/chcs-1/8154_31-6978998_2> ;
-    chcs:chcs_type "chcss:Anesthesia_Rate-8154_3" ;
-    chcs:cpt_code-8154_3 <http://hokukahu.com/systems/chcs-1/8151-7202> ;
-    chcs:identifier "8154_3-2" .
+    chcss:chcs_type "chcss:Anesthesia_Rate-8154_3" ;
+    chcss:cpt_code-8154_3 <http://hokukahu.com/systems/chcs-1/8151-7202> ;
+    chcss:identifier "8154_3-2" .
 
 <http://hokukahu.com/systems/chcs-1/8151-7202> rdfs:label "00102" ;
-    chcs:identifier "8151-7202" .
+    chcss:identifier "8151-7202" .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6869669_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6869669_2" ;
-    chcs:rate-8154_31 "247.27" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6869669_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6869669_2" ;
+    chcss:rate-8154_31 "247.27" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6909299_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6909299_2" ;
-    chcs:rate-8154_31 "1162" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6909299_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6909299_2" ;
+    chcss:rate-8154_31 "1162" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6919097_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6919097_2" ;
-    chcs:rate-8154_31 "1006" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6919097_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6919097_2" ;
+    chcss:rate-8154_31 "1006" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6929370_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6929370_2" ;
-    chcs:rate-8154_31 "886" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6929370_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6929370_2" ;
+    chcss:rate-8154_31 "886" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6939384_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6939384_2" ;
-    chcs:rate-8154_31 "795" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6939384_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6939384_2" ;
+    chcss:rate-8154_31 "795" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6949079_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6949079_2" ;
-    chcs:rate-8154_31 "749" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6949079_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6949079_2" ;
+    chcss:rate-8154_31 "749" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6958986_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6958986_2" ;
-    chcs:rate-8154_31 "731" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6958986_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6958986_2" ;
+    chcss:rate-8154_31 "731" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6969484_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6969484_2" ;
-    chcs:rate-8154_31 "174" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6969484_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6969484_2" ;
+    chcss:rate-8154_31 "174" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
-<http://hokukahu.com/systems/chcs-1/8154_31-6978998_2> a chcs:Anesthesia_Rate_Effective_Date-8154_31 ;
-    chcs:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
-    chcs:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
-    chcs:identifier "8154_31-6978998_2" ;
-    chcs:rate-8154_31 "150" ;
-    chcs:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
+<http://hokukahu.com/systems/chcs-1/8154_31-6978998_2> a chcss:Anesthesia_Rate_Effective_Date-8154_31 ;
+    chcss:anesth_end_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:anesth_rate_effective_date-8154_31 "1990-01-01"^^xsd:date ;
+    chcss:chcs_type "chcss:Anesthesia_Rate_Effective_Date-8154_31" ;
+    chcss:identifier "8154_31-6978998_2" ;
+    chcss:rate-8154_31 "150" ;
+    chcss:source_effective_date-8154_31 "1990-01-01"^^xsd:date .
 
 

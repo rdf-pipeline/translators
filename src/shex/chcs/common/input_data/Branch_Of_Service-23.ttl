@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,16 +6,16 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/23-1> a chcs:Branch_Of_Service-23 ;
+<http://hokukahu.com/systems/chcs-1/23-1> a chcss:Branch_Of_Service-23 ;
     rdfs:label "ARMY" ;
-    chcs:abbreviation-23 "ARMY" ;
-    chcs:chcs_type "chcss:Branch_Of_Service-23" ;
-    chcs:code-23 "A" ;
-    chcs:deers_elig_code-23 "A" ;
-    chcs:deers_pit_code-23 "A" ;
-    chcs:identifier "23-1" ;
-    chcs:name-23 "ARMY" ;
-    chcs:sidr_svc_flag-23 "A" ;
-    chcs:single_svc_flag-23 true .
+    chcss:abbreviation-23 "ARMY" ;
+    chcss:chcs_type "chcss:Branch_Of_Service-23" ;
+    chcss:code-23 "A" ;
+    chcss:deers_elig_code-23 "A" ;
+    chcss:deers_pit_code-23 "A" ;
+    chcss:identifier "23-1" ;
+    chcss:name-23 "ARMY" ;
+    chcss:sidr_svc_flag-23 "A" ;
+    chcss:single_svc_flag-23 true .
 
 

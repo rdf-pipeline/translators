@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/72-1> a chcs:Examination_Status-72 ;
+<http://hokukahu.com/systems/chcs-1/72-1> a chcss:Examination_Status-72 ;
     rdfs:label "ORDERED" ;
-    chcs:chcs_type "chcss:Examination_Status-72" ;
-    chcs:identifier "72-1" ;
-    chcs:order-72 "1" ;
-    chcs:status-72 "ORDERED" .
+    chcss:chcs_type "chcss:Examination_Status-72" ;
+    chcss:identifier "72-1" ;
+    chcss:order-72 "1" ;
+    chcss:status-72 "ORDERED" .
 
 

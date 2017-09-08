@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,12 +6,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/31-793> a chcs:Disability_Condition-31 ;
+<http://hokukahu.com/systems/chcs-1/31-793> a chcss:Disability_Condition-31 ;
     rdfs:label "100" ;
-    chcs:chcs_type "chcss:Disability_Condition-31" ;
-    chcs:disability_code-31 "A" ;
-    chcs:dx_code-31 "100" ;
-    chcs:identifier "31-793" ;
-    chcs:name-31 "ATROPHY OF UPPER EXTREMITY,RIGHT" .
+    chcss:chcs_type "chcss:Disability_Condition-31" ;
+    chcss:disability_code-31 "A" ;
+    chcss:dx_code-31 "100" ;
+    chcss:identifier "31-793" ;
+    chcss:name-31 "ATROPHY OF UPPER EXTREMITY,RIGHT" .
 
 

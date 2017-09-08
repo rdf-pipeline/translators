@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8106-2> a chcs:Casualty_Prognosis-8106 ;
+<http://hokukahu.com/systems/chcs-1/8106-2> a chcss:Casualty_Prognosis-8106 ;
     rdfs:label "CONDITION IMPROVED" ;
-    chcs:chcs_type "chcss:Casualty_Prognosis-8106" ;
-    chcs:code-8106 "CI" ;
-    chcs:identifier "8106-2" ;
-    chcs:name-8106 "CONDITION IMPROVED" .
+    chcss:chcs_type "chcss:Casualty_Prognosis-8106" ;
+    chcss:code-8106 "CI" ;
+    chcss:identifier "8106-2" ;
+    chcss:name-8106 "CONDITION IMPROVED" .
 
 

@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8253_046-1> a chcs:Fdb_Dim_32_Reference_Cat_Desc-8253_046 ;
+<http://hokukahu.com/systems/chcs-1/8253_046-1> a chcss:Fdb_Dim_32_Reference_Cat_Desc-8253_046 ;
     rdfs:label "1" ;
-    chcs:chcs_type "chcss:Fdb_Dim_32_Reference_Cat_Desc-8253_046" ;
-    chcs:iamtrefcat-8253_046 "1" ;
-    chcs:iamtrefcatd-8253_046 "MANUFACTURER INFORMATION" ;
-    chcs:identifier "8253_046-1" .
+    chcss:chcs_type "chcss:Fdb_Dim_32_Reference_Cat_Desc-8253_046" ;
+    chcss:iamtrefcat-8253_046 "1" ;
+    chcss:iamtrefcatd-8253_046 "MANUFACTURER INFORMATION" ;
+    chcss:identifier "8253_046-1" .
 
 

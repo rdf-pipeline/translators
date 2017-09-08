@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,17 +6,17 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8254_01-1000> a chcs:Allergies_Selections-8254_01 ;
+<http://hokukahu.com/systems/chcs-1/8254_01-1000> a chcss:Allergies_Selections-8254_01 ;
     rdfs:label "PENICILLINS" ;
-    chcs:allergy_definitions-8254_01 <http://hokukahu.com/systems/chcs-1/8254_011-4849> ;
-    chcs:alltype-8254_01 "Class" ;
-    chcs:bn_gnn-8254_01 "PENICILLINS" ;
-    chcs:chcs_type "chcss:Allergies_Selections-8254_01" ;
-    chcs:duplicate_brand_name-8254_01 "Duplicate" ;
-    chcs:expanded_gnn-8254_01 "PENICILLINS" ;
-    chcs:identifier "8254_01-1000" .
+    chcss:allergy_definitions-8254_01 <http://hokukahu.com/systems/chcs-1/8254_011-4849> ;
+    chcss:alltype-8254_01 "Class" ;
+    chcss:bn_gnn-8254_01 "PENICILLINS" ;
+    chcss:chcs_type "chcss:Allergies_Selections-8254_01" ;
+    chcss:duplicate_brand_name-8254_01 "Duplicate" ;
+    chcss:expanded_gnn-8254_01 "PENICILLINS" ;
+    chcss:identifier "8254_01-1000" .
 
 <http://hokukahu.com/systems/chcs-1/8254_011-4849> rdfs:label "PENICILLINS; CEPHALOSPORINS; CARBAPENEM" ;
-    chcs:identifier "8254_011-4849" .
+    chcss:identifier "8254_011-4849" .
 
 

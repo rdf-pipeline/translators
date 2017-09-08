@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,12 +6,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/111-1> a chcs:Origin_Of_Order-111 ;
+<http://hokukahu.com/systems/chcs-1/111-1> a chcss:Origin_Of_Order-111 ;
     rdfs:label "COPATH_AP COTS" ;
-    chcs:chcs_type "chcss:Origin_Of_Order-111" ;
-    chcs:code-111 "APCOTS" ;
-    chcs:description-111 "Off-board Anatomic Pathology System." ;
-    chcs:identifier "111-1" ;
-    chcs:name-111 "COPATH/AP COTS" .
+    chcss:chcs_type "chcss:Origin_Of_Order-111" ;
+    chcss:code-111 "APCOTS" ;
+    chcss:description-111 "Off-board Anatomic Pathology System." ;
+    chcss:identifier "111-1" ;
+    chcss:name-111 "COPATH/AP COTS" .
 
 

@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,16 +6,16 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/44_5-1> a chcs:Appointment_Type-44_5 ;
+<http://hokukahu.com/systems/chcs-1/44_5-1> a chcss:Appointment_Type-44_5 ;
     rdfs:label "RAD*" ;
-    chcs:are_appt_slots_searchable-44_5 true ;
-    chcs:category-44_5 "FOLLOW-UP" ;
-    chcs:chcs_type "chcss:Appointment_Type-44_5" ;
-    chcs:description-44_5 "RAD APPOINTMENT" ;
-    chcs:identifier "44_5-1" ;
-    chcs:medical_appointment_type-44_5 true ;
-    chcs:name-44_5 "RAD*" ;
-    chcs:nonmedical_appointment_type-44_5 true ;
-    chcs:status-44_5 "INACTIVE" .
+    chcss:are_appt_slots_searchable-44_5 true ;
+    chcss:category-44_5 "FOLLOW-UP" ;
+    chcss:chcs_type "chcss:Appointment_Type-44_5" ;
+    chcss:description-44_5 "RAD APPOINTMENT" ;
+    chcss:identifier "44_5-1" ;
+    chcss:medical_appointment_type-44_5 true ;
+    chcss:name-44_5 "RAD*" ;
+    chcss:nonmedical_appointment_type-44_5 true ;
+    chcss:status-44_5 "INACTIVE" .
 
 

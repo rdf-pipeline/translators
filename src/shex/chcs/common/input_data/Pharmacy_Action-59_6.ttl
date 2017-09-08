@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,13 +6,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/59_6-1> a chcs:Pharmacy_Action-59_6 ;
+<http://hokukahu.com/systems/chcs-1/59_6-1> a chcss:Pharmacy_Action-59_6 ;
     rdfs:label "PRF" ;
-    chcs:abbreviated_name-59_6 "PRF" ;
-    chcs:ancillary-59_6 "IV" ;
-    chcs:chcs_type "chcss:Pharmacy_Action-59_6" ;
-    chcs:identifier "59_6-1" ;
-    chcs:name-59_6 "Expanded Profile" ;
-    chcs:number-59_6 "1" .
+    chcss:abbreviated_name-59_6 "PRF" ;
+    chcss:ancillary-59_6 "IV" ;
+    chcss:chcs_type "chcss:Pharmacy_Action-59_6" ;
+    chcss:identifier "59_6-1" ;
+    chcss:name-59_6 "Expanded Profile" ;
+    chcss:number-59_6 "1" .
 
 

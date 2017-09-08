@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8110-1> a chcs:Family_Member_Prefix-8110 ;
+<http://hokukahu.com/systems/chcs-1/8110-1> a chcss:Family_Member_Prefix-8110 ;
     rdfs:label "01" ;
-    chcs:chcs_type "chcss:Family_Member_Prefix-8110" ;
-    chcs:description-8110 "OLDEST DEPENDENT CHILD OF SPONSOR" ;
-    chcs:fmp-8110 "01" ;
-    chcs:identifier "8110-1" .
+    chcss:chcs_type "chcss:Family_Member_Prefix-8110" ;
+    chcss:description-8110 "OLDEST DEPENDENT CHILD OF SPONSOR" ;
+    chcss:fmp-8110 "01" ;
+    chcss:identifier "8110-1" .
 
 

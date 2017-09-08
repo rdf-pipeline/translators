@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,18 +6,18 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8410-1> a chcs:Diet-8410 ;
+<http://hokukahu.com/systems/chcs-1/8410-1> a chcss:Diet-8410 ;
     rdfs:label "REGULAR" ;
-    chcs:abbrev-8410 "REG" ;
-    chcs:alternate_name-8410 "GENERAL",
+    chcss:abbrev-8410 "REG" ;
+    chcss:alternate_name-8410 "GENERAL",
         "HOUSE",
         "LACTATION",
         "PREGNANCY",
         "REG" ;
-    chcs:chcs_type "chcss:Diet-8410" ;
-    chcs:description-8410 "This diet is designed to attain and maintain optimal nutritional status inpersons who do not require a therapeutic diet.  Based on 1990 DietaryGuidelines For Americans, it is used to promote optimal health, and reducerisks for development of major, chronic nutrition-related diseases.  Aselective menu is provided.  All foods are allowed.  Nutritional adequacyis dependent on individual food choices and adherence to recommendeddietary guidelines.  This diet is appropriate for pregnancy, lactation, andostomy. " ;
-    chcs:identifier "8410-1" ;
-    chcs:name-8410 "REGULAR" ;
-    chcs:standard_entry-8410 "STANDARD ENTRY" .
+    chcss:chcs_type "chcss:Diet-8410" ;
+    chcss:description-8410 "This diet is designed to attain and maintain optimal nutritional status inpersons who do not require a therapeutic diet.  Based on 1990 DietaryGuidelines For Americans, it is used to promote optimal health, and reducerisks for development of major, chronic nutrition-related diseases.  Aselective menu is provided.  All foods are allowed.  Nutritional adequacyis dependent on individual food choices and adherence to recommendeddietary guidelines.  This diet is appropriate for pregnancy, lactation, andostomy. " ;
+    chcss:identifier "8410-1" ;
+    chcss:name-8410 "REGULAR" ;
+    chcss:standard_entry-8410 "STANDARD ENTRY" .
 
 

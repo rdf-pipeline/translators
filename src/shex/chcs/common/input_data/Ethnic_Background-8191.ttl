@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8191-1> a chcs:Ethnic_Background-8191 ;
+<http://hokukahu.com/systems/chcs-1/8191-1> a chcss:Ethnic_Background-8191 ;
     rdfs:label "1" ;
-    chcs:chcs_type "chcss:Ethnic_Background-8191" ;
-    chcs:code-8191 "1" ;
-    chcs:description-8191 "HISPANIC" ;
-    chcs:identifier "8191-1" .
+    chcss:chcs_type "chcss:Ethnic_Background-8191" ;
+    chcss:code-8191 "1" ;
+    chcss:description-8191 "HISPANIC" ;
+    chcss:identifier "8191-1" .
 
 

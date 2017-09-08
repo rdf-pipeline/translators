@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,13 +6,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/44_7-1> a chcs:Appointment_Detail_Codes-44_7 ;
+<http://hokukahu.com/systems/chcs-1/44_7-1> a chcss:Appointment_Detail_Codes-44_7 ;
     rdfs:label "PPD+" ;
-    chcs:chcs_type "chcss:Appointment_Detail_Codes-44_7" ;
-    chcs:code-44_7 "PPD+" ;
-    chcs:description-44_7 "POSITIVE PURIFIED PROTEIN DERIVATIVE (PPD) OR OTHER TUBERCULOSIS TEST EVALS" ;
-    chcs:identifier "44_7-1" ;
-    chcs:status-44_7 "ACTIVE" ;
-    chcs:uneditable-44_7 true .
+    chcss:chcs_type "chcss:Appointment_Detail_Codes-44_7" ;
+    chcss:code-44_7 "PPD+" ;
+    chcss:description-44_7 "POSITIVE PURIFIED PROTEIN DERIVATIVE (PPD) OR OTHER TUBERCULOSIS TEST EVALS" ;
+    chcss:identifier "44_7-1" ;
+    chcss:status-44_7 "ACTIVE" ;
+    chcss:uneditable-44_7 true .
 
 

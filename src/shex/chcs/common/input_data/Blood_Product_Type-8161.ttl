@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,13 +6,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8161-1> a chcs:Blood_Product_Type-8161 ;
+<http://hokukahu.com/systems/chcs-1/8161-1> a chcss:Blood_Product_Type-8161 ;
     rdfs:label "3AX" ;
-    chcs:chcs_type "chcss:Blood_Product_Type-8161" ;
-    chcs:code-8161 "3AX" ;
-    chcs:dba_inactive_flag-8161 "INACTIVE" ;
-    chcs:deactivation_date-8161 "1990-01-01"^^xsd:date ;
-    chcs:description-8161 "WHOLE BLOOD" ;
-    chcs:identifier "8161-1" .
+    chcss:chcs_type "chcss:Blood_Product_Type-8161" ;
+    chcss:code-8161 "3AX" ;
+    chcss:dba_inactive_flag-8161 "INACTIVE" ;
+    chcss:deactivation_date-8161 "1990-01-01"^^xsd:date ;
+    chcss:description-8161 "WHOLE BLOOD" ;
+    chcss:identifier "8161-1" .
 
 

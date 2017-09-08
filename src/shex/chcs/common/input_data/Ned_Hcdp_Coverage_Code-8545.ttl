@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,11 +6,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/8545-1> a chcs:Ned_Hcdp_Coverage_Code-8545 ;
+<http://hokukahu.com/systems/chcs-1/8545-1> a chcss:Ned_Hcdp_Coverage_Code-8545 ;
     rdfs:label "001" ;
-    chcs:chcs_type "chcss:Ned_Hcdp_Coverage_Code-8545" ;
-    chcs:code-8545 "001" ;
-    chcs:identifier "8545-1" ;
-    chcs:text-8545 "DIRECT CARE FOR ACTIVE DUTY SPONSORS" .
+    chcss:chcs_type "chcss:Ned_Hcdp_Coverage_Code-8545" ;
+    chcss:code-8545 "001" ;
+    chcss:identifier "8545-1" ;
+    chcss:text-8545 "DIRECT CARE FOR ACTIVE DUTY SPONSORS" .
 
 

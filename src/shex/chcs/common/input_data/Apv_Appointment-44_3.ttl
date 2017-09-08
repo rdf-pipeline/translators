@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,61 +6,61 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/44_3-6> a chcs:Apv_Appointment-44_3 ;
+<http://hokukahu.com/systems/chcs-1/44_3-6> a chcss:Apv_Appointment-44_3 ;
     rdfs:label "199809080006" ;
-    chcs:apv_tracking_number-44_3 "199809080006" ;
-    chcs:chcs_type "chcss:Apv_Appointment-44_3" ;
-    chcs:creation_date_time-44_3 "1990-01-01T00:00:00"^^xsd:dateTime ;
-    chcs:creation_user-44_3 <http://hokukahu.com/systems/chcs-1/3-472> ;
-    chcs:disposition_date_time-44_3 "1990-01-01T00:00:00"^^xsd:dateTime ;
-    chcs:division-44_3 <http://hokukahu.com/systems/chcs-1/40_8-1> ;
-    chcs:hospital_location-44_3 <http://hokukahu.com/systems/chcs-1/44-1192> ;
-    chcs:identifier "44_3-6" ;
-    chcs:order-44_3 <http://hokukahu.com/systems/chcs-1/101-3862523> ;
-    chcs:patient_appointment_ien-44_3 <http://hokukahu.com/systems/chcs-1/44_2-1936098> ;
-    chcs:patient_ien-44_3 <http://hokukahu.com/systems/chcs-1/2-373901> ;
-    chcs:postop_location-44_3 <http://hokukahu.com/systems/chcs-1/44_34-1_6> ;
-    chcs:preop_location-44_3 <http://hokukahu.com/systems/chcs-1/44_31-1_6> .
+    chcss:apv_tracking_number-44_3 "199809080006" ;
+    chcss:chcs_type "chcss:Apv_Appointment-44_3" ;
+    chcss:creation_date_time-44_3 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:creation_user-44_3 <http://hokukahu.com/systems/chcs-1/3-472> ;
+    chcss:disposition_date_time-44_3 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:division-44_3 <http://hokukahu.com/systems/chcs-1/40_8-1> ;
+    chcss:hospital_location-44_3 <http://hokukahu.com/systems/chcs-1/44-1192> ;
+    chcss:identifier "44_3-6" ;
+    chcss:order-44_3 <http://hokukahu.com/systems/chcs-1/101-3862523> ;
+    chcss:patient_appointment_ien-44_3 <http://hokukahu.com/systems/chcs-1/44_2-1936098> ;
+    chcss:patient_ien-44_3 <http://hokukahu.com/systems/chcs-1/2-373901> ;
+    chcss:postop_location-44_3 <http://hokukahu.com/systems/chcs-1/44_34-1_6> ;
+    chcss:preop_location-44_3 <http://hokukahu.com/systems/chcs-1/44_31-1_6> .
 
 <http://hokukahu.com/systems/chcs-1/101-3862523> rdfs:label "980908-01797" ;
-    chcs:identifier "101-3862523" .
+    chcss:identifier "101-3862523" .
 
 <http://hokukahu.com/systems/chcs-1/2-373901> rdfs:label "TOM CAT" ;
-    chcs:identifier "2-373901" .
+    chcss:identifier "2-373901" .
 
 <http://hokukahu.com/systems/chcs-1/3-472> rdfs:label "BIRD,TWEEDY" ;
-    chcs:identifier "3-472" .
+    chcss:identifier "3-472" .
 
 <http://hokukahu.com/systems/chcs-1/40_8-1> rdfs:label "NH CAMELOT, 100H" ;
-    chcs:identifier "40_8-1" .
+    chcss:identifier "40_8-1" .
 
 <http://hokukahu.com/systems/chcs-1/44_2-1936098> rdfs:label "CAT,TOM" ;
-    chcs:identifier "44_2-1936098" .
+    chcss:identifier "44_2-1936098" .
 
-<http://hokukahu.com/systems/chcs-1/44_31-1_6> a chcs:PreOp_Location-44_31 ;
-    chcs:appointment_status-44_31 <http://hokukahu.com/systems/chcs-1/8514-5> ;
-    chcs:arrival_time-44_31 "1990-01-01T00:00:00"^^xsd:dateTime ;
-    chcs:chcs_type "chcss:PreOp_Location-44_31" ;
-    chcs:identifier "44_31-1_6" ;
-    chcs:preop_location-44_31 <http://hokukahu.com/systems/chcs-1/44-1192> ;
-    chcs:start_date_time-44_31 <http://hokukahu.com/systems/chcs-1/44_33-1_1_6> .
+<http://hokukahu.com/systems/chcs-1/44_31-1_6> a chcss:PreOp_Location-44_31 ;
+    chcss:appointment_status-44_31 <http://hokukahu.com/systems/chcs-1/8514-5> ;
+    chcss:arrival_time-44_31 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:chcs_type "chcss:PreOp_Location-44_31" ;
+    chcss:identifier "44_31-1_6" ;
+    chcss:preop_location-44_31 <http://hokukahu.com/systems/chcs-1/44-1192> ;
+    chcss:start_date_time-44_31 <http://hokukahu.com/systems/chcs-1/44_33-1_1_6> .
 
-<http://hokukahu.com/systems/chcs-1/44_33-1_1_6> a chcs:Start_Date_Time-44_33 ;
-    chcs:chcs_type "chcss:Start_Date_Time-44_33" ;
-    chcs:identifier "44_33-1_1_6" ;
-    chcs:mos-44_33 "10" ;
-    chcs:start_date_time-44_33 "1990-01-01T00:00:00"^^xsd:dateTime ;
-    chcs:stop_date_time-44_33 "1990-01-01T00:00:00"^^xsd:dateTime .
+<http://hokukahu.com/systems/chcs-1/44_33-1_1_6> a chcss:Start_Date_Time-44_33 ;
+    chcss:chcs_type "chcss:Start_Date_Time-44_33" ;
+    chcss:identifier "44_33-1_1_6" ;
+    chcss:mos-44_33 "10" ;
+    chcss:start_date_time-44_33 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:stop_date_time-44_33 "1990-01-01T00:00:00"^^xsd:dateTime .
 
-<http://hokukahu.com/systems/chcs-1/44_34-1_6> a chcs:PostOp_Location-44_34 ;
-    chcs:chcs_type "chcss:PostOp_Location-44_34" ;
-    chcs:identifier "44_34-1_6" ;
-    chcs:postop_location-44_34 <http://hokukahu.com/systems/chcs-1/44-1192> .
+<http://hokukahu.com/systems/chcs-1/44_34-1_6> a chcss:PostOp_Location-44_34 ;
+    chcss:chcs_type "chcss:PostOp_Location-44_34" ;
+    chcss:identifier "44_34-1_6" ;
+    chcss:postop_location-44_34 <http://hokukahu.com/systems/chcs-1/44-1192> .
 
 <http://hokukahu.com/systems/chcs-1/8514-5> rdfs:label "WALK-IN" ;
-    chcs:identifier "8514-5" .
+    chcss:identifier "8514-5" .
 
 <http://hokukahu.com/systems/chcs-1/44-1192> rdfs:label "APV 12E DENTAL CARE" ;
-    chcs:identifier "44-1192" .
+    chcss:identifier "44-1192" .
 
 

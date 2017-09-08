@@ -1,4 +1,4 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
 @prefix entity: <http://hokukahu.com/systems/chcs-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,21 +6,21 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://hokukahu.com/systems/chcs-1/62-1> a chcs:Collection_Sample-62 ;
+<http://hokukahu.com/systems/chcs-1/62-1> a chcss:Collection_Sample-62 ;
     rdfs:label "BLOOD" ;
-    chcs:chcs_type "chcss:Collection_Sample-62" ;
-    chcs:default_specimen-62 <http://hokukahu.com/systems/chcs-1/61-72> ;
-    chcs:identifier "62-1" ;
-    chcs:name-62 "BLOOD" ;
-    chcs:snomed_code-62 <http://hokukahu.com/systems/chcs-1/8188_12-256463> ;
-    chcs:synonym-62 "MARBLE TOP",
+    chcss:chcs_type "chcss:Collection_Sample-62" ;
+    chcss:default_specimen-62 <http://hokukahu.com/systems/chcs-1/61-72> ;
+    chcss:identifier "62-1" ;
+    chcss:name-62 "BLOOD" ;
+    chcss:snomed_code-62 <http://hokukahu.com/systems/chcs-1/8188_12-256463> ;
+    chcss:synonym-62 "MARBLE TOP",
         "TIGER TOP" ;
-    chcs:tube_top_color-62 "MARBLE" .
+    chcss:tube_top_color-62 "MARBLE" .
 
 <http://hokukahu.com/systems/chcs-1/61-72> rdfs:label "SERUM" ;
-    chcs:identifier "61-72" .
+    chcss:identifier "61-72" .
 
 <http://hokukahu.com/systems/chcs-1/8188_12-256463> rdfs:label "87612001" ;
-    chcs:identifier "8188_12-256463" .
+    chcss:identifier "8188_12-256463" .
 
 
