@@ -1,0 +1,86 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "3-0",
+      "type": "chcss:User-3",
+      "label": "BANNER,BRUCE",
+      "name-3": "BANNER,BRUCE",
+      "initial-3": "BB",
+      "termination_date-3": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      },
+      "delete_mailbox_at_termination-3": true,
+      "delete_keys_at_termination-3": true,
+      "delete_groups_at_termination-3": true,
+      "delete_desktop_at_termination-3": true,
+      "date_verify_code_last_changed-3": "12345,67890",
+      "nick_name-3": "HULK",
+      "mail_name-3": "BRUCE.BANNER",
+      "default_division-3": {
+        "id": "40_8-1",
+        "label": "NH XANADU, 100H"
+      },
+      "date_entered-3": {
+        "value": "1990-01-01",
+        "type": "xsd:date"
+      },
+      "creator-3": {
+        "id": "3-0",
+        "label": "BANNER,BRUCE"
+      },
+      "multiple_signon-3": "1",
+      "auto_menu-3": "SCROLLING MENUS",
+      "timed_read__of_seconds-3": "99999",
+      "primary_menu_option-3": {
+        "id": "19-23",
+        "label": "XMUSER"
+      },
+      "timestamp-3": "23456,78901",
+      "screen_type-3": {
+        "id": "3_2-35",
+        "label": "C-VT320"
+      },
+      "telephone-3": "Unknown",
+      "secondary_menu_options-3": [
+        {
+          "id": "3_03-1_1",
+          "type": "chcss:Secondary_Menu_Options-3_03",
+          "secondary_menu_options-3_03": {
+            "id": "19-81",
+            "label": "ZTMMGR"
+          },
+          "synonym-3_03": "ZTM"
+        },
+        {
+          "id": "3_03-3_1",
+          "type": "chcss:Secondary_Menu_Options-3_03",
+          "secondary_menu_options-3_03": {
+            "id": "19-31",
+            "label": "XUPROG"
+          },
+          "synonym-3_03": "PM"
+        },
+        {
+          "id": "3_03-4_1",
+          "type": "chcss:Secondary_Menu_Options-3_03",
+          "secondary_menu_options-3_03": {
+            "id": "19-1756",
+            "label": "MERGE STATUS"
+          },
+          "synonym-3_03": "MST"
+        },
+        {
+          "id": "3_03-5_1",
+          "type": "chcss:Secondary_Menu_Options-3_03",
+          "secondary_menu_options-3_03": {
+            "id": "19-1772",
+            "label": "UNMERGE STATUS"
+          },
+          "synonym-3_03": "STA"
+        }
+      ]
+    }
+  ]
+}
