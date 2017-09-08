@@ -35,8 +35,8 @@ start=@<http://hokukahu.com/chcs/Additional_Medical_Treatment_Facility-8101_1>
        rdfs:label             xsd:string    %Map:{ location:zipcode_label %};
     }?;
 
-    chcss:ein_ssn_indicator-8101_1    xsd:string?      %Map:{ location:ein_ssn_indicator-8101_1 %};
-    chcss:provider_ein_ssn-8101_1     xsd:string?      %Map:{ location:provider_ein_ssn-8101_1 %};
+    chcss:ein_ssn_indicator-8101_1    xsd:string?      %Map:{ location:ein_ssn_indicator %};
+    chcss:provider_ein_ssn-8101_1     xsd:string?      %Map:{ location:provider_ein_ssn %};
 
     chcss:division-8101_1 {
        chcss:identifier                     xsd:string       %Map:{ location:division_id %};
