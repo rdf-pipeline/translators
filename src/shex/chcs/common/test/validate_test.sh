@@ -108,6 +108,8 @@ validateIt "Hospital_Location-44"                         "http://hokukahu.com/s
 validateIt "Kg_Provider_Role-100514"                      "http://hokukahu.com/systems/chcs-1/100514-1"
 validateIt "Ned_Hcdp_Coverage_Code-8545"                  "http://hokukahu.com/systems/chcs-1/8545-1"
 
+validateIt "Medication_Profile-8810_3"                    "http://hokukahu.com/systems/chcs-1/8810_3-1"
+
 validateIt "Order_Warnings-102_1"                         "http://hokukahu.com/systems/chcs-1/102_1-1"
 validateIt "Origin_Of_Order-111"                          "http://hokukahu.com/systems/chcs-1/111-1"
 
@@ -123,4 +125,4 @@ validateIt "User-3"                                       "http://hokukahu.com/s
 validateIt "Zip_Code-5_8002" "http://hokukahu.com/systems/chcs-1/5_8002-1"
 
 # clean up after success
-rm -rf ${WORK_DIR}
+# rm -rf ${WORK_DIR}

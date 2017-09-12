@@ -1,0 +1,51 @@
+# This CHCS schema lists the elements of a patient's medication profile, such as the
+# current medications, the medication start and stop dates, the order type, the
+# medication frequency and the duration, as well as the name of the HCP who is
+# ordering the medication.
+# 
+# CHCS schema documentation: 
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Medication_Profile-8810_3.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX medicationProfile: <urn:local:medicationProfile:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Medication_Profile-8810_3>
+
+<http://hokukahu.com/chcs/Medication_Profile-8810_3> {
+    chcss:identifier                     xsd:string     %Map:{ medicationProfile:id %};
+    chcss:chcs_type                      xsd:string?    %Map:{ medicationProfile:chcs_type %};
+    rdfs:label                           xsd:string     %Map:{ medicationProfile:label %};
+
+    chcss:medication-8810_3              xsd:string     %Map:{ medicationProfile:medication %};
+
+    chcss:ordering_hcp-8810_3            xsd:string     %Map:{ medicationProfile:ordering_hcp %};
+    chcss:order_type-8810_3 {
+       chcss:identifier                  xsd:string    %Map:{ medicationProfile:order_type_id %};
+       rdfs:label                        xsd:string    %Map:{ medicationProfile:order_type_label %};
+    };
+
+    chcss:start_date_time-8810_3         xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime   %Map:{ medicationProfile:start_date_time %};
+    chcss:stop_expiration_date-8810_3    xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime   %Map:{ medicationProfile:stop_expiration_date %};
+
+
+    chcss:sig-8810_3                     xsd:string     %Map:{ medicationProfile:sig %};
+
+    chcss:patient-8810_3 {
+       chcss:identifier                  xsd:string    %Map:{ medicationProfile:patient_id %};
+       rdfs:label                        xsd:string    %Map:{ medicationProfile:patient_label %};
+    };
+    chcss:patient_status-8810_3          xsd:string     %Map:{ medicationProfile:patient_status-8810_3 %};
+
+    chcss:encounter_episode-8810_3 {
+       chcss:identifier                  xsd:string    %Map:{ medicationProfile:encounter_episode_id %};
+       rdfs:label                        xsd:string    %Map:{ medicationProfile:encounter_episode_label %};
+    }?;
+}

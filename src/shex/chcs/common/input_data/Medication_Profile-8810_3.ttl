@@ -1,0 +1,28 @@
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/8810_3-1> a chcss:Medication_Profile-8810_3 ;
+    rdfs:label "ACETAMINOPHEN--PO 325MG TAB" ;
+    chcss:chcs_type "chcss:Medication_Profile-8810_3" ;
+    chcss:identifier "8810_3-1" ;
+    chcss:medication-8810_3 "ACETAMINOPHEN--PO 325MG TAB" ;
+    chcss:order_type-8810_3 <http://hokukahu.com/systems/chcs-1/102-9> ;
+    chcss:ordering_hcp-8810_3 "STRANGE,STEPHEN E" ;
+    chcss:patient-8810_3 <http://hokukahu.com/systems/chcs-1/2-12345> ;
+    chcss:patient_status-8810_3 "OUTPATIENT" ;
+    chcss:sig-8810_3 "RX: T1 TB QID PRN FP" ;
+    chcss:start_date_time-8810_3 "1994-08-29T09:21:00"^^xsd:dateTime ;
+    chcss:stop_expiration_date-8810_3 "1995-08-29"^^xsd:date .
+
+<http://hokukahu.com/systems/chcs-1/102-9> rdfs:label "RX" ;
+    chcss:identifier "102-9" .
+
+<http://hokukahu.com/systems/chcs-1/2-12345> rdfs:label "STRANGE,DONNA B" ;
+    chcss:identifier "2-12345" .
+
+

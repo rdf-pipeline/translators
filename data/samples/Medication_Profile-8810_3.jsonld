@@ -1,0 +1,30 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8810_3-1",
+      "type": "chcss:Medication_Profile-8810_3",
+      "label": "ACETAMINOPHEN--PO 325MG TAB",
+      "medication-8810_3": "ACETAMINOPHEN--PO 325MG TAB",
+      "patient-8810_3": {
+        "id": "2-12345",
+        "label": "STRANGE,DONNA B"
+      },
+      "start_date_time-8810_3": {
+        "value": "1994-08-29T09:21:00",
+        "type": "xsd:dateTime"
+      },
+      "stop_expiration_date-8810_3": {
+        "value": "1995-08-29",
+        "type": "xsd:date"
+      },
+      "ordering_hcp-8810_3": "STRANGE,STEPHEN E",
+      "patient_status-8810_3": "OUTPATIENT",
+      "order_type-8810_3": {
+        "id": "102-9",
+        "label": "RX"
+      },
+      "sig-8810_3": "RX: T1 TB QID PRN FP"
+    }
+  ]
+} 

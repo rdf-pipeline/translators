@@ -22,8 +22,8 @@ start=@<http://hokukahu.com/chcs/Fetal_Presentation_Type-8183>
     chcss:name-8183                  xsd:string     %Map:{ fetalPresentationType:name %};
     chcss:code-8183                  xsd:string     %Map:{ fetalPresentationType:code %};
 
-    chcss:dba_inactive_flag-5_8002   xsd:string?      %Map:{ fetalPresentationType:dba_inactive_flag %};
-    chcss:deactivation_date-5_8002   xsd:date or
+    chcss:dba_inactive_flag-8183     xsd:string?      %Map:{ fetalPresentationType:dba_inactive_flag %};
+    chcss:deactivation_date-8183     xsd:date or
                                      xsd:dateTime or
                                      xsd:datetime?    %Map:{ fetalPresentationType:deactivation_date %};
 }
