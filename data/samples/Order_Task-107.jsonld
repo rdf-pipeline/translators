@@ -1,0 +1,40 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
+  "@graph": [
+    {
+      "_id": "107-1",
+      "type": "chcss:Order_Task-107",
+      "label": "1990-01-01T00:00:00Z",
+      "date_time-107": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "order-107": {
+        "id": "101-1",
+        "label": "123456-00001"
+      },
+      "order_type-107": {
+        "id": "102-4",
+        "label": "LAB"
+      },
+      "task_status-107": "COMPLETE",
+      "task_completed-107": "COMPLETED",
+      "completion_date_time-107": {
+        "value": "1990-01-01T00:00:01",
+        "type": "xsd:dateTime"
+      },
+      "unmodifiable-107": "UNMODIFIABLE",
+      "tracking-107": "123456 CO 1",
+      "last_task-107": true,
+      "patient-107": {
+        "id": "0-000000",
+        "label": "PHANTOM,DANNY K"
+      },
+      "requesting_location-107": {
+        "id": "44-11",
+        "label": "LABORATORY 200H"
+      },
+      "result_reference-107": "CH;0000000.1234"
+    }
+  ]
+}

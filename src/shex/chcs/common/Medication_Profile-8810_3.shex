@@ -42,7 +42,7 @@ start=@<http://hokukahu.com/chcs/Medication_Profile-8810_3>
        chcss:identifier                  xsd:string    %Map:{ medicationProfile:patient_id %};
        rdfs:label                        xsd:string    %Map:{ medicationProfile:patient_label %};
     };
-    chcss:patient_status-8810_3          xsd:string     %Map:{ medicationProfile:patient_status-8810_3 %};
+    chcss:patient_status-8810_3          xsd:string     %Map:{ medicationProfile:patient_status %};
 
     chcss:encounter_episode-8810_3 {
        chcss:identifier                  xsd:string    %Map:{ medicationProfile:encounter_episode_id %};

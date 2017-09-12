@@ -1,0 +1,99 @@
+# This CHCS schema tracks each task that Orders create. One Order may produce one
+# or many tasks (eg. a medication QID produces four tasks per day) 
+# 
+# CHCS schema documentation: 
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Order_Task-107.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX orderTask: <urn:local:orderTask:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Order_Task-107>
+
+<http://hokukahu.com/chcs/Order_Task-107> {
+    chcss:identifier                     xsd:string     %Map:{ orderTask:id %};
+    chcss:chcs_type                      xsd:string?    %Map:{ orderTask:chcs_type %};
+    rdfs:label                           xsd:string     %Map:{ orderTask:label %};
+
+    chcss:date_time-107                  xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime   %Map:{ orderTask:date_time %};
+
+    chcss:order-107 {
+       chcss:identifier                  xsd:string    %Map:{ orderTask:order_id %};
+       rdfs:label                        xsd:string    %Map:{ orderTask:order_label %};
+    };
+    chcss:order_type-107 {
+       chcss:identifier                  xsd:string    %Map:{ orderTask:order_type_id %};
+       rdfs:label                        xsd:string    %Map:{ orderTask:order_type_label %};
+    };
+
+    chcss:task_status-107                xsd:string     %Map:{ orderTask:task_status %};
+    chcss:task_completed-107             xsd:string?    %Map:{ orderTask:task_completed %};
+    chcss:nursing_task_completed-107     xsd:string?    %Map:{ orderTask:nursing_task_completed %};
+
+    chcss:number-107                     xsd:string?    %Map:{ orderTask:number %};
+    chcss:unmodifiable-107               xsd:string?    %Map:{ orderTask:unmodifiable %};
+    chcss:dc_on_pass-107                 xsd:string?    %Map:{ orderTask:dc_on_pass %};
+
+    chcss:tracking-107                   xsd:string?    %Map:{ orderTask:tracking %};
+    chcss:last_task-107                  xsd:boolean?   %Map:{ orderTask:last_task %};
+
+    chcss:patient-107 {
+       chcss:identifier                  xsd:string     %Map:{ orderTask:patient_id %};
+       rdfs:label                        xsd:string     %Map:{ orderTask:patient_label %};
+    };
+
+    chcss:appointment_status-107 {
+       chcss:identifier                  xsd:string     %Map:{ orderTask:appointment_status_id %};
+       rdfs:label                        xsd:string     %Map:{ orderTask:appointment_status_label %};
+    }?;
+
+    chcss:requesting_location-107 {
+       chcss:identifier                  xsd:string     %Map:{ orderTask:requesting_location_id %};
+       rdfs:label                        xsd:string     %Map:{ orderTask:requesting_location_label %};
+    }?;
+
+    chcss:signature-107 {
+       chcss:identifier                  xsd:string     %Map:{ orderTask:signature_id %};
+       rdfs:label                        xsd:string     %Map:{ orderTask:signature_label %};
+    }?;
+
+    chcss:rnr_hcp-107 {
+       chcss:identifier                  xsd:string     %Map:{ orderTask:rnr_hcp_id %};
+       rdfs:label                        xsd:string     %Map:{ orderTask:rnr_hcp_label %};
+    }?;
+    chcss:rnr_date_time-107              xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?  %Map:{ orderTask:rnr_date_time %};
+    chcss:rnr_action-107                 xsd:string?    %Map:{ orderTask:rnr_action %};
+
+    chcss:changed_order_timing_provider-107 {
+       chcss:identifier                  xsd:string     %Map:{ orderTask:changed_order_timing_provider_id %};
+       rdfs:label                        xsd:string     %Map:{ orderTask:changed_order_timing_provider_label %};
+    }?;
+
+    chcss:ancillary_comment-107          xsd:string?    %Map:{ orderTask:ancillary_comment %};
+    chcss:comment-107                    xsd:string?    %Map:{ orderTask:comment %};
+
+    chcss:iv_bottle_id-107               xsd:string?    %Map:{ orderTask:iv_bottle_id %};
+    chcss:iv_bottle_number-107           xsd:string?    %Map:{ orderTask:iv_bottle_number %};
+    chcss:iv_time-107                    xsd:string?    %Map:{ orderTask:iv_time %};
+    chcss:flow_rate-107                  xsd:string?    %Map:{ orderTask:flow_rate %};
+    chcss:current_order_timing-107       xsd:string?    %Map:{ orderTask:current_order_timing %};
+
+    chcss:result_reference-107           xsd:string?    %Map:{ orderTask:result_reference %};
+    chcss:print_flag-107                 xsd:string?    %Map:{ orderTask:print_flag %};
+    chcss:prn-107                        xsd:boolean?   %Map:{ orderTask:prn %};
+
+    chcss:tpc_event_date-107            xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?  %Map:{ orderTask:tpc_event_date %};
+
+    chcss:completion_date_time-107       xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?  %Map:{ orderTask:completion_date_time %};
+}

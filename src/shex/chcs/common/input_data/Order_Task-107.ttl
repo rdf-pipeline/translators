@@ -1,0 +1,38 @@
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/107-1> a chcss:Order_Task-107 ;
+    rdfs:label "1990-01-01T00:00:00Z" ;
+    chcss:chcs_type "chcss:Order_Task-107" ;
+    chcss:completion_date_time-107 "1990-01-01T00:00:01"^^xsd:dateTime ;
+    chcss:date_time-107 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:identifier "107-1" ;
+    chcss:last_task-107 true ;
+    chcss:order-107 <http://hokukahu.com/systems/chcs-1/101-1> ;
+    chcss:order_type-107 <http://hokukahu.com/systems/chcs-1/102-4> ;
+    chcss:patient-107 <http://hokukahu.com/systems/chcs-1/0-000000> ;
+    chcss:requesting_location-107 <http://hokukahu.com/systems/chcs-1/44-11> ;
+    chcss:result_reference-107 "CH;0000000.1234" ;
+    chcss:task_completed-107 "COMPLETED" ;
+    chcss:task_status-107 "COMPLETE" ;
+    chcss:tracking-107 "123456 CO 1" ;
+    chcss:unmodifiable-107 "UNMODIFIABLE" .
+
+<http://hokukahu.com/systems/chcs-1/0-000000> rdfs:label "PHANTOM,DANNY K" ;
+    chcss:identifier "0-000000" .
+
+<http://hokukahu.com/systems/chcs-1/101-1> rdfs:label "123456-00001" ;
+    chcss:identifier "101-1" .
+
+<http://hokukahu.com/systems/chcs-1/102-4> rdfs:label "LAB" ;
+    chcss:identifier "102-4" .
+
+<http://hokukahu.com/systems/chcs-1/44-11> rdfs:label "LABORATORY 200H" ;
+    chcss:identifier "44-11" .
+
+

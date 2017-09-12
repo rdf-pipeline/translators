@@ -110,6 +110,7 @@ validateIt "Ned_Hcdp_Coverage_Code-8545"                  "http://hokukahu.com/s
 
 validateIt "Medication_Profile-8810_3"                    "http://hokukahu.com/systems/chcs-1/8810_3-1"
 
+validateIt "Order_Task-107"                               "http://hokukahu.com/systems/chcs-1/107-1"
 validateIt "Order_Warnings-102_1"                         "http://hokukahu.com/systems/chcs-1/102_1-1"
 validateIt "Origin_Of_Order-111"                          "http://hokukahu.com/systems/chcs-1/111-1"
 
@@ -125,4 +126,4 @@ validateIt "User-3"                                       "http://hokukahu.com/s
 validateIt "Zip_Code-5_8002" "http://hokukahu.com/systems/chcs-1/5_8002-1"
 
 # clean up after success
-# rm -rf ${WORK_DIR}
+rm -rf ${WORK_DIR}
