@@ -1,0 +1,77 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld",
+  "@graph": [
+    {
+      "_id": "8195-1",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "A",
+      "code-8195": "A",
+      "type-8195": "CHILD",
+      "description-8195": "SINGLE OR 1ST OF MULTIPLE LIVEBORN"
+    },
+    {
+      "_id": "8195-2",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "S",
+      "code-8195": "S",
+      "type-8195": "MOTHER",
+      "description-8195": "ALL INFANTS FETAL DEATH (STILLBORN)"
+    },
+    {
+      "_id": "8195-3",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "R",
+      "code-8195": "R",
+      "type-8195": "EITHER",
+      "description-8195": "ALL OTHER PATIENTS"
+    },
+    {
+      "_id": "8195-4",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "M",
+      "code-8195": "M",
+      "type-8195": "MOTHER",
+      "description-8195": "DELIVERED ONE LIVEBORN"
+    },
+    {
+      "_id": "8195-5",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "E",
+      "code-8195": "E",
+      "type-8195": "CHILD",
+      "description-8195": "FIFTH OF MULTIPLE LIVEBORN"
+    },
+    {
+      "_id": "8195-6",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "D",
+      "code-8195": "D",
+      "type-8195": "CHILD",
+      "description-8195": "FOURTH OF MULTIPLE LIVEBORN"
+    },
+    {
+      "_id": "8195-7",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "X",
+      "code-8195": "X",
+      "type-8195": "MOTHER",
+      "description-8195": "MULTIPLE/MORE THAN 1 LIVEBORN"
+    },
+    {
+      "_id": "8195-8",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "B",
+      "code-8195": "B",
+      "type-8195": "CHILD",
+      "description-8195": "SECOND OF MULTIPLE LIVEBORN"
+    },
+    {
+      "_id": "8195-9",
+      "type": "cmumpss:Patient_Id_Codes-8195",
+      "label": "C",
+      "code-8195": "C",
+      "type-8195": "CHILD",
+      "description-8195": "THIRD OF MULTIPLE LIVEBORN"
+    }
+  ]
+}
