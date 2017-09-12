@@ -1,0 +1,29 @@
+# This CHCS schema contains contains the patient identification code and related
+# description used to differentiate between newborns, delivery cases and all other cases
+# 
+# CHCS schema documentation: 
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Patient_Id_Codes-8195.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX patientIdCodes: <urn:local:patientIdCodes:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Patient_Id_Codes-8195>
+
+<http://hokukahu.com/chcs/Patient_Id_Codes-8195> {
+    chcss:identifier                  xsd:string     %Map:{ patientIdCodes:id %};
+    chcss:chcs_type                   xsd:string?    %Map:{ patientIdCodes:chcs_type %};
+    rdfs:label                        xsd:string     %Map:{ patientIdCodes:label %};
+
+    chcss:code-8195                   xsd:string     %Map:{ patientIdCodes:code %};
+    chcss:type-8195                   xsd:string     %Map:{ patientIdCodes:patient_id_type %};
+    chcss:description-8195            xsd:string     %Map:{ patientIdCodes:description %};
+
+    chcss:dba_inactive_flag-8195      xsd:string?      %Map:{ patientIdCode:dba_inactive_flag %};
+    chcss:deactivation_date-8195      xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?    %Map:{ patientIdCode:deactivation_date %};
+}
