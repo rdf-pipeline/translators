@@ -1,5 +1,5 @@
-# This CHCS schema contains contains the patient identification code and related
-# description used to differentiate between newborns, delivery cases and all other cases
+# This CHCS schema contains the patient identification code and related description
+# used to differentiate between newborns, delivery cases and all other cases
 # 
 # CHCS schema documentation: 
 #    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Patient_Id_Codes-8195.htm
