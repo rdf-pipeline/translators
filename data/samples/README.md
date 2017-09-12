@@ -1,4 +1,4 @@
-# samples 
+# CHCS Sample Data
 
 This directory contains obfuscated samples of CHCS data in JSON-LD format, as it would be if one queried 
 a LDR endpoint for the CHCS repository.  All personal references have been removed.  These samples do not 
