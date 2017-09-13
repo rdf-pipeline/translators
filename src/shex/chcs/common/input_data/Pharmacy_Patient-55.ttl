@@ -1,0 +1,121 @@
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix ns1: <http://datasets.caregraf.org/fms/> .
+@prefix ns2: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/55-7> a chcss:Pharmacy_Patient-55 ;
+    rdfs:label "DO-RIGHT,DUDLEY" ;
+    chcss:chcs_type "chcss:Pharmacy_Patient-55" ;
+    chcss:identifier "55-7" ;
+    chcss:iv_order-55 <http://hokukahu.com/systems/chcs-1/55_1-1_7> ;
+    chcss:name-55 <http://hokukahu.com/systems/chcs-1/2-00000> .
+
+<http://hokukahu.com/systems/chcs-1/101-123456> rdfs:label "010203-00000" ;
+    chcss:identifier "101-123456" .
+
+<http://hokukahu.com/systems/chcs-1/102-11> rdfs:label "IVP" ;
+    chcss:identifier "102-11" .
+
+<http://hokukahu.com/systems/chcs-1/102_3-9> rdfs:label "ROUTINE" ;
+    chcss:identifier "102_3-9" .
+
+<http://hokukahu.com/systems/chcs-1/107-12345678> rdfs:label "12345678" ;
+    chcss:identifier "107-12345678" .
+
+<http://hokukahu.com/systems/chcs-1/44-0000> rdfs:label "APV 0N GENERAL SURGERY" ;
+    chcss:identifier "44-0000" .
+
+<http://hokukahu.com/systems/chcs-1/50-3333> rdfs:label "DEXTROSE--INJ 5% SOLN" ;
+    ns1:sameAsLabel "DEXTROSE 5%-WATER IV SOLN" ;
+    chcss:identifier "50-3333" ;
+    ns2:sameAs <http://hokukahu.com/schema/nddf#cdc001972> .
+
+<http://hokukahu.com/systems/chcs-1/52_8-444> rdfs:label "CLEOPREMIX" ;
+    chcss:identifier "52_8-444" .
+
+<http://hokukahu.com/systems/chcs-1/55_1-1_7> a chcss:Iv_Order-55_1 ;
+    chcss:activity_log-55_1 <http://hokukahu.com/systems/chcs-1/55_16-1_1_7> ;
+    chcss:bottle_id-55_1 <http://hokukahu.com/systems/chcs-1/55_12-1_1_7> ;
+    chcss:chcs_type "chcss:Iv_Order-55_1" ;
+    chcss:display_text-55_1 "CLINDAMYCIN INJ 300MG/2ML SOLN (CLEOCIN)  600MG  One time for 1 day Starting 01 Jan 1990@0101" ;
+    chcss:duration-55_1 "1" ;
+    chcss:estimated_start_date_time-55_1 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:identifier "55_1-1_7" ;
+    chcss:infusion_rate_dose-55_1 "600MG" ;
+    chcss:inpatient_outpatient-55_1 "OUTPATIENT" ;
+    chcss:iv_recipe-55_1 <http://hokukahu.com/systems/chcs-1/52_8-444> ;
+    chcss:iv_type-55_1 "IV PUSH" ;
+    chcss:ivp_type-55_1 "PIGGYBACK" ;
+    chcss:last_due_time_printed-55_1 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:meprs_code-55_1 <http://hokukahu.com/systems/chcs-1/8119-000> ;
+    chcss:nursing_tasks-55_1 <http://hokukahu.com/systems/chcs-1/55_17-1_1_1> ;
+    chcss:oepageiv-55_1 "Outpatient Page" ;
+    chcss:order_date_time-55_1 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:order_number-55_1 "010203-00000" ;
+    chcss:order_pointer-55_1 <http://hokukahu.com/systems/chcs-1/101-123456> ;
+    chcss:order_type-55_1 <http://hokukahu.com/systems/chcs-1/102-11> ;
+    chcss:ordering_hcp-55_1 <http://hokukahu.com/systems/chcs-1/6-99999> ;
+    chcss:patient-55_1 <http://hokukahu.com/systems/chcs-1/2-00000> ;
+    chcss:pharmacists_comments-55_1 "** Infusion rate = 100 ml/hr **" ;
+    chcss:priority-55_1 <http://hokukahu.com/systems/chcs-1/102_3-9> ;
+    chcss:process_status-55_1 "DONE" ;
+    chcss:requesting_location-55_1 <http://hokukahu.com/systems/chcs-1/44-0000> ;
+    chcss:schedule-55_1 "CONTINUOUS" ;
+    chcss:schedule_type-55_1 "ONE TIME" ;
+    chcss:start_date_time-55_1 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:status-55_1 "DISCONTINUED" ;
+    chcss:stop_date-55_1 "1990-01-01T01:01:01"^^xsd:dateTime ;
+    chcss:user_signature-55_1 <http://hokukahu.com/systems/chcs-1/3-1111> .
+
+<http://hokukahu.com/systems/chcs-1/55_12-1_1_7> a chcss:Bottle_Id-55_12 ;
+    chcss:bottle_id-55_12 "A" ;
+    chcss:chcs_type "chcss:Bottle_Id-55_12" ;
+    chcss:identifier "55_12-1_1_7" ;
+    chcss:solution-55_12 <http://hokukahu.com/systems/chcs-1/55_13-1_1_1_0> ;
+    chcss:solution_volume-55_12 "50" .
+
+<http://hokukahu.com/systems/chcs-1/55_13-1_1_1_0> a chcss:Solution-55_13 ;
+    chcss:chcs_type "chcss:Solution-55_13" ;
+    chcss:identifier "55_13-1_1_1_0" ;
+    chcss:solution-55_13 <http://hokukahu.com/systems/chcs-1/50-3333> ;
+    chcss:volume-55_13 "50" .
+
+<http://hokukahu.com/systems/chcs-1/55_16-1_1_7> a chcss:Activity_Log-55_16 ;
+    chcss:action-55_16 "ACK" ;
+    chcss:chcs_type "chcss:Activity_Log-55_16" ;
+    chcss:date_time-55_16 "1990-01-01T00:00:01"^^xsd:dateTime ;
+    chcss:identifier "55_16-1_1_7" ;
+    chcss:user-55_16 <http://hokukahu.com/systems/chcs-1/3-1111> .
+
+<http://hokukahu.com/systems/chcs-1/55_17-1_1_1> a chcss:Nursing_Tasks-55_17 ;
+    chcss:bottle_-55_17 "1" ;
+    chcss:bottle_id-55_17 "A" ;
+    chcss:chcs_type "chcss:Nursing_Tasks-55_17" ;
+    chcss:date_time-55_17 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:identifier "55_17-1_1_1" ;
+    chcss:iv_room-55_17 <http://hokukahu.com/systems/chcs-1/59_5-0> ;
+    chcss:meprs_code-55_17 <http://hokukahu.com/systems/chcs-1/8119-000> ;
+    chcss:order_task-55_17 <http://hokukahu.com/systems/chcs-1/107-12345678> ;
+    chcss:printed-55_17 true .
+
+<http://hokukahu.com/systems/chcs-1/59_5-0> rdfs:label "IV CENTRAL" ;
+    chcss:identifier "59_5-0" .
+
+<http://hokukahu.com/systems/chcs-1/6-99999> rdfs:label "SQUIRREL,ROCKY" ;
+    chcss:identifier "6-99999" .
+
+<http://hokukahu.com/systems/chcs-1/2-00000> rdfs:label "DO-RIGHT,DUDLEY" ;
+    chcss:identifier "2-00000" .
+
+<http://hokukahu.com/systems/chcs-1/3-1111> rdfs:label "FATALE,NATASHA" ;
+    chcss:identifier "3-1111" .
+
+<http://hokukahu.com/systems/chcs-1/8119-000> rdfs:label "BBA5" ;
+    chcss:identifier "8119-000" .
+
+

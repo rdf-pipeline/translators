@@ -1,0 +1,151 @@
+{
+  "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
+  "@graph": [
+    {
+      "_id": "55-7",
+      "type": "chcss:Pharmacy_Patient-55",
+      "label": "DO-RIGHT,DUDLEY",
+      "name-55": {
+        "id": "2-00000",
+        "label": "DO-RIGHT,DUDLEY"
+      },
+      "iv_order-55": [
+        {
+          "id": "55_1-1_7",
+          "type": "chcss:Iv_Order-55_1",
+          "order_number-55_1": "010203-00000",
+          "oepageiv-55_1": "Outpatient Page",
+          "order_pointer-55_1": {
+            "id": "101-123456",
+            "label": "010203-00000"
+          },
+          "patient-55_1": {
+            "id": "2-00000",
+            "label": "DO-RIGHT,DUDLEY"
+          },
+          "requesting_location-55_1": {
+            "id": "44-0000",
+            "label": "APV 0N GENERAL SURGERY"
+          },
+          "meprs_code-55_1": {
+            "id": "8119-000",
+            "label": "BBA5"
+          },
+          "process_status-55_1": "DONE",
+          "status-55_1": "DISCONTINUED",
+          "ordering_hcp-55_1": {
+            "id": "6-99999",
+            "label": "SQUIRREL,ROCKY"
+          },
+          "user_signature-55_1": {
+            "id": "3-1111",
+            "label": "FATALE,NATASHA"
+          },
+          "priority-55_1": {
+            "id": "102_3-9",
+            "label": "ROUTINE"
+          },
+          "schedule_type-55_1": "ONE TIME",
+          "inpatient_outpatient-55_1": "OUTPATIENT",
+          "order_date_time-55_1": {
+            "value": "1990-01-01T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "estimated_start_date_time-55_1": {
+            "value": "1990-01-01T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "start_date_time-55_1": {
+            "value": "1990-01-01T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "stop_date-55_1": {
+            "value": "1990-01-01T01:01:01",
+            "type": "xsd:dateTime"
+          },
+          "order_type-55_1": {
+            "id": "102-11",
+            "label": "IVP"
+          },
+          "iv_type-55_1": "IV PUSH",
+          "ivp_type-55_1": "PIGGYBACK",
+          "iv_recipe-55_1": {
+            "id": "52_8-444",
+            "label": "CLEOPREMIX"
+          },
+          "last_due_time_printed-55_1": {
+            "value": "1990-01-01T00:00:00",
+            "type": "xsd:dateTime"
+          },
+          "infusion_rate_dose-55_1": "600MG",
+          "schedule-55_1": "CONTINUOUS",
+          "duration-55_1": "1",
+          "pharmacists_comments-55_1": "** Infusion rate = 100 ml/hr **",
+          "display_text-55_1": "CLINDAMYCIN INJ 300MG/2ML SOLN (CLEOCIN)  600MG  One time for 1 day Starting 01 Jan 1990@0101",
+          "activity_log-55_1": [
+            {
+              "id": "55_16-1_1_7",
+              "type": "chcss:Activity_Log-55_16",
+              "date_time-55_16": {
+                "value": "1990-01-01T00:00:01",
+                "type": "xsd:dateTime"
+              },
+              "action-55_16": "ACK",
+              "user-55_16": {
+                "id": "3-1111",
+                "label": "FATALE,NATASHA"
+              }
+            }
+          ],
+          "bottle_id-55_1": [
+            {
+              "id": "55_12-1_1_7",
+              "type": "chcss:Bottle_Id-55_12",
+              "bottle_id-55_12": "A",
+              "solution_volume-55_12": "50",
+              "solution-55_12": [
+                {
+                  "id": "55_13-1_1_1_0",
+                  "type": "chcss:Solution-55_13",
+                  "solution-55_13": {
+                    "id": "50-3333",
+                    "label": "DEXTROSE--INJ 5% SOLN",
+                    "sameAs": "nddf:cdc001972",
+                    "sameAsLabel": "DEXTROSE 5%-WATER IV SOLN"
+                  },
+                  "volume-55_13": "50"
+                }
+              ]
+            }
+          ],
+          "nursing_tasks-55_1": [
+            {
+              "id": "55_17-1_1_1",
+              "type": "chcss:Nursing_Tasks-55_17",
+              "date_time-55_17": {
+                "value": "1990-01-01T00:00:00",
+                "type": "xsd:dateTime"
+              },
+              "order_task-55_17": {
+                "id": "107-12345678",
+                "label": "12345678"
+              },
+              "bottle_-55_17": "1",
+              "bottle_id-55_17": "A",
+              "printed-55_17": true,
+              "meprs_code-55_17": {
+                "id": "8119-000",
+                "label": "BBA5"
+              },
+              "iv_room-55_17": {
+                "id": "59_5-0",
+                "label": "IV CENTRAL"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
