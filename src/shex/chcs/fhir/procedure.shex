@@ -18,7 +18,7 @@ start=@<Procedure>                          # AND {fhir:nodeRole [fhir:treeRoot]
       a [fhir:Identifier]?;
       fhir:Element.id      { fhir:value xsd:string  %Map:{ procedure:id %} };
       fhir:value           { fhir:value ["Procedure"] };
-    }*;
+    };
 
     # fhir:Resource.meta @<Meta>?;            # Metadata about the resource
     # fhir:Resource.implicitRules @<uri>?;    # A set of rules under which this 
@@ -33,18 +33,18 @@ start=@<Procedure>                          # AND {fhir:nodeRole [fhir:treeRoot]
       fhir:url                        { fhir:value ["http://hokukahu.com/procedure/source"] };
       fhir:valueId                    { fhir:value xsd:string %Map: { procedure:source_id %} };
       fhir:valueString                { fhir:value xsd:string %Map: { procedure:source_label %} };
-    }*;
+    };
 
     fhir:extension {
       fhir:url                        { fhir:value ["http://hokukahu.com/procedure/status"] };
       fhir:valueId                    { fhir:value xsd:string %Map: { procedure:status_id %} };
       fhir:valueString                { fhir:value xsd:string %Map: { procedure:status_label %} };
-    }*;
+    };
 
     fhir:extension {
       fhir:url                        { fhir:value ["http://hokukahu.com/procedure/verified"] };
       fhir:valueBoolean               { fhir:value xsd:boolean %Map: { procedure:verified %} };
-    }*;
+    };
 
     # fhir:DomainResource.modifierExtension @<Extension>*;  # Extensions that cannot be ignored
 
@@ -52,8 +52,8 @@ start=@<Procedure>                          # AND {fhir:nodeRole [fhir:treeRoot]
     fhir:Procedure.identifier  {
       a [fhir:Identifier]?;
       fhir:Identifier.system    { fhir:value ["http://hokukahu.com/chcs/procedure"] };
-      fhir:Identifier.value     { fhir:value xsd:string  %Map:{ procedure:id %} };
-    }*;
+#      fhir:Identifier.value     { fhir:value xsd:string  %Map:{ procedure:id %} };
+    };
 
     # fhir:Procedure.definition               # Instantiates protocol or definition
     # (   @<PlanDefinitionReference> OR

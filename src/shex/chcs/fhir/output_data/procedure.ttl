@@ -1,0 +1,53 @@
+<urn:local:procedure:> a <http://hl7.org/fhir/Procedure>;
+    <http://hl7.org/fhir/nodeRole> <http://hl7.org/fhir/treeRoot>;
+    <http://hl7.org/fhir/Resource.id> _:b0;
+    <http://hl7.org/fhir/extension> _:b11, _:b7, _:b3;
+    <http://hl7.org/fhir/Procedure.identifier> _:b14;
+    <http://hl7.org/fhir/Procedure.code> _:b16;
+    <http://hl7.org/fhir/Procedure.subject> _:b19;
+    <http://hl7.org/fhir/Procedure.context> _:b22;
+    <http://hl7.org/fhir/Procedure.performer> _:b24;
+    <http://hl7.org/fhir/Procedure.note> _:b28.
+_:b0 a <http://hl7.org/fhir/Identifier>;
+    <http://hl7.org/fhir/Element.id> _:b1;
+    <http://hl7.org/fhir/value> _:b2.
+_:b1 <http://hl7.org/fhir/value> "Procedure-1074046".
+_:b2 <http://hl7.org/fhir/value> "Procedure".
+_:b3 <http://hl7.org/fhir/url> _:b4;
+    <http://hl7.org/fhir/valueId> _:b5;
+    <http://hl7.org/fhir/valueString> _:b6.
+_:b4 <http://hl7.org/fhir/value> "http://hokukahu.com/procedure/source".
+_:b5 <http://hl7.org/fhir/value> "HDDConcept-1450368".
+_:b6 <http://hl7.org/fhir/value> "Clinical Evidence".
+_:b7 <http://hl7.org/fhir/url> _:b8;
+    <http://hl7.org/fhir/valueId> _:b9;
+    <http://hl7.org/fhir/valueString> _:b10.
+_:b8 <http://hl7.org/fhir/value> "http://hokukahu.com/procedure/status".
+_:b9 <http://hl7.org/fhir/value> "HDDConcept-1024".
+_:b10 <http://hl7.org/fhir/value> "Active".
+_:b11 <http://hl7.org/fhir/url> _:b12;
+    <http://hl7.org/fhir/valueBoolean> _:b13.
+_:b12 <http://hl7.org/fhir/value> "http://hokukahu.com/procedure/verified".
+_:b13 <http://hl7.org/fhir/value> "true"^^<http://www.w3.org/2001/XMLSchema#boolean>.
+_:b14 a <http://hl7.org/fhir/Identifier>;
+    <http://hl7.org/fhir/Identifier.system> _:b15.
+_:b15 <http://hl7.org/fhir/value> "http://hokukahu.com/chcs/procedure".
+_:b16 a <http://hl7.org/fhir/Identifier>;
+    <http://hl7.org/fhir/Element.id> _:b17;
+    <http://hl7.org/fhir/CodeableConcept.text> _:b18.
+_:b17 <http://hl7.org/fhir/value> "HDDConcept-67355".
+_:b18 <http://hl7.org/fhir/value> "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of appropriat".
+_:b19 a <http://hl7.org/fhir/Patient>;
+    <http://hl7.org/fhir/Element.id> _:b20;
+    <http://hl7.org/fhir/Reference.display> _:b21.
+_:b20 <http://hl7.org/fhir/value> "Patient-000007".
+_:b21 <http://hl7.org/fhir/value> "BUNNY,BUGS".
+_:b22 <http://hl7.org/fhir/Procedure:performedDateTime> _:b23.
+_:b23 <http://hl7.org/fhir/value> "1990-01-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>.
+_:b24 <http://hl7.org/fhir/Procedure.performer.actor> _:b25.
+_:b25 <http://hl7.org/fhir/Element.id> _:b26;
+    <http://hl7.org/fhir/Reference.display> _:b27.
+_:b26 <http://hl7.org/fhir/value> "Provider-41200034".
+_:b27 <http://hl7.org/fhir/value> "MOUSE,MICKEY".
+_:b28 <http://hl7.org/fhir/Annotation.text> _:b29.
+
