@@ -1,4 +1,4 @@
-# This schema holds, for each pharmacyPatient, information that is typically of interest only to the pharmacy.
+# This schema holds, for each pharmacy patient, information that is typically of interest only to the pharmacy.
 #
 # CHCS schema documentation:
 #    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Pharmacy_Patient-55.htm
