@@ -104,6 +104,8 @@ validateIt "Fdb_Dim_32_Reference_Cat_Desc-8253_046"       "http://hokukahu.com/s
 validateIt "Fetal_Presentation_Type-8183"                 "http://hokukahu.com/systems/chcs-1/8183-1"
 
 validateIt "Geographic_Location-5"                        "http://hokukahu.com/systems/chcs-1/5-1"
+validateIt "Gp_Consult_Result-52003"                      "http://hokukahu.com/systems/chcs-1/52003-2"
+
 validateIt "Hospital_Location-44"                         "http://hokukahu.com/systems/chcs-1/44-.5"
 
 validateIt "Kg_Provider_Role-100514"                      "http://hokukahu.com/systems/chcs-1/100514-1"

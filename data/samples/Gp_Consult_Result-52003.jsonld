@@ -1,0 +1,44 @@
+{
+    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
+  "@graph": [
+     {
+      "_id": "52003-2",
+      "type": "chcss:Gp_Consult_Result-52003",
+      "label": "000000-00000",
+      "order-52003": {
+        "id": "101-00000000",
+        "label": "000000-00000"
+      },
+      "patient_name-52003": {
+        "id": "2-00000000",
+        "label": "BOB,SPONGE A"
+      }
+    },
+    {
+      "_id": "52003-3",
+      "type": "chcss:Gp_Consult_Result-52003",
+      "label": "111111-11111",
+      "order-52003": {
+        "id": "101-00000001",
+        "label": "111111-11111"
+      },
+      "patient_name-52003": {
+        "id": "2-00000001",
+        "label": "STAR,PATRICK J"
+      }
+    },
+    {
+      "_id": "52003-4",
+      "type": "chcss:Gp_Consult_Result-52003",
+      "label": "222222-22222",
+      "order-52003": {
+        "id": "101-00000002",
+        "label": "222222-22222"
+      },
+      "patient_name-52003": {
+        "id": "2-00000002",
+        "label": "CHEEKS,SANDY"
+      }
+    }
+  ]
+}

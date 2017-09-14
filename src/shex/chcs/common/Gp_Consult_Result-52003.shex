@@ -1,0 +1,67 @@
+# This CHCS schema contains a list of all absent status designations
+# 
+# CHCS schema documentation: 
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Gp_Consult_Result-52003.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX gpConsultResult: <urn:local:gpConsultResult:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Gp_Consult_Result-52003>
+
+<http://hokukahu.com/chcs/Gp_Consult_Result-52003> {
+    chcss:identifier                     xsd:string     %Map:{ gpConsultResult:id %};
+    chcss:chcs_type                      xsd:string?    %Map:{ gpConsultResult:chcs_type %};
+    rdfs:label                           xsd:string     %Map:{ gpConsultResult:label %};
+
+    chcss:patient_name-52003 {
+       chcss:identifier               xsd:string        %Map:{ gpConsultResult:patient_id %};
+       rdfs:label                     xsd:string        %Map:{ gpConsultResult:patient_label %};
+    };
+
+    chcss:order-52003 {
+       chcss:identifier               xsd:string        %Map:{ gpConsultResult:order_id %};
+       rdfs:label                     xsd:string        %Map:{ gpConsultResult:order_label %};
+    };
+
+    chcss:clinic-52003 {
+       chcss:identifier               xsd:string        %Map:{ gpConsultResult:clinic_id %};
+       rdfs:label                     xsd:string        %Map:{ gpConsultResult:clinic_label %};
+    }?;
+
+    chcss:appointment-52003 {
+       chcss:identifier               xsd:string        %Map:{ gpConsultResult:appointment_id %};
+       rdfs:label                     xsd:string        %Map:{ gpConsultResult:appointment_label %};
+    }?;
+    chcss:date_of_appointment-52003   xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?      %Map:{ gpConsultResult:appointment_date %};
+
+    chcss:requesting_hcp-52003 {
+       chcss:identifier               xsd:string        %Map:{ gpConsultResult:requesting_hcp_id %};
+       rdfs:label                     xsd:string        %Map:{ gpConsultResult:requesting_hcp_label %};
+    }?;
+
+    chcss:allergy-52003 {
+       chcss:identifier               xsd:string        %Map:{ gpConsultResult:allergy_id %};
+       rdfs:label                     xsd:string        %Map:{ gpConsultResult:allergy_label %};
+    }?;
+
+    chcss:date_time_of_result-52003   xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?      %Map:{ gpConsultResult:result_date_time %};
+
+    chcss:date_time_completed-52003   xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?      %Map:{ gpConsultResult:completed_date_time %};
+
+    chcss:verify_by-52003 {
+       chcss:identifier               xsd:string        %Map:{ gpConsultResult:verified_id %};
+       rdfs:label                     xsd:string        %Map:{ gpConsultResult:verified_label %};
+    }?;
+
+    chcss:consult_review_flag-52003   xsd:string?        %Map:{ gpConsultResult:consultation_flag %};
+}

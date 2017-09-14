@@ -1,0 +1,48 @@
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/52003-2> a chcss:Gp_Consult_Result-52003 ;
+    rdfs:label "000000-00000" ;
+    chcss:chcs_type "chcss:Gp_Consult_Result-52003" ;
+    chcss:identifier "52003-2" ;
+    chcss:order-52003 <http://hokukahu.com/systems/chcs-1/101-00000000> ;
+    chcss:patient_name-52003 <http://hokukahu.com/systems/chcs-1/2-00000000> .
+
+<http://hokukahu.com/systems/chcs-1/52003-3> a chcss:Gp_Consult_Result-52003 ;
+    rdfs:label "111111-11111" ;
+    chcss:chcs_type "chcss:Gp_Consult_Result-52003" ;
+    chcss:identifier "52003-3" ;
+    chcss:order-52003 <http://hokukahu.com/systems/chcs-1/101-00000001> ;
+    chcss:patient_name-52003 <http://hokukahu.com/systems/chcs-1/2-00000001> .
+
+<http://hokukahu.com/systems/chcs-1/52003-4> a chcss:Gp_Consult_Result-52003 ;
+    rdfs:label "222222-22222" ;
+    chcss:chcs_type "chcss:Gp_Consult_Result-52003" ;
+    chcss:identifier "52003-4" ;
+    chcss:order-52003 <http://hokukahu.com/systems/chcs-1/101-00000002> ;
+    chcss:patient_name-52003 <http://hokukahu.com/systems/chcs-1/2-00000002> .
+
+<http://hokukahu.com/systems/chcs-1/101-00000000> rdfs:label "000000-00000" ;
+    chcss:identifier "101-00000000" .
+
+<http://hokukahu.com/systems/chcs-1/101-00000001> rdfs:label "111111-11111" ;
+    chcss:identifier "101-00000001" .
+
+<http://hokukahu.com/systems/chcs-1/101-00000002> rdfs:label "222222-22222" ;
+    chcss:identifier "101-00000002" .
+
+<http://hokukahu.com/systems/chcs-1/2-00000000> rdfs:label "BOB,SPONGE A" ;
+    chcss:identifier "2-00000000" .
+
+<http://hokukahu.com/systems/chcs-1/2-00000001> rdfs:label "STAR,PATRICK J" ;
+    chcss:identifier "2-00000001" .
+
+<http://hokukahu.com/systems/chcs-1/2-00000002> rdfs:label "CHEEKS,SANDY" ;
+    chcss:identifier "2-00000002" .
+
+
