@@ -1,0 +1,62 @@
+@prefix chcss: <http://hokukahu.com/schema/chcss#> .
+@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hokukahu.com/systems/chcs-1/311-1> a chcss:Encounter-311 ;
+    rdfs:label "1990-01-01T00:00:00Z" ;
+    chcss:admission_entry-311 "1" ;
+    chcss:chcs_type "chcss:Encounter-311" ;
+    chcss:date_time-311 "1990-01-01T00:00:00"^^xsd:dateTime ;
+    chcss:identifier "311-1" ;
+    chcss:meprs_code-311 <http://hokukahu.com/systems/chcs-1/8119-000> ;
+    chcss:patient-311 <http://hokukahu.com/systems/chcs-1/2-00000> ;
+    chcss:provider-311 <http://hokukahu.com/systems/chcs-1/6-0000> ;
+    chcss:service-311 <http://hokukahu.com/systems/chcs-1/45_7-0> .
+
+<http://hokukahu.com/systems/chcs-1/311-2> a chcss:Encounter-311 ;
+    rdfs:label "1990-01-01T01:01:01Z" ;
+    chcss:admission_entry-311 "1" ;
+    chcss:arrive_medical_record-311 "1990-01-01T02:02:02"^^xsd:dateTime ;
+    chcss:chcs_type "chcss:Encounter-311" ;
+    chcss:date_time-311 "1990-01-01T01:01:01"^^xsd:dateTime ;
+    chcss:delinquent_status-311 "COMPLETE" ;
+    chcss:identifier "311-2" ;
+    chcss:patient-311 <http://hokukahu.com/systems/chcs-1/2-00000> ;
+    chcss:provider-311 <http://hokukahu.com/systems/chcs-1/6-0000> ;
+    chcss:type-311 "INPATIENT SUMMARY" ;
+    chcss:user-311 <http://hokukahu.com/systems/chcs-1/3-000> .
+
+<http://hokukahu.com/systems/chcs-1/311-5> a chcss:Encounter-311 ;
+    rdfs:label "1990-01-01T03:03:03Z" ;
+    chcss:admission_entry-311 "3" ;
+    chcss:chcs_type "chcss:Encounter-311" ;
+    chcss:date_time-311 "1990-01-01T03:03:03"^^xsd:dateTime ;
+    chcss:identifier "311-5" ;
+    chcss:meprs_code-311 <http://hokukahu.com/systems/chcs-1/8119-000> ;
+    chcss:patient-311 <http://hokukahu.com/systems/chcs-1/2-00000> ;
+    chcss:provider-311 <http://hokukahu.com/systems/chcs-1/6-680> ;
+    chcss:service-311 <http://hokukahu.com/systems/chcs-1/45_7-0> .
+
+<http://hokukahu.com/systems/chcs-1/3-000> rdfs:label "SIMPSON, MARGE" ;
+    chcss:identifier "3-000" .
+
+<http://hokukahu.com/systems/chcs-1/6-680> rdfs:label "SIMPSON, MAGGIE" ;
+    chcss:identifier "6-680" .
+
+<http://hokukahu.com/systems/chcs-1/45_7-0> rdfs:label "INT MED, NHGL" ;
+    chcss:identifier "45_7-0" .
+
+<http://hokukahu.com/systems/chcs-1/6-0000> rdfs:label "SIMPSON, LiSA A" ;
+    chcss:identifier "6-0000" .
+
+<http://hokukahu.com/systems/chcs-1/8119-000> rdfs:label "AAAA" ;
+    chcss:identifier "8119-000" .
+
+<http://hokukahu.com/systems/chcs-1/2-00000> rdfs:label "SIMPSON,HOMER K" ;
+    chcss:identifier "2-00000" .
+
+

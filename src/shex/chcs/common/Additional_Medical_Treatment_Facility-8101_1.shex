@@ -23,7 +23,7 @@ start=@<http://hokukahu.com/chcs/Additional_Medical_Treatment_Facility-8101_1>
 
     chcss:phone-8101_1                xsd:string?      %Map:{ location:phone %};
     chcss:street_address_1-8101_1     xsd:string?      %Map:{ location:street_address_1 %};
-    chcss:street_address_2-8101_2     xsd:string?      %Map:{ location:street_address_2 %};
+    chcss:street_address_2-8101_1     xsd:string?      %Map:{ location:street_address_2 %};
     chcss:city-8101_1                 xsd:string?      %Map:{ location:city %};
 
     chcss:state_geographic_loc-8101_1 {

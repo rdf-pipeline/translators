@@ -1,0 +1,85 @@
+{
+   "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/samples/context.jsonld",
+  "@graph": [
+    {
+      "_id": "311-1",
+      "type": "chcss:Encounter-311",
+      "label": "1990-01-01T00:00:00Z",
+      "date_time-311": {
+        "value": "1990-01-01T00:00:00",
+        "type": "xsd:dateTime"
+      },
+      "patient-311": {
+        "id": "2-00000",
+        "label": "SIMPSON,HOMER K"
+      },
+      "provider-311": {
+        "id": "6-0000",
+        "label": "SIMPSON, LiSA A"
+      },
+      "admission_entry-311": "1",
+      "service-311": {
+        "id": "45_7-0",
+        "label": "INT MED, NHGL"
+      },
+      "meprs_code-311": {
+        "id": "8119-000",
+        "label": "AAAA"
+      }
+    },
+    {
+      "_id": "311-2",
+      "type": "chcss:Encounter-311",
+      "label": "1990-01-01T01:01:01Z",
+      "date_time-311": {
+        "value": "1990-01-01T01:01:01",
+        "type": "xsd:dateTime"
+      },
+      "patient-311": {
+        "id": "2-00000",
+        "label": "SIMPSON,HOMER K"
+      },
+      "provider-311": {
+        "id": "6-0000",
+        "label": "SIMPSON, LiSA A"
+      },
+      "user-311": {
+        "id": "3-000",
+        "label": "SIMPSON, MARGE"
+      },
+      "type-311": "INPATIENT SUMMARY",
+      "admission_entry-311": "1",
+      "delinquent_status-311": "COMPLETE",
+      "arrive_medical_record-311": {
+        "value": "1990-01-01T02:02:02",
+        "type": "xsd:dateTime"
+      }
+    },
+    {
+      "_id": "311-5",
+      "type": "chcss:Encounter-311",
+      "label": "1990-01-01T03:03:03Z",
+      "date_time-311": {
+        "value": "1990-01-01T03:03:03",
+        "type": "xsd:dateTime"
+      },
+      "patient-311": {
+        "id": "2-00000",
+        "label": "SIMPSON,HOMER K"
+      },
+      "provider-311": {
+        "id": "6-680",
+        "label": "SIMPSON, MAGGIE"
+      },
+      "admission_entry-311": "3",
+      "service-311": {
+        "id": "45_7-0",
+        "label": "INT MED, NHGL"
+      },
+      "meprs_code-311": {
+        "id": "8119-000",
+        "label": "AAAA"
+      }
+    }
+  ]
+}

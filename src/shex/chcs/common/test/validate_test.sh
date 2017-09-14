@@ -90,6 +90,7 @@ validateIt "Discharge_Type-42_2"                          "http://hokukahu.com/s
 validateIt "Dod_Standard_Lab_Test-8188_99"                "http://hokukahu.com/systems/chcs-1/8188_99-1"
 validateIt "Drug-50"                                      "http://hokukahu.com/systems/chcs-1/50-1"
 
+validateIt "Encounter-311"                                "http://hokukahu.com/systems/chcs-1/311-1"
 validateIt "Ethnic_Background-8191"                       "http://hokukahu.com/systems/chcs-1/8191-1"
 validateIt "Etiology_Field-61_2"                          "http://hokukahu.com/systems/chcs-1/61_2-1"
 validateIt "Examination_Status-72"                        "http://hokukahu.com/systems/chcs-1/72-1"

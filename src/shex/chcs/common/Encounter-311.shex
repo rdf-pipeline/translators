@@ -1,0 +1,541 @@
+# This CHCS schema contains data about patient-encounter events
+# 
+# CHCS schema documentation: 
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Encounter-311.htm
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+PREFIX encounter: <urn:local:encounter:>
+PREFIX chcss: <http://hokukahu.com/schema/chcss#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+BASE <http://hl7.org/fhir/shape/>
+
+start=@<http://hokukahu.com/chcs/Encounter-311>
+
+<http://hokukahu.com/chcs/Encounter-311> {
+    chcss:identifier                  xsd:string        %Map:{ encounter:id %};
+    chcss:chcs_type                   xsd:string?       %Map:{ encounter:chcs_type %};
+    rdfs:label                        xsd:string        %Map:{ encounter:label %};
+
+    chcss:type-311                    xsd:string?       %Map:{ encounter:encounter_type %};
+    chcss:date_time-311               xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime      %Map:{ encounter:date_time %};
+
+    chcss:arrive_medical_record-311   xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:arrive_medical_record %};
+    chcss:brought_by-311              xsd:string?       %Map:{ encounter:brought_by %};
+    chcss:specify-311                 xsd:string?       %Map:{ encounter:specify %};
+
+    chcss:reported_to-311             xsd:string?       %Map:{ encounter:reported_to %};
+    chcss:when-311                    xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:when %};
+    chcss:by_whom-311                 xsd:string?       %Map:{ encounter:by_whom %};
+    chcss:accident_date-311           xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:accident_date %};
+
+    chcss:patient-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:patient_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:patient_label %};
+    };
+
+    chcss:chief_complaint-311         xsd:string?       %Map:{ encounter:chief_complaint %};
+    chcss:last_tetanus-311            xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:last_tetanus %};
+
+    chcss:provider-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:provider_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:provider_label %};
+    };
+    chcss:provider_type-311           xsd:string?       %Map:{ encounter:provider_type %};
+
+    chcss:consultant-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:consultant_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:consultant_label %};
+    }?;
+    chcss:time_called-311             xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:time_called %};
+    chcss:time_arrived-311            xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:time_arrived %};
+
+    chcss:primary_diagnosis-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:primary_diagnosis_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:primary_diagnosis_label %};
+    }?;
+    chcss:secondary_diagnosis-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:secondary_diagnosis_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:secondary_diagnosis_label %};
+    }?;
+
+    chcss:visit_type-311              xsd:string?       %Map:{ encounter:visit_type %};
+    chcss:related_encounter-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:related_encounter_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:related_encounter_label %};
+    }?;
+
+    chcss:admission_entry-311         xsd:string?       %Map:{ encounter:admission_entry %};
+    chcss:hospital_encounter-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:hospital_encounter_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:hospital_encounter_label %};
+    }?;
+
+    chcss:patient_belongings_data-311 {
+       chcss:identifier                             xsd:string        %Map:{ encounter:patient_belongings_data_id %};
+
+       chcss:belongings_invent_completed_-311_8101  xsd:boolean?     %Map:{ encounter:belongings_invent_completed %};
+       chcss:inventory_signature_obtained-311_8101  xsd:boolean?     %Map:{ encounter:inventory_signature_obtained %};
+       chcss:reason_for_no_inventory-311_8101       xsd:string       %Map:{ encounter:reason_for_no_inventory %};
+       chcss:belongings_verif_date_time-311_8101    xsd:date or
+                                                    xsd:dateTime or
+                                                    xsd:datetime?     %Map:{ encounter:belongings_verif_date_time %};
+       chcss:belongings_verif_entered_by-311_8101 {
+          chcss:identifier     xsd:string        %Map:{ encounter:belongings_verif_entered_by_id %};
+          rdfs:label           xsd:string        %Map:{ encounter:belongings_verif_entered_by_label %};
+       }?;
+       chcss:inventoried_by-311_8101 {
+          chcss:identifier     xsd:string        %Map:{ encounter:inventoried_by_id %};
+          rdfs:label           xsd:string        %Map:{ encounter:inventoried_by_label %};
+       }?;
+       chcss:inventory_completed_date_time-311_8101 xsd:date or
+                                                    xsd:dateTime or
+                                                    xsd:datetime?     %Map:{ encounter:inventory_completed_date_time %};
+    }*;
+
+    chcss:civilian_physician-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:civilian_physician_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:civilian_physician_label %};
+    }?;
+    chcss:staff_physician-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:staff_physician_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:staff_physician_label %};
+    }?;
+
+    chcss:hcdp-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:hcdp_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:hcdp_label %};
+    }?;
+
+    chcss:procedure-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:procedure_id %};
+
+       chcss:procedure-311_05 {
+           chcss:identifier           xsd:string        %Map:{ encounter:op_procedure_id %};
+           rdfs:label                 xsd:string        %Map:{ encounter:op_procedure_label %};
+       };
+
+       chcss:provider_of_procedure-311_05 {
+           chcss:identifier           xsd:string        %Map:{ encounter:procedure_provider_id %};
+           rdfs:label                 xsd:string        %Map:{ encounter:procedure_provider_label %};
+       };
+    }*;
+
+    chcss:diagnosis-311 {
+       chcss:identifier                             xsd:string   %Map:{ encounter:diagnosis_id %};
+
+       chcss:diagnosis-311_12 {
+           chcss:identifier                         xsd:string   %Map:{ encounter:icd_diagnosis_id %};
+           rdfs:label                               xsd:string   %Map:{ encounter:icd_diagnosis_label %};
+       };
+
+       chcss:description-311_12                     xsd:string?  %Map:{ encounter:diagnosis_description %};
+       chcss:job_related-311_12                     xsd:boolean? %Map:{ encounter:diagnosis_job_related %};
+
+       chcss:diagnosis_modifier-311_12 {
+           chcss:identifier                         xsd:string   %Map:{ encounter:icd_diagnosis_modifier_id %};
+           rdfs:label                               xsd:string   %Map:{ encounter:icd_diagnosis_modifier_label %};
+       }?;
+
+       chcss:diagnosis_description-311_12           xsd:string?  %Map:{ encounter:diagnosis_background_description %};
+       chcss:cc_indicator-311_12                    xsd:string?  %Map:{ encounter:diagnosis_cc_indicator %};
+       chcss:group_number-311_12                    xsd:string?  %Map:{ encounter:diagnosis_group_number %};
+       chcss:present_on_admission_indicator-311_12  xsd:string?  %Map:{ encounter:diagnosis_present_on_admission_indicator %};
+    }*;
+
+    chcss:disposition-311_12          xsd:string?  %Map:{ encounter:disposition %};
+
+    chcss:pat_appt_entry_ptr-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:pat_appt_entry_ptr_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:pat_appt_entry_ptr_label %};
+    }?;
+
+    chcss:deficiency-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:deficiency_id %};
+
+       chcss:item-311_207             xsd:string?       %Map:{ encounter:deficiency_item %};
+       chcss:action-311_207           xsd:string?       %Map:{ encounter:deficiency_action %};
+       chcss:abbreviation-311_207     xsd:string?       %Map:{ encounter:deficiency_abbreviation %};
+       chcss:comment-311_207          xsd:string?       %Map:{ encounter:deficiency_comment %};
+
+       chcss:person_responsible-311_207 {
+           chcss:identifier           xsd:string        %Map:{ encounter:deficiency_person_responsible_id %};
+           rdfs:label                 xsd:string        %Map:{ encounter:deficiency_person_responsible_label %};
+       }?;
+
+       chcss:meprs_code-311_207 {
+           chcss:identifier           xsd:string        %Map:{ encounter:deficiency_meprs_code_id %};
+           rdfs:label                 xsd:string        %Map:{ encounter:deficiency_meprs_code_label %};
+       }?;
+
+       chcss:assigned_date-311_207  xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:deficiency_assigned_date %};
+       chcss:operation_date-311_207   xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:deficiency_operation_date %};
+       chcss:date_completed-311_207   xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:deficiency_date_completed %};
+       chcss:delinquent_date-311_207  xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?     %Map:{ encounter:deficiency_delinquent_date %};
+    }*;
+
+
+    chcss:apv_deficiency-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:apv_deficiency_id %};
+
+       chcss:apv_item-311_208         xsd:string?       %Map:{ encounter:apv_deficiency_item %};
+       chcss:apv_action-311_208       xsd:string?       %Map:{ encounter:apv_deficiency_action %};
+
+       chcss:apv_person_responsible-311_208 {
+           chcss:identifier           xsd:string        %Map:{ encounter:apv_deficiency_person_responsible_id %};
+           rdfs:label                 xsd:string        %Map:{ encounter:apv_deficiency_person_responsible_label %};
+       }?;
+
+       chcss:apv_operation_date-311_208  xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?  %Map:{ encounter:apv_deficiency_operation_date %};
+       chcss:apv_date_completed-311_208  xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?  %Map:{ encounter:apv_deficiency_date_completed %};
+
+       chcss:apv_abbreviation-311_208    xsd:string?       %Map:{ encounter:apv_deficiency_abbreviation %};
+       chcss:apv_comment-311_208         xsd:string?       %Map:{ encounter:apv_deficiency_comment %};
+
+       chcss:apv_delinquent_date-311_208 xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?  %Map:{ encounter:apv_deficiency_delinquent_date %};
+       chcss:apv_assigned_date-311_208   xsd:date or
+                                         xsd:dateTime or
+                                         xsd:datetime?  %Map:{ encounter:apv_deficiency_assigned_date %};
+
+       chcss:apv_meprs_code-311_208 {
+           chcss:identifier           xsd:string        %Map:{ encounter:apv_deficiency_meprs_code_id %};
+           rdfs:label                 xsd:string        %Map:{ encounter:apv_deficiency_meprs_code_label %};
+       }?;
+    }*;
+
+    chcss:apv_delinquent_status-311       xsd:string?       %Map:{ encounter:apv_delinquent_status %};
+    chcss:apv_staff_physician-311 {
+       chcss:identifier                   xsd:string        %Map:{ encounter:apv_staff_physician_id %};
+       rdfs:label                         xsd:string        %Map:{ encounter:apv_staff_physician_label %};
+    }?;
+    chcss:apv_arrive_medical_record-311   xsd:date or
+                                          xsd:dateTime or
+                                          xsd:datetime?     %Map:{ encounter:apv_arrive_medical_record %};
+
+    chcss:icd_operations_procedures-311 {
+       chcss:identifier                        xsd:string    %Map:{ encounter:icd_operations_procedures_id %};
+
+       chcss:number-311_14                     xsd:string?   %Map:{ encounter:icd_operations_procedures_number %};
+       chcss:count-311_14                      xsd:string?   %Map:{ encounter:icd_operations_procedures_count %};
+
+       chcss:frequency_of_procedure-311_14     xsd:string?   %Map:{ encounter:icd_operations_procedures_frequency_of_procedure %};
+       chcss:procedure_description-311_14      xsd:string?   %Map:{ encounter:icd_operations_procedures_procedure_description %};
+       chcss:principal_procedure_flag-311_14   xsd:string?   %Map:{ encounter:icd_operations_procedures_principal_procedure_flag %};
+
+       chcss:blood_products_used_y_n-311_14    xsd:boolean?  %Map:{ encounter:icd_operations_procedures_blood_products_used_y_n %};
+       chcss:packed_red_blood_cells_cc-311_14  xsd:string?   %Map:{ encounter:icd_operations_procedures_packed_red_blood_cells_cc %};
+       chcss:fresh_frozen_plasma_units-311_14  xsd:string?   %Map:{ encounter:icd_operations_procedures_fresh_frozen_plasma_units %};
+
+       chcss:icd_operations_procedures-311_14 {
+           chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_id %};
+           rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_label %};
+       }?;
+
+       chcss:procedure_modifier-311_14 {
+           chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_modifier_id %};
+           rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_modifier_label %};
+       }?;
+
+       chcss:surgeon-311_14 {
+           chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_surgeon_id %};
+           rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_surgeon_label %};
+       }?;
+       chcss:surgeon_taxonomy_code-311_14 {
+           chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_surgeon_taxonomy_code_id %};
+           rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_surgeon_taxonomy_code_label %};
+       }?;
+
+       chcss:assisting_hcps-311_14 {
+           chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_assisting_hcps_id %};
+           chcss:assisting_hcps-311_21 {
+               chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_assisting_hcps_personnel_id %};
+               rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_assisting_hcps_personnel_label %};
+           };
+           chcss:hipaa_taxonomy_code-311_21 {
+               chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_hipaa_taxonomy_code_id %};
+               rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_hipaa_taxonomy_code_label %};
+           };
+       }*;
+
+       chcss:anesthesiologist-311_14 {
+           chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_anesthesiologist_id %};
+           rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_anesthesiologist_label %};
+       }?;
+
+       chcss:anesthesiologist_taxonomy_code-311_14 {
+           chcss:identifier     xsd:string        %Map:{ encounter:icd_operation_procedure_anesthesiologist_taxonomy_code_id %};
+           rdfs:label           xsd:string        %Map:{ encounter:icd_operation_procedure_anesthesiologist_taxonomy_code_label %};
+       }?;
+
+
+       chcss:instructions-311_14     xsd:string?   %Map:{ encounter:icd_operations_procedures_instructions %};
+
+       chcss:date_time-311_14        xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime?  %Map:{ encounter:icd_operations_procedures_date_time %};
+       chcss:stop_date_time-311_14   xsd:date or
+                                     xsd:dateTime or
+                                     xsd:datetime?  %Map:{ encounter:icd_operations_procedures_stop_date_time %};
+
+    }*;
+
+    chcss:diagnosis_death_separation-311  xsd:string?       %Map:{ encounter:diagnosis_death_separation %};
+
+    chcss:family_doctor_notified-311      xsd:date or
+                                          xsd:dateTime or
+                                          xsd:datetime?     %Map:{ encounter:family_doctor_notified %};
+
+    chcss:blood_components_indicator-311     xsd:boolean?   %Map:{ encounter:blood_components_indicator %};
+    chcss:blood_utilization-311 {
+       chcss:identifier                   xsd:string        %Map:{ encounter:blood_utilization_id %};
+
+       chcss:amount-311_31                xsd:string?       %Map:{ encounter:blood_utilization_amount %};
+       chcss:unit-311_31                  xsd:string?       %Map:{ encounter:blood_utilization_unit %};
+       chcss:unit_bag_number-311_31       xsd:string?       %Map:{ encounter:blood_utilization_unit_bag_number %};
+       chcss:reaction-311_31              xsd:boolean?      %Map:{ encounter:blood_utilization_reaction %};
+       chcss:selection_number-311_31      xsd:string?      %Map:{ encounter:blood_utilization_selection_number %};
+
+       chcss:hcp_ordering-311_31 {
+          chcss:identifier                xsd:string        %Map:{ encounter:blood_component_hcp_ordering_id %};
+          rdfs:label                      xsd:string        %Map:{ encounter:blood_component_hcp_ordering_label %};
+       }?;
+
+       chcss:date_time-311_31             xsd:date or
+                                          xsd:dateTime or
+                                          xsd:datetime?     %Map:{ encounter:blood_utilization_date_time %};
+
+       chcss:blood_component-311_31 {
+          chcss:identifier                xsd:string        %Map:{ encounter:blood_component_id %};
+          rdfs:label                      xsd:string        %Map:{ encounter:blood_component_label %};
+       }?;
+    }*;
+    
+    chcss:restraint_indicator-311            xsd:boolean?     %Map:{ encounter:restraint_indicator %};
+
+    chcss:date_time_of_assignment-311        xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:date_time_of_assignment %};
+    chcss:drg_code-311 {
+       chcss:identifier                      xsd:string       %Map:{ encounter:drg_code_id %};
+       rdfs:label                            xsd:string       %Map:{ encounter:drg_code_label %};
+    }?;
+    chcss:drg_status-311                     xsd:string?      %Map:{ encounter:drg_status %};
+    chcss:drg_cost-311                       xsd:string?      %Map:{ encounter:drg_cost %};
+
+    chcss:mdc_code-311 {
+       chcss:identifier                      xsd:string       %Map:{ encounter:mdc_code_id %};
+       rdfs:label                            xsd:string       %Map:{ encounter:mdc_code_label %};
+    }?;
+
+    chcss:expected_weight-311                xsd:string?      %Map:{ encounter:expected_weight %};
+    chcss:actual_weight-311                  xsd:string?      %Map:{ encounter:actual_weight %};
+
+    chcss:inpatient_record_filed-311         xsd:string?      %Map:{ encounter:inpatient_record_filed %};
+
+    chcss:short_outlier-311                  xsd:string?      %Map:{ encounter:short_outlier %};
+    chcss:long_outlier-311                   xsd:string?      %Map:{ encounter:long_outlier %};
+
+    chcss:geometric_mean_length_of_stay-311  xsd:string?      %Map:{ encounter:geometric_mean_length_of_stay %};
+    chcss:grouper_identification_version-311 xsd:string?      %Map:{ encounter:grouper_identification_version %};
+
+    chcss:regroup_flag_sex-311               xsd:boolean?     %Map:{ encounter:regroup_flag_sex %};
+    chcss:regroup_flag_dob_age_at_adm-311    xsd:boolean?     %Map:{ encounter:regroup_flag_dob_age_at_adm %};
+    chcss:regroup_flag_adm_date-311          xsd:boolean?     %Map:{ encounter:regroup_flag_adm_date %};
+    chcss:regroup_flag_adm_type-311          xsd:boolean?     %Map:{ encounter:regroup_flag_adm_type %};
+    chcss:regroup_flag_dispos_date-311       xsd:boolean?     %Map:{ encounter:regroup_flag_dispos_date %};
+    chcss:regroup_flag_dispos_type-311       xsd:boolean?     %Map:{ encounter:regroup_flag_dispos_type %};
+    chcss:regroup_flag_bed_days_this_mtf-311 xsd:boolean?     %Map:{ encounter:regroup_flag_bed_days_this_mtf %};
+    chcss:iregroup_flag_bas_days_this_mtf-311 xsd:boolean?    %Map:{ encounter:regroup_flag_bas_days_this_mtf %};
+    chcss:regroup_flag_dx-311                xsd:boolean?     %Map:{ encounter:regroup_flag_dx %};
+    chcss:regroup_flag_proc-311              xsd:boolean?     %Map:{ encounter:regroup_flag_proc %};
+
+    chcss:medical_surgical_case-311          xsd:string?      %Map:{ encounter:medical_surgical_case %};
+    chcss:return_code_from_e_g-311           xsd:string?      %Map:{ encounter:return_code_from_e_g %};
+
+    chcss:billing_number_id-311              xsd:string?      %Map:{ encounter:billing_number_id %};
+    chcss:entitlement_ien-311                xsd:string?      %Map:{ encounter:entitlement_ien %};
+
+    chcss:delinquent_status-311              xsd:string?      %Map:{ encounter:delinquent_status %};
+
+    chcss:service-311 {
+       chcss:identifier                      xsd:string       %Map:{ encounter:service_id %};
+       rdfs:label                            xsd:string       %Map:{ encounter:service_label %};
+    };
+
+    chcss:meprs_code-311 {
+       chcss:identifier                      xsd:string       %Map:{ encounter:meprs_code_id %};
+       rdfs:label                            xsd:string       %Map:{ encounter:meprs_code_label %};
+    }?;
+
+    chcss:user-311 {
+       chcss:identifier                      xsd:string       %Map:{ encounter:user_id %};
+       rdfs:label                            xsd:string       %Map:{ encounter:user_label %};
+    }?;
+
+    chcss:disch_verification_entered_by-311 {
+       chcss:identifier                      xsd:string       %Map:{ encounter:disch_verification_entered_by_id %};
+       rdfs:label                            xsd:string       %Map:{ encounter:disch_verification_entered_by_label %};
+    }?;
+
+    chcss:disch_verif_entry_date_time-311    xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:disch_verif_entry_date_time %};
+    chcss:discharge_instructions_given-311   xsd:boolean?     %Map:{ encounter:discharge_instructions_given %};
+
+    chcss:no_instructions_comment-311        xsd:string?      %Map:{ encounter:no_instructions_comment %};
+    chcss:discharge_signature_obtained-311   xsd:boolean?     %Map:{ encounter:discharge_signature_obtained %};
+    chcss:person_providing_instructions-311 {
+       chcss:identifier                      xsd:string       %Map:{ encounter:person_providing_instructions_id %};
+       rdfs:label                            xsd:string       %Map:{ encounter:person_providing_instructions_label %};
+    chcss:instructions_given_date_time-311   xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:instructions_given_date_time %};
+    }?;
+
+    chcss:meb_candidate_status-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:meb_candidate_status_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:meb_candidate_status_label %};
+    }?;
+
+    chcss:meb_candidate_identified_date-311  xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:meb_candidate_identified_date %};
+    chcss:meb_candidate_confirmed_date-311  xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:meb_candidate_confirmed_date %};
+
+    chcss:meb_case_comment-311               xsd:string?      %Map:{ encounter:meb_case_comment %};
+    chcss:meb_case_scheduled_date-311        xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:meb_case_scheduled_date %};
+    chcss:meb_case_resolved_date-311         xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:meb_case_resolved_date %};
+
+    chcss:division-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:division_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:division_label %};
+    }?;
+
+    chcss:meb_peb_status-311                 xsd:string?      %Map:{ encounter:meb_peb_status %};
+    chcss:peb_patient_counseled_date-311     xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:peb_patient_counseled_date %};
+    chcss:peb_informal_review_date-311       xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:peb_informal_review_date %};
+    chcss:peb_formal_review_date-311         xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:peb_formal_review_date %};
+    chcss:peb_case_appeal_date-311           xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:peb_case_appeal_date %};
+    chcss:peb_appeal_pending_ind-311         xsd:boolean?     %Map:{ encounter:peb_appeal_pending_ind %};
+    chcss:peb_case_finalized_date-311        xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:peb_case_finalized_date %};
+    chcss:peb_referral_hospital_date-311     xsd:date or
+                                             xsd:dateTime or
+                                             xsd:datetime?    %Map:{ encounter:peb_referral_hospital_date %};
+
+    chcss:diagnosis_free_text-311            xsd:string?      %Map:{ encounter:diagnosis_free_text %};
+    chcss:patient_instructions-311           xsd:string?      %Map:{ encounter:patient_instructions %};
+    chcss:procedure_free_text-311            xsd:string?      %Map:{ encounter:procedure_free_text %};
+    chcss:er_comment-311                     xsd:string?      %Map:{ encounter:er_comment %};
+    chcss:disability_description-311         xsd:string?      %Map:{ encounter:disability_description %};
+    chcss:convalescent_recommendation-311    xsd:string?      %Map:{ encounter:convalescent_recommendation %};
+
+    chcss:pre_op_days-311                    xsd:string?      %Map:{ encounter:pre_op_days %};
+    chcss:post_op_days-311                   xsd:string?      %Map:{ encounter:post_op_days %};
+    chcss:sick_days-311                      xsd:string?      %Map:{ encounter:sick_days %};
+    chcss:bed_days-311                       xsd:string?      %Map:{ encounter:bed_days %};
+
+    chcss:casualty_prognosis-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:casualty_prognosis_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:casualty_prognosis_label %};
+    }?;
+
+    chcss:notification-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:notification_id %};
+       chcss:notification-311_2       xsd:string        %Map:{ encounter:notification %};
+       chcss:date-311_2               xsd:date or
+                                      xsd:dateTime or
+                                      xsd:datetime?    %Map:{ encounter:notification_date %};
+       chcss:by-311_2 {
+          chcss:identifier            xsd:string        %Map:{ encounter:notification_by_id %};
+          rdfs:label                  xsd:string        %Map:{ encounter:notification_by_label %};
+       }?;
+    }*;
+
+    chcss:disability-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:disability_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:disability_label %};
+    }?;
+
+    chcss:problem_code-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:problem_code_id %};
+       chcss:description              xsd:string?       %Map:{ encounter:description %};
+       chcss:problem_code-311_23 {
+          chcss:identifier            xsd:string        %Map:{ encounter:icd_problem_code_id %};
+          rdfs:label                  xsd:string        %Map:{ encounter:icd_problem_code_label %};
+       }?;
+    }*;
+
+    chcss:appointment_type-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:appointment_type_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:appointment_type_label %};
+    }?;
+    chcss:encounter_stop_date_time-311 xsd:date or
+                                       xsd:dateTime or
+                                       xsd:datetime?    %Map:{ encounter:encounter_stop_date_time %};
+    chcss:status-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:status_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:status_label %};
+    }?;
+
+    chcss:clerk_info-311 {
+       chcss:identifier                     xsd:string        %Map:{ encounter:clerk_info_id %};
+       chcss:clerk_name-311_29 {
+          chcss:identifier                  xsd:string        %Map:{ encounter:clerk_name_id %};
+          rdfs:label                        xsd:string        %Map:{ encounter:clerk_name_label %};
+       }?;
+       chcss:clerk_initials-311_29          xsd:string?       %Map:{ encounter:clerk_initials %};
+       chcss:screen-311_29                  xsd:string?       %Map:{ encounter:date_time_last_modified %};
+       chcss:date_time_last_modified-311_29 xsd:date or
+                                            xsd:dateTime or
+                                            xsd:datetime?    %Map:{ encounter:date_time_last_modified %};
+    }*;
+
+    chcss:anesthesia_risk_codes-311 {
+       chcss:identifier               xsd:string        %Map:{ encounter:anesthesia_risk_codes_id %};
+       rdfs:label                     xsd:string        %Map:{ encounter:anesthesia_risk_codes_label %};
+    }?;
+}
