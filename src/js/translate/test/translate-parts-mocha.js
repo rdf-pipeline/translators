@@ -7,9 +7,9 @@ const chai = require('chai');
 const _ = require('underscore');
 
 const Cmumps = require('../cmumps');
-const Cmumps2fhir_all = require('../Cmumps2fhir_all');
-const Cmumps2fhir_simple_all = require('../Cmumps2fhir_simple_all');
-const Cmumps_utils = require('../util/Cmumps_utils');
+const Cmumps2fhir_all = require('../cmumps2fhir_all');
+const Cmumps2fhir_simple_all = require('../cmumps2fhir_simple_all');
+const Cmumps_utils = require('../util/cmumps_utils');
 
 const Demograpics = require('../cmumps2fhir_demographics');
 const Labs = require('../cmumps2fhir_labs');
@@ -23,7 +23,7 @@ const Parser = new Fhir2xml.FHIRConverter(2);
 
 const Fdt = require('../cmumps2fhir_datatypes');
 
-const Test_utils = require('./Test_utils');
+const Test_utils = require('./test_utils');
 
 // Different names for the same input file, allows for easier on-the-fly modications.
 // var testDataPath = 'translate/test/data/';
