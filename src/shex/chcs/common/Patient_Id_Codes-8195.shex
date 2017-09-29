@@ -2,7 +2,7 @@
 # used to differentiate between newborns, delivery cases and all other cases
 # 
 # CHCS schema documentation: 
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Patient_Id_Codes-8195.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/cmumps-to-chcs/data/schema/chcs-nc/Patient_Id_Codes-8195.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/extensions/Map/#>

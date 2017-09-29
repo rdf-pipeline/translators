@@ -2,7 +2,7 @@
 # or many tasks (eg. a medication QID produces four tasks per day) 
 # 
 # CHCS schema documentation: 
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Order_Task-107.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/cmumps-to-chcs/data/schema/chcs-nc/Order_Task-107.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/extensions/Map/#>

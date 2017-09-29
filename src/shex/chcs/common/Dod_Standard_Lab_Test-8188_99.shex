@@ -2,7 +2,7 @@
 # to standardize the CHCS lab tests
 #
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Dod_Standard_Lab_Test-8188_99.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/cmumps-to-chcs/data/schema/chcs-nc/Dod_Standard_Lab_Test-8188_99.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/extensions/Map/#>

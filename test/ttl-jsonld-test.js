@@ -130,7 +130,7 @@ describe("ttl-jsonld", function() {
                 ttlJsonLd.rdfToJsonLd(graph, frame).then(function(jsonld) { 
                     jsonld.should.be.an('object');
                     jsonld.should.deep.equal({ 
-                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld',
+                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/cmumps-to-chcs/data/fake_chcs/patient-7/context.jsonld',
                         '@graph': [ 
                              { id: 'urn:local:patient-1',
                                'city-2': 'ANYTOWN',
@@ -174,7 +174,7 @@ describe("ttl-jsonld", function() {
 
                     jsonld.should.be.an('object');
                     jsonld.should.deep.equal({ 
-                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld',
+                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/cmumps-to-chcs/data/fake_chcs/patient-7/context.jsonld',
                         '@graph': [
                              { id: 'urn:local:patient-1',
                                'city-2': 'ANYTOWN',

@@ -1,7 +1,7 @@
 # This CHCS schema contains data about patient-encounter events
 # 
 # CHCS schema documentation: 
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Encounter-311.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/cmumps-to-chcs/data/schema/chcs-nc/Encounter-311.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/extensions/Map/#>

@@ -1,7 +1,7 @@
 # This schema contains a table of disability conditions used in the Patient Administration process
 #
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Disability_Condition-31.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/cmumps-to-chcs/data/schema/chcs-nc/Disability_Condition-31.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/extensions/Map/#>

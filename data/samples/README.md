@@ -5,4 +5,4 @@ a LDR endpoint for the CHCS repository.  All personal references have been remov
 contain every possible attribute.  The reader should refer to the documentation for that list.
 
 Most of the CHCS data samples are documented in more detail at 
-https://github.com/rdf-pipeline/translators/tree/master/data/schema/chcs-nc 
+https://github.com/rdf-pipeline/translators/tree/cmumps-to-chcs/data/schema/chcs-nc 

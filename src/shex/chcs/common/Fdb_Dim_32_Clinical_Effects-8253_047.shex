@@ -1,7 +1,7 @@
 # This schema is for the FDB Dim table that contains the definition of DDI clinical effects.
 #
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fdb_Dim_32_Clinical_Effects-8253_047.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/cmumps-to-chcs/data/schema/chcs-nc/Fdb_Dim_32_Clinical_Effects-8253_047.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/fdces/Map/#>
