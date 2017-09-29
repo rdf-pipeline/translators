@@ -1,0 +1,70 @@
+./data/fake_chcs/patient-7/chcs-patient7.jsonld:    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./data/fake_chcs/patient-7/aalta-patient7-procedures.jsonld:    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./data/samples/README.md:https://github.com/rdf-pipeline/translators/tree/master/data/schema/chcs-nc 
+./data/samples/User-3.jsonld:    "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./src/shex/test/data/demographics/chcs-patient7.jsonld:   "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./src/shex/chcs-patient7.frame:   "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./src/shex/chcs/common/Prescription-52.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Prescription-52.htm
+./src/shex/chcs/common/Hospital_Location-44.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Hospital_Location-44.htm
+./src/shex/chcs/common/Gp_Consult_Result-52003.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Gp_Consult_Result-52003.htm
+./src/shex/chcs/common/Blood_Product_Type-8161.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Blood_Product_Type-8161.htm
+./src/shex/chcs/common/Dod_Standard_Lab_Test-8188_99.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Dod_Standard_Lab_Test-8188_99.htm
+./src/shex/chcs/common/Pharmacy_Action-59_6.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Pharmacy_Action-59_6.htm
+./src/shex/chcs/common/Appointment_Type-44_5.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Appointment_Type-44_5.htm
+./src/shex/chcs/common/input_data/README.md:[https://github.com/rdf-pipeline/translators/tree/master/data/samples](CHCS sample data)
+./src/shex/chcs/common/input_data/README.md:The process to generate the data involves using the tools found [https://github.com/rdf-pipeline/translators/tree/master/bin](here) is: 
+./src/shex/chcs/common/Drug-50.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Drug-50.htm
+./src/shex/chcs/common/Diagnostic_Related_Group-312.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Diagnostic_Related_Group-312.htm
+./src/shex/chcs/common/Patient_Id_Codes-8195.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Patient_Id_Codes-8195.htm
+./src/shex/chcs/common/Anesthesia_Rate-8154_3.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Anesthesia_Rate-8154_3.htm
+./src/shex/chcs/common/Codes-757_02.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Codes-757_02.htm
+./src/shex/chcs/common/Clinical_History-8810.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Clinical_History-8810.htm
+./src/shex/chcs/common/Anesthesia_Risk_Codes-8149.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Anesthesia_Risk_Codes-8149.htm
+./src/shex/chcs/common/Fetal_Presentation_Type-8183.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fetal_Presentation_Type-8183.htm
+./src/shex/chcs/common/Order_Warnings-102_1.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Order_Warnings-102_1.htm
+./src/shex/chcs/common/Ancillary_Procedure-108_1.shex:#    http://htmlpreview.github.com/?http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Ancillary_Procedure-108_1.htm
+./src/shex/chcs/common/Appointment_Status-8514.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Appointment_Status-8514.htm
+./src/shex/chcs/common/Geographic_Location-5.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Geographic_Location-5.htm
+./src/shex/chcs/common/Ancillary_Tracking-39_9.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Ancillary_Tracking-39_9.htm
+./src/shex/chcs/common/Encounter-311.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Encounter-311.htm
+./src/shex/chcs/common/Kg_Provider_Role-100514.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Kg_Provider_Role-100514.htm
+./src/shex/chcs/common/Coding_Systems-757_03.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Coding_Systems-757_03.htm
+./src/shex/chcs/common/Blood_Type-8712.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Blood_Type-8712.htm
+./src/shex/chcs/common/Examination_Status-72.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Examination_Status-72.htm
+./src/shex/chcs/common/Absent_Status-8131.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Absent_Status-8131.htm
+./src/shex/chcs/common/Order_Task-107.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Order_Task-107.htm
+./src/shex/chcs/common/Branch_Of_Service-23.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Branch_Of_Service-23.htm
+./src/shex/chcs/common/Medication_Profile-8810_3.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Medication_Profile-8810_3.htm
+./src/shex/chcs/common/User-3.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/User-3.htm
+./src/shex/chcs/common/Fdb_Dim_32_Clinical_Effects-8253_047.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fdb_Dim_32_Clinical_Effects-8253_047.htm
+./src/shex/chcs/common/Provider-6.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Provider-6.htm
+./src/shex/chcs/common/Appointment_Detail_Codes-44_7.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Appointment_Detail_Codes-44_7.htm
+./src/shex/chcs/common/Fdb_Dam_Cross_Sensitivity_Allergy-8253_05.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fdb_Dam_Cross_Sensitivity_Allergy-8253_05.htm
+./src/shex/chcs/common/Pharmacy_Patient-55.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Pharmacy_Patient-55.htm
+./src/shex/chcs/common/Origin_Of_Order-111.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Origin_Of_Order-111.htm
+./src/shex/chcs/common/Fdb_Ddi_Severity_Level-8253_045.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fdb_Ddi_Severity_Level-8253_045.htm
+./src/shex/chcs/common/Additional_Medical_Treatment_Facility-8101_1.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Additional_Medical_Treatment_Facility-8101_1.htm
+./src/shex/chcs/common/Patient-2.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Patient-2.htm
+./src/shex/chcs/common/Collection_Sample-62.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Collection_Sample-62.htm
+./src/shex/chcs/common/Family_Member_Prefix-8110.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Family_Member_Prefix-8110.htm
+./src/shex/chcs/common/Ned_Hcdp_Coverage_Code-8545.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Ned_Hcdp_Coverage_Code-8545.htm
+./src/shex/chcs/common/Fdb_Dam_Master_Table-8250_4.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fdb_Dam_Master_Table-8250_4.htm
+./src/shex/chcs/common/Access_To_Care_Category-8510.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Access_To_Care_Category-8510.htm
+./src/shex/chcs/common/Diet-8410.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Diet-8410.htm
+./src/shex/chcs/common/Disability_Condition-31.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Disability_Condition-31.htm
+./src/shex/chcs/common/Antibiotic_Panel_File-8728.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Antibiotic_Panel_File-8728.htm
+./src/shex/chcs/common/Allergies_Selections-8254_01.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Allergies_Selections-8254_01.htm
+./src/shex/chcs/common/Casualty_Prognosis-8106.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Casualty_Prognosis-8106.htm
+./src/shex/chcs/common/Coding_Type-8930.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Coding_Type-8930.htm
+./src/shex/chcs/common/Ethnic_Background-8191.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Ethnic_Background-8191.htm
+./src/shex/chcs/common/Casualty_Status-8139.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Casualty_Status-8139.htm
+./src/shex/chcs/common/Discharge_Type-42_2.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Discharge_Type-42_2.htm
+./src/shex/chcs/common/Cause_Of_Injury-8137.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Cause_Of_Injury-8137.htm
+./src/shex/chcs/common/Fdb_Dim_32_Reference_Cat_Desc-8253_046.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fdb_Dim_32_Reference_Cat_Desc-8253_046.htm
+./src/shex/chcs/common/Etiology_Field-61_2.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Etiology_Field-61_2.htm
+./src/shex/chcs/common/Allergies_Definitions-8254_011.shex:#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Allergies_Definitions-8254_011.htm
+./test/data/chcs.frame:   "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./test/data/chcs-patient7.jsonld:   "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./test/data/simple-chcs.jsonld:   "@context": "https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld",
+./test/ttl-jsonld-test.js:                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld',
+./test/ttl-jsonld-test.js:                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld',
