@@ -4,6 +4,6 @@
 
 foreach my $f ( @ARGV ) {
   print "$f\n";
-  `sed -i 's/rdf-pipeline\/translators\/master/rdf-pipeline\/translators\/cmumps-to-chcs/g; s/rdf-pipeline\/translators\/blob\/master/rdf-pipeline\/translators\/blob\/cmumps-to-chcs/g; s/rdf-pipeline\/translators\/tree\/master/rdf-pipeline\/translators\/tree\/cmumps-to-chcs/g' $f`;
+  `sed -i 's/rdf-pipeline\\/translators\\/master/rdf-pipeline\\/translators\\/cmumps-to-chcs/g; s/rdf-pipeline\\/translators\\/blob\\/master/rdf-pipeline\\/translators\\/blob\\/cmumps-to-chcs/g; s/rdf-pipeline\\/translators\\/tree\\/master/rdf-pipeline\\/translators\\/tree\\/cmumps-to-chcs/g' $f`;
   }
 
