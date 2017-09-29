@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Refactor of cmumps2, uses modules.
+ * Refactor of chcs2, uses modules.
  *
  * Scaffolding stolen from http://shapeshed.com/command-line-utilities-with-nodejs/
  * Need it to run this file in webstorm under the debugger, a productivity boast.
@@ -15,22 +15,22 @@ var _ = require('underscore');
 //var logger = log4js.getLogger(); // TODO mike@carif.io: scope?
 // logger.setLevel(log4js.levels.OFF);
 var program = require('commander'); // https://www.npmjs.com/package/commander
-var cmumps_utils = require('./cmumps_utils');
-var translate = require('./../cmumps2fhir_all');
+var chcs_utils = require('./chcs_utils');
+var translate = require('./../chcs2fhir_all');
 var fhir2xml = require('fhir-json-to-xml');
 var fhir = require('./../fhir');
-var cmumps = require('./../cmumps');
-var demographics = require('./../cmumps2fhir_demographics');
+var chcs = require('./../chcs');
+var demographics = require('./../chcs2fhir_demographics');
 var format = require('string-format');
 var util = require('util');
 var fs = require('fs');  // node file system
 var assert = require('assert');
-var fdt = require('./../cmumps2fhir_datatypes');
+var fdt = require('./../chcs2fhir_datatypes');
 
 
 
 /**
- * Process the cmumps jsonld file.
+ * Process the chcs jsonld file.
  * @param {string} filename
  * @returns {object}
  */
@@ -39,36 +39,36 @@ var fdt = require('./../cmumps2fhir_datatypes');
 function process_file(filename) {
     try {
 
-        // Read and then parse the cmumps input.
-        var cmumpsInput;
+        // Read and then parse the chcs input.
+        var chcsInput;
 
         // Can you read the file?
         try {
-            cmumpsInput = fs.readFileSync(filename, "utf8");
+            chcsInput = fs.readFileSync(filename, "utf8");
         } catch (err) {
             console.error(utils.format("Can't read '%s'", filename));
             process.exit(1);
         }
 
-        // Get the input into cmumpsInput via JSON.load or eval.
+        // Get the input into chcsInput via JSON.load or eval.
         try {
-            cmumpsInput = JSON.parse(cmumpsInput);
+            chcsInput = JSON.parse(chcsInput);
         } catch (err) {
             try {
                 console.warn('Trying javascript eval...')
-                eval('cmumpsInput = ' + cmumpsInput);
+                eval('chcsInput = ' + chcsInput);
             } catch (err) {
                 console.error(util.format("Can't JSON load or eval '%s'.", filename));
                 process.exit(1);
             }
         }
-        // Here: you have loaded a jsonld object into cmumpsInput.
-        // cmumpsInput is a complete jsonld object with an "@context' and an "@graph".
+        // Here: you have loaded a jsonld object into chcsInput.
+        // chcsInput is a complete jsonld object with an "@context' and an "@graph".
 
-        // Translate cmumpsInput
+        // Translate chcsInput
         var fhirTranslation = undefined;
         try {
-            fhirTranslation = translate.translateCmumpsFhir(cmumpsInput, undefined, 'now');
+            fhirTranslation = translate.translateChcsFhir(chcsInput, undefined, 'now');
         } catch (e) {
             console.error('translateCumpsFhir failed: ' + e.message);
             process.exit(1);
@@ -78,12 +78,12 @@ function process_file(filename) {
         // Count up some things as a sanity check. The counts should currently correspond.
         var counts = {};
         var count = 0;
-        for (var p in cmumps.parts) {
+        for (var p in chcs.parts) {
             if (p == 'patient') continue; // nickname for demographics
             if (p == 'labs') continue; // fhir translation skips labs by design
-            count += counts[p] = cmumps.parts[p](cmumpsInput).length;
+            count += counts[p] = chcs.parts[p](chcsInput).length;
         }
-        var untranslated = cmumpsInput['@graph'].length - count;
+        var untranslated = chcsInput['@graph'].length - count;
         if (untranslated > 0) console.warn(format('There were {c} untranslated input items.', {c: untranslated}));
 
 
@@ -108,11 +108,11 @@ function process_file(filename) {
 
         // --xref user asked to see the cross tab counts by parts
         if (program.xref) {
-            // Translations currently aways preserved 1-1. A single cmumps 'Patient-2' should
-            // translate into a single fhir 'Patient', a single cmumps'Kg_Patient_Diagnosis-100417' to a
+            // Translations currently aways preserved 1-1. A single chcs 'Patient-2' should
+            // translate into a single fhir 'Patient', a single chcs'Kg_Patient_Diagnosis-100417' to a
             // single fhir 'DiagnosticReport' and so forth. Therefore you can compare the counts to see
             // if something is wrong.
-            console.log('parts\t\t\t\tcmumps\tfhir\tok?')
+            console.log('parts\t\t\t\tchcs\tfhir\tok?')
             // all_same records if any translation part is dropped. --xref exits 0 or 1 iff no translations are dropped.
             var all_same = true;
             for (var p in counts) {
@@ -171,9 +171,9 @@ function process_file(filename) {
             if (_.isArray(fhirTranslation)) {
                 // Technically this output is wrong. An array of objects must be bundled.
                 // logger.warn(format("Multiple '{p}'s generated.", {p: program.part}));
-                fhirTranslation.forEach(function(t) { if (t) console.log(cmumps_utils.pp(t) + "\n\n");});
+                fhirTranslation.forEach(function(t) { if (t) console.log(chcs_utils.pp(t) + "\n\n");});
             } else {
-                if (fhirTranslation) console.log(cmumps_utils.pp(fhirTranslation));
+                if (fhirTranslation) console.log(chcs_utils.pp(fhirTranslation));
             }
         }
 
@@ -189,7 +189,7 @@ function process_file(filename) {
             assert(true, 'always succeeds');
 
             // Extract the patient input
-            var patient = demographics.extractPatient(cmumpsInput);
+            var patient = demographics.extractPatient(chcsInput);
             // You should have at most one patient
             if (patient) {
                 assert (patient.length <= 1, "More than one patient");
@@ -227,7 +227,7 @@ program
     .option('--max [max]', 'max elements of array output')
     .option('--xref', 'quick cross reference')
     .option('--check', 'spot check the translation')
-    .option('--policy', 'enforce cmumps policies: @graph must have at least one entry, must have a patient')
+    .option('--policy', 'enforce chcs policies: @graph must have at least one entry, must have a patient')
     .parse(process.argv);
 
 // logger.Level(program.level);

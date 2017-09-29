@@ -1,60 +1,60 @@
 /**
- * Translate an entire cmumps object to a fhir bundle.
+ * Translate an entire chcs object to a fhir bundle.
  */
 
 const _ = require('underscore');
 const Format = require('string-format');
 
 const Fhir = require('./fhir');
-const Fdt = require('./cmumps2fhir_datatypes');
+const Fdt = require('./chcs2fhir_datatypes');
 
 // for each piece
-const Demographics = require('./cmumps2fhir_demographics');
-const Prescriptions = require('./cmumps2fhir_prescriptions');
-const Labs = require('./cmumps2fhir_labs');
-const Diagnoses = require('./cmumps2fhir_diagnoses');
-const Procedures = require('./cmumps2fhir_procedures');
-const Cmumps_utils = require('./util/cmumps_utils');
+const Demographics = require('./chcs2fhir_demographics');
+const Prescriptions = require('./chcs2fhir_prescriptions');
+const Labs = require('./chcs2fhir_labs');
+const Diagnoses = require('./chcs2fhir_diagnoses');
+const Procedures = require('./chcs2fhir_procedures');
+const Chcs_utils = require('./util/chcs_utils');
 
 
 /**
- * Given a cmumps jsonld object (containing both @context and @graph), return its translation section by section.
+ * Given a chcs jsonld object (containing both @context and @graph), return its translation section by section.
  * The sections are 'demographics', 'prescriptions', etc.
  *
- * @param {object} cmumpsJsonldObject -- input jsonld object containing an "@graph" key.
+ * @param {object} chcsJsonldObject -- input jsonld object containing an "@graph" key.
  * @returns {object} - the fhir translation and a bundle containing a "composition".
  */
-function translateCmumpsFhir(cmumpsJsonldObject, options, date) {
-    // If the caller is confused an passes an array of cmumpsJsonldObjects, return the array of translations.
+function translateChcsFhir(chcsJsonldObject, options, date) {
+    // If the caller is confused an passes an array of chcsJsonldObjects, return the array of translations.
     // This way the caller doesn't have to keep track.
-    if (_.isArray(cmumpsJsonldObject)) {
-        // return translateHelper(cmumpsJsonldObject[0]);
-        return cmumpsJsonldObject.map(function(i) {return translateCmumpsFhirHelper(i, options, date); })
+    if (_.isArray(chcsJsonldObject)) {
+        // return translateHelper(chcsJsonldObject[0]);
+        return chcsJsonldObject.map(function(i) {return translateChcsFhirHelper(i, options, date); })
     } else {
         // A single object, translate it.
-        return translateCmumpsFhirHelper(cmumpsJsonldObject, options, date);
+        return translateChcsFhirHelper(chcsJsonldObject, options, date);
     }
 }
 
 
 /**
- * translateHelper is the real function, it expects a *single* cmumps object.
+ * translateHelper is the real function, it expects a *single* chcs object.
  * and returns the translation.
- * @param {object} cmumpsJsonldObject -- the input
+ * @param {object} chcsJsonldObject -- the input
  * @param {participants: boolean, warnings: boolean} options
  * @param {string} date -- use this date instead of now(). Useful to diff output.
  * @returns {{resourceType: string, type: string, entry: *[]}}
  */
-function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
+function translateChcsFhirHelper(chcsJsonldObject, options, date) {
 
-    var options = Cmumps_utils.merge(options, {participants: false, warnings: false, policy: false});
+    var options = Chcs_utils.merge(options, {participants: false, warnings: false, policy: false});
 
     // Check policy?
     if (options.policy) {
         // Make sure you're receiving a translatable object
-        if (!_.has(cmumpsJsonldObject, '@graph')) throw new Error("No expected field '@graph'.");
-        if (!_.isArray(cmumpsJsonldObject['@graph'])) throw new Error("Expecting an array value for '@graph'");
-        if (cmumpsJsonldObject['@graph'].length == 0) throw new Error("Field '@graph' contains no value.");
+        if (!_.has(chcsJsonldObject, '@graph')) throw new Error("No expected field '@graph'.");
+        if (!_.isArray(chcsJsonldObject['@graph'])) throw new Error("Expecting an array value for '@graph'");
+        if (chcsJsonldObject['@graph'].length == 0) throw new Error("Field '@graph' contains no value.");
     }
     var date = date || Fhir.now();
     var participatingProperties = []; // no participants yet
@@ -62,7 +62,7 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
 
     // Check the input.
     // Using jsonpath, select the demographics fhirParts of @graph.
-    var theDemographics = Demographics.extractDemographics(cmumpsJsonldObject);
+    var theDemographics = Demographics.extractDemographics(chcsJsonldObject);
     if (options.policy && theDemographics.length < 1) {
         throw new Error("Expecting a patient, none found.");
     }
@@ -78,7 +78,7 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
     // miss formed in many ways and almost all input fields are optional, the test cases
     // can spiral out of control, so we turn off coverage there.
 
-    // cmumps Patient-2
+    // chcs Patient-2
     var fhirDemographicsTranslation;
     if (theDemographics.length) {
         try {
@@ -88,8 +88,8 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         }
     }
 
-    // cmumps Prescription-52
-    var thePrescriptions = Prescriptions.extractPrescriptions(cmumpsJsonldObject);
+    // chcs Prescription-52
+    var thePrescriptions = Prescriptions.extractPrescriptions(chcsJsonldObject);
     var fhirPrescriptionTranslations = thePrescriptions.map(function(i) {
         try {
             return Prescriptions.translatePrescriptionsFhir(i, options);
@@ -98,8 +98,8 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         }
     });
 
-    // cmumps Lab_Results-63 will be handled elsewhere, we don't "know" how to do them.
-    var theLabs = Labs.extractLabs(cmumpsJsonldObject);
+    // chcs Lab_Results-63 will be handled elsewhere, we don't "know" how to do them.
+    var theLabs = Labs.extractLabs(chcsJsonldObject);
     var fhirLabResultTranslations = theLabs.map(function(i) {
         try {
              return Labs.translateLabsFhir(i, options);
@@ -108,8 +108,8 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
          }
     });
 
-    // cmumps Kg_Patient_Diagnosis-100417
-    var theDiagnoses = Diagnoses.extractDiagnoses(cmumpsJsonldObject);
+    // chcs Kg_Patient_Diagnosis-100417
+    var theDiagnoses = Diagnoses.extractDiagnoses(chcsJsonldObject);
     var fhirDiagnosticReportTranslations = theDiagnoses.map(function (diagnosis) {
         try {
             return Diagnoses.translateDiagnosesFhir(diagnosis, options);
@@ -118,9 +118,9 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
         }
     });
 
-    // cmumps Procedures
+    // chcs Procedures
     // TODO mike@carif.io: Procedures will come from alhta20, a different database. Details tbs.
-    var theProcedures = Procedures.extractProcedures(cmumpsJsonldObject);
+    var theProcedures = Procedures.extractProcedures(chcsJsonldObject);
     var fhirProcedureTranslations = theProcedures.map(function (procedure) {
         try {
             return Procedures.translateProceduresFhir(procedure, options);
@@ -144,9 +144,9 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
     if (options.warnings) Fhir.addWarnings(resources, warnings);
 
     // A fhir bundle is a top-level resource. It can be signed (aka sha1 or md5).
-    // XML translation expects a "top level" object to cmumps2fhir_all.
+    // XML translation expects a "top level" object to chcs2fhir_all.
     var bundle = {
-        resourceType: 'Bundle', // The cmumps translation is a "bundle" ...
+        resourceType: 'Bundle', // The chcs translation is a "bundle" ...
         type: 'document', // ... composed at moment in time...
         entry: [{
             resourceType: 'Composition',
@@ -154,7 +154,7 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
             title: module.name, // ... entited the name of this module ...
             status: 'final',
             subject: arguments.callee,
-            type: Fdt.fhirCodeableConcept('cmumps'), // ... originating with cmumps ...
+            type: Fdt.fhirCodeableConcept('chcs'), // ... originating with chcs ...
             resource: resources // ... with these translated elements
         }]
     };
@@ -165,6 +165,6 @@ function translateCmumpsFhirHelper(cmumpsJsonldObject, options, date) {
 
 
 module.exports = {
-    translate: translateCmumpsFhir,
-    translateCmumpsFhir: translateCmumpsFhir 
+    translate: translateChcsFhir,
+    translateChcsFhir: translateChcsFhir 
 };

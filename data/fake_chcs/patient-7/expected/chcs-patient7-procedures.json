@@ -7,8 +7,8 @@
       "type": {
         "coding": [
           {
-            "code": "cmumpss",
-            "display": "cmumpss"
+            "code": "chcss",
+            "display": "chcss"
           }
         ],
         "text": "1074046"
@@ -24,9 +24,9 @@
   "category": {
     "coding": [
       {
-        "system": "cmumps",
+        "system": "chcs",
         "version": "0.0.1",
-        "code": "cmumps",
+        "code": "chcs",
         "display": "HDDConcept-1450368",
         "userSelected": false
       }
@@ -36,9 +36,9 @@
   "code": {
     "coding": [
       {
-        "system": "cmumps",
+        "system": "chcs",
         "version": "0.0.1",
-        "code": "cmumps",
+        "code": "chcs",
         "display": "HDDConcept-1450368",
         "userSelected": false
       }

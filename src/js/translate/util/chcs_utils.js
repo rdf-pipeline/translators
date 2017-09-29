@@ -1,5 +1,5 @@
 /**
- * cmumps utility functions. Here until they find a home elsewhere.
+ * chcs utility functions. Here until they find a home elsewhere.
  */
 
 var decomment = require('decomment');  // strips javascript comments out of a JSON string
@@ -74,7 +74,7 @@ function isJsonld(object) {
 
 // var MongoClient = require('mongodb').MongoClient;
 
-// This function is useful iff you have direct access to a cmumps mongodb source and want to use it to compare
+// This function is useful iff you have direct access to a chcs mongodb source and want to use it to compare
 // it to data you from a webservice. It is specific to a particular document format, nonetheless it offers a
 // prototype for use elsewhere. Makes it worth saving.
 

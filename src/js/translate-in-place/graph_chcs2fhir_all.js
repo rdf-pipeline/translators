@@ -1,36 +1,36 @@
 /**
- * Translate an entire cmumps object to a fhir bundle.
+ * Translate an entire chcs object to a fhir bundle.
  */
 
 var prefix = '../translate/';
-var cmumps = require(prefix + 'cmumps');
+var chcs = require(prefix + 'chcs');
 // Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
+var pattern = chcs.chcssJsonPattern;
+var chcss = chcs.chcss;
 var fhir = require(prefix + 'fhir');
 var _ = require('underscore');
 var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
-var fdt = require(prefix + 'cmumps2fhir_datatypes');
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
+var fdt = require(prefix + 'chcs2fhir_datatypes');
+var chcs_utils = require(prefix + 'util/chcs_utils');
 
 // for each piece
 var siblings = './';
-var demographics = require(siblings + 'graph_cmumps2fhir_demographics');
-var prescriptions = require(siblings + 'graph_cmumps2fhir_prescriptions');
-var labs = require(siblings + 'graph_cmumps2fhir_labs');
-var diagnoses = require(siblings + 'graph_cmumps2fhir_diagnoses');
-var procedures = require(siblings + 'graph_cmumps2fhir_procedures');
+var demographics = require(siblings + 'graph_chcs2fhir_demographics');
+var prescriptions = require(siblings + 'graph_chcs2fhir_prescriptions');
+var labs = require(siblings + 'graph_chcs2fhir_labs');
+var diagnoses = require(siblings + 'graph_chcs2fhir_diagnoses');
+var procedures = require(siblings + 'graph_chcs2fhir_procedures');
 var Av = require('autovivify');
 
 
 /**
- * Given a cmumps jsonld object (containing both @context and @graph), return its translation section by section.
+ * Given a chcs jsonld object (containing both @context and @graph), return its translation section by section.
  * The sections are 'demographics', 'prescriptions', etc.
  *
- * @param {object} cmumpsJsonldObjectModified -- input jsonld object containing an "@graph" key. THE PARAM IS (POTENTIALLY) MODIFIED IFF options.modified == true.
- * @param {object} cmumpsJsonldObjectModified['@graph'][] -- actual content to translate
+ * @param {object} chcsJsonldObjectModified -- input jsonld object containing an "@graph" key. THE PARAM IS (POTENTIALLY) MODIFIED IFF options.modified == true.
+ * @param {object} chcsJsonldObjectModified['@graph'][] -- actual content to translate
  * @param {{policy: boolean, warnings: boolean, modified: boolean}} [options={policy: false, warnings: false, modified: false}] -- the options applied during the translation, policy: true
  *   enforces a translation policy, warnings: true adds an array of warnings to to the fhir result.
  * @param {(Date|string)} [date=Date.now()] -- the date to use for the translation. use string 'now' for reproduceable unit testing.
@@ -39,30 +39,30 @@ var Av = require('autovivify');
  * @see {@link https://hl7-fhir.github.io/composition.html)}
  */
 
-function translatecmumpsFhir(cmumpsJsonldObjectModified, options, date) {
-    // If the caller is confused and passes an array of cmumpsJsonldObjects, return the array of translations.
+function translatechcsFhir(chcsJsonldObjectModified, options, date) {
+    // If the caller is confused and passes an array of chcsJsonldObjects, return the array of translations.
     // This way the caller doesn't have to keep track. TODO: add warning to result.
-    if (_.isArray(cmumpsJsonldObjectModified)) {
-        // return translateHelper(cmumpsJsonldObject[0]);
-        return cmumpsJsonldObjectModified.map(function (i) {
-            return translatecmumpsFhirHelper(i, options, date);
+    if (_.isArray(chcsJsonldObjectModified)) {
+        // return translateHelper(chcsJsonldObject[0]);
+        return chcsJsonldObjectModified.map(function (i) {
+            return translatechcsFhirHelper(i, options, date);
         })
     } else {
         // A single object, translate it.
-        return translatecmumpsFhirHelper(cmumpsJsonldObjectModified, options, date);
+        return translatechcsFhirHelper(chcsJsonldObjectModified, options, date);
     }
 }
 
 
 /**
- * translateHelper is the real function, it expects a *single* cmumps object. All parameters are as @see translatecmumpsFhir.
+ * translateHelper is the real function, it expects a *single* chcs object. All parameters are as @see translatechcsFhir.
  */
-function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
+function translatechcsFhirHelper(chcsJsonldObjectModified, _options, date) {
 
     var here = module.filename + ':' + arguments.callee.toString().match(/function\s+([^\s\(]+)/)[1];
 
-    if (cmumpsJsonldObjectModified == undefined) {
-        throw new Error(here + ": Expecting a cmumps object, received 'undefined'.");
+    if (chcsJsonldObjectModified == undefined) {
+        throw new Error(here + ": Expecting a chcs object, received 'undefined'.");
     }
 
     // Assign the default options, then override what the caller wants. At the end you have the right options.
@@ -83,11 +83,11 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     // Enforce policy?
     if (options.policy) {
         // Caller wants you to make sure you're receiving a translatable object.
-        if (!_.has(cmumpsJsonldObjectModified, '@graph')) throw new Error("Missing expected key '@graph'.");
-        if (!_.isArray(cmumpsJsonldObjectModified['@graph'])) throw new Error("Expecting an array value for key '@graph'.");
-        if (cmumpsJsonldObjectModified['@graph'].length == 0) throw new Error("Expecting nonempty array for key '@graph'.");
+        if (!_.has(chcsJsonldObjectModified, '@graph')) throw new Error("Missing expected key '@graph'.");
+        if (!_.isArray(chcsJsonldObjectModified['@graph'])) throw new Error("Expecting an array value for key '@graph'.");
+        if (chcsJsonldObjectModified['@graph'].length == 0) throw new Error("Expecting nonempty array for key '@graph'.");
     }
-    // Here: cmumpsJsonldObjectModified['@graph'] has contents. Translate it.
+    // Here: chcsJsonldObjectModified['@graph'] has contents. Translate it.
 
     var date = date || fhir.now();
     var participatingProperties = []; // no participants yet
@@ -98,8 +98,8 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     // Using JSONPath, select the demographics fhirParts of @graph.
     var allDemographics, theDemographics;
     try {
-        var thePattern = pattern(cmumpss.Patient); //pattern(cmumpss.Patient);
-        allDemographics = JSONPath({resultType: 'all', path: thePattern, json: cmumpsJsonldObjectModified});
+        var thePattern = pattern(chcss.Patient); //pattern(chcss.Patient);
+        allDemographics = JSONPath({resultType: 'all', path: thePattern, json: chcsJsonldObjectModified});
     } catch (err) {
         throw new Error(here + ": Can't match the patient ..." + err);
     }
@@ -122,7 +122,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     }
     // Here: The patient was found in @graph
 
-    // cmumps Patient-2
+    // chcs Patient-2
     var fhirDemographicsTranslation;
     if (theDemographics.value) {
         try {
@@ -136,14 +136,14 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     }
 
 
-    // cmumps Prescription-52
+    // chcs Prescription-52
     var thePrescriptions;
     try {
-        var thePattern = pattern(cmumpss.Prescription); // pattern(cmumpss.Prescription)
+        var thePattern = pattern(chcss.Prescription); // pattern(chcss.Prescription)
         thePrescriptions = JSONPath({
             resultType: 'all',
             path: thePattern,
-            json: cmumpsJsonldObjectModified
+            json: chcsJsonldObjectModified
         });
     } catch (err) {
         throw new Error(here + ": Can't match the prescriptions, " + err);
@@ -162,8 +162,8 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     });
 
 
-    // cmumps Lab_Results-63 CURRENTLY HANDLED BY SHEX
-    // var theLabs = JSONPath(pattern(cmumpss.Lab_Result), cmumpsJsonldObject);
+    // chcs Lab_Results-63 CURRENTLY HANDLED BY SHEX
+    // var theLabs = JSONPath(pattern(chcss.Lab_Result), chcsJsonldObject);
     // var fhirLabResultTranslations = theLabs.map(function(i) {
     //     try {
     //         return labs.translateLabsFhir(i, options);
@@ -172,15 +172,15 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     //     }
     // });
 
-    // cmumps Kg_Patient_Diagnosis-100417
+    // chcs Kg_Patient_Diagnosis-100417
     var theDiagnoses;
     try {
-        // var thePattern = pattern(cmumpss.Kg_Patient_Diagnosis); //pattern(cmumpss.Kg_Patient_Diagnosis)
+        // var thePattern = pattern(chcss.Kg_Patient_Diagnosis); //pattern(chcss.Kg_Patient_Diagnosis)
         theDiagnoses = JSONPath({
             resultType: 'all',
-            // path: pattern(cmumpss.Kg_Patient_Diagnosis),
+            // path: pattern(chcss.Kg_Patient_Diagnosis),
             path: "$[?(@.type.match(/^\s*c.{2,4}ss:Kg_Patient_Diagnosis-100417\s*/))]",
-            json: cmumpsJsonldObjectModified['@graph'].filter(function(i) { return 'type' in i; })
+            json: chcsJsonldObjectModified['@graph'].filter(function(i) { return 'type' in i; })
         });
     } catch (err) {
         throw new Error(here + ": Can't match the diagnoses, " + err);
@@ -202,15 +202,15 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
 
 
 
-    // cmumps Procedures
+    // chcs Procedures
     // TODO mike@carif.io: Procedures will come from alhta20, a different database. Details tbs.
     var theProcedures;
     try {
-        var thePattern = "$['@graph'][?(@.type=='Procedure')]"; // pattern(cmumpss.Procedure)
+        var thePattern = "$['@graph'][?(@.type=='Procedure')]"; // pattern(chcss.Procedure)
         theProcedures = JSONPath({
             resultType: 'all',
             path: thePattern,
-            json: cmumpsJsonldObjectModified,
+            json: chcsJsonldObjectModified,
         }
         );
     } catch (err) {
@@ -263,9 +263,9 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     if (options.warnings) fhir.addWarnings(resources, warnings);
 
     // A fhir bundle is a top-level resource. It can be signed (aka sha1 or md5).
-    // XML translation expects a "top level" object to graph_cmumps2fhir_all.
+    // XML translation expects a "top level" object to graph_chcs2fhir_all.
     var bundle = {
-        resourceType: 'Bundle', // The cmumps translation is a "bundle" ...
+        resourceType: 'Bundle', // The chcs translation is a "bundle" ...
         type: 'document', // ... composed at moment in time...
         entry: [{
             resourceType: 'Composition',
@@ -273,7 +273,7 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
             title: module.name, // ... entited the name of this module ...
             status: 'final',
             subject: arguments.callee,
-            type: fdt.fhirCodeableConcept('cmumps'), // ... originating with cmumps ...
+            type: fdt.fhirCodeableConcept('chcs'), // ... originating with chcs ...
             resource: resources // ... with these translated elements
         }]
     };
@@ -281,19 +281,19 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     // var used = new Av();
     // participatingProperties.forEach(function (p) {
     //     var prop = p.substring(1);
-    //     eval('used' + prop + '= cmumpsJsonldObjectModified' + prop);
+    //     eval('used' + prop + '= chcsJsonldObjectModified' + prop);
     // });
     //
     //
-    // var object_used = cmumps_utils.devivify(used);
-    // object_used['@context']= cmumpsJsonldObjectModified['@context'];
+    // var object_used = chcs_utils.devivify(used);
+    // object_used['@context']= chcsJsonldObjectModified['@context'];
 
-    // "Eating" the input means removing it from the input object cmumpsJsonldObjectModified
+    // "Eating" the input means removing it from the input object chcsJsonldObjectModified
     // at a fine grain level.
     // if (eat) {
     //     participatingProperties.forEach(function(p){
     //         var prop = p.substring(1);
-    //         var deleteExpression = 'var result = delete cmumpsJsonldObjectModified' + prop + ';';
+    //         var deleteExpression = 'var result = delete chcsJsonldObjectModified' + prop + ';';
     //         eval(deleteExpression); // TODO: doesn't delete
     //         return result;
     //     });
@@ -308,17 +308,17 @@ function translatecmumpsFhirHelper(cmumpsJsonldObjectModified, _options, date) {
     };
 }
 
-// TODO mike@carif.io: this got folded into translatecmumpsFhir above.
-function translatecmumpsFhirArray(cmumpsJsonldObjectArray, options) {
-    return cmumpsJsonldObjectArray.map(function (i) {
-        return translatecmumpsFhir(i, options);
+// TODO mike@carif.io: this got folded into translatechcsFhir above.
+function translatechcsFhirArray(chcsJsonldObjectArray, options) {
+    return chcsJsonldObjectArray.map(function (i) {
+        return translatechcsFhir(i, options);
     });
 }
 
 // short form
-var translate = translatecmumpsFhir;
+var translate = translatechcsFhir;
 
 // Export the actual functions here. Make sure the names are always consistent.
-[translatecmumpsFhir, translatecmumpsFhirArray, translate].forEach(function (f) {
+[translatechcsFhir, translatechcsFhirArray, translate].forEach(function (f) {
     module.exports[f.name] = f;
 });

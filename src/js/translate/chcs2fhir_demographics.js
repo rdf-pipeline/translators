@@ -1,71 +1,71 @@
 /**
- * Translate a cmumps Patient objects to fhir Patient object.
+ * Translate a chcs Patient objects to fhir Patient object.
  */
 
 const _ = require('underscore');
 
-const Fdt = require('./cmumps2fhir_datatypes');
+const Fdt = require('./chcs2fhir_datatypes');
 const Fhir = require('./fhir');
 
 const RESOURCE_TYPE = 'Patient';
 
 /**
- * Extracts CMUMPS Patient demographics from a CMUMPS JSON-LD object
+ * Extracts CHCS Patient demographics from a CHCS JSON-LD object
  * 
- * @param cmumpsJsonldObject a CMUMPS JSON-LD object
+ * @param chcsJsonldObject a CHCS JSON-LD object
  *
- * @return an array of CMUMPS patient demographics if any exist
+ * @return an array of CHCS patient demographics if any exist
  * @exception if input JSON-LD object is undefined
  */
-function extractDemographics(cmumpsJsonldObject) {
-    if (_.isUndefined(cmumpsJsonldObject)) {
-        throw Error("Cannot extract CMUMPS demographics because patient data object is undefined!");
+function extractDemographics(chcsJsonldObject) {
+    if (_.isUndefined(chcsJsonldObject)) {
+        throw Error("Cannot extract CHCS demographics because patient data object is undefined!");
     }
 
-    return _.filter(cmumpsJsonldObject['@graph'],
+    return _.filter(chcsJsonldObject['@graph'],
         function(json) {
             return /c(hc|mump)ss:Patient-2/.test(json.type);
     });
 }
 
-function extractPatient(cmumpsJsonldObject) {
-    var demographics = extractDemographics(cmumpsJsonldObject);
+function extractPatient(chcsJsonldObject) {
+    var demographics = extractDemographics(chcsJsonldObject);
     return !_.isEmpty(demographics) ? demographics[0] : demographics;
 }
 
 /**
  * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the patient record from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
+ * MODIFIES chcsJsonldObject.
  *
- * @param cmumpsJsonldObject
+ * @param chcsJsonldObject
  * @return {Array[object]} -- the items removed
   */
-function removeDemographics(cmumpsJsonldObject) {
-    cmumpsJsonldObject['@graph'] =  _.filter(cmumpsJsonldObject['@graph'], function(json) {
+function removeDemographics(chcsJsonldObject) {
+    chcsJsonldObject['@graph'] =  _.filter(chcsJsonldObject['@graph'], function(json) {
             return !/c(hc|mump)ss:Patient-2/.test(json.type);
     });
-    return cmumpsJsonldObject;
+    return chcsJsonldObject;
 }
 
-function removePatient(cmumpsJsonldObject) {
-    return removeDemographics(cmumpsJsonldObject);
+function removePatient(chcsJsonldObject) {
+    return removeDemographics(chcsJsonldObject);
 }
 
 /**
- * Simple translation of CMUMPS demographics to a FHIR Patient resource. 
+ * Simple translation of CHCS demographics to a FHIR Patient resource. 
  *
- * @param cmumpsPatientObject -- a cmumps Patient object
+ * @param chcsPatientObject -- a chcs Patient object
  * @returns {Object} -- a FHIR translation
  */
-function simpleTranslate(cmumpsPatientObject, get) {
-    // The get function knows how to get values from cmumpsPatientObject using JSONPath.
-    var get = get || Fdt.makeGetter(cmumpsPatientObject);
+function simpleTranslate(chcsPatientObject, get) {
+    // The get function knows how to get values from chcsPatientObject using JSONPath.
+    var get = get || Fdt.makeGetter(chcsPatientObject);
 
     // Translate the structure. FHIR keys that aren't translated are
     // retained as comments. They may be included later as the author
     // learns more.
     
-    // According to the cmumps collection 'schema', a cmumps patient can have 224 different
+    // According to the chcs collection 'schema', a chcs patient can have 224 different
     // keys. The code stanza below was generated with the mongodb expression:
 
     // db.schema.findOne({fmDD: {$regex: /fmdd:2/}}).properties.forEach(function(i) { print("// get('$." + i.id + "') // " + i.label + ", " + i.description); })
@@ -82,7 +82,7 @@ function simpleTranslate(cmumpsPatientObject, get) {
     var result = Fdt.clean({
         resourceType: RESOURCE_TYPE,
         id: Fdt.fhirId(RESOURCE_TYPE, get('$._id')),
-        active: true, // if the patient's cmumps record is available, it's active
+        active: true, // if the patient's chcs record is available, it's active
         identifier: Fdt.fhirIdentifier(get("$['ssn-2']"), get("$['dod_id_-2']")),
         name: Fdt.fhirHumanName(get("$['name-2']") || get('$.label')),  
         // fhir telecom
@@ -90,9 +90,9 @@ function simpleTranslate(cmumpsPatientObject, get) {
             Fdt.fhirContactPoint({system: 'phone', use: 'home', value: get("$['phone-2']") }),
             Fdt.fhirContactPoint({system: 'phone', use: 'office', value: get("$['office_phone-2']")}),
             Fdt.fhirContactPoint({system: 'phone', use: 'mobile', value: get("$['cell_phone-2']")}),
-            Fdt.fhirContactPoint({system: 'phone', use: 'temp', value: get("$['temporary_phone-2']")}), // no data in cmumps database
-            Fdt.fhirContactPoint({system: 'fax', value: get("$['fax_number-2']")}), // no data in cmumps database
-            Fdt.fhirContactPoint({system: 'email', value: get("$['email_address-2']")}) // no data in cmumps
+            Fdt.fhirContactPoint({system: 'phone', use: 'temp', value: get("$['temporary_phone-2']")}), // no data in chcs database
+            Fdt.fhirContactPoint({system: 'fax', value: get("$['fax_number-2']")}), // no data in chcs database
+            Fdt.fhirContactPoint({system: 'email', value: get("$['email_address-2']")}) // no data in chcs
         ],
         gender: Fdt.fhirPatientGender(get("$['sex-2']")),
         birthDate: Fdt.fhirPatientBirthDate(get("$['dob-2']")),
@@ -146,26 +146,26 @@ function simpleTranslate(cmumpsPatientObject, get) {
 }
 
 /**
- * Translate a cmumpsPatientObject into a fhir_Patient resource 
+ * Translate a chcsPatientObject into a fhir_Patient resource 
  *
- * @param {object} cmumpsPatientObject
+ * @param {object} chcsPatientObject
  * @returns {object} -- fhir Patient resource object
  * @see {http://hl7-fhir.github.io/patient.html}
  */
 
-function translateDemographicsFhir(cmumpsPatientObject, options) {
+function translateDemographicsFhir(chcsPatientObject, options) {
     var options = options || { participants: false, warnings: false};
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumps_patient_object. The fetcher will get data values from
-    // input cmumps_patient_object, remembering those that actually have values in list participating_properties.
-    var fetch1 = Fdt.makeJsonFetcher1(cmumpsPatientObject, participatingProperties);
+    // Create a fetcher for chcs_patient_object. The fetcher will get data values from
+    // input chcs_patient_object, remembering those that actually have values in list participating_properties.
+    var fetch1 = Fdt.makeJsonFetcher1(chcsPatientObject, participatingProperties);
     // fetch1(json_pattern[, transformation])
 
     // Translate each key/value pair at once. See the "shape" of the result.
     // var resourceType = 'Patient';
-    var fhirPatient = simpleTranslate(cmumpsPatientObject, fetch1);
+    var fhirPatient = simpleTranslate(chcsPatientObject, fetch1);
 
     if (options.participants) Fhir.addParticipants(fhirPatient, participatingProperties);
     if (options.warnings) Fhir.addWarnings(fhirPatient, warnings);

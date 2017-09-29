@@ -9,14 +9,14 @@
       "type": {
         "coding": [
           {
-            "system": "cmumps",
+            "system": "chcs",
             "version": "0.0.1",
-            "code": "cmumps",
-            "display": "cmumps",
+            "code": "chcs",
+            "display": "chcs",
             "userSelected": false
           }
         ],
-        "text": "cmumps"
+        "text": "chcs"
       },
       "resource": [
         {
@@ -28,8 +28,8 @@
               "type": {
                 "coding": [
                   {
-                    "code": "cmumpss",
-                    "display": "cmumpss"
+                    "code": "chcss",
+                    "display": "chcss"
                   }
                 ],
                 "text": "777777777"
@@ -77,25 +77,25 @@
             "type": {
               "coding": [
                 {
-                  "system": "cmumps",
+                  "system": "chcs",
                   "version": "0.0.1",
-                  "code": "cmumps",
+                  "code": "chcs",
                   "display": "Prescription",
                   "userSelected": false
                 }
               ],
               "text": "Prescription"
             },
-            "system": "cmumps",
+            "system": "chcs",
             "value": "52-40863"
           },
           "status": "completed",
           "medicationCodeableConcept": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "PAINKILLER 400MG TAB",
                 "userSelected": false
               }
@@ -123,14 +123,14 @@
           "quantity": {
             "value": 120,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "daysSupply": {
             "value": 120,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "whenPrepared": "1990-01-01T00:00:00Z",
           "whenHandedOver": "1990-01-01T00:00:00Z",
@@ -159,9 +159,9 @@
                 "code": {
                   "coding": [
                     {
-                      "system": "cmumps",
+                      "system": "chcs",
                       "version": "0.0.1",
-                      "code": "cmumps",
+                      "code": "chcs",
                       "display": "T1 TAB Q1D #120 RF0",
                       "userSelected": false
                     }
@@ -181,25 +181,25 @@
             "type": {
               "coding": [
                 {
-                  "system": "cmumps",
+                  "system": "chcs",
                   "version": "0.0.1",
-                  "code": "cmumps",
+                  "code": "chcs",
                   "display": "Prescription",
                   "userSelected": false
                 }
               ],
               "text": "Prescription"
             },
-            "system": "cmumps",
+            "system": "chcs",
             "value": "52-7810413"
           },
           "status": "completed",
           "medicationCodeableConcept": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "OYS SHL CALCIUM 500MG + VIT D 200IU",
                 "userSelected": false
               }
@@ -227,14 +227,14 @@
           "quantity": {
             "value": 60,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "daysSupply": {
             "value": 30,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "whenPrepared": "1990-01-01T00:00:00",
           "whenHandedOver": "1990-01-01T00:00:00",
@@ -253,9 +253,9 @@
               "additionalInstructions": {
                 "coding": [
                   {
-                    "system": "cmumps",
+                    "system": "chcs",
                     "version": "0.0.1",
-                    "code": "cmumps",
+                    "code": "chcs",
                     "display": "TAKE ONE TABLET BY MOUTH~TWICE A DAY  ~",
                     "userSelected": false
                   }
@@ -275,9 +275,9 @@
                 "code": {
                   "coding": [
                     {
-                      "system": "cmumps",
+                      "system": "chcs",
                       "version": "0.0.1",
-                      "code": "cmumps",
+                      "code": "chcs",
                       "display": "T1 TB PO BID #60 RF3",
                       "userSelected": false
                     }
@@ -297,25 +297,25 @@
             "type": {
               "coding": [
                 {
-                  "system": "cmumps",
+                  "system": "chcs",
                   "version": "0.0.1",
-                  "code": "cmumps",
+                  "code": "chcs",
                   "display": "Prescription",
                   "userSelected": false
                 }
               ],
               "text": "Prescription"
             },
-            "system": "cmumps",
+            "system": "chcs",
             "value": "52-7810414"
           },
           "status": "completed",
           "medicationCodeableConcept": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "RECLIPSEN TAB 28-DAY (DESOGEN EQ)",
                 "userSelected": false
               }
@@ -343,14 +343,14 @@
           "quantity": {
             "value": 169,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "daysSupply": {
             "value": 84,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "whenPrepared": "1990-01-01T00:00:00",
           "whenHandedOver": "1990-01-01T00:00:00",
@@ -369,9 +369,9 @@
               "additionalInstructions": {
                 "coding": [
                   {
-                    "system": "cmumps",
+                    "system": "chcs",
                     "version": "0.0.1",
-                    "code": "cmumps",
+                    "code": "chcs",
                     "display": "TAKE ONE TABLET BY MOUTH~EVERY DAY  ~",
                     "userSelected": false
                   }
@@ -386,9 +386,9 @@
                 "code": {
                   "coding": [
                     {
-                      "system": "cmumps",
+                      "system": "chcs",
                       "version": "0.0.1",
-                      "code": "cmumps",
+                      "code": "chcs",
                       "display": "T1 TAB PO QD #169 RF0",
                       "userSelected": false
                     }
@@ -408,25 +408,25 @@
             "type": {
               "coding": [
                 {
-                  "system": "cmumps",
+                  "system": "chcs",
                   "version": "0.0.1",
-                  "code": "cmumps",
+                  "code": "chcs",
                   "display": "Prescription",
                   "userSelected": false
                 }
               ],
               "text": "Prescription"
             },
-            "system": "cmumps",
+            "system": "chcs",
             "value": "52-40863"
           },
           "status": "completed",
           "medicationCodeableConcept": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "PAINKILLER 400MG TAB",
                 "userSelected": false
               }
@@ -454,14 +454,14 @@
           "quantity": {
             "value": 120,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "daysSupply": {
             "value": 120,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "whenPrepared": "1990-01-01T00:00:00",
           "whenHandedOver": "1990-01-01T00:00:00",
@@ -490,9 +490,9 @@
                 "code": {
                   "coding": [
                     {
-                      "system": "cmumps",
+                      "system": "chcs",
                       "version": "0.0.1",
-                      "code": "cmumps",
+                      "code": "chcs",
                       "display": "T1 TAB Q1D #120 RF0",
                       "userSelected": false
                     }
@@ -512,25 +512,25 @@
             "type": {
               "coding": [
                 {
-                  "system": "cmumps",
+                  "system": "chcs",
                   "version": "0.0.1",
-                  "code": "cmumps",
+                  "code": "chcs",
                   "display": "Prescription",
                   "userSelected": false
                 }
               ],
               "text": "Prescription"
             },
-            "system": "cmumps",
+            "system": "chcs",
             "value": "52-7810413"
           },
           "status": "completed",
           "medicationCodeableConcept": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "OYS SHL CALCIUM 500MG + VIT D 200IU",
                 "userSelected": false
               }
@@ -558,14 +558,14 @@
           "quantity": {
             "value": 60,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "daysSupply": {
             "value": 30,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "whenPrepared": "1990-01-01T00:00:00",
           "whenHandedOver": "1990-01-01T00:00:00",
@@ -584,9 +584,9 @@
               "additionalInstructions": {
                 "coding": [
                   {
-                    "system": "cmumps",
+                    "system": "chcs",
                     "version": "0.0.1",
-                    "code": "cmumps",
+                    "code": "chcs",
                     "display": "TAKE ONE TABLET BY MOUTH~TWICE A DAY  ~",
                     "userSelected": false
                   }
@@ -606,9 +606,9 @@
                 "code": {
                   "coding": [
                     {
-                      "system": "cmumps",
+                      "system": "chcs",
                       "version": "0.0.1",
-                      "code": "cmumps",
+                      "code": "chcs",
                       "display": "T1 TB PO BID #60 RF3",
                       "userSelected": false
                     }
@@ -628,25 +628,25 @@
             "type": {
               "coding": [
                 {
-                  "system": "cmumps",
+                  "system": "chcs",
                   "version": "0.0.1",
-                  "code": "cmumps",
+                  "code": "chcs",
                   "display": "Prescription",
                   "userSelected": false
                 }
               ],
               "text": "Prescription"
             },
-            "system": "cmumps",
+            "system": "chcs",
             "value": "52-7810414"
           },
           "status": "completed",
           "medicationCodeableConcept": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "RECLIPSEN TAB 28-DAY (DESOGEN EQ)",
                 "userSelected": false
               }
@@ -674,14 +674,14 @@
           "quantity": {
             "value": 169,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "daysSupply": {
             "value": 84,
             "unit": "unsupplied",
-            "system": "cmumps",
-            "code": "cmumps"
+            "system": "chcs",
+            "code": "chcs"
           },
           "whenPrepared": "1990-01-01T00:00:00",
           "whenHandedOver": "1990-01-01T00:00:00",
@@ -700,9 +700,9 @@
               "additionalInstructions": {
                 "coding": [
                   {
-                    "system": "cmumps",
+                    "system": "chcs",
                     "version": "0.0.1",
-                    "code": "cmumps",
+                    "code": "chcs",
                     "display": "TAKE ONE TABLET BY MOUTH~EVERY DAY  ~",
                     "userSelected": false
                   }
@@ -717,9 +717,9 @@
                 "code": {
                   "coding": [
                     {
-                      "system": "cmumps",
+                      "system": "chcs",
                       "version": "0.0.1",
-                      "code": "cmumps",
+                      "code": "chcs",
                       "display": "T1 TAB PO QD #169 RF0",
                       "userSelected": false
                     }
@@ -741,13 +741,13 @@
                 "type": {
                   "coding": [
                     {
-                      "code": "cmumpss",
-                      "display": "cmumpss"
+                      "code": "chcss",
+                      "display": "chcss"
                     }
                   ],
-                  "text": "cmumpss:Kg_Patient_Diagnosis-100417"
+                  "text": "chcss:Kg_Patient_Diagnosis-100417"
                 },
-                "value": "cmumpss:Kg_Patient_Diagnosis-100417"
+                "value": "chcss:Kg_Patient_Diagnosis-100417"
               }
             ]
           ],
@@ -756,9 +756,9 @@
           "code": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "V70.5 H",
                 "userSelected": false
               }
@@ -773,9 +773,9 @@
           "codedDiagnosis": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "V70.5 H",
                 "userSelected": false
               }
@@ -785,7 +785,7 @@
           "presentedForm": [
             {
               "_id": "100417-4559064",
-              "type": "cmumpss:Kg_Patient_Diagnosis-100417",
+              "type": "chcss:Kg_Patient_Diagnosis-100417",
               "label": "27642;OTHER EXAMINATION DEFINED POPULATION",
               "problem-100417": "27642;OTHER EXAMINATION DEFINED POPULATION",
               "patient-100417": {
@@ -815,13 +815,13 @@
                 "type": {
                   "coding": [
                     {
-                      "code": "cmumpss",
-                      "display": "cmumpss"
+                      "code": "chcss",
+                      "display": "chcss"
                     }
                   ],
-                  "text": "cmumpss:Kg_Patient_Diagnosis-100417"
+                  "text": "chcss:Kg_Patient_Diagnosis-100417"
                 },
-                "value": "cmumpss:Kg_Patient_Diagnosis-100417"
+                "value": "chcss:Kg_Patient_Diagnosis-100417"
               }
             ]
           ],
@@ -830,9 +830,9 @@
           "code": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "V72.12",
                 "userSelected": false
               }
@@ -847,9 +847,9 @@
           "codedDiagnosis": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "V72.12",
                 "userSelected": false
               }
@@ -859,7 +859,7 @@
           "presentedForm": [
             {
               "_id": "100417-4562039",
-              "type": "cmumpss:Kg_Patient_Diagnosis-100417",
+              "type": "chcss:Kg_Patient_Diagnosis-100417",
               "label": "27224;ENCOUNTER FOR HEARING CONSERVATION AND TREATMENT",
               "problem-100417": "27224;ENCOUNTER FOR HEARING CONSERVATION AND TREATMENT",
               "patient-100417": {
@@ -889,13 +889,13 @@
                 "type": {
                   "coding": [
                     {
-                      "code": "cmumpss",
-                      "display": "cmumpss"
+                      "code": "chcss",
+                      "display": "chcss"
                     }
                   ],
-                  "text": "cmumpss:Kg_Patient_Diagnosis-100417"
+                  "text": "chcss:Kg_Patient_Diagnosis-100417"
                 },
-                "value": "cmumpss:Kg_Patient_Diagnosis-100417"
+                "value": "chcss:Kg_Patient_Diagnosis-100417"
               }
             ]
           ],
@@ -904,9 +904,9 @@
           "code": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "V70.5 2",
                 "userSelected": false
               }
@@ -921,9 +921,9 @@
           "codedDiagnosis": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "V70.5 2",
                 "userSelected": false
               }
@@ -933,7 +933,7 @@
           "presentedForm": [
             {
               "_id": "100417-4568875",
-              "type": "cmumpss:Kg_Patient_Diagnosis-100417",
+              "type": "chcss:Kg_Patient_Diagnosis-100417",
               "label": "19227;PERIODIC PREVENTION EXAMINATION",
               "problem-100417": "19227;PERIODIC PREVENTION EXAMINATION",
               "patient-100417": {
@@ -962,8 +962,8 @@
               "type": {
                 "coding": [
                   {
-                    "code": "cmumpss",
-                    "display": "cmumpss"
+                    "code": "chcss",
+                    "display": "chcss"
                   }
                 ],
                 "text": "1074046"
@@ -979,9 +979,9 @@
           "category": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "HDDConcept-1450368",
                 "userSelected": false
               }
@@ -991,9 +991,9 @@
           "code": {
             "coding": [
               {
-                "system": "cmumps",
+                "system": "chcs",
                 "version": "0.0.1",
-                "code": "cmumps",
+                "code": "chcs",
                 "display": "HDDConcept-1450368",
                 "userSelected": false
               }

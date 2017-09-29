@@ -1,4 +1,4 @@
-// cmumps2fhir_prescriptions-mocha.js
+// chcs2fhir_prescriptions-mocha.js
 
 const Chai = require('chai');
 const expect = Chai.expect;
@@ -6,12 +6,12 @@ const should = Chai.should();
 
 const Fs = require('fs');
 
-const Prescriptions = require('../cmumps2fhir_prescriptions'); 
-const Utils = require('../util/cmumps_utils');
+const Prescriptions = require('../chcs2fhir_prescriptions'); 
+const Utils = require('../util/chcs_utils');
 
-describe("cmumps2fhir_prescriptions", function() {
+describe("chcs2fhir_prescriptions", function() {
 
-    var patient7 = Utils.load(__dirname+'/../../../../data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+    var patient7 = Utils.load(__dirname+'/../../../../data/fake_chcs/patient-7/chcs-patient7.jsonld');
 
     it("should have expected exported interface", function() {
         Prescriptions.should.be.an.object;
@@ -23,7 +23,7 @@ describe("cmumps2fhir_prescriptions", function() {
     describe("#extractPrescriptions", function() {
         it("should throw an error if there is no JSON-LD data passed in", function() {
             expect(Prescriptions.extractPrescriptions).to.throw(Error, 
-                "Cannot extract CMUMPS prescriptions because patient data object is undefined!");
+                "Cannot extract CHCS prescriptions because patient data object is undefined!");
         });
 
         it("should handle empty JSON-LD object gracefully", function() {
@@ -38,7 +38,7 @@ describe("cmumps2fhir_prescriptions", function() {
             results.should.be.empty;
         });
 
-        it("should extract CMUMPS prescriptions", function() {
+        it("should extract CHCS prescriptions", function() {
             var results = Prescriptions.extractPrescriptions(patient7);
 
             results.should.be.an('array');
@@ -47,7 +47,7 @@ describe("cmumps2fhir_prescriptions", function() {
             results.forEach(function(prescription) { 
                 expect(prescription['_id']).to.be.oneOf(
                     ["52-40863", "52-7810413", "52-7810414", "52-40863", "52-7810413", "52-7810414"]);
-                prescription.type.should.equal('cmumpss:Prescription-52');
+                prescription.type.should.equal('chcss:Prescription-52');
                 expect(prescription['status-52']).to.be.oneOf(
                     ["DISCONTINUED", "EXPIRED"]);
                 prescription.should.include.keys([ '_id', 'type', 'label', 'rx_-52', 'patient-52',
@@ -63,9 +63,9 @@ describe("cmumps2fhir_prescriptions", function() {
     });
 
     describe("#translatePrescriptions2Fhir", function() {
-        it("should translate CMUMPS prescriptions to FHIR", function() {
-            var cmumpsPrescriptions = Prescriptions.extractPrescriptions(patient7);
-            var fhirMeds = cmumpsPrescriptions.map(function(prescription) { 
+        it("should translate CHCS prescriptions to FHIR", function() {
+            var chcsPrescriptions = Prescriptions.extractPrescriptions(patient7);
+            var fhirMeds = chcsPrescriptions.map(function(prescription) { 
                 return Prescriptions.translatePrescriptionsFhir(prescription);
             });
             var expected = Utils.load(__dirname+'/data/expectedFhirMeds.json');

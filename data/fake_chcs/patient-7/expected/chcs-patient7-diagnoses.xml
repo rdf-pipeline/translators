@@ -8,9 +8,9 @@
   </category>
   <code>
     <coding>
-      <system value="cmumps"/>
+      <system value="chcs"/>
       <version value="0.0.1"/>
-      <code value="cmumps"/>
+      <code value="chcs"/>
       <display value="V70.5 H"/>
       <userSelected value="false"/>
     </coding>
@@ -23,9 +23,9 @@
   <conclusion value="V70.5 H"/>
   <codedDiagnosis>
     <coding>
-      <system value="cmumps"/>
+      <system value="chcs"/>
       <version value="0.0.1"/>
-      <code value="cmumps"/>
+      <code value="chcs"/>
       <display value="V70.5 H"/>
       <userSelected value="false"/>
     </coding>
@@ -47,9 +47,9 @@
   </category>
   <code>
     <coding>
-      <system value="cmumps"/>
+      <system value="chcs"/>
       <version value="0.0.1"/>
-      <code value="cmumps"/>
+      <code value="chcs"/>
       <display value="V72.12"/>
       <userSelected value="false"/>
     </coding>
@@ -62,9 +62,9 @@
   <conclusion value="V72.12"/>
   <codedDiagnosis>
     <coding>
-      <system value="cmumps"/>
+      <system value="chcs"/>
       <version value="0.0.1"/>
-      <code value="cmumps"/>
+      <code value="chcs"/>
       <display value="V72.12"/>
       <userSelected value="false"/>
     </coding>
@@ -86,9 +86,9 @@
   </category>
   <code>
     <coding>
-      <system value="cmumps"/>
+      <system value="chcs"/>
       <version value="0.0.1"/>
-      <code value="cmumps"/>
+      <code value="chcs"/>
       <display value="V70.5 2"/>
       <userSelected value="false"/>
     </coding>
@@ -101,9 +101,9 @@
   <conclusion value="V70.5 2"/>
   <codedDiagnosis>
     <coding>
-      <system value="cmumps"/>
+      <system value="chcs"/>
       <version value="0.0.1"/>
-      <code value="cmumps"/>
+      <code value="chcs"/>
       <display value="V70.5 2"/>
       <userSelected value="false"/>
     </coding>

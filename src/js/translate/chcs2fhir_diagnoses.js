@@ -1,26 +1,26 @@
 /**
- * Translate cmumps Kg_Patient_Diagnosis object to fhir DiagnosticReport resource.
+ * Translate chcs Kg_Patient_Diagnosis object to fhir DiagnosticReport resource.
  */
 
 const _ = require('underscore');
 
 const Fhir = require('./fhir');
-const Fdt = require('./cmumps2fhir_datatypes');
+const Fdt = require('./chcs2fhir_datatypes');
 
 /**
- * Extracts CMUMPS Patient Diagnoses from a CMUMPS JSON-LD object
+ * Extracts CHCS Patient Diagnoses from a CHCS JSON-LD object
  *
- * @param cmumpsJsonldObject a CMUMPS JSON-LD object
+ * @param chcsJsonldObject a CHCS JSON-LD object
  *
- * @return an array of CMUMPS patient diagnoses if any exist
+ * @return an array of CHCS patient diagnoses if any exist
  * @exception if input JSON-LD object is undefined
  */
-function extractDiagnoses(cmumpsJsonldObject) {
-    if (_.isUndefined(cmumpsJsonldObject)) {
-        throw Error("Cannot extract CMUMPS diagnoses because patient data object is undefined!");
+function extractDiagnoses(chcsJsonldObject) {
+    if (_.isUndefined(chcsJsonldObject)) {
+        throw Error("Cannot extract CHCS diagnoses because patient data object is undefined!");
     }
 
-    return _.filter(cmumpsJsonldObject['@graph'],
+    return _.filter(chcsJsonldObject['@graph'],
         function(json) {
             return /c(hc|mump)ss:Kg_Patient_Diagnosis-100417/.test(json.type);
     });
@@ -28,27 +28,27 @@ function extractDiagnoses(cmumpsJsonldObject) {
 
 /**
  * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the patient record from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
+ * MODIFIES chcsJsonldObject.
  *
- * @param cmumpsJsonldObject
+ * @param chcsJsonldObject
  * @return {Array[object]} -- the items removed
  */
 
-function removeDiagnoses(cmumpsJsonldObject) {
-    cmumpsJsonldObject['@graph'] =  _.filter(cmumpsJsonldObject['@graph'], function(json) {
+function removeDiagnoses(chcsJsonldObject) {
+    chcsJsonldObject['@graph'] =  _.filter(chcsJsonldObject['@graph'], function(json) {
             return !/c(hc|mump)ss:Kg_Patient_Diagnosis-100417/.test(json.type);
     });
-    return cmumpsJsonldObject;
+    return chcsJsonldObject;
 }
 
 /**
  *
- * @param cmumpsDiagnosisObject -- a cmumps Patient object
+ * @param chcsDiagnosisObject -- a chcs Patient object
  * @returns {Object} -- a FHIR translation
  */
-function simpleTranslate(cmumpsDiagnosisObject) {
-    // The get function knows how to get values from cmumpsPatientObject using JSONPath.
-    var get = Fdt.makeGetter(cmumpsDiagnosisObject);
+function simpleTranslate(chcsDiagnosisObject) {
+    // The get function knows how to get values from chcsPatientObject using JSONPath.
+    var get = Fdt.makeGetter(chcsDiagnosisObject);
 
     // http://hl7-fhir.github.io/diagnosticreport.html:
     // "The diagnostic service returns a "report" which may contain a "narrative" - a written summary of the outcomes, and/or "results" -
@@ -57,7 +57,7 @@ function simpleTranslate(cmumpsDiagnosisObject) {
     // between the individual data items."
 
 
-    // These fields have cmumps sources, but don't seem to have a map to a FHIR DiagnosticReport.
+    // These fields have chcs sources, but don't seem to have a map to a FHIR DiagnosticReport.
     // get('$.acuity-100417') // Acuity, Indicate whether the acuity of this problem is currently Acute or Chronic.
     // get('$.problem-100417') // Problem, Problem that is assigned to a patient.
     // get('$.entering_user-100417') // Entering User, This field stores the user who made this entry to the problem list.
@@ -98,27 +98,27 @@ function simpleTranslate(cmumpsDiagnosisObject) {
         // link: { Reference(Media) } // R!  Reference to the image source
         conclusion: get("$['resolved_comment-100417']") || get("$['diagnosis-100417']"), // Clinical Interpretation of test results
         codedDiagnosis: Fdt.fhirCodeableConcept(get("$['diagnosis-100417']")), // Codes for the conclusion
-        presentedForm: [cmumpsDiagnosisObject] // Entire report as issued
+        presentedForm: [chcsDiagnosisObject] // Entire report as issued
     });
 }
 
 
 /**
- * Translate cmumps Kg_Patient_Diagnosis object to fhir DiagnosticReport resource. Optionally you can track which
+ * Translate chcs Kg_Patient_Diagnosis object to fhir DiagnosticReport resource. Optionally you can track which
  * input fields participated in the translation and an warnings along the way (you must turn those options on explicitly).
- * @param {object} cmumpsPatientDiagnosisObject -- input for the translation
+ * @param {object} chcsPatientDiagnosisObject -- input for the translation
  * @param {{participants: boolean, default false, warnings: boolean, default false}} options -- ask for additional processing
  * @returns {{resourceType: 'DiagnosticReport', ... }}
  * @see {http://hl7-fhir.github.io/diagnosticreport.html}
  */
-function translateDiagnosesFhir(cmumpsPatientDiagnosisObject, options) {
+function translateDiagnosesFhir(chcsPatientDiagnosisObject, options) {
     var options = options || {participants: false, warnings: false};
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumpsPatientDiagnosisObject. The fetcher will get data values from
-    // input cmumpsPatientDiagnosisObject, remembering those that actually have values in list participating_properties.
-    var fetch1 = Fdt.makeJsonFetcher1(cmumpsPatientDiagnosisObject, participatingProperties);
+    // Create a fetcher for chcsPatientDiagnosisObject. The fetcher will get data values from
+    // input chcsPatientDiagnosisObject, remembering those that actually have values in list participating_properties.
+    var fetch1 = Fdt.makeJsonFetcher1(chcsPatientDiagnosisObject, participatingProperties);
     // fetch1(json_pattern[, transformation])
 
     // http://hl7-fhir.github.io/diagnosticreport.html:
@@ -127,11 +127,11 @@ function translateDiagnosesFhir(cmumpsPatientDiagnosisObject, options) {
     // Observations (traditionally referred to as "panels" or " batteries" by laboratories) that can be used to represent relationships
     // between the individual data items."
 
-    // TODO mike@carif.io: Will I need to group all the cmumps KG_Patient_Diagnosis-100417 objects into a single fhir DiagnosisReport with
+    // TODO mike@carif.io: Will I need to group all the chcs KG_Patient_Diagnosis-100417 objects into a single fhir DiagnosisReport with
     // a list of fhir Observations?
 
     
-    var fhirDiagnoses = simpleTranslate(cmumpsPatientDiagnosisObject);
+    var fhirDiagnoses = simpleTranslate(chcsPatientDiagnosisObject);
     
     if (options.participants) Fhir.addParticipants(fhirDiagnoses, participatingProperties);
     if (options.warnings) Fhir.addWarnings(fhirDiagnoses, warnings);

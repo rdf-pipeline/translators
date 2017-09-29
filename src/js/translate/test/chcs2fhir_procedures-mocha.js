@@ -1,4 +1,4 @@
-// cmumps2fhir_procedures-mocha.js
+// chcs2fhir_procedures-mocha.js
 
 const Chai = require('chai');
 const expect = Chai.expect;
@@ -6,12 +6,12 @@ const should = Chai.should();
 
 const Fs = require('fs');
 
-const Procedures = require('../cmumps2fhir_procedures'); 
-const Utils = require('../util/cmumps_utils');
+const Procedures = require('../chcs2fhir_procedures'); 
+const Utils = require('../util/chcs_utils');
 
-describe("cmumps2fhir_procedures", function() {
+describe("chcs2fhir_procedures", function() {
 
-    var patient7 = Utils.load(__dirname+'/../../../../data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+    var patient7 = Utils.load(__dirname+'/../../../../data/fake_chcs/patient-7/chcs-patient7.jsonld');
 
     it("should have expected exported interface", function() {
         Procedures.should.be.an.object;
@@ -23,7 +23,7 @@ describe("cmumps2fhir_procedures", function() {
     describe("#extractProcedures", function() {
         it("should throw an error if there is no JSON-LD data passed in", function() {
             expect(Procedures.extractProcedures).to.throw(Error, 
-                "Cannot extract CMUMPS procedures because patient data object is undefined!");
+                "Cannot extract CHCS procedures because patient data object is undefined!");
         });
 
         it("should handle empty JSON-LD object gracefully", function() {
@@ -38,7 +38,7 @@ describe("cmumps2fhir_procedures", function() {
             results.should.be.empty;
         });
 
-        it("should extract CMUMPS diagnoses", function() {
+        it("should extract CHCS diagnoses", function() {
             var results = Procedures.extractProcedures(patient7);
 
             results.should.be.an('array');
@@ -63,9 +63,9 @@ describe("cmumps2fhir_procedures", function() {
 
     describe("#translatesProcedures2Fhir", function() {
 
-        it("should translate CMUMPS procedures to FHIR", function() {
-            var cmumpsProcedures = Procedures.extractProcedures(patient7);
-            var fhirProcedure = Procedures.translateProceduresFhir(cmumpsProcedures[0]);
+        it("should translate CHCS procedures to FHIR", function() {
+            var chcsProcedures = Procedures.extractProcedures(patient7);
+            var fhirProcedure = Procedures.translateProceduresFhir(chcsProcedures[0]);
             
             var expected = Utils.load(__dirname+'/data/expectedFhirProcedure.json');
             fhirProcedure.should.deep.equal(expected);

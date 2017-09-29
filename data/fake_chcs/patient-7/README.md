@@ -3,8 +3,8 @@
 This directory contains scrubbed data for a prototypical patient `patient-7`.
 
 * aalta-patient7-procedures.jsonld
-* cmumps-patient7.jsonld -- a complete example
-* context.jsonld -- jsonld context for cmumps-patient7.jsonld
+* chcs-patient7.jsonld -- a complete example
+* context.jsonld -- jsonld context for chcs-patient7.jsonld
 
 
 # Directory Layout
@@ -12,7 +12,7 @@ This directory contains scrubbed data for a prototypical patient `patient-7`.
 Aside from the data input files above, these directories are important:
 
 ```.
-├── cmumps-patient7.jsonld  # enumerated above
+├── chcs-patient7.jsonld  # enumerated above
 ├── aalta-patient7-procedures.jsonld
 ├── context.jsonld
 ├── expected/  # expected results of translations
@@ -23,7 +23,7 @@ Aside from the data input files above, these directories are important:
 │   ├── *.json
 │   ├── *.ttl
 │   ├── *.xml
-│   └── Makefile # translates ../cmumps-*.jsonld for all parts (all, demographics, etc) in each format (.json, .xml, .ttl)
+│   └── Makefile # translates ../chcs-*.jsonld for all parts (all, demographics, etc) in each format (.json, .xml, .ttl)
 ```
 
 To generate all translations and then compare to expected output:

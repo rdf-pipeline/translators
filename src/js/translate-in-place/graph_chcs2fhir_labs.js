@@ -1,19 +1,19 @@
 /**
- * Translate cmumps Lab object to fhir Observation.
+ * Translate chcs Lab object to fhir Observation.
  */
 
 var prefix = '../translate/';
-var cmumps = require(prefix + 'cmumps');
+var chcs = require(prefix + 'chcs');
 // Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
+var pattern = chcs.chcssJsonPattern;
+var chcss = chcs.chcss;
 var fhir = require(prefix + 'fhir');
 var _ = require('underscore');
 var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
-var fdt = require(prefix + 'cmumps2fhir_datatypes');
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
+var fdt = require(prefix + 'chcs2fhir_datatypes');
+var chcs_utils = require(prefix + 'util/chcs_utils');
 var Av = require('autovivify');
 
 
@@ -21,8 +21,8 @@ var Av = require('autovivify');
 
 
 /**
- * IMPLEMENTATION NOT COMPLETE! Translate a cmumpsLabResultObject into a fhir_Observation.
- * @param {object} cmumpsLabResultObjectModified - javascript object with type 'chccs:Lab_Result-63'
+ * IMPLEMENTATION NOT COMPLETE! Translate a chcsLabResultObject into a fhir_Observation.
+ * @param {object} chcsLabResultObjectModified - javascript object with type 'chccs:Lab_Result-63'
  * @param {{policy: boolean, warnings: boolean, eat: boolean}} [_options={policy: false, warnings: false, eat: true}]
  * @returns {object} -- fhir translation
  * @see {http://hl7-fhir.github.io/observation.html}
@@ -30,7 +30,7 @@ var Av = require('autovivify');
  *  Implementation notes:
  *
  *  - mongodb query db.schema.find_one({fmDD: 'fmdd:63'}, {'properties.id':true})
- *    will find the mongodb document that enumerates the cmumps fields available. They are:
+ *    will find the mongodb document that enumerates the chcs fields available. They are:
  *
  *    "patient-63"
  *    "micro_conversion_flag-63"
@@ -56,7 +56,7 @@ var Av = require('autovivify');
  *  - mongodb query db['63'].find({}) will find instances of 'Lab_Result-63'.
  */
 
-function translateLabsFhir(cmumpsLabResultObjectModified, _options, prefix) {
+function translateLabsFhir(chcsLabResultObjectModified, _options, prefix) {
     // Assign the default options, then override what the caller wants. At the end you have the right options.
     var options = {
         warnings: false,
@@ -71,16 +71,16 @@ function translateLabsFhir(cmumpsLabResultObjectModified, _options, prefix) {
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumpsLabResultObject. The fetcher will get data values from
-    // input cmumpsLabResultObject, remembering those that actually have values in list participating_properties.
-    // var fetch1 = fdt.peek(cmumpsLabResultObjectModified, participatingProperties);
-    var peek = fdt.peek(cmumpsLabResultObjectModified, participatingProperties);
-    var eat = fdt.eat(cmumpsLabResultObjectModified, participatingProperties);
+    // Create a fetcher for chcsLabResultObject. The fetcher will get data values from
+    // input chcsLabResultObject, remembering those that actually have values in list participating_properties.
+    // var fetch1 = fdt.peek(chcsLabResultObjectModified, participatingProperties);
+    var peek = fdt.peek(chcsLabResultObjectModified, participatingProperties);
+    var eat = fdt.eat(chcsLabResultObjectModified, participatingProperties);
     eat('$.type');
     // fetch1(json_pattern[, transformation])
 
     var identifier = eat('$.type', function (t) { return [ fdt.fhirIdentifier(t) ]; }); // Identifier Id for external references to this report
-    var patient = cmumpsLabResultObjectModified['patient-63'];
+    var patient = chcsLabResultObjectModified['patient-63'];
 
     // "internal" conversion functions, if a key is present then its values are an array of
     // tests of that type.
@@ -708,14 +708,14 @@ function translateLabsFhir(cmumpsLabResultObjectModified, _options, prefix) {
     // var used = new Av();
     // participatingProperties.forEach(function (p) {
     //     var prop = p.substring(1);
-    //     eval('used' + prop + '= cmumpsLabResultObjectModified' + prop);
+    //     eval('used' + prop + '= chcsLabResultObjectModified' + prop);
     // });
-    // var object_used = cmumps_utils.devivify(used);
+    // var object_used = chcs_utils.devivify(used);
     //
     // if (options.eat) {
     //     participatingProperties.forEach(function(p){
     //         var prop = p.substring(1);
-    //         eval('delete cmumpsLabResultObjectModified' + prop);
+    //         eval('delete chcsLabResultObjectModified' + prop);
     //     });
     // }
 

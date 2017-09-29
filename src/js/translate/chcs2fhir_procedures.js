@@ -1,27 +1,27 @@
 /**
- * Translate entire cmumps Procedure object at fhir Procedure resource.
+ * Translate entire chcs Procedure object at fhir Procedure resource.
  */
 
 const _ = require('underscore');
 
 const Fhir = require('./fhir');
-const Fdt = require('./cmumps2fhir_datatypes');
-const Cmumps_utils = require('./util/cmumps_utils');
+const Fdt = require('./chcs2fhir_datatypes');
+const Chcs_utils = require('./util/chcs_utils');
 
 /**
- * Extracts CMUMPS Patient procedures from a CMUMPS JSON-LD object
+ * Extracts CHCS Patient procedures from a CHCS JSON-LD object
  *
- * @param cmumpsJsonldObject a CMUMPS JSON-LD object
+ * @param chcsJsonldObject a CHCS JSON-LD object
  *
- * @return an array of CMUMPS patient procedures if any exist
+ * @return an array of CHCS patient procedures if any exist
  * @exception if input JSON-LD object is undefined
  */
-function extractProcedures(cmumpsJsonldObject) {
-    if (_.isUndefined(cmumpsJsonldObject)) {
-        throw Error("Cannot extract CMUMPS procedures because patient data object is undefined!");
+function extractProcedures(chcsJsonldObject) {
+    if (_.isUndefined(chcsJsonldObject)) {
+        throw Error("Cannot extract CHCS procedures because patient data object is undefined!");
     }
 
-    return _.filter(cmumpsJsonldObject['@graph'],
+    return _.filter(chcsJsonldObject['@graph'],
         function(json) {
             return /Procedure/.test(json.type);
     });
@@ -29,26 +29,26 @@ function extractProcedures(cmumpsJsonldObject) {
 
 /**
  * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the procedures from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
+ * MODIFIES chcsJsonldObject.
  *
- * @param cmumpsJsonldObject
+ * @param chcsJsonldObject
  * @return {Array[object]} -- the items removed
  */
-function removeProcedures(cmumpsJsonldObject) {
-    cmumpsJsonldObject['@graph'] =  _.filter(cmumpsJsonldObject['@graph'], function(json) {
+function removeProcedures(chcsJsonldObject) {
+    chcsJsonldObject['@graph'] =  _.filter(chcsJsonldObject['@graph'], function(json) {
             return !/Procedure/.test(json.type);
     });
-    return cmumpsJsonldObject;
+    return chcsJsonldObject;
 }
 
 /**
  *
- * @param cmumpsProcedureObject -- a cmumps Patient object
+ * @param chcsProcedureObject -- a chcs Patient object
  * @returns {Object} -- a FHIR translation
  */
-function simpleTranslate(cmumpsProcedureObject) {
-    // The get function knows how to get values from cmumpsPatientObject using JSONPath.
-    var get = Fdt.makeGetter(cmumpsProcedureObject);
+function simpleTranslate(chcsProcedureObject) {
+    // The get function knows how to get values from chcsPatientObject using JSONPath.
+    var get = Fdt.makeGetter(chcsProcedureObject);
 
     // http://hl7-fhir.github.io/procedure.html:
     // "This resource is used to record the details of procedures performed on a patient. A procedure is an activity
@@ -109,19 +109,19 @@ function simpleTranslate(cmumpsProcedureObject) {
 
 
 /**
- * Translate a cmumpsProcedureObject into a FHIR Procedure.
- * @param {object} cmumpsProcedureObject -- input object
+ * Translate a chcsProcedureObject into a FHIR Procedure.
+ * @param {object} chcsProcedureObject -- input object
  * @param {{participants: boolean, default false, warnings: boolean, default false}} options -- ask for additional processing
  * @returns {object} -- fhir translation, a Procedure resource
  */
-function translateProceduresFhir(cmumpsProcedureObject, options) {
-    var options = Cmumps_utils.merge(options, {participants: false, warnings: false, policy: false});
+function translateProceduresFhir(chcsProcedureObject, options) {
+    var options = Chcs_utils.merge(options, {participants: false, warnings: false, policy: false});
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumpsProcedureObject. The fetcher will get data values from
-    // input cmumpsProcedureObject, remembering those that actually have values in list participating_properties.
-    var fetch1 = Fdt.makeJsonFetcher1(cmumpsProcedureObject, participatingProperties); // returns function fetch1(json_pattern[, transformation])
+    // Create a fetcher for chcsProcedureObject. The fetcher will get data values from
+    // input chcsProcedureObject, remembering those that actually have values in list participating_properties.
+    var fetch1 = Fdt.makeJsonFetcher1(chcsProcedureObject, participatingProperties); // returns function fetch1(json_pattern[, transformation])
 
     // http://hl7-fhir.github.io/procedure.html:
     // "This resource is used to record the details of procedures performed on a patient. A procedure is an activity
@@ -130,7 +130,7 @@ function translateProceduresFhir(cmumpsProcedureObject, options) {
     // Procedures may be performed by a healthcare professional, a friend or relative or in some cases
     // by the patient themselves."
 
-    var fhirProcedure = simpleTranslate(cmumpsProcedureObject);
+    var fhirProcedure = simpleTranslate(chcsProcedureObject);
 
     if (options.participants) Fhir.addParticipants(fhirProcedure, participatingProperties);
     if (options.warnings) Fhir.addWarnings(fhirProcedure, warnings);

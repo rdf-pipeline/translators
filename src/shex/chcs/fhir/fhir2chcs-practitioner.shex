@@ -18,7 +18,7 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
     # fhir:Resource.id @<id>?;                # Logical id of this artifact
     fhir:Resource.id  {
       a [fhir:Identifier]?;
-      # fhir:Identifier.system    { fhir:value IRI %Map:{ provider:constIdentifierSysCmumps %} };
+      # fhir:Identifier.system    { fhir:value IRI %Map:{ provider:constIdentifierSysChcs %} };
       fhir:Identifier.value     { fhir:value xsd:string  %Map:{ provider:id %} };
     }*;
 
@@ -79,7 +79,7 @@ start=@<Practitioner> AND {fhir:nodeRole [fhir:treeRoot]}
                                                     # this agent 
     fhir:Practitioner.identifier  {
       a [fhir:Identifier]?;
-      # fhir:Identifier.system    { fhir:value IRI %Map:{ provider:constIdentifierSysCmumps %} };
+      # fhir:Identifier.system    { fhir:value IRI %Map:{ provider:constIdentifierSysChcs %} };
       fhir:Identifier.value     { fhir:value xsd:string  %Map:{ provider:provider_id %} };
     }*;
 

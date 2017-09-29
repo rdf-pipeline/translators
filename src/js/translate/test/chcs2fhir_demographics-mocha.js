@@ -1,4 +1,4 @@
-// cmumps2fhir_demographics-mocha.js
+// chcs2fhir_demographics-mocha.js
 
 const Chai = require('chai');
 const expect = Chai.expect;
@@ -6,12 +6,12 @@ const should = Chai.should();
 
 const Fs = require('fs');
 
-const Demographics = require('../cmumps2fhir_demographics'); 
-const Utils = require('../util/cmumps_utils');
+const Demographics = require('../chcs2fhir_demographics'); 
+const Utils = require('../util/chcs_utils');
 
-describe("cmumps2fhir_demographics", function() {
+describe("chcs2fhir_demographics", function() {
   
-    var patient7 = Utils.load(__dirname+'/../../../../data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+    var patient7 = Utils.load(__dirname+'/../../../../data/fake_chcs/patient-7/chcs-patient7.jsonld');
 
     it("should have expected exported interface", function() {
         Demographics.should.be.an.object;
@@ -23,7 +23,7 @@ describe("cmumps2fhir_demographics", function() {
     describe("#extractDemographics", function() {
         it("should throw an error if there is no JSON-LD data passed in", function() {
             expect(Demographics.extractDemographics).to.throw(Error, 
-                "Cannot extract CMUMPS demographics because patient data object is undefined!");
+                "Cannot extract CHCS demographics because patient data object is undefined!");
         });
 
         it("should handle empty JSON-LD object gracefully", function() {
@@ -38,7 +38,7 @@ describe("cmumps2fhir_demographics", function() {
             results.should.be.empty;
         });
 
-        it("should extract CMUMPS demographics", function() {
+        it("should extract CHCS demographics", function() {
             var results = Demographics.extractDemographics(patient7);
 
             results.should.be.an('array');
@@ -57,19 +57,19 @@ describe("cmumps2fhir_demographics", function() {
                 'medical_record_type-2', 'who_entered_patient-2', 'registration_incomplete-2', 
                 'active_duty-2', 'unit_ship_id-2', 'sponsor_name-2', 'organ_donor-2' ]);
 
-            patientDemographics.type.should.equal('cmumpss:Patient-2');
+            patientDemographics.type.should.equal('chcss:Patient-2');
             patientDemographics['_id'].should.equal('2-000007');
-            patientDemographics['sex-2'].should.deep.equal( { id: 'cmumpss:2__02_E-MALE', label: 'MALE' });
+            patientDemographics['sex-2'].should.deep.equal( { id: 'chcss:2__02_E-MALE', label: 'MALE' });
             patientDemographics['organ_donor-2'].should.deep.equal({ 
-               id: 'cmumpss:2_9001_01_E-UNDECIDED', 
+               id: 'chcss:2_9001_01_E-UNDECIDED', 
                label: 'UNDECIDED' });
-            var expected = Utils.load(__dirname+'/data/expectedCmumpsDemographics.json');
+            var expected = Utils.load(__dirname+'/data/expectedChcsDemographics.json');
             patientDemographics.should.deep.equal(expected);
         });
     });
 
     describe("#translateDemographics2Fhir", function() {
-        it("should translate CMUMPS demographics to FHIR", function() {
+        it("should translate CHCS demographics to FHIR", function() {
             var patient = Demographics.extractDemographics(patient7);
             var results = Demographics.translateDemographicsFhir(patient[0]);
             var expected = Utils.load(__dirname+'/data/expectedFhirDemographics.json');

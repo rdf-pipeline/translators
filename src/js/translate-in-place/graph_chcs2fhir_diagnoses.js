@@ -1,31 +1,31 @@
 /**
- * Translate cmumps Kg_Patient_Diagnosis object to fhir DiagnosticReport resource.
+ * Translate chcs Kg_Patient_Diagnosis object to fhir DiagnosticReport resource.
  */
 
 var prefix = '../translate/';
-var cmumps = require(prefix + 'cmumps');
+var chcs = require(prefix + 'chcs');
 // Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
+var pattern = chcs.chcssJsonPattern;
+var chcss = chcs.chcss;
 var fhir = require(prefix + 'fhir');
 var _ = require('underscore');
 var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
-var fdt = require(prefix + 'cmumps2fhir_datatypes');
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
+var fdt = require(prefix + 'chcs2fhir_datatypes');
+var chcs_utils = require(prefix + 'util/chcs_utils');
 var Av = require('autovivify');
 
 
 /**
- * Translate cmumps Kg_Patient_Diagnosis object to fhir DiagnosticReport resource. Optionally you can track which
+ * Translate chcs Kg_Patient_Diagnosis object to fhir DiagnosticReport resource. Optionally you can track which
  * input fields participated in the translation and an warnings along the way (you must turn those options on explicitly).
- * @param {object} cmumpsPatientDiagnosisObjectModified -- input for the translation
+ * @param {object} chcsPatientDiagnosisObjectModified -- input for the translation
  * @param {{policy: boolean, warnings: boolean, eat: boolean}} [_options={policy: false, warnings: false, eat: true}]
  * @returns {{resourceType: 'DiagnosticReport', ... }}
  * @see {http://hl7-fhir.github.io/diagnosticreport.html}
  */
-function translateDiagnosesFhir(cmumpsPatientDiagnosisObjectModified, _options, prefix) {
+function translateDiagnosesFhir(chcsPatientDiagnosisObjectModified, _options, prefix) {
     // Assign the default options, then override what the caller wants. At the end you have the right options.
     var options = {
         warnings: false, 
@@ -39,11 +39,11 @@ function translateDiagnosesFhir(cmumpsPatientDiagnosisObjectModified, _options, 
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumpsPatientDiagnosisObject. The fetcher will get data values from
-    // input cmumpsPatientDiagnosisObject, remembering those that actually have values in list participating_properties.
-    // var fetch1 = fdt.peek(cmumpsPatientDiagnosisObjectModified, participatingProperties);
-    var peek = fdt.peek(cmumpsPatientDiagnosisObjectModified, participatingProperties);
-    var eat = fdt.eat(cmumpsPatientDiagnosisObjectModified, participatingProperties);
+    // Create a fetcher for chcsPatientDiagnosisObject. The fetcher will get data values from
+    // input chcsPatientDiagnosisObject, remembering those that actually have values in list participating_properties.
+    // var fetch1 = fdt.peek(chcsPatientDiagnosisObjectModified, participatingProperties);
+    var peek = fdt.peek(chcsPatientDiagnosisObjectModified, participatingProperties);
+    var eat = fdt.eat(chcsPatientDiagnosisObjectModified, participatingProperties);
     // fetch1(json_pattern[, transformation])
 
     // http://hl7-fhir.github.io/diagnosticreport.html:
@@ -52,7 +52,7 @@ function translateDiagnosesFhir(cmumpsPatientDiagnosisObjectModified, _options, 
     // Observations (traditionally referred to as "panels" or " batteries" by laboratories) that can be used to represent relationships
     // between the individual data items."
 
-    // TODO mike@carif.io: Will I need to group all the cmumps KG_Patient_Diagnosis-100417 objects into a single fhir DiagnosisReport with
+    // TODO mike@carif.io: Will I need to group all the chcs KG_Patient_Diagnosis-100417 objects into a single fhir DiagnosisReport with
     // a list of fhir Observations?
 
     
@@ -82,7 +82,7 @@ function translateDiagnosesFhir(cmumpsPatientDiagnosisObjectModified, _options, 
         // link: { Reference(Media) } // R!  Reference to the image source
         conclusion: peek('$.diagnosis-100417'), // Clinical Interpretation of test results
         codedDiagnosis: eat('$.diagnosis-100417', fdt.fhirCodeableConcept), // Codes for the conclusion
-        presentedForm: [cmumpsPatientDiagnosisObjectModified] // Entire report as issued
+        presentedForm: [chcsPatientDiagnosisObjectModified] // Entire report as issued
     };
 
     if (options.participants) fhir.addParticipants(fhirDiagnoses, participatingProperties, prefix);
@@ -95,14 +95,14 @@ function translateDiagnosesFhir(cmumpsPatientDiagnosisObjectModified, _options, 
     // var used = new Av();
     // participatingProperties.forEach(function (p) {
     //     var prop = p.substring(1);
-    //     eval('used' + prop + '= cmumpsPatientDiagnosisObjectModified' + prop);
+    //     eval('used' + prop + '= chcsPatientDiagnosisObjectModified' + prop);
     // });
-    // var object_used = cmumps_utils.devivify(used);
+    // var object_used = chcs_utils.devivify(used);
     
     // if (options.eat) {
     //     participatingProperties.forEach(function(p){
     //         var prop = p.substring(1);
-    //         eval('delete cmumpsPatientDiagnosisObjectModified' + prop);
+    //         eval('delete chcsPatientDiagnosisObjectModified' + prop);
     //     });
     // }
 

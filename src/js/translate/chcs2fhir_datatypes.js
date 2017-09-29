@@ -1,11 +1,11 @@
 /**
- * Translate cmumps objects to fhir objects in simple cases.
+ * Translate chcs objects to fhir objects in simple cases.
  * In some of these simple cases, the function name reflects a concept at the FHIR website,
  * for example a Fhir Reference(Patient). This becomes fhirReferencePatient. By turning these
  * into function calls, you can change the translation in one place and get consistent treatment.
  */
 
-var cmumps = require('./cmumps');
+var chcs = require('./chcs');
 var _ = require('underscore');
 var jsonpath = require('jsonpath');
 var format = require('string-format');
@@ -162,13 +162,13 @@ function required(v, k) {
 
 
 /**
- * Translate cmumpsDate string in format yy(yy)?-mm-dd to fhir format mm-dd-yyyy.
- * @param {string} cmumpsDate - yy(yy)?-mm-dd
+ * Translate chcsDate string in format yy(yy)?-mm-dd to fhir format mm-dd-yyyy.
+ * @param {string} chcsDate - yy(yy)?-mm-dd
  * @returns {string || undefined} - mm-dd-yyyy
  */
-function fhirDate(cmumpsDate) {
-    if (cmumpsDate === undefined) return undefined;
-    var d = cmumps.cmumpsDate(cmumpsDate);
+function fhirDate(chcsDate) {
+    if (chcsDate === undefined) return undefined;
+    var d = chcs.chcsDate(chcsDate);
     return d.day + '-' + d.month + '-' + d.year;
 }
 
@@ -232,18 +232,18 @@ function fhirTiming(sig, when) {
 
 
 /**
- * Translate a cmumps name format 'LAST, FIRST MI TITLE' to fhir HumanName
+ * Translate a chcs name format 'LAST, FIRST MI TITLE' to fhir HumanName
  * http://hl7-fhir.github.io/datatypes.html#HumanName
  *
- * @param cmumpsName
+ * @param chcsName
  * @returns {{resourceType: string, use: string}}
  * @see {http://www.amazon.com/ARRIS-SURFboard-SBG6580-Docsis-Router/dp/B0040IUI46}
  *
  */
-function fhirHumanName(cmumpsName) {
-    if (cmumpsName === undefined) return undefined;
-    // microparse the cmumps name value into fhirParts 'last, first mi title'
-    var n = cmumps.cmumpsPatientName(cmumpsName);
+function fhirHumanName(chcsName) {
+    if (chcsName === undefined) return undefined;
+    // microparse the chcs name value into fhirParts 'last, first mi title'
+    var n = chcs.chcsPatientName(chcsName);
 
     var result = {
         "use": "usual", // "official"?
@@ -264,19 +264,19 @@ function fhirHumanName(cmumpsName) {
 
 /**
  * Generate a FHIR ContactPoint.
- * @param cmumpsContactPoint
+ * @param chcsContactPoint
  * @returns {*}
  * @see {link: 'http://hl7-fhir.github.io/datatypes.html#ContactPoint'}
  */
-function fhirContactPoint(cmumpsContactPoint) {
-    if (cmumpsContactPoint === undefined) return undefined;
-    if (! jsonpath.query(cmumpsContactPoint, '$.value')) return undefined;
+function fhirContactPoint(chcsContactPoint) {
+    if (chcsContactPoint === undefined) return undefined;
+    if (! jsonpath.query(chcsContactPoint, '$.value')) return undefined;
     return clean({
         resourceType: "ContactPoint",
         // from Element: extension
-        system: jsonpath.query(cmumpsContactPoint, '$.system'), // C? phone | fax | email | pager | other
-        value: jsonpath.query(cmumpsContactPoint, '$.value'), // The actual contact point details
-        use: jsonpath.query(cmumpsContactPoint, '$.use'), // home | work | temp | old | mobile - purpose of this contact point
+        system: jsonpath.query(chcsContactPoint, '$.system'), // C? phone | fax | email | pager | other
+        value: jsonpath.query(chcsContactPoint, '$.value'), // The actual contact point details
+        use: jsonpath.query(chcsContactPoint, '$.use'), // home | work | temp | old | mobile - purpose of this contact point
         // "rank" : "<positiveInt>", // Specify preferred order of use (1 = highest)
         // "period" : { Period } // Time period when the contact point was/is in use
     });
@@ -285,16 +285,16 @@ function fhirContactPoint(cmumpsContactPoint) {
 
 /**
  * Turn a US social security number into a fhir identifier.
- * @param {string} cmumpsSsn - social security number
- * @param {string} cmumpsDodId - dod id
+ * @param {string} chcsSsn - social security number
+ * @param {string} chcsDodId - dod id
  * @returns {Array.<fhir.Address>}
  *
- * TODO: would be helpful to capture the json path from the source cmumps object
- *   and put it in the result, something like 'x-source-path': "/@graph/* /type='cmumpss:2'/ssn-2"
- * @param cmumpsDodId
+ * TODO: would be helpful to capture the json path from the source chcs object
+ *   and put it in the result, something like 'x-source-path': "/@graph/* /type='chcss:2'/ssn-2"
+ * @param chcsDodId
  */
-function fhirIdentifier(cmumpsSsn, cmumpsDodId) {
-    if (cmumpsSsn === undefined && cmumpsDodId === undefined) return undefined;
+function fhirIdentifier(chcsSsn, chcsDodId) {
+    if (chcsSsn === undefined && chcsDodId === undefined) return undefined;
     // filter function, id -> fhir_id
     // TODO mike@carif.io: use fhirCodeableConcept instead?
     function f(id) {
@@ -305,8 +305,8 @@ function fhirIdentifier(cmumpsSsn, cmumpsDodId) {
                 // assigner: 'US',
                 type: {
                     coding: [{
-                        code: 'cmumpss',
-                        display: 'cmumpss'
+                        code: 'chcss',
+                        display: 'chcss'
                     }],
                     text: id
                 },
@@ -316,15 +316,15 @@ function fhirIdentifier(cmumpsSsn, cmumpsDodId) {
             return null;
     }
 
-    var result = [cmumpsSsn, cmumpsDodId].filter(function (i) { return i; }).map(f);
+    var result = [chcsSsn, chcsDodId].filter(function (i) { return i; }).map(f);
     return result;
 }
 
 /**
  * Create a FHIR Identifier and associated CodeableConcept. The reference is considered "external" to FHIR, e.g.
- * cmumps. Not sure this is right.
+ * chcs. Not sure this is right.
  * @param {string} value -- the external id
- * @param {string} codeableConceptType -- invented type e.g. 'cmumps'
+ * @param {string} codeableConceptType -- invented type e.g. 'chcs'
  * @returns {Identifer || undefined}
  * @see {https://hl7-fhir.github.io/datatypes.html#Identifier}
  */
@@ -333,16 +333,16 @@ function fhirExternalIdentifier(value, codeableConceptType) {
     return {
         use: 'usual',
         type: fhirCodeableConcept(codeableConceptType),
-        system: 'cmumps', // TODO mike@carif.io: what is this really?
+        system: 'chcs', // TODO mike@carif.io: what is this really?
         value: value,
         // assigner: {
-        //    reference: 'cmumps',
-        //    display: 'cmumps' }
+        //    reference: 'chcs',
+        //    display: 'chcs' }
     };
 }
 
 /**
- * Given an identifier 'id' with an optional prefix, create a list of a single FHIR cmumps identifier.
+ * Given an identifier 'id' with an optional prefix, create a list of a single FHIR chcs identifier.
  * @param {string} id
  * @param {string} prefix -- optional prefix, used by turtle amoungst other things.
  * @returns {List[Identifier] || undefined}
@@ -354,8 +354,8 @@ function fhirIdentifierList(id, prefix) {
         // assigner: 'US', // TODO carif: why does the xml generation drop this value, but not the tag?
         type: {
             coding: [{
-                code: 'cmumpss',
-                display: 'cmumpss'
+                code: 'chcss',
+                display: 'chcss'
             }],
             text: id
         },
@@ -365,19 +365,19 @@ function fhirIdentifierList(id, prefix) {
 
 
 /**
- * Translate a cmumps marital status into a fhir maritalStatus(http://hl7-fhir.github.io/valueset-marital-status.html)
+ * Translate a chcs marital status into a fhir maritalStatus(http://hl7-fhir.github.io/valueset-marital-status.html)
  * Note: The marital status 'U' in FHIR maps to both "UNKNOWN" and "UNMARRIED". These are two separate concepts.
- * Therefore, I've mapped cmumps 'UNKNOWN' to fhir 'U'.
- * @param {string} cmumpssMaritalStatus - acts as an enum
+ * Therefore, I've mapped chcs 'UNKNOWN' to fhir 'U'.
+ * @param {string} chcssMaritalStatus - acts as an enum
  * @returns {CodeableConcept || undefined} -- actually a character, 'D' for divorced, etc.
  */
 
 // TODO mike@carif.io: use fhirCodeableConcept()
-function fhirMaritalStatus(cmumpssMaritalStatus) {
-    if (cmumpssMaritalStatus === undefined) return undefined;
+function fhirMaritalStatus(chcssMaritalStatus) {
+    if (chcssMaritalStatus === undefined) return undefined;
     // mapping from http://hl7-fhir.github.io/v3/MaritalStatus/index.html
     // return a "CodableConcept"
-    var ms = cmumpssMaritalStatus.label.toUpperCase();
+    var ms = chcssMaritalStatus.label.toUpperCase();
     if (_.contains(["DIVORCED", "SINGLE,NEVER MARRIED", "MARRIED", "LEGALLY SEPARATED", "UNKNOWN", "WIDOWED"], ms)) {
         return {
             coding: [
@@ -396,7 +396,7 @@ function fhirMaritalStatus(cmumpssMaritalStatus) {
 
 /**
  * Create a fhir address from an intermediate address using the JSONPath style. By intermediate here, I
- * "raise" the cmumps address into an object with certain keys and then convert that into a FHIR Address.
+ * "raise" the chcs address into an object with certain keys and then convert that into a FHIR Address.
  * @param {object} address -- the postal address as an object
  * @returns {Address || undefined}
  * @see {https://hl7-fhir.github.io/datatypes.html#address}
@@ -425,44 +425,44 @@ function fhirAddress(address) {
 
 
 /**
- * Turn a cmumps code, i.e. 'cmumpss:Patient-2' or 'cmumpss:Prescription-52' into a fhir CodeableConcept.
- * @param cmumpsTypeCode
+ * Turn a chcs code, i.e. 'chcss:Patient-2' or 'chcss:Prescription-52' into a fhir CodeableConcept.
+ * @param chcsTypeCode
  * @returns {CodeableConcept}
  */
 
-function fhirCodeableConcept(cmumpsTypeCode) {
-    if (cmumpsTypeCode === undefined) return undefined;
+function fhirCodeableConcept(chcsTypeCode) {
+    if (chcsTypeCode === undefined) return undefined;
     return {
         coding: [
             {
-                system: 'cmumps', // TODO mike@carif.io, get this from @context?
+                system: 'chcs', // TODO mike@carif.io, get this from @context?
                 version: '0.0.1', // TODO mike@carif.io, don't make this up
-                code: 'cmumps', // TODO mike@carif.io, relative url?
-                display: cmumpsTypeCode,
+                code: 'chcs', // TODO mike@carif.io, relative url?
+                display: chcsTypeCode,
                 userSelected: false
             }
         ],
-        text: cmumpsTypeCode
+        text: chcsTypeCode
     };
 }
 
 /**
  * Convenience, return a list of a single CodeableConcept.
- * @param {string} cmumpsTypeCode
+ * @param {string} chcsTypeCode
  * @returns {List[CodeableConcept]}
  */
-function fhirCodeableConceptList(cmumpsTypeCode) {
-    if (cmumpsTypeCode === undefined) return undefined;
-    return [ fhirCodeableConcept(cmumpsTypeCode) ];
+function fhirCodeableConceptList(chcsTypeCode) {
+    if (chcsTypeCode === undefined) return undefined;
+    return [ fhirCodeableConcept(chcsTypeCode) ];
 }
 
 
 /**
  * http://hl7-fhir.github.io/valueset-diagnostic-service-sections.html
- * @param cmumps "service category"
+ * @param chcs "service category"
  */
-function fhirDiagnosticReportCategory(cmumpsCode) {
-    if (cmumpsCode === undefined) return undefined;
+function fhirDiagnosticReportCategory(chcsCode) {
+    if (chcsCode === undefined) return undefined;
     // table taken from http://hl7.org/fhir/v2/0074/index.html
     var fromTo = {
         '': 'AU', // Audiology
@@ -517,7 +517,7 @@ function fhirDiagnosticReportCategory(cmumpsCode) {
 
     // TODO mike@carif.io: map this, its currently confusing.
     try {
-        return fromTo[cmumpsCode];
+        return fromTo[chcsCode];
     } catch(e) {
         return 'OTH';
     }
@@ -532,89 +532,89 @@ function fhirDiagnosticReportCategory(cmumpsCode) {
 
 
 /**
- * Given a cmumpsProvider, return a reference to a FHIR Practioner.
- * @param {object} cmumpsProvider
+ * Given a chcsProvider, return a reference to a FHIR Practioner.
+ * @param {object} chcsProvider
  * @returns {{reference: id, display: label}}
  */
-function fhirReferencePractioner(cmumpsProvider) {
-    if (cmumpsProvider === undefined) return undefined;
+function fhirReferencePractioner(chcsProvider) {
+    if (chcsProvider === undefined) return undefined;
     return clean({
         // TODO carif: make sure this is correct
-        // reference: 'urn:local:fhir:MedicationDispense:' + cmumpsProvider.id,
-        reference: cmumpsProvider.id,
-        display: cmumpsProvider.label
+        // reference: 'urn:local:fhir:MedicationDispense:' + chcsProvider.id,
+        reference: chcsProvider.id,
+        display: chcsProvider.label
     });
 }
 
 
 /**
- * Given a cmumpsDrug (drug-52), return a reference to a FHIR Medication.
+ * Given a chcsDrug (drug-52), return a reference to a FHIR Medication.
  * Usually this is documented as Reference(Medication).
- * @param {object} cmumpsDrug
+ * @param {object} chcsDrug
  * @returns {{reference: id, display: label}}
  */
 // If its mentioned in the FHIR spec, I create a function naming it.
-function fhirReferenceMedication(cmumpsDrug) {
-    if (cmumpsDrug === undefined) return undefined;
+function fhirReferenceMedication(chcsDrug) {
+    if (chcsDrug === undefined) return undefined;
     return {
-        reference: cmumpsDrug.id,
-        display: cmumpsDrug.label
+        reference: chcsDrug.id,
+        display: chcsDrug.label
     };
 }
 
 /**
- * Given a cmumpsOrder, return a reference to a FHIR MedicationOrder.
+ * Given a chcsOrder, return a reference to a FHIR MedicationOrder.
  * Usually this is documented as Reference(MedicationOrder).
- * @param cmumpsOrder
+ * @param chcsOrder
  * @returns {{reference: string, display: string} || undefined}
  */
-function fhirReferenceMedicationOrder(cmumpsOrder) {
-    if (cmumpsOrder === undefined) return undefined;
+function fhirReferenceMedicationOrder(chcsOrder) {
+    if (chcsOrder === undefined) return undefined;
     return {
-        reference: cmumpsOrder.id,
-        display: cmumpsOrder.label
+        reference: chcsOrder.id,
+        display: chcsOrder.label
     };
 }
 
 /**
- * Create a FHIR Reference(Patient) based on the cmumps patient id.
- * @param {String} cmumpsPatientId, usually of the form /2-\d+/
+ * Create a FHIR Reference(Patient) based on the chcs patient id.
+ * @param {String} chcsPatientId, usually of the form /2-\d+/
  * @returns {{display: *}}
  */
-function fhirReferencePatient(cmumpsPatient) {
-    if (cmumpsPatient === undefined) return undefined;
+function fhirReferencePatient(chcsPatient) {
+    if (chcsPatient === undefined) return undefined;
     return {
-        reference: 'Patient/' + cmumpsPatient.id,
-        display: cmumpsPatient.label
+        reference: 'Patient/' + chcsPatient.id,
+        display: chcsPatient.label
     };
 }
 
 
 /**
- * Create a FHIR Reference(Location) based on the cmumpsLocation.
- * @param {object} cmumpsLocation
+ * Create a FHIR Reference(Location) based on the chcsLocation.
+ * @param {object} chcsLocation
  * @returns {{reference: *, display: *} || undefined}
  */
-function fhirReferenceLocation(cmumpsLocation) {
-    if (cmumpsLocation === undefined) return undefined;
+function fhirReferenceLocation(chcsLocation) {
+    if (chcsLocation === undefined) return undefined;
     return {
-        reference: cmumpsLocation.id,
-        display: cmumpsLocation.label
+        reference: chcsLocation.id,
+        display: chcsLocation.label
     };
 }
 
 
 /**
- * Create a FHIR Reference(Organization) based on the cmumpsOrganization.
- * @param {object} cmumpsOrganization
+ * Create a FHIR Reference(Organization) based on the chcsOrganization.
+ * @param {object} chcsOrganization
  * @returns {{reference: *, display: *} || undefined}
  */
-function fhirReferenceOrganization(cmumpsOrganization) {
-    if (cmumpsOrganization === undefined) return undefined;
+function fhirReferenceOrganization(chcsOrganization) {
+    if (chcsOrganization === undefined) return undefined;
     var result = clean({
-        name: jsonpath.query(cmumpsOrganization, '$.name'), // C? Name used for the organization
-        telecom: [fhirContactPoint(jsonpath.query(cmumpsOrganization, '$.telecom'))], // C? A contact detail for the organization
-        address: [fhirAddress(jsonpath.query(cmumpsOrganization, '$.address'))], // C? An address for the organization
+        name: jsonpath.query(chcsOrganization, '$.name'), // C? Name used for the organization
+        telecom: [fhirContactPoint(jsonpath.query(chcsOrganization, '$.telecom'))], // C? A contact detail for the organization
+        address: [fhirAddress(jsonpath.query(chcsOrganization, '$.address'))], // C? An address for the organization
         // partOf: { }, // The organization of which this organization forms a part, TODO: VA?
         // contact: [{ // Contact for the organization for a certain purpose
         //     purpose: { fhirCodeableConcept }, // The type of contact
@@ -642,7 +642,7 @@ function fhirReferenceOrganization(cmumpsOrganization) {
  * Given quantity value and units, create a fhir Quantity
  * @param {int} value -- the quantity
  * @param {string} units -- the units as a string, optional, default 'unsupplied'
- * @returns {{value: int, unit: string, system: 'cmumps', code: 'cmumps'} || undefined} -- a fhir Quantity
+ * @returns {{value: int, unit: string, system: 'chcs', code: 'chcs'} || undefined} -- a fhir Quantity
  * @see {http://hl7-fhir.github.io/datatypes.html#Quantity}
  */
 function fhirQuantity(value, units) {
@@ -651,28 +651,28 @@ function fhirQuantity(value, units) {
     return {
         value: typeof(value) == 'string' ? parseInt(value) : value,
         unit: units,
-        system: 'cmumps',
-        code: 'cmumps'
+        system: 'chcs',
+        code: 'chcs'
     };
 }
 
 
 /**
- * Given a cmumps provider (provider-6), translate that into a FHIR practioner. Gets the full treatment including
+ * Given a chcs provider (provider-6), translate that into a FHIR practioner. Gets the full treatment including
  * warnings and participating properties.
- * @param {object} cmumpsProvider
+ * @param {object} chcsProvider
  * @returns {Practioner || undefined}
  * @see{https://hl7-fhir.github.io/practitioner.html}
  */
-function fhirPractioner(cmumpsProvider, options) {
-    if (cmumpsProvider === undefined) return undefined;
+function fhirPractioner(chcsProvider, options) {
+    if (chcsProvider === undefined) return undefined;
     var options = options || {participants: false, warnings: false};
     var participatingProperties = []; // no participants yet
     warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumpsLabResultObject. The fetcher will get data values from
-    // input cmumpsLabResultObject, remembering those that actually have values in list participating_properties.
-    var fetch1 = makeJsonFetcher1(cmumpsProvider, participatingProperties);
+    // Create a fetcher for chcsLabResultObject. The fetcher will get data values from
+    // input chcsLabResultObject, remembering those that actually have values in list participating_properties.
+    var fetch1 = makeJsonFetcher1(chcsProvider, participatingProperties);
 
     var fhirPractioner = {
         resourceType: 'Practitioner',
@@ -714,7 +714,7 @@ function fhirPractioner(cmumpsProvider, options) {
     return fhirPractioner;
 }
 
-// Helper functions specific to a cmumps Patient translation with no "handle" in the FHIR spec (e.g. HunmanName).
+// Helper functions specific to a chcs Patient translation with no "handle" in the FHIR spec (e.g. HunmanName).
 
 /**
  * Return 'male', 'female' or ''. Note the '' is javascript "truthy" false.
@@ -744,7 +744,7 @@ function fhirPatientBirthDate(bd) {
 }
 
 /**
- * cmumps lumps state and country together. Pick out the state.
+ * chcs lumps state and country together. Pick out the state.
  * @param s
  * @returns {*}
  */
@@ -754,7 +754,7 @@ function fhirPatientState(s) {
 }
 
 /**
- * cmumps lumps state and country together. Pick out the country.
+ * chcs lumps state and country together. Pick out the country.
  * @param s
  * @returns {*}
  */

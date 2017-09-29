@@ -18,7 +18,7 @@ function now() {
 
 
 /**
- * A set of predicates to recognize types of cmumps objects
+ * A set of predicates to recognize types of chcs objects
  */
 
 /**
@@ -79,7 +79,7 @@ function extractProcedures(fhirObject) {
 
 
 /**
- * Add the cmumps participating properties, described as JSON path expressions, rooted at prefix object (if passed).
+ * Add the chcs participating properties, described as JSON path expressions, rooted at prefix object (if passed).
  * @param {object} fhirResult, SIDE EFFECTS fhirResult
  * @param {List[String]} participatingProperties
  * @param {String} [prefix=undefined] -- the prefix of the JSON Path expression
@@ -88,8 +88,8 @@ function addParticipants(fhirResult, participatingProperties, prefix) {
     // Don't create an extension unless there are participating properties to actually report.
     if (participatingProperties.length > 0) {
         fhirResult.extension = [
-            {url: 'cmumps', extension: participatingProperties.map(function(i) { 
-                return {url: 'cmumps', valueString: prefix ? prefix + i.substring(1) : i};
+            {url: 'chcs', extension: participatingProperties.map(function(i) { 
+                return {url: 'chcs', valueString: prefix ? prefix + i.substring(1) : i};
             })}
         ];
     }
@@ -97,7 +97,7 @@ function addParticipants(fhirResult, participatingProperties, prefix) {
 
 
 /**
- * Add the cmumps translation warnings as strings. The strings are messages for a human reader.
+ * Add the chcs translation warnings as strings. The strings are messages for a human reader.
  * @param {object} fhirResult, SIDE EFFECTS fhirResult
  * @param {Array[String]} warnings
  */
@@ -105,14 +105,14 @@ function addWarnings(fhirResult, warnings) {
     // Don't create or augment an extension unless there are warnings to actually report.
     if (warnings.length > 0) {
         // Array[String] => Array[{url, valueString}]
-        var warningsAsExtensions = warnings.map(function(i) { return {url: 'cmumps', valueString: i}});
+        var warningsAsExtensions = warnings.map(function(i) { return {url: 'chcs', valueString: i}});
         if (fhirResult.extension) {
             // If there are already some extensions, add this to the list.
-            fhirResult.extension.push({url: 'cmumps', extension: warningsAsExtensions});
+            fhirResult.extension.push({url: 'chcs', extension: warningsAsExtensions});
         } else {
             // Create an extension and populate it.
             fhirResult.extension = [
-                {url: 'cmumps', extension: warningsAsExtensions}
+                {url: 'chcs', extension: warningsAsExtensions}
             ];
         }
     }

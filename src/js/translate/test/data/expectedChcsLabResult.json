@@ -1,7 +1,7 @@
 {
   "_id": "63-000007",
   "micro_conversion_flag-63": {
-    "id": "cmumpss:63__03_E-Micro_result_converted_for_4_41",
+    "id": "chcss:63__03_E-Micro_result_converted_for_4_41",
     "label": "Micro_result_converted_for_4_41"
   },
   "label": "BUNNY,BUGS",
@@ -19,13 +19,13 @@
         {
           "id": "63_832-1_9999999.111111_000007",
           "disclosure_id-63_832": "1",
-          "type": "cmumpss:63_832",
+          "type": "chcss:63_832",
           "disclosure_text-63_832": "fake text",
           "label": "1"
         }
       ],
       "origin_of_result-63_04": {
-        "id": "cmumpss:63_04__24_E-PERFORMING_LABORATORY",
+        "id": "chcss:63_04__24_E-PERFORMING_LABORATORY",
         "label": "PERFORMING_LABORATORY"
       },
       "collection_sample-63_04": {
@@ -59,7 +59,7 @@
             "label": "SOME-1 AB"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -90,7 +90,7 @@
             "id": "6-222",
             "label": "POOH,WINNIE"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "1_07-4220_9999999.111111_0001007",
           "lab_method-63_07": {
             "id": "8710-2972",
@@ -112,7 +112,7 @@
         "value": "1990-01-01"
       },
       "label": "1990-01-01T00:00:00Z",
-      "type": "cmumpss:Clinical_Chemistry-63_04",
+      "type": "chcss:Clinical_Chemistry-63_04",
       "id": "63_04-9999999.111111_000007"
     },
     {
@@ -155,7 +155,7 @@
             "label": "INPROCESSING SOME SCREEN"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -184,7 +184,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-3429_9999999.111111_000007",
           "lab_method-63_07": {
             "id": "8710-1426",
@@ -206,7 +206,7 @@
         "value": "1990-01-01"
       },
       "label": "1990-01-01T00:00:00Z",
-      "type": "cmumpss:Clinical_Chemistry-63_04",
+      "type": "chcss:Clinical_Chemistry-63_04",
       "id": "63_04-9999999.111111_000007"
     },
     {
@@ -249,7 +249,7 @@
             "label": "GLUCOSE"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -278,7 +278,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-175_9999999.111111_000007",
           "lab_method-63_07": {
             "id": "8710-2222",
@@ -300,7 +300,7 @@
         "value": "1990-01-01"
       },
       "label": "1990-01-01T00:00:00Z",
-      "type": "cmumpss:Clinical_Chemistry-63_04",
+      "type": "chcss:Clinical_Chemistry-63_04",
       "id": "63_04-9999999.836398_000007"
     },
     {
@@ -343,7 +343,7 @@
             "label": "INPROCESSING VARICELLA AB"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -372,7 +372,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-3618_9999999.836399_000007",
           "lab_method-63_07": {
             "id": "8710-1594",
@@ -394,7 +394,7 @@
         "value": "1990-01-01"
       },
       "label": "1990-01-01T00:00:00Z",
-      "type": "cmumpss:Clinical_Chemistry-63_04",
+      "type": "chcss:Clinical_Chemistry-63_04",
       "id": "63_04-9999999.836399_000007"
     },
     {
@@ -437,7 +437,7 @@
             "label": "INPROCESSING SICKLE CELL TEST"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -466,7 +466,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-3428_9999999.1111_000007",
           "lab_method-63_07": {
             "id": "8710-1425",
@@ -491,7 +491,7 @@
             "label": "INPROCESSING RPR"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -520,7 +520,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-3475_9999999.1111_000007",
           "lab_method-63_07": {
             "id": "8710-1468",
@@ -545,7 +545,7 @@
             "label": "INPROCESSING G6PD"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -574,7 +574,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-3484_9999999.1111_000007",
           "lab_method-63_07": {
             "id": "8710-1474",
@@ -599,7 +599,7 @@
             "label": "INPROCESSING ABO"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -628,7 +628,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-4102_9999999.1111_000007",
           "lab_method-63_07": {
             "id": "8710-2036",
@@ -653,7 +653,7 @@
             "label": "INPROCESSING RH"
           },
           "rnr_action-63_07": {
-            "id": "cmumpss:11_07__18_E-INITIALED",
+            "id": "chcss:11_07__18_E-INITIALED",
             "label": "INITIALED"
           },
           "certify_person-63_07": {
@@ -682,7 +682,7 @@
             "id": "6-33333",
             "label": "BUNNY,BUGS"
           },
-          "type": "cmumpss:Result-63_07",
+          "type": "chcss:Result-63_07",
           "id": "11_07-4103_9999999.1111_000007",
           "lab_method-63_07": {
             "id": "8710-2037",
@@ -704,7 +704,7 @@
         "value": "1990-01-01"
       },
       "label": "1990-01-01T00:00:00Z",
-      "type": "cmumpss:Clinical_Chemistry-63_04",
+      "type": "chcss:Clinical_Chemistry-63_04",
       "id": "63_04-9999999.1111_000007"
     }
   ],
@@ -712,5 +712,5 @@
     "id": "2-000007",
     "label": "BUNNY,BUGS"
   },
-  "type": "cmumpss:Lab_Result-63"
+  "type": "chcss:Lab_Result-63"
 }

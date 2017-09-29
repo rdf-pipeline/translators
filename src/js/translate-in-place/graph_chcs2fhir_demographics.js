@@ -1,38 +1,38 @@
 /**
- * Translate a cmumps Patient objects to fhir Patient object.
+ * Translate a chcs Patient objects to fhir Patient object.
  */
 
 var prefix = '../translate/';
-var cmumps = require(prefix + 'cmumps');
+var chcs = require(prefix + 'chcs');
 // Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
+var pattern = chcs.chcssJsonPattern;
+var chcss = chcs.chcss;
 var fhir = require(prefix + 'fhir');
 var _ = require('underscore');
 var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
-var fdt = require(prefix + 'cmumps2fhir_datatypes');
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
+var fdt = require(prefix + 'chcs2fhir_datatypes');
+var chcs_utils = require(prefix + 'util/chcs_utils');
 var Av = require('autovivify');
 
 
 
 /**
- * Translate a cmumpsPatientObject into a fhir_Patient resource using JSONPath.
- * @param {object} cmumpsPatientObjectModified
- * @param {string} cmumpsPatientObjectModified.type -- has value "cmumpss:Patient-2", an error is thrown iff options.policy == true.
+ * Translate a chcsPatientObject into a fhir_Patient resource using JSONPath.
+ * @param {object} chcsPatientObjectModified
+ * @param {string} chcsPatientObjectModified.type -- has value "chcss:Patient-2", an error is thrown iff options.policy == true.
  * @param {{policy: boolean, warnings: boolean, eat: boolean}} [_options={policy: false, warnings: false, eat: true}]
  * @returns {{used: object, fhir: object, participants: Array[String]}} -- .used, the input that actually generated .fhir, the FHIR translation,
  * @see {@link http://hl7-fhir.github.io/patient.html}
  */
-function translateDemographicsFhir(cmumpsPatientObjectModified, _options, prefix) {
+function translateDemographicsFhir(chcsPatientObjectModified, _options, prefix) {
     // Assign the default options, then override what the caller wants. At the end you have the right options.
     var options = {
         participants: false,
         warnings: false, // capture warnings
         policy: false, // enforce policy. throw exceptions as they occur
-        eat: true, // modify cmumpsPatientObjectModified
+        eat: true, // modify chcsPatientObjectModified
     };
     for (k in _options) {
         if (_options.hasOwnProperty(k)) options[k] = _options[k];
@@ -41,13 +41,13 @@ function translateDemographicsFhir(cmumpsPatientObjectModified, _options, prefix
     var participatingProperties = ["$['type']"]; // type is always used, it's how we got here
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumps_patient_object. The fetcher will get data values from
-    // input cmumps_patient_object, remembering those that actually have values in list participating_properties.
+    // Create a fetcher for chcs_patient_object. The fetcher will get data values from
+    // input chcs_patient_object, remembering those that actually have values in list participating_properties.
     //noinspection Eslint
-    // var fetch1 = fdt.peek(cmumpsPatientObjectModified, participatingProperties);
+    // var fetch1 = fdt.peek(chcsPatientObjectModified, participatingProperties);
     // fetch1(json_pattern[, transformation])
-    var peek = fdt.peek(cmumpsPatientObjectModified, participatingProperties);
-    var eat = fdt.eat(cmumpsPatientObjectModified, participatingProperties);
+    var peek = fdt.peek(chcsPatientObjectModified, participatingProperties);
+    var eat = fdt.eat(chcsPatientObjectModified, participatingProperties);
 
 
     // Translate each key/value pair at once. See the "shape" of the result.
@@ -115,14 +115,14 @@ function translateDemographicsFhir(cmumpsPatientObjectModified, _options, prefix
     // var used = new Av();
     // participatingProperties.forEach(function (p) {
     //     var prop = p.substring(1);
-    //     eval('used' + prop + '= cmumpsPatientObjectModified' + prop);
+    //     eval('used' + prop + '= chcsPatientObjectModified' + prop);
     // });
-    // var object_used = cmumps_utils.devivify(used);
+    // var object_used = chcs_utils.devivify(used);
     //
     // if (options.eat) {
     //     participatingProperties.forEach(function(p){
     //         var prop = p.substring(1);
-    //         eval('delete cmumpsPatientObjectModified' + prop);
+    //         eval('delete chcsPatientObjectModified' + prop);
     //     });
     // }
 

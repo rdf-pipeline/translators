@@ -3,16 +3,16 @@
 # http://blog.jgc.org/2007/01/what-makefile-am-i-in.html
 where-am-i = $(CURDIR)/$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))
 # HERE is the directory housing this Makefile
-# HERE is used to find util/cmumps-file.js
+# HERE is used to find util/chcs-file.js
 HERE=$(dir $(call where-am-i))
 
 # where the output is pushed to, 'mkdir elsewhere; make OUTPUT=elsewhere all' will generate to directory 'elsewhere'
 SRC := $(HERE)..
 # What 'all' knows how to generate.
-SOURCES := $(wildcard $(HERE)../cmumps-*.jsonld)
+SOURCES := $(wildcard $(HERE)../chcs-*.jsonld)
 PARTS := demographics medications diagnoses, procedures
-CMUMPSFILE := $(HERE)../../../../translate/util/cmumps-file.js
-CMUMPSPARTS := $(HERE)../../../../translate/util/cmumps-parts.js
+CHCSFILE := $(HERE)../../../../translate/util/chcs-file.js
+CHCSPARTS := $(HERE)../../../../translate/util/chcs-parts.js
 
 JSONLINT := jsonlint
 
@@ -27,46 +27,46 @@ DEFINITIONS_XML := $(HCLS_FHIR_RDF)/data/definitions.xml
 
 # Create .json file from a .jsonld file.
 %.json : $(SRC)/%.jsonld
-	$(CMUMPSFILE)  $< > $@
+	$(CHCSFILE)  $< > $@
 
 %.ttl : %.xml
 	java -classpath $(SAXONB) net.sf.saxon.Transform -xsl:$(TRANSFORM_XSL) -s:$< fhirdefs=$(DEFINITIONS_XML) > $@
 
 # Create the demographics part for a jsonld file.
 %-demographics.json : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --part=demographics $< > $@
+	$(CHCSFILE) --part=demographics $< > $@
 
 # Create the medications part for a jsonld file.
 %-medications.json : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --part=medications $< > $@
+	$(CHCSFILE) --part=medications $< > $@
 
 # Create the diagnoses part for a jsonld file.
 %-diagnoses.json : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --part=diagnoses $< > $@
+	$(CHCSFILE) --part=diagnoses $< > $@
 
 # Create the procedures part for a jsonld file.
 %-procedures.json : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --part=procedures $< > $@
+	$(CHCSFILE) --part=procedures $< > $@
 
 # Create .xml file from a .jsonld file.
 %.xml : $(SRC)/%.jsonld
-	$(CMUMPSFILE)  --output=xml $< > $@
+	$(CHCSFILE)  --output=xml $< > $@
 
 # create demographics xml
 %-demographics.xml : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --output=xml --part=demographics $< > $@
+	$(CHCSFILE) --output=xml --part=demographics $< > $@
 
 # create medications xml
 %-medications.xml : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --output=xml --part=medications $< > $@
+	$(CHCSFILE) --output=xml --part=medications $< > $@
 
 # create diagnoses xml
 %-diagnoses.xml : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --output=xml --part=diagnoses $< > $@
+	$(CHCSFILE) --output=xml --part=diagnoses $< > $@
 
 # create procedures xml
 %-procedures.xml : $(SRC)/%.jsonld
-	$(CMUMPSFILE) --output=xml --part=procedures $< > $@
+	$(CHCSFILE) --output=xml --part=procedures $< > $@
 
 # Generate all the local buildables based on SOURCES
 ALL := $(patsubst $(SRC)/%, %, $(SOURCES:.jsonld=.json) $(SOURCES:.jsonld=.ttl) $(SOURCES:.jsonld=-demographics.json) $(SOURCES:.jsonld=-medications.json) $(SOURCES:.jsonld=-diagnoses.json) $(SOURCES:.jsonld=-procedures.json) \
@@ -96,8 +96,8 @@ diff: all
 # Some example test cases available for fast access. Bash can complete the target names too.
 # Defining and calling functions in make: https://www.gnu.org/software/make/manual/html_node/Call-Function.html
 # Curl the LDR endpoint with a 
-CURLIT = curl -s 'http://10.255.241.50:8080/patient_graph?dataset=$(1)&patientid=$(2)&datatype=all'| $(CMUMPSFILE) /dev/stdin
-CURLPARTS = curl -s 'http://10.255.241.50:8080/patient_graph?dataset=$(1)&patientid=$(2)&datatype=all'| $(CMUMPSPARTS) /dev/stdin
+CURLIT = curl -s 'http://10.255.241.50:8080/patient_graph?dataset=$(1)&patientid=$(2)&datatype=all'| $(CHCSFILE) /dev/stdin
+CURLPARTS = curl -s 'http://10.255.241.50:8080/patient_graph?dataset=$(1)&patientid=$(2)&datatype=all'| $(CHCSPARTS) /dev/stdin
 
 PATIENTS := 922419 1000099 600357 839429 754427 100210 Patient-12042
 .PHONY: ldr $(PATIENTS)

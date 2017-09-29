@@ -24,7 +24,7 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
                                                 # implementations
     # fmp-2 - family member prefix
     fhir:extension {
-      fhir:url                        { fhir:value IRI %Map: { dem:constCmumpsFmp2 %} };
+      fhir:url                        { fhir:value IRI %Map: { dem:constChcsFmp2 %} };
       fhir:valueId                    { fhir:value xsd:string %Map: { dem:fmp_id %} };
       fhir:valueString                { fhir:value xsd:string %Map: { dem:fmp_label %} };
     }*;
@@ -34,7 +34,7 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
     # fhir:Patient.identifier @<Identifier>*;    # An identifier for this patient
     fhir:Patient.identifier  {              
       a [fhir:Identifier]?;
-      fhir:Identifier.system    { fhir:value IRI %Map:{ dem:constIdentifierSysCmumps %} };
+      fhir:Identifier.system    { fhir:value IRI %Map:{ dem:constIdentifierSysChcs %} };
       fhir:Identifier.value     { fhir:value xsd:string  %Map:{ dem:id %} };
     }*;
 

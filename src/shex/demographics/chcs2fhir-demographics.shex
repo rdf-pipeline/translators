@@ -24,7 +24,7 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
                                                 # implementations
     # fmp-2 - family member prefix
     fhir:extension {
-      fhir:url                        { fhir:value IRI %Map: { dem:constCmumpsFmp2 %} };
+      fhir:url                        { fhir:value IRI %Map: { dem:constChcsFmp2 %} };
       fhir:valueId                    { fhir:value xsd:string %Map: { dem:fmp_id %} };
       fhir:valueString                { fhir:value xsd:string %Map: { dem:fmp_label %} };
     }*;
@@ -34,7 +34,7 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
     # fhir:Patient.identifier @<Identifier>*;    # An identifier for this patient
     fhir:Patient.identifier  {              
       a [fhir:Identifier]?;
-      fhir:Identifier.system    { fhir:value IRI %Map:{ dem:constIdentifierSysCmumps %} };
+      fhir:Identifier.system    { fhir:value IRI %Map:{ dem:constIdentifierSysChcs %} };
       fhir:Identifier.value     { fhir:value xsd:string  %Map:{ dem:id %} };
     }*;
 
@@ -87,8 +87,8 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
       fhir:Patient.contact.relationship {
         fhir:Element.id { fhir:valid xsd:string %Map:{ dem:erelationship_id %} };
         fhir:CodeableConcept.coding {
-          fhir:Coding.system  { fhir:value xsd:string %Map:{ dem:constCmumpsCodingSys %} };
-          fhir:Coding.version { fhir:value xsd:string %Map:{ dem:constCmumpsVersion %} };
+          fhir:Coding.system  { fhir:value xsd:string %Map:{ dem:constChcsCodingSys %} };
+          fhir:Coding.version { fhir:value xsd:string %Map:{ dem:constChcsVersion %} };
           fhir:Coding.display { fhir:value xsd:string %Map:{ dem:erelationship_label %} };
         };
       };
@@ -103,7 +103,7 @@ start=@<Patient>                         # AND {fhir:nodeRole [fhir:treeRoot]}
         fhir:Address.type       { fhir:value xsd:string %Map:{ dem:constAddrPostal %} };
       };
       fhir:Patient.contact.telecom {
-        fhir:ContactPoint.system { fhir:value xsd:string %Map:{ dem:constCmumpsEphone %} };
+        fhir:ContactPoint.system { fhir:value xsd:string %Map:{ dem:constChcsEphone %} };
         fhir:ContactPoint.value { fhir:value xsd:string? %Map:{ dem:ephone %} };
       }*;
     }*;

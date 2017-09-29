@@ -1,4 +1,4 @@
-// cmumps2fhir_labs-mocha.js
+// chcs2fhir_labs-mocha.js
 
 var Chai = require('chai');
 var expect = Chai.expect;
@@ -6,12 +6,12 @@ var should = Chai.should();
 
 var Fs = require('fs');
 
-var Labs = require('../cmumps2fhir_labs'); 
-var Utils = require('../util/cmumps_utils');
+var Labs = require('../chcs2fhir_labs'); 
+var Utils = require('../util/chcs_utils');
 
-describe("cmumps2fhir_labs", function() {
+describe("chcs2fhir_labs", function() {
 
-    var patient7 = Utils.load(__dirname+'/../../../../data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+    var patient7 = Utils.load(__dirname+'/../../../../data/fake_chcs/patient-7/chcs-patient7.jsonld');
 
     it("should have expected exported interface", function() {
         Labs.should.be.an.object;
@@ -23,7 +23,7 @@ describe("cmumps2fhir_labs", function() {
     describe("#extractLabs", function() {
         it("should throw an error if there is no JSON-LD data passed in", function() {
             expect(Labs.extractLabs).to.throw(Error, 
-                "Cannot extract CMUMPS labs because patient data object is undefined!");
+                "Cannot extract CHCS labs because patient data object is undefined!");
         });
 
         it("should handle empty JSON-LD object gracefully", function() {
@@ -38,7 +38,7 @@ describe("cmumps2fhir_labs", function() {
             results.should.be.empty;
         });
 
-        it("should extract CMUMPS labs", function() {
+        it("should extract CHCS labs", function() {
             var results = Labs.extractLabs(patient7);
 
             results.should.be.an('array');
@@ -49,18 +49,18 @@ describe("cmumps2fhir_labs", function() {
                 '_id', 'micro_conversion_flag-63', 'label',
                 'clinical_chemistry-63', 'patient-63', 'type' ]);
             labResult.label.should.equal('BUNNY,BUGS');
-            labResult.type.should.equal('cmumpss:Lab_Result-63');
+            labResult.type.should.equal('chcss:Lab_Result-63');
 
-            var expected = Utils.load(__dirname+'/data/expectedCmumpsLabResult.json');
+            var expected = Utils.load(__dirname+'/data/expectedChcsLabResult.json');
             labResult.should.deep.equal(expected);
         }); 
     });
 
     describe("#translateLabs2Fhir", function() {
 
-        it("should translate CMUMPS labs to FHIR", function() {
-            var cmumpsLabs = Labs.extractLabs(patient7);
-            var fhirResults = Labs.translateLabsFhir(cmumpsLabs[0]);
+        it("should translate CHCS labs to FHIR", function() {
+            var chcsLabs = Labs.extractLabs(patient7);
+            var fhirResults = Labs.translateLabsFhir(chcsLabs[0]);
             var expected = Utils.load(__dirname+'/data/expectedFhirDiagOrder.json');
             fhirResults.should.deep.equal(expected);
         });

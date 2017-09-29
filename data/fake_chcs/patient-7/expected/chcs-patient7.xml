@@ -9,8 +9,8 @@
           <use value="usual"/>
           <type>
             <coding>
-              <code value="cmumpss"/>
-              <display value="cmumpss"/>
+              <code value="chcss"/>
+              <display value="chcss"/>
             </coding>
             <text value="777777777"/>
           </type>
@@ -45,15 +45,15 @@
           <use value="usual"/>
           <type>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="Prescription"/>
               <userSelected value="false"/>
             </coding>
             <text value="Prescription"/>
           </type>
-          <system value="cmumps"/>
+          <system value="chcs"/>
           <value value="52-40863"/>
         </identifier>
         <status value="completed"/>
@@ -72,20 +72,20 @@
         <quantity>
           <value value="120"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </quantity>
         <daysSupply>
           <value value="120"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </daysSupply>
         <medicationCodeableConcept>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="PAINKILLER 400MG TAB"/>
             <userSelected value="false"/>
           </coding>
@@ -108,9 +108,9 @@
             </repeat>
             <code>
               <coding>
-                <system value="cmumps"/>
+                <system value="chcs"/>
                 <version value="0.0.1"/>
-                <code value="cmumps"/>
+                <code value="chcs"/>
                 <display value="T1 TAB Q1D #120 RF0"/>
                 <userSelected value="false"/>
               </coding>
@@ -128,15 +128,15 @@
           <use value="usual"/>
           <type>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="Prescription"/>
               <userSelected value="false"/>
             </coding>
             <text value="Prescription"/>
           </type>
-          <system value="cmumps"/>
+          <system value="chcs"/>
           <value value="52-7810413"/>
         </identifier>
         <status value="completed"/>
@@ -155,20 +155,20 @@
         <quantity>
           <value value="60"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </quantity>
         <daysSupply>
           <value value="30"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </daysSupply>
         <medicationCodeableConcept>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="OYS SHL CALCIUM 500MG + VIT D 200IU"/>
             <userSelected value="false"/>
           </coding>
@@ -185,9 +185,9 @@
           <text value="T1 TB PO BID #60 RF3"/>
           <additionalInstructions>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="TAKE ONE TABLET BY MOUTH~TWICE A DAY  ~"/>
               <userSelected value="false"/>
             </coding>
@@ -201,9 +201,9 @@
             </repeat>
             <code>
               <coding>
-                <system value="cmumps"/>
+                <system value="chcs"/>
                 <version value="0.0.1"/>
-                <code value="cmumps"/>
+                <code value="chcs"/>
                 <display value="T1 TB PO BID #60 RF3"/>
                 <userSelected value="false"/>
               </coding>
@@ -221,15 +221,15 @@
           <use value="usual"/>
           <type>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="Prescription"/>
               <userSelected value="false"/>
             </coding>
             <text value="Prescription"/>
           </type>
-          <system value="cmumps"/>
+          <system value="chcs"/>
           <value value="52-7810414"/>
         </identifier>
         <status value="completed"/>
@@ -248,20 +248,20 @@
         <quantity>
           <value value="169"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </quantity>
         <daysSupply>
           <value value="84"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </daysSupply>
         <medicationCodeableConcept>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="RECLIPSEN TAB 28-DAY (DESOGEN EQ)"/>
             <userSelected value="false"/>
           </coding>
@@ -278,9 +278,9 @@
           <text value="T1 TAB PO QD #169 RF0"/>
           <additionalInstructions>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="TAKE ONE TABLET BY MOUTH~EVERY DAY  ~"/>
               <userSelected value="false"/>
             </coding>
@@ -290,9 +290,9 @@
             <event value="1990-01-01T00:00:00"/>
             <code>
               <coding>
-                <system value="cmumps"/>
+                <system value="chcs"/>
                 <version value="0.0.1"/>
-                <code value="cmumps"/>
+                <code value="chcs"/>
                 <display value="T1 TAB PO QD #169 RF0"/>
                 <userSelected value="false"/>
               </coding>
@@ -310,15 +310,15 @@
           <use value="usual"/>
           <type>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="Prescription"/>
               <userSelected value="false"/>
             </coding>
             <text value="Prescription"/>
           </type>
-          <system value="cmumps"/>
+          <system value="chcs"/>
           <value value="52-40863"/>
         </identifier>
         <status value="completed"/>
@@ -337,20 +337,20 @@
         <quantity>
           <value value="120"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </quantity>
         <daysSupply>
           <value value="120"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </daysSupply>
         <medicationCodeableConcept>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="PAINKILLER 400MG TAB"/>
             <userSelected value="false"/>
           </coding>
@@ -373,9 +373,9 @@
             </repeat>
             <code>
               <coding>
-                <system value="cmumps"/>
+                <system value="chcs"/>
                 <version value="0.0.1"/>
-                <code value="cmumps"/>
+                <code value="chcs"/>
                 <display value="T1 TAB Q1D #120 RF0"/>
                 <userSelected value="false"/>
               </coding>
@@ -393,15 +393,15 @@
           <use value="usual"/>
           <type>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="Prescription"/>
               <userSelected value="false"/>
             </coding>
             <text value="Prescription"/>
           </type>
-          <system value="cmumps"/>
+          <system value="chcs"/>
           <value value="52-7810413"/>
         </identifier>
         <status value="completed"/>
@@ -420,20 +420,20 @@
         <quantity>
           <value value="60"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </quantity>
         <daysSupply>
           <value value="30"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </daysSupply>
         <medicationCodeableConcept>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="OYS SHL CALCIUM 500MG + VIT D 200IU"/>
             <userSelected value="false"/>
           </coding>
@@ -450,9 +450,9 @@
           <text value="T1 TB PO BID #60 RF3"/>
           <additionalInstructions>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="TAKE ONE TABLET BY MOUTH~TWICE A DAY  ~"/>
               <userSelected value="false"/>
             </coding>
@@ -466,9 +466,9 @@
             </repeat>
             <code>
               <coding>
-                <system value="cmumps"/>
+                <system value="chcs"/>
                 <version value="0.0.1"/>
-                <code value="cmumps"/>
+                <code value="chcs"/>
                 <display value="T1 TB PO BID #60 RF3"/>
                 <userSelected value="false"/>
               </coding>
@@ -486,15 +486,15 @@
           <use value="usual"/>
           <type>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="Prescription"/>
               <userSelected value="false"/>
             </coding>
             <text value="Prescription"/>
           </type>
-          <system value="cmumps"/>
+          <system value="chcs"/>
           <value value="52-7810414"/>
         </identifier>
         <status value="completed"/>
@@ -513,20 +513,20 @@
         <quantity>
           <value value="169"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </quantity>
         <daysSupply>
           <value value="84"/>
           <unit value="unsupplied"/>
-          <system value="cmumps"/>
-          <code value="cmumps"/>
+          <system value="chcs"/>
+          <code value="chcs"/>
         </daysSupply>
         <medicationCodeableConcept>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="RECLIPSEN TAB 28-DAY (DESOGEN EQ)"/>
             <userSelected value="false"/>
           </coding>
@@ -543,9 +543,9 @@
           <text value="T1 TAB PO QD #169 RF0"/>
           <additionalInstructions>
             <coding>
-              <system value="cmumps"/>
+              <system value="chcs"/>
               <version value="0.0.1"/>
-              <code value="cmumps"/>
+              <code value="chcs"/>
               <display value="TAKE ONE TABLET BY MOUTH~EVERY DAY  ~"/>
               <userSelected value="false"/>
             </coding>
@@ -555,9 +555,9 @@
             <event value="1990-01-01T00:00:00"/>
             <code>
               <coding>
-                <system value="cmumps"/>
+                <system value="chcs"/>
                 <version value="0.0.1"/>
-                <code value="cmumps"/>
+                <code value="chcs"/>
                 <display value="T1 TAB PO QD #169 RF0"/>
                 <userSelected value="false"/>
               </coding>
@@ -578,9 +578,9 @@
         </category>
         <code>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="V70.5 H"/>
             <userSelected value="false"/>
           </coding>
@@ -593,9 +593,9 @@
         <conclusion value="V70.5 H"/>
         <codedDiagnosis>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="V70.5 H"/>
             <userSelected value="false"/>
           </coding>
@@ -615,9 +615,9 @@
         </category>
         <code>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="V72.12"/>
             <userSelected value="false"/>
           </coding>
@@ -630,9 +630,9 @@
         <conclusion value="V72.12"/>
         <codedDiagnosis>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="V72.12"/>
             <userSelected value="false"/>
           </coding>
@@ -652,9 +652,9 @@
         </category>
         <code>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="V70.5 2"/>
             <userSelected value="false"/>
           </coding>
@@ -667,9 +667,9 @@
         <conclusion value="V70.5 2"/>
         <codedDiagnosis>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="V70.5 2"/>
             <userSelected value="false"/>
           </coding>
@@ -686,8 +686,8 @@
           <use value="usual"/>
           <type>
             <coding>
-              <code value="cmumpss"/>
-              <display value="cmumpss"/>
+              <code value="chcss"/>
+              <display value="chcss"/>
             </coding>
             <text value="1074046"/>
           </type>
@@ -700,9 +700,9 @@
         <status value="completed"/>
         <category>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="HDDConcept-1450368"/>
             <userSelected value="false"/>
           </coding>
@@ -710,9 +710,9 @@
         </category>
         <code>
           <coding>
-            <system value="cmumps"/>
+            <system value="chcs"/>
             <version value="0.0.1"/>
-            <code value="cmumps"/>
+            <code value="chcs"/>
             <display value="HDDConcept-1450368"/>
             <userSelected value="false"/>
           </coding>

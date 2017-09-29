@@ -1,30 +1,30 @@
 /**
- * Translate entire cmumps Procedure object at fhir Procedure resource.
+ * Translate entire chcs Procedure object at fhir Procedure resource.
  */
 
 var prefix = '../translate/';
-var cmumps = require(prefix + 'cmumps');
+var chcs = require(prefix + 'chcs');
 // Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
+var pattern = chcs.chcssJsonPattern;
+var chcss = chcs.chcss;
 var fhir = require(prefix + 'fhir');
 var _ = require('underscore');
 var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
-var fdt = require(prefix + 'cmumps2fhir_datatypes');
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
+var fdt = require(prefix + 'chcs2fhir_datatypes');
+var chcs_utils = require(prefix + 'util/chcs_utils');
 var Av = require('autovivify');
 
 
 /**
- * Translate a cmumpsPrescriptionObject into a fhir_MedicationDispense.
- * @param {object} cmumpsPrescriptionObject -- input object
+ * Translate a chcsPrescriptionObject into a fhir_MedicationDispense.
+ * @param {object} chcsPrescriptionObject -- input object
  * @param {{policy: boolean, warnings: boolean, eat: boolean}} [_options={policy: false, warnings: false, eat: true}]
  * @returns {object} -- fhir translation, a MedicationDispense resource
  * @see {@link http://hl7-fhir.github.io/procedure.html}
  */
-function translateProceduresFhir(cmumpsProcedureObjectModified, _options, prefix) {
+function translateProceduresFhir(chcsProcedureObjectModified, _options, prefix) {
     // Assign the default options, then override what the caller wants. At the end you have the right options.
     var options = {
         participants: false,
@@ -41,11 +41,11 @@ function translateProceduresFhir(cmumpsProcedureObjectModified, _options, prefix
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumpsProcedureObject. The fetcher will get data values from
-    // input cmumpsProcedureObject, remembering those that actually have values in list participating_properties.
-    // var fetch1 = fdt.peek(cmumpsProcedureObjectModified, participatingProperties); // returns function fetch1(json_pattern[, transformation])
-    var peek = fdt.peek(cmumpsProcedureObjectModified, participatingProperties); // returns function fetch1(json_pattern[, transformation])
-    var eat = fdt.eat(cmumpsProcedureObjectModified, participatingProperties); // returns function fetch1(json_pattern[, transformation])
+    // Create a fetcher for chcsProcedureObject. The fetcher will get data values from
+    // input chcsProcedureObject, remembering those that actually have values in list participating_properties.
+    // var fetch1 = fdt.peek(chcsProcedureObjectModified, participatingProperties); // returns function fetch1(json_pattern[, transformation])
+    var peek = fdt.peek(chcsProcedureObjectModified, participatingProperties); // returns function fetch1(json_pattern[, transformation])
+    var eat = fdt.eat(chcsProcedureObjectModified, participatingProperties); // returns function fetch1(json_pattern[, transformation])
     eat('$.type');
 
     // http://hl7-fhir.github.io/procedure.html:
@@ -56,7 +56,7 @@ function translateProceduresFhir(cmumpsProcedureObjectModified, _options, prefix
     // by the patient themselves."
 
     var resourceType = 'Procedure';
-    // TODO mike@carif.io: the 'Patient-' prefix breaks with the cmumps naming conventions. Check this.
+    // TODO mike@carif.io: the 'Patient-' prefix breaks with the chcs naming conventions. Check this.
     var thePatient = eat('$.patient.id', function(p) { return '2-' + p.substring('Patient-'.length); });
     var theProcedure = eat('$._id', function(p) { return p.substring('Procedure-'.length); });
     var theLabel = eat('$.patient.label');
@@ -110,16 +110,16 @@ function translateProceduresFhir(cmumpsProcedureObjectModified, _options, prefix
     // var used = new Av();
     // participatingProperties.forEach(function (p) {
     //     var prop = p.substring(1);
-    //     eval('used' + prop + '= cmumpsProcedureObjectModified' + prop);
+    //     eval('used' + prop + '= chcsProcedureObjectModified' + prop);
     // });
     //
     // if (options.eat) {
     //     participatingProperties.forEach(function(p){
     //         var prop = p.substring(1);
-    //         eval('delete cmumpsProcedureObjectModified' + prop);
+    //         eval('delete chcsProcedureObjectModified' + prop);
     //     });
     // }
-    // var object_used = cmumps_utils.devivify(used);
+    // var object_used = chcs_utils.devivify(used);
     //
     return {
         // used: object_used,

@@ -1,28 +1,28 @@
 /**
- * Translate cmumps Prescription objects to fhir MedicationDispense resources.
+ * Translate chcs Prescription objects to fhir MedicationDispense resources.
  */
 
 const _ = require('underscore');
 
-const Fdt = require('./cmumps2fhir_datatypes');
+const Fdt = require('./chcs2fhir_datatypes');
 const Fhir = require('./fhir');
 
 const RESOURCE_TYPE =  'MedicationDispense';
 
 /**
- * Extracts CMUMPS Patient prescriptions from a CMUMPS JSON-LD object
+ * Extracts CHCS Patient prescriptions from a CHCS JSON-LD object
  *
- * @param cmumpsJsonldObject a CMUMPS JSON-LD object
+ * @param chcsJsonldObject a CHCS JSON-LD object
  *
- * @return an array of CMUMPS patient prescriptions if any exist
+ * @return an array of CHCS patient prescriptions if any exist
  * @exception if input JSON-LD object is undefined
  */
-function extractPrescriptions(cmumpsJsonldObject) {
-    if (_.isUndefined(cmumpsJsonldObject)) {
-        throw Error("Cannot extract CMUMPS prescriptions because patient data object is undefined!");
+function extractPrescriptions(chcsJsonldObject) {
+    if (_.isUndefined(chcsJsonldObject)) {
+        throw Error("Cannot extract CHCS prescriptions because patient data object is undefined!");
     }
 
-    return _.filter(cmumpsJsonldObject['@graph'],
+    return _.filter(chcsJsonldObject['@graph'],
         function(json) {
             return /c(hc|mump)ss:Prescription-52/.test(json.type);
     });
@@ -30,26 +30,26 @@ function extractPrescriptions(cmumpsJsonldObject) {
 
 /**
  * Given a JSON LD input object <code>cmumptsJsonldObject</code>, remove the prescriptions from @graph of that object.
- * MODIFIES cmumpsJsonldObject.
+ * MODIFIES chcsJsonldObject.
  *
- * @param cmumpsJsonldObject
+ * @param chcsJsonldObject
  * @return {Array[object]} -- the items removed
  */
-function removePrescriptions(cmumpsJsonldObject) {
-    cmumpsJsonldObject['@graph'] =  _.filter(cmumpsJsonldObject['@graph'], function(json) {
+function removePrescriptions(chcsJsonldObject) {
+    chcsJsonldObject['@graph'] =  _.filter(chcsJsonldObject['@graph'], function(json) {
             return !/c(hc|mump)ss:Prescription-52/.test(json.type);
     });
-    return cmumpsJsonldObject;
+    return chcsJsonldObject;
 }
 
 /**
  *
- * @param cmumpsPrescriptionObject -- a cmumps Patient object
+ * @param chcsPrescriptionObject -- a chcs Patient object
  * @returns {Object} -- a FHIR translation
  */
-function simpleTranslate(cmumpsPrescriptionObject) {
-    // The get function knows how to get values from cmumpsPatientObject using JSONPath.
-    var get = Fdt.makeGetter(cmumpsPrescriptionObject);
+function simpleTranslate(chcsPrescriptionObject) {
+    // The get function knows how to get values from chcsPatientObject using JSONPath.
+    var get = Fdt.makeGetter(chcsPrescriptionObject);
 
     // http://hl7-fhir.github.io/medication.html:
     // "This resource is primarily used for the identification and definition of a medication. It covers the ingredients
@@ -114,25 +114,25 @@ function simpleTranslate(cmumpsPrescriptionObject) {
 }
 
 /**
- * Translate a cmumpsPrescriptionObject into a fhir_MedicationDispense.
- * @param {object} cmumpsPrescriptionObject -- input object
+ * Translate a chcsPrescriptionObject into a fhir_MedicationDispense.
+ * @param {object} chcsPrescriptionObject -- input object
  * @returns {object} -- fhir translation, a MedicationDispense resource
  * @see {http://hl7-fhir.github.io/medicationdispense.html}
  *
  *  Implementation notes:
  *
- *  - db.schema.find_one({fmDD:'fmdd:52'}) will find the mongodb document that enumerates the cmumps fields available.
+ *  - db.schema.find_one({fmDD:'fmdd:52'}) will find the mongodb document that enumerates the chcs fields available.
  *  - db['52'].find({}) will find instances of Prescription-52.
  */
 
-function translatePrescriptionsFhir(cmumpsPrescriptionObject, options) {
+function translatePrescriptionsFhir(chcsPrescriptionObject, options) {
     var options = options || {participants: false, warnings: false};
     var participatingProperties = []; // no participants yet
     var warnings = []; // no warnings yet
 
-    // Create a fetcher for cmumpsPrescriptionObject. The fetcher will get data values from
-    // input cmumpsPrescriptionObject, remembering those that actually have values in list participatingProperties.
-    var fetch1 = Fdt.makeJsonFetcher1(cmumpsPrescriptionObject, participatingProperties);
+    // Create a fetcher for chcsPrescriptionObject. The fetcher will get data values from
+    // input chcsPrescriptionObject, remembering those that actually have values in list participatingProperties.
+    var fetch1 = Fdt.makeJsonFetcher1(chcsPrescriptionObject, participatingProperties);
     // fetch1(json_pattern[, transformation])
 
     // http://hl7-fhir.github.io/medication.html:
@@ -144,7 +144,7 @@ function translatePrescriptionsFhir(cmumpsPrescriptionObject, options) {
     // description of the medication product (supply) provided and the instructions for administering the medication.
     // The medication dispense is the result of a pharmacy system responding to a medication order."
 
-    var fhirMedication = simpleTranslate(cmumpsPrescriptionObject);
+    var fhirMedication = simpleTranslate(chcsPrescriptionObject);
 
     // addParticipants doesn't create a FHIR extension yet.
     if (options.participants) Fhir.addParticipants(fhirMedication, participatingProperties);

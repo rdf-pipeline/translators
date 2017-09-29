@@ -1,40 +1,40 @@
 /**
- * Translate cmumps Prescription objects to fhir MedicationDispense resources.
+ * Translate chcs Prescription objects to fhir MedicationDispense resources.
  */
 var prefix = '../translate/';
-var cmumps = require(prefix + 'cmumps');
+var chcs = require(prefix + 'chcs');
 // Abbreviations to shorten functions
-var pattern = cmumps.cmumpssJsonPattern;
-var cmumpss = cmumps.cmumpss;
+var pattern = chcs.chcssJsonPattern;
+var chcss = chcs.chcss;
 var fhir = require(prefix + 'fhir');
 var _ = require('underscore');
 var JSONPath = require('jsonpath-plus');
 var format = require('string-format');
 var assert = require('assert');
-var fdt = require(prefix + 'cmumps2fhir_datatypes');
+var fdt = require(prefix + 'chcs2fhir_datatypes');
 // https://www.npmjs.com/package/node-html-encoder
 var Encoder = require('node-html-encoder').Encoder;
 var encoder = new Encoder('entity');
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
+var chcs_utils = require(prefix + 'util/chcs_utils');
 var Av = require('autovivify');
 
 
 
 
 /**
- * Translate a cmumpsPrescriptionObject into a fhir_MedicationDispense.
- * @param {object} cmumpsPrescriptionObjectModified -- input object
+ * Translate a chcsPrescriptionObject into a fhir_MedicationDispense.
+ * @param {object} chcsPrescriptionObjectModified -- input object
  * @param {{policy: boolean, warnings: boolean, eat: boolean}} [_options={policy: false, warnings: false, eat: true}]
   * @returns {object} -- fhir translation, a MedicationDispense resource
  * @see {http://hl7-fhir.github.io/medicationdispense.html}
  *
  *  Implementation notes:
  *
- *  - db.schema.find_one({fmDD:'fmdd:52'}) will find the mongodb document that enumerates the cmumps fields available.
+ *  - db.schema.find_one({fmDD:'fmdd:52'}) will find the mongodb document that enumerates the chcs fields available.
  *  - db['52'].find({}) will find instances of Prescription-52.
  */
 
-function translatePrescriptionsFhir(cmumpsPrescriptionObjectModified, _options, prefix) {
+function translatePrescriptionsFhir(chcsPrescriptionObjectModified, _options, prefix) {
     // Assign the default options, then override what the caller wants. At the end you have the right options.
     var options = {
         warnings: false, 
@@ -48,11 +48,11 @@ function translatePrescriptionsFhir(cmumpsPrescriptionObjectModified, _options, 
 
     // var participatingProperties = ["$['type']"]; // no participants yet
     var participatingProperties = []; // no participants yet
-    // Create a fetcher for cmumpsPrescriptionObject. The fetcher will get data values from
-    // input cmumpsPrescriptionObject, remembering those that actually have values in list participatingProperties.
-    // var fetch1 = fdt.peek(cmumpsPrescriptionObjectModified, participatingProperties); // => fetch1(json_pattern[, transformation])
-    var peek = fdt.peek(cmumpsPrescriptionObjectModified, participatingProperties); // => fetch1(json_pattern[, transformation])
-    var eat = fdt.eat(cmumpsPrescriptionObjectModified, participatingProperties); // => fetch1(json_pattern[, transformation])
+    // Create a fetcher for chcsPrescriptionObject. The fetcher will get data values from
+    // input chcsPrescriptionObject, remembering those that actually have values in list participatingProperties.
+    // var fetch1 = fdt.peek(chcsPrescriptionObjectModified, participatingProperties); // => fetch1(json_pattern[, transformation])
+    var peek = fdt.peek(chcsPrescriptionObjectModified, participatingProperties); // => fetch1(json_pattern[, transformation])
+    var eat = fdt.eat(chcsPrescriptionObjectModified, participatingProperties); // => fetch1(json_pattern[, transformation])
 
     eat('$.type');
     var warnings = []; // no warnings yet
@@ -135,14 +135,14 @@ function translatePrescriptionsFhir(cmumpsPrescriptionObjectModified, _options, 
     // var used = new Av(); // {};
     // participatingProperties.forEach(function (p) {
     //     var prop = p.substring(1);
-    //     eval('used' + prop + '= cmumpsPrescriptionObjectModified' + prop);
+    //     eval('used' + prop + '= chcsPrescriptionObjectModified' + prop);
     // });
-    // var object_used = cmumps_utils.devivify(used);
+    // var object_used = chcs_utils.devivify(used);
     //
     // if (options.eat) {
     //     participatingProperties.forEach(function(p){
     //         var prop = p.substring(1);
-    //         eval('delete cmumpsPrescriptionObjectModified' + prop);
+    //         eval('delete chcsPrescriptionObjectModified' + prop);
     //     });
     // }
 
