@@ -1,0 +1,42 @@
+Script started on Fri Sep 29 11:36:13 2017
+DISABLED: . /home/dbooth/rdf-pipeline/trunk/set_env.sh
+]0;dbooth@dbooth-t470p: ~/rdf-pipeline/noflo/translatorsdbooth@dbooth-t470p:~/rdf-pipeline/noflo/translators$ mocha test
+
+  [90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[93m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[93m․[0m[90m․[0m[90m․[0m[90m․[0m[93m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[31m․[0m[90m․[0m[90m․[0m[93m․[0m[93m․[0m[90m․[0m[93m․[0m[93m․[0m[90m․[0m[90m․[0m[31m․[0m[90m․[0m[31m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[33m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[90m․[0m[93m․[0m[93m․[0m[90m․[0m[90m․[0m[93m․[0m[93m․[0m
+  [93m․[0m[93m․[0m[93m․[0m[93m․[0m[93m․[0m[93m․[0m[93m․[0m[93m․[0m[93m․[0m[93m․[0m
+
+[92m [0m[32m 66 passing[0m[90m (21s)[0m
+[31m  3 failing[0m
+
+[0m  1) roundtrip-translation --jsonvars option should execute a round trip translation using the json variables in translation:
+[0m[31m     Uncaught AssertionError: expected '\\nChecking source file\nExecuting /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.shex" -l "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld" -s "http://hokukahu.com/patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val"\n\u001b[01;32mValidation of /home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld completed successfully.\nResults are available in /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val.\n\u001b[0m\nExecuting cat "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val" | /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/extensions/shex-map/bin/materialize -t "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs2fhir-patient7.shex" --jsonvars "/home/dbooth/rdf-pipeline/noflo/translators/test/data/patient7-vars.json" --root "urn:local:patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl"\n\u001b[01;32mMaterialization of /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl completed successfully.\n\u001b[0m\nExecuting /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/fhir2chcs-patient7.shex" -d "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/back-chcs-patient7.val"\n\u001b[0m\n' to include 'back-chcs2fhir-patient7.ttl completed successfully.'[0m[90m
+      at /home/dbooth/rdf-pipeline/noflo/translators/test/roundtrip-translation-test.js:423:29
+      at ChildProcess.exithandler (child_process.js:220:5)
+      at emitTwo (events.js:87:13)
+      at ChildProcess.emit (events.js:172:7)
+      at maybeClose (internal/child_process.js:821:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+[0m
+[0m  2) roundtrip-translation --source  option should execute a round trip translation using the specified source in translation:
+[0m[31m     Uncaught AssertionError: expected 'Executing /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/other-chcs-patient7.shex" -l "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld" -s "http://hokukahu.com/patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val"\n\u001b[01;32mValidation of /home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld completed successfully.\nResults are available in /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val.\n\u001b[0m\nExecuting cat "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val" | /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/extensions/shex-map/bin/materialize -t "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs2fhir-patient7.shex" --jsonvars "/home/dbooth/rdf-pipeline/noflo/translators/test/data/patient7-vars.json" --root "urn:local:patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl"\n\u001b[01;32mMaterialization of /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl completed successfully.\n\u001b[0m\nExecuting /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/fhir2chcs-patient7.shex" -d "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/back-chcs-patient7.val"\n\u001b[0m\n' to include 'back-chcs2fhir-patient7.ttl completed successfully.'[0m[90m
+      at /home/dbooth/rdf-pipeline/noflo/translators/test/roundtrip-translation-test.js:589:29
+      at ChildProcess.exithandler (child_process.js:220:5)
+      at emitTwo (events.js:87:13)
+      at ChildProcess.emit (events.js:172:7)
+      at maybeClose (internal/child_process.js:821:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+[0m
+[0m  3) roundtrip-translation --verbose  option should output hidden warning messages with verbose flag:
+[0m[31m     Uncaught AssertionError: expected '\u001b[1;33mWARN: No RDF root specified; defaulting to urn:local:patient-1.\n\u001b[1;33mWARN: /tmp/test0.31787509587593377 exists - removing it and creating a fresh /tmp/test0.31787509587593377 directory\n\u001b[1;31mBack validation failed; /tmp/test0.31787509587593377/chcs2fhir-patient7.ttl contains a failure or errors!\ngrep -i "Failure\\|Error" "/tmp/test0.31787509587593377/back-chcs-patient7.val" results: "type": "Failure", "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [\n' to include 'does not exist - generating it from'[0m[90m
+      at /home/dbooth/rdf-pipeline/noflo/translators/test/roundtrip-translation-test.js:648:29
+      at ChildProcess.exithandler (child_process.js:220:5)
+      at emitTwo (events.js:87:13)
+      at ChildProcess.emit (events.js:172:7)
+      at maybeClose (internal/child_process.js:821:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+[0m
+
+
+]0;dbooth@dbooth-t470p: ~/rdf-pipeline/noflo/translatorsdbooth@dbooth-t470p:~/rdf-pipeline/noflo/translators$ exit
+
+Script done on Fri Sep 29 11:37:09 2017
