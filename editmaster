@@ -1,11 +1,10 @@
 #! /usr/bin/perl -w
 
-# Change github paths temporarily from master branch to cmumps-to-chcs.
-# They will have to be changed back to master after that branch
-# is merged into master.
+# Change github paths from cmumps-to-chcs back to master before merging
+# the cmumps-to-chcs branch back into master.
 
 foreach my $f ( @ARGV ) {
   print "$f\n";
-  `sed -i 's/rdf-pipeline\\/translators\\/master/rdf-pipeline\\/translators\\/cmumps-to-chcs/g; s/rdf-pipeline\\/translators\\/blob\\/master/rdf-pipeline\\/translators\\/blob\\/cmumps-to-chcs/g; s/rdf-pipeline\\/translators\\/tree\\/master/rdf-pipeline\\/translators\\/tree\\/cmumps-to-chcs/g' $f`;
+  `sed -i 's/cmumps-to-chcs/master/g' $f`;
   }
 

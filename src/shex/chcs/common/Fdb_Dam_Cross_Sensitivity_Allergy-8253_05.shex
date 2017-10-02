@@ -1,7 +1,7 @@
 # This schema contains the definition of DAM Cross Sensitivity Allergy Codes.
 #
 # CHCS schema documentation:
-#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/cmumps-to-chcs/data/schema/chcs-nc/Fdb_Dam_Cross_Sensitivity_Allergy-8253_05.htm
+#    http://htmlpreview.github.com/?https://github.com/rdf-pipeline/translators/blob/master/data/schema/chcs-nc/Fdb_Dam_Cross_Sensitivity_Allergy-8253_05.htm
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX Map: <http://shex.io/extensions/Map/#>

@@ -5,4 +5,6 @@ they did before, even though 3 fail), EXCEPT that some embedded github URLs
 need to be renamed to point to the master branch instead of this
 branch.
 
+UPDATE: With this checkin, embedded github URLs have been renamed back
+from cmumps-to-chcs to master.
 
