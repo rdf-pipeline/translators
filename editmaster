@@ -1,6 +1,8 @@
 #! /usr/bin/perl -w
 
-# Change github paths temporarily from master branch to cmumps-to-chcs 
+# Change github paths temporarily from master branch to cmumps-to-chcs.
+# They will have to be changed back to master after that branch
+# is merged into master.
 
 foreach my $f ( @ARGV ) {
   print "$f\n";
