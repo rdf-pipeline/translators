@@ -15,18 +15,18 @@ var os = require('os');
 
 var commonTest = require('./common-test');
 
-var frameFile = __dirname + "/data/chcs.frame";
+var frameFile = __dirname + "/data/cmumps.frame";
 var roundtripPath = __dirname + '/../bin/roundtrip-translation.sh';
 
-var simpleJsonldPath= __dirname + "/data/simple-chcs.jsonld";
-var simpleShExPath= __dirname + "/data/simple-chcs.shex";
-var simpleChcs2FhirPath= __dirname + "/data/simple-chcs2fhir.shex";
-var simpleFhir2ChcsPath= __dirname + "/data/simple-fhir2chcs.shex";
+var simpleJsonldPath= __dirname + "/data/simple-cmumps.jsonld";
+var simpleShExPath= __dirname + "/data/simple-cmumps.shex";
+var simpleCmumps2FhirPath= __dirname + "/data/simple-cmumps2fhir.shex";
+var simpleFhir2CmumpsPath= __dirname + "/data/simple-fhir2cmumps.shex";
 
-var jsonldPath= __dirname + "/data/chcs-patient7.jsonld";
-var otherShExPath= __dirname + "/data/other-chcs-patient7.shex";
-var chcs2FhirPath= __dirname + "/data/chcs2fhir-patient7.shex";
-var fhir2ChcsPath= __dirname + "/data/fhir2chcs-patient7.shex";
+var jsonldPath= __dirname + "/data/cmumps-patient7.jsonld";
+var otherShExPath= __dirname + "/data/other-cmumps-patient7.shex";
+var cmumps2FhirPath= __dirname + "/data/cmumps2fhir-patient7.shex";
+var fhir2CmumpsPath= __dirname + "/data/fhir2cmumps-patient7.shex";
 var varsPath = __dirname + "/data/patient7-vars.json";
 
 var testWorkDir = __dirname + "/work";
@@ -125,7 +125,7 @@ describe("roundtrip-translation", function() {
           var cmdline = roundtripPath + " -d " + simpleShExPath;
           exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
-              stderr.should.contain("simple-chcs.shex does not have the expected filename extension - expected jsonld!");
+              stderr.should.contain("simple-cmumps.shex does not have the expected filename extension - expected jsonld!");
               done();
           });
       });
@@ -179,7 +179,7 @@ describe("roundtrip-translation", function() {
           var cmdline = roundtripPath + " -t " + simpleJsonldPath + " -d " + simpleJsonldPath;
           exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
-              stderr.should.contain("simple-chcs.jsonld does not have the expected filename extension - expected shex!");
+              stderr.should.contain("simple-cmumps.jsonld does not have the expected filename extension - expected shex!");
               done();
           });
       });
@@ -191,27 +191,27 @@ describe("roundtrip-translation", function() {
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
            // in the user's current working directory.  This ensures we write to test/work instead.
           var cmdline = roundtripPath + " --data " + simpleJsonldPath +
-                        " --target " + simpleChcs2FhirPath + " -o " + testWorkDir;
+                        " --target " + simpleCmumps2FhirPath + " -o " + testWorkDir;
           exec(cmdline, function (error, stdout, stderr) {
 
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
-              stdout.should.contain("simple-chcs.jsonld completed successfully.");
-              stdout.should.contain("simple-chcs2fhir.ttl completed successfully.");
-              stdout.should.contain("back-simple-chcs2fhir.ttl completed successfully.");
+              stdout.should.contain("simple-cmumps.jsonld completed successfully.");
+              stdout.should.contain("simple-cmumps2fhir.ttl completed successfully.");
+              stdout.should.contain("back-simple-cmumps2fhir.ttl completed successfully.");
               stdout.should.contain('json-diff'); 
 
               // Check the correct files are there.
-              fs.existsSync(testWorkDir+'/back-simple-chcs.shex').should.be.true;
-              fs.existsSync(testWorkDir+'/back-simple-chcs2fhir.shex').should.be.true;
+              fs.existsSync(testWorkDir+'/back-simple-cmumps.shex').should.be.true;
+              fs.existsSync(testWorkDir+'/back-simple-cmumps2fhir.shex').should.be.true;
 
-              verifyValFile(testWorkDir + '/simple-chcs.val');
-              verifyTtlFile(testWorkDir + '/simple-chcs2fhir.ttl');
+              verifyValFile(testWorkDir + '/simple-cmumps.val');
+              verifyTtlFile(testWorkDir + '/simple-cmumps2fhir.ttl');
 
-              verifyValFile(testWorkDir + '/back-simple-chcs.val');
-              verifyTtlFile(testWorkDir + '/back-simple-chcs2fhir.ttl');
+              verifyValFile(testWorkDir + '/back-simple-cmumps.val');
+              verifyTtlFile(testWorkDir + '/back-simple-cmumps2fhir.ttl');
 
-              verifyJsonFile(testWorkDir + '/back-simple-chcs.json');
+              verifyJsonFile(testWorkDir + '/back-simple-cmumps.json');
 
               fs.existsSync(testWorkDir+'/diff.out').should.be.true;
 
@@ -227,7 +227,7 @@ describe("roundtrip-translation", function() {
   
       it("should return an error if given no argument", function(done) {
           var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " --backtarget ";
+                        " --target " + simpleCmumps2FhirPath + " --backtarget ";
           exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
               stderr.should.contain("--backtarget specified with no back target translation file!");
@@ -239,7 +239,7 @@ describe("roundtrip-translation", function() {
       it("should return an error if given a non-existent file", function(done) {
           var filepath = 'aloha' + Math.random();
           var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " -b " + filepath;
+                        " --target " + simpleCmumps2FhirPath + " -b " + filepath;
 
           // test graceful error handling when filepath does not exist
           commonTest.fileNotExistHandling(cmdline, filepath, done);
@@ -248,7 +248,7 @@ describe("roundtrip-translation", function() {
       it("should return an error if file is not readable", function(done) {
           var filepath = tmpDir + Math.random() + ".shex"
           var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " --backtarget " + filepath;
+                        " --target " + simpleCmumps2FhirPath + " --backtarget " + filepath;
 
           // test graceful error handling when filepath is not accessible.
           commonTest.fileInAccessHandling(cmdline, filepath, done);
@@ -256,10 +256,10 @@ describe("roundtrip-translation", function() {
 
       it("should return an error if given a file without a shex extension", function(done) {
           var cmdline = roundtripPath + " --backtarget " + simpleJsonldPath +
-                        " -d " + simpleJsonldPath + " --target " + simpleChcs2FhirPath;  
+                        " -d " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath;  
           exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
-              stderr.should.contain("simple-chcs.jsonld does not have the expected filename extension - expected shex!");
+              stderr.should.contain("simple-cmumps.jsonld does not have the expected filename extension - expected shex!");
               done();
           });
       });
@@ -270,27 +270,27 @@ describe("roundtrip-translation", function() {
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
            // in the user's current working directory.  This ensures we write to test/work instead.
-          var cmdline = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleChcs2FhirPath + 
-                        " -b " +  simpleFhir2ChcsPath + " -o " + testWorkDir;
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + 
+                        " -b " +  simpleFhir2CmumpsPath + " -o " + testWorkDir;
           exec(cmdline, function (error, stdout, stderr) {
 
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
-              stdout.should.contain("simple-chcs.jsonld completed successfully.");
-              stdout.should.contain("simple-chcs2fhir.ttl completed successfully.");
-              stdout.should.contain("back-simple-chcs2fhir.ttl completed successfully.");
+              stdout.should.contain("simple-cmumps.jsonld completed successfully.");
+              stdout.should.contain("simple-cmumps2fhir.ttl completed successfully.");
+              stdout.should.contain("back-simple-cmumps2fhir.ttl completed successfully.");
               stdout.should.contain('json-diff'); 
 
               // Check the correct files are there.
-              fs.existsSync(testWorkDir+'/back-simple-chcs.shex').should.be.true;
+              fs.existsSync(testWorkDir+'/back-simple-cmumps.shex').should.be.true;
 
-              verifyValFile(testWorkDir + '/simple-chcs.val');
-              verifyTtlFile(testWorkDir + '/simple-chcs2fhir.ttl');
+              verifyValFile(testWorkDir + '/simple-cmumps.val');
+              verifyTtlFile(testWorkDir + '/simple-cmumps2fhir.ttl');
 
-              verifyValFile(testWorkDir + '/back-simple-chcs.val');
-              verifyTtlFile(testWorkDir + '/back-simple-chcs2fhir.ttl');
+              verifyValFile(testWorkDir + '/back-simple-cmumps.val');
+              verifyTtlFile(testWorkDir + '/back-simple-cmumps2fhir.ttl');
 
-              verifyJsonFile(testWorkDir + '/back-simple-chcs.json');
+              verifyJsonFile(testWorkDir + '/back-simple-cmumps.json');
 
               fs.existsSync(testWorkDir+'/diff.out').should.be.true;
 
@@ -305,7 +305,7 @@ describe("roundtrip-translation", function() {
   describe("--frame option", function() {
       it("should return an error if given no argument", function(done) {
           var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
-                        " -t " + simpleChcs2FhirPath + " --frame ";
+                        " -t " + simpleCmumps2FhirPath + " --frame ";
           exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: --frame specified with no frame file!");
               verifyUsage(error, stdout);
@@ -316,7 +316,7 @@ describe("roundtrip-translation", function() {
       it("should return an error if given a non-existent file", function(done) {
           var filepath = 'aloha' + Math.random();
           var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " -f " + filepath;
+                        " --target " + simpleCmumps2FhirPath + " -f " + filepath;
 
           // test graceful error handling when filepath does not exist
           commonTest.fileNotExistHandling(cmdline, filepath, done);
@@ -325,7 +325,7 @@ describe("roundtrip-translation", function() {
       it("should return an error if file is not readable", function(done) {
           var filepath = tmpDir + "aloha" +  Math.random() + ".frame"
           var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " --frame " + filepath;
+                        " --target " + simpleCmumps2FhirPath + " --frame " + filepath;
 
           // test graceful error handling when filepath is not accessible.
           commonTest.fileInAccessHandling(cmdline, filepath, done);
@@ -337,27 +337,27 @@ describe("roundtrip-translation", function() {
 
           // Note: We slide the output directory on here to ensure the roundtrip translate does not overwrite something 
            // in the user's current working directory.  This ensures we write to test/work instead.
-          var cmdline = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleChcs2FhirPath + 
-                    " -f " + frameFile + " -b " +  simpleFhir2ChcsPath + " -o " + testWorkDir;
+          var cmdline = roundtripPath + " -d " + simpleJsonldPath + " -t " + simpleCmumps2FhirPath + 
+                    " -f " + frameFile + " -b " +  simpleFhir2CmumpsPath + " -o " + testWorkDir;
           exec(cmdline, function (error, stdout, stderr) {
 
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
-              stdout.should.contain("simple-chcs.jsonld completed successfully.");
-              stdout.should.contain("simple-chcs2fhir.ttl completed successfully.");
-              stdout.should.contain("back-simple-chcs2fhir.ttl completed successfully.");
+              stdout.should.contain("simple-cmumps.jsonld completed successfully.");
+              stdout.should.contain("simple-cmumps2fhir.ttl completed successfully.");
+              stdout.should.contain("back-simple-cmumps2fhir.ttl completed successfully.");
               stdout.should.contain('json-diff'); 
 
               // Check the correct files are there.
-              fs.existsSync(testWorkDir+'/back-simple-chcs.shex').should.be.true;
+              fs.existsSync(testWorkDir+'/back-simple-cmumps.shex').should.be.true;
 
-              verifyValFile(testWorkDir + '/simple-chcs.val');
-              verifyTtlFile(testWorkDir + '/simple-chcs2fhir.ttl');
+              verifyValFile(testWorkDir + '/simple-cmumps.val');
+              verifyTtlFile(testWorkDir + '/simple-cmumps2fhir.ttl');
 
-              verifyValFile(testWorkDir + '/back-simple-chcs.val');
-              verifyTtlFile(testWorkDir + '/back-simple-chcs2fhir.ttl');
+              verifyValFile(testWorkDir + '/back-simple-cmumps.val');
+              verifyTtlFile(testWorkDir + '/back-simple-cmumps2fhir.ttl');
 
-              verifyJsonldFile(testWorkDir + '/back-simple-chcs.jsonld');
+              verifyJsonldFile(testWorkDir + '/back-simple-cmumps.jsonld');
 
               fs.existsSync(testWorkDir+'/diff.out').should.be.true;
 
@@ -372,7 +372,7 @@ describe("roundtrip-translation", function() {
 
       it("should return an error if given no argument", function(done) {
           var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
-                        " -t " + simpleChcs2FhirPath + " --jsonvars ";
+                        " -t " + simpleCmumps2FhirPath + " --jsonvars ";
           exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: --jsonvars specified with no JSON variables file!");
               verifyUsage(error, stdout);
@@ -383,7 +383,7 @@ describe("roundtrip-translation", function() {
       it("should return an error if given a non-existent file", function(done) {
           var filepath = 'aloha' + Math.random();
           var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " --frame " + frameFile + 
+                        " --target " + simpleCmumps2FhirPath + " --frame " + frameFile + 
                         " -j " + filepath;
 
           // test graceful error handling when filepath does not exist
@@ -393,18 +393,18 @@ describe("roundtrip-translation", function() {
       it("should return an error if file is not readable", function(done) {
           var filepath = tmpDir + "aloha" +  Math.random() + ".json"
           var cmdline = roundtripPath + " -d " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " --jsonvars " + filepath;
+                        " --target " + simpleCmumps2FhirPath + " --jsonvars " + filepath;
 
           // test graceful error handling when filepath is not accessible.
           commonTest.fileInAccessHandling(cmdline, filepath, done);
       });
 
       it("should return an error if given a file without a json extension", function(done) {
-          var cmdline = roundtripPath + " -d " + jsonldPath + " --target " + chcs2FhirPath + 
-                        " --jsonvars " + simpleJsonldPath +  " -b " + fhir2ChcsPath; 
+          var cmdline = roundtripPath + " -d " + jsonldPath + " --target " + cmumps2FhirPath + 
+                        " --jsonvars " + simpleJsonldPath +  " -b " + fhir2CmumpsPath; 
           exec(cmdline, function (error, stdout, stderr) {
               error.code.should.equal(1);
-              stderr.should.contain("simple-chcs.jsonld does not have the expected filename extension - expected json!");
+              stderr.should.contain("simple-cmumps.jsonld does not have the expected filename extension - expected json!");
               done();
           });
       });
@@ -413,26 +413,26 @@ describe("roundtrip-translation", function() {
           this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
           var cmdline = roundtripPath + " -d " + jsonldPath + 
-                        " --target " + chcs2FhirPath + " -b " + fhir2ChcsPath +
+                        " --target " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
                         " -f " + frameFile + " --jsonvars " + varsPath + " -o " + testWorkDir;
           exec(cmdline, function (error, stdout, stderr) {
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
-              stdout.should.contain("chcs-patient7.jsonld completed successfully.");
-              stdout.should.contain("chcs2fhir-patient7.ttl completed successfully.");
-              stdout.should.contain("back-chcs2fhir-patient7.ttl completed successfully.");
+              stdout.should.contain("cmumps-patient7.jsonld completed successfully.");
+              stdout.should.contain("cmumps2fhir-patient7.ttl completed successfully.");
+              stdout.should.contain("back-cmumps2fhir-patient7.ttl completed successfully.");
               stdout.should.contain('json-diff'); 
 
               // Check the correct files are there.
-              fs.existsSync(testWorkDir+'/back-chcs-patient7.shex').should.be.true;
+              fs.existsSync(testWorkDir+'/back-cmumps-patient7.shex').should.be.true;
 
-              verifyValFile(testWorkDir + '/chcs-patient7.val');
-              verifyTtlFile(testWorkDir + '/chcs2fhir-patient7.ttl');
+              verifyValFile(testWorkDir + '/cmumps-patient7.val');
+              verifyTtlFile(testWorkDir + '/cmumps2fhir-patient7.ttl');
 
-              verifyValFile(testWorkDir + '/back-chcs-patient7.val');
-              verifyTtlFile(testWorkDir + '/back-chcs2fhir-patient7.ttl');
+              verifyValFile(testWorkDir + '/back-cmumps-patient7.val');
+              verifyTtlFile(testWorkDir + '/back-cmumps2fhir-patient7.ttl');
 
-              verifyJsonldFile(testWorkDir + '/back-chcs-patient7.jsonld');
+              verifyJsonldFile(testWorkDir + '/back-cmumps-patient7.jsonld');
 
               fs.existsSync(testWorkDir+'/diff.out').should.be.true;
 
@@ -446,7 +446,7 @@ describe("roundtrip-translation", function() {
   describe("--output option", function() {
       it("should return an error if given no argument", function(done) {
           var cmdline = roundtripPath + " -d " + jsonldPath +    
-                        " --target " + chcs2FhirPath + " -b " + fhir2ChcsPath +
+                        " --target " + cmumps2FhirPath + " -b " + fhir2CmumpsPath +
                         " --jsonvars " + varsPath + " -o ";
           exec(cmdline, function (error, stdout, stderr) {
               stderr.should.contain("ERROR: -o specified with no output directory!");
@@ -459,8 +459,8 @@ describe("roundtrip-translation", function() {
           var testFile = __dirname + '/aloha' + Math.random();
           fs.writeFileSync(testFile, '{}');
           var cmdline = roundtripPath + " -o " + testFile + " -d " + jsonldPath + 
-                        " --target " + chcs2FhirPath + 
-                        " -b " + fhir2ChcsPath + " --jsonvars " + varsPath;
+                        " --target " + cmumps2FhirPath + 
+                        " -b " + fhir2CmumpsPath + " --jsonvars " + varsPath;
           exec(cmdline, function (error, stdout, stderr) {
                   error.code.should.equal(1);
                   stderr.should.contain("Output directory " + testFile + " already exists as a file!");
@@ -477,7 +477,7 @@ describe("roundtrip-translation", function() {
           fs.existsSync(testDir).should.be.false;
 
           var cmdline = roundtripPath + " --data " + simpleJsonldPath + 
-                        " --target " + simpleChcs2FhirPath + " --output " + testDir;
+                        " --target " + simpleCmumps2FhirPath + " --output " + testDir;
           exec(cmdline, function (error, stdout, stderr) {
               fs.existsSync(testDir).should.be.true;
               commonTest.unlinkDir(testWorkDir);
@@ -494,7 +494,7 @@ describe("roundtrip-translation", function() {
 
           // Turn on -v so we can see the default warning
           var cmdline = roundtripPath + " --data " + simpleJsonldPath +  
-                        " --target " + simpleChcs2FhirPath 
+                        " --target " + simpleCmumps2FhirPath 
                     + " -o " + testWorkDir + " -v";
 
           exec(cmdline, function (error, stdout, stderr) {
@@ -505,7 +505,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if root argument specified with no value", function(done) {
-          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleChcs2FhirPath 
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
                         + " -o " + testWorkDir + " --root";
 
           exec(cmdline, function (error, stdout, stderr) {
@@ -520,11 +520,11 @@ describe("roundtrip-translation", function() {
           commonTest.unlinkDir(testWorkDir);
 
           var rdfRoot = "http://hokukahu.com/patient-3";
-          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleChcs2FhirPath 
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
                         + " -o " + testWorkDir + " --root " + rdfRoot;
 
           exec(cmdline, function (error, stdout, stderr) {
-              var ttlFile = testWorkDir + '/simple-chcs2fhir.ttl';
+              var ttlFile = testWorkDir + '/simple-cmumps2fhir.ttl';
               var string = fs.readFileSync(ttlFile,'UTF-8');
               string.should.contain(rdfRoot);
               commonTest.unlinkDir(testWorkDir);
@@ -540,7 +540,7 @@ describe("roundtrip-translation", function() {
           commonTest.unlinkDir(testWorkDir);
 
           // Turn on -v so we can see the default warning
-          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleChcs2FhirPath 
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
                         + " -o " + testWorkDir + " -v";
 
           exec(cmdline, function (error, stdout, stderr) {
@@ -551,7 +551,7 @@ describe("roundtrip-translation", function() {
       });
 
       it("should return an error if source argument specified with no value", function(done) {
-          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleChcs2FhirPath 
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
                         + " -o " + testWorkDir + " --source";
 
           exec(cmdline, function (error, stdout, stderr) {
@@ -563,7 +563,7 @@ describe("roundtrip-translation", function() {
 
       it("should return an error if given non-existent file", function(done) {
           var filepath = 'aloha' + Math.random();
-          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleChcs2FhirPath 
+          var cmdline = roundtripPath + " --data " + simpleJsonldPath + " --target " + simpleCmumps2FhirPath 
                         + " --source " + filepath;
 
           // test graceful error handling when filepath does not exist
@@ -574,8 +574,8 @@ describe("roundtrip-translation", function() {
           this.timeout(6000);
           commonTest.unlinkDir(testWorkDir);
 
-          var cmdline = roundtripPath + " -d " + jsonldPath + " -t " + chcs2FhirPath + 
-                        " -b " + fhir2ChcsPath + " -j " + varsPath + " -s " + otherShExPath +  
+          var cmdline = roundtripPath + " -d " + jsonldPath + " -t " + cmumps2FhirPath + 
+                        " -b " + fhir2CmumpsPath + " -j " + varsPath + " -s " + otherShExPath +  
                         " -o " + testWorkDir;
 
           exec(cmdline, function (error, stdout, stderr) {
@@ -584,21 +584,21 @@ describe("roundtrip-translation", function() {
               // Verify that each step executed successfully with some output.  The output here looks a little funny
               // because we don't want to look at the canonical paths which are installation dependent. 
               stdout.should.contain(otherShExPath);
-              stdout.should.contain("chcs-patient7.jsonld completed successfully.");
-              stdout.should.contain("chcs2fhir-patient7.ttl completed successfully.");
-              stdout.should.contain("back-chcs2fhir-patient7.ttl completed successfully.");
+              stdout.should.contain("cmumps-patient7.jsonld completed successfully.");
+              stdout.should.contain("cmumps2fhir-patient7.ttl completed successfully.");
+              stdout.should.contain("back-cmumps2fhir-patient7.ttl completed successfully.");
               stdout.should.contain('json-diff'); 
 
               // Check the correct files are there.
-              fs.existsSync(testWorkDir+'/back-chcs-patient7.shex').should.be.true;
+              fs.existsSync(testWorkDir+'/back-cmumps-patient7.shex').should.be.true;
 
-              verifyValFile(testWorkDir + '/chcs-patient7.val');
-              verifyTtlFile(testWorkDir + '/chcs2fhir-patient7.ttl');
+              verifyValFile(testWorkDir + '/cmumps-patient7.val');
+              verifyTtlFile(testWorkDir + '/cmumps2fhir-patient7.ttl');
 
-              verifyValFile(testWorkDir + '/back-chcs-patient7.val');
-              verifyTtlFile(testWorkDir + '/back-chcs2fhir-patient7.ttl');
+              verifyValFile(testWorkDir + '/back-cmumps-patient7.val');
+              verifyTtlFile(testWorkDir + '/back-cmumps2fhir-patient7.ttl');
 
-              verifyJsonFile(testWorkDir + '/back-chcs-patient7.json');
+              verifyJsonFile(testWorkDir + '/back-cmumps-patient7.json');
 
               fs.existsSync(testWorkDir+'/diff.out').should.be.true;
 
@@ -619,8 +619,8 @@ describe("roundtrip-translation", function() {
           fs.mkdirSync(testDir);
 
           var cmdline = roundtripPath + " -j " + varsPath + " -s " + otherShExPath +  " -o " + testDir;
-                    " -f " + frameFile + " -d " + jsonldPath + " -t " + chcs2FhirPath + 
-                    " -b " + fhir2ChcsPath; 
+                    " -f " + frameFile + " -d " + jsonldPath + " -t " + cmumps2FhirPath + 
+                    " -b " + fhir2CmumpsPath; 
 
           exec(cmdline, function (error, stdout, stderr) {
               stderr.should.not.contain("removing it and creating a fresh");
@@ -638,8 +638,8 @@ describe("roundtrip-translation", function() {
           var testDir = os.tmpdir()+"/test"+Math.random();
           fs.mkdirSync(testDir);
 
-          var cmdline = roundtripPath + " -d " + jsonldPath + " -t " + chcs2FhirPath + 
-                        " -b " + fhir2ChcsPath + " -j " + varsPath + " -s " + otherShExPath + 
+          var cmdline = roundtripPath + " -d " + jsonldPath + " -t " + cmumps2FhirPath + 
+                        " -b " + fhir2CmumpsPath + " -j " + varsPath + " -s " + otherShExPath + 
                         " -f " + frameFile +  " -o " + testDir + " --verbose";
 
           exec(cmdline, function (error, stdout, stderr) {

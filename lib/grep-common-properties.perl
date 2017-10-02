@@ -3,7 +3,7 @@
 # List common elements from shex schemas, i.e., the ones
 # inside %Map:{ ... %}.
 # Use like this:
-# ./grep-common-properties.perl ../src/shex/chcs/fhir/*.shex | sort -u
+# ./grep-common-properties.perl ../src/shex/cmumps/fhir/*.shex | sort -u
 
 foreach my $f ( @ARGV ) {
 	open(my $fh, "<$f") || die;

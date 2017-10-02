@@ -5,7 +5,7 @@
 # Use like this:
 #    ./grep-fhir-extensions.perl *.shex |sort -u 
 # Then (optionally) pipe through:
-#    perl -p -e 's/(dem:const(Chcs)?(.*))$/$1 ($3)/'
+#    perl -p -e 's/(dem:const(Cmumps)?(.*))$/$1 ($3)/'
 
 foreach my $f ( @ARGV ) {
 	open(my $fh, "<$f") || die;
@@ -23,7 +23,7 @@ foreach my $f ( @ARGV ) {
 
 	# Grab only fhir:...extension sections.
 	#    fhir:extension {
-	#      fhir:url                        { fhir:value IRI %Map: { dem:constChcsFmp2 %} };
+	#      fhir:url                        { fhir:value IRI %Map: { dem:constCmumpsFmp2 %} };
 	#      fhir:valueId                    { fhir:value xsd:string %Map: { dem:fmp_id %} };
 	#      fhir:valueString                { fhir:value xsd:string %Map: { dem:fmp_label %} };
 	#    }*;

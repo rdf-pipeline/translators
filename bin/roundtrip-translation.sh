@@ -54,7 +54,7 @@ function help() {
     echo "  extension on it."
     echo ""
     echo "EXAMPLE" 
-    echo "bin/roundtrip-translation.sh -d src/shex/test/data/chcs-patient7.jsonld -t src/shex/demographics/chcs2fhir-demographics.shex -f src/shex/chcs-patient7.frame"
+    echo "bin/roundtrip-translation.sh -d src/shex/test/data/cmumps-patient7.jsonld -t src/shex/demographics/cmumps2fhir-demographics.shex -f src/shex/cmumps-patient7.frame"
     echo ""
 }
 
@@ -267,14 +267,14 @@ VALIDATE="${SHEX_BIN_PATH}/validate -x \"${SOURCE_DATA_SCHEMA_FILE}\" -l \"${JSO
 echo Executing ${VALIDATE}
 eval ${VALIDATE}
 if [ $? -ne 0 ]; then
-  echo -e "${RED_FONT}CHCS validate of ${VAL_FILE} failed!" >&2
+  echo -e "${RED_FONT}CMUMPS validate of ${VAL_FILE} failed!" >&2
   echo -e "${DEFAULT_COLOR}"
   exit 1
 fi
 
 # Verify validation worked
-verify_file_not_empty "${VAL_FILE}" "CHCS validation failed; ${VAL_FILE} is empty!"
-verify_file_content "${VAL_FILE}" "Failure\|Error" "CHCS validation failed; ${JSONLD_DATA_FILE} contains a failure or errors!"
+verify_file_not_empty "${VAL_FILE}" "CMUMPS validation failed; ${VAL_FILE} is empty!"
+verify_file_content "${VAL_FILE}" "Failure\|Error" "CMUMPS validation failed; ${JSONLD_DATA_FILE} contains a failure or errors!"
 echo -e "${GREEN_FONT}Validation of ${JSONLD_DATA_FILE} completed successfully."
 echo "Results are available in ${VAL_FILE}."
 echo -e "${DEFAULT_COLOR}"

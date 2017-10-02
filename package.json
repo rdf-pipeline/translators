@@ -1,7 +1,7 @@
 {
   "name": "translators",
   "url": "https://github.com/rdf-pipeline/translators",
-  "description": "chcs jsonld -> FHIR translators in various guises",
+  "description": "cmumps jsonld -> FHIR translators in various guises",
   "keywords": [
     "lpi",
     "LPI",
@@ -37,8 +37,8 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "bin": {
-    "chcs-file": "./src/js/translate/util/chcs-file.js",
-    "chcs-parts": "./src/js/translate/util/chcs-parts.js",
+    "cmumps-file": "./src/js/translate/util/cmumps-file.js",
+    "cmumps-parts": "./src/js/translate/util/cmumps-parts.js",
     "roundtrip-translation": "bin/roundtrip-translation.sh",
     "ttl-to-json": "bin/ttl-to-json"
   },

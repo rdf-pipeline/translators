@@ -8,8 +8,8 @@
       "type": {
         "coding": [
           {
-            "code": "chcss",
-            "display": "chcss"
+            "code": "cmumpss",
+            "display": "cmumpss"
           }
         ],
         "text": "777777777"
@@ -21,8 +21,8 @@
       "type": {
         "coding": [
           {
-            "code": "chcss",
-            "display": "chcss"
+            "code": "cmumpss",
+            "display": "cmumpss"
           }
         ],
         "text": "7777777770"
@@ -133,9 +133,9 @@
         {
           "coding": [
             {
-              "system": "chcs",
+              "system": "cmumps",
               "version": "0.0.1",
-              "code": "chcs",
+              "code": "cmumps",
               "display": {
                 "id": "8140-20",
                 "label": "OTHER RELATIONSHIP"
@@ -188,9 +188,9 @@
     {
       "coding": [
         {
-          "system": "chcs",
+          "system": "cmumps",
           "version": "0.0.1",
-          "code": "chcs",
+          "code": "cmumps",
           "display": "English",
           "userSelected": false
         }
@@ -207,9 +207,9 @@
     "type": {
       "coding": [
         {
-          "system": "chcs",
+          "system": "cmumps",
           "version": "0.0.1",
-          "code": "chcs",
+          "code": "cmumps",
           "display": "medical",
           "userSelected": false
         }

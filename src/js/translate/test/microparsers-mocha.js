@@ -1,5 +1,5 @@
 /**
- * Depending on the key name, certain chcs data values can be strings or objects that must be further parsed.
+ * Depending on the key name, certain cmumps data values can be strings or objects that must be further parsed.
  * The functions that parse them have been nicknamed microparsers. Usually a regular expression is enough. But not always.
  *
  */
@@ -7,7 +7,7 @@
 var assert = require('assert');
 var chai = require('chai');
 var _ = require('underscore');
-var chcs = require('../chcs');
+var cmumps = require('../cmumps');
 
 
 // http://chaijs.com/api/bdd/
@@ -17,7 +17,7 @@ describe('microparser', function() {
 
         it('should always have a {{last}}, {{first}}', function () {
             var result;
-            chai.expect(function() { result = chcs.chcsPatientName('bunny, bugs'); }).to.not.throw(Error);
+            chai.expect(function() { result = cmumps.cmumpsPatientName('bunny, bugs'); }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('object');
             chai.expect(result).to.have.property('last');
@@ -31,7 +31,7 @@ describe('microparser', function() {
 
         it('can have a middle initial {{last}}, {{first}} {{mi}}', function () {
             var result;
-            chai.expect(function() { result = chcs.chcsPatientName('l, f m'); }).to.not.throw(Error);
+            chai.expect(function() { result = cmumps.cmumpsPatientName('l, f m'); }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('object');
             chai.expect(result).to.have.property('last');
@@ -45,7 +45,7 @@ describe('microparser', function() {
 
         it('can have a title if it has a middle initial {{last}}, {{first}} {{mi}} {{title}}', function () {
             var result;
-            chai.expect(function() { result = chcs.chcsPatientName('l, f m title'); }).to.not.throw(Error);
+            chai.expect(function() { result = cmumps.cmumpsPatientName('l, f m title'); }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('object');
             chai.expect(result).to.have.property('last');
@@ -60,17 +60,17 @@ describe('microparser', function() {
 
         it('throws an error if last name is missing ", {{first}}"', function () {
             var name = ', bunny'; // missing last name
-            chai.expect(function() { chcs.chcsPatientName(name); }).to.throw(Error, /last name/);
+            chai.expect(function() { cmumps.cmumpsPatientName(name); }).to.throw(Error, /last name/);
         });
 
         it('throws an error if first is missing (no comma) "{{last}},"', function () {
             var name = 'bugs,'; // missing first name
-            chai.expect(function() { chcs.chcsPatientName(name); }).to.throw(Error, /first name/);
+            chai.expect(function() { cmumps.cmumpsPatientName(name); }).to.throw(Error, /first name/);
         });
 
         it('throws an error if missing comma', function () {
             var name = 'bunch o last names'; // missing comman
-            chai.expect(function() { chcs.chcsPatientName(name); }).to.throw(Error, /first name/); // misleading
+            chai.expect(function() { cmumps.cmumpsPatientName(name); }).to.throw(Error, /first name/); // misleading
         });
 
 
@@ -79,7 +79,7 @@ describe('microparser', function() {
             var result;
             name = "bunny   \t,\t\t   bugs";
             chai.expect(function() {
-                result = chcs.chcsPatientName(name);
+                result = cmumps.cmumpsPatientName(name);
             }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('object');
@@ -95,7 +95,7 @@ describe('microparser', function() {
             var result;
             name = "happy  little  bunny, bugs";  // two spaces apiece
             chai.expect(function() {
-                result = chcs.chcsPatientName(name);
+                result = cmumps.cmumpsPatientName(name);
             }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('object');
@@ -113,7 +113,7 @@ describe('microparser', function() {
             var first = 'first0';
             name = last + ',' + first;
             chai.expect(function() {
-                result = chcs.chcsPatientName(name);
+                result = cmumps.cmumpsPatientName(name);
             }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('object');
@@ -134,7 +134,7 @@ describe('microparser', function() {
                 var year = '1809'; var month = '02'; day = '12'; // abe lincoln
                 var aDate = year + '-' + month + '-' + day;
                 chai.expect(function() {
-                    result = chcs.chcsDate(aDate);
+                    result = cmumps.cmumpsDate(aDate);
                 }).to.not.throw(Error);
                 chai.expect(result).not.to.be.null;
                 chai.expect(result).to.be.an('object');
@@ -152,7 +152,7 @@ describe('microparser', function() {
                 var year = '09'; var month = '02'; day = '12'; // abe + 100y
                 var aDate = year + '-' + month + '-' + day;
                 chai.expect(function() {
-                    result = chcs.chcsDate(aDate);
+                    result = cmumps.cmumpsDate(aDate);
                 }).to.not.throw(Error);
                 chai.expect(result).not.to.be.null;
                 chai.expect(result).to.be.an('object');
@@ -178,10 +178,10 @@ describe('microparser', function() {
                 var year = '1809'; var month = '2'; day = '12'; // abe
                 var aDate = year + '-' + month + '-' + day;
                 try {
-                    result = chcs.chcsDate(aDate);  // should throw
+                    result = cmumps.cmumpsDate(aDate);  // should throw
                     chai.assert(false, "expected a throw");
                 } catch(e) {
-                    chai.expect(e).to.match(/Bad chcs date/);
+                    chai.expect(e).to.match(/Bad cmumps date/);
                 }
             });
 
@@ -190,7 +190,7 @@ describe('microparser', function() {
                 var result;
                 var year = '9'; var month = '02'; day = '120'; // abe + 100y
                 var a_date = year + '-' + month + '-' + day;
-                chai.expect(function() { chcs.chcsDate(a_date); }).to.throw(Error, /Bad chcs date/);
+                chai.expect(function() { cmumps.cmumpsDate(a_date); }).to.throw(Error, /Bad cmumps date/);
             });
 
 

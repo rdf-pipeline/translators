@@ -1,0 +1,13 @@
+<urn:local:patient-1> <http://hokukahu.com/schema/cmumpss#identifier> "2-000007";
+    <http://hokukahu.com/schema/cmumpss#phone-2> "555 555 5555";
+    <http://hokukahu.com/schema/cmumpss#street_address-2> "100 MAIN ST";
+    <http://hokukahu.com/schema/cmumpss#city-2> "ANYTOWN";
+    <http://hokukahu.com/schema/cmumpss#state-2> "NEW YORK";
+    <http://hokukahu.com/schema/cmumpss#zip_code-2> "60040";
+    <http://www.w3.org/2000/01/rdf-schema#label> "BUNNY,BUGS";
+    <http://hokukahu.com/schema/cmumpss#emergency_contact-2> "RUNNAH, ROAD";
+    <http://hokukahu.com/schema/cmumpss#ephone-2> "555 555 5558";
+    <http://hokukahu.com/schema/cmumpss#estreet_address-2> "7000 InternalTest Boulevard";
+    <http://hokukahu.com/schema/cmumpss#ecity-2> "ALBUQUERQUE";
+    <http://hokukahu.com/schema/cmumpss#ezip-2> "55555".
+

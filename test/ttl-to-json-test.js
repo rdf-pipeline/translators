@@ -16,11 +16,11 @@ var os = require('os');
 var commonTest = require('./common-test.js');
 
 var outputDir = os.tmpdir()+"/test";
-var frameFile = __dirname + "/data/chcs.frame";
+var frameFile = __dirname + "/data/cmumps.frame";
 var ttlToJsonPath = __dirname + '/../bin/ttl-to-json';
 
-var nestedTtlFile = __dirname + "/data/nested-chcs.ttl";
-var simpleTtlFile = __dirname + "/data/simple-chcs.ttl";
+var nestedTtlFile = __dirname + "/data/nested-cmumps.ttl";
+var simpleTtlFile = __dirname + "/data/simple-cmumps.ttl";
 
 describe("ttl-to-json", function() {
 
@@ -83,18 +83,18 @@ describe("ttl-to-json", function() {
               var json = JSON.parse(stdout);
               expect(Object.keys(json)).to.have.length(13);
               json['@id'].should.equal("urn:local:patient-1");
-              json['http://hokukahu.com/schema/chcss#identifier'].should.equal("2-000007");
-              json['http://hokukahu.com/schema/chcss#phone-2'].should.equal("555 555 5555");
-              json['http://hokukahu.com/schema/chcss#street_address-2'].should.equal("100 MAIN ST");
-              json['http://hokukahu.com/schema/chcss#city-2'].should.equal("ANYTOWN");
-              json['http://hokukahu.com/schema/chcss#state-2'].should.equal("NEW YORK");
-              json['http://hokukahu.com/schema/chcss#zip_code-2'].should.equal("60040");
+              json['http://hokukahu.com/schema/cmumpss#identifier'].should.equal("2-000007");
+              json['http://hokukahu.com/schema/cmumpss#phone-2'].should.equal("555 555 5555");
+              json['http://hokukahu.com/schema/cmumpss#street_address-2'].should.equal("100 MAIN ST");
+              json['http://hokukahu.com/schema/cmumpss#city-2'].should.equal("ANYTOWN");
+              json['http://hokukahu.com/schema/cmumpss#state-2'].should.equal("NEW YORK");
+              json['http://hokukahu.com/schema/cmumpss#zip_code-2'].should.equal("60040");
               json['http://www.w3.org/2000/01/rdf-schema#label'].should.equal("BUNNY,BUGS");
-              json['http://hokukahu.com/schema/chcss#emergency_contact-2'].should.equal("RUNNAH, ROAD");
-              json['http://hokukahu.com/schema/chcss#ephone-2'].should.equal("555 555 5558");
-              json['http://hokukahu.com/schema/chcss#estreet_address-2'].should.equal("7000 InternalTest Boulevard");
-              json['http://hokukahu.com/schema/chcss#ecity-2'].should.equal("ALBUQUERQUE");
-              json['http://hokukahu.com/schema/chcss#ezip-2'].should.equal("55555");
+              json['http://hokukahu.com/schema/cmumpss#emergency_contact-2'].should.equal("RUNNAH, ROAD");
+              json['http://hokukahu.com/schema/cmumpss#ephone-2'].should.equal("555 555 5558");
+              json['http://hokukahu.com/schema/cmumpss#estreet_address-2'].should.equal("7000 InternalTest Boulevard");
+              json['http://hokukahu.com/schema/cmumpss#ecity-2'].should.equal("ALBUQUERQUE");
+              json['http://hokukahu.com/schema/cmumpss#ezip-2'].should.equal("55555");
               done();
           });
       });
@@ -175,17 +175,17 @@ describe("ttl-to-json", function() {
               json = json[0];
 
               blankNodes[0].should.have.all.keys('@id', 
-                                                 'http://hokukahu.com/schema/chcss#identifier', 
+                                                 'http://hokukahu.com/schema/cmumpss#identifier', 
                                                  'http://www.w3.org/2000/01/rdf-schema#label');
               blankNodes[1].should.have.all.keys('@id', 
-                                                 'http://hokukahu.com/schema/chcss#identifier', 
+                                                 'http://hokukahu.com/schema/cmumpss#identifier', 
                                                  'http://www.w3.org/2000/01/rdf-schema#label');
 
               expect(blankNodes[0]['@id']).to.match(/^_:.*/);
               expect(blankNodes[1]['@id']).to.match(/^_:.*/);
 
-              expect(blankNodes[0]['http://hokukahu.com/schema/chcss#identifier']).to.match(/^81(1|4)0-20/);
-              expect(blankNodes[1]['http://hokukahu.com/schema/chcss#identifier']).to.match(/^81(1|4)0-20/);
+              expect(blankNodes[0]['http://hokukahu.com/schema/cmumpss#identifier']).to.match(/^81(1|4)0-20/);
+              expect(blankNodes[1]['http://hokukahu.com/schema/cmumpss#identifier']).to.match(/^81(1|4)0-20/);
 
               expect(blankNodes[0]['http://www.w3.org/2000/01/rdf-schema#label']).to.match(/^(OTHER RELATIONSHIP|20)/);
               expect(blankNodes[1]['http://www.w3.org/2000/01/rdf-schema#label']).to.match(/^(OTHER RELATIONSHIP|20)/);
@@ -193,23 +193,23 @@ describe("ttl-to-json", function() {
               // Check the JSON data
               expect(Object.keys(json)).to.have.length(16);
               json['@id'].should.equal("urn:local:patient-1");
-              json['http://hokukahu.com/schema/chcss#identifier'].should.equal("2-000007");
-              json['http://hokukahu.com/schema/chcss#phone-2'].should.equal("555 555 5555");
-              json['http://hokukahu.com/schema/chcss#dob-2'].should.deep.equal(
+              json['http://hokukahu.com/schema/cmumpss#identifier'].should.equal("2-000007");
+              json['http://hokukahu.com/schema/cmumpss#phone-2'].should.equal("555 555 5555");
+              json['http://hokukahu.com/schema/cmumpss#dob-2'].should.deep.equal(
                   { '@type': 'http://www.w3.org/2001/XMLSchema#date',
                     '@value': '1990-01-01' });
-              json['http://hokukahu.com/schema/chcss#street_address-2'].should.equal("100 MAIN ST");
-              json['http://hokukahu.com/schema/chcss#city-2'].should.equal("ANYTOWN");
-              json['http://hokukahu.com/schema/chcss#state-2'].should.equal("NEW YORK");
-              json['http://hokukahu.com/schema/chcss#zip_code-2'].should.equal("60040");
+              json['http://hokukahu.com/schema/cmumpss#street_address-2'].should.equal("100 MAIN ST");
+              json['http://hokukahu.com/schema/cmumpss#city-2'].should.equal("ANYTOWN");
+              json['http://hokukahu.com/schema/cmumpss#state-2'].should.equal("NEW YORK");
+              json['http://hokukahu.com/schema/cmumpss#zip_code-2'].should.equal("60040");
               json['http://www.w3.org/2000/01/rdf-schema#label'].should.equal("BUNNY,BUGS");
-              json['http://hokukahu.com/schema/chcss#erelationship-2'].should.deep.equal({'@id': '_:19'});
-              json['http://hokukahu.com/schema/chcss#emergency_contact-2'].should.equal("RUNNAH, ROAD");
-              json['http://hokukahu.com/schema/chcss#ephone-2'].should.equal("555 555 5558");
-              json['http://hokukahu.com/schema/chcss#estreet_address-2'].should.equal("7000 InternalTest Boulevard");
-              json['http://hokukahu.com/schema/chcss#ecity-2'].should.equal("ALBUQUERQUE");
-              json['http://hokukahu.com/schema/chcss#ezip-2'].should.equal("55555");
-              json['http://hokukahu.com/schema/chcss#fmp-2'].should.deep.equal({'@id': '_:31'});
+              json['http://hokukahu.com/schema/cmumpss#erelationship-2'].should.deep.equal({'@id': '_:19'});
+              json['http://hokukahu.com/schema/cmumpss#emergency_contact-2'].should.equal("RUNNAH, ROAD");
+              json['http://hokukahu.com/schema/cmumpss#ephone-2'].should.equal("555 555 5558");
+              json['http://hokukahu.com/schema/cmumpss#estreet_address-2'].should.equal("7000 InternalTest Boulevard");
+              json['http://hokukahu.com/schema/cmumpss#ecity-2'].should.equal("ALBUQUERQUE");
+              json['http://hokukahu.com/schema/cmumpss#ezip-2'].should.equal("55555");
+              json['http://hokukahu.com/schema/cmumpss#fmp-2'].should.deep.equal({'@id': '_:31'});
               done();
           });
       });

@@ -1,5 +1,5 @@
-@prefix chcs: <http://hokukahu.com/schema/chcss#> .
-@prefix entity: <http://hokukahu.com/systems/chcs-1/> .
+@prefix cmumps: <http://hokukahu.com/schema/cmumpss#> .
+@prefix entity: <http://hokukahu.com/systems/cmumps-1/> .
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix ns1: <http://hokukahu.com/schema/chcss#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,7 +9,7 @@
 
 <http://hokukahu.com/systems/chcs-1/8183-1> a ns1:Fetal_Presentation_Type-8183 ;
     rdfs:label "UNDETERMINED, LIVEBIRTH" ;
-    ns1:chcs_type "chcss:Fetal_Presentation_Type-8183" ;
+    ns1:cmumps_type "chcss:Fetal_Presentation_Type-8183" ;
     ns1:code-8183 "1A" ;
     ns1:identifier "8183-1" ;
     ns1:name-8183 "UNDETERMINED, LIVEBIRTH" .

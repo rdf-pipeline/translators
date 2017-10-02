@@ -2,7 +2,7 @@
 
 # List source elements from shex schemas.  Generates TSV.
 # Use like this:
-# ./grep-source-properties.perl  ../src/shex/chcs/common/*.shex > /tmp/properties.csv
+# ./grep-source-properties.perl  ../src/shex/cmumps/common/*.shex > /tmp/properties.csv
 
 # Header line:
 # print "CHCS Class Name\tCHCS Attributes Mapped to Common Schema\n";
@@ -38,8 +38,8 @@ foreach my $f ( @ARGV ) {
 		# Strip the prefix:
 		$w =~ s/^\w+\://;
 
-		# Skip chcs_type
-		next if $w eq "chcs_type";
+		# Skip cmumps_type
+		next if $w eq "cmumps_type";
 
 		# Save it (uniquely):
 		$words{$w} = 1;

@@ -1,5 +1,5 @@
 coverage/
-data/fake_chcs/patient-7/output
+data/fake_cmumps/patient-7/output
 
 # Dependency directory
 node_modules
