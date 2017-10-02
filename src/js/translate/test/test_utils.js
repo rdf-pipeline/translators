@@ -3,16 +3,16 @@
  */
 
 var prefix = '../../translate/'; // translate and graph_tranlate share underlying plumbing
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
+var chcs_utils = require(prefix + 'util/chcs_utils');
 
 
 /**
- * Given a cmumps jsonld object, return a variant of that object where @graph is randomized.a
- * @param cmumpsObject
+ * Given a chcs jsonld object, return a variant of that object where @graph is randomized.a
+ * @param chcsObject
  * @returns {Suite|a|*}
  */
-function cloneReorderGraph(cmumpsObject) {
-    var result = cmumps_utils.clone(cmumpsObject);
+function cloneReorderGraph(chcsObject) {
+    var result = chcs_utils.clone(chcsObject);
     var graph = result['@graph'];
     var graphLength = graph.length;
     var range = graphLength - 1;

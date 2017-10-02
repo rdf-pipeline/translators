@@ -1,0 +1,335 @@
+Script started on Fri Sep 29 12:03:36 2017
+DISABLED: . /home/dbooth/rdf-pipeline/trunk/set_env.sh
+]0;dbooth@dbooth-t470p: ~/rdf-pipeline/noflo/translatorsdbooth@dbooth-t470p:~/rdf-pipeline/noflo/translators$ npm test
+
+> translators@0.0.1 test /home/dbooth/rdf-pipeline/noflo/translators
+> mocha test src/js/translate/test; src/shex/chcs/common/test/validate_test.sh
+
+
+[0m[0m
+[0m  roundtrip-translation[0m
+  [32m  ✓[0m[90m should exist as a file[0m
+  [32m  ✓[0m[90m should be executable[0m
+  [32m  ✓[0m[90m should print usage if given no command line arguments[0m
+  [32m  ✓[0m[90m should print an error if given garbage arguments[0m
+[0m    --help[0m
+    [32m  ✓[0m[90m --help should print command help details[0m
+    [32m  ✓[0m[90m --h should print command help details[0m
+[0m    --data option[0m
+    [32m  ✓[0m[90m should return an error if given no argument[0m
+    [32m  ✓[0m[90m should return an error if given non-existent file[0m
+    [32m  ✓[0m[90m should return an error if file is not readable[0m
+    [32m  ✓[0m[90m should return an error if given a file without a jsonld extension[0m
+    [32m  ✓[0m[90m should return an error if data file is specified, but no target translation given[0m
+[0m    --target option[0m
+    [32m  ✓[0m[90m should return an error if target is specified with no data file[0m
+    [32m  ✓[0m[90m should return an error if data file is specificed but no target file given[0m
+    [32m  ✓[0m[90m should return an error if given a non-existent file[0m
+    [32m  ✓[0m[90m should return an error if file is not readable[0m
+    [32m  ✓[0m[90m should return an error if given a file without a shex extension[0m
+    [32m  ✓[0m[90m should execute a round trip translation using the jsonld data file and the ShEx target file[0m[31m (1978ms)[0m
+[0m    --backtarget option[0m
+    [32m  ✓[0m[90m should return an error if given no argument[0m
+    [32m  ✓[0m[90m should return an error if given a non-existent file[0m
+    [32m  ✓[0m[90m should return an error if file is not readable[0m
+    [32m  ✓[0m[90m should return an error if given a file without a shex extension[0m
+    [32m  ✓[0m[90m should execute a round trip translation using the back target file on return translation[0m[31m (1922ms)[0m
+[0m    --frame option[0m
+    [32m  ✓[0m[90m should return an error if given no argument[0m
+    [32m  ✓[0m[90m should return an error if given a non-existent file[0m
+    [32m  ✓[0m[90m should return an error if file is not readable[0m
+    [32m  ✓[0m[90m should execute a round trip translation using the frame file to generate reverse jsonld[0m[31m (2052ms)[0m
+[0m    --jsonvars option[0m
+    [32m  ✓[0m[90m should return an error if given no argument[0m
+    [32m  ✓[0m[90m should return an error if given a non-existent file[0m
+    [32m  ✓[0m[90m should return an error if file is not readable[0m
+    [32m  ✓[0m[90m should return an error if given a file without a json extension[0m
+    [31m  1) should execute a round trip translation using the json variables in translation[0m
+[0m    --output option[0m
+    [32m  ✓[0m[90m should return an error if given no argument[0m
+    [32m  ✓[0m[90m should give an error if path is to an existing file[0m
+    [32m  ✓[0m[90m should create output directory path if it does not exist and write all files to it[0m[31m (1901ms)[0m
+[0m    --root option[0m
+    [32m  ✓[0m[90m should use default root if given no argument[0m[31m (1940ms)[0m
+    [32m  ✓[0m[90m should return an error if root argument specified with no value[0m
+    [32m  ✓[0m[90m should set the specified root[0m[31m (1893ms)[0m
+[0m    --source  option[0m
+    [32m  ✓[0m[90m should use default source ShEx schema file if given no argument[0m[31m (1899ms)[0m
+    [32m  ✓[0m[90m should return an error if source argument specified with no value[0m
+    [32m  ✓[0m[90m should return an error if given non-existent file[0m
+    [31m  2) should execute a round trip translation using the specified source in translation[0m
+[0m    --verbose  option[0m
+    [32m  ✓[0m[90m should not output hidden warning messages without verbose flag[0m
+    [31m  3) should output hidden warning messages with verbose flag[0m
+
+[0m  ttl-jsonld[0m
+  [32m  ✓[0m[90m should exist as an object with the expected API[0m
+[0m    #ttlLoad[0m
+    [32m  ✓[0m[90m should throw an error if no input data was specified[0m
+    [32m  ✓[0m[90m should throw an error if input data was empty[0m
+    [32m  ✓[0m[90m should write an error to the console and return undefined if input is not a valid turtle RDF string[0m
+    [32m  ✓[0m[90m should load simple ttl input to an RDF graph[0m[33m (43ms)[0m
+    [32m  ✓[0m[90m should load nested ttl input to an RDF graph[0m
+[0m    #rdfToJsonLd[0m
+    [32m  ✓[0m[90m should throw an error if no input data was specified[0m
+    [32m  ✓[0m[90m should throw an error if no input data was empty[0m
+    [32m  ✓[0m[90m should write an error to the console and return undefined if input data is not valid RDF[0m
+    [32m  ✓[0m[90m should convert simple ttl to JSON-LD[0m
+    [32m  ✓[0m[90m should convert nested ttl to JSON-LD with a frame[0m[31m (131ms)[0m
+    [32m  ✓[0m[90m should filter extraneous Bnodes for specified attributes[0m[31m (101ms)[0m
+
+[0m  ttl-to-json[0m
+  [32m  ✓[0m[90m should exist as a file[0m
+  [32m  ✓[0m[90m should be executable[0m
+  [32m  ✓[0m[90m should print usage if given no command line arguments[0m[31m (273ms)[0m
+  [32m  ✓[0m[90m should print an error if given garbage arguments[0m[31m (242ms)[0m
+[0m    --ttlfile option[0m
+    [32m  ✓[0m[90m should return an error if -t given no argument[0m[31m (240ms)[0m
+    [32m  ✓[0m[90m should return an error if given non-existent ttl file[0m[31m (240ms)[0m
+    [32m  ✓[0m[90m should return an error if ttlfile file is not readable[0m[31m (234ms)[0m
+    [32m  ✓[0m[90m should convert simple RDF file specified by -t to json successfully[0m[31m (284ms)[0m
+[0m    --frame option[0m
+    [32m  ✓[0m[90m should return an error if -f given no frame file[0m[31m (240ms)[0m
+    [32m  ✓[0m[90m should return an error if given non-existent frame file[0m[31m (237ms)[0m
+    [32m  ✓[0m[90m should return an error if frame file is not readable[0m[31m (233ms)[0m
+    [32m  ✓[0m[90m should convert simple RDF file with a frame to should convert to JSON-LD successfully[0m[31m (399ms)[0m
+[0m    More advanced TTL RDF conversions[0m
+    [32m  ✓[0m[90m should convert RDF with nested data to JSON[0m[31m (287ms)[0m
+    [32m  ✓[0m[90m should convert RDF with nested data to JSON-LD[0m[31m (427ms)[0m
+
+[0m  always true[0m
+  [32m  ✓[0m[90m is always true[0m
+
+[0m  for chcs-utils[0m
+[0m    isJsonld[0m
+    [32m  ✓[0m[90m returns true for a jsonld object[0m
+    [32m  ✓[0m[90m returns false for an object missing @context[0m
+    [32m  ✓[0m[90m returns false for an object missing @graph[0m
+    [32m  ✓[0m[90m does not clean false[0m
+    [32m  ✓[0m[90m does not clean integers[0m
+[0m    the frontier (all can serve as examples)[0m
+    [32m  ✓[0m[90m is empty for scalars[0m
+    [32m  ✓[0m[90m is a simple list for a single object[0m
+    [32m  ✓[0m[90m is a prefixed list for a deep object[0m
+    [32m  ✓[0m[90m can have only values (example of chcs_utils.values())[0m
+    [32m  ✓[0m[90m can only have keys (example of chcs_utils.keys())[0m
+    [32m  ✓[0m[90m can find the value differences (example of chcs_utils.diffObjects())[0m
+    [32m  ✓[0m[90m can find the value overlaps (example of chcs_utils.overlapObjects())[0m
+
+[0m  for lpi ...[0m
+[0m    lpi.Defer() ...[0m
+    [32m  ✓[0m[90m can Defer a lab result translation as a Defer object[0m
+    [32m  ✓[0m[90m can Defer a lab result translation as an Object[0m
+
+[0m  chcs2fhir_demographics[0m
+  [32m  ✓[0m[90m should have expected exported interface[0m
+[0m    #extractDemographics[0m
+    [32m  ✓[0m[90m should throw an error if there is no JSON-LD data passed in[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD object gracefully[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD array gracefully[0m
+    [32m  ✓[0m[90m should extract CHCS demographics[0m
+[0m    #translateDemographics2Fhir[0m
+    [32m  ✓[0m[90m should translate CHCS demographics to FHIR[0m
+
+[0m  chcs2fhir_diagnoses[0m
+  [32m  ✓[0m[90m should have expected exported interface[0m
+[0m    #extractDiagnoses[0m
+    [32m  ✓[0m[90m should throw an error if there is no JSON-LD data passed in[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD object gracefully[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD array gracefully[0m
+    [32m  ✓[0m[90m should extract CHCS diagnoses[0m
+[0m    #translateDiagnoses2Fhir[0m
+    [32m  ✓[0m[90m should translate CHCS diagnoses to FHIR[0m
+
+[0m  chcs2fhir_labs[0m
+  [32m  ✓[0m[90m should have expected exported interface[0m
+[0m    #extractLabs[0m
+    [32m  ✓[0m[90m should throw an error if there is no JSON-LD data passed in[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD object gracefully[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD array gracefully[0m
+    [32m  ✓[0m[90m should extract CHCS labs[0m
+[0m    #translateLabs2Fhir[0m
+    [32m  ✓[0m[90m should translate CHCS labs to FHIR[0m
+
+[0m  chcs2fhir_prescriptions[0m
+  [32m  ✓[0m[90m should have expected exported interface[0m
+[0m    #extractPrescriptions[0m
+    [32m  ✓[0m[90m should throw an error if there is no JSON-LD data passed in[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD object gracefully[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD array gracefully[0m
+    [32m  ✓[0m[90m should extract CHCS prescriptions[0m
+[0m    #translatePrescriptions2Fhir[0m
+    [32m  ✓[0m[90m should translate CHCS prescriptions to FHIR[0m
+
+[0m  chcs2fhir_procedures[0m
+  [32m  ✓[0m[90m should have expected exported interface[0m
+[0m    #extractProcedures[0m
+    [32m  ✓[0m[90m should throw an error if there is no JSON-LD data passed in[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD object gracefully[0m
+    [32m  ✓[0m[90m should handle empty JSON-LD array gracefully[0m
+    [32m  ✓[0m[90m should extract CHCS diagnoses[0m
+[0m    #translatesProcedures2Fhir[0m
+    [32m  ✓[0m[90m should translate CHCS procedures to FHIR[0m
+
+[0m  microparser[0m
+[0m    for names[0m
+    [32m  ✓[0m[90m should always have a {{last}}, {{first}}[0m
+    [32m  ✓[0m[90m can have a middle initial {{last}}, {{first}} {{mi}}[0m
+    [32m  ✓[0m[90m can have a title if it has a middle initial {{last}}, {{first}} {{mi}} {{title}}[0m
+    [32m  ✓[0m[90m throws an error if last name is missing ", {{first}}"[0m
+    [32m  ✓[0m[90m throws an error if first is missing (no comma) "{{last}},"[0m
+    [32m  ✓[0m[90m throws an error if missing comma[0m
+    [32m  ✓[0m[90m whitespace surrounding comma does not matter "{{last}}    , {{first}}"[0m
+    [32m  ✓[0m[90m last name can contain whitespace[0m
+    [32m  ✓[0m[90m will remove leading whitespace[0m
+[0m      for dates[0m
+      [32m  ✓[0m[90m will parse a date[0m
+      [32m  ✓[0m[90m will parse a short date[0m
+      [32m  ✓[0m[90m will not parse a bad year[0m
+      [32m  ✓[0m[90m will not parse a bad month[0m
+      [32m  ✓[0m[90m will not parse a bad day[0m
+
+[0m  Chcs2fhir_all fhirParts[0m
+[0m    across all report categories[0m
+    [32m  ✓[0m[90m fhirDate should convert yyyy-mm-dd to mm-dd-yyyy[0m
+    [32m  ✓[0m[90m fhirDate should convert yy-mm-dd to mm-dd-19yy[0m
+    [32m  ✓[0m[90m fhirDate should throw an Error with bad chcs date[0m
+    [32m  ✓[0m[90m fhirHumanName of undefined is undefined[0m
+    [32m  ✓[0m[90m fhirHumanName should parse a simple name[0m
+    [32m  ✓[0m[90m fhirHumanName should parse a last, first mi[0m
+    [32m  ✓[0m[90m fhirHumanName should parse last, first mi title[0m
+    [32m  ✓[0m[90m fhirHumanName should throw an Error on bad chcs name[0m
+    [32m  ✓[0m[90m fhirIdentfierList(undefined) => undefined[0m
+    [32m  ✓[0m[90m fhirIdentfier(undefined) => undefined[0m
+    [32m  ✓[0m[90m fhirIdentfier should create an array of identifiers if passed in[0m
+    [32m  ✓[0m[90m fhirIdentfier should skip ssn if undefined[0m
+    [32m  ✓[0m[90m fhirIdentfier should skip dod if undefined[0m
+    [32m  ✓[0m[90m fhirIdentfier should skip ssn and dod if undefined[0m
+    [32m  ✓[0m[90m fhirExternalIdentfier(undefined) => undefined[0m
+    [32m  ✓[0m[90m fhirCodeableConceptList(undefined) => undefined[0m
+    [32m  ✓[0m[90m fhirMaritalStatus(undefined) => undefined[0m
+    [32m  ✓[0m[90m fhirMaritalStatus should map to fhir marital status[0m
+    [32m  ✓[0m[90m fhirMaritalStatus should throw error if chcs status unknown[0m
+    [32m  ✓[0m[90m fhirAddress should create a fhir address[0m
+    [32m  ✓[0m[90m fhirAddress should create a fhir address with county[0m
+    [32m  ✓[0m[90m fhirTiming(undefined) => undefined[0m
+    [32m  ✓[0m[90m fhirTiming twice daily[0m
+    [32m  ✓[0m[90m fhirTiming thrice daily[0m
+    [32m  ✓[0m[90m fhirTiming four times daily[0m
+    [32m  ✓[0m[90m fhirTiming four times a day[0m
+    [32m  ✓[0m[90m fhirTiming daily[0m
+    [32m  ✓[0m[90m Fdt.makeJsonFetcher1 only works on objects[0m
+    [32m  ✓[0m[90m Fdt.peek only works on objects[0m
+    [32m  ✓[0m[90m Fdt.eat only works on objects[0m
+    [32m  ✓[0m[90m cleaning an empty array returns undefined[0m
+    [32m  ✓[0m[90m clean([o]) is the same as [clean(o)][0m
+
+[0m  for an entire chcs jsonld objects[0m
+  [32m  ✓[0m[90m translate with label only[0m
+  [32m  ✓[0m[90m medications part (example)[0m[31m (113ms)[0m
+  [32m  ✓[0m[90m simple medications part (example)[0m
+  [32m  ✓[0m[90m medications part, same data but reordered[0m
+  [32m  ✓[0m[90m extract chcs demographic part (example)[0m
+  [32m  ✓[0m[90m extract demographic part (example)[0m
+  [32m  ✓[0m[90m extract demographic part, reorder input[0m
+  [32m  ✓[0m[90m extract chcs demographic part (example)[0m
+  [32m  ✓[0m[90m extract demographic part (example)[0m
+  [32m  ✓[0m[90m diagnoses part (example)[0m
+  [32m  ✓[0m[90m simple diagnoses part (example)[0m
+  [32m  ✓[0m[90m diagnoses part, reordered data[0m
+  [32m  ✓[0m[90m labs part (example)[0m
+  [32m  ✓[0m[90m procedures part (example)[0m
+  [32m  ✓[0m[90m procedures part (example)[0m
+  [32m  ✓[0m[90m simple procedures part (example)[0m
+  [32m  ✓[0m[90m procedures part, reordered data[0m
+[0m    In various scenarios[0m
+    [32m  ✓[0m[90m bugs bunny should appear[0m
+
+
+[92m [0m[32m 175 passing[0m[90m (22s)[0m
+[31m  3 failing[0m
+
+[0m  1) roundtrip-translation --jsonvars option should execute a round trip translation using the json variables in translation:
+[0m[31m     Uncaught AssertionError: expected '\\nChecking source file\nExecuting /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.shex" -l "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld" -s "http://hokukahu.com/patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val"\n\u001b[01;32mValidation of /home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld completed successfully.\nResults are available in /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val.\n\u001b[0m\nExecuting cat "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val" | /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/extensions/shex-map/bin/materialize -t "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs2fhir-patient7.shex" --jsonvars "/home/dbooth/rdf-pipeline/noflo/translators/test/data/patient7-vars.json" --root "urn:local:patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl"\n\u001b[01;32mMaterialization of /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl completed successfully.\n\u001b[0m\nExecuting /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/fhir2chcs-patient7.shex" -d "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/back-chcs-patient7.val"\n\u001b[0m\n' to include 'back-chcs2fhir-patient7.ttl completed successfully.'[0m[90m
+      at test/roundtrip-translation-test.js:423:29
+      at ChildProcess.exithandler (child_process.js:207:5)
+      at maybeClose (internal/child_process.js:862:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:222:5)
+[0m
+[0m  2) roundtrip-translation --source  option should execute a round trip translation using the specified source in translation:
+[0m[31m     Uncaught AssertionError: expected 'Executing /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/other-chcs-patient7.shex" -l "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld" -s "http://hokukahu.com/patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val"\n\u001b[01;32mValidation of /home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs-patient7.jsonld completed successfully.\nResults are available in /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val.\n\u001b[0m\nExecuting cat "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs-patient7.val" | /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/extensions/shex-map/bin/materialize -t "/home/dbooth/rdf-pipeline/noflo/translators/test/data/chcs2fhir-patient7.shex" --jsonvars "/home/dbooth/rdf-pipeline/noflo/translators/test/data/patient7-vars.json" --root "urn:local:patient-1" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl"\n\u001b[01;32mMaterialization of /home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl completed successfully.\n\u001b[0m\nExecuting /home/dbooth/rdf-pipeline/noflo/translators/bin/../node_modules/shex/bin/validate -x "/home/dbooth/rdf-pipeline/noflo/translators/test/data/fhir2chcs-patient7.shex" -d "/home/dbooth/rdf-pipeline/noflo/translators/test/work/chcs2fhir-patient7.ttl" > "/home/dbooth/rdf-pipeline/noflo/translators/test/work/back-chcs-patient7.val"\n\u001b[0m\n' to include 'back-chcs2fhir-patient7.ttl completed successfully.'[0m[90m
+      at test/roundtrip-translation-test.js:589:29
+      at ChildProcess.exithandler (child_process.js:207:5)
+      at maybeClose (internal/child_process.js:862:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:222:5)
+[0m
+[0m  3) roundtrip-translation --verbose  option should output hidden warning messages with verbose flag:
+[0m[31m     Uncaught AssertionError: expected '\u001b[1;33mWARN: No RDF root specified; defaulting to urn:local:patient-1.\n\u001b[1;33mWARN: /tmp/test0.15924988826736808 exists - removing it and creating a fresh /tmp/test0.15924988826736808 directory\n\u001b[1;31mBack validation failed; /tmp/test0.15924988826736808/chcs2fhir-patient7.ttl contains a failure or errors!\ngrep -i "Failure\\|Error" "/tmp/test0.15924988826736808/back-chcs-patient7.val" results: "type": "Failure", "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [ "errors": [\n' to include 'does not exist - generating it from'[0m[90m
+      at test/roundtrip-translation-test.js:648:29
+      at ChildProcess.exithandler (child_process.js:207:5)
+      at maybeClose (internal/child_process.js:862:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:222:5)
+[0m
+
+
+Validation of Absent_Status-8131 common ShEx mapping completed sucessfully
+Validation of Access_To_Care_Category-8510 common ShEx mapping completed sucessfully
+Validation of Additional_Medical_Treatment_Facility-8101_1 common ShEx mapping completed sucessfully
+Validation of Allergies_Definitions-8254_011 common ShEx mapping completed sucessfully
+Validation of Allergies_Selections-8254_01 common ShEx mapping completed sucessfully
+Validation of Ancillary_Procedure-108_1 common ShEx mapping completed sucessfully
+Validation of Ancillary_Tracking-39_9 common ShEx mapping completed sucessfully
+Validation of Anesthesia_Rate-8154_3 common ShEx mapping completed sucessfully
+Validation of Anesthesia_Risk_Codes-8149 common ShEx mapping completed sucessfully
+Validation of Antibiotic_Panel_File-8728 common ShEx mapping completed sucessfully
+Validation of Appointment_Detail_Codes-44_7 common ShEx mapping completed sucessfully
+Validation of Appointment_Status-8514 common ShEx mapping completed sucessfully
+Validation of Appointment_Type-44_5 common ShEx mapping completed sucessfully
+Validation of Apv_Appointment-44_3 common ShEx mapping completed sucessfully
+Validation of Blood_Product_Type-8161 common ShEx mapping completed sucessfully
+Validation of Blood_Type-8712 common ShEx mapping completed sucessfully
+Validation of Branch_Of_Service-23 common ShEx mapping completed sucessfully
+Validation of Casualty_Prognosis-8106 common ShEx mapping completed sucessfully
+Validation of Casualty_Status-8139 common ShEx mapping completed sucessfully
+Validation of Cause_Of_Injury-8137 common ShEx mapping completed sucessfully
+Validation of Clinical_History-8810 common ShEx mapping completed sucessfully
+Validation of Codes-757_02 common ShEx mapping completed sucessfully
+Validation of Coding_Systems-757_03 common ShEx mapping completed sucessfully
+Validation of Coding_Type-8930 common ShEx mapping completed sucessfully
+Validation of Collection_Sample-62 common ShEx mapping completed sucessfully
+Validation of Diagnostic_Related_Group-312 common ShEx mapping completed sucessfully
+Validation of Diet-8410 common ShEx mapping completed sucessfully
+Validation of Disability_Condition-31 common ShEx mapping completed sucessfully
+Validation of Discharge_Type-42_2 common ShEx mapping completed sucessfully
+Validation of Dod_Standard_Lab_Test-8188_99 common ShEx mapping completed sucessfully
+Validation of Drug-50 common ShEx mapping completed sucessfully
+Validation of Encounter-311 common ShEx mapping completed sucessfully
+Validation of Ethnic_Background-8191 common ShEx mapping completed sucessfully
+Validation of Etiology_Field-61_2 common ShEx mapping completed sucessfully
+Validation of Examination_Status-72 common ShEx mapping completed sucessfully
+Validation of Family_Member_Prefix-8110 common ShEx mapping completed sucessfully
+Validation of Fdb_Dam_Cross_Sensitivity_Allergy-8253_05 common ShEx mapping completed sucessfully
+Validation of Fdb_Dam_Master_Table-8250_4 common ShEx mapping completed sucessfully
+Validation of Fdb_Ddi_Severity_Level-8253_045 common ShEx mapping completed sucessfully
+Validation of Fdb_Dim_32_Clinical_Effects-8253_047 common ShEx mapping completed sucessfully
+Validation of Fdb_Dim_32_Reference_Cat_Desc-8253_046 common ShEx mapping completed sucessfully
+Validation of Fetal_Presentation_Type-8183 common ShEx mapping completed sucessfully
+Validation of Geographic_Location-5 common ShEx mapping completed sucessfully
+Validation of Gp_Consult_Result-52003 common ShEx mapping completed sucessfully
+Validation of Hospital_Location-44 common ShEx mapping completed sucessfully
+Validation of Kg_Provider_Role-100514 common ShEx mapping completed sucessfully
+Validation of Ned_Hcdp_Coverage_Code-8545 common ShEx mapping completed sucessfully
+Validation of Medication_Profile-8810_3 common ShEx mapping completed sucessfully
+Validation of Order_Task-107 common ShEx mapping completed sucessfully
+Validation of Order_Warnings-102_1 common ShEx mapping completed sucessfully
+Validation of Origin_Of_Order-111 common ShEx mapping completed sucessfully
+Validation of Patient-2 common ShEx mapping completed sucessfully
+Validation of Patient_Id_Codes-8195 common ShEx mapping completed sucessfully
+Validation of Pharmacy_Action-59_6 common ShEx mapping completed sucessfully
+Validation of Pharmacy_Patient-55 common ShEx mapping completed sucessfully
+Validation of Prescription-52 common ShEx mapping completed sucessfully
+Validation of Procedure common ShEx mapping completed sucessfully
+Validation of Provider-6 common ShEx mapping completed sucessfully
+Validation of User-3 common ShEx mapping completed sucessfully
+Validation of Zip_Code-5_8002 common ShEx mapping completed sucessfully
+]0;dbooth@dbooth-t470p: ~/rdf-pipeline/noflo/translatorsdbooth@dbooth-t470p:~/rdf-pipeline/noflo/translators$ 

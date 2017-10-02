@@ -1,0 +1,10 @@
+#! /usr/bin/perl -w
+
+# Change github paths from cmumps-to-chcs back to master before merging
+# the cmumps-to-chcs branch back into master.
+
+foreach my $f ( @ARGV ) {
+  print "$f\n";
+  `sed -i 's/cmumps-to-chcs/master/g' $f`;
+  }
+

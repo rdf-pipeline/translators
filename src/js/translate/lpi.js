@@ -1,10 +1,10 @@
 /**
- * Manipulate the cmumps jsonld object in understandable ways
+ * Manipulate the chcs jsonld object in understandable ways
  */
 
 var format = require('string-format');
-var cmumps_utils = require('./util/cmumps_utils');
-var fdt = require('./cmumps2fhir_datatypes');
+var chcs_utils = require('./util/chcs_utils');
+var fdt = require('./chcs2fhir_datatypes');
 var _ = require('underscore');
 
 /**
@@ -16,7 +16,7 @@ var _ = require('underscore');
  * @param {required Object || string} sourceNode -- input for translation.
  * @param {required string} id of the source object so that it can be obtained again (in theory)
  * @param {required string, matching /urn:local:fhir:Patient:2-\d+/} patientId
- * @param {required string} patientName, cmumps format 'LAST, FIRST MIDDLE?'
+ * @param {required string} patientName, chcs format 'LAST, FIRST MIDDLE?'
  * @returns {Object} deferred translation marker
  *
  * usage as a function:  var d = Defer(); // d instanceOf Object
@@ -45,7 +45,7 @@ function fhirDefer(fhirTargetResource, translatorFunction, sourceNode, id, patie
             // if the sourceNode comes in serialized as a string, attach a prefix. Otherwise its an object and preserve the object
             't:sourceNode': (typeof sourceNode == 'string') ? 'urn:local:' + sourceNode : sourceNode,
             't:patientId': patientId, // urn:local:fhir:Patient:2-\d+
-            't:patientName': patientName,  // cmumps 'name' or if undefined 'label'
+            't:patientName': patientName,  // chcs 'name' or if undefined 'label'
         }
     };
 
@@ -65,7 +65,7 @@ function makeTranslator(translator) {
 
     
     return function (inputObject, options, prefix) {
-        var options = cmumps_utils.merge(options, /* defaults */ {
+        var options = chcs_utils.merge(options, /* defaults */ {
             warnings: false,
             policy: false,
             eat: false
@@ -75,8 +75,8 @@ function makeTranslator(translator) {
         var warnings = []; // no warnings yet
         // the magic is here
         // var marked = Marked.prototype.create(inputObject, fdt.fetch1(marked, participatingProperties));
-        // Create a fetcher for cmumps_patient_object. The fetcher will get data values from
-        // input cmumps_patient_object, remembering those that actually have values in list participating_properties.
+        // Create a fetcher for chcs_patient_object. The fetcher will get data values from
+        // input chcs_patient_object, remembering those that actually have values in list participating_properties.
         var fetch1 = fdt.makeJsonFetcher1(inputObject, participatingProperties);
         // fetch1(json_pattern[, transformation])
 
@@ -97,7 +97,7 @@ function makeTranslator(translator) {
 }
 
 
-// parts, the parts of cmumps knows how to extract
+// parts, the parts of chcs knows how to extract
 module.exports = {};
 [fhirDefer, makeTranslator].forEach(function(f) {
     module.exports[f.name] = f;

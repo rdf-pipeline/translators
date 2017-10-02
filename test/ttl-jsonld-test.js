@@ -18,9 +18,9 @@ var util = require("util");
 var commonTest = require("./common-test");
 var ttlJsonLd = require("../lib/ttl-jsonld");
 
-var frameFile = __dirname + "/data/cmumps.frame";
-var nestedTtlFile = __dirname + "/data/nested-cmumps.ttl";
-var simpleTtlFile = __dirname + "/data/simple-cmumps.ttl";
+var frameFile = __dirname + "/data/chcs.frame";
+var nestedTtlFile = __dirname + "/data/nested-chcs.ttl";
+var simpleTtlFile = __dirname + "/data/simple-chcs.ttl";
 
 describe("ttl-jsonld", function() {
 
@@ -104,18 +104,18 @@ describe("ttl-jsonld", function() {
                ttlJsonLd.rdfToJsonLd(graph).then(function(json) { 
                    json.should.deep.equal(
                        { '@id': 'urn:local:patient-1',
-                         'http://hokukahu.com/schema/cmumpss#identifier': '2-000007',
-                         'http://hokukahu.com/schema/cmumpss#phone-2': '555 555 5555',
-                         'http://hokukahu.com/schema/cmumpss#street_address-2': '100 MAIN ST',
-                         'http://hokukahu.com/schema/cmumpss#city-2': 'ANYTOWN',
-                         'http://hokukahu.com/schema/cmumpss#state-2': 'NEW YORK',
-                         'http://hokukahu.com/schema/cmumpss#zip_code-2': '60040',
+                         'http://hokukahu.com/schema/chcss#identifier': '2-000007',
+                         'http://hokukahu.com/schema/chcss#phone-2': '555 555 5555',
+                         'http://hokukahu.com/schema/chcss#street_address-2': '100 MAIN ST',
+                         'http://hokukahu.com/schema/chcss#city-2': 'ANYTOWN',
+                         'http://hokukahu.com/schema/chcss#state-2': 'NEW YORK',
+                         'http://hokukahu.com/schema/chcss#zip_code-2': '60040',
                          'http://www.w3.org/2000/01/rdf-schema#label': 'BUNNY,BUGS',
-                         'http://hokukahu.com/schema/cmumpss#emergency_contact-2': 'RUNNAH, ROAD',
-                         'http://hokukahu.com/schema/cmumpss#ephone-2': '555 555 5558',
-                         'http://hokukahu.com/schema/cmumpss#estreet_address-2': '7000 InternalTest Boulevard',
-                         'http://hokukahu.com/schema/cmumpss#ecity-2': 'ALBUQUERQUE',
-                         'http://hokukahu.com/schema/cmumpss#ezip-2': '55555' } 
+                         'http://hokukahu.com/schema/chcss#emergency_contact-2': 'RUNNAH, ROAD',
+                         'http://hokukahu.com/schema/chcss#ephone-2': '555 555 5558',
+                         'http://hokukahu.com/schema/chcss#estreet_address-2': '7000 InternalTest Boulevard',
+                         'http://hokukahu.com/schema/chcss#ecity-2': 'ALBUQUERQUE',
+                         'http://hokukahu.com/schema/chcss#ezip-2': '55555' } 
                    );
                    done();
                });
@@ -130,7 +130,7 @@ describe("ttl-jsonld", function() {
                 ttlJsonLd.rdfToJsonLd(graph, frame).then(function(jsonld) { 
                     jsonld.should.be.an('object');
                     jsonld.should.deep.equal({ 
-                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld',
+                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld',
                         '@graph': [ 
                              { id: 'urn:local:patient-1',
                                'city-2': 'ANYTOWN',
@@ -166,7 +166,7 @@ describe("ttl-jsonld", function() {
                 graph.should.be.an('object');
 
                 // Set the ids where we want to filter out blank nodes that are referenced only once.
-                // CMUMPS uses this to filter out ids that are added by the jsonld library that would  differ
+                // CHCS uses this to filter out ids that are added by the jsonld library that would  differ
                 // from the original json input on a round trip translation.
                 var filterBnodeAttrs = [ 'id', '_id', '@id' ];
 
@@ -174,7 +174,7 @@ describe("ttl-jsonld", function() {
 
                     jsonld.should.be.an('object');
                     jsonld.should.deep.equal({ 
-                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_cmumps/patient-7/context.jsonld',
+                        '@context': 'https://raw.githubusercontent.com/rdf-pipeline/translators/master/data/fake_chcs/patient-7/context.jsonld',
                         '@graph': [
                              { id: 'urn:local:patient-1',
                                'city-2': 'ANYTOWN',

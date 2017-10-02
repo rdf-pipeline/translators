@@ -1,0 +1,716 @@
+{
+  "_id": "63-000007",
+  "micro_conversion_flag-63": {
+    "id": "chcss:63__03_E-Micro_result_converted_for_4_41",
+    "label": "Micro_result_converted_for_4_41"
+  },
+  "label": "BUNNY,BUGS",
+  "clinical_chemistry-63": [
+    {
+      "date_time_specimen_taken-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "login_date_time-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "performing_lab_disclosures-63_04": [
+        {
+          "id": "63_832-1_9999999.111111_000007",
+          "disclosure_id-63_832": "1",
+          "type": "chcss:63_832",
+          "disclosure_text-63_832": "fake text",
+          "label": "1"
+        }
+      ],
+      "origin_of_result-63_04": {
+        "id": "chcss:63_04__24_E-PERFORMING_LABORATORY",
+        "label": "PERFORMING_LABORATORY"
+      },
+      "collection_sample-63_04": {
+        "id": "62-319",
+        "label": "SOME TUBE"
+      },
+      "lab_work_element-63_04": {
+        "id": "44-4246",
+        "label": "MAD HATTER LAB"
+      },
+      "specimen-63_04": {
+        "id": "61-72",
+        "label": "SERUM"
+      },
+      "result-63_04": [
+        {
+          "enter_person-63_07": {
+            "id": "3-7777",
+            "label": "PANTHER,PINK"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-4220",
+            "label": "SOME-1 AB"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-666666",
+            "label": "KITTY,HELLO"
+          },
+          "sensitive_result-63_07": "Negative",
+          "performing_lab_disclosure-63_07": "1",
+          "label": "@",
+          "initial_viewer-63_07": {
+            "id": "3-111",
+            "label": "POOH,WINNIE"
+          },
+          "result-63_07": "@",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-11111111",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-222",
+            "label": "POOH,WINNIE"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "1_07-4220_9999999.111111_0001007",
+          "lab_method-63_07": {
+            "id": "8710-2972",
+            "label": "SOME INTEROPERABILITY (01JAN90)"
+          }
+        }
+      ],
+      "requesting_location-63_04": {
+        "id": "44-163",
+        "label": "MED. ASSESSMENT_MOT 0000"
+      },
+      "hcp-63_04": {
+        "id": "6-485",
+        "label": "POOH,WINNIE"
+      },
+      "accession-63_04": "fake text",
+      "lab_archive_date-63_04": {
+        "type": "xsd:date",
+        "value": "1990-01-01"
+      },
+      "label": "1990-01-01T00:00:00Z",
+      "type": "chcss:Clinical_Chemistry-63_04",
+      "id": "63_04-9999999.111111_000007"
+    },
+    {
+      "date_time_specimen_taken-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00Z"
+      },
+      "login_date_time-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00Z"
+      },
+      "collection_sample-63_04": {
+        "id": "62-166",
+        "label": "URINE"
+      },
+      "lab_work_element-63_04": {
+        "id": "44-944",
+        "label": "LABORATORY BMC 0000"
+      },
+      "specimen-63_04": {
+        "id": "61-71",
+        "label": "VOIDED URINE"
+      },
+      "result-63_04": [
+        {
+          "enter_person-63_07": {
+            "id": "3-88888",
+            "label": "BEAR,YOGI"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00Z"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00Z"
+          },
+          "test-63_07": {
+            "id": "60-3429",
+            "label": "INPROCESSING SOME SCREEN"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-88888",
+            "label": "BEAR,YOGI"
+          },
+          "label": "N",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "N",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00Z"
+          },
+          "order_task-63_07": {
+            "id": "107-13553736",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00Z"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-3429_9999999.111111_000007",
+          "lab_method-63_07": {
+            "id": "8710-1426",
+            "label": "INPROCESSING SOME SCREEN"
+          }
+        }
+      ],
+      "requesting_location-63_04": {
+        "id": "44-163",
+        "label": "MED. ASSESSMENT_MOT 0000"
+      },
+      "hcp-63_04": {
+        "id": "6-485",
+        "label": "POOH,WINNIE"
+      },
+      "accession-63_04": "fake text",
+      "lab_archive_date-63_04": {
+        "type": "xsd:date",
+        "value": "1990-01-01"
+      },
+      "label": "1990-01-01T00:00:00Z",
+      "type": "chcss:Clinical_Chemistry-63_04",
+      "id": "63_04-9999999.111111_000007"
+    },
+    {
+      "date_time_specimen_taken-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "login_date_time-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "collection_sample-63_04": {
+        "id": "62-324",
+        "label": "MARBLE-BLOOD"
+      },
+      "lab_work_element-63_04": {
+        "id": "44-13",
+        "label": "LABORATORY, NY"
+      },
+      "specimen-63_04": {
+        "id": "61-72",
+        "label": "SERUM"
+      },
+      "result-63_04": [
+        {
+          "enter_person-63_07": {
+            "id": "3-22222",
+            "label": "DUCK,DONALD"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-111",
+            "label": "GLUCOSE"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-22222",
+            "label": "DUCK,DONALD"
+          },
+          "label": "102",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "102",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-33333333",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-175_9999999.111111_000007",
+          "lab_method-63_07": {
+            "id": "8710-2222",
+            "label": "GLUCOSE (01JAN90)"
+          }
+        }
+      ],
+      "requesting_location-63_04": {
+        "id": "44-163",
+        "label": "MED. ASSESSMENT_MOT 0000"
+      },
+      "hcp-63_04": {
+        "id": "6-485",
+        "label": "POOH,WINNIE"
+      },
+      "accession-63_04": "fake text",
+      "lab_archive_date-63_04": {
+        "type": "xsd:date",
+        "value": "1990-01-01"
+      },
+      "label": "1990-01-01T00:00:00Z",
+      "type": "chcss:Clinical_Chemistry-63_04",
+      "id": "63_04-9999999.836398_000007"
+    },
+    {
+      "date_time_specimen_taken-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "login_date_time-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "collection_sample-63_04": {
+        "id": "62-222",
+        "label": "MARBLE-BLOOD"
+      },
+      "lab_work_element-63_04": {
+        "id": "44-666",
+        "label": "LABORATORY BMC 0000"
+      },
+      "specimen-63_04": {
+        "id": "61-72",
+        "label": "SERUM"
+      },
+      "result-63_04": [
+        {
+          "enter_person-63_07": {
+            "id": "3-88888",
+            "label": "BEAR,YOGI"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-3618",
+            "label": "INPROCESSING VARICELLA AB"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-88888",
+            "label": "BEAR,YOGI"
+          },
+          "label": "I",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "I",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-13553734",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-3618_9999999.836399_000007",
+          "lab_method-63_07": {
+            "id": "8710-1594",
+            "label": "INP VARICELLA AB"
+          }
+        }
+      ],
+      "requesting_location-63_04": {
+        "id": "44-163",
+        "label": "MED. ASSESSMENT_MOT 0000"
+      },
+      "hcp-63_04": {
+        "id": "6-485",
+        "label": "POOH,WINNIE"
+      },
+      "accession-63_04": "fake text",
+      "lab_archive_date-63_04": {
+        "type": "xsd:date",
+        "value": "1990-01-01"
+      },
+      "label": "1990-01-01T00:00:00Z",
+      "type": "chcss:Clinical_Chemistry-63_04",
+      "id": "63_04-9999999.836399_000007"
+    },
+    {
+      "date_time_specimen_taken-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "login_date_time-63_04": {
+        "type": "xsd:dateTime",
+        "value": "1990-01-01T00:00:00"
+      },
+      "collection_sample-63_04": {
+        "id": "62-3",
+        "label": "BLOOD"
+      },
+      "lab_work_element-63_04": {
+        "id": "44-966",
+        "label": "LABORATORY BMC 0000"
+      },
+      "specimen-63_04": {
+        "id": "61-70",
+        "label": "BLOOD"
+      },
+      "result-63_04": [
+        {
+          "enter_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-3428",
+            "label": "INPROCESSING SICKLE CELL TEST"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "label": "N",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "N",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-13553735",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-3428_9999999.1111_000007",
+          "lab_method-63_07": {
+            "id": "8710-1425",
+            "label": "INPROCESSING SICKLE CELL TEST"
+          }
+        },
+        {
+          "enter_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-3475",
+            "label": "INPROCESSING RPR"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "label": "N",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "N",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-13553735",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-3475_9999999.1111_000007",
+          "lab_method-63_07": {
+            "id": "8710-1468",
+            "label": "INPROCESSING RPR"
+          }
+        },
+        {
+          "enter_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-3484",
+            "label": "INPROCESSING G6PD"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "label": "N",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "N",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-13553735",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-3484_9999999.1111_000007",
+          "lab_method-63_07": {
+            "id": "8710-1474",
+            "label": "INPROCESSING G6PD"
+          }
+        },
+        {
+          "enter_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-4102",
+            "label": "INPROCESSING ABO"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "label": "AB",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "AB",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-13553735",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-4102_9999999.1111_000007",
+          "lab_method-63_07": {
+            "id": "8710-2036",
+            "label": "INPROCESSING ABO ONLY"
+          }
+        },
+        {
+          "enter_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "initial_viewer_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "test-63_07": {
+            "id": "60-4103",
+            "label": "INPROCESSING RH"
+          },
+          "rnr_action-63_07": {
+            "id": "chcss:11_07__18_E-INITIALED",
+            "label": "INITIALED"
+          },
+          "certify_person-63_07": {
+            "id": "3-55555",
+            "label": "MOUSE,MICKEY"
+          },
+          "label": "POS",
+          "initial_viewer-63_07": {
+            "id": "3-333333",
+            "label": "BUNNY,BUGS"
+          },
+          "result-63_07": "POS",
+          "certify_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "order_task-63_07": {
+            "id": "107-13553735",
+            "label": "1990-01-01T00:00:00Z"
+          },
+          "enter_date_time-63_07": {
+            "type": "xsd:dateTime",
+            "value": "1990-01-01T00:00:00"
+          },
+          "rnr_hcp-63_07": {
+            "id": "6-33333",
+            "label": "BUNNY,BUGS"
+          },
+          "type": "chcss:Result-63_07",
+          "id": "11_07-4103_9999999.1111_000007",
+          "lab_method-63_07": {
+            "id": "8710-2037",
+            "label": "INPROCESSING RH"
+          }
+        }
+      ],
+      "requesting_location-63_04": {
+        "id": "44-163",
+        "label": "MED. ASSESSMENT_MOT 0000"
+      },
+      "hcp-63_04": {
+        "id": "6-485",
+        "label": "POOH,WINNIE"
+      },
+      "accession-63_04": "fake text",
+      "lab_archive_date-63_04": {
+        "type": "xsd:date",
+        "value": "1990-01-01"
+      },
+      "label": "1990-01-01T00:00:00Z",
+      "type": "chcss:Clinical_Chemistry-63_04",
+      "id": "63_04-9999999.1111_000007"
+    }
+  ],
+  "patient-63": {
+    "id": "2-000007",
+    "label": "BUNNY,BUGS"
+  },
+  "type": "chcss:Lab_Result-63"
+}

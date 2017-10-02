@@ -1,0 +1,54 @@
+{
+  "resourceType": "Procedure",
+  "id": "urn:local:fhir:Procedure:Procedure-1074046",
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "code": "chcss",
+            "display": "chcss"
+          }
+        ],
+        "text": "1074046"
+      },
+      "value": "Procedure/1074046"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/2-000007",
+    "display": "BUNNY, BUGS"
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "system": "chcs",
+        "version": "0.0.1",
+        "code": "chcs",
+        "display": "HDDConcept-1450368",
+        "userSelected": false
+      }
+    ],
+    "text": "HDDConcept-1450368"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "chcs",
+        "version": "0.0.1",
+        "code": "chcs",
+        "display": "HDDConcept-1450368",
+        "userSelected": false
+      }
+    ],
+    "text": "HDDConcept-1450368"
+  },
+  "performedDateTime": "1990-01-01T00:00:00",
+  "encounter": {
+    "display": "Encounter Procedure"
+  }
+}
+
+

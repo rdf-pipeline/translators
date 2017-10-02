@@ -1,5 +1,5 @@
 /**
- * Depending on the key name, certain cmumps data values can be strings or objects that must be further parsed.
+ * Depending on the key name, certain chcs data values can be strings or objects that must be further parsed.
  * The functions that parse them have been nicknamed microparsers. Usually a regular expression is enough. But not always.
  */
 
@@ -11,34 +11,34 @@ var chai = require('chai');
 
 var prefix = '../../translate/'; // translate and graph_tranlate share underlying plumbing
 var sibling = '../';
-var cmumps2fhir_all = require(sibling + 'graph_cmumps2fhir_all');
-var cmumps2fhir_demographics = require(sibling + 'graph_cmumps2fhir_demographics');
-var cmumps2fhir_labs = require(sibling + 'graph_cmumps2fhir_labs');
-var cmumps2fhir_diagnoses = require(sibling + 'graph_cmumps2fhir_diagnoses');
-var cmumps2fhir_prescriptions = require(sibling + 'graph_cmumps2fhir_prescriptions');
-var cmumps2fhir_procedures = require(sibling + 'graph_cmumps2fhir_procedures');
+var chcs2fhir_all = require(sibling + 'graph_chcs2fhir_all');
+var chcs2fhir_demographics = require(sibling + 'graph_chcs2fhir_demographics');
+var chcs2fhir_labs = require(sibling + 'graph_chcs2fhir_labs');
+var chcs2fhir_diagnoses = require(sibling + 'graph_chcs2fhir_diagnoses');
+var chcs2fhir_prescriptions = require(sibling + 'graph_chcs2fhir_prescriptions');
+var chcs2fhir_procedures = require(sibling + 'graph_chcs2fhir_procedures');
 
 
 var fhir = require(prefix + 'fhir');
-var cmumps_utils = require(prefix + 'util/cmumps_utils');
-var cmumps = require(prefix + 'cmumps');
+var chcs_utils = require(prefix + 'util/chcs_utils');
+var chcs = require(prefix + 'chcs');
 var JSONPath = require('jsonpath-plus');
 var fhir2xml = require('fhir-json-to-xml');
 var parser = new fhir2xml.FHIRConverter(2);
-var fdt = require(prefix + 'cmumps2fhir_datatypes');
+var fdt = require(prefix + 'chcs2fhir_datatypes');
 var test_utils = require('./../../translate/test/test_utils');
 
 
 // Different names for the same input file, allows for easier on-the-fly modications.
 var patient7Jsonld = 
-    cmumps_utils.load(__dirname + '/../../../../data/fake_cmumps/patient-7/cmumps-patient7.jsonld');
+    chcs_utils.load(__dirname + '/../../../../data/fake_chcs/patient-7/chcs-patient7.jsonld');
 
 // var bugsBunnyJsonld = patient7Jsonld;
 // var bugsBunnyDiagnosisJsonld = patient7Jsonld;
 // var bugsBunnyProceduresJsonld = patient7Jsonld;
 
 
-describe('cmumps2fhir_all fhirParts', function () {
+describe('chcs2fhir_all fhirParts', function () {
 
     it('is obsolete!', function () {
         console.error("\nTHE TRANSLATE-IN-PLACE TRANSLATORS ARE OBSOLETE.  DO NOT USE!\n");
@@ -47,16 +47,16 @@ describe('cmumps2fhir_all fhirParts', function () {
 
     describe.skip('across all report categories', function () {
 
-        // fhirDate(cmumpsDate)
+        // fhirDate(chcsDate)
         // @see microparsers-mocha.js for misformed input
         it.skip('fhirDate should convert yyyy-mm-dd to mm-dd-yyyy', function () {
             var year = '1809';
             var month = '02';
             var day = '12'; // abe
-            var cmumpsDate = year + '-' + month + '-' + day;
+            var chcsDate = year + '-' + month + '-' + day;
             var fhirDate = day + '-' + month + '-' + year;
             chai.expect(function () {
-                result = fdt.fhirDate(cmumpsDate);
+                result = fdt.fhirDate(chcsDate);
             }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('string');
@@ -67,24 +67,24 @@ describe('cmumps2fhir_all fhirParts', function () {
             var year = '09';
             var month = '02';
             var day = '12'; // abe + 100y
-            var cmumpsDate = year + '-' + month + '-' + day;
+            var chcsDate = year + '-' + month + '-' + day;
             var fhirDate = day + '-' + month + '-' + '19' + year;
             chai.expect(function () {
-                result = fdt.fhirDate(cmumpsDate);
+                result = fdt.fhirDate(chcsDate);
             }).to.not.throw(Error);
             chai.expect(result).not.to.be.null;
             chai.expect(result).to.be.an('string');
             chai.expect(result).equals(fhirDate);
         });
 
-        it.skip('fhirDate should throw an Error with bad cmumps date', function () {
+        it.skip('fhirDate should throw an Error with bad chcs date', function () {
             var year = '9';
             var month = '02';
             day = '12'; // year is bogus
-            var cmumpsDate = year + '-' + month + '-' + day;
+            var chcsDate = year + '-' + month + '-' + day;
             chai.expect(function () {
-                fdt.fhirDate(cmumpsDate);
-            }).to.throw(Error, /Bad cmumps date/);
+                fdt.fhirDate(chcsDate);
+            }).to.throw(Error, /Bad chcs date/);
         });
 
         // fhirHumanName
@@ -145,12 +145,12 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirHumanName.prefix[0]).to.equal(title);
         });
 
-        it.skip('fhirHumanName should throw an Error on bad cmumps name', function () {
+        it.skip('fhirHumanName should throw an Error on bad chcs name', function () {
             var first = "bugs";
             var badName = ',' + first; // misformed, no last name
             chai.expect(function () {
                 fdt.fhirHumanName(badName);
-            }).to.throw(Error, /Bad cmumps name/);
+            }).to.throw(Error, /Bad chcs name/);
         });
 
         it.skip('fhirIdentfier should create an array of identifiers if passed in', function () {
@@ -167,13 +167,13 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirIds[0]).to.eqls({
                 use: 'usual',
                 // assigner: 'US',
-                type: {coding: [{code: 'cmumpss', display: 'cmumpss'}], text: ssn},
+                type: {coding: [{code: 'chcss', display: 'chcss'}], text: ssn},
                 value: ssn
             });
             chai.expect(fhirIds[1]).to.eqls({
                 use: 'usual',
                 // assigner: 'US',
-                type: {coding: [{code: 'cmumpss', display: 'cmumpss'}], text: dod},
+                type: {coding: [{code: 'chcss', display: 'chcss'}], text: dod},
                 value: dod
             });
         });
@@ -189,11 +189,11 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirIds).to.be.an('Array');
             chai.expect(fhirIds).to.have.length(1);
             // TODO order in array shouldn't matter, so this test is wrong
-            // chai.expect(fhir_ids[0]).to.eqls({use: 'usual', assigner: 'US', type: {coding: 'cmumpss', text: ssn}, value: ssn});
+            // chai.expect(fhir_ids[0]).to.eqls({use: 'usual', assigner: 'US', type: {coding: 'chcss', text: ssn}, value: ssn});
             chai.expect(fhirIds[0]).to.eqls({
                 use: 'usual',
                 // assigner: 'US',
-                type: {coding: [{code: 'cmumpss', display: 'cmumpss'}], text: dod},
+                type: {coding: [{code: 'chcss', display: 'chcss'}], text: dod},
                 value: dod
             });
         });
@@ -212,10 +212,10 @@ describe('cmumps2fhir_all fhirParts', function () {
             chai.expect(fhirIds[0]).to.eqls({
                 use: 'usual',
                 // assigner: 'US',
-                type: {coding: [{code: 'cmumpss', display: 'cmumpss'}], text: ssn},
+                type: {coding: [{code: 'chcss', display: 'chcss'}], text: ssn},
                 value: ssn
             });
-            // chai.expect(fhir_ids[0]).to.eqls({use: 'usual', assigner: 'US', type: {coding: 'cmumpss', text: dod}, value: dod});
+            // chai.expect(fhir_ids[0]).to.eqls({use: 'usual', assigner: 'US', type: {coding: 'chcss', text: dod}, value: dod});
         });
 
         it.skip('fhirIdentfier should skip ssn and dod if undefined', function () {
@@ -232,24 +232,24 @@ describe('cmumps2fhir_all fhirParts', function () {
             // TODO: generate this enumeration from mongodb or schema/model provided by nodeVISTA?
             ["DIVORCED", "SINGLE,NEVER MARRIED", "MARRIED", "LEGALLY SEPARATED"].map(function (ms) {
                 return {label: ms};
-            }).forEach(function (cmumpsJsonld) {
+            }).forEach(function (chcsJsonld) {
                 var fhirTranslation;
                 chai.expect(function () {
-                    fhirTranslation = fdt.fhirMaritalStatus(cmumpsJsonld);
+                    fhirTranslation = fdt.fhirMaritalStatus(chcsJsonld);
                 }).to.not.throw(Error);
                 chai.expect(fhirTranslation).not.to.be.null;
-                chai.expect(fhirTranslation.coding[0].code).is.equal(cmumpsJsonld.label[0][0]);
+                chai.expect(fhirTranslation.coding[0].code).is.equal(chcsJsonld.label[0][0]);
             });
         });
 
-        it.skip('fhirMaritalStatus should throw error if cmumps status unknown', function () {
+        it.skip('fhirMaritalStatus should throw error if chcs status unknown', function () {
             // TODO: generate this enumeration from mongodb or schema/model provided by nodeVISTA?
             ["askdjfsldaf"].map(function (ms) {
                 return {label: ms};
-            }).forEach(function (cmumpsJsonlod) {
+            }).forEach(function (chcsJsonlod) {
                 var fhirTranslation;
                 chai.expect(function () {
-                    fhirTranslation = fdt.fhirMaritalStatus(cmumpsJsonlod);
+                    fhirTranslation = fdt.fhirMaritalStatus(chcsJsonlod);
                 }).to.throw(Error, /not mapped to fhir/);
             });
         });
@@ -257,7 +257,7 @@ describe('cmumps2fhir_all fhirParts', function () {
         // fhirAddress
         // addresses are messy, everything can be optional
         it.skip('fhirAddress should create a fhir address', function () {
-            var cmumpsJsonldPart = {
+            var chcsJsonldPart = {
                 // http://smallville.wikia.com/wiki/Daily_Planet
                 street1: "1000 Broadway",
                 city: "Metropolis",
@@ -267,19 +267,19 @@ describe('cmumps2fhir_all fhirParts', function () {
             };
             var fhirTranslation;
             chai.expect(function () {
-                fhirTranslation = fdt.fhirAddress(cmumpsJsonldPart);
+                fhirTranslation = fdt.fhirAddress(chcsJsonldPart);
             }).to.not.throw(Error);
             chai.expect(fhirTranslation).to.have.all.keys('type', 'line', 'city', 'state',
                 'country', 'postalCode', 'resourceType');
-            chai.expect(fhirTranslation.line[0]).to.equal(cmumpsJsonldPart.street1);
-            chai.expect(fhirTranslation.city).to.equal(cmumpsJsonldPart.city);
-            chai.expect(fhirTranslation.state).to.equal(cmumpsJsonldPart.state);
-            chai.expect(fhirTranslation.postalCode).to.equal(cmumpsJsonldPart.zip);
-            chai.expect(fhirTranslation.country).to.equal(cmumpsJsonldPart.country);
+            chai.expect(fhirTranslation.line[0]).to.equal(chcsJsonldPart.street1);
+            chai.expect(fhirTranslation.city).to.equal(chcsJsonldPart.city);
+            chai.expect(fhirTranslation.state).to.equal(chcsJsonldPart.state);
+            chai.expect(fhirTranslation.postalCode).to.equal(chcsJsonldPart.zip);
+            chai.expect(fhirTranslation.country).to.equal(chcsJsonldPart.country);
         });
 
         it.skip('fhirAddress should create a fhir address with county', function () {
-            var cmumpsJsonldPart = {
+            var chcsJsonldPart = {
                 // http://smallville.wikia.com/wiki/Daily_Planet
                 street1: '1000 Broadway',
                 city: 'Metropolis',
@@ -290,54 +290,54 @@ describe('cmumps2fhir_all fhirParts', function () {
             };
             var fhirTranslation;
             chai.expect(function () {
-                fhirTranslation = fdt.fhirAddress(cmumpsJsonldPart);
+                fhirTranslation = fdt.fhirAddress(chcsJsonldPart);
             }).to.not.throw(Error);
             chai.expect(fhirTranslation).to.have.all.keys('type', 'line', 'city', 'state', 'country',
                 'resourceType', 'postalCode', 'district');
-            chai.expect(fhirTranslation.line[0]).to.equal(cmumpsJsonldPart.street1);
-            chai.expect(fhirTranslation.city).to.equal(cmumpsJsonldPart.city);
-            chai.expect(fhirTranslation.state).to.equal(cmumpsJsonldPart.state);
-            chai.expect(fhirTranslation.postalCode).to.equal(cmumpsJsonldPart.zip);
-            chai.expect(fhirTranslation.country).to.equal(cmumpsJsonldPart.country);
-            chai.expect(fhirTranslation.district).to.equal(cmumpsJsonldPart.county);
+            chai.expect(fhirTranslation.line[0]).to.equal(chcsJsonldPart.street1);
+            chai.expect(fhirTranslation.city).to.equal(chcsJsonldPart.city);
+            chai.expect(fhirTranslation.state).to.equal(chcsJsonldPart.state);
+            chai.expect(fhirTranslation.postalCode).to.equal(chcsJsonldPart.zip);
+            chai.expect(fhirTranslation.country).to.equal(chcsJsonldPart.country);
+            chai.expect(fhirTranslation.district).to.equal(chcsJsonldPart.county);
         });
 
     });
 });
-// In these next tests, cmumps2fhir_all entire cmumps jsonld objects taking their contents from
+// In these next tests, chcs2fhir_all entire chcs jsonld objects taking their contents from
 // specific files. Then investigate the various fhirParts.
 
-describe.skip('for an entire cmumps jsonld objects', function () {
+describe.skip('for an entire chcs jsonld objects', function () {
 
     it.skip('medications part (example)', function () {
 
-        // Get the entire cmumps jsonld object in a file
-        // ... loaded into cmumps. This has @context and @graph.
-        var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
+        // Get the entire chcs jsonld object in a file
+        // ... loaded into chcs. This has @context and @graph.
+        var chcsJsonld = chcs_utils.clone(patient7Jsonld);
 
 
         // We're going to compute the same result two different ways.
-        // In the first way, we cmumps2fhir_all everything (including medications) and
+        // In the first way, we chcs2fhir_all everything (including medications) and
         // *then* extract the *translated* medications from the aggregate translation
-        // (a fhir "bundle"). In the second approach, we cmumps2fhir_all just the fhirParts
+        // (a fhir "bundle"). In the second approach, we chcs2fhir_all just the fhirParts
         // we need, the patient and then medication, but extract those pieces first
-        // from the cmumps input and cmumps2fhir_all the fhirParts. Since some of the medication
+        // from the chcs input and chcs2fhir_all the fhirParts. Since some of the medication
         // translation depends on patient input, we pass in just enough of the patient
         // so that we can get a medication translation.
 
-        // First approach: cmumps2fhir_all everything, then extract the medications.
+        // First approach: chcs2fhir_all everything, then extract the medications.
         var medicationsTranslateAll; // List[Object]
         var result;
         chai.expect(function () {
             // example calls
-            // cmumps2fhir_all an entire jsonld cmumps object
+            // chcs2fhir_all an entire jsonld chcs object
 
             chai.expect(function() {
-                result = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld);
+                result = chcs2fhir_all.translatechcsFhir(chcsJsonld);
             }).to.not.throw(Error);
             chai.expect(result).to.have.keys(['options', 'fhir', 'participants']);
             var allFhir = result.fhir;
-            //                      ^^^^^^^^^^^^^^^^^ cmumps2fhir_all entire cmumps jsonld input
+            //                      ^^^^^^^^^^^^^^^^^ chcs2fhir_all entire chcs jsonld input
             // ... then extract out the fhir medication tranlation
             medicationsTranslateAll = fhir.extractMedications(allFhir);
             //                             ^^^^^^^^^^^^^^^^^^ extract just medications out of the fhir translation
@@ -363,17 +363,17 @@ describe.skip('for an entire cmumps jsonld objects', function () {
         });
 
 
-        // Second approach: extract the cmumps medications objects *first* from the cmumps jsonld "whole thing".
+        // Second approach: extract the chcs medications objects *first* from the chcs jsonld "whole thing".
         // Then apply the "one-to-one" fhir translation on that.
-        var cmumpsJsonld2 = cmumps_utils.clone(patient7Jsonld);
+        var chcsJsonld2 = chcs_utils.clone(patient7Jsonld);
         chai.expect(function () {
             // example calls
-            // Get the medications from the cmumps jsonld. Might not be any in general. We're expecting as many
+            // Get the medications from the chcs jsonld. Might not be any in general. We're expecting as many
             // as we got from the previous test above.
-            var onlycmumpsMedications = cmumps.extractPrescriptions(cmumpsJsonld2);
-            chai.expect(onlycmumpsMedications.length).to.equal(medicationsTranslateAll.length); // both 11
-            onlycmumpsMedications.forEach(function (aSinglecmumpsMedication) {
-                var onlyASingleFhirMedication = cmumps2fhir_prescriptions.translatePrescriptionsFhir(aSinglecmumpsMedication);
+            var onlychcsMedications = chcs.extractPrescriptions(chcsJsonld2);
+            chai.expect(onlychcsMedications.length).to.equal(medicationsTranslateAll.length); // both 11
+            onlychcsMedications.forEach(function (aSinglechcsMedication) {
+                var onlyASingleFhirMedication = chcs2fhir_prescriptions.translatePrescriptionsFhir(aSinglechcsMedication);
                 chai.expect(onlyASingleFhirMedication.fhir.resourceType).to.equal('MedicationDispense');
 
                 // parse the single fhir medication into xml
@@ -389,34 +389,34 @@ describe.skip('for an entire cmumps jsonld objects', function () {
 
     it.skip('medications part, same data but reordered', function () {
 
-        // Get the entire cmumps jsonld object in a file
-        // ... loaded into cmumps. This has @context and @graph.
-        var cmumpsJsonld = test_utils.cloneReorderGraph(patient7Jsonld);
-        chai.expect(cmumpsJsonld).to.not.eqls(patient7Jsonld); // cmumpsJsonld
+        // Get the entire chcs jsonld object in a file
+        // ... loaded into chcs. This has @context and @graph.
+        var chcsJsonld = test_utils.cloneReorderGraph(patient7Jsonld);
+        chai.expect(chcsJsonld).to.not.eqls(patient7Jsonld); // chcsJsonld
 
 
         // We're going to compute the same result two different ways.
-        // In the first way, we cmumps2fhir_all everything (including medications) and
+        // In the first way, we chcs2fhir_all everything (including medications) and
         // *then* extract the *translated* medications from the aggregate translation
-        // (a fhir "bundle"). In the second approach, we cmumps2fhir_all just the fhirParts
+        // (a fhir "bundle"). In the second approach, we chcs2fhir_all just the fhirParts
         // we need, the patient and then medication, but extract those pieces first
-        // from the cmumps input and cmumps2fhir_all the fhirParts. Since some of the medication
+        // from the chcs input and chcs2fhir_all the fhirParts. Since some of the medication
         // translation depends on patient input, we pass in just enough of the patient
         // so that we can get a medication translation.
 
-        // First approach: cmumps2fhir_all everything, then extract the medications.
+        // First approach: chcs2fhir_all everything, then extract the medications.
         var medicationsTranslateAll; // List[Object]
         var result;
         chai.expect(function () {
             // example calls
-            // cmumps2fhir_all an entire jsonld cmumps object
+            // chcs2fhir_all an entire jsonld chcs object
 
             chai.expect(function() {
-                result = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld);
+                result = chcs2fhir_all.translatechcsFhir(chcsJsonld);
             }).to.not.throw(Error);
             chai.expect(result).to.have.keys(['options', 'fhir', 'participants']);
             var allFhir = result.fhir;
-            //                      ^^^^^^^^^^^^^^^^^ cmumps2fhir_all entire cmumps jsonld input
+            //                      ^^^^^^^^^^^^^^^^^ chcs2fhir_all entire chcs jsonld input
             // ... then extract out the fhir medication tranlation
             medicationsTranslateAll = fhir.extractMedications(allFhir);
             //                             ^^^^^^^^^^^^^^^^^^ extract just medications out of the fhir translation
@@ -442,17 +442,17 @@ describe.skip('for an entire cmumps jsonld objects', function () {
         });
 
 
-        // Second approach: extract the cmumps medications objects *first* from the cmumps jsonld "whole thing".
+        // Second approach: extract the chcs medications objects *first* from the chcs jsonld "whole thing".
         // Then apply the "one-to-one" fhir translation on that.
-        var cmumpsJsonld2 = cmumps_utils.clone(patient7Jsonld);
+        var chcsJsonld2 = chcs_utils.clone(patient7Jsonld);
         chai.expect(function () {
             // example calls
-            // Get the medications from the cmumps jsonld. Might not be any in general. We're expecting as many
+            // Get the medications from the chcs jsonld. Might not be any in general. We're expecting as many
             // as we got from the previous test above.
-            var onlycmumpsMedications = cmumps.extractPrescriptions(cmumpsJsonld2);
-            chai.expect(onlycmumpsMedications.length).to.equal(medicationsTranslateAll.length); // both 11
-            onlycmumpsMedications.forEach(function (aSinglecmumpsMedication) {
-                var onlyASingleFhirMedication = cmumps2fhir_prescriptions.translatePrescriptionsFhir(aSinglecmumpsMedication);
+            var onlychcsMedications = chcs.extractPrescriptions(chcsJsonld2);
+            chai.expect(onlychcsMedications.length).to.equal(medicationsTranslateAll.length); // both 11
+            onlychcsMedications.forEach(function (aSinglechcsMedication) {
+                var onlyASingleFhirMedication = chcs2fhir_prescriptions.translatePrescriptionsFhir(aSinglechcsMedication);
                 chai.expect(onlyASingleFhirMedication.fhir.resourceType).to.equal('MedicationDispense');
 
                 // parse the single fhir medication into xml
@@ -468,13 +468,13 @@ describe.skip('for an entire cmumps jsonld objects', function () {
 
     it.skip('demographic part (example)', function () {
 
-        // ... loaded into cmumps. This has @context and @graph.
-        var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
+        // ... loaded into chcs. This has @context and @graph.
+        var chcsJsonld = chcs_utils.clone(patient7Jsonld);
 
         // First approach: Let's get just the fhir demographics portion of the entire fhir translation.
         var demographics; // Object
         chai.expect(function () {
-            demographics = fhir.extractPatient(cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld).fhir);
+            demographics = fhir.extractPatient(chcs2fhir_all.translatechcsFhir(chcsJsonld).fhir);
 
             // parsable into xml?
             chai.expect(function () {
@@ -485,14 +485,14 @@ describe.skip('for an entire cmumps jsonld objects', function () {
         chai.expect(demographics).is.not.null;
         chai.expect(demographics.resourceType).to.equal("Patient");
 
-        // Second approach, let's extract the patient out of the entire cmumps jsonld input and then
-        // cmumps2fhir_all only that.
-        var cmumpsPatient;
+        // Second approach, let's extract the patient out of the entire chcs jsonld input and then
+        // chcs2fhir_all only that.
+        var chcsPatient;
         var fhirPatientOnly;
-        var cmumpsJsonld2 = cmumps_utils.clone(patient7Jsonld);
+        var chcsJsonld2 = chcs_utils.clone(patient7Jsonld);
         chai.expect(function () {
-            cmumpsPatient = cmumps.extractPatient(cmumpsJsonld2)[0];
-            fhirPatientOnly = cmumps2fhir_demographics.translateDemographicsFhir(cmumpsPatient).fhir;
+            chcsPatient = chcs.extractPatient(chcsJsonld2)[0];
+            fhirPatientOnly = chcs2fhir_demographics.translateDemographicsFhir(chcsPatient).fhir;
 
             // parsable into xml?
             chai.expect(function () {
@@ -509,30 +509,30 @@ describe.skip('for an entire cmumps jsonld objects', function () {
 
     it.skip('diagnoses part (example)', function () {
 
-        // Get the entire cmumps jsonld object in a file
-        // ... loaded into cmumps. This has @context and @graph.
-        var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
+        // Get the entire chcs jsonld object in a file
+        // ... loaded into chcs. This has @context and @graph.
+        var chcsJsonld = chcs_utils.clone(patient7Jsonld);
 
 
         // We're going to compute the same result two different ways.
-        // In the first way, we cmumps2fhir_all everything (including medications) and
+        // In the first way, we chcs2fhir_all everything (including medications) and
         // *then* extract the *translated* medications from the aggregate translation
-        // (a fhir "bundle"). In the second approach, we cmumps2fhir_all just the fhirParts
+        // (a fhir "bundle"). In the second approach, we chcs2fhir_all just the fhirParts
         // we need, the patient and then medication, but extract those pieces first
-        // from the cmumps input and cmumps2fhir_all the fhirParts. Since some of the medication
+        // from the chcs input and chcs2fhir_all the fhirParts. Since some of the medication
         // translation depends on patient input, we pass in just enough of the patient
         // so that we can get a medication translation.
 
-        // First approach: cmumps2fhir_all everything, then extract the medications.
+        // First approach: chcs2fhir_all everything, then extract the medications.
         var diagnosesTranslateAll; // List[Object]
         var result;
         var allFhir;
         chai.expect(function () {
             // example calls
-            // cmumps2fhir_all an entire jsonld cmumps object
-            result = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld, {warnings: true});
+            // chcs2fhir_all an entire jsonld chcs object
+            result = chcs2fhir_all.translatechcsFhir(chcsJsonld, {warnings: true});
             allFhir = result.fhir;
-            //                          ^^^^^^^^^^^^^^^^^ cmumps2fhir_all entire cmumps jsonld input
+            //                          ^^^^^^^^^^^^^^^^^ chcs2fhir_all entire chcs jsonld input
             // ... then extract out the fhir medication tranlation
             diagnosesTranslateAll = fhir.extractDiagnoses(allFhir);
             //                           ^^^^^^^^^^^^^^^^ extract just diagnoses out of the fhir translation
@@ -559,8 +559,8 @@ describe.skip('for an entire cmumps jsonld objects', function () {
         chai.expect(firstFhirDiagnosis.subject.reference).to.match(/2-\d+/);
         chai.expect(firstFhirDiagnosis.subject.display).to.match(/BUNNY\s*,\s*BUGS/);
         // Lift out the first input.
-        var cmumpsJsonld2 = cmumps_utils.clone(patient7Jsonld);
-        var firstInput = cmumps.extractDiagnoses(cmumpsJsonld2)[0];
+        var chcsJsonld2 = chcs_utils.clone(patient7Jsonld);
+        var firstInput = chcs.extractDiagnoses(chcsJsonld2)[0];
         // Patient should translate unscathed.
         chai.expect(firstFhirDiagnosis.subject.display).to.equal(firstInput['patient-100417']['label']); // value unscathed
 
@@ -570,17 +570,17 @@ describe.skip('for an entire cmumps jsonld objects', function () {
         });
 
 
-        // Second approach: extract the cmumps medications objects *first* from the cmumps jsonld "whole thing".
+        // Second approach: extract the chcs medications objects *first* from the chcs jsonld "whole thing".
         // Then apply the "one-to-one" fhir translation on that.
         chai.expect(function () {
             // example calls
-            // Get the medications from the cmumps jsonld. Might not be any in general. We're expecting as many
+            // Get the medications from the chcs jsonld. Might not be any in general. We're expecting as many
             // as we got from the previous test above.
-            var onlycmumpsDiagnoses = cmumps.extractDiagnoses(cmumpsJsonld2);
-            chai.expect(onlycmumpsDiagnoses.length).to.equal(diagnosesTranslateAll.length); // both 11
-            onlycmumpsDiagnoses.forEach(function (aSinglecmumpsDiagnosis) {
-                var onlyASingleFhirDiagnosis = cmumps2fhir_diagnoses.translateDiagnosesFhir(aSinglecmumpsDiagnosis);
-                //                                                 ^^^^^^^^^^^^^^^^^^^^^^ cmumps Kg_Patient_Diagnosis => FHIR DiagnosticReport directly
+            var onlychcsDiagnoses = chcs.extractDiagnoses(chcsJsonld2);
+            chai.expect(onlychcsDiagnoses.length).to.equal(diagnosesTranslateAll.length); // both 11
+            onlychcsDiagnoses.forEach(function (aSinglechcsDiagnosis) {
+                var onlyASingleFhirDiagnosis = chcs2fhir_diagnoses.translateDiagnosesFhir(aSinglechcsDiagnosis);
+                //                                                 ^^^^^^^^^^^^^^^^^^^^^^ chcs Kg_Patient_Diagnosis => FHIR DiagnosticReport directly
                 chai.expect(onlyASingleFhirDiagnosis.fhir.resourceType).to.equal('DiagnosticReport');
 
                 // parse the single fhir medication into xml
@@ -597,17 +597,17 @@ describe.skip('for an entire cmumps jsonld objects', function () {
 
 
     it.skip('labs part (example)', function () {
-        // the entire cmumps jsonld object in a file
-        var pathnameForTestCase = 'data/fake_cmumps/bugs-bunny.jsonld';
-        // ... loaded into cmumps. This has @context and @graph.
-        var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
+        // the entire chcs jsonld object in a file
+        var pathnameForTestCase = 'data/fake_chcs/bugs-bunny.jsonld';
+        // ... loaded into chcs. This has @context and @graph.
+        var chcsJsonld = chcs_utils.clone(patient7Jsonld);
 
         // Let's get just the fhir medications portion of the fhir translation.
         // Note that we dodge participating properties and warnings (which are still available
         // for each translation part).
         var labs; // List[Object]
         chai.expect(function () {
-            labs = fhir.extractLabs(cmumps2fhir_labs.translateLabsFhir(cmumpsJsonld));
+            labs = fhir.extractLabs(chcs2fhir_labs.translateLabsFhir(chcsJsonld));
 
             // See if each separate lab result translates to xml.
             labs.forEach(function (l) {
@@ -624,27 +624,27 @@ describe.skip('for an entire cmumps jsonld objects', function () {
 
         it.skip('procedures part (example)', function () {
 
-            // Get the entire cmumps jsonld object in a file
-            // ... loaded into cmumps. This has @context and @graph.
-            var cmumpsJsonld = cmumps_utils.clone(bugsBunnyProceduresJsonld);
+            // Get the entire chcs jsonld object in a file
+            // ... loaded into chcs. This has @context and @graph.
+            var chcsJsonld = chcs_utils.clone(bugsBunnyProceduresJsonld);
 
 
             // We're going to compute the same result two different ways.
-            // In the first way, we cmumps2fhir_all everything (including medications) and
+            // In the first way, we chcs2fhir_all everything (including medications) and
             // *then* extract the *translated* medications from the aggregate translation
-            // (a fhir "bundle"). In the second approach, we cmumps2fhir_all just the fhirParts
+            // (a fhir "bundle"). In the second approach, we chcs2fhir_all just the fhirParts
             // we need, the patient and then medication, but extract those pieces first
-            // from the cmumps input and cmumps2fhir_all the fhirParts. Since some of the medication
+            // from the chcs input and chcs2fhir_all the fhirParts. Since some of the medication
             // translation depends on patient input, we pass in just enough of the patient
             // so that we can get a medication translation.
 
-            // First approach: cmumps2fhir_all everything, then extract the medications.
+            // First approach: chcs2fhir_all everything, then extract the medications.
             var proceduresTranslateAll; // List[Object]
             chai.expect(function () {
                 // example calls
-                // cmumps2fhir_all an entire jsonld cmumps object
-                var allFhir = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld);
-                //                      ^^^^^^^^^^^^^^^^^ cmumps2fhir_all entire cmumps jsonld input
+                // chcs2fhir_all an entire jsonld chcs object
+                var allFhir = chcs2fhir_all.translatechcsFhir(chcsJsonld);
+                //                      ^^^^^^^^^^^^^^^^^ chcs2fhir_all entire chcs jsonld input
                 // ... then extract out the fhir medication tranlation
                 proceduresTranslateAll = fhir.extractProcedures(allFhir);
                 //                             ^^^^^^^^^^^^^^^^^^ extract just medications out of the fhir translation
@@ -670,18 +670,18 @@ describe.skip('for an entire cmumps jsonld objects', function () {
             });
 
 
-            // Second approach: extract the cmumps medications objects *first* from the cmumps jsonld "whole thing".
+            // Second approach: extract the chcs medications objects *first* from the chcs jsonld "whole thing".
             // Then apply the "one-to-one" fhir translation on that.
-            var cmumpsJsonld2 = cmumps_utils.clone(patient7Jsonld);
+            var chcsJsonld2 = chcs_utils.clone(patient7Jsonld);
             chai.expect(function () {
                 // example calls
-                // Get the medications from the cmumps jsonld. Might not be any in general. We're expecting as many
+                // Get the medications from the chcs jsonld. Might not be any in general. We're expecting as many
                 // as we got from the previous test above.
-                var onlycmumpsProcedures = cmumps.extractProcedures(cmumpsJsonld);
-                chai.expect(onlycmumpsProcedures.length).to.equal(proceduresTranslateAll.length); // both 11
-                onlycmumpsProcedures.forEach(function (aSinglecmumpsProcedure) {
-                    var onlyASingleFhirProcedure = cmumps2fhir_medications.translateMedicationsFhir(aSinglecmumpsProcedure);
-                    //                                        ^^^^^^^^^^^^^^ cmumps2fhir_all
+                var onlychcsProcedures = chcs.extractProcedures(chcsJsonld);
+                chai.expect(onlychcsProcedures.length).to.equal(proceduresTranslateAll.length); // both 11
+                onlychcsProcedures.forEach(function (aSinglechcsProcedure) {
+                    var onlyASingleFhirProcedure = chcs2fhir_medications.translateMedicationsFhir(aSinglechcsProcedure);
+                    //                                        ^^^^^^^^^^^^^^ chcs2fhir_all
                     chai.expect(onlyASingleFhirProcedure.fhir.resourceType).to.equal('Procedure');
 
                     // parse the single fhir medication into xml
@@ -701,30 +701,30 @@ describe.skip('for an entire cmumps jsonld objects', function () {
     //
     it.skip('procedures part (example)', function () {
 
-        // Get the entire cmumps jsonld object in a file
-        // ... loaded into cmumps. This has @context and @graph.
-        var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
+        // Get the entire chcs jsonld object in a file
+        // ... loaded into chcs. This has @context and @graph.
+        var chcsJsonld = chcs_utils.clone(patient7Jsonld);
 
 
         // We're going to compute the same result two different ways.
-        // In the first way, we cmumps2fhir_all everything (including medications) and
+        // In the first way, we chcs2fhir_all everything (including medications) and
         // *then* extract the *translated* medications from the aggregate translation
-        // (a fhir "bundle"). In the second approach, we cmumps2fhir_all just the fhirParts
+        // (a fhir "bundle"). In the second approach, we chcs2fhir_all just the fhirParts
         // we need, the patient and then medication, but extract those pieces first
-        // from the cmumps input and cmumps2fhir_all the fhirParts. Since some of the medication
+        // from the chcs input and chcs2fhir_all the fhirParts. Since some of the medication
         // translation depends on patient input, we pass in just enough of the patient
         // so that we can get a medication translation.
 
-        // First approach: cmumps2fhir_all everything, then extract the medications.
+        // First approach: chcs2fhir_all everything, then extract the medications.
         var proceduresTranslateAll; // List[Object]
         var result;
         var allFhir;
         chai.expect(function () {
             // example calls
-            // cmumps2fhir_all an entire jsonld cmumps object
-            result = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld, {warnings: true});
+            // chcs2fhir_all an entire jsonld chcs object
+            result = chcs2fhir_all.translatechcsFhir(chcsJsonld, {warnings: true});
             allFhir = result.fhir;
-            //                          ^^^^^^^^^^^^^^^^^ cmumps2fhir_all entire cmumps jsonld input
+            //                          ^^^^^^^^^^^^^^^^^ chcs2fhir_all entire chcs jsonld input
             // ... then extract out the fhir procedure tranlation
             proceduresTranslateAll = fhir.extractProcedures(allFhir);
             //                           ^^^^^^^^^^^^^^^^ extract just procedures out of the fhir translation
@@ -751,8 +751,8 @@ describe.skip('for an entire cmumps jsonld objects', function () {
         chai.expect(firstFhirProcedure.subject.reference).to.match(/2-\d+/);
         chai.expect(firstFhirProcedure.subject.display).to.match(/BUNNY\s*,\s*BUGS/);
         // Lift out the first input.
-        var cmumpsJsonld2 = cmumps_utils.clone(patient7Jsonld);
-        var firstInput = cmumps.extractProcedures(cmumpsJsonld2)[0];
+        var chcsJsonld2 = chcs_utils.clone(patient7Jsonld);
+        var firstInput = chcs.extractProcedures(chcsJsonld2)[0];
         // Patient-\d* => 2-\d*. TODO: is this really the correct transformation?
         chai.expect(firstFhirProcedure.subject.reference.substring('Patient/2-'.length)).to.equal(firstInput['patient']['id'].substring('Patient-'.length));
 
@@ -762,19 +762,19 @@ describe.skip('for an entire cmumps jsonld objects', function () {
         });
 
 
-        // Second approach: extract the cmumps medications objects *first* from the cmumps jsonld "whole thing".
+        // Second approach: extract the chcs medications objects *first* from the chcs jsonld "whole thing".
         // Then apply the "one-to-one" fhir translation on that.
-        var cmumpsJsonld2 = cmumps_utils.clone(patient7Jsonld);
+        var chcsJsonld2 = chcs_utils.clone(patient7Jsonld);
         chai.expect(function () {
             // example calls
-            // Get the medications from the cmumps jsonld. Might not be any in general. We're expecting as many
+            // Get the medications from the chcs jsonld. Might not be any in general. We're expecting as many
             // as we got from the previous test above.
-            var onlycmumpsProcedures = cmumps.extractProcedures(cmumpsJsonld2);
-            chai.expect(onlycmumpsProcedures.length).to.equal(proceduresTranslateAll.length); // both 11
-            onlycmumpsProcedures.forEach(function (aSinglecmumpsProcedure) {
-                var onlyASingleFhirProcedure = cmumps2fhir_procedures.translateProceduresFhir(aSinglecmumpsProcedure);
-                //                                                  ^^^^^^^^^^^^^^^^^^^^^^ cmumps Kg_Patient_Diagnosis => FHIR DiagnosticReport directly
-                chai.expect(onlyASingleFhirProcedure.fhir.resourceType).to.equal(cmumps.cmumpss.Procedure);
+            var onlychcsProcedures = chcs.extractProcedures(chcsJsonld2);
+            chai.expect(onlychcsProcedures.length).to.equal(proceduresTranslateAll.length); // both 11
+            onlychcsProcedures.forEach(function (aSinglechcsProcedure) {
+                var onlyASingleFhirProcedure = chcs2fhir_procedures.translateProceduresFhir(aSinglechcsProcedure);
+                //                                                  ^^^^^^^^^^^^^^^^^^^^^^ chcs Kg_Patient_Diagnosis => FHIR DiagnosticReport directly
+                chai.expect(onlyASingleFhirProcedure.fhir.resourceType).to.equal(chcs.chcss.Procedure);
 
                 // parse the single fhir medication into xml
                 chai.expect(function () {
@@ -794,14 +794,14 @@ describe.skip('for an entire cmumps jsonld objects', function () {
     describe.skip('In various scenarios', function () {
         it.skip('bugs bunny should parse', function () {
             // TODO mike@carif.io: load relative to this file, not pwd?
-            // so path would be '../../data/fake_cmumps/bugs-bunny.cmumps.json'
+            // so path would be '../../data/fake_chcs/bugs-bunny.chcs.json'
             // and npm test would work correctly?
 
-            var cmumpsJsonld = cmumps_utils.clone(patient7Jsonld);
+            var chcsJsonld = chcs_utils.clone(patient7Jsonld);
             var result;
             var fhirTranslation;
             //chai.expect(function () {
-                result = cmumps2fhir_all.translatecmumpsFhir(cmumpsJsonld);
+                result = chcs2fhir_all.translatechcsFhir(chcsJsonld);
             //}).to.not.throw(Error);
             chai.expect(result).to.have.keys(['options', 'fhir', 'participants']);
             fhirTranslation = result.fhir;

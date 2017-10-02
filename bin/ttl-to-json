@@ -142,7 +142,7 @@ Promise.all(readFiles).then(fileContent => {
   }).then(function(graph) { 
 
      // Set the ids where we want to filter out blank nodes that are referenced only once. 
-     // CMUMPS uses this to filter out ids that are added by the jsonld library that would  differ 
+     // CHCS uses this to filter out ids that are added by the jsonld library that would  differ 
      // from the original json input on a round trip translation. 
      var filterBnodeAttrs = [ 'id', '_id', '@id' ];
 
