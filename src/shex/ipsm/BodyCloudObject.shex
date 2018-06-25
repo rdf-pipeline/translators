@@ -1,0 +1,36 @@
+PREFIX iot: <http://inter-iot.eu/message/>
+PREFIX cloud: <http://inter-iot.eu/syntax/BodyCloud#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+BASE <urn:local:BodyCloudMessage#>
+
+start=@<BodyCloudMessage>
+
+# Assume that everything is in the same RDF graph, though
+# it looks like IPSM puts metadata and payload in separate graphs.
+# Message = Metadata + Payload
+
+<BodyCloudMessage> {
+  <contains> @<Metadata> ;
+  <contains> @<Payload> ;
+}
+
+<Metadata> {
+  a iot:Thing_Update , iot:meta ;
+  iot:conversationID xsd:string %Map:{ iot:conversationID } ;
+  iot:dateTimeStamp xsd:dateTime %Map{ iot:dateTimeStamp } ;
+  iot:messageID xsd:string %Map:{ iot:messageID }
+}
+
+<Payload> {
+  a cloud:BodyCloudObject ;
+  cloud:hasData {
+       a cloud:BodyCloudAttributes ;
+       cloud:hasWeight xsd:float %Map:{ cloud:hasWeight } .
+     } ;
+  cloud:hasDeviceId xsd:string %Map:{ cloud:deviceId } ;
+  cloud:hasTypeMessage xsd:string %Map{ cloud:typeMessage } ;
+  cloud:hasUserId xsd:string %Map{ cloud:userId } ;
+  cloud:hasUserLastName xsd:string %Map{ cloud:userLastName } ;
+  cloud:hasUserName xsd:string %Map{ cloud:userName }
+}
+
