@@ -1,0 +1,16 @@
+[
+  {
+    "schemaLabel": "ipsm",
+    "schemaURL": "BodyCloudObject.shex",
+    "dataLabel": "partial",
+    "dataURL": "obs-input.ttl",
+    "queryMap": "<X>@<#Payload>",
+    "outputSchemaURL": "Observation.shex",
+    "outputShape": "urn:local:ObservationMessage#Payload",
+    "staticVars": {
+      "http://abc.example/anotherConstant": "abc-def"
+    },
+    "createRoot": "tag:BPfhir123",
+    "status": "nonconformant"
+  }
+]

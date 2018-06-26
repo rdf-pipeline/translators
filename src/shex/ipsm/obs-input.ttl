@@ -1,23 +1,23 @@
 PREFIX iot: <http://inter-iot.eu/message/>
 PREFIX cloud: <http://inter-iot.eu/syntax/BodyCloud#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-iot:metadata {
+# iot:metadata {
   <http://inter-iot.eu/message/meta308c3987-b69e-4672-890b-3f3d6229596d> a  iot:Thing_Update , iot:meta ;
     iot:conversationID "conv85e0f5d2-cf65-4d23-84b1-ff1381ae01fc" ;
     iot:dateTimeStamp "2017-05-08T13:48:19.428+02:00" ;
-    iot:messageID "msg204d0405-a6da-4054-a6db-96d20c413746" 
-}
+    iot:messageID "msg204d0405-a6da-4054-a6db-96d20c413746" .
+# }
 
-iot:payload {
-  [] a cloud:BodyCloudObject ;
+# iot:payload {
+  <X> a cloud:BodyCloudObject ;
      cloud:hasData [
-       a cloud:BodyCloudAttributes .
-       cloud:hasWeight "60.0"^^xsd:float .
+       a cloud:BodyCloudAttributes ;
+       cloud:hasWeight "60.0"^^xsd:float ;
      ] ;
      cloud:hasDeviceId "http://inter-iot.eu/bodycloud/B4_99_4C_6E_2A_E9" ;
      cloud:hasTypeMessage "weight_scale" ;
      cloud:hasUserId "http://inter-iot.eu/bodycloud/001EXP" ;
      cloud:hasUserLastName "Doe" ;
      cloud:hasUserName "Jane" .
-}
-
+# }

@@ -1,45 +1,47 @@
 PREFIX iot: <http://inter-iot.eu/message/>
-PREFIX cloud: <http://inter-iot.eu/syntax/Observation#>
+# PREFIX cloud: <http://inter-iot.eu/syntax/Observation#>
+PREFIX cloud: <http://inter-iot.eu/syntax/BodyCloud#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
-BASE <urn:local:ObservationMessage#>
+PREFIX Map: <http://shex.io/extensions/Map/#>
+BASE <urn:local:ObservationMessage>
 
-start=@<ObservationMessage>
+start=@<#ObservationMessage>
 
 # Assume that everything is in the same RDF graph, though
 # it looks like IPSM puts metadata and payload in separate graphs.
 # Message = Metadata + Payload
 
-<ObservationMessage> {
-  <contains> @<Metadata> ;
-  <contains> @<Payload> ;
+<#ObservationMessage> {
+  <contains> @<#Metadata> ;
+  <contains> @<#Payload> ;
 }
 
-<Metadata> {
-  a iot:Thing_Update , iot:meta ;
-  iot:conversationID xsd:string %Map:{ iot:conversationID } ;
-  iot:dateTimeStamp xsd:dateTime %Map{ iot:dateTimeStamp } ;
-  iot:messageID xsd:string %Map:{ iot:messageID }
+<#Metadata> {
+  a [iot:Thing_Update iot:meta] ;
+#  iot:conversationID xsd:string %Map:{ iot:conversationID %} ;
+#  iot:dateTimeStamp xsd:dateTime %Map:{ iot:dateTimeStamp %} ;
+#  iot:messageID xsd:string %Map:{ iot:messageID %}
 }
 
-<Payload> {
+<#Payload> {
   # Am I missing an intermediate blank node here?
-  a sosa:Observation ;
+  a [sosa:Observation] ;
   # Should this be turned into a URI ref instead of string?
-  sosa:madeBySensor xsd:string %Map{ cloud:deviceId } ;
+  sosa:madeBySensor xsd:string %Map:{ cloud:deviceId %} ;
   sosa:hasResult {
-        a sosa:Result ;
-        <http://inter-iot.eu/GOIoTP#hasUnit> <http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#kilogram> ;
-        <http://inter-iot.eu/GOIoTP#hasValue> xsd:float  %Map:{ cloud:weight } ;
+        a [sosa:Result] ;
+        <http://inter-iot.eu/GOIoTP#hasUnit> [<http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#kilogram>] ;
+#        <http://inter-iot.eu/GOIoTP#hasValue> xsd:float  %Map:{ cloud:hasWeight %} ;
       }
-  # Not sure how to add the sensor pattern here ...
-  <http://inter-iot.eu/bodycloud/B4_99_4C_6E_2A_E9> a <http://inter-iot.eu/GOIoTP#IoTDevice> , sosa:Sensor ;
-  <http://inter-iot.eu/GOIoTP#hasUser> {
-  # Making up a strcat function here:
-  <http://inter-iot.eu/GOIoTP#hasName> xsd:string 
-            %Map{ strcat(cloud:userName, " ", cloud:userLastName) } ;
-  <http://inter-iot.eu/GOIoTPex#hasLocalId> xsd:string %Map{ cloud:userId } ;
-  rdf:type <http://inter-iot.eu/GOIoTP#User> .
-    } 
+#  # Not sure how to add the sensor pattern here ...
+#  <http://inter-iot.eu/bodycloud/B4_99_4C_6E_2A_E9> a <http://inter-iot.eu/GOIoTP#IoTDevice> , sosa:Sensor ;
+#  <http://inter-iot.eu/GOIoTP#hasUser> {
+#  # Making up a strcat function here:
+#  <http://inter-iot.eu/GOIoTP#hasName> xsd:string 
+#            %Map{ strcat(cloud:userName, " ", cloud:userLastName) } ;
+#  <http://inter-iot.eu/GOIoTPex#hasLocalId> xsd:string %Map{ cloud:userId } ;
+#  rdf:type <http://inter-iot.eu/GOIoTP#User> .
+#    } 
 }
  
