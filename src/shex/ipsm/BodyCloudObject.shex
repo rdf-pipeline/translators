@@ -30,7 +30,7 @@ BASE <urn:local:BodyCloudMessage>
        a [cloud:BodyCloudAttributes] ;
        cloud:hasWeight xsd:float %Map:{ cloud:hasWeight %} ;
      } ;
-  cloud:hasDeviceId xsd:string %Map:{ cloud:deviceId %} ;
+  cloud:hasDeviceId IRI %Map:{ cloud:deviceId %} ; # pretend it's a string until we add IRI construction / casting functions
   cloud:hasTypeMessage xsd:string %Map:{ cloud:typeMessage %} ;
   cloud:hasUserId xsd:string %Map:{ cloud:userId %} ;
   cloud:hasUserLastName xsd:string %Map:{ cloud:userLastName %} ;

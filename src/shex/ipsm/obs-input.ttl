@@ -15,7 +15,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
        a cloud:BodyCloudAttributes ;
        cloud:hasWeight "60.0"^^xsd:float ;
      ] ;
-     cloud:hasDeviceId "http://inter-iot.eu/bodycloud/B4_99_4C_6E_2A_E9" ;
+     cloud:hasDeviceId <http://inter-iot.eu/bodycloud/B4_99_4C_6E_2A_E9> ; # pretend it's a string until we add IRI construction / casting functions
      cloud:hasTypeMessage "weight_scale" ;
      cloud:hasUserId "http://inter-iot.eu/bodycloud/001EXP" ;
      cloud:hasUserLastName "Doe" ;
