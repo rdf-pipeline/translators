@@ -7,10 +7,28 @@ PREFIX Map: <http://shex.io/extensions/Map/#>
 PREFIX inter: <http://inter-iot.eu/GOIoTP#>
 BASE <urn:local:ObservationMessage>
 
-start=@<#ObservationMessage>
+start=@<#Payload>
 
-# Assume that everything is in the same RDF graph, though
-# it looks like IPSM puts metadata and payload in separate graphs.
+<#Payload> {
+  a [sosa:Observation] ;
+  sosa:madeBySensor {
+    inter:hasUser {
+      a [inter:User] ;
+      inter:hasName xsd:string %Map:{ regex(/"(?<cloud:userName>[a-zA-Z]+) (?<cloud:userLastName>[a-zA-Z]+)"/) %} ;
+      inter:hasLocalId xsd:string %Map:{ cloud:userId %}
+    }
+  } %Map:{ cloud:deviceId %} ;
+  sosa:hasResult {
+        a [sosa:Result] ;
+        <http://inter-iot.eu/GOIoTP#hasUnit> [<http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#kilogram>] ;
+        <http://inter-iot.eu/GOIoTP#hasValue> xsd:float  %Map:{ cloud:hasWeight %} ;
+      }
+}
+
+# IPSM processes inject stuff in metadata graph. It's included here
+# for documentation but the values in it are not associated populated
+# by ShExMap.
+
 # Message = Metadata + Payload
 
 <#ObservationMessage> {
@@ -25,20 +43,3 @@ start=@<#ObservationMessage>
 #  iot:messageID xsd:string %Map:{ iot:messageID %}
 }
 
-<#Payload> {
-  # Am I missing an intermediate blank node here?
-  a [sosa:Observation] ;
-  # Should this be turned into a URI ref instead of string?
-  sosa:madeBySensor {
-    inter:hasUser {
-      a [inter:User] ;
-      inter:hasName xsd:string %Map:{ regex(/"(?<cloud:userName>[a-zA-Z]+) (?<cloud:userLastName>[a-zA-Z]+)"/) %} ;
-      inter:hasLocalId xsd:string %Map:{ cloud:userId %}
-    }
-  } %Map:{ cloud:deviceId %} ;
-  sosa:hasResult {
-        a [sosa:Result] ;
-        <http://inter-iot.eu/GOIoTP#hasUnit> [<http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#kilogram>] ;
-        <http://inter-iot.eu/GOIoTP#hasValue> xsd:float  %Map:{ cloud:hasWeight %} ;
-      }
-}
